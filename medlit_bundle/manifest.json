@@ -1,9 +1,9 @@
 {
   "bundle_version": "v1",
-  "bundle_id": "8843e7e0-2c8f-4efe-aa30-77a61aeb22e1",
+  "bundle_id": "eade3b15-f937-45dd-8dbe-0df007e29735",
   "domain": "medlit",
   "label": "medical-literature",
-  "created_at": "2026-01-25T22:21:34.706358+00:00",
+  "created_at": "2026-01-26T16:41:23.099287+00:00",
   "entities": {
     "path": "entities.jsonl",
     "format": "jsonl"
@@ -17,8 +17,9 @@
     "format": "jsonl"
   },
   "metadata": {
-    "entity_count": 68,
-    "relationship_count": 27,
-    "description": "Knowledge graph bundle of biomedical journal articles"
+    "entity_count": 617,
+    "relationship_count": 101,
+    "description": "Knowledge graph bundle of biomedical journal articles",
+    "kgraph_version": "73dc959"
   }
 }

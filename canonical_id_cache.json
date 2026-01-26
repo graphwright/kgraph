@@ -1,58 +1,30 @@
 {
-  "gene:luminal a": {
-    "id": "HGNC:4214",
-    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/4214",
+  "gene:brca2": {
+    "id": "HGNC:1101",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/1101",
     "synonyms": [
-      "luminal A"
+      "BRCA2"
     ]
   },
-  "protein:p53": {
-    "id": "UniProt:G4Y083",
-    "url": "https://www.uniprot.org/uniprotkb/G4Y083",
+  "gene:brca1": {
+    "id": "HGNC:1100",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/1100",
     "synonyms": [
-      "p53"
+      "BRCA1"
     ]
   },
-  "protein:her2": {
-    "id": "UniProt:E0Z5T2",
-    "url": "https://www.uniprot.org/uniprotkb/E0Z5T2",
+  "gene:trim47": {
+    "id": "HGNC:19020",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/19020",
     "synonyms": [
-      "HER2"
+      "TRIM47"
     ]
   },
-  "protein:ki-67": {
-    "id": "UniProt:A0A4D9EIG7",
-    "url": "https://www.uniprot.org/uniprotkb/A0A4D9EIG7",
+  "procedure:hyperthermia": {
+    "id": "MeSH:D000084462",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000084462",
     "synonyms": [
-      "Ki-67"
-    ]
-  },
-  "gene:luminal b": {
-    "id": "HGNC:5",
-    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/5",
-    "synonyms": [
-      "luminal B"
-    ]
-  },
-  "protein:human epidermal growth factor receptor 2": {
-    "id": "UniProt:Q96B97",
-    "url": "https://www.uniprot.org/uniprotkb/Q96B97",
-    "synonyms": [
-      "human epidermal growth factor receptor 2"
-    ]
-  },
-  "drug:paclitaxel (ptx)": {
-    "id": "DBPedia:Paclitaxel",
-    "url": "https://dbpedia.org/page/Paclitaxel",
-    "synonyms": [
-      "Paclitaxel (PTX)"
-    ]
-  },
-  "drug:estrogen-progesterone": {
-    "id": "DBPedia:Estrogen_(medication)",
-    "url": "https://dbpedia.org/page/Estrogen_(medication)",
-    "synonyms": [
-      "estrogen-progesterone"
+      "hyperthermia"
     ]
   },
   "disease:ovarian cancer": {
@@ -69,6 +41,41 @@
       "breast cancer"
     ]
   },
+  "protein:p53": {
+    "id": "UniProt:G4Y083",
+    "url": "https://www.uniprot.org/uniprotkb/G4Y083",
+    "synonyms": [
+      "p53"
+    ]
+  },
+  "protein:ki-67": {
+    "id": "UniProt:A0A4D9EIG7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A4D9EIG7",
+    "synonyms": [
+      "Ki-67"
+    ]
+  },
+  "disease:hcc": {
+    "id": "DBPedia:HCC_station",
+    "url": "https://dbpedia.org/page/HCC_station",
+    "synonyms": [
+      "HCC"
+    ]
+  },
+  "drug:paclitaxel (ptx)": {
+    "id": "DBPedia:Paclitaxel",
+    "url": "https://dbpedia.org/page/Paclitaxel",
+    "synonyms": [
+      "paclitaxel (PTX)"
+    ]
+  },
+  "drug:parp inhibitors": {
+    "id": "DBPedia:PARP_inhibitor",
+    "url": "https://dbpedia.org/page/PARP_inhibitor",
+    "synonyms": [
+      "PARP inhibitors"
+    ]
+  },
   "drug:achillea millefolium l.": {
     "id": "DBPedia:Achillea_millefolium",
     "url": "https://dbpedia.org/page/Achillea_millefolium",
@@ -76,32 +83,2839 @@
       "Achillea millefolium L."
     ]
   },
-  "drug:7,12-dimethylbenz(a)anthracene": {
-    "id": "DBPedia:7,12-Dimethylbenz(a)anthracene",
-    "url": "https://dbpedia.org/page/7,12-Dimethylbenz(a)anthracene",
+  "protein:st3gal1": {
+    "id": "UniProt:A0A2J8RKQ9",
+    "url": "https://www.uniprot.org/uniprotkb/A0A2J8RKQ9",
     "synonyms": [
-      "7,12-dimethylbenz(a)anthracene"
+      "ST3Gal1"
     ]
   },
-  "disease:dbpedia_auth:dbpedia:prostate_cancer:disease": {
-    "id": "MeSH:D011471",
-    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011471",
+  "protein:muc2": {
+    "id": "UniProt:A0A0S7EPN0",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0S7EPN0",
     "synonyms": [
-      "Prostate cancer"
+      "MUC2"
     ]
   },
-  "disease:prostate cancer": {
-    "id": "MeSH:D011471",
-    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011471",
+  "gene:rad51": {
+    "id": "HGNC:9817",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/9817",
     "synonyms": [
-      "Prostate cancer"
+      "RAD51"
+    ]
+  },
+  "drug:niraparib": {
+    "id": "RxNorm:1918231",
+    "url": null,
+    "synonyms": [
+      "niraparib"
+    ]
+  },
+  "location:taiwan": {
+    "id": "DBPedia:Taiwan",
+    "url": "https://dbpedia.org/page/Taiwan",
+    "synonyms": [
+      "Taiwan"
+    ]
+  },
+  "gene:her2": {
+    "id": "HGNC:3430",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/3430",
+    "synonyms": [
+      "HER2"
+    ]
+  },
+  "gene:dnmt1": {
+    "id": "HGNC:2976",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/2976",
+    "synonyms": [
+      "DNMT1"
+    ]
+  },
+  "protein:parp1": {
+    "id": "UniProt:A0A0A9DUS2",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0A9DUS2",
+    "synonyms": [
+      "PARP1"
+    ]
+  },
+  "pathway:nf-\u03bab pathway": {
+    "id": "DBPedia:NF-\u03baB",
+    "url": "https://dbpedia.org/page/NF-\u03baB",
+    "synonyms": [
+      "NF-\u03baB pathway"
+    ]
+  },
+  "disease:tnbc": {
+    "id": "DBPedia:TNBC",
+    "url": "https://dbpedia.org/page/TNBC",
+    "synonyms": [
+      "TNBC"
+    ]
+  },
+  "disease:hnsc": {
+    "id": "DBPedia:HNS",
+    "url": "https://dbpedia.org/page/HNS",
+    "synonyms": [
+      "HNSC"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:ulcerative_colitis:disease": {
+    "id": "MeSH:D003093",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003093",
+    "synonyms": [
+      "ulcerative colitis"
+    ]
+  },
+  "disease:ulcerative colitis": {
+    "id": "MeSH:D003093",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003093",
+    "synonyms": [
+      "ulcerative colitis"
+    ]
+  },
+  "disease:osteoporosis": {
+    "id": "MeSH:D010024",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010024",
+    "synonyms": [
+      "osteoporosis"
+    ]
+  },
+  "protein:tff3": {
+    "id": "UniProt:A0A8X7WTX8",
+    "url": "https://www.uniprot.org/uniprotkb/A0A8X7WTX8",
+    "synonyms": [
+      "TFF3"
+    ]
+  },
+  "disease:ferroptosis": {
+    "id": "MeSH:D000079403",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000079403",
+    "synonyms": [
+      "ferroptosis"
+    ]
+  },
+  "protein:plk1": {
+    "id": "UniProt:A0ABY6K1H7",
+    "url": "https://www.uniprot.org/uniprotkb/A0ABY6K1H7",
+    "synonyms": [
+      "PLK1"
+    ]
+  },
+  "protein:trim37": {
+    "id": "UniProt:A0A212D789",
+    "url": "https://www.uniprot.org/uniprotkb/A0A212D789",
+    "synonyms": [
+      "TRIM37"
+    ]
+  },
+  "gene:pias3": {
+    "id": "HGNC:16861",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/16861",
+    "synonyms": [
+      "PIAS3"
+    ]
+  },
+  "gene:pias2": {
+    "id": "HGNC:17311",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/17311",
+    "synonyms": [
+      "PIAS2"
+    ]
+  },
+  "gene:pias1": {
+    "id": "HGNC:2752",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/2752",
+    "synonyms": [
+      "PIAS1"
+    ]
+  },
+  "protein:tet1": {
+    "id": "UniProt:A0A812C012",
+    "url": "https://www.uniprot.org/uniprotkb/A0A812C012",
+    "synonyms": [
+      "TET1"
+    ]
+  },
+  "protein:cdx-2": {
+    "id": "UniProt:A0AA35K994",
+    "url": "https://www.uniprot.org/uniprotkb/A0AA35K994",
+    "synonyms": [
+      "CDX-2"
+    ]
+  },
+  "protein:cam": {
+    "id": "UniProt:O82773",
+    "url": "https://www.uniprot.org/uniprotkb/O82773",
+    "synonyms": [
+      "CaM"
+    ]
+  },
+  "protein:sumo": {
+    "id": "UniProt:A0A7R8CNS7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7R8CNS7",
+    "synonyms": [
+      "SUMO"
+    ]
+  },
+  "gene:pias4": {
+    "id": "HGNC:17002",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/17002",
+    "synonyms": [
+      "PIAS4"
+    ]
+  },
+  "drug:vitamin c": {
+    "id": "RxNorm:1151",
+    "url": null,
+    "synonyms": [
+      "vitamin C"
+    ]
+  },
+  "drug:il-8": {
+    "id": "RxNorm:1426866",
+    "url": null,
+    "synonyms": [
+      "IL-8"
+    ]
+  },
+  "drug:resveratrol": {
+    "id": "RxNorm:1000492",
+    "url": null,
+    "synonyms": [
+      "resveratrol"
+    ]
+  },
+  "drug:il-6": {
+    "id": "RxNorm:1367185",
+    "url": null,
+    "synonyms": [
+      "IL-6"
+    ]
+  },
+  "drug:vorinostat": {
+    "id": "RxNorm:194337",
+    "url": null,
+    "synonyms": [
+      "Vorinostat"
+    ]
+  },
+  "drug:parpi": {
+    "id": "DBPedia:Parpi",
+    "url": "https://dbpedia.org/page/Parpi",
+    "synonyms": [
+      "PARPi"
+    ]
+  },
+  "ethnicity:c57bl/6": {
+    "id": "DBPedia:6",
+    "url": "https://dbpedia.org/page/6",
+    "synonyms": [
+      "C57BL/6"
+    ]
+  },
+  "location:mice": {
+    "id": "DBPedia:Of_Mice_&_Men_(band)",
+    "url": "https://dbpedia.org/page/Of_Mice_&_Men_(band)",
+    "synonyms": [
+      "mice"
+    ]
+  },
+  "biomarker:lipid peroxidation": {
+    "id": "DBPedia:Lipid_peroxidation",
+    "url": "https://dbpedia.org/page/Lipid_peroxidation",
+    "synonyms": [
+      "lipid peroxidation"
+    ]
+  },
+  "gene:slc7a11": {
+    "id": "HGNC:11059",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/11059",
+    "synonyms": [
+      "SLC7A11"
+    ]
+  },
+  "disease:dna damage": {
+    "id": "MeSH:D004249",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D004249",
+    "synonyms": [
+      "DNA damage"
+    ]
+  },
+  "gene:chk2": {
+    "id": "HGNC:16627",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/16627",
+    "synonyms": [
+      "CHK2"
+    ]
+  },
+  "biomarker:sims": {
+    "id": "DBPedia:The_Sims",
+    "url": "https://dbpedia.org/page/The_Sims",
+    "synonyms": [
+      "SIMs"
+    ]
+  },
+  "protein:mitochondria": {
+    "id": "UniProt:A0A2P2IR58",
+    "url": "https://www.uniprot.org/uniprotkb/A0A2P2IR58",
+    "synonyms": [
+      "mitochondria"
+    ]
+  },
+  "protein:progesterone receptor": {
+    "id": "UniProt:V9NYB6",
+    "url": "https://www.uniprot.org/uniprotkb/V9NYB6",
+    "synonyms": [
+      "progesterone receptor"
+    ]
+  },
+  "protein:estrogen receptor": {
+    "id": "UniProt:Q1WDQ4",
+    "url": "https://www.uniprot.org/uniprotkb/Q1WDQ4",
+    "synonyms": [
+      "estrogen receptor"
+    ]
+  },
+  "protein:ubiquitin": {
+    "id": "UniProt:U6IUP5",
+    "url": "https://www.uniprot.org/uniprotkb/U6IUP5",
+    "synonyms": [
+      "ubiquitin"
+    ]
+  },
+  "protein:ca2+-cam-dependent protein kinase (camk)": {
+    "id": "DBPedia:CAMK",
+    "url": "https://dbpedia.org/page/CAMK",
+    "synonyms": [
+      "Ca2+-CaM-dependent protein kinase (CAMK)"
+    ]
+  },
+  "disease:hpv": {
+    "id": "MeSH:D015344",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D015344",
+    "synonyms": [
+      "HPV"
+    ]
+  },
+  "procedure:chemotherapy": {
+    "id": "MeSH:D060830",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D060830",
+    "synonyms": [
+      "chemotherapy"
+    ]
+  },
+  "protein:ptbp1": {
+    "id": "UniProt:A0A0S7EQM1",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0S7EQM1",
+    "synonyms": [
+      "PTBP1"
+    ]
+  },
+  "disease:cervical cancer": {
+    "id": "MeSH:D002583",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D002583",
+    "synonyms": [
+      "cervical cancer"
+    ]
+  },
+  "drug:quercetin": {
+    "id": "RxNorm:9060",
+    "url": null,
+    "synonyms": [
+      "quercetin"
+    ]
+  },
+  "drug:berberine": {
+    "id": "RxNorm:1437",
+    "url": null,
+    "synonyms": [
+      "berberine"
+    ]
+  },
+  "biomarker:dna replication": {
+    "id": "DBPedia:DNA_replication",
+    "url": "https://dbpedia.org/page/DNA_replication",
+    "synonyms": [
+      "DNA replication"
+    ]
+  },
+  "drug:isorhamnetin": {
+    "id": "DBPedia:Isorhamnetin",
+    "url": "https://dbpedia.org/page/Isorhamnetin",
+    "synonyms": [
+      "isorhamnetin"
+    ]
+  },
+  "drug:luteolin": {
+    "id": "DBPedia:Luteolin",
+    "url": "https://dbpedia.org/page/Luteolin",
+    "synonyms": [
+      "luteolin"
+    ]
+  },
+  "procedure:tailored vaccines": {
+    "id": "DBPedia:Vaccine",
+    "url": "https://dbpedia.org/page/Vaccine",
+    "synonyms": [
+      "tailored vaccines"
+    ]
+  },
+  "disease:itns": {
+    "id": "DBPedia:ITN",
+    "url": "https://dbpedia.org/page/ITN",
+    "synonyms": [
+      "ITNs"
+    ]
+  },
+  "drug:targeted therapy": {
+    "id": "DBPedia:Targeted_therapy",
+    "url": "https://dbpedia.org/page/Targeted_therapy",
+    "synonyms": [
+      "targeted therapy"
+    ]
+  },
+  "procedure:immunotherapy": {
+    "id": "MeSH:D007167",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D007167",
+    "synonyms": [
+      "immunotherapy"
+    ]
+  },
+  "disease:thyroid diseases": {
+    "id": "MeSH:D013959",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013959",
+    "synonyms": [
+      "thyroid diseases"
+    ]
+  },
+  "procedure:biopsy": {
+    "id": "MeSH:D001706",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001706",
+    "synonyms": [
+      "biopsy"
+    ]
+  },
+  "disease:colorectal cancer": {
+    "id": "MeSH:D015179",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D015179",
+    "synonyms": [
+      "Colorectal cancer"
+    ]
+  },
+  "protein:yy1": {
+    "id": "UniProt:F6VSC6",
+    "url": "https://www.uniprot.org/uniprotkb/F6VSC6",
+    "synonyms": [
+      "YY1"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:thyroid_nodule:disease": {
+    "id": "MeSH:D016606",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016606",
+    "synonyms": [
+      "thyroid nodules"
+    ]
+  },
+  "disease:thyroid nodules": {
+    "id": "MeSH:D016606",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016606",
+    "synonyms": [
+      "thyroid nodules"
+    ]
+  },
+  "procedure:sdm": {
+    "id": "DBPedia:SDM_College_of_Engineering_and_Technology",
+    "url": "https://dbpedia.org/page/SDM_College_of_Engineering_and_Technology",
+    "synonyms": [
+      "SDM"
+    ]
+  },
+  "gene:crispr/cas9": {
+    "id": "DBPedia:CRISPR",
+    "url": "https://dbpedia.org/page/CRISPR",
+    "synonyms": [
+      "CRISPR/Cas9"
+    ]
+  },
+  "drug:kaempferol": {
+    "id": "DBPedia:Kaempferol_3-O-rutinoside",
+    "url": "https://dbpedia.org/page/Kaempferol_3-O-rutinoside",
+    "synonyms": [
+      "kaempferol"
+    ]
+  },
+  "drug:bacteriotherapy": {
+    "id": "DBPedia:Bacteriotherapy",
+    "url": "https://dbpedia.org/page/Bacteriotherapy",
+    "synonyms": [
+      "bacteriotherapy"
+    ]
+  },
+  "disease:gastric cancer": {
+    "id": "DBPedia:Hereditary_diffuse_gastric_cancer",
+    "url": "https://dbpedia.org/page/Hereditary_diffuse_gastric_cancer",
+    "synonyms": [
+      "gastric cancer"
+    ]
+  },
+  "disease:h. pylori": {
+    "id": "DBPedia:H._pylori",
+    "url": "https://dbpedia.org/page/H._pylori",
+    "synonyms": [
+      "H. pylori"
+    ]
+  },
+  "disease:head and neck squamous cell carcinoma": {
+    "id": "DBPedia:Squamous_cell_carcinoma",
+    "url": "https://dbpedia.org/page/Squamous_cell_carcinoma",
+    "synonyms": [
+      "head and neck squamous cell carcinoma"
+    ]
+  },
+  "gene:jak2": {
+    "id": "HGNC:6192",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/6192",
+    "synonyms": [
+      "JAK2"
+    ]
+  },
+  "pathway:emt": {
+    "id": "DBPedia:EMT",
+    "url": "https://dbpedia.org/page/EMT",
+    "synonyms": [
+      "EMT"
+    ]
+  },
+  "procedure:cancer vaccines": {
+    "id": "MeSH:D019496",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D019496",
+    "synonyms": [
+      "cancer vaccines"
+    ]
+  },
+  "disease:tumor cells": {
+    "id": "MeSH:D014407",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014407",
+    "synonyms": [
+      "tumor cells"
+    ]
+  },
+  "biomarker:neoantigens": {
+    "id": "DBPedia:Antigen",
+    "url": "https://dbpedia.org/page/Antigen",
+    "synonyms": [
+      "neoantigens"
+    ]
+  },
+  "pathway:alt": {
+    "id": "DBPedia:Alternative_rock",
+    "url": "https://dbpedia.org/page/Alternative_rock",
+    "synonyms": [
+      "ALT"
+    ]
+  },
+  "protein:parp2": {
+    "id": "UniProt:A0A0A9DGV6",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0A9DGV6",
+    "synonyms": [
+      "PARP2"
+    ]
+  },
+  "disease:crc": {
+    "id": "DBPedia:CRC_Press",
+    "url": "https://dbpedia.org/page/CRC_Press",
+    "synonyms": [
+      "CRC"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:thyroid_disease:disease": {
+    "id": "MeSH:D013959",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013959",
+    "synonyms": [
+      "thyroid dysfunction"
+    ]
+  },
+  "disease:thyroid dysfunction": {
+    "id": "MeSH:D013959",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013959",
+    "synonyms": [
+      "thyroid dysfunction"
+    ]
+  },
+  "gene:lepr": {
+    "id": "HGNC:6554",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/6554",
+    "synonyms": [
+      "LEPR"
+    ]
+  },
+  "procedure:radiotherapy": {
+    "id": "MeSH:D011878",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011878",
+    "synonyms": [
+      "radiotherapy"
+    ]
+  },
+  "protein:parg": {
+    "id": "UniProt:A0A069S5T4",
+    "url": "https://www.uniprot.org/uniprotkb/A0A069S5T4",
+    "synonyms": [
+      "PARG"
+    ]
+  },
+  "protein:xrcc1": {
+    "id": "UniProt:A0A0M4EQU6",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0M4EQU6",
+    "synonyms": [
+      "XRCC1"
+    ]
+  },
+  "protein:polb": {
+    "id": "UniProt:A0A8A4XC82",
+    "url": "https://www.uniprot.org/uniprotkb/A0A8A4XC82",
+    "synonyms": [
+      "POLB"
+    ]
+  },
+  "protein:leptin receptor": {
+    "id": "UniProt:Q9XSH3",
+    "url": "https://www.uniprot.org/uniprotkb/Q9XSH3",
+    "synonyms": [
+      "leptin receptor"
+    ]
+  },
+  "protein:aptx": {
+    "id": "UniProt:A0A7J7KFH6",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7J7KFH6",
+    "synonyms": [
+      "APTX"
+    ]
+  },
+  "disease:q223r": {
+    "id": "DBPedia:Q22",
+    "url": "https://dbpedia.org/page/Q22",
+    "synonyms": [
+      "Q223R"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:male_breast_cancer:disease": {
+    "id": "MeSH:D001943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001943",
+    "synonyms": [
+      "Male breast cancer"
+    ]
+  },
+  "disease:male breast cancer": {
+    "id": "MeSH:D001943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001943",
+    "synonyms": [
+      "Male breast cancer"
+    ]
+  },
+  "disease:replication stress": {
+    "id": "DBPedia:DNA_replication_stress",
+    "url": "https://dbpedia.org/page/DNA_replication_stress",
+    "synonyms": [
+      "replication stress"
+    ]
+  },
+  "symptom:telomere fragility": {
+    "id": "DBPedia:Telomere",
+    "url": "https://dbpedia.org/page/Telomere",
+    "synonyms": [
+      "telomere fragility"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:ductal_carcinoma:disease": {
+    "id": "MeSH:D044584",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D044584",
+    "synonyms": [
+      "ductal breast carcinoma"
+    ]
+  },
+  "disease:ductal breast carcinoma": {
+    "id": "MeSH:D044584",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D044584",
+    "synonyms": [
+      "ductal breast carcinoma"
+    ]
+  },
+  "protein:lig3": {
+    "id": "UniProt:A0A7J7J7K7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7J7J7K7",
+    "synonyms": [
+      "LIG3"
+    ]
+  },
+  "disease:glioblastoma": {
+    "id": "MeSH:D005909",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005909",
+    "synonyms": [
+      "glioblastoma"
+    ]
+  },
+  "disease:neuroblastoma": {
+    "id": "MeSH:D009447",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009447",
+    "synonyms": [
+      "neuroblastoma"
+    ]
+  },
+  "drug:lenvatinib": {
+    "id": "RxNorm:1603296",
+    "url": null,
+    "synonyms": [
+      "Lenvatinib"
+    ]
+  },
+  "drug:pembrolizumab": {
+    "id": "RxNorm:1547545",
+    "url": null,
+    "synonyms": [
+      "pembrolizumab"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:osteosarcoma:disease": {
+    "id": "MeSH:D012516",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012516",
+    "synonyms": [
+      "osteosarcomas"
+    ]
+  },
+  "disease:osteosarcomas": {
+    "id": "MeSH:D012516",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012516",
+    "synonyms": [
+      "osteosarcomas"
+    ]
+  },
+  "protein:berep4": {
+    "id": "DBPedia:BerEp4",
+    "url": "https://dbpedia.org/page/BerEp4",
+    "synonyms": [
+      "BerEp4"
+    ]
+  },
+  "protein:gata-3": {
+    "id": "UniProt:A6JLV3",
+    "url": "https://www.uniprot.org/uniprotkb/A6JLV3",
+    "synonyms": [
+      "GATA-3"
+    ]
+  },
+  "protein:pd-1": {
+    "id": "UniProt:A0A0X8XRJ2",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0X8XRJ2",
+    "synonyms": [
+      "PD-1"
+    ]
+  },
+  "protein:ae1/ae3": {
+    "id": "DBPedia:AE3",
+    "url": "https://dbpedia.org/page/AE3",
+    "synonyms": [
+      "AE1/AE3"
+    ]
+  },
+  "disease:occc": {
+    "id": "DBPedia:OCCC",
+    "url": "https://dbpedia.org/page/OCCC",
+    "synonyms": [
+      "OCCC"
+    ]
+  },
+  "gene:mutyh": {
+    "id": "HGNC:7527",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/7527",
+    "synonyms": [
+      "MUTYH"
+    ]
+  },
+  "gene:palb2": {
+    "id": "HGNC:26144",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/26144",
+    "synonyms": [
+      "PALB2"
+    ]
+  },
+  "protein:ki67": {
+    "id": "UniProt:A0A2D4P2D6",
+    "url": "https://www.uniprot.org/uniprotkb/A0A2D4P2D6",
+    "synonyms": [
+      "ki67"
+    ]
+  },
+  "protein:atr": {
+    "id": "UniProt:A0A0A9ACF6",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0A9ACF6",
+    "synonyms": [
+      "ATR"
+    ]
+  },
+  "protein:chk1": {
+    "id": "UniProt:A0A7L1XL30",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7L1XL30",
+    "synonyms": [
+      "CHK1"
+    ]
+  },
+  "procedure:sfrt": {
+    "id": "DBPedia:SFR",
+    "url": "https://dbpedia.org/page/SFR",
+    "synonyms": [
+      "SFRT"
+    ]
+  },
+  "disease:minas": {
+    "id": "DBPedia:Minas_Gerais",
+    "url": "https://dbpedia.org/page/Minas_Gerais",
+    "synonyms": [
+      "MINAS"
+    ]
+  },
+  "protein:hmmr": {
+    "id": "UniProt:A0A6J8ESN1",
+    "url": "https://www.uniprot.org/uniprotkb/A0A6J8ESN1",
+    "synonyms": [
+      "HMMR"
+    ]
+  },
+  "protein:psmd14": {
+    "id": "UniProt:A0A7R8CPC3",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7R8CPC3",
+    "synonyms": [
+      "PSMD14"
+    ]
+  },
+  "protein:kap1": {
+    "id": "UniProt:A0A7K4ZA08",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7K4ZA08",
+    "synonyms": [
+      "KAP1"
+    ]
+  },
+  "protein:atm": {
+    "id": "UniProt:A0A2J8L0P4",
+    "url": "https://www.uniprot.org/uniprotkb/A0A2J8L0P4",
+    "synonyms": [
+      "ATM"
+    ]
+  },
+  "procedure:review manager (revman) software": {
+    "id": "DBPedia:Software",
+    "url": "https://dbpedia.org/page/Software",
+    "synonyms": [
+      "Review Manager (RevMan) software"
+    ]
+  },
+  "protein:prmt1": {
+    "id": "UniProt:A0A6J8CF59",
+    "url": "https://www.uniprot.org/uniprotkb/A0A6J8CF59",
+    "synonyms": [
+      "PRMT1"
+    ]
+  },
+  "protein:dna-pk": {
+    "id": "UniProt:A0A088DI02",
+    "url": "https://www.uniprot.org/uniprotkb/A0A088DI02",
+    "synonyms": [
+      "DNA-PK"
+    ]
+  },
+  "biomarker:tcga": {
+    "id": "DBPedia:TCGA",
+    "url": "https://dbpedia.org/page/TCGA",
+    "synonyms": [
+      "TCGA"
+    ]
+  },
+  "drug:galunisertib": {
+    "id": "DBPedia:Galunisertib",
+    "url": "https://dbpedia.org/page/Galunisertib",
+    "synonyms": [
+      "galunisertib"
+    ]
+  },
+  "biomarker:geo": {
+    "id": "DBPedia:Geo_Entertainment",
+    "url": "https://dbpedia.org/page/Geo_Entertainment",
+    "synonyms": [
+      "GEO"
+    ]
+  },
+  "procedure:mri": {
+    "id": "DBPedia:MRI_sequence",
+    "url": "https://dbpedia.org/page/MRI_sequence",
+    "synonyms": [
+      "MRI"
+    ]
+  },
+  "procedure:neoadjuvant chemotherapy": {
+    "id": "DBPedia:Neoadjuvant_therapy",
+    "url": "https://dbpedia.org/page/Neoadjuvant_therapy",
+    "synonyms": [
+      "neoadjuvant chemotherapy"
+    ]
+  },
+  "drug:pd-l1 inhibitors": {
+    "id": "DBPedia:PD-1_and_PD-L1_inhibitors",
+    "url": "https://dbpedia.org/page/PD-1_and_PD-L1_inhibitors",
+    "synonyms": [
+      "PD-L1 inhibitors"
+    ]
+  },
+  "protein:egfr": {
+    "id": "UniProt:A0A7J7JG87",
+    "url": "https://www.uniprot.org/uniprotkb/A0A7J7JG87",
+    "synonyms": [
+      "EGFR"
+    ]
+  },
+  "procedure:mastectomy": {
+    "id": "MeSH:D008408",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008408",
+    "synonyms": [
+      "mastectomy"
+    ]
+  },
+  "pathway:pi3k/akt/mtor": {
+    "id": "DBPedia:mTOR_pathway",
+    "url": "https://dbpedia.org/page/mTOR_pathway",
+    "synonyms": [
+      "PI3K/AKT/mTOR"
+    ]
+  },
+  "symptom:pcr": {
+    "id": "DBPedia:PCR",
+    "url": "https://dbpedia.org/page/PCR",
+    "synonyms": [
+      "pCR"
+    ]
+  },
+  "drug:pbs": {
+    "id": "DBPedia:PBS",
+    "url": "https://dbpedia.org/page/PBS",
+    "synonyms": [
+      "PBS"
+    ]
+  },
+  "procedure:cancer genome atlas": {
+    "id": "DBPedia:The_Cancer_Genome_Atlas",
+    "url": "https://dbpedia.org/page/The_Cancer_Genome_Atlas",
+    "synonyms": [
+      "Cancer Genome Atlas"
+    ]
+  },
+  "drug:aromatase inhibitors": {
+    "id": "DBPedia:Aromatase_inhibitor",
+    "url": "https://dbpedia.org/page/Aromatase_inhibitor",
+    "synonyms": [
+      "aromatase inhibitors"
+    ]
+  },
+  "procedure:bilateral salpingo-oophorectomy (bso)": {
+    "id": "DBPedia:Oophorectomy",
+    "url": "https://dbpedia.org/page/Oophorectomy",
+    "synonyms": [
+      "bilateral salpingo-oophorectomy (BSO)"
+    ]
+  },
+  "disease:pancreatic cancer": {
+    "id": "MeSH:D010190",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010190",
+    "synonyms": [
+      "pancreatic cancer"
     ]
   },
   "disease:endometrial cancer": {
     "id": "MeSH:D016889",
     "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016889",
     "synonyms": [
-      "Endometrial cancer"
+      "endometrial cancer"
+    ]
+  },
+  "gene:kras": {
+    "id": "HGNC:6407",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/6407",
+    "synonyms": [
+      "KRAS"
+    ]
+  },
+  "location:china": {
+    "id": "DBPedia:China",
+    "url": "https://dbpedia.org/page/China",
+    "synonyms": [
+      "China"
+    ]
+  },
+  "gene:tp53 mutations": {
+    "id": "HGNC:17059",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/17059",
+    "synonyms": [
+      "TP53 mutations"
+    ]
+  },
+  "protein:yes1-associated protein (yap)": {
+    "id": "UniProt:A0A8C5SVG8",
+    "url": "https://www.uniprot.org/uniprotkb/A0A8C5SVG8",
+    "synonyms": [
+      "YES1-associated protein (YAP)"
+    ]
+  },
+  "protein:src family kinases (sfks)": {
+    "id": "UniProt:P32577",
+    "url": "https://www.uniprot.org/uniprotkb/P32577",
+    "synonyms": [
+      "Src family kinases (SFKs)"
+    ]
+  },
+  "protein:estrogen": {
+    "id": "UniProt:Q9H2M2",
+    "url": "https://www.uniprot.org/uniprotkb/Q9H2M2",
+    "synonyms": [
+      "estrogen"
+    ]
+  },
+  "procedure:ngs": {
+    "id": "DBPedia:NGS",
+    "url": "https://dbpedia.org/page/NGS",
+    "synonyms": [
+      "NGS"
+    ]
+  },
+  "disease:pdac": {
+    "id": "DBPedia:PDAC",
+    "url": "https://dbpedia.org/page/PDAC",
+    "synonyms": [
+      "PDAC"
+    ]
+  },
+  "procedure:biosensors": {
+    "id": "DBPedia:Biosensors_and_Bioelectronics",
+    "url": "https://dbpedia.org/page/Biosensors_and_Bioelectronics",
+    "synonyms": [
+      "biosensors"
+    ]
+  },
+  "disease:neurodegenerative diseases": {
+    "id": "MeSH:D019636",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D019636",
+    "synonyms": [
+      "neurodegenerative diseases"
+    ]
+  },
+  "disease:mitophagy": {
+    "id": "MeSH:D063306",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D063306",
+    "synonyms": [
+      "mitophagy"
+    ]
+  },
+  "procedure:disease-free survival": {
+    "id": "MeSH:D018572",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018572",
+    "synonyms": [
+      "disease-free survival"
+    ]
+  },
+  "location:boston": {
+    "id": "DBPedia:Boston",
+    "url": "https://dbpedia.org/page/Boston",
+    "synonyms": [
+      "Boston"
+    ]
+  },
+  "protein:\u03b2-adrenergic receptors": {
+    "id": "UniProt:A0A1D5P7A9",
+    "url": "https://www.uniprot.org/uniprotkb/A0A1D5P7A9",
+    "synonyms": [
+      "\u03b2-adrenergic receptors"
+    ]
+  },
+  "protein:pkd": {
+    "id": "UniProt:A0A068Y0R8",
+    "url": "https://www.uniprot.org/uniprotkb/A0A068Y0R8",
+    "synonyms": [
+      "PKD"
+    ]
+  },
+  "protein:progesterone": {
+    "id": "UniProt:A0A075F7W8",
+    "url": "https://www.uniprot.org/uniprotkb/A0A075F7W8",
+    "synonyms": [
+      "progesterone"
+    ]
+  },
+  "protein:pka": {
+    "id": "UniProt:A0A0M4EGQ9",
+    "url": "https://www.uniprot.org/uniprotkb/A0A0M4EGQ9",
+    "synonyms": [
+      "PKA"
+    ]
+  },
+  "drug:betulinic acid": {
+    "id": "DBPedia:Betulinic_acid",
+    "url": "https://dbpedia.org/page/Betulinic_acid",
+    "synonyms": [
+      "betulinic acid"
+    ]
+  },
+  "biomarker:chromosomal instability": {
+    "id": "DBPedia:Chromosome_instability",
+    "url": "https://dbpedia.org/page/Chromosome_instability",
+    "synonyms": [
+      "chromosomal instability"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:fanconi_anemia:disease": {
+    "id": "MeSH:D005199",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005199",
+    "synonyms": [
+      "Fanconi anaemia"
+    ]
+  },
+  "disease:fanconi anaemia": {
+    "id": "MeSH:D005199",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005199",
+    "synonyms": [
+      "Fanconi anaemia"
+    ]
+  },
+  "protein:fibrinogen": {
+    "id": "UniProt:B4YTZ1",
+    "url": "https://www.uniprot.org/uniprotkb/B4YTZ1",
+    "synonyms": [
+      "fibrinogen"
+    ]
+  },
+  "disease:lynch syndrome": {
+    "id": "MeSH:D055847",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D055847",
+    "synonyms": [
+      "Lynch syndrome"
+    ]
+  },
+  "disease:cardiovascular diseases": {
+    "id": "MeSH:D002318",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D002318",
+    "synonyms": [
+      "cardiovascular diseases"
+    ]
+  },
+  "disease:metabolic diseases": {
+    "id": "MeSH:D008659",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008659",
+    "synonyms": [
+      "metabolic diseases"
+    ]
+  },
+  "protein:ercc1": {
+    "id": "UniProt:A0A212DCB5",
+    "url": "https://www.uniprot.org/uniprotkb/A0A212DCB5",
+    "synonyms": [
+      "ERCC1"
+    ]
+  },
+  "protein:rev1": {
+    "id": "UniProt:B3CKG4",
+    "url": "https://www.uniprot.org/uniprotkb/B3CKG4",
+    "synonyms": [
+      "REV1"
+    ]
+  },
+  "protein:fanci/fancd2": {
+    "id": "UniProt:A0A1A8S9L7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A1A8S9L7",
+    "synonyms": [
+      "FANCI/FANCD2"
+    ]
+  },
+  "protein:creb/atf1": {
+    "id": "UniProt:A0AAE9W8C8",
+    "url": "https://www.uniprot.org/uniprotkb/A0AAE9W8C8",
+    "synonyms": [
+      "CREB/ATF1"
+    ]
+  },
+  "biomarker:gsh": {
+    "id": "DBPedia:Gryazev-Shipunov_GSh-23",
+    "url": "https://dbpedia.org/page/Gryazev-Shipunov_GSh-23",
+    "synonyms": [
+      "GSH"
+    ]
+  },
+  "location:inner mongolia": {
+    "id": "DBPedia:Inner_Mongolia",
+    "url": "https://dbpedia.org/page/Inner_Mongolia",
+    "synonyms": [
+      "Inner Mongolia"
+    ]
+  },
+  "procedure:tcga subtyping": {
+    "id": "DBPedia:Subtyping",
+    "url": "https://dbpedia.org/page/Subtyping",
+    "synonyms": [
+      "TCGA subtyping"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:alzheimer's_disease:disease": {
+    "id": "MeSH:D000544",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000544",
+    "synonyms": [
+      "Alzheimer\u2019s disease"
+    ]
+  },
+  "disease:alzheimer\u2019s disease": {
+    "id": "MeSH:D000544",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000544",
+    "synonyms": [
+      "Alzheimer\u2019s disease"
+    ]
+  },
+  "disease:parkinson\u2019s disease": {
+    "id": "DBPedia:Parkinson's_disease",
+    "url": "https://dbpedia.org/page/Parkinson's_disease",
+    "synonyms": [
+      "Parkinson\u2019s disease"
+    ]
+  },
+  "disease:uveal melanoma": {
+    "id": "MeSH:D000098943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000098943",
+    "synonyms": [
+      "uveal melanoma"
+    ]
+  },
+  "disease:retinal degeneration": {
+    "id": "MeSH:D012162",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012162",
+    "synonyms": [
+      "retinal degeneration"
+    ]
+  },
+  "disease:glaucoma": {
+    "id": "MeSH:D005901",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005901",
+    "synonyms": [
+      "glaucoma"
+    ]
+  },
+  "protein:ube2t": {
+    "id": "UniProt:A0ABS2YD32",
+    "url": "https://www.uniprot.org/uniprotkb/A0ABS2YD32",
+    "synonyms": [
+      "UBE2T"
+    ]
+  },
+  "protein:mismatch repair proteins": {
+    "id": "UniProt:P49850",
+    "url": "https://www.uniprot.org/uniprotkb/P49850",
+    "synonyms": [
+      "mismatch repair proteins"
+    ]
+  },
+  "biomarker:cysteine (cys)": {
+    "id": "DBPedia:Cysteine",
+    "url": "https://dbpedia.org/page/Cysteine",
+    "synonyms": [
+      "cysteine (Cys)"
+    ]
+  },
+  "pathway:mapk/erk signalling": {
+    "id": "DBPedia:ERK_pathway",
+    "url": "https://dbpedia.org/page/ERK_pathway",
+    "synonyms": [
+      "MAPK/ERK signalling"
+    ]
+  },
+  "disease:soft tissue sarcoma": {
+    "id": "DBPedia:Soft_tissue_sarcoma_in_cats_and_dogs",
+    "url": "https://dbpedia.org/page/Soft_tissue_sarcoma_in_cats_and_dogs",
+    "synonyms": [
+      "soft tissue sarcoma"
+    ]
+  },
+  "biomarker:taurine (tau)": {
+    "id": "DBPedia:Taurine",
+    "url": "https://dbpedia.org/page/Taurine",
+    "synonyms": [
+      "taurine (Tau)"
+    ]
+  },
+  "biomarker:ascorbate (asc)": {
+    "id": "DBPedia:Ascorbate_ferrireductase_(transmembrane)",
+    "url": "https://dbpedia.org/page/Ascorbate_ferrireductase_(transmembrane)",
+    "synonyms": [
+      "ascorbate (Asc)"
+    ]
+  },
+  "disease:pca": {
+    "id": "DBPedia:Pitcairn_PCA-2",
+    "url": "https://dbpedia.org/page/Pitcairn_PCA-2",
+    "synonyms": [
+      "PCa"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:cancer:disease": {
+    "id": "MeSH:D009369",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009369",
+    "synonyms": [
+      "urothelial cancer"
+    ]
+  },
+  "disease:urothelial cancer": {
+    "id": "MeSH:D009369",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009369",
+    "synonyms": [
+      "urothelial cancer"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:prostate_cancer:disease": {
+    "id": "MeSH:D011471",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011471",
+    "synonyms": [
+      "prostate cancer"
+    ]
+  },
+  "disease:prostate cancer": {
+    "id": "MeSH:D011471",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011471",
+    "synonyms": [
+      "prostate cancer"
+    ]
+  },
+  "drug:cisplatin": {
+    "id": "RxNorm:2555",
+    "url": null,
+    "synonyms": [
+      "cisplatin"
+    ]
+  },
+  "procedure:mammography": {
+    "id": "MeSH:D008327",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008327",
+    "synonyms": [
+      "mammography"
+    ]
+  },
+  "procedure:boron neutron capture therapy": {
+    "id": "MeSH:D016754",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016754",
+    "synonyms": [
+      "boron neutron capture therapy"
+    ]
+  },
+  "procedure:ultrasonography": {
+    "id": "MeSH:D014463",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014463",
+    "synonyms": [
+      "ultrasonography"
+    ]
+  },
+  "gene:fusion genes": {
+    "id": "HGNC:55980",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/55980",
+    "synonyms": [
+      "fusion genes"
+    ]
+  },
+  "disease:kidney cancer": {
+    "id": "MeSH:D007680",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D007680",
+    "synonyms": [
+      "kidney cancer"
+    ]
+  },
+  "ethnicity:african ancestry": {
+    "id": "DBPedia:African_Americans",
+    "url": "https://dbpedia.org/page/African_Americans",
+    "synonyms": [
+      "African ancestry"
+    ]
+  },
+  "disease:dense breast tissue": {
+    "id": "DBPedia:Dense_breast_tissue",
+    "url": "https://dbpedia.org/page/Dense_breast_tissue",
+    "synonyms": [
+      "dense breast tissue"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:small_intestine_cancer:disease": {
+    "id": "MeSH:D007414",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D007414",
+    "synonyms": [
+      "small intestine cancer"
+    ]
+  },
+  "disease:small intestine cancer": {
+    "id": "MeSH:D007414",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D007414",
+    "synonyms": [
+      "small intestine cancer"
+    ]
+  },
+  "pathway:sarcoma biology": {
+    "id": "DBPedia:Biology",
+    "url": "https://dbpedia.org/page/Biology",
+    "synonyms": [
+      "sarcoma biology"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:hepatocellular_carcinoma:disease": {
+    "id": "MeSH:D006528",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006528",
+    "synonyms": [
+      "Hepatocellular carcinoma"
+    ]
+  },
+  "disease:hepatocellular carcinoma": {
+    "id": "MeSH:D006528",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006528",
+    "synonyms": [
+      "Hepatocellular carcinoma"
+    ]
+  },
+  "procedure:precision oncology": {
+    "id": "DBPedia:Glasgow_Precision_Oncology_Laboratory",
+    "url": "https://dbpedia.org/page/Glasgow_Precision_Oncology_Laboratory",
+    "synonyms": [
+      "precision oncology"
+    ]
+  },
+  "disease:polyposis": {
+    "id": "MeSH:D044483",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D044483",
+    "synonyms": [
+      "polyposis"
+    ]
+  },
+  "gene:rb1": {
+    "id": "HGNC:9884",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/9884",
+    "synonyms": [
+      "RB1"
+    ]
+  },
+  "gene:hoxb13": {
+    "id": "HGNC:5112",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/5112",
+    "synonyms": [
+      "HOXB13"
+    ]
+  },
+  "drug:b02": {
+    "id": "DBPedia:ATC_code_B02",
+    "url": "https://dbpedia.org/page/ATC_code_B02",
+    "synonyms": [
+      "B02"
+    ]
+  },
+  "disease:fap": {
+    "id": "DBPedia:FK_FAP",
+    "url": "https://dbpedia.org/page/FK_FAP",
+    "synonyms": [
+      "FAP"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:neuroendocrine_tumor:disease": {
+    "id": "MeSH:D018358",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018358",
+    "synonyms": [
+      "neuroendocrine carcinoma"
+    ]
+  },
+  "disease:neuroendocrine carcinoma": {
+    "id": "MeSH:D018358",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018358",
+    "synonyms": [
+      "neuroendocrine carcinoma"
+    ]
+  },
+  "disease:fibroadenoma": {
+    "id": "MeSH:D018226",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018226",
+    "synonyms": [
+      "fibroadenoma"
+    ]
+  },
+  "disease:variant": {
+    "id": "MeSH:D000788",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000788",
+    "synonyms": [
+      "variant"
+    ]
+  },
+  "disease:disease": {
+    "id": "MeSH:D000208",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000208",
+    "synonyms": [
+      "disease"
+    ]
+  },
+  "gene:ntrk3": {
+    "id": "HGNC:8033",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/8033",
+    "synonyms": [
+      "NTRK3"
+    ]
+  },
+  "drug:doxorubicin": {
+    "id": "RxNorm:3639",
+    "url": null,
+    "synonyms": [
+      "doxorubicin"
+    ]
+  },
+  "pathway:autophagy": {
+    "id": "DBPedia:Autophagy",
+    "url": "https://dbpedia.org/page/Autophagy",
+    "synonyms": [
+      "autophagy"
+    ]
+  },
+  "pathway:apoptosis": {
+    "id": "DBPedia:Apoptosis",
+    "url": "https://dbpedia.org/page/Apoptosis",
+    "synonyms": [
+      "apoptosis"
+    ]
+  },
+  "protein:lc3b": {
+    "id": "UniProt:A0A6G9HD50",
+    "url": "https://www.uniprot.org/uniprotkb/A0A6G9HD50",
+    "synonyms": [
+      "LC3B"
+    ]
+  },
+  "symptom:lymph node metastasis": {
+    "id": "DBPedia:Lymph_node",
+    "url": "https://dbpedia.org/page/Lymph_node",
+    "synonyms": [
+      "lymph node metastasis"
+    ]
+  },
+  "disease:dcis": {
+    "id": "DBPedia:DCIS",
+    "url": "https://dbpedia.org/page/DCIS",
+    "synonyms": [
+      "DCIS"
+    ]
+  },
+  "drug:albumin": {
+    "id": "DBPedia:Human_serum_albumin",
+    "url": "https://dbpedia.org/page/Human_serum_albumin",
+    "synonyms": [
+      "albumin"
+    ]
+  },
+  "gene:gene": {
+    "id": "DBPedia:Gene_Autry",
+    "url": "https://dbpedia.org/page/Gene_Autry",
+    "synonyms": [
+      "gene"
+    ]
+  },
+  "location:healthcare systems": {
+    "id": "DBPedia:Health_administration",
+    "url": "https://dbpedia.org/page/Health_administration",
+    "synonyms": [
+      "healthcare systems"
+    ]
+  },
+  "disease:adenomatous polyposis": {
+    "id": "MeSH:D011125",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011125",
+    "synonyms": [
+      "adenomatous polyposis"
+    ]
+  },
+  "gene:brip1": {
+    "id": "HGNC:20473",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/20473",
+    "synonyms": [
+      "BRIP1"
+    ]
+  },
+  "gene:gorab": {
+    "id": "HGNC:25676",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/25676",
+    "synonyms": [
+      "GORAB"
+    ]
+  },
+  "gene:acan": {
+    "id": "HGNC:319",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/319",
+    "synonyms": [
+      "ACAN"
+    ]
+  },
+  "gene:copb2": {
+    "id": "HGNC:2232",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/2232",
+    "synonyms": [
+      "COPB2"
+    ]
+  },
+  "drug:curcumin": {
+    "id": "RxNorm:2955",
+    "url": null,
+    "synonyms": [
+      "curcumin"
+    ]
+  },
+  "drug:docetaxel": {
+    "id": "RxNorm:72962",
+    "url": null,
+    "synonyms": [
+      "docetaxel"
+    ]
+  },
+  "gene:bard1": {
+    "id": "HGNC:952",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/952",
+    "synonyms": [
+      "BARD1"
+    ]
+  },
+  "procedure:right colectomy": {
+    "id": "DBPedia:Colectomy",
+    "url": "https://dbpedia.org/page/Colectomy",
+    "synonyms": [
+      "right colectomy"
+    ]
+  },
+  "protein:lamins": {
+    "id": "DBPedia:Lamin",
+    "url": "https://dbpedia.org/page/Lamin",
+    "synonyms": [
+      "Lamins"
+    ]
+  },
+  "protein:ezh2": {
+    "id": "UniProt:A0A812AM26",
+    "url": "https://www.uniprot.org/uniprotkb/A0A812AM26",
+    "synonyms": [
+      "EZH2"
+    ]
+  },
+  "gene:igf1": {
+    "id": "HGNC:5464",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/5464",
+    "synonyms": [
+      "IGF1"
+    ]
+  },
+  "gene:fbn1": {
+    "id": "HGNC:3603",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/3603",
+    "synonyms": [
+      "FBN1"
+    ]
+  },
+  "gene:mlh1": {
+    "id": "HGNC:7127",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/7127",
+    "synonyms": [
+      "MLH1"
+    ]
+  },
+  "protein:heterochromatin": {
+    "id": "UniProt:A0A8G1R178",
+    "url": "https://www.uniprot.org/uniprotkb/A0A8G1R178",
+    "synonyms": [
+      "heterochromatin"
+    ]
+  },
+  "gene:kank1": {
+    "id": "HGNC:19309",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/19309",
+    "synonyms": [
+      "KANK1"
+    ]
+  },
+  "gene:msh2": {
+    "id": "HGNC:7325",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/7325",
+    "synonyms": [
+      "MSH2"
+    ]
+  },
+  "protein:cd44": {
+    "id": "UniProt:A0A8C3L0B0",
+    "url": "https://www.uniprot.org/uniprotkb/A0A8C3L0B0",
+    "synonyms": [
+      "CD44"
+    ]
+  },
+  "protein:upar": {
+    "id": "UniProt:D8WYW7",
+    "url": "https://www.uniprot.org/uniprotkb/D8WYW7",
+    "synonyms": [
+      "uPAR"
+    ]
+  },
+  "protein:eif4e": {
+    "id": "UniProt:A0A1I7SPF3",
+    "url": "https://www.uniprot.org/uniprotkb/A0A1I7SPF3",
+    "synonyms": [
+      "eIF4E"
+    ]
+  },
+  "disease:p53b": {
+    "id": "DBPedia:P53",
+    "url": "https://dbpedia.org/page/P53",
+    "synonyms": [
+      "p53B"
+    ]
+  },
+  "disease:fdg-avid thyroid lesions": {
+    "id": "DBPedia:Thyroid",
+    "url": "https://dbpedia.org/page/Thyroid",
+    "synonyms": [
+      "FDG-avid thyroid lesions"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:breast_cancer:disease": {
+    "id": "MeSH:D001943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001943",
+    "synonyms": [
+      "breast cancer subtypes"
+    ]
+  },
+  "disease:breast cancer subtypes": {
+    "id": "MeSH:D001943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001943",
+    "synonyms": [
+      "breast cancer subtypes"
+    ]
+  },
+  "protein:cxcr4": {
+    "id": "UniProt:Q6UQB5",
+    "url": "https://www.uniprot.org/uniprotkb/Q6UQB5",
+    "synonyms": [
+      "CXCR4"
+    ]
+  },
+  "protein:hif-1\u03b1": {
+    "id": "UniProt:A0A140CTX5",
+    "url": "https://www.uniprot.org/uniprotkb/A0A140CTX5",
+    "synonyms": [
+      "HIF-1\u03b1"
+    ]
+  },
+  "gene:msh6": {
+    "id": "HGNC:7329",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/7329",
+    "synonyms": [
+      "MSH6"
+    ]
+  },
+  "gene:angptl3": {
+    "id": "HGNC:491",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/491",
+    "synonyms": [
+      "ANGPTL3"
+    ]
+  },
+  "gene:hnf1a": {
+    "id": "HGNC:11621",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/11621",
+    "synonyms": [
+      "HNF1A"
+    ]
+  },
+  "gene:pms2": {
+    "id": "HGNC:9122",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/9122",
+    "synonyms": [
+      "PMS2"
+    ]
+  },
+  "gene:hnf4a": {
+    "id": "HGNC:5024",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/5024",
+    "synonyms": [
+      "HNF4A"
+    ]
+  },
+  "location:uk biobank": {
+    "id": "DBPedia:UK_Biobank",
+    "url": "https://dbpedia.org/page/UK_Biobank",
+    "synonyms": [
+      "UK Biobank"
+    ]
+  },
+  "protein:sparc receptors": {
+    "id": "UniProt:A0A026X200",
+    "url": "https://www.uniprot.org/uniprotkb/A0A026X200",
+    "synonyms": [
+      "SPARC receptors"
+    ]
+  },
+  "protein:gp60": {
+    "id": "UniProt:A0A087DGP3",
+    "url": "https://www.uniprot.org/uniprotkb/A0A087DGP3",
+    "synonyms": [
+      "gp60"
+    ]
+  },
+  "protein:ca153": {
+    "id": "DBPedia:CA15",
+    "url": "https://dbpedia.org/page/CA15",
+    "synonyms": [
+      "CA153"
+    ]
+  },
+  "disease:metastatic disease": {
+    "id": "DBPedia:Metastasis",
+    "url": "https://dbpedia.org/page/Metastasis",
+    "synonyms": [
+      "metastatic disease"
+    ]
+  },
+  "disease:gynecomastia": {
+    "id": "MeSH:D006177",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006177",
+    "synonyms": [
+      "gynecomastia"
+    ]
+  },
+  "protein:cea": {
+    "id": "UniProt:Q9UML9",
+    "url": "https://www.uniprot.org/uniprotkb/Q9UML9",
+    "synonyms": [
+      "CEA"
+    ]
+  },
+  "protein:ca125": {
+    "id": "UniProt:A0A9Q0NMA1",
+    "url": "https://www.uniprot.org/uniprotkb/A0A9Q0NMA1",
+    "synonyms": [
+      "CA125"
+    ]
+  },
+  "procedure:liquid biopsy": {
+    "id": "MeSH:D000073890",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000073890",
+    "synonyms": [
+      "liquid biopsy"
+    ]
+  },
+  "disease:sarcoma": {
+    "id": "MeSH:D012515",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012515",
+    "synonyms": [
+      "sarcoma"
+    ]
+  },
+  "disease:coronary artery disease": {
+    "id": "MeSH:D003324",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003324",
+    "synonyms": [
+      "coronary artery disease"
+    ]
+  },
+  "disease:lung cancer": {
+    "id": "MeSH:D008175",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008175",
+    "synonyms": [
+      "Lung cancer"
+    ]
+  },
+  "biomarker:microarray data": {
+    "id": "DBPedia:Microarray_databases",
+    "url": "https://dbpedia.org/page/Microarray_databases",
+    "synonyms": [
+      "microarray data"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:type_2_diabetes:disease": {
+    "id": "MeSH:D003924",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003924",
+    "synonyms": [
+      "type 2 diabetes"
+    ]
+  },
+  "disease:type 2 diabetes": {
+    "id": "MeSH:D003924",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003924",
+    "synonyms": [
+      "type 2 diabetes"
+    ]
+  },
+  "disease:invasive papillary carcinoma": {
+    "id": "DBPedia:Invasive_species",
+    "url": "https://dbpedia.org/page/Invasive_species",
+    "synonyms": [
+      "invasive papillary carcinoma"
+    ]
+  },
+  "gene:enpp1": {
+    "id": "HGNC:3356",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/3356",
+    "synonyms": [
+      "ENPP1"
+    ]
+  },
+  "disease:hereditary breast and ovarian cancer syndrome": {
+    "id": "MeSH:D061325",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D061325",
+    "synonyms": [
+      "hereditary breast and ovarian cancer syndrome"
+    ]
+  },
+  "disease:li-fraumeni syndrome": {
+    "id": "MeSH:D016864",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016864",
+    "synonyms": [
+      "Li-Fraumeni syndrome"
+    ]
+  },
+  "protein:glutathione peroxidase 4 (gpx4)": {
+    "id": "UniProt:P36969",
+    "url": "https://www.uniprot.org/uniprotkb/P36969",
+    "synonyms": [
+      "glutathione peroxidase 4 (GPX4)"
+    ]
+  },
+  "location:fallopian tube": {
+    "id": "DBPedia:Fallopian_tube",
+    "url": "https://dbpedia.org/page/Fallopian_tube",
+    "synonyms": [
+      "fallopian tube"
+    ]
+  },
+  "procedure:kpca": {
+    "id": "DBPedia:KPCA",
+    "url": "https://dbpedia.org/page/KPCA",
+    "synonyms": [
+      "KPCA"
+    ]
+  },
+  "procedure:obl": {
+    "id": "DBPedia:Vologda_Oblast",
+    "url": "https://dbpedia.org/page/Vologda_Oblast",
+    "synonyms": [
+      "OBL"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:neoplasm:disease": {
+    "id": "MeSH:D009369",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009369",
+    "synonyms": [
+      "neoplastic diseases"
+    ]
+  },
+  "disease:neoplastic diseases": {
+    "id": "MeSH:D009369",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009369",
+    "synonyms": [
+      "neoplastic diseases"
+    ]
+  },
+  "disease:metastatic breast cancer": {
+    "id": "DBPedia:Metastatic_breast_cancer",
+    "url": "https://dbpedia.org/page/Metastatic_breast_cancer",
+    "synonyms": [
+      "metastatic breast cancer"
+    ]
+  },
+  "protein:glutathione (gsh)": {
+    "id": "UniProt:P77544",
+    "url": "https://www.uniprot.org/uniprotkb/P77544",
+    "synonyms": [
+      "glutathione (GSH)"
+    ]
+  },
+  "drug:tamoxifen": {
+    "id": "RxNorm:10324",
+    "url": null,
+    "synonyms": [
+      "tamoxifen"
+    ]
+  },
+  "protein:human epidermal growth factor receptor 2": {
+    "id": "UniProt:Q96B97",
+    "url": "https://www.uniprot.org/uniprotkb/Q96B97",
+    "synonyms": [
+      "human epidermal growth factor receptor 2"
+    ]
+  },
+  "procedure:spearman correlation": {
+    "id": "DBPedia:Spearman's_rank_correlation_coefficient",
+    "url": "https://dbpedia.org/page/Spearman's_rank_correlation_coefficient",
+    "synonyms": [
+      "Spearman correlation"
+    ]
+  },
+  "pathway:fanconi anemia pathways": {
+    "id": "DBPedia:Anemia",
+    "url": "https://dbpedia.org/page/Anemia",
+    "synonyms": [
+      "Fanconi anemia pathways"
+    ]
+  },
+  "pathway:lipid metabolism pathway": {
+    "id": "DBPedia:Metabolism",
+    "url": "https://dbpedia.org/page/Metabolism",
+    "synonyms": [
+      "lipid metabolism pathway"
+    ]
+  },
+  "procedure:pearson correlation": {
+    "id": "DBPedia:Pearson_correlation_coefficient",
+    "url": "https://dbpedia.org/page/Pearson_correlation_coefficient",
+    "synonyms": [
+      "Pearson correlation"
+    ]
+  },
+  "disease:hereditary leiomyomatosis and renal cell carcinoma": {
+    "id": "DBPedia:Hereditary_leiomyomatosis_and_renal_cell_carcinoma",
+    "url": "https://dbpedia.org/page/Hereditary_leiomyomatosis_and_renal_cell_carcinoma",
+    "synonyms": [
+      "hereditary leiomyomatosis and renal cell carcinoma"
+    ]
+  },
+  "disease:adrenocortical carcinoma": {
+    "id": "MeSH:D018268",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018268",
+    "synonyms": [
+      "adrenocortical carcinoma"
+    ]
+  },
+  "disease:basal cell carcinoma": {
+    "id": "MeSH:D002280",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D002280",
+    "synonyms": [
+      "basal cell carcinoma"
+    ]
+  },
+  "disease:malignant melanoma": {
+    "id": "MeSH:D000096142",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000096142",
+    "synonyms": [
+      "malignant melanoma"
+    ]
+  },
+  "disease:tumors": {
+    "id": "MeSH:D018222",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018222",
+    "synonyms": [
+      "tumors"
+    ]
+  },
+  "gene:sumo-targeted ubiquitin ligases": {
+    "id": "HGNC:12512",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/12512",
+    "synonyms": [
+      "SUMO-targeted ubiquitin ligases"
+    ]
+  },
+  "protein:ubiquitin signaling": {
+    "id": "UniProt:P22681",
+    "url": "https://www.uniprot.org/uniprotkb/P22681",
+    "synonyms": [
+      "ubiquitin signaling"
+    ]
+  },
+  "drug:photodynamic therapy": {
+    "id": "DBPedia:Photodynamic_therapy",
+    "url": "https://dbpedia.org/page/Photodynamic_therapy",
+    "synonyms": [
+      "photodynamic therapy"
+    ]
+  },
+  "disease:chromophobe renal cell carcinoma": {
+    "id": "DBPedia:Renal_cell_carcinoma",
+    "url": "https://dbpedia.org/page/Renal_cell_carcinoma",
+    "synonyms": [
+      "chromophobe renal cell carcinoma"
+    ]
+  },
+  "procedure:bayesian information criterion": {
+    "id": "DBPedia:Bayesian_information_criterion",
+    "url": "https://dbpedia.org/page/Bayesian_information_criterion",
+    "synonyms": [
+      "Bayesian Information Criterion"
+    ]
+  },
+  "protein:non-coding rnas": {
+    "id": "DBPedia:Non-coding_RNA",
+    "url": "https://dbpedia.org/page/Non-coding_RNA",
+    "synonyms": [
+      "non-coding RNAs"
+    ]
+  },
+  "drug:antibody\u2013drug conjugates": {
+    "id": "DBPedia:Antibody-drug_conjugate",
+    "url": "https://dbpedia.org/page/Antibody-drug_conjugate",
+    "synonyms": [
+      "antibody\u2013drug conjugates"
+    ]
+  },
+  "procedure:systemic therapy": {
+    "id": "DBPedia:Therapy",
+    "url": "https://dbpedia.org/page/Therapy",
+    "synonyms": [
+      "systemic therapy"
+    ]
+  },
+  "drug:gemcitabine": {
+    "id": "RxNorm:12574",
+    "url": null,
+    "synonyms": [
+      "gemcitabine"
+    ]
+  },
+  "biomarker:psa": {
+    "id": "DBPedia:DW_engine",
+    "url": "https://dbpedia.org/page/DW_engine",
+    "synonyms": [
+      "PSA"
+    ]
+  },
+  "procedure:machine learning": {
+    "id": "MeSH:D000069550",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000069550",
+    "synonyms": [
+      "machine learning"
+    ]
+  },
+  "disease:mesothelioma": {
+    "id": "MeSH:D008654",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008654",
+    "synonyms": [
+      "mesothelioma"
+    ]
+  },
+  "protein:elf3": {
+    "id": "UniProt:A0A835NM92",
+    "url": "https://www.uniprot.org/uniprotkb/A0A835NM92",
+    "synonyms": [
+      "ELF3"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:mesothelioma:disease": {
+    "id": "MeSH:D008654",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008654",
+    "synonyms": [
+      "Pleural mesothelioma"
+    ]
+  },
+  "disease:pleural mesothelioma": {
+    "id": "MeSH:D008654",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D008654",
+    "synonyms": [
+      "Pleural mesothelioma"
+    ]
+  },
+  "procedure:digital breast tomosynthesis": {
+    "id": "DBPedia:Tomosynthesis",
+    "url": "https://dbpedia.org/page/Tomosynthesis",
+    "synonyms": [
+      "digital breast tomosynthesis"
+    ]
+  },
+  "procedure:artificial intelligence\u2010assisted interpretation": {
+    "id": "DBPedia:Artificial_intelligence",
+    "url": "https://dbpedia.org/page/Artificial_intelligence",
+    "synonyms": [
+      "artificial intelligence\u2010assisted interpretation"
+    ]
+  },
+  "disease:mda-mb-231": {
+    "id": "MeSH:D000092302",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000092302",
+    "synonyms": [
+      "MDA-MB-231"
+    ]
+  },
+  "procedure:genetic services": {
+    "id": "MeSH:D033142",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D033142",
+    "synonyms": [
+      "genetic services"
+    ]
+  },
+  "drug:erlotinib": {
+    "id": "RxNorm:337525",
+    "url": null,
+    "synonyms": [
+      "erlotinib"
+    ]
+  },
+  "drug:nimotuzumab": {
+    "id": "DBPedia:Nimotuzumab",
+    "url": "https://dbpedia.org/page/Nimotuzumab",
+    "synonyms": [
+      "nimotuzumab"
+    ]
+  },
+  "drug:masitinib": {
+    "id": "DBPedia:Masitinib",
+    "url": "https://dbpedia.org/page/Masitinib",
+    "synonyms": [
+      "masitinib"
+    ]
+  },
+  "protein:igg": {
+    "id": "UniProt:A0A110AVV3",
+    "url": "https://www.uniprot.org/uniprotkb/A0A110AVV3",
+    "synonyms": [
+      "IgG"
+    ]
+  },
+  "protein:afp": {
+    "id": "UniProt:A0A212D5Z9",
+    "url": "https://www.uniprot.org/uniprotkb/A0A212D5Z9",
+    "synonyms": [
+      "AFP"
+    ]
+  },
+  "location:pericardium": {
+    "id": "DBPedia:Pericardium",
+    "url": "https://dbpedia.org/page/Pericardium",
+    "synonyms": [
+      "pericardium"
+    ]
+  },
+  "location:tunica vaginalis": {
+    "id": "DBPedia:Tunica_vaginalis",
+    "url": "https://dbpedia.org/page/Tunica_vaginalis",
+    "synonyms": [
+      "tunica vaginalis"
+    ]
+  },
+  "biomarker:ros": {
+    "id": "DBPedia:Ileana_Ros-Lehtinen",
+    "url": "https://dbpedia.org/page/Ileana_Ros-Lehtinen",
+    "synonyms": [
+      "ROS"
+    ]
+  },
+  "procedure:nernst equation": {
+    "id": "DBPedia:Nernst_equation",
+    "url": "https://dbpedia.org/page/Nernst_equation",
+    "synonyms": [
+      "Nernst equation"
+    ]
+  },
+  "location:peritoneum": {
+    "id": "DBPedia:Peritoneum",
+    "url": "https://dbpedia.org/page/Peritoneum",
+    "synonyms": [
+      "peritoneum"
+    ]
+  },
+  "drug:cyclophosphamide": {
+    "id": "RxNorm:3002",
+    "url": null,
+    "synonyms": [
+      "cyclophosphamide"
+    ]
+  },
+  "gene:brd7": {
+    "id": "HGNC:14310",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/14310",
+    "synonyms": [
+      "BRD7"
+    ]
+  },
+  "disease:non-melanoma skin cancer": {
+    "id": "MeSH:D000099313",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000099313",
+    "synonyms": [
+      "non-melanoma skin cancer"
+    ]
+  },
+  "location:pan troglodytes": {
+    "id": "DBPedia:Pan_troglodytes_endogenous_retrovirus-1",
+    "url": "https://dbpedia.org/page/Pan_troglodytes_endogenous_retrovirus-1",
+    "synonyms": [
+      "Pan troglodytes"
+    ]
+  },
+  "location:chimpanzees": {
+    "id": "DBPedia:Chimpanzees'_tea_party",
+    "url": "https://dbpedia.org/page/Chimpanzees'_tea_party",
+    "synonyms": [
+      "Chimpanzees"
+    ]
+  },
+  "procedure:citespace": {
+    "id": "DBPedia:Citespace",
+    "url": "https://dbpedia.org/page/Citespace",
+    "synonyms": [
+      "CiteSpace"
+    ]
+  },
+  "gene:genetic risk profiles": {
+    "id": "DBPedia:Genetics",
+    "url": "https://dbpedia.org/page/Genetics",
+    "synonyms": [
+      "genetic risk profiles"
+    ]
+  },
+  "procedure:support vector classifier (svc)": {
+    "id": "DBPedia:Support_vector_machine",
+    "url": "https://dbpedia.org/page/Support_vector_machine",
+    "synonyms": [
+      "Support Vector Classifier (SVC)"
+    ]
+  },
+  "location:united states": {
+    "id": "DBPedia:United_States",
+    "url": "https://dbpedia.org/page/United_States",
+    "synonyms": [
+      "United States"
+    ]
+  },
+  "procedure:breast-conserving surgery": {
+    "id": "DBPedia:Breast-conserving_surgery",
+    "url": "https://dbpedia.org/page/Breast-conserving_surgery",
+    "synonyms": [
+      "breast-conserving surgery"
+    ]
+  },
+  "gene:fga": {
+    "id": "HGNC:3661",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/3661",
+    "synonyms": [
+      "FGA"
+    ]
+  },
+  "gene:tsc2": {
+    "id": "HGNC:12363",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/12363",
+    "synonyms": [
+      "TSC2"
+    ]
+  },
+  "gene:arid1a": {
+    "id": "HGNC:11110",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/11110",
+    "synonyms": [
+      "ARID1A"
+    ]
+  },
+  "drug:apigenin": {
+    "id": "RxNorm:1368130",
+    "url": null,
+    "synonyms": [
+      "Apigenin"
+    ]
+  },
+  "biomarker:saliva sample": {
+    "id": "DBPedia:Saliva_(band)",
+    "url": "https://dbpedia.org/page/Saliva_(band)",
+    "synonyms": [
+      "saliva sample"
+    ]
+  },
+  "drug:biospecimen": {
+    "id": "DBPedia:Office_of_Biorepositories_and_Biospecimen_Research",
+    "url": "https://dbpedia.org/page/Office_of_Biorepositories_and_Biospecimen_Research",
+    "synonyms": [
+      "biospecimen"
+    ]
+  },
+  "location:hypothalamus": {
+    "id": "DBPedia:Hypothalamus",
+    "url": "https://dbpedia.org/page/Hypothalamus",
+    "synonyms": [
+      "hypothalamus"
+    ]
+  },
+  "procedure:molecular profiling": {
+    "id": "DBPedia:Molecular_biology",
+    "url": "https://dbpedia.org/page/Molecular_biology",
+    "synonyms": [
+      "molecular profiling"
+    ]
+  },
+  "disease:synthetic lethality": {
+    "id": "DBPedia:Synthetic_lethality",
+    "url": "https://dbpedia.org/page/Synthetic_lethality",
+    "synonyms": [
+      "synthetic lethality"
+    ]
+  },
+  "procedure:convolutional neural networks (cnns)": {
+    "id": "DBPedia:Convolutional_neural_network",
+    "url": "https://dbpedia.org/page/Convolutional_neural_network",
+    "synonyms": [
+      "Convolutional Neural Networks (CNNs)"
+    ]
+  },
+  "location:university of western australia": {
+    "id": "DBPedia:University_of_Western_Australia",
+    "url": "https://dbpedia.org/page/University_of_Western_Australia",
+    "synonyms": [
+      "University of Western Australia"
+    ]
+  },
+  "drug:genistein": {
+    "id": "RxNorm:25696",
+    "url": null,
+    "synonyms": [
+      "Genistein"
+    ]
+  },
+  "disease:covid-19": {
+    "id": "MeSH:D000086382",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000086382",
+    "synonyms": [
+      "COVID-19"
+    ]
+  },
+  "gene:ctnnb1": {
+    "id": "HGNC:2514",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/2514",
+    "synonyms": [
+      "CTNNB1"
+    ]
+  },
+  "disease:metabolic syndrome": {
+    "id": "MeSH:D024821",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D024821",
+    "synonyms": [
+      "metabolic syndrome"
+    ]
+  },
+  "biomarker:glucose": {
+    "id": "DBPedia:Glucose",
+    "url": "https://dbpedia.org/page/Glucose",
+    "synonyms": [
+      "glucose"
+    ]
+  },
+  "ethnicity:black": {
+    "id": "DBPedia:Black",
+    "url": "https://dbpedia.org/page/Black",
+    "synonyms": [
+      "Black"
+    ]
+  },
+  "location:facebook pages": {
+    "id": "DBPedia:List_of_most-followed_Facebook_pages",
+    "url": "https://dbpedia.org/page/List_of_most-followed_Facebook_pages",
+    "synonyms": [
+      "Facebook pages"
+    ]
+  },
+  "disease:estrogen-positive breast cancer": {
+    "id": "MeSH:D001943",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001943",
+    "synonyms": [
+      "estrogen-positive breast cancer"
+    ]
+  },
+  "gene:aurka": {
+    "id": "HGNC:11393",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/11393",
+    "synonyms": [
+      "AURKA"
+    ]
+  },
+  "symptom:nutrition": {
+    "id": "MeSH:D004750",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D004750",
+    "synonyms": [
+      "nutrition"
+    ]
+  },
+  "gene:ttn": {
+    "id": "HGNC:12403",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/12403",
+    "synonyms": [
+      "TTN"
+    ]
+  },
+  "protein:sox11": {
+    "id": "UniProt:W0HJ30",
+    "url": "https://www.uniprot.org/uniprotkb/W0HJ30",
+    "synonyms": [
+      "SOX11"
+    ]
+  },
+  "procedure:multimodal imaging": {
+    "id": "MeSH:D064847",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D064847",
+    "synonyms": [
+      "multimodal imaging"
+    ]
+  },
+  "procedure:nir": {
+    "id": "DBPedia:Hapoel_Nir_Ramat_HaSharon_F.C.",
+    "url": "https://dbpedia.org/page/Hapoel_Nir_Ramat_HaSharon_F.C.",
+    "synonyms": [
+      "NIR"
+    ]
+  },
+  "drug:ais": {
+    "id": "DBPedia:Smedby_AIS",
+    "url": "https://dbpedia.org/page/Smedby_AIS",
+    "synonyms": [
+      "Ais"
+    ]
+  },
+  "procedure:cancer initiation": {
+    "id": "DBPedia:Cancer_Breakthroughs_2020",
+    "url": "https://dbpedia.org/page/Cancer_Breakthroughs_2020",
+    "synonyms": [
+      "cancer initiation"
+    ]
+  },
+  "protein:vimentin": {
+    "id": "UniProt:A0A1U7QL88",
+    "url": "https://www.uniprot.org/uniprotkb/A0A1U7QL88",
+    "synonyms": [
+      "vimentin"
+    ]
+  },
+  "protein:e-cadherin": {
+    "id": "UniProt:Q90Z37",
+    "url": "https://www.uniprot.org/uniprotkb/Q90Z37",
+    "synonyms": [
+      "E-cadherin"
+    ]
+  },
+  "protein:n-cadherin": {
+    "id": "UniProt:A0A5C6NN77",
+    "url": "https://www.uniprot.org/uniprotkb/A0A5C6NN77",
+    "synonyms": [
+      "N-cadherin"
+    ]
+  },
+  "protein:cell cycle regulators": {
+    "id": "UniProt:P94197",
+    "url": "https://www.uniprot.org/uniprotkb/P94197",
+    "synonyms": [
+      "cell cycle regulators"
+    ]
+  },
+  "protein:fibronectin": {
+    "id": "UniProt:A0A1U7QPS7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A1U7QPS7",
+    "synonyms": [
+      "fibronectin"
+    ]
+  },
+  "protein:ribosomal proteins": {
+    "id": "UniProt:P19954",
+    "url": "https://www.uniprot.org/uniprotkb/P19954",
+    "synonyms": [
+      "ribosomal proteins"
+    ]
+  },
+  "disease:dpm": {
+    "id": "DBPedia:DPMM_FC",
+    "url": "https://dbpedia.org/page/DPMM_FC",
+    "synonyms": [
+      "DPM"
+    ]
+  },
+  "procedure:enrollment": {
+    "id": "DBPedia:Dual_enrollment",
+    "url": "https://dbpedia.org/page/Dual_enrollment",
+    "synonyms": [
+      "enrollment"
+    ]
+  },
+  "disease:cryptogenic hepatocellular carcinoma": {
+    "id": "MeSH:D006528",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006528",
+    "synonyms": [
+      "Cryptogenic hepatocellular carcinoma"
+    ]
+  },
+  "gene:adat3": {
+    "id": "HGNC:25151",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/25151",
+    "synonyms": [
+      "ADAT3"
+    ]
+  },
+  "disease:eosinophilic esophagitis": {
+    "id": "MeSH:D057765",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D057765",
+    "synonyms": [
+      "eosinophilic esophagitis"
+    ]
+  },
+  "disease:asthma": {
+    "id": "MeSH:D001249",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001249",
+    "synonyms": [
+      "asthma"
+    ]
+  },
+  "disease:adenocarcinoma": {
+    "id": "MeSH:D000230",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000230",
+    "synonyms": [
+      "adenocarcinoma"
+    ]
+  },
+  "drug:bevacizumab": {
+    "id": "RxNorm:253337",
+    "url": null,
+    "synonyms": [
+      "bevacizumab"
+    ]
+  },
+  "gene:adat2": {
+    "id": "HGNC:21172",
+    "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/21172",
+    "synonyms": [
+      "ADAT2"
+    ]
+  },
+  "disease:hsci": {
+    "id": "DBPedia:HSCI",
+    "url": "https://dbpedia.org/page/HSCI",
+    "synonyms": [
+      "hSCI"
+    ]
+  },
+  "protein:egr3": {
+    "id": "UniProt:A2D5A2",
+    "url": "https://www.uniprot.org/uniprotkb/A2D5A2",
+    "synonyms": [
+      "Egr3"
+    ]
+  },
+  "disease:mucinous neoplasms": {
+    "id": "DBPedia:Mucinous_cystic_neoplasm",
+    "url": "https://dbpedia.org/page/Mucinous_cystic_neoplasm",
+    "synonyms": [
+      "mucinous neoplasms"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:fibrocystic_breast_changes:disease": {
+    "id": "MeSH:D005348",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005348",
+    "synonyms": [
+      "fibrocystic breasts"
+    ]
+  },
+  "disease:fibrocystic breasts": {
+    "id": "MeSH:D005348",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005348",
+    "synonyms": [
+      "fibrocystic breasts"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:signet_ring_cell_carcinoma:disease": {
+    "id": "MeSH:D018279",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018279",
+    "synonyms": [
+      "signet-ring cell carcinoma"
+    ]
+  },
+  "disease:signet-ring cell carcinoma": {
+    "id": "MeSH:D018279",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D018279",
+    "synonyms": [
+      "signet-ring cell carcinoma"
+    ]
+  },
+  "protein:trna": {
+    "id": "UniProt:F5YR49",
+    "url": "https://www.uniprot.org/uniprotkb/F5YR49",
+    "synonyms": [
+      "tRNA"
+    ]
+  },
+  "disease:brain cancer": {
+    "id": "MeSH:D001932",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001932",
+    "synonyms": [
+      "brain cancer"
+    ]
+  },
+  "drug:cocaine": {
+    "id": "RxNorm:2653",
+    "url": null,
+    "synonyms": [
+      "Cocaine"
+    ]
+  },
+  "procedure:pleural biopsy (pb)": {
+    "id": "DBPedia:Biopsy",
+    "url": "https://dbpedia.org/page/Biopsy",
+    "synonyms": [
+      "pleural biopsy (PB)"
+    ]
+  },
+  "drug:medications": {
+    "id": "DBPedia:Counterfeit_medications",
+    "url": "https://dbpedia.org/page/Counterfeit_medications",
+    "synonyms": [
+      "medications"
+    ]
+  },
+  "drug:dopamine receptor d1": {
+    "id": "DBPedia:Dopamine_receptor_D1",
+    "url": "https://dbpedia.org/page/Dopamine_receptor_D1",
+    "synonyms": [
+      "Dopamine receptor D1"
+    ]
+  },
+  "symptom:dbpedia_auth:dbpedia:spasticity:symptom": {
+    "id": "MeSH:D009128",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009128",
+    "synonyms": [
+      "spastic paralysis"
+    ]
+  },
+  "symptom:spastic paralysis": {
+    "id": "MeSH:D009128",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D009128",
+    "synonyms": [
+      "spastic paralysis"
+    ]
+  },
+  "symptom:flaccid paralysis": {
+    "id": "DBPedia:Flaccid_paralysis",
+    "url": "https://dbpedia.org/page/Flaccid_paralysis",
+    "synonyms": [
+      "flaccid paralysis"
+    ]
+  },
+  "disease:dbpedia_auth:dbpedia:african_trypanosomiasis:disease": {
+    "id": "MeSH:D014353",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014353",
+    "synonyms": [
+      "Human African trypanosomiasis"
+    ]
+  },
+  "disease:human african trypanosomiasis": {
+    "id": "MeSH:D014353",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014353",
+    "synonyms": [
+      "Human African trypanosomiasis"
+    ]
+  },
+  "location:minnesota medicaid recipients": {
+    "id": "DBPedia:Minnesota",
+    "url": "https://dbpedia.org/page/Minnesota",
+    "synonyms": [
+      "Minnesota Medicaid recipients"
+    ]
+  },
+  "disease:fusobacterium nucleatum": {
+    "id": "MeSH:D016967",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016967",
+    "synonyms": [
+      "Fusobacterium nucleatum"
+    ]
+  },
+  "procedure:thoracoscopy": {
+    "id": "MeSH:D013906",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013906",
+    "synonyms": [
+      "thoracoscopy"
+    ]
+  },
+  "protein:fada": {
+    "id": "UniProt:A0AAW2YMY8",
+    "url": "https://www.uniprot.org/uniprotkb/A0AAW2YMY8",
+    "synonyms": [
+      "FadA"
+    ]
+  },
+  "protein:fap2": {
+    "id": "UniProt:A0A178VYJ7",
+    "url": "https://www.uniprot.org/uniprotkb/A0A178VYJ7",
+    "synonyms": [
+      "Fap2"
+    ]
+  },
+  "location:tanzania": {
+    "id": "DBPedia:Tanzania",
+    "url": "https://dbpedia.org/page/Tanzania",
+    "synonyms": [
+      "Tanzania"
+    ]
+  },
+  "drug:cntf": {
+    "id": "DBPedia:ZFP91-CNTF",
+    "url": "https://dbpedia.org/page/ZFP91-CNTF",
+    "synonyms": [
+      "CNTF"
+    ]
+  },
+  "location:kenya": {
+    "id": "DBPedia:Kenya",
+    "url": "https://dbpedia.org/page/Kenya",
+    "synonyms": [
+      "Kenya"
+    ]
+  },
+  "procedure:mrna translation": {
+    "id": "DBPedia:Translation",
+    "url": "https://dbpedia.org/page/Translation",
+    "synonyms": [
+      "mRNA translation"
+    ]
+  },
+  "protein:community pharmacists": {
+    "id": "DBPedia:Pharmacist",
+    "url": "https://dbpedia.org/page/Pharmacist",
+    "synonyms": [
+      "community pharmacists"
+    ]
+  },
+  "symptom:fever": {
+    "id": "MeSH:D000092582",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000092582",
+    "synonyms": [
+      "fever"
+    ]
+  },
+  "disease:trypanosoma brucei rhodesiense": {
+    "id": "MeSH:D016833",
+    "url": "https://meshb.nlm.nih.gov/record/ui?ui=D016833",
+    "synonyms": [
+      "Trypanosoma brucei rhodesiense"
+    ]
+  },
+  "drug:pentamidine": {
+    "id": "RxNorm:7994",
+    "url": null,
+    "synonyms": [
+      "pentamidine"
+    ]
+  },
+  "drug:suramin": {
+    "id": "RxNorm:10256",
+    "url": null,
+    "synonyms": [
+      "suramin"
+    ]
+  },
+  "protein:radd": {
+    "id": "UniProt:A0A5P3ATG0",
+    "url": "https://www.uniprot.org/uniprotkb/A0A5P3ATG0",
+    "synonyms": [
+      "RadD"
+    ]
+  },
+  "location:piedmont, italy": {
+    "id": "DBPedia:Piedmont",
+    "url": "https://dbpedia.org/page/Piedmont",
+    "synonyms": [
+      "Piedmont, Italy"
+    ]
+  },
+  "procedure:bilateral breast magnetic resonance imaging (mri)": {
+    "id": "DBPedia:Magnetic_resonance_imaging",
+    "url": "https://dbpedia.org/page/Magnetic_resonance_imaging",
+    "synonyms": [
+      "bilateral breast magnetic resonance imaging (MRI)"
     ]
   }
 }
