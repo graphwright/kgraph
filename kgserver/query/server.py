@@ -92,6 +92,10 @@ _chainlit_app = os.environ.get("CHAINLIT_APP_PATH") or next(
     None,
 )
 if _chainlit_app is not None:
+    _chainlit_app = Path(_chainlit_app)
+    # Chainlit loads .chainlit/config.toml and serves public/ from APP_ROOT (default cwd).
+    # Set APP_ROOT to the chainlit app dir so config and custom_js are used when mounted.
+    os.environ["CHAINLIT_APP_ROOT"] = str(_chainlit_app.parent)
     try:
         from chainlit.utils import mount_chainlit  # pylint: disable=no-name-in-module
 
