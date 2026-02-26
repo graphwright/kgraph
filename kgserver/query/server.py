@@ -1,7 +1,7 @@
 import logging
 import os
 import subprocess
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 from fastapi import FastAPI, Depends
 from fastapi.staticfiles import StaticFiles
@@ -93,16 +93,25 @@ _chainlit_app = os.environ.get("CHAINLIT_APP_PATH") or next(
 )
 if _chainlit_app is not None:
     _chainlit_app = Path(_chainlit_app)
-    # Chainlit loads .chainlit/config.toml and serves public/ from APP_ROOT (default cwd).
-    # Set APP_ROOT to the chainlit app dir so config and custom_js are used when mounted.
-    os.environ["CHAINLIT_APP_ROOT"] = str(_chainlit_app.parent)
-    try:
-        from chainlit.utils import mount_chainlit  # pylint: disable=no-name-in-module
+    chainlit_dir = _chainlit_app.parent
 
-        mount_chainlit(app=app, target=str(_chainlit_app), path="/chat")
+    @contextmanager
+    def _pushd(path: Path):
+        old = Path.cwd()
+        os.chdir(path)
+        try:
+            yield
+        finally:
+            os.chdir(old)
+
+    try:
+        with _pushd(chainlit_dir):
+            from chainlit.utils import mount_chainlit  # pylint: disable=no-name-in-module
+
+            mount_chainlit(app=app, target=str(_chainlit_app), path="/chat")
         logger.info("Chainlit mounted at /chat (app=%s)", _chainlit_app)
-    except Exception as e:  # pylint: disable=broad-exception-caught
-        logger.warning("Chainlit mount failed (app=%s): %s", _chainlit_app, e)
+    except Exception:  # pylint: disable=broad-exception-caught
+        logger.exception("Failed to mount Chainlit at /chat (app=%s)", _chainlit_app)
 else:
     logger.info("Chainlit not mounted: no app at CHAINLIT_APP_PATH or kgserver/chainlit/app.py")
 
