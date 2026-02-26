@@ -47,7 +47,7 @@
         var composer = findComposer();
         if (!composer) return;
         var sendBtn = findSendButton(composer);
-        var insertAfter = findInsertAfterButton(composer);
+        var insertAfter = findSettingsGear(composer);
         if (!insertAfter && sendBtn) insertAfter = sendBtn.previousElementSibling;
         if (!insertAfter) insertAfter = sendBtn;
         if (!insertAfter) return;
