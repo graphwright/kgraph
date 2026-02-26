@@ -139,6 +139,101 @@ def mcp_tools_to_litellm(tools) -> list[dict]:
     return result
 
 
+# ── Export chat to Markdown ───────────────────────────────────────────────────
+
+# Boilerplate content prefixes to exclude from export (UI-only messages)
+_EXPORT_SKIP_PREFIXES = (
+    "Connecting to knowledge graph tools",
+    "**Example prompts:**",
+    "Export this chat to markdown",
+    "✅ Connected to MCP server",
+    "⚠️ MCP server did not respond",
+    "⚠️ Could not connect to MCP server",
+)
+
+
+def _content_to_text(content: Any) -> str | None:
+    """Extract plain text from message content (string, list of parts, or dict)."""
+    if content is None:
+        return None
+    if isinstance(content, str):
+        return content.strip() or None
+    if isinstance(content, list):
+        parts = []
+        for item in content:
+            if isinstance(item, dict) and "text" in item:
+                parts.append(str(item["text"]).strip())
+            elif isinstance(item, str):
+                parts.append(item.strip())
+        joined = "\n".join(p for p in parts if p)
+        if joined:
+            return joined
+        # All parts were non-text (e.g. image_url); avoid silent drop
+        if content:
+            return "*(non-text content omitted)*"
+        return None
+    if isinstance(content, dict):
+        if "text" in content:
+            return str(content["text"]).strip() or None
+        return json.dumps(content, indent=2)
+    return str(content).strip() or None
+
+
+def _history_to_markdown(history: list[dict]) -> str:
+    """Format chat history (user/assistant messages) as markdown. Skips system, tool, and boilerplate."""
+    lines = ["# Chat export\n"]
+    for msg in history:
+        role = msg.get("role") or ""
+        if role == "system":
+            continue
+        if role == "tool":
+            continue
+        content = msg.get("content")
+        text = _content_to_text(content)
+        if text:
+            # Skip UI boilerplate (lstrip so leading whitespace/markdown doesn't break match)
+            t = text.lstrip()
+            if any(t.startswith(prefix) for prefix in _EXPORT_SKIP_PREFIXES):
+                continue
+            if role == "user":
+                lines.append("## User\n\n")
+            elif role == "assistant":
+                lines.append("## Assistant\n\n")
+            else:
+                lines.append(f"## {role.title()}\n\n")
+            lines.append(text)
+            lines.append("\n\n")
+        elif role == "assistant" and msg.get("tool_calls"):
+            lines.append("## Assistant\n\n")
+            lines.append("*(Tool calls omitted in export)*\n\n")
+    return "".join(lines).strip() + "\n"
+
+
+async def _do_export_chat_markdown() -> None:
+    """Export current session to markdown (shared by command and action)."""
+    to_openai = getattr(cl.chat_context, "to_openai", None)
+    history = (to_openai() if callable(to_openai) else None) or cl.user_session.get("history") or []
+    if len(history) <= 1:
+        await cl.Message(content="No conversation to export yet. Send a message first.").send()
+        return
+    md = _history_to_markdown(history)
+    filename = "chat_export.md"
+    await cl.Message(
+        content="**Chat exported.** Download the file below.",
+        elements=[cl.File(name=filename, content=md.encode("utf-8"), display="inline")],
+    ).send()
+    # Only show copyable block for smaller chats (32KB UTF-8) to avoid huge payloads
+    if len(md.encode("utf-8")) <= 32_000:
+        await cl.Message(content=f"```markdown\n{md}\n```").send()
+
+
+@cl.action_callback("export_chat_md")
+async def on_export_chat_md(action: cl.Action):
+    """Legacy: export when clicking an in-stream action (if any)."""
+    await _do_export_chat_markdown()
+    await action.remove()
+
+
 # ── Chainlit lifecycle ────────────────────────────────────────────────────────
 
 
@@ -199,6 +294,18 @@ async def on_chat_start():
     example_actions = [cl.Action(name="run_example", label=label, payload={"prompt": prompt}) for label, prompt in EXAMPLES.items()]
     await cl.Message(content="**Example prompts:**", actions=example_actions).send()
 
+    # Permanent "Save as Markdown" button in the message composer (next to input)
+    try:
+        emitter = getattr(cl.context, "emitter", None)
+        if emitter and hasattr(emitter, "set_commands"):
+            emitter.set_commands(
+                [
+                    {"id": "ExportMarkdown", "icon": "file-down", "description": "Save chat as Markdown", "button": True},
+                ]
+            )
+    except Exception:  # older Chainlit may not have commands
+        pass
+
 
 @cl.action_callback("run_example")
 async def on_example_action(action: cl.Action):
@@ -228,6 +335,10 @@ async def on_settings_update(settings: dict):
 
 @cl.on_message
 async def on_message(message: cl.Message):
+    # Command from the composer button (permanent fixture next to input)
+    if getattr(message, "command", None) == "ExportMarkdown":
+        await _do_export_chat_markdown()
+        return
     await run_chat(message.content)
 
 
