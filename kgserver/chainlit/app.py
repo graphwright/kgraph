@@ -146,6 +146,7 @@ _EXPORT_SKIP_PREFIXES = (
     "Connecting to knowledge graph tools",
     "**Example prompts:**",
     "Export this chat to markdown",
+    "[Save as Markdown]",  # magic message from the composer button
     "✅ Connected to MCP server",
     "⚠️ MCP server did not respond",
     "⚠️ Could not connect to MCP server",
@@ -333,10 +334,17 @@ async def on_settings_update(settings: dict):
     await run_chat(prompt_text)
 
 
+# Magic message sent when user clicks "Save as Markdown" in the input bar (custom JS)
+_EXPORT_TRIGGER_MESSAGE = "[Save as Markdown]"
+
+
 @cl.on_message
 async def on_message(message: cl.Message):
-    # Command from the composer button (permanent fixture next to input)
+    # Command from the composer (if Chainlit supports it) or magic message from custom JS button
     if getattr(message, "command", None) == "ExportMarkdown":
+        await _do_export_chat_markdown()
+        return
+    if (message.content or "").strip() == _EXPORT_TRIGGER_MESSAGE:
         await _do_export_chat_markdown()
         return
     await run_chat(message.content)

@@ -1,3 +1,5 @@
 # Hide chain-of-thought steps; only the thinking-message spinner is shown until the answer appears.
 [UI]
 cot = "hidden"
+# Custom JS: injects "Save as Markdown" button next to the settings gear in the input bar
+custom_js = "/public/export-button.js"
