@@ -16,6 +16,8 @@ Knowledge graph system for extracting entities and relationships from documents 
 - **Entity promotion**: Provisional → canonical when usage thresholds are met
 - **Entity merging**: Combining canonical entities detected as duplicates via semantic vector similarity
 
+**For detailed project architecture and package-by-package structure**, see **`summary.md`** in the repository root. It contains an overview of the Python codebase and is the reference for components, modules, and how they relate. Keep **`summary.md`** at repo root (do not remove); it is in the list of retained repo files alongside the Track 2 docs.
+
 ## Build & Test Commands
 
 ```bash
@@ -36,43 +38,22 @@ uv run pytest tests/test_entities.py
 uv run pytest tests/test_entities.py::test_canonical_promotion -v
 ```
 
-## Architecture Notes
+## Linters
 
-- Each knowledge domain defines its own canonical ID source, schema, and edge types
-- Query optimizations and graph algorithms are shared across domains
-- Documents produce JSON output: global `entities.json` for canonicals, per-paper `paper_{id}.json` for edges and provisionals
-- Semantic vectors (embeddings) on entities enable merge detection via cosine similarity
+Preferred linter tools and **order** are defined in **`lint.sh`**. Run that script to lint and test. Order: **ruff** (check, with auto-fix on failure) → **mypy** → **black** (check) → **flake8** → **pylint**, then **pytest**. Scope is `kgraph`, `kgbundle`, `kgschema`, `kgserver`, and `examples`; `kgserver/chainlit/app.py` is excluded from mypy and pylint. If a step fails, `fixes_needed` runs `black` and `ruff check --fix` and exits so you can re-run.
 
-## Package Structure
+## Python and Testing Conventions
 
-The codebase is organized into separate packages with clear separation of concerns:
+- Prefer **`uv`** for virtualenvs and running commands. Use Python 3.12 or 3.13.
+- Use **pydantic** models and **immutable data** (tuple, frozenset, frozendict, or pydantic models with `frozen=True`) where it improves clarity and reliability.
+- Use **descriptive** variable and class names. Give pydantic fields meaningful `description` strings.
+- **Pytest** for verification. Write tests early; keep them well documented and structured. Run the suite often during development. Prefer tests that do not inhibit refactoring.
 
-### kgschema/ (Submodule within kgraph)
-Data structure definitions only, no functional code:
-- `entity.py` - BaseEntity, EntityMention, EntityStatus, PromotionConfig
-- `relationship.py` - BaseRelationship
-- `domain.py` - DomainSchema ABC for defining entity/relationship types
-- `document.py` - BaseDocument ABC
-- `storage.py` - ABC interfaces for storage backends (EntityStorageInterface, etc.)
+## Interface–Implementation and ABCs
 
-### kgbundle/ (Separate Package)
-Lightweight Pydantic models for bundle exchange between kgraph and kgserver:
-- `models.py` - EntityRow, RelationshipRow, BundleManifestV1, DocAssetRow
-- Minimal dependencies (only pydantic) for lightweight imports
-- Used by both kgraph (producer) and kgserver (consumer)
+Prefer **interface–implementation** separation where it makes sense: define abstract contracts with **ABC (Abstract Base Class)** classes, then provide one or more concrete implementations. This keeps domain logic independent of storage, pipelines, or pluggable strategies.
 
-### kgraph/ (Main Framework)
-Functional code for ingestion and processing:
-- `ingest.py` - IngestionOrchestrator implementing two-pass pipeline
-- `promotion.py` - PromotionPolicy ABC for entity promotion logic
-- `export.py` - Bundle export functionality
-- `builders.py` - Builder utilities
-- `canonical_id/` - Canonical ID lookup and caching
-- `storage/` - In-memory storage implementations
-- `pipeline/` - Pipeline component interfaces
-
-### kgserver/ (Query Server)
-FastAPI server for querying knowledge graphs:
-- Loads bundles produced by kgraph
-- Provides MCP server, GraphQL, and REST APIs
-- PostgreSQL and SQLite backend support
+- **Storage**: `kgschema/storage.py` defines ABCs for entity/relationship storage; kgraph and kgserver provide concrete backends.
+- **Domain schema**: `DomainSchema`, `BaseDocument`, and related types in kgschema are abstract; each example (medlit, sherlock) implements them.
+- **Promotion**: `PromotionPolicy` in kgraph is an ABC; domain-specific promotion rules are implementations.
+- When adding new pluggable behavior (e.g. a new pipeline stage or backend), consider introducing an ABC in the appropriate package and implementing it in the concrete layer rather than hard-coding a single implementation.

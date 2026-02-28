@@ -22,25 +22,10 @@ RUN uv venv --python /usr/local/bin/python3 --relocatable && \
     uv pip install uvicorn fastapi zensical \
         mkdocs mkdocs-material pymdown-extensions
 
-# Copy mkdocs config and build docs/ from repo markdown (kgserver index = site home)
+# Docs: Track 2 set under docs/ + kgserver index as site home
 COPY kgserver/mkdocs.yml ./
+COPY docs/ ./docs/
 COPY kgserver/index.md ./docs/index.md
-COPY docs/architecture.md ./docs/architecture.md
-COPY docs/index.md ./docs/reference/index.md
-COPY docs/api.md docs/bundle.md docs/canonical_ids.md docs/determinism.md docs/domains.md docs/pipeline.md docs/storage.md docs/graph_visualization.md docs/RELATIONSHIP_TRACING.md ./docs/reference/
-COPY README.md CLAUDE.md LAMBDA_LABS.md MEDLIT_SCHEMA_SPEC.md STATUS_20260212.md NEXT_STEPS.md JATS_PARSER_NOTES.md jupyter.md summary.md VIBES.md holmes_example_plan.md snapshot_semantics_v1.md RETHINK_INGESTION.md ./docs/project/
-COPY PLAN1.md PLAN2.md PLAN3.md PLAN4.md PLAN5.md PLAN6.md PLAN7.md ./docs/project/plans/
-COPY TODO1.md TODO2.md ./docs/project/todos/
-COPY kgserver/index.md kgserver/DOCKER_SETUP.md kgserver/DOCKER_COMPOSE_GUIDE.md kgserver/LOCAL_DEV.md kgserver/MCP_CLIENT_SETUP.md kgserver/GRAPHQL_VIBES.md kgserver/MCP_GQL_WRAPPER.md ./docs/kgserver/
-COPY kgserver/docs/architecture.md ./docs/kgserver/architecture.md
-COPY kgserver/storage/README.md kgserver/storage/NEO4J_COMPATIBILITY.md ./docs/kgserver/storage/
-COPY kgserver/storage/models/README.md ./docs/kgserver/storage/models/
-COPY kgserver/storage/backends/README.md ./docs/kgserver/storage/backends/
-COPY examples/medlit/README.md examples/medlit/TODO.md examples/medlit/CANONICAL_IDS.md ./docs/examples/medlit/
-COPY examples/medlit_schema/README.md examples/medlit_schema/DEPTH_OF_FIELDS.md examples/medlit_schema/PROGRESS.md examples/medlit_schema/ONTOLOGY_GUIDE.md ./docs/examples/medlit_schema/
-COPY examples/medlit_golden/README.md ./docs/examples/medlit_golden/
-COPY examples/sherlock/README.md ./docs/examples/sherlock/
-COPY .github/copilot-instructions.md ./docs/development/copilot-instructions.md
 
 # Prebuild MkDocs site so runtime does not run zensical build (avoids hang on small droplets)
 RUN uv run zensical build

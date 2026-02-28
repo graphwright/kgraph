@@ -1,4 +1,8 @@
-# Pipeline Components
+# The Pipeline
+
+Each stage in detail: **parsing** (and chunking), **extraction** (entity then relationship), **dedup**, **resolution** (to canonical or provisional), and **bundle building**. The framework exposes interfaces for each; domain pipelines (e.g. medlit) implement them.
+
+## Two-pass architecture
 
 The knowledge graph ingestion pipeline uses a **two-pass architecture** to transform raw documents into structured knowledge:
 
@@ -157,7 +161,7 @@ Resolution strategy:
 3. Query external authority using `CanonicalIdLookupInterface` (UMLS, DBPedia, etc.)
 4. Create provisional entity if no match found
 
-The resolver can use a `CanonicalIdLookupInterface` implementation to look up canonical IDs from external authorities. See [Canonical IDs](canonical_ids.md) for details.
+The resolver can use a `CanonicalIdLookupInterface` implementation to look up canonical IDs from external authorities. See [Canonical IDs and Entity Resolution](canonical-ids-and-entity-resolution.md) for details.
 
 ```python
 class HybridEntityResolver(EntityResolverInterface):

@@ -8,7 +8,7 @@ formatted signatures for classes, methods, and functions.
 Includes a portion of each *.md, *.yml, Dockerfile, and shell script
 to add more context.
 
-$ git ls-files | uv run python extract_summary.py > summary.md
+$ git ls-files | uv run python summarize_codebase.py > summary.md
 """
 
 import ast
@@ -34,7 +34,7 @@ class DocExtractor(ast.NodeVisitor):
 
         # Capture other top-level strings (not the docstring)
         for stmt in node.body:
-            if isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str)):
+            if isinstance(stmt, ast.Expr) and isinstance(stmt.value, ast.Constant):
                 val = stmt.value.value if isinstance(stmt.value, ast.Constant) else stmt.value.s
                 if isinstance(val, str) and val != docstring:
                     self.sections.append(("note", "", val, ""))

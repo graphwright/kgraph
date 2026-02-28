@@ -4,6 +4,9 @@ Medical Literature Knowledge Graph — Chainlit Chat UI
 Can run standalone (chainlit run app.py --host 0.0.0.0 --port 8002) or mounted
 at /chat inside the kgserver API (same port as the API, no separate port).
 
+Note: Excluded from mypy and pylint in lint.sh — Chainlit's dynamic decorators
+and lack of type stubs make static analysis unreliable here.
+
 Environment variables:
   MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
   LLM_PROVIDER      anthropic | openai | ollama  (default: anthropic)

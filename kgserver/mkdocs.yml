@@ -22,69 +22,16 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Overview: overview.md
   - Architecture: architecture.md
-  - Project:
-    - Overview: project/README.md
-    - CLAUDE: project/CLAUDE.md
-    - Lambda Labs: project/LAMBDA_LABS.md
-    - Medlit schema spec: project/MEDLIT_SCHEMA_SPEC.md
-    - Implementation plan: project/IMPLEMENTATION_PLAN.md
-    - Status: project/STATUS_20260212.md
-    - Next steps: project/NEXT_STEPS.md
-    - JATS parser notes: project/JATS_PARSER_NOTES.md
-    - Jupyter: project/jupyter.md
-    - Summary: project/summary.md
-    - VIBES: project/VIBES.md
-    - Holmes example plan: project/holmes_example_plan.md
-    - Snapshot semantics: project/snapshot_semantics_v1.md
-    - RETHINK ingestion: project/RETHINK_INGESTION.md
-    - Plans:
-      - PLAN1: project/plans/PLAN1.md
-      - PLAN2: project/plans/PLAN2.md
-      - PLAN3: project/plans/PLAN3.md
-      - PLAN4: project/plans/PLAN4.md
-      - PLAN5: project/plans/PLAN5.md
-      - PLAN6: project/plans/PLAN6.md
-      - PLAN7: project/plans/PLAN7.md
-    - TODOs:
-      - TODO1: project/todos/TODO1.md
-      - TODO2: project/todos/TODO2.md
-  - Reference:
-    - Framework overview: reference/index.md
-    - API: reference/api.md
-    - Architecture: reference/architecture.md
-    - Bundle: reference/bundle.md
-    - Canonical IDs: reference/canonical_ids.md
-    - Determinism: reference/determinism.md
-    - Domains: reference/domains.md
-    - Pipeline: reference/pipeline.md
-    - Storage: reference/storage.md
-    - Graph visualization: reference/graph_visualization.md
-    - Relationship tracing: reference/RELATIONSHIP_TRACING.md
-  - KGServer:
-    - Server home: kgserver/index.md
-    - Docker setup: kgserver/DOCKER_SETUP.md
-    - Docker Compose guide: kgserver/DOCKER_COMPOSE_GUIDE.md
-    - Local dev: kgserver/LOCAL_DEV.md
-    - MCP client setup: kgserver/MCP_CLIENT_SETUP.md
-    - GraphQL VIBES: kgserver/GRAPHQL_VIBES.md
-    - MCP GraphQL wrapper: kgserver/MCP_GQL_WRAPPER.md
-    - Architecture: kgserver/architecture.md
-    - Storage:
-      - Overview: kgserver/storage/README.md
-      - Neo4j compatibility: kgserver/storage/NEO4J_COMPATIBILITY.md
-      - Models: kgserver/storage/models/README.md
-      - Backends: kgserver/storage/backends/README.md
+  - Schema Design Guide: schema-design-guide.md
+  - Pipeline: pipeline.md
+  - Canonical IDs and Entity Resolution: canonical-ids-and-entity-resolution.md
+  - Storage and Export: storage-and-export.md
+  - Adapting to Your Domain: adapting-to-your-domain.md
   - Examples:
-    - Medlit: examples/medlit/README.md
-    - Medlit TODO: examples/medlit/TODO.md
-    - Medlit canonical IDs: examples/medlit/CANONICAL_IDS.md
-    - Medlit schema: examples/medlit_schema/README.md
-    - Medlit schema depth: examples/medlit_schema/DEPTH_OF_FIELDS.md
-    - Medlit schema progress: examples/medlit_schema/PROGRESS.md
-    - Medlit schema ontology: examples/medlit_schema/ONTOLOGY_GUIDE.md
-    - Medlit golden: examples/medlit_golden/README.md
-    - Sherlock: examples/sherlock/README.md
-  - Development:
-    - Copilot instructions: development/copilot-instructions.md
+    - Medlit: examples/medlit.md
+    - Sherlock: examples/sherlock.md
+  - Deployment and Operations: deployment-and-operations.md
+  - Contributing: contributing.md
 

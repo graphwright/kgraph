@@ -2,6 +2,10 @@
 
 ## Contents
 
+- [CLAUDE.md](#user-content-claudemd)
+- [README.md](#user-content-readmemd)
+- [docs/architecture.md](#user-content-docsarchitecturemd)
+- [docs/pipeline.md](#user-content-docspipelinemd)
 - [examples/medlit/__init__.py](#user-content-examplesmedlitinitpy)
 - [examples/medlit/bundle_models.py](#user-content-examplesmedlitbundlemodelspy)
 - [examples/medlit/documents.py](#user-content-examplesmedlitdocumentspy)
@@ -94,6 +98,7 @@
 - [kgschema/relationship.py](#user-content-kgschemarelationshippy)
 - [kgschema/storage.py](#user-content-kgschemastoragepy)
 - [kgserver/chainlit/app.py](#user-content-kgserverchainlitapppy)
+- [kgserver/index.md](#user-content-kgserverindexmd)
 - [kgserver/mcp_main.py](#user-content-kgservermcpmainpy)
 - [kgserver/mcp_server/__init__.py](#user-content-kgservermcpserverinitpy)
 - [kgserver/mcp_server/ingest_worker.py](#user-content-kgservermcpserveringestworkerpy)
@@ -132,6 +137,7 @@
 - [kgserver/tests/test_storage_factory.py](#user-content-kgserverteststeststoragefactorypy)
 - [kgserver/tests/test_storage_provenance.py](#user-content-kgserverteststeststorageprovenancepy)
 - [summarize_codebase.py](#user-content-summarizecodebasepy)
+- [summary.md](#user-content-summarymd)
 - [tests/__init__.py](#user-content-testsinitpy)
 - [tests/conftest.py](#user-content-testsconftestpy)
 - [tests/test_caching.py](#user-content-teststestcachingpy)
@@ -158,6 +164,67 @@
 - [tests/test_streaming.py](#user-content-teststeststreamingpy)
 
 ---
+
+<span id="user-content-claudemd"></span>
+
+# CLAUDE.md
+
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+Knowledge graph system for extracting entities and relationships from documents across multiple knowledge domains (medical literature, legal documents, academic CS papers, etc.). The architecture uses a two-pass ingestion process:
+
+1. **Pass 1 (Entity Extraction)**: Extract entities from documents, assign canonical IDs where appropriate (UMLS for medical, DBPedia URIs cross-domain, etc.)
+2. **Pass 2 (Relationship Extraction)**: Identify edges/relationships between entities, produce per-document JSON with edges and provisional entities
+
+    ...
+
+<span id="user-content-readmemd"></span>
+
+# README.md
+
+# kgraph
+
+Domain-agnostic knowledge graph framework for extracting entities and relationships from documents. See `docs/overview.md` and the rest of `docs/` for documentation.
+
+    ...
+
+<span id="user-content-docsarchitecturemd"></span>
+
+# docs/architecture.md
+
+# Architecture Overview
+
+## Two-Pass Ingestion Pipeline
+
+The framework processes documents in two passes:
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────────┐
+│  Raw Docs   │────▶│   Parser    │────▶│  BaseDocument   │
+└─────────────┘     └─────────────┘     └────────┬────────┘
+
+    ...
+
+<span id="user-content-docspipelinemd"></span>
+
+# docs/pipeline.md
+
+# The Pipeline
+
+Each stage in detail: **parsing** (and chunking), **extraction** (entity then relationship), **dedup**, **resolution** (to canonical or provisional), and **bundle building**. The framework exposes interfaces for each; domain pipelines (e.g. medlit) implement them.
+
+## Two-pass architecture
+
+The knowledge graph ingestion pipeline uses a **two-pass architecture** to transform raw documents into structured knowledge:
+
+1. **Pass 1 (Entity Extraction)**: Parse documents, extract entity mentions, and resolve them to canonical or provisional entities.
+2. **Pass 2 (Relationship Extraction)**: Identify relationships (edges) between resolved entities within each document.
+
+    ...
 
 <span id="user-content-examplesmedlitinitpy"></span>
 
@@ -9508,6 +9575,9 @@ Medical Literature Knowledge Graph — Chainlit Chat UI
 Can run standalone (chainlit run app.py --host 0.0.0.0 --port 8002) or mounted
 at /chat inside the kgserver API (same port as the API, no separate port).
 
+Note: Excluded from mypy and pylint in lint.sh — Chainlit's dynamic decorators
+and lack of type stubs make static analysis unreliable here.
+
 Environment variables:
   MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
   LLM_PROVIDER      anthropic | openai | ollama  (default: anthropic)
@@ -9527,6 +9597,9 @@ Medical Literature Knowledge Graph — Chainlit Chat UI
 
 Can run standalone (chainlit run app.py --host 0.0.0.0 --port 8002) or mounted
 at /chat inside the kgserver API (same port as the API, no separate port).
+
+Note: Excluded from mypy and pylint in lint.sh — Chainlit's dynamic decorators
+and lack of type stubs make static analysis unreliable here.
 
 Environment variables:
   MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
@@ -9571,6 +9644,23 @@ Update msg with rotating spinner + 'Working…' until stop_event is set.
 
 Run each tool call against the MCP server.
 
+
+<span id="user-content-kgserverindexmd"></span>
+
+# kgserver/index.md
+
+# KGserver
+
+A **read-only server** for a loaded knowledge graph. It does not ingest raw documents; domain pipelines build a bundle (entities + relationships), and the server loads that bundle at startup.
+
+## What it exposes
+
+| Resource | Path |
+|----------|------|
+| Health | `GET /health` |
+| REST entities | `GET /api/v1/entities` |
+
+    ...
 
 <span id="user-content-kgservermcpmainpy"></span>
 
@@ -11758,6 +11848,14 @@ $ git ls-files | uv run python extract_summary.py > summary.md
 
 Extract module-level docstring and top-level standalone strings.
 
+
+<span id="user-content-summarymd"></span>
+
+# summary.md
+
+
+
+    ...
 
 <span id="user-content-testsinitpy"></span>
 

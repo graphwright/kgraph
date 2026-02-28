@@ -99,11 +99,23 @@ The framework provides abstractions for working with canonical IDs (stable ident
 - **`CanonicalIdLookupInterface`**: Abstract interface for looking up canonical IDs
 - **Helper functions**: Utilities for extracting canonical IDs from entities (`extract_canonical_id_from_entity`, `check_entity_id_format`)
 
-Promotion policies use these abstractions to assign canonical IDs to entities. See [Canonical IDs](canonical_ids.md) for details.
+Promotion policies use these abstractions to assign canonical IDs to entities. See [Canonical IDs and Entity Resolution](canonical-ids-and-entity-resolution.md) for details.
+
+## Major Components and How They Relate
+
+| Component | Role |
+|-----------|------|
+| **kgschema** | Data structures and ABCs only (entities, relationships, documents, domain, storage). No runtime logic. |
+| **kgraph** | Ingestion pipeline: orchestrator, promotion, export, canonical_id lookup, in-memory storage, pipeline interfaces. |
+| **kgbundle** | Lightweight Pydantic models for bundle exchange; used by both kgraph (producer) and kgserver (consumer). |
+| **kgserver** | Query server: loads bundles, exposes REST, GraphQL, MCP; PostgreSQL/SQLite backends; optional Chainlit chat UI. |
+| **examples** | Domain implementations (medlit, sherlock) and medlit_schema: concrete schemas, parsers, extractors, scripts. |
+
+Data flow: **Documents** → kgraph pipeline (using kgschema types and domain from examples) → **bundle** (kgbundle format) → **kgserver** loads bundle and serves queries.
 
 ## Module Structure
 
-The codebase is organized into three main packages:
+The codebase is organized into these packages:
 
 ### kgschema/ (Data Structure Definitions)
 
@@ -151,6 +163,24 @@ kgraph/
     ├── interfaces.py      # Parser, Extractor, Resolver ABCs
     └── embedding.py       # EmbeddingGeneratorInterface
 ```
+
+### kgserver/ (Query Server)
+
+FastAPI app that loads a bundle and exposes:
+
+- REST: entities, relationships
+- GraphQL + GraphiQL
+- MCP server for LLM/agent tooling
+- Optional Chainlit chat UI at `/chat`
+- Graph visualization
+
+Storage backends: PostgreSQL, SQLite. Producer (kgraph) and consumer (kgserver) share the kgbundle schema so the bundle is the contract.
+
+### examples/
+
+- **medlit** — Medical literature: JATS/PMC parser, LLM extraction, authority lookup (UMLS, etc.), dedup, bundle build. Reference implementation.
+- **medlit_schema** — Domain schema (entities, relationships, documents) for medlit.
+- **sherlock** — Simpler literary example (characters, stories, co-occurrence) showing framework generality.
 
 ## Immutability
 
