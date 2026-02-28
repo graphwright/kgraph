@@ -18,13 +18,15 @@ Environment variables:
   OLLAMA_BASE_URL   (default: http://ollama:11434)
   EXAMPLES_FILE     path to YAML file of example prompts (default: examples.yaml)
   MCP_CONNECT_TIMEOUT  seconds to wait for MCP connection (default: 25)
-  LLM_REQUEST_DELAY_SECONDS  delay after each LLM request to throttle rate (default: 1.0)
+  LLM_MIN_REQUEST_INTERVAL_SECONDS  minimum seconds between the *start* of any two LLM requests (default: 3.0). Throttle is process-global so MCP/chat stays under rate limits.
+  LLM_REQUEST_DELAY_SECONDS  extra delay after each LLM response (default: 0)
   LLM_RATE_LIMIT_RETRY_DELAY_SECONDS  seconds to wait before retry after rate limit (default: 20)
 """
 
 import asyncio
 import json
 import os
+import time
 from contextlib import AsyncExitStack
 from typing import Any
 
@@ -49,8 +51,26 @@ def get_data_layer():
 MCP_SSE_URL = os.environ.get("MCP_SSE_URL", "http://localhost/mcp/sse")
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "anthropic").lower()
 EXAMPLES_FILE = os.environ.get("EXAMPLES_FILE", "examples.yaml")
-LLM_REQUEST_DELAY_SECONDS = float(os.environ.get("LLM_REQUEST_DELAY_SECONDS", "1.0"))
+LLM_MIN_REQUEST_INTERVAL_SECONDS = float(os.environ.get("LLM_MIN_REQUEST_INTERVAL_SECONDS", "3.0"))
+LLM_REQUEST_DELAY_SECONDS = float(os.environ.get("LLM_REQUEST_DELAY_SECONDS", "0"))
 LLM_RATE_LIMIT_RETRY_DELAY_SECONDS = float(os.environ.get("LLM_RATE_LIMIT_RETRY_DELAY_SECONDS", "20"))
+
+# Process-global throttle: minimum time between the *start* of any two litellm.completion calls (all chat sessions).
+_llm_throttle_lock = asyncio.Lock()
+_last_llm_request_start: float = 0.0
+
+
+async def _throttle_llm_request() -> None:
+    """Wait if needed so the next LLM request start is at least LLM_MIN_REQUEST_INTERVAL_SECONDS after the last."""
+    global _last_llm_request_start
+    async with _llm_throttle_lock:
+        now = time.monotonic()
+        wait = max(0.0, _last_llm_request_start + LLM_MIN_REQUEST_INTERVAL_SECONDS - now)
+        _last_llm_request_start = now + wait
+    if wait > 0:
+        await asyncio.sleep(wait)
+    async with _llm_throttle_lock:
+        _last_llm_request_start = time.monotonic()
 
 SYSTEM_PROMPT = """You are an expert assistant for a medical literature knowledge graph.
 You have access to tools that can query a graph database of medical research papers,
@@ -311,6 +331,7 @@ async def run_chat(user_text: str):
 
     try:
         for _ in range(max_iterations):
+            await _throttle_llm_request()
             for attempt in range(3):
                 try:
                     response = await asyncio.to_thread(

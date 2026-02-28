@@ -1,12 +1,40 @@
 """LLM client abstraction for entity and relationship extraction.
 
 Provides a unified interface for Ollama LLM integration with tool calling support.
+
+Rate limiting: OllamaLLMClient enforces a minimum interval between the start of any
+two contiguous requests (default 3s, configurable via LLM_MIN_REQUEST_INTERVAL_SECONDS
+or the min_request_interval_seconds constructor arg). The throttle is process-global
+(shared across all threads and all OllamaLLMClient instances) so the server-side rate
+limit is respected regardless of which code path or worker issues the request.
 """
 
 import asyncio
+import os
+import threading
+import time
 from abc import ABC, abstractmethod
 from typing import Any, Callable, Optional
 import json
+
+# Process-global throttle: one lock and one "last request start" time for the whole process.
+# Ensures any two LLM requests (from any thread or any OllamaLLMClient instance) are
+# at least min_interval seconds apart.
+_global_throttle_lock = threading.Lock()
+_global_last_request_time: float = 0.0
+
+
+def _ensure_global_interval_sync(interval_seconds: float) -> None:
+    """Ensure at least interval_seconds since the last request start (process-wide); sleep if needed."""
+    global _global_last_request_time
+    with _global_throttle_lock:
+        now = time.monotonic()
+        wait = max(0.0, _global_last_request_time + interval_seconds - now)
+        _global_last_request_time = now + wait
+    if wait > 0:
+        time.sleep(wait)
+    with _global_throttle_lock:
+        _global_last_request_time = time.monotonic()
 
 try:
     import ollama
@@ -110,6 +138,11 @@ class LLMClientInterface(ABC):
         return await self.generate_json(prompt, temperature)
 
 
+def _default_min_request_interval() -> float:
+    """Minimum seconds between the start of any two contiguous LLM requests (for rate limiting)."""
+    return float(os.environ.get("LLM_MIN_REQUEST_INTERVAL_SECONDS", "3.0"))
+
+
 class OllamaLLMClient(LLMClientInterface):
     """Ollama LLM client implementation."""
 
@@ -118,6 +151,7 @@ class OllamaLLMClient(LLMClientInterface):
         model: str = "llama3.1:8b",
         host: str = "http://localhost:11434",
         timeout: float = 300.0,  # Increased timeout for slow LLM responses (5 minutes)
+        min_request_interval_seconds: Optional[float] = None,
     ):
         """Initialize Ollama client.
 
@@ -125,6 +159,8 @@ class OllamaLLMClient(LLMClientInterface):
             model: Ollama model name (e.g., "llama3.1:8b", "llama3.1:8b")
             host: Ollama server URL
             timeout: Request timeout in seconds (default: 300)
+            min_request_interval_seconds: Minimum seconds between the start of any two
+                contiguous requests (rate limiting). Default from env LLM_MIN_REQUEST_INTERVAL_SECONDS (3.0).
         """
         if not OLLAMA_AVAILABLE:
             raise ImportError("ollama package not installed. Install with: pip install ollama")
@@ -132,7 +168,16 @@ class OllamaLLMClient(LLMClientInterface):
         self.model = model
         self.host = host
         self.timeout = timeout
+        self._min_request_interval = (
+            min_request_interval_seconds
+            if min_request_interval_seconds is not None
+            else _default_min_request_interval()
+        )
         self._client = ollama.Client(host=host, timeout=timeout)
+
+    def _ensure_interval_sync(self) -> None:
+        """Ensure at least min_request_interval seconds since the last request start (process-global); sleep if needed."""
+        _ensure_global_interval_sync(self._min_request_interval)
 
     def _parse_json_from_text(self, response_text: str) -> dict[str, Any] | list[Any]:
         """Extract and parse JSON from response text.
@@ -198,7 +243,6 @@ class OllamaLLMClient(LLMClientInterface):
         max_tokens: Optional[int] = None,
     ) -> str:
         """Generate text using Ollama."""
-        print("DEBUG: YOW")
         options: dict[str, Any] = {"temperature": temperature}
         if max_tokens:
             options["num_predict"] = max_tokens
@@ -244,6 +288,7 @@ class OllamaLLMClient(LLMClientInterface):
             return response["message"]["content"]
 
         try:
+            await asyncio.to_thread(self._ensure_interval_sync)
             # Add timeout wrapper to prevent indefinite hangs
             response_text = await asyncio.wait_for(asyncio.to_thread(_generate), timeout=self.timeout)
         except asyncio.TimeoutError:
@@ -360,6 +405,7 @@ Return format: [{"entity": "name", "type": "disease|gene|drug|protein", "confide
                         }
                     )
 
+                self._ensure_interval_sync()
                 # Continue conversation
                 response = self._client.chat(
                     model=self.model,
