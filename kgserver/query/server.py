@@ -4,6 +4,7 @@ import subprocess
 from contextlib import asynccontextmanager
 from pathlib import Path
 from fastapi import FastAPI, Depends
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 import strawberry
 from strawberry.fastapi import GraphQLRouter
@@ -102,8 +103,21 @@ if _chainlit_app is not None:
 else:
     logger.info("Chainlit not mounted: no app at CHAINLIT_APP_PATH or kgserver/chainlit/app.py")
 
-# Mount MkDocs static site at / if available.
-# This should be the last mount to avoid catching other API routes.
+# Mount MkDocs static site at /site (not at /) so FastAPI's /docs and /openapi.json
+# are never shadowed. On Docker the site is pre-built; locally the dir may be missing.
 _mkdocs_site = Path(__file__).parent.parent / "site"
 if _mkdocs_site.exists():
-    app.mount("/", StaticFiles(directory=_mkdocs_site, html=True), name="mkdocs")
+    # Zensical generates nav links with .md but the built output is .html. Rewrite .md -> .html.
+    @app.middleware("http")
+    async def _site_md_rewrite(request, call_next):
+        path = request.scope.get("path", "")
+        if path.startswith("/site/") and path.endswith(".md"):
+            request.scope["path"] = path[:-3] + ".html"
+        return await call_next(request)
+
+    app.mount("/site", StaticFiles(directory=_mkdocs_site, html=True), name="mkdocs")
+
+    @app.get("/", include_in_schema=False)
+    async def _root_redirect():
+        """Send root to the docs site so / still lands somewhere useful."""
+        return RedirectResponse(url="/site/", status_code=302)
