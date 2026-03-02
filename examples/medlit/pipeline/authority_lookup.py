@@ -8,7 +8,7 @@ Features persistent caching to avoid repeated API calls across runs.
 
 import os
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Optional, List
 
 try:
     import httpx
@@ -111,6 +111,7 @@ def validate_umls_type(
         cache[key] = (True, None)
         return (True, None)
 
+    type_names: List[str]
     if _semantic_types_override is not None:
         type_names = _semantic_types_override.get(cui) or []
     else:
@@ -138,7 +139,7 @@ def validate_umls_type(
             return (True, None)
 
         semantic_types = data.get("semanticTypes") or []
-        type_names = [st.get("name") for st in semantic_types if isinstance(st, dict) and st.get("name")]
+        type_names = [st.get("name", "?") for st in semantic_types if isinstance(st, dict) and st.get("name")]
     if not type_names:
         cache[key] = (True, None)
         return (True, None)

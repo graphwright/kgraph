@@ -1,7 +1,5 @@
 """Unit tests for Pass 1 extract helpers: vocab-in-prompt and type normalization."""
 
-import pytest
-
 from examples.medlit.scripts.pass1_extract import (
     _build_system_prompt_with_vocab,
     _default_system_prompt,

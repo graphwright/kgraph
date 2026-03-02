@@ -122,8 +122,8 @@ class TestPersistentWorkspaceIntegration:
         monkeypatch.setenv("DATABASE_URL", f"sqlite:///{db_path}")
         import query.storage_factory as factory_module
 
-        factory_module._engine = None
-        factory_module._db_url = None
+        factory_module._engine = None  # pylint: disable=protected-access
+        factory_module._db_url = None  # pylint: disable=protected-access
         from query.storage_factory import get_engine
         from sqlmodel import SQLModel
 

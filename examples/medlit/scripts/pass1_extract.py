@@ -150,12 +150,23 @@ def build_provenance(
 # Normalized (lowercase, no spaces) -> bundle "class" (PascalCase) for dedup/synonym_cache compatibility.
 # Must match _entity_class_to_lookup_type and lookup_entity in dedup/synonym_cache.
 NORMALIZED_TO_BUNDLE_CLASS: dict[str, str] = {
-    "disease": "Disease", "gene": "Gene", "drug": "Drug", "protein": "Protein",
-    "biomarker": "Biomarker", "symptom": "Symptom", "procedure": "Procedure",
-    "mutation": "Mutation", "pathway": "Pathway", "biologicalprocess": "BiologicalProcess",
-    "anatomicalstructure": "AnatomicalStructure", "clinicaltrial": "ClinicalTrial",
-    "institution": "Institution", "author": "Author", "studydesign": "StudyDesign",
-    "statisticalmethod": "StatisticalMethod", "adverseevent": "AdverseEvent",
+    "disease": "Disease",
+    "gene": "Gene",
+    "drug": "Drug",
+    "protein": "Protein",
+    "biomarker": "Biomarker",
+    "symptom": "Symptom",
+    "procedure": "Procedure",
+    "mutation": "Mutation",
+    "pathway": "Pathway",
+    "biologicalprocess": "BiologicalProcess",
+    "anatomicalstructure": "AnatomicalStructure",
+    "clinicaltrial": "ClinicalTrial",
+    "institution": "Institution",
+    "author": "Author",
+    "studydesign": "StudyDesign",
+    "statisticalmethod": "StatisticalMethod",
+    "adverseevent": "AdverseEvent",
     "hypothesis": "Hypothesis",
 }
 
@@ -179,7 +190,11 @@ def _build_system_prompt_with_vocab(
     subset = sorted(vocab_entries, key=lambda e: (e.get("name") or "").lower())[:500]
     lines = [f"- {e.get('name', '')} ({e.get('type', '')})" for e in subset if e.get("name")]
     vocab_section = "\n".join(lines) if lines else "(none)"
-    return base_prompt + "\n\n---\n\nThe following entities have already been identified across the corpus. Use these exact names and types where applicable rather than creating new variants:\n\n" + vocab_section
+    return (
+        base_prompt
+        + "\n\n---\n\nThe following entities have already been identified across the corpus. Use these exact names and types where applicable rather than creating new variants:\n\n"
+        + vocab_section
+    )
 
 
 def _default_system_prompt() -> str:
@@ -240,6 +255,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
     if vocab_file is not None and vocab_file.exists():
         try:
             import json
+
             with open(vocab_file, encoding="utf-8") as f:
                 data = json.load(f)
             vocab_entries = data if isinstance(data, list) else None
@@ -303,10 +319,10 @@ async def run_pass1(  # pylint: disable=too-many-statements
 
         # Normalize entity types to bundle PascalCase, then parse rows
         raw_entities = raw_bundle.get("entities", [])
-        for e in raw_entities:
-            if isinstance(e, dict) and "class" in e:
-                e["class"] = normalize_entity_type(e.get("class") or "")
-        entities = [ExtractedEntityRow.model_validate(e) for e in raw_entities]
+        for en in raw_entities:
+            if isinstance(en, dict) and "class" in en:
+                en["class"] = normalize_entity_type(en.get("class") or "")
+        entities = [ExtractedEntityRow.model_validate(en) for en in raw_entities]
         evidence_entities = [EvidenceEntityRow.model_validate(ev) for ev in raw_bundle.get("evidence_entities", [])]
         relationships = [RelationshipRow.model_validate(r) for r in raw_bundle.get("relationships", [])]
 
@@ -387,14 +403,16 @@ def main() -> None:
     if args.papers is not None:
         papers_list = [p.strip() for p in args.papers.split(",") if p.strip()]
 
-    asyncio.run(run_pass1(
-        args.input_dir,
-        args.output_dir,
-        args.llm_backend,
-        args.limit,
-        papers_list,
-        vocab_file=args.vocab_file,
-    ))
+    asyncio.run(
+        run_pass1(
+            args.input_dir,
+            args.output_dir,
+            args.llm_backend,
+            args.limit,
+            papers_list,
+            vocab_file=args.vocab_file,
+        )
+    )
 
 
 if __name__ == "__main__":

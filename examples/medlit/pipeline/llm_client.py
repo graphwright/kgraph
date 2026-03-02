@@ -36,6 +36,7 @@ def _ensure_global_interval_sync(interval_seconds: float) -> None:
     with _global_throttle_lock:
         _global_last_request_time = time.monotonic()
 
+
 try:
     import ollama
 
@@ -168,11 +169,7 @@ class OllamaLLMClient(LLMClientInterface):
         self.model = model
         self.host = host
         self.timeout = timeout
-        self._min_request_interval = (
-            min_request_interval_seconds
-            if min_request_interval_seconds is not None
-            else _default_min_request_interval()
-        )
+        self._min_request_interval = min_request_interval_seconds if min_request_interval_seconds is not None else _default_min_request_interval()
         self._client = ollama.Client(host=host, timeout=timeout)
 
     def _ensure_interval_sync(self) -> None:

@@ -72,6 +72,7 @@ async def _throttle_llm_request() -> None:
     async with _llm_throttle_lock:
         _last_llm_request_start = time.monotonic()
 
+
 SYSTEM_PROMPT = """You are an expert assistant for a medical literature knowledge graph.
 You have access to tools that can query a graph database of medical research papers,
 extract entities, find relationships, and surface evidence for clinical questions.

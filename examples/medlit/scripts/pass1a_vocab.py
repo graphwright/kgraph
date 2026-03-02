@@ -26,37 +26,67 @@ if str(REPO_ROOT) not in sys.path:
 
 try:
     from dotenv import load_dotenv
+
     load_dotenv(REPO_ROOT / ".env")
 except ImportError:
     pass
 
 # Fixed type enum for Pass 1a (lowercase); matches PLAN11 mapping to bundle PascalCase.
 PASS1A_TYPE_ENUM = [
-    "disease", "gene", "drug", "protein", "mutation", "symptom", "biomarker",
-    "pathway", "procedure", "biologicalprocess", "anatomicalstructure",
-    "clinicaltrial", "institution", "author", "studydesign",
-    "statisticalmethod", "adverseevent", "hypothesis",
+    "disease",
+    "gene",
+    "drug",
+    "protein",
+    "mutation",
+    "symptom",
+    "biomarker",
+    "pathway",
+    "procedure",
+    "biologicalprocess",
+    "anatomicalstructure",
+    "clinicaltrial",
+    "institution",
+    "author",
+    "studydesign",
+    "statisticalmethod",
+    "adverseevent",
+    "hypothesis",
 ]
 
 # Normalized (lowercase) -> bundle "class" (PascalCase) for synonym cache and dedup.
 NORMALIZED_TO_BUNDLE_CLASS: dict[str, str] = {
-    "disease": "Disease", "gene": "Gene", "drug": "Drug", "protein": "Protein",
-    "biomarker": "Biomarker", "symptom": "Symptom", "procedure": "Procedure",
-    "mutation": "Mutation", "pathway": "Pathway", "biologicalprocess": "BiologicalProcess",
-    "anatomicalstructure": "AnatomicalStructure", "clinicaltrial": "ClinicalTrial",
-    "institution": "Institution", "author": "Author", "studydesign": "StudyDesign",
-    "statisticalmethod": "StatisticalMethod", "adverseevent": "AdverseEvent",
+    "disease": "Disease",
+    "gene": "Gene",
+    "drug": "Drug",
+    "protein": "Protein",
+    "biomarker": "Biomarker",
+    "symptom": "Symptom",
+    "procedure": "Procedure",
+    "mutation": "Mutation",
+    "pathway": "Pathway",
+    "biologicalprocess": "BiologicalProcess",
+    "anatomicalstructure": "AnatomicalStructure",
+    "clinicaltrial": "ClinicalTrial",
+    "institution": "Institution",
+    "author": "Author",
+    "studydesign": "StudyDesign",
+    "statisticalmethod": "StatisticalMethod",
+    "adverseevent": "AdverseEvent",
     "hypothesis": "Hypothesis",
 }
 
-PASS1A_SYSTEM_PROMPT = """Extract all named biomedical entities from this paper.
+PASS1A_SYSTEM_PROMPT = (
+    """Extract all named biomedical entities from this paper.
 For each entity return:
   - name: canonical form (not an abbreviation)
-  - type: one of [""" + ", ".join(PASS1A_TYPE_ENUM) + """]
+  - type: one of ["""
+    + ", ".join(PASS1A_TYPE_ENUM)
+    + """]
   - abbreviations: list of abbreviations or alternate names used in this paper
   - umls_id: UMLS CUI if you are confident, else null
 
 Return a single JSON object with key "entities" containing an array of these objects. No other keys. Valid JSON only."""
+)
 
 
 def _normalize_name(name: str) -> str:
@@ -70,7 +100,6 @@ def _vocab_key(entry: dict[str, Any]) -> tuple[str, str]:
 
 async def _paper_content(path: Path, input_dir: Path) -> tuple[str, str]:
     """Return (content_text, paper_id) for a paper file."""
-    from examples.medlit.bundle_models import PaperInfo
     from examples.medlit.scripts.pass1_extract import _paper_content_fallback, _paper_content_from_parser
 
     content_type = "application/xml" if path.suffix.lower() == ".xml" else "application/json"
@@ -121,6 +150,7 @@ def _run_umls_validation(vocab_entries: list[dict[str, Any]]) -> None:
     from examples.medlit.pipeline.authority_lookup import validate_umls_type
 
     from kgraph.logging import setup_logging
+
     logger = setup_logging()
     cache: dict[tuple[str, str], tuple[bool, str | None]] = {}
     for entry in vocab_entries:
@@ -154,6 +184,7 @@ def _run_umls_validation(vocab_entries: list[dict[str, Any]]) -> None:
 def _vocab_to_seeded_cache(vocab_entries: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     """Build Pass 2 synonym cache format from vocab list so lookup_entity returns canonical_id."""
     from examples.medlit.pipeline.synonym_cache import _normalize
+
     cache: dict[str, list[dict[str, Any]]] = {}
     for e in vocab_entries:
         name = e.get("name", "")
@@ -260,9 +291,9 @@ async def run_pass1a(
         if not isinstance(entities, list):
             entities = []
         # Normalize type to lowercase
-        for e in entities:
-            if e.get("type"):
-                e["type"] = str(e["type"]).strip().lower()
+        for en in entities:
+            if en.get("type"):
+                en["type"] = str(en["type"]).strip().lower()
         _merge_vocab_into(vocab_entries, entities, paper_id)
         print(f"  {path.name} -> paper_id={paper_id}, entities={len(entities)}", file=sys.stderr)
 
