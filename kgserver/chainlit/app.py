@@ -343,7 +343,11 @@ async def on_chat_start():
     orch_model = _get_orchestrator_model()
     synth_model = _get_synthesis_model()
     model_info = f"orchestrator: `{orch_model}` → synthesis: `{synth_model}`" if orch_model != synth_model else orch_model
-    await cl.Message(content=f"{status}\n\n**LLM:** `{provider_label}` → {model_info}\n\n" "Ask me anything about the medical literature knowledge graph, " "or click an example below.").send()
+    await cl.Message(
+        content=f"{status}\n\n**LLM:** `{provider_label}` → {model_info}\n\n"
+        "Ask me anything about the medical literature knowledge graph, or explore the [graph visualization](/graph-viz/). "
+        "Or click an example below. There is also an [e-book](https://github.com/wware/kg-book/blob/main/outline.md) in progress."
+    ).send()
 
     # Visible example buttons in the main chat (so users don't have to open settings)
     example_actions = [cl.Action(name="run_example", label=label, payload={"prompt": prompt}) for label, prompt in EXAMPLES.items()]
