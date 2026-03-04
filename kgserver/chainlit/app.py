@@ -10,17 +10,20 @@ and lack of type stubs make static analysis unreliable here.
 Environment variables:
   MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
   LLM_PROVIDER      anthropic | openai | ollama  (default: anthropic)
-  ANTHROPIC_MODEL   (default: claude-sonnet-4-6)
-  ANTHROPIC_API_KEY
-  OPENAI_MODEL      (default: gpt-4o)
-  OPENAI_API_KEY
+  ANTHROPIC_MODEL   (default: claude-sonnet-4-6) — legacy single-tier
+  ANTHROPIC_API_KEY, ANTHROPIC_API_KEY_1, ANTHROPIC_API_KEY_2, …  (multi-key load balancing)
+  ORCHESTRATOR_MODEL  (default: claude-haiku-4-5 for anthropic, gpt-4o-mini for openai)
+  SYNTHESIS_MODEL     (default: claude-sonnet-4-6 for anthropic, gpt-4o for openai)
+  OPENAI_MODEL      (default: gpt-4o) — legacy single-tier
+  OPENAI_API_KEY, OPENAI_API_KEY_1, …
   OLLAMA_MODEL      (default: llama3.2)
   OLLAMA_BASE_URL   (default: http://ollama:11434)
   EXAMPLES_FILE     path to YAML file of example prompts (default: examples.yaml)
   MCP_CONNECT_TIMEOUT  seconds to wait for MCP connection (default: 25)
-  LLM_MIN_REQUEST_INTERVAL_SECONDS  minimum seconds between the *start* of any two LLM requests (default: 3.0). Throttle is process-global so MCP/chat stays under rate limits.
+  LLM_MIN_REQUEST_INTERVAL_SECONDS  minimum seconds between the *start* of any two LLM requests (default: 3.0)
   LLM_REQUEST_DELAY_SECONDS  extra delay after each LLM response (default: 0)
   LLM_RATE_LIMIT_RETRY_DELAY_SECONDS  seconds to wait before retry after rate limit (default: 20)
+  LLM_SYNTHESIS_HISTORY_TURNS  last N turns to pass to synthesis for multi-turn context (default: 4)
 """
 
 import asyncio
@@ -35,6 +38,7 @@ import chainlit as cl
 from chainlit.input_widget import Select
 import litellm
 from litellm import RateLimitError
+from litellm import Router
 from mcp import ClientSession
 from mcp.client.sse import sse_client
 
@@ -78,24 +82,123 @@ You have access to tools that can query a graph database of medical research pap
 extract entities, find relationships, and surface evidence for clinical questions.
 Always cite the papers you draw evidence from when possible."""
 
+ORCHESTRATOR_SYSTEM_PROMPT = """You have tools to query a medical literature knowledge graph.
+Decide which tools to call to answer the user's question. Call tools as needed; when you have enough information, respond with a final answer."""
+
+SYNTHESIS_SYSTEM_PROMPT = """You are an expert assistant. Answer the user's question using the retrieved knowledge graph evidence. Cite papers and sources when possible."""
+
+SYNTHESIS_HISTORY_TURNS = int(os.environ.get("LLM_SYNTHESIS_HISTORY_TURNS", "4"))
+ORCHESTRATOR_MAX_ITERATIONS = 8
+
+
+def _collect_api_keys(prefix: str) -> list[str]:
+    """Collect API keys from env: PREFIX, PREFIX_1, PREFIX_2, …"""
+    keys = []
+    primary = os.environ.get(prefix)
+    if primary:
+        keys.append(primary)
+    i = 1
+    while k := os.environ.get(f"{prefix}_{i}"):
+        keys.append(k)
+        i += 1
+    return keys
+
+
+def _build_model_list(
+    model_name: str,
+    model_str: str,
+    keys: list[str],
+    extra: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    """Build model_list for Router: one deployment per key."""
+    extra = extra or {}
+    return [
+        {
+            "model_name": model_name,
+            "litellm_params": {"model": model_str, "api_key": k, **extra},
+        }
+        for k in keys
+        if k
+    ]
+
+
+def _get_orchestrator_model() -> str:
+    """Return orchestrator model string for current provider."""
+    if LLM_PROVIDER == "anthropic":
+        return os.environ.get("ORCHESTRATOR_MODEL", "claude-haiku-4-5")
+    if LLM_PROVIDER == "openai":
+        return os.environ.get("ORCHESTRATOR_MODEL", "gpt-4o-mini")
+    if LLM_PROVIDER == "ollama":
+        return f"ollama/{os.environ.get('OLLAMA_MODEL', 'llama3.2')}"
+    raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER!r}")
+
+
+def _get_synthesis_model() -> str:
+    """Return synthesis model string for current provider."""
+    if LLM_PROVIDER == "anthropic":
+        return os.environ.get("SYNTHESIS_MODEL", os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6"))
+    if LLM_PROVIDER == "openai":
+        return os.environ.get("SYNTHESIS_MODEL", os.environ.get("OPENAI_MODEL", "gpt-4o"))
+    if LLM_PROVIDER == "ollama":
+        return f"ollama/{os.environ.get('OLLAMA_MODEL', 'llama3.2')}"
+    raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER!r}")
+
+
+def _create_router(model_name: str, model_str: str, routing_strategy: str = "simple-shuffle") -> Router | None:
+    """Create a Router for the given model. Returns None for Ollama (no multi-key)."""
+    if LLM_PROVIDER == "anthropic":
+        keys = _collect_api_keys("ANTHROPIC_API_KEY")
+        if not keys:
+            return None
+        model_list = _build_model_list(model_name, model_str, keys)
+    elif LLM_PROVIDER == "openai":
+        keys = _collect_api_keys("OPENAI_API_KEY")
+        if not keys:
+            return None
+        model_list = _build_model_list(model_name, model_str, keys)
+    elif LLM_PROVIDER == "ollama":
+        return None
+    else:
+        raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER!r}")
+
+    return Router(model_list=model_list, routing_strategy=routing_strategy)
+
+
+_router_sentinel = object()
+_orchestrator_router: Router | None = _router_sentinel  # type: ignore[assignment]  # sentinel until first call
+_synthesis_router: Router | None = _router_sentinel  # type: ignore[assignment]
+
+
+def _get_orchestrator_router() -> Router | None:
+    """Return cached orchestrator Router, or None for Ollama. Lazy init at first call."""
+    global _orchestrator_router
+    if _orchestrator_router is not _router_sentinel:
+        return _orchestrator_router
+    _orchestrator_router = _create_router("orchestrator", _get_orchestrator_model())
+    return _orchestrator_router
+
+
+def _get_synthesis_router() -> Router | None:
+    """Return cached synthesis Router, or None for Ollama. Lazy init at first call."""
+    global _synthesis_router
+    if _synthesis_router is not _router_sentinel:
+        return _synthesis_router
+    _synthesis_router = _create_router("synthesis", _get_synthesis_model())
+    return _synthesis_router
+
 
 def get_litellm_model() -> dict[str, Any]:
-    """Return the model string and any extra kwargs for litellm.completion."""
+    """Return the model string and any extra kwargs for litellm.completion (legacy fallback)."""
     if LLM_PROVIDER == "anthropic":
-        return {
-            "model": os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6"),
-        }
-    elif LLM_PROVIDER == "openai":
-        return {
-            "model": os.environ.get("OPENAI_MODEL", "gpt-4o"),
-        }
-    elif LLM_PROVIDER == "ollama":
+        return {"model": os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6")}
+    if LLM_PROVIDER == "openai":
+        return {"model": os.environ.get("OPENAI_MODEL", "gpt-4o")}
+    if LLM_PROVIDER == "ollama":
         return {
             "model": f"ollama/{os.environ.get('OLLAMA_MODEL', 'llama3.2')}",
             "api_base": os.environ.get("OLLAMA_BASE_URL", "http://ollama:11434"),
         }
-    else:
-        raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER!r}")
+    raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER!r}")
 
 
 # ── Examples ─────────────────────────────────────────────────────────────────
@@ -114,6 +217,7 @@ def load_examples() -> dict[str, str]:
     except FileNotFoundError:
         pass
     # Fallback built-in examples (short versions aligned with graph content)
+    # fmt: off
     return {
         "ST3Gal1 & ulcerative colitis": (
             "How does ST3Gal1 regulate intestinal barrier function and inflammatory cytokines in "
@@ -146,6 +250,7 @@ def load_examples() -> dict[str, str]:
             "broke this cycle?"
         ),
     }
+    # fmt: on
 
 
 EXAMPLES: dict[str, str] = load_examples()
@@ -235,8 +340,10 @@ async def on_chat_start():
     ).send()
 
     provider_label = LLM_PROVIDER.upper()
-    model_info = get_litellm_model()["model"]
-    await cl.Message(content=f"{status}\n\n**LLM:** `{provider_label}` → `{model_info}`\n\n" "Ask me anything about the medical literature knowledge graph, " "or click an example below.").send()
+    orch_model = _get_orchestrator_model()
+    synth_model = _get_synthesis_model()
+    model_info = f"orchestrator: `{orch_model}` → synthesis: `{synth_model}`" if orch_model != synth_model else orch_model
+    await cl.Message(content=f"{status}\n\n**LLM:** `{provider_label}` → {model_info}\n\n" "Ask me anything about the medical literature knowledge graph, " "or click an example below.").send()
 
     # Visible example buttons in the main chat (so users don't have to open settings)
     example_actions = [cl.Action(name="run_example", label=label, payload={"prompt": prompt}) for label, prompt in EXAMPLES.items()]
@@ -334,55 +441,133 @@ async def _run_spinner(msg: cl.Message, stop_event: asyncio.Event) -> None:
 # ── Core chat loop ────────────────────────────────────────────────────────────
 
 
+def _truncated_history(history: list[dict], n_turns: int) -> list[dict]:
+    """Return last n_turns user+assistant pairs (excluding system)."""
+    non_system = [m for m in history if m.get("role") != "system"]
+    keep = 2 * n_turns  # user + assistant per turn
+    return non_system[-keep:] if len(non_system) > keep else non_system
+
+
+def _anthropic_cache_kwargs() -> dict[str, Any]:
+    """Extra kwargs for Anthropic prompt caching. Empty for other providers."""
+    if LLM_PROVIDER == "anthropic":
+        return {"cache_control_injection_points": [{"location": "message", "role": "system"}]}
+    return {}
+
+
+async def _llm_completion(
+    router_model_name: str,
+    messages: list[dict],
+    tools: list[dict] | None = None,
+) -> Any:
+    """Call LLM via Router (if available) or litellm.completion. Handles retries."""
+    router = _get_orchestrator_router() if router_model_name == "orchestrator" else _get_synthesis_router()
+    cache_kwargs = _anthropic_cache_kwargs()
+
+    for attempt in range(3):
+        try:
+            if router is not None:
+                response = await router.acompletion(
+                    model=router_model_name,
+                    messages=messages,
+                    tools=tools,
+                    tool_choice="auto" if tools else None,
+                    stream=False,
+                    **cache_kwargs,
+                )
+            else:
+                model_str = _get_orchestrator_model() if router_model_name == "orchestrator" else _get_synthesis_model()
+                llm_kwargs: dict[str, Any] = {"model": model_str}
+                if LLM_PROVIDER == "ollama":
+                    llm_kwargs["api_base"] = os.environ.get("OLLAMA_BASE_URL", "http://ollama:11434")
+                response = await asyncio.to_thread(
+                    litellm.completion,
+                    messages=messages,
+                    tools=tools,
+                    tool_choice="auto" if tools else None,
+                    stream=False,
+                    **llm_kwargs,
+                    **cache_kwargs,
+                )
+            return response
+        except RateLimitError:
+            if attempt < 2:
+                delay = LLM_RATE_LIMIT_RETRY_DELAY_SECONDS
+                await cl.Message(content=f"⏳ Rate limited; waiting {int(delay)}s before retry…").send()
+                await asyncio.sleep(delay)
+            else:
+                raise
+    raise RuntimeError("Unreachable")
+
+
 async def run_chat(user_text: str):
     history: list[dict] = cl.user_session.get("history")
     history.append({"role": "user", "content": user_text})
 
     mcp_session: ClientSession | None = cl.user_session.get("mcp_session")
     litellm_tools: list[dict] = cl.user_session.get("litellm_tools", [])
-    llm_kwargs = get_litellm_model()
 
     thinking_msg = cl.Message(content=SPINNER_FRAMES[0] + " Working…")
     await thinking_msg.send()
     stop_spinner = asyncio.Event()
     spinner_task = asyncio.create_task(_run_spinner(thinking_msg, stop_spinner))
 
-    max_iterations = 8
+    tool_results_this_turn: list[dict] = []
+    orchestrator_messages: list[dict] = [
+        {"role": "system", "content": ORCHESTRATOR_SYSTEM_PROMPT},
+        {"role": "user", "content": user_text},
+    ]
 
     try:
-        for _ in range(max_iterations):
+        # Phase A: Orchestrator tool loop (max ORCHESTRATOR_MAX_ITERATIONS)
+        for iteration in range(ORCHESTRATOR_MAX_ITERATIONS):
             await _throttle_llm_request()
-            for attempt in range(3):
-                try:
-                    response = await asyncio.to_thread(
-                        litellm.completion,
-                        messages=history,
-                        tools=litellm_tools if litellm_tools else None,
-                        tool_choice="auto" if litellm_tools else None,
-                        stream=False,
-                        **llm_kwargs,
-                    )
-                    break
-                except RateLimitError:
-                    if attempt < 2:
-                        delay = LLM_RATE_LIMIT_RETRY_DELAY_SECONDS
-                        await cl.Message(content=f"⏳ Rate limited; waiting {int(delay)}s before retry…").send()
-                        await asyncio.sleep(delay)
-                    else:
-                        raise
-
+            response = await _llm_completion(
+                router_model_name="orchestrator",
+                messages=orchestrator_messages,
+                tools=litellm_tools if litellm_tools else None,
+            )
             if LLM_REQUEST_DELAY_SECONDS > 0:
                 await asyncio.sleep(LLM_REQUEST_DELAY_SECONDS)
 
             msg = response.choices[0].message
-            history.append(msg.model_dump(exclude_none=True))
+            orchestrator_messages.append(msg.model_dump(exclude_none=True))
 
             if msg.tool_calls:
                 tool_results = await execute_tool_calls(msg.tool_calls, mcp_session)
-                history.extend(tool_results)
+                tool_results_this_turn.extend(tool_results)
+                orchestrator_messages.extend(tool_results)
                 continue
 
-            # Final text response
+            # Orchestrator returned final text (no tool calls)
+            orchestrator_text = msg.content or ""
+
+            # Phase B: Synthesis or direct return
+            if tool_results_this_turn:
+                # Had tool calls: run synthesis with truncated history + tool results
+                truncated = _truncated_history(history, SYNTHESIS_HISTORY_TURNS)
+                tool_output_str = "\n\n".join(m.get("content", "") for m in tool_results_this_turn if m.get("role") == "tool")
+                synthesis_messages: list[dict] = [
+                    {"role": "system", "content": SYNTHESIS_SYSTEM_PROMPT},
+                    *truncated,
+                    {
+                        "role": "user",
+                        "content": f"{user_text}\n\n---\nRetrieved from knowledge graph:\n{tool_output_str}",
+                    },
+                ]
+                await _throttle_llm_request()
+                synth_response = await _llm_completion(
+                    router_model_name="synthesis",
+                    messages=synthesis_messages,
+                    tools=None,
+                )
+                if LLM_REQUEST_DELAY_SECONDS > 0:
+                    await asyncio.sleep(LLM_REQUEST_DELAY_SECONDS)
+                final_text = synth_response.choices[0].message.content or ""
+            else:
+                # No tools needed: use orchestrator response directly
+                final_text = orchestrator_text
+
             stop_spinner.set()
             try:
                 await asyncio.wait_for(spinner_task, timeout=1.0)
@@ -392,13 +577,51 @@ async def run_chat(user_text: str):
                     await spinner_task
                 except asyncio.CancelledError:
                     pass
-            final_text = msg.content or ""
             thinking_msg.content = final_text
             await thinking_msg.update()
 
             if _looks_like_billing_or_rate_limit(final_text):
                 await cl.Message(content="⚠️ **This response may indicate an API billing, credit, or rate limit issue.** Check your provider dashboard or API key.").send()
+
+            history.append({"role": "assistant", "content": final_text})
             break
+        else:
+            # Max iterations hit without orchestrator returning final text. If we have tool
+            # results, run synthesis anyway so the user gets an answer from the gathered data.
+            if tool_results_this_turn:
+                truncated = _truncated_history(history, SYNTHESIS_HISTORY_TURNS)
+                tool_output_str = "\n\n".join(m.get("content", "") for m in tool_results_this_turn if m.get("role") == "tool")
+                synthesis_messages = [
+                    {"role": "system", "content": SYNTHESIS_SYSTEM_PROMPT},
+                    *truncated,
+                    {
+                        "role": "user",
+                        "content": f"{user_text}\n\n---\nRetrieved from knowledge graph:\n{tool_output_str}",
+                    },
+                ]
+                await _throttle_llm_request()
+                synth_response = await _llm_completion(
+                    router_model_name="synthesis",
+                    messages=synthesis_messages,
+                    tools=None,
+                )
+                if LLM_REQUEST_DELAY_SECONDS > 0:
+                    await asyncio.sleep(LLM_REQUEST_DELAY_SECONDS)
+                final_text = synth_response.choices[0].message.content or ""
+            else:
+                final_text = "⚠️ Maximum tool-call iterations reached. Try rephrasing your question."
+            stop_spinner.set()
+            try:
+                await asyncio.wait_for(spinner_task, timeout=1.0)
+            except (asyncio.CancelledError, asyncio.TimeoutError):
+                spinner_task.cancel()
+                try:
+                    await spinner_task
+                except asyncio.CancelledError:
+                    pass
+            thinking_msg.content = final_text
+            await thinking_msg.update()
+            history.append({"role": "assistant", "content": final_text})
 
     finally:
         stop_spinner.set()

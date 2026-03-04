@@ -40,6 +40,17 @@ Ensure the bundle is available at the path given by `BUNDLE_PATH` inside the con
 
 The server can run an MCP server so that LLMs and agents can call tools (e.g. entity search, relationship lookup, find entities within N hops). Configure the MCP endpoint and any auth as required by your deployment. The Chainlit chat at `/chat/` uses MCP to give the assistant access to the graph.
 
+## Chainlit chat — LLM configuration
+
+The chat uses a two-tier model architecture (orchestrator for tool planning, synthesis for final answers) and supports:
+
+- **Multi-key load balancing**: Set `ANTHROPIC_API_KEY`, `ANTHROPIC_API_KEY_1`, `ANTHROPIC_API_KEY_2`, … (or `OPENAI_API_KEY`, `OPENAI_API_KEY_1`, …) to spread requests across keys.
+- **Model selection**: `ORCHESTRATOR_MODEL` (default: claude-haiku-4-5 / gpt-4o-mini), `SYNTHESIS_MODEL` (default: claude-sonnet-4-6 / gpt-4o).
+- **Prompt caching**: Anthropic requests use `cache_control_injection_points` for system prompts when supported.
+- **Throttling**: `LLM_MIN_REQUEST_INTERVAL_SECONDS`, `LLM_RATE_LIMIT_RETRY_DELAY_SECONDS` for rate-limit mitigation.
+
+See the docstring in `kgserver/chainlit/app.py` for the full list of environment variables.
+
 ## Running at scale
 
 - Use **PostgreSQL** for production; tune connection pool and timeouts.
