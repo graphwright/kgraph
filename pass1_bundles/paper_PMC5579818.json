@@ -13,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,13 +28,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:25:42.646911Z",
+      "timestamp": "2026-03-04T19:44:27.153260Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 29.04
+      "duration_seconds": 26.73
     },
     "entity_resolution": null,
     "model_info": null
@@ -128,7 +128,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "6387",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -164,7 +164,7 @@
     },
     {
       "id": "escaped_beat",
-      "class": "Disease",
+      "class": "Symptom",
       "name": "escaped beat",
       "synonyms": [],
       "symbol": null,
@@ -249,9 +249,26 @@
   ],
   "relationships": [
     {
-      "subject": "jaw_deformity",
+      "subject": "bilateral sagittal split ramus osteotomy",
+      "predicate": "TREATS",
+      "object": "jaw_deformity",
+      "evidence_ids": [
+        "paper_1:case_report:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "electrocardiography",
       "predicate": "INDICATES",
-      "object": "bilateral sagittal split ramus osteotomy",
+      "object": "junctional_rhythm",
       "evidence_ids": [
         "paper_1:case_report:1:llm"
       ],
@@ -270,41 +287,8 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "slow_heart_rate",
       "evidence_ids": [
-        "paper_1:case_report:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "case_report",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "lidocaine",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "local_anesthesia",
-      "evidence_ids": [
-        "paper_1:case_report:2:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "case_report",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "adrenaline",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "local_anesthesia",
-      "evidence_ids": [
-        "paper_1:case_report:2:llm"
+        "paper_1:case_report:1:llm",
+        "paper_1:case_report:4:llm"
       ],
       "source_papers": [
         "paper_1"
@@ -328,7 +312,7 @@
       ],
       "confidence": 0.9,
       "properties": {
-        "temporal_relationship": "15 minutes after"
+        "temporal_relationship": "15 minutes after administration"
       },
       "section": "case_report",
       "asserted_by": "llm",
@@ -354,7 +338,7 @@
     },
     {
       "subject": "sympathetic_activity",
-      "predicate": "INCREASES_RISK",
+      "predicate": "ASSOCIATED_WITH",
       "object": "junctional_rhythm",
       "evidence_ids": [
         "paper_1:case_report:3:llm"
@@ -364,26 +348,7 @@
       ],
       "confidence": 0.9,
       "properties": {
-        "mechanism": "atrioventricular nodal pacemaker cell acceleration"
-      },
-      "section": "case_report",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "primary_pacemaker",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "escaped_beat",
-      "evidence_ids": [
-        "paper_1:case_report:4:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "mechanism": "slowing"
+        "mechanism": "acceleration of atrioventricular nodal pacemaker cells"
       },
       "section": "case_report",
       "asserted_by": "llm",
@@ -410,18 +375,18 @@
       "note": null
     },
     {
-      "subject": "junctional_rhythm",
+      "subject": "primary_pacemaker",
       "predicate": "ASSOCIATED_WITH",
-      "object": "anesthetic management",
+      "object": "escaped_beat",
       "evidence_ids": [
         "paper_1:case_report:4:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
-      "confidence": 0.85,
+      "confidence": 0.9,
       "properties": {
-        "importance": "identifying cause is important"
+        "mechanism": "slowing causes escaped beat"
       },
       "section": "case_report",
       "asserted_by": "llm",
@@ -430,7 +395,7 @@
     }
   ],
   "notes": [
-    "This case report describes two different mechanisms for junctional rhythm: preoperative (escaped beat due to primary pacemaker slowing) and intraoperative (sympathetic stimulation from adrenaline)",
-    "The temporal relationship between local anesthesia administration and junctional rhythm onset (15 minutes) suggests a causal relationship"
+    "This case report describes two different mechanisms for junctional rhythm: preoperative rhythm due to primary pacemaker slowing (escaped beat) and intraoperative rhythm due to sympathetic stimulation from adrenaline",
+    "The temporal relationship between local anesthesia with adrenaline and junctional rhythm onset (15 minutes) suggests a causal relationship"
   ]
 }

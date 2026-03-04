@@ -1,12 +1,10 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_CUSHING_COMORBIDITIES",
+    "pmcid": "extracted_paper",
     "title": "Comorbidities in Cushing's disease",
-    "authors": [
-      "Not specified"
-    ],
-    "journal": "Not specified",
+    "authors": [],
+    "journal": "",
     "year": null,
     "study_type": "review",
     "eco_type": null
@@ -15,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,20 +28,20 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:22:23.777268Z",
+      "timestamp": "2026-03-04T19:41:26.173372Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 59.9
+      "duration_seconds": 65.47
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "cushing_disease_review",
+      "id": "cushing_disease",
       "class": "Disease",
       "name": "Cushing's disease",
       "synonyms": [
@@ -61,7 +59,7 @@
       "uniprot_id": null
     },
     {
-      "id": "pituitary_adenoma_review",
+      "id": "pituitary_adenoma",
       "class": "Disease",
       "name": "pituitary adenoma",
       "synonyms": [],
@@ -76,90 +74,24 @@
       "uniprot_id": null
     },
     {
-      "id": "hypercortisolemia_review",
+      "id": "hypercortisolemia",
       "class": "Disease",
       "name": "hypercortisolemia",
       "synonyms": [
-        "cortisol excess"
+        "hypercortisolism"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020621",
+      "umls_id": "C0020626",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "visceral_adiposity_review",
-      "class": "Disease",
-      "name": "visceral adiposity",
-      "synonyms": [
-        "central adiposity"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C1563740",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glucose_intolerance_review",
-      "class": "Disease",
-      "name": "glucose intolerance",
-      "synonyms": [
-        "impaired glucose tolerance"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0271650",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "procoagulant_phenotype_review",
-      "class": "Disease",
-      "name": "procoagulant phenotype",
-      "synonyms": [
-        "hypercoagulability"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0398623",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "vertebral_fractures_review",
-      "class": "Disease",
-      "name": "vertebral fractures",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0080179",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "transsphenoidal_surgery_review",
+      "id": "transsphenoidal_surgery",
       "class": "Procedure",
       "name": "transsphenoidal surgery",
       "synonyms": [
@@ -176,54 +108,56 @@
       "uniprot_id": null
     },
     {
-      "id": "steroidogenesis_inhibitors_review",
-      "class": "Drug",
-      "name": "steroidogenesis inhibitors",
+      "id": "visceral_adiposity",
+      "class": "Disease",
+      "name": "visceral adiposity",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C1563740",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "glucocorticoid_receptor_antagonists_review",
-      "class": "Drug",
-      "name": "glucocorticoid receptor antagonists",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "standardized_mortality_ratio_review",
-      "class": "StatisticalMethod",
-      "name": "standardized mortality ratio",
+      "id": "glucose_intolerance",
+      "class": "Disease",
+      "name": "glucose intolerance",
       "synonyms": [
-        "SMR"
+        "impaired glucose tolerance"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0271650",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "venous_thromboembolism_review",
+      "id": "hypercoagulability",
+      "class": "Disease",
+      "name": "hypercoagulability",
+      "synonyms": [
+        "hypercoagulopathy"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0398623",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "venous_thromboembolism",
       "class": "Disease",
       "name": "venous thromboembolism",
       "synonyms": [
@@ -240,37 +174,7 @@
       "uniprot_id": null
     },
     {
-      "id": "left_ventricular_hypertrophy_review",
-      "class": "Disease",
-      "name": "left ventricular hypertrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0149721",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hippocampal_atrophy_review",
-      "class": "Disease",
-      "name": "hippocampal atrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C4551538",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "insulin_resistance_review",
+      "id": "insulin_resistance",
       "class": "Disease",
       "name": "insulin resistance",
       "synonyms": [],
@@ -285,69 +189,24 @@
       "uniprot_id": null
     },
     {
-      "id": "ketoconazole_review",
-      "class": "Drug",
-      "name": "ketoconazole",
+      "id": "nephrolithiasis",
+      "class": "Disease",
+      "name": "nephrolithiasis",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0022650",
       "hgnc_id": null,
-      "rxnorm_id": "6135",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "mitotane_review",
-      "class": "Drug",
-      "name": "mitotane",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6960",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "simvastatin_review",
-      "class": "Drug",
-      "name": "simvastatin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "36567",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pravastatin_review",
-      "class": "Drug",
-      "name": "pravastatin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "42463",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hippocampus_review",
-      "class": "AnatomicalStructure",
-      "name": "hippocampus",
+      "id": "hippocampal_atrophy",
+      "class": "Disease",
+      "name": "hippocampal atrophy",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -360,11 +219,26 @@
       "uniprot_id": null
     },
     {
-      "id": "sf36_review",
+      "id": "cerebral_atrophy",
+      "class": "Disease",
+      "name": "cerebral atrophy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0235946",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "standardized_mortality_ratio",
       "class": "StatisticalMethod",
-      "name": "short-form 36",
+      "name": "standardized mortality ratio",
       "synonyms": [
-        "SF-36"
+        "SMR"
       ],
       "symbol": null,
       "brand_names": [],
@@ -375,15 +249,398 @@
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
+    },
+    {
+      "id": "waist_to_hip_ratio",
+      "class": "Biomarker",
+      "name": "waist-to-hip ratio",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0205682",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "intima_media_thickness",
+      "class": "Biomarker",
+      "name": "intima-media thickness",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0162864",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "left_ventricular_hypertrophy",
+      "class": "Disease",
+      "name": "left ventricular hypertrophy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0149721",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "concentric_remodeling",
+      "class": "Disease",
+      "name": "concentric remodeling",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0600520",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "homeostatic_model_assessment",
+      "class": "Procedure",
+      "name": "homeostatic model assessment",
+      "synonyms": [
+        "HOMA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C3639411",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "insulin_sensitivity_index",
+      "class": "Biomarker",
+      "name": "insulin sensitivity index",
+      "synonyms": [
+        "ISI"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0920563",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mitotane",
+      "class": "Drug",
+      "name": "mitotane",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0026259",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "ketoconazole",
+      "class": "Drug",
+      "name": "ketoconazole",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0022625",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "simvastatin",
+      "class": "Drug",
+      "name": "simvastatin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0074554",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pravastatin",
+      "class": "Drug",
+      "name": "pravastatin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0085542",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "osteoblastic_activity",
+      "class": "BiologicalProcess",
+      "name": "osteoblastic activity",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1155046",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "osteoclastic_activity",
+      "class": "BiologicalProcess",
+      "name": "osteoclastic activity",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1155047",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hypercalciuria",
+      "class": "Disease",
+      "name": "hypercalciuria",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0020437",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hypocitraturia",
+      "class": "Disease",
+      "name": "hypocitraturia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0268159",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hyperuricosuria",
+      "class": "Disease",
+      "name": "hyperuricosuria",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0268159",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hyperoxalaturia",
+      "class": "Disease",
+      "name": "hyperoxalaturia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0020500",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "emotional_lability",
+      "class": "Symptom",
+      "name": "emotional lability",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0233459",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mania",
+      "class": "Disease",
+      "name": "mania",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0338831",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "paranoia",
+      "class": "Disease",
+      "name": "paranoia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0030472",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "acute_psychosis",
+      "class": "Disease",
+      "name": "acute psychosis",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0033975",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "panic_attacks",
+      "class": "Disease",
+      "name": "panic attacks",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0086769",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "fractional_anisotropy",
+      "class": "Biomarker",
+      "name": "fractional anisotropy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C3178874",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "uncinate_fasciculus",
+      "class": "AnatomicalStructure",
+      "name": "uncinate fasciculus",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0175219",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "short_form_36",
+      "class": "Procedure",
+      "name": "short-form 36",
+      "synonyms": [
+        "SF-36"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0451286",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "non_functioning_pituitary_adenoma",
+      "class": "Disease",
+      "name": "non-functioning pituitary adenoma",
+      "synonyms": [
+        "NFPA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1266042",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
     }
   ],
   "evidence_entities": [
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:introduction:1:llm",
+      "id": "extracted_paper:introduction:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "intro_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "intro_0",
       "text": "Cushing's disease is a rare disorder characterized by overproduction of ACTH from a pituitary adenoma leading to hypercortisolemia that in turn leads to increased morbidity and mortality.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -392,11 +649,11 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:results:1:llm",
+      "id": "extracted_paper:results:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "results_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "results_0",
       "text": "Recent evidence suggests that correction of hypercortisolemia may not lead to complete resolution of comorbidities associated with this condition. In particular, increased cardiovascular risk may persist despite long-term remission of hypercortisolemia.",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -405,24 +662,37 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:results:2:llm",
+      "id": "extracted_paper:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "results_2",
+      "paper_id": "extracted_paper",
+      "text_span_id": "results_1",
       "text": "This may be related to persistence of visceral adiposity, adverse adipokine profile, glucose intolerance, hypertension, dyslipidemia, atherosclerosis and a procoagulant phenotype.",
-      "confidence": 0.85,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:mortality:1:llm",
+      "id": "extracted_paper:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "mortality_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "results_2",
+      "text": "Prior prolonged exposure to glucocorticoids also may have irreversible effects on the central nervous system, leading to persistent cognitive and mood alterations.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "extracted_paper:mortality:0:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "extracted_paper",
+      "text_span_id": "mortality_0",
       "text": "Multiple studies show that the standardized mortality ratio (SMR) is increased in CD (1.7\u20134.8), especially in patients with persistent hypercortisolism (3.7\u20134.2) compared to those in remission (1.8\u20133.17).",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -431,38 +701,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:cardiovascular:1:llm",
+      "id": "extracted_paper:cardiovascular:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "cardiovascular_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "cardiovascular_0",
       "text": "Cardiovascular risk is increased in CD patients even 5 years after remission. Compared with controls, CD patients had significantly higher waist-to-hip ratio, diastolic blood pressure, oral glucose tolerance test\u2014stimulated glucose and insulin levels, total/HDL cholesterol ratio and fibrinogen levels.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_CUSHING_COMORBIDITIES:hypertension:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "hypertension_1",
-      "text": "Hypertension occurs in 55\u201385 % of CD patients, but resolves after remission in only 44\u201375 %.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_CUSHING_COMORBIDITIES:vte:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "vte_1",
-      "text": "In a multicenter retrospective cohort study of 473 CS patients (360 CD), the incidence of VTE before treatment of hypercortisolemia was 14.6 per 1000 persons/year.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
@@ -470,50 +714,63 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm",
+      "id": "extracted_paper:cardiovascular:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "diabetes_1",
-      "text": "The prevalence of overt diabetes mellitus is 20\u201347 % and that of impaired glucose tolerance is 21\u201364 % in CD.",
-      "confidence": 0.9,
+      "paper_id": "extracted_paper",
+      "text_span_id": "cardiovascular_1",
+      "text": "Hypertension occurs in 55\u201385 % of CD patients, but resolves after remission in only 44\u201375 %.",
+      "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:osteoporosis:1:llm",
+      "id": "extracted_paper:thromboembolism:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "osteoporosis_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "thromboembolism_0",
+      "text": "In one systematic review, the incidence of venous thromboembolism (VTE) in CS was 2.5\u20133.1 per 1000 persons/year compared to 1.0\u20132.0 per 1000 persons/year in the general population.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "extracted_paper:bone:0:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "extracted_paper",
+      "text_span_id": "bone_0",
       "text": "The prevalence of fractures and osteoporosis as assessed by dual energy X-ray absorptiometry (DXA) has been reported to be 15\u201350 and 38\u201350 % respectively, and may be a presenting feature of CD.",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm",
+      "id": "extracted_paper:psychiatric:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "psychiatric_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "psychiatric_0",
       "text": "Most (54\u201385 %) patients with CD have some psychiatric disturbance. Depression and irritability are most common emotional lability, mania, paranoia, acute psychosis, anxiety and panic attacks also occur.",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:cognitive:1:llm",
+      "id": "extracted_paper:cognitive:0:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "cognitive_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "cognitive_0",
       "text": "Hippocampal atrophy was seen in 27 % of 12 active CS patients and correlated with performance on cognitive tests.",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -524,14 +781,14 @@
   ],
   "relationships": [
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
-      "object": "pituitary_adenoma_review",
+      "object": "pituitary_adenoma",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "extracted_paper:introduction:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -541,14 +798,14 @@
       "note": null
     },
     {
-      "subject": "pituitary_adenoma_review",
+      "subject": "pituitary_adenoma",
       "predicate": "INCREASES_RISK",
-      "object": "hypercortisolemia_review",
+      "object": "hypercortisolemia",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "extracted_paper:introduction:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -558,256 +815,249 @@
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
-      "predicate": "ASSOCIATED_WITH",
+      "subject": "hypercortisolemia",
+      "predicate": "INCREASES_RISK",
       "object": "cardiovascular disease",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:1:llm",
-        "PMC_CUSHING_COMORBIDITIES:cardiovascular:1:llm"
+        "extracted_paper:results:0:llm",
+        "extracted_paper:cardiovascular:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cushing_disease",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "visceral_adiposity",
+      "evidence_ids": [
+        "extracted_paper:results:1:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
       ],
       "confidence": 0.9,
-      "properties": {
-        "persistence": "long-term"
-      },
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
-      "object": "visceral_adiposity_review",
+      "object": "glucose_intolerance",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
-      "confidence": 0.85,
-      "properties": {
-        "persistence": "after remission"
-      },
+      "confidence": 0.9,
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
       "object": "hypertension",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:hypertension:1:llm"
+        "extracted_paper:results:1:llm",
+        "extracted_paper:cardiovascular:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "prevalence": "55-85%",
-        "resolution_rate": "44-75%"
-      },
-      "section": "comorbidities",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease_review",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "venous_thromboembolism_review",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:vte:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.95,
-      "properties": {
-        "incidence": "14.6 per 1000 persons/year"
-      },
-      "section": "comorbidities",
+      "properties": {},
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
-      "object": "diabetes mellitus",
+      "object": "dyslipidemia",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.9,
-      "properties": {
-        "prevalence": "20-47%"
-      },
-      "section": "comorbidities",
+      "properties": {},
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
-      "object": "glucose_intolerance_review",
+      "object": "atherosclerosis",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.9,
-      "properties": {
-        "prevalence": "21-64%"
-      },
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cushing_disease",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "hypercoagulability",
+      "evidence_ids": [
+        "extracted_paper:results:1:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cushing_disease",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "cognitive impairment",
+      "evidence_ids": [
+        "extracted_paper:results:2:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cushing_disease",
+      "predicate": "INCREASES_RISK",
+      "object": "venous_thromboembolism",
+      "evidence_ids": [
+        "extracted_paper:thromboembolism:0:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
+      ],
+      "confidence": 0.95,
+      "properties": {},
       "section": "comorbidities",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
       "object": "osteoporosis",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:osteoporosis:1:llm"
+        "extracted_paper:bone:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
-      "confidence": 0.9,
-      "properties": {
-        "prevalence": "38-50%"
-      },
+      "confidence": 0.95,
+      "properties": {},
       "section": "comorbidities",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "vertebral_fractures_review",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:osteoporosis:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "prevalence": "15-50%"
-      },
-      "section": "comorbidities",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
       "object": "depression",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm"
+        "extracted_paper:psychiatric:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
-      "confidence": 0.9,
-      "properties": {
-        "prevalence": "54-85%"
-      },
+      "confidence": 0.95,
+      "properties": {},
       "section": "comorbidities",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease_review",
+      "subject": "cushing_disease",
       "predicate": "ASSOCIATED_WITH",
-      "object": "hippocampal_atrophy_review",
+      "object": "anxiety",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:cognitive:1:llm"
+        "extracted_paper:psychiatric:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
-      "confidence": 0.9,
-      "properties": {
-        "prevalence": "27%"
-      },
+      "confidence": 0.95,
+      "properties": {},
       "section": "comorbidities",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "transsphenoidal_surgery_review",
+      "subject": "cushing_disease",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "hippocampal_atrophy",
+      "evidence_ids": [
+        "extracted_paper:cognitive:0:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "comorbidities",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "transsphenoidal_surgery",
       "predicate": "TREATS",
-      "object": "cushing_disease_review",
+      "object": "cushing_disease",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "extracted_paper:introduction:0:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "extracted_paper"
       ],
       "confidence": 0.9,
-      "properties": {
-        "treatment_type": "optimal"
-      },
+      "properties": {},
       "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "ketoconazole_review",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "simvastatin_review",
-      "evidence_ids": [],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.8,
-      "properties": {
-        "interaction_type": "drug interaction",
-        "mechanism": "CYP3A4 inhibition"
-      },
-      "section": "comorbidities",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "ketoconazole_review",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "atorvastatin",
-      "evidence_ids": [],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.8,
-      "properties": {
-        "interaction_type": "drug interaction",
-        "mechanism": "CYP3A4 inhibition"
-      },
-      "section": "comorbidities",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This review paper provides comprehensive coverage of comorbidities associated with Cushing's disease, with prevalence data from multiple studies",
-    "The paper emphasizes that many comorbidities persist even after biochemical remission of hypercortisolemia",
-    "Cardiovascular risk appears to be the most significant long-term concern in Cushing's disease patients"
+    "This review paper provides comprehensive coverage of comorbidities associated with Cushing's disease, including cardiovascular, metabolic, bone, psychiatric, and cognitive complications.",
+    "The paper emphasizes that many comorbidities may persist even after successful treatment and normalization of cortisol levels.",
+    "Prevalence data for various comorbidities are provided in Table 1 of the original paper."
   ]
 }

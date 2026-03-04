@@ -1,13 +1,13 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC12780394",
+    "pmcid": "PMC_PLACEHOLDER",
     "title": "Global bibliometric analysis of pleural mesothelioma biomarkers (2002\u20132024): trends and emerging frontiers",
     "authors": [
       "Not specified"
     ],
-    "journal": "Not specified",
-    "year": 2024,
+    "journal": "Journal of Thoracic Disease",
+    "year": 2025,
     "study_type": "bibliometric analysis",
     "eco_type": null
   },
@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "8d6fdac417f10eadd2a8d7444f95323012d32bf7",
+      "git_commit_short": "8d6fdac",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:13:57.101837Z",
+      "timestamp": "2026-03-04T19:33:16.530155Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 47.91
+      "duration_seconds": 64.08
     },
     "entity_resolution": null,
     "model_info": null
@@ -54,7 +54,26 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0812413",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mesothelioma",
+      "class": "Disease",
+      "name": "mesothelioma",
+      "synonyms": [
+        "malignant mesothelioma",
+        "mesothelial tumor",
+        "mesothelial neoplasm"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0025500",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -73,7 +92,7 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:7371",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -92,7 +111,7 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:11168",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -100,9 +119,9 @@
     {
       "id": "pd_l1",
       "class": "Protein",
-      "name": "programmed cell death ligand-1",
+      "name": "PD-L1",
       "synonyms": [
-        "PD-L1",
+        "programmed cell death ligand-1",
         "soluble PD-L1",
         "sPD-L1"
       ],
@@ -111,6 +130,24 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:17635",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "microRNA",
+      "class": "Biomarker",
+      "name": "microRNA",
+      "synonyms": [
+        "miRNA",
+        "miR"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1101610",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -118,16 +155,14 @@
     },
     {
       "id": "mir_182_5p",
-      "class": "Gene",
+      "class": "Biomarker",
       "name": "miR-182-5p",
-      "synonyms": [
-        "microRNA-182-5p"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C2825314",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -135,16 +170,14 @@
     },
     {
       "id": "let_7b",
-      "class": "Gene",
+      "class": "Biomarker",
       "name": "let-7b",
-      "synonyms": [
-        "let-7b microRNA"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C1999216",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -162,57 +195,39 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:950",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "asbestos_exposure",
+      "class": "AdverseEvent",
+      "name": "asbestos exposure",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0003948",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "foxo1",
-      "class": "Protein",
-      "name": "forkhead box O1",
+      "id": "immunotherapy",
+      "class": "Procedure",
+      "name": "immunotherapy",
       "synonyms": [
-        "FOXO1"
+        "immune checkpoint inhibitor therapy",
+        "ICT"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "foxo3",
-      "class": "Protein",
-      "name": "forkhead box O3",
-      "synonyms": [
-        "FOXO3"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "kl_6",
-      "class": "Protein",
-      "name": "KL-6",
-      "synonyms": [
-        "Krebs von den Lungen-6"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0021083",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -229,7 +244,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "1312830",
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -244,7 +259,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "1094833",
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -259,7 +274,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "1547545",
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -274,65 +289,148 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "282464",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "checkmate_743",
-      "class": "ClinicalTrial",
-      "name": "CheckMate 743",
+      "id": "fibulin_3",
+      "class": "Protein",
+      "name": "fibulin-3",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:3602",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "calretinin",
+      "class": "Protein",
+      "name": "calretinin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1391",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cea",
+      "class": "Biomarker",
+      "name": "carcinoembryonic antigen",
+      "synonyms": [
+        "CEA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0007082",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "keynote_028",
-      "class": "ClinicalTrial",
-      "name": "KEYNOTE-028",
+      "id": "cyfra_21_1",
+      "class": "Biomarker",
+      "name": "CYFRA 21-1",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0376690",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "chest_pain",
-      "class": "Symptom",
-      "name": "chest pain",
+      "id": "kl_6",
+      "class": "Protein",
+      "name": "KL-6",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:7130",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "pleural_effusion",
-      "class": "Symptom",
-      "name": "pleural effusion",
+      "id": "foxo3",
+      "class": "Protein",
+      "name": "forkhead box O3",
+      "synonyms": [
+        "FOXO3"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:3821",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "foxo1",
+      "class": "Protein",
+      "name": "forkhead box O1",
+      "synonyms": [
+        "FOXO1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:3819",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "p27",
+      "class": "Protein",
+      "name": "p27",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:1785",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "absolute_eosinophil_count",
+      "class": "Biomarker",
+      "name": "absolute eosinophil count",
+      "synonyms": [
+        "AEC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0200638",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -349,24 +447,137 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C4055223",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "immune_checkpoint_inhibitors",
-      "class": "Drug",
-      "name": "immune checkpoint inhibitors",
+      "id": "pd_1",
+      "class": "Protein",
+      "name": "programmed cell death protein 1",
       "synonyms": [
-        "ICIs"
+        "PD-1"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:8760",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "overall_survival",
+      "class": "Biomarker",
+      "name": "overall survival",
+      "synonyms": [
+        "OS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C4086681",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pleural_effusion",
+      "class": "Symptom",
+      "name": "pleural effusion",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0032227",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chest_pain",
+      "class": "Symptom",
+      "name": "chest pain",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0008031",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pathological_biopsy",
+      "class": "Procedure",
+      "name": "pathological biopsy",
+      "synonyms": [
+        "biopsy"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0005558",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "epithelial_mesothelioma",
+      "class": "Disease",
+      "name": "epithelial mesothelioma",
+      "synonyms": [
+        "epithelial PM"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1266042",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "sarcomatoid_mesothelioma",
+      "class": "Disease",
+      "name": "sarcomatoid mesothelioma",
+      "synonyms": [
+        "fibrous mesothelioma"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1266043",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mixed_mesothelioma",
+      "class": "Disease",
+      "name": "mixed mesothelioma",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1266044",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -375,10 +586,10 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper_1:introduction:1:llm",
+      "id": "PMC_PLACEHOLDER:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "intro_1",
       "text": "Pleural mesothelioma (PM), an aggressive and rare malignancy arising from pleural mesothelial cells, accounts for only 0.3% of all cancer cases and remains largely incurable",
       "confidence": 0.95,
@@ -388,10 +599,10 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:introduction:2:llm",
+      "id": "PMC_PLACEHOLDER:introduction:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "intro_2",
       "text": "PM exhibits a high fatality rate, with a 5-year survival probability below 10% and a median survival duration of merely 9 to 12 months",
       "confidence": 0.95,
@@ -401,10 +612,10 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:introduction:3:llm",
+      "id": "PMC_PLACEHOLDER:introduction:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "intro_3",
       "text": "The predominant risk factor for PM is asbestos exposure, with approximately 80% of cases linked to prior asbestos contact",
       "confidence": 0.95,
@@ -414,23 +625,23 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:discussion:1:llm",
+      "id": "PMC_PLACEHOLDER:discussion:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "disc_1",
       "text": "Mesothelin is one of the widely studied biomarkers of PM, which is expressed at low levels in normal cells and undetectable in normal tissues, but is abundantly expressed in malignant mesothelioma, pancreatic cancer, ovarian cancer, lung cancer, and other cancers",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "bibliometric analysis",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:discussion:2:llm",
+      "id": "PMC_PLACEHOLDER:discussion:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "disc_2",
       "text": "SMRP are the only biomarkers for PM approved by the U.S. Food and Drug Administration (FDA)",
       "confidence": 0.95,
@@ -440,38 +651,38 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:discussion:3:llm",
+      "id": "PMC_PLACEHOLDER:discussion:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "disc_3",
-      "text": "miR-182-5p's oncogenic function was first identified in melanoma, where the miRNA promotes tumor migration and invasion by inhibiting the activity of the forkhead box O3 (FOXO3) transcription factor",
-      "confidence": 0.95,
+      "text": "Osteopontin (OPN), also known as secreted phosphoprotein 1 (SPP1), is a secreted extracellular matrix protein widely distributed in a variety of tissues and cells, which can participate in tissue repair and self-metabolism, and can be used as a marker for the diagnosis and screening of PM",
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "bibliometric analysis",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:discussion:4:llm",
+      "id": "PMC_PLACEHOLDER:discussion:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "disc_4",
-      "text": "The forkhead box O1 (FOXO1) transcription factor has been identified as a target of miR-182 and miR-183 regulation in PM cells",
-      "confidence": 0.95,
+      "text": "miR-182-5p's oncogenic function was first identified in melanoma, where the miRNA promotes tumor migration and invasion by inhibiting the activity of the forkhead box O3 (FOXO3) transcription factor",
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "bibliometric analysis",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:discussion:5:llm",
+      "id": "PMC_PLACEHOLDER:discussion:5:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
+      "paper_id": "PMC_PLACEHOLDER",
       "text_span_id": "disc_5",
-      "text": "In the non-epithelial subpopulation, sPD-L1 levels were slightly higher, suggesting that sPD-L1 levels may be involved in the poor prognosis of PM tissue types",
+      "text": "Williams et al. demonstrated a correlation between a baseline absolute eosinophil count (AEC) of \u2265220/\u00b5L and poorer outcomes in PM patients receiving chemotherapy or immunotherapy",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "bibliometric analysis",
@@ -481,14 +692,14 @@
   ],
   "relationships": [
     {
-      "subject": "pleural_mesothelioma",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "asbestos exposure",
+      "subject": "asbestos_exposure",
+      "predicate": "INCREASES_RISK",
+      "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:introduction:3:llm"
+        "PMC_PLACEHOLDER:introduction:3:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {
@@ -500,53 +711,19 @@
       "note": null
     },
     {
-      "subject": "pleural_mesothelioma",
-      "predicate": "INDICATES",
-      "object": "chest_pain",
-      "evidence_ids": [
-        "paper_1:discussion:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "pleural_mesothelioma",
-      "predicate": "INDICATES",
-      "object": "pleural_effusion",
-      "evidence_ids": [
-        "paper_1:discussion:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
       "subject": "mesothelin",
       "predicate": "INDICATES",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:1:llm",
-        "paper_1:discussion:2:llm"
+        "PMC_PLACEHOLDER:discussion:1:llm",
+        "PMC_PLACEHOLDER:discussion:2:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {
-        "fda_approved": true
+        "regulatory_status": "FDA approved"
       },
       "section": "discussion",
       "asserted_by": "llm",
@@ -558,10 +735,10 @@
       "predicate": "INDICATES",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:1:llm"
+        "PMC_PLACEHOLDER:discussion:3:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.9,
       "properties": {},
@@ -575,10 +752,48 @@
       "predicate": "INDICATES",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:5:llm"
+        "PMC_PLACEHOLDER:discussion:1:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.85,
+      "properties": {
+        "role": "immunotherapy prediction"
+      },
+      "section": "discussion",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "mir_182_5p",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "pleural_mesothelioma",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:discussion:4:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "oncogenic"
+      },
+      "section": "discussion",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "mir_182_5p",
+      "predicate": "INHIBITS",
+      "object": "foxo3",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:discussion:4:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.9,
       "properties": {},
@@ -588,19 +803,19 @@
       "note": null
     },
     {
-      "subject": "mir_182_5p",
-      "predicate": "INCREASES_RISK",
+      "subject": "absolute_eosinophil_count",
+      "predicate": "INDICATES",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:3:llm",
-        "paper_1:discussion:4:llm"
+        "PMC_PLACEHOLDER:discussion:5:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "properties": {
-        "mechanism": "inhibits FOXO3"
+        "threshold": "\u2265220/\u00b5L",
+        "association": "poorer outcomes"
       },
       "section": "discussion",
       "asserted_by": "llm",
@@ -612,12 +827,12 @@
       "predicate": "TREATS",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:1:llm"
+        "PMC_PLACEHOLDER:discussion:1:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {
         "combination": "with ipilimumab"
       },
@@ -631,12 +846,12 @@
       "predicate": "TREATS",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:1:llm"
+        "PMC_PLACEHOLDER:discussion:1:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {
         "combination": "with nivolumab"
       },
@@ -650,12 +865,12 @@
       "predicate": "TREATS",
       "object": "pleural_mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:1:llm"
+        "PMC_PLACEHOLDER:discussion:1:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
       "section": "discussion",
       "asserted_by": "llm",
@@ -663,84 +878,116 @@
       "note": null
     },
     {
-      "subject": "mir_182_5p",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "foxo1",
+      "subject": "pleural_mesothelioma",
+      "predicate": "SUBTYPE_OF",
+      "object": "mesothelioma",
       "evidence_ids": [
-        "paper_1:discussion:4:llm"
+        "PMC_PLACEHOLDER:introduction:1:llm"
       ],
       "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "relationship": "regulatory target"
-      },
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "mir_182_5p",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "foxo3",
-      "evidence_ids": [
-        "paper_1:discussion:3:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "relationship": "inhibits activity"
-      },
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "car_t_therapy",
-      "predicate": "TREATS",
-      "object": "pleural_mesothelioma",
-      "evidence_ids": [
-        "paper_1:discussion:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.85,
-      "properties": {
-        "target": "mesothelin"
-      },
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "immune_checkpoint_inhibitors",
-      "predicate": "TREATS",
-      "object": "pleural_mesothelioma",
-      "evidence_ids": [
-        "paper_1:discussion:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
+      "properties": {
+        "percentage": "90%"
+      },
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "epithelial_mesothelioma",
+      "predicate": "SUBTYPE_OF",
+      "object": "pleural_mesothelioma",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "prevalence": "most prevalent"
+      },
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "sarcomatoid_mesothelioma",
+      "predicate": "SUBTYPE_OF",
+      "object": "pleural_mesothelioma",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "mixed_mesothelioma",
+      "predicate": "SUBTYPE_OF",
+      "object": "pleural_mesothelioma",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "osteopontin",
+      "predicate": "SAME_AS",
+      "object": "secreted phosphoprotein 1",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:discussion:3:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 1.0,
       "properties": {},
       "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
-      "note": null
+      "note": "Alternative name for the same protein"
+    },
+    {
+      "subject": "mesothelin",
+      "predicate": "SAME_AS",
+      "object": "soluble mesothelin-related peptide",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:discussion:2:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "discussion",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": "SMRP is the serum form of mesothelin"
     }
   ],
   "notes": [
     "This bibliometric analysis covers 662 publications on pleural mesothelioma biomarkers from 2002-2024",
-    "The study identifies emerging research hotspots including immunotherapy and epigenetics",
-    "SMRP (soluble mesothelin-related peptide) is currently the only FDA-approved biomarker for pleural mesothelioma",
-    "The analysis reveals a shift from traditional research approaches to precision medicine centered on immunotherapy"
+    "The study identifies immunotherapy and epigenetics as emerging research hotspots",
+    "SMRP is currently the only FDA-approved biomarker for pleural mesothelioma",
+    "Clinical translation of biomarkers remains limited despite extensive research"
   ]
 }

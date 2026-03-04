@@ -14,8 +14,8 @@
       "R-PZ",
       "W-LZ"
     ],
-    "journal": "Frontiers in Neuroscience",
-    "year": 2023,
+    "journal": "Unknown",
+    "year": null,
     "study_type": "experimental",
     "eco_type": "animal_model"
   },
@@ -23,8 +23,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -38,235 +38,24 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:25:13.566809Z",
+      "timestamp": "2026-03-04T19:44:00.405094Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 52.17
+      "duration_seconds": 39.98
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "hemi-sectioned_spinal_cord_injury",
+      "id": "hemi_sectioned_spinal_cord_injury",
       "class": "Disease",
       "name": "hemi-sectioned spinal cord injury",
       "synonyms": [
         "hSCI"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "spastic_paralysis",
-      "class": "Symptom",
-      "name": "spastic paralysis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "flaccid_paralysis",
-      "class": "Symptom",
-      "name": "flaccid paralysis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "tree_shrews",
-      "class": "AnatomicalStructure",
-      "name": "tree shrews",
-      "synonyms": [
-        "Tupaia belangeri"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "tenth_thoracic_vertebra",
-      "class": "AnatomicalStructure",
-      "name": "tenth thoracic vertebra",
-      "synonyms": [
-        "T10"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hoechst_33342",
-      "class": "Drug",
-      "name": "Hoechst 33342",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "interleukin_1_beta",
-      "class": "Protein",
-      "name": "interleukin 1 beta",
-      "synonyms": [
-        "IL-1\u03b2"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "signal_transducer_and_activator_of_transcription_3",
-      "class": "Protein",
-      "name": "signal transducer and activator of transcription 3",
-      "synonyms": [
-        "STAT3"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "transforming_growth_factor_beta_1",
-      "class": "Protein",
-      "name": "transforming growth factor beta 1",
-      "synonyms": [
-        "TGF-\u03b21"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "brain_derived_neurotrophic_factor",
-      "class": "Protein",
-      "name": "brain-derived neurotrophic factor",
-      "synonyms": [
-        "BDNF"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "motoneurons",
-      "class": "AnatomicalStructure",
-      "name": "motoneurons",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glial_scar_formation",
-      "class": "BiologicalProcess",
-      "name": "glial scar formation",
-      "synonyms": [
-        "scar formation"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "inflammatory_response",
-      "class": "BiologicalProcess",
-      "name": "inflammatory response",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "locomotor_function",
-      "class": "BiologicalProcess",
-      "name": "locomotor function",
-      "synonyms": [
-        "motor function"
       ],
       "symbol": null,
       "brand_names": [],
@@ -296,12 +85,10 @@
       "uniprot_id": null
     },
     {
-      "id": "neurotrophic_factors",
-      "class": "Protein",
-      "name": "neurotrophic factors",
-      "synonyms": [
-        "NTFs"
-      ],
+      "id": "spastic_paralysis",
+      "class": "Disease",
+      "name": "spastic paralysis",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -313,71 +100,26 @@
       "uniprot_id": null
     },
     {
-      "id": "immunomodulatory_effects",
+      "id": "flaccid_paralysis",
+      "class": "Disease",
+      "name": "flaccid paralysis",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "bone_marrow_mesenchymal_stem_cells",
       "class": "BiologicalProcess",
-      "name": "immunomodulatory effects",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "neuroprotective_effects",
-      "class": "BiologicalProcess",
-      "name": "neuroprotective effects",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "axonal_regeneration",
-      "class": "BiologicalProcess",
-      "name": "axonal regeneration",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "nerve_trophism",
-      "class": "BiologicalProcess",
-      "name": "nerve trophism",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "interleukin_6",
-      "class": "Protein",
-      "name": "interleukin-6",
+      "name": "bone marrow mesenchymal stem cells",
       "synonyms": [
-        "IL-6"
+        "BMSCs"
       ],
       "symbol": null,
       "brand_names": [],
@@ -390,56 +132,11 @@
       "uniprot_id": null
     },
     {
-      "id": "cyclooxygenase_2",
+      "id": "ciliary_neurotrophic_factor",
       "class": "Protein",
-      "name": "cyclooxygenase-2",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pentobarbital_sodium",
-      "class": "Drug",
-      "name": "pentobarbital sodium",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "dmem_f12",
-      "class": "Drug",
-      "name": "DMEM/F12",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "fetal_bovine_serum",
-      "class": "Drug",
-      "name": "fetal bovine serum",
+      "name": "ciliary neurotrophic factor",
       "synonyms": [
-        "FBS"
+        "CNTF"
       ],
       "symbol": null,
       "brand_names": [],
@@ -452,71 +149,11 @@
       "uniprot_id": null
     },
     {
-      "id": "penicillin_streptomycin",
-      "class": "Drug",
-      "name": "penicillin/streptomycin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cd44",
+      "id": "signal_transducer_and_activator_of_transcription_3",
       "class": "Protein",
-      "name": "CD44",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cd29",
-      "class": "Protein",
-      "name": "CD29",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cd45",
-      "class": "Protein",
-      "name": "CD45",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glial_fibrillary_acidic_protein",
-      "class": "Protein",
-      "name": "glial fibrillary acidic protein",
+      "name": "signal transducer and activator of transcription 3",
       "synonyms": [
-        "GFAP"
+        "STAT3"
       ],
       "symbol": null,
       "brand_names": [],
@@ -529,11 +166,11 @@
       "uniprot_id": null
     },
     {
-      "id": "neuronal_class_iii_beta_tubulin",
+      "id": "interleukin_1_beta",
       "class": "Protein",
-      "name": "Neuronal Class III \u03b2-Tubulin",
+      "name": "interleukin 1 beta",
       "synonyms": [
-        "Tuj1"
+        "IL-1\u03b2"
       ],
       "symbol": null,
       "brand_names": [],
@@ -546,9 +183,43 @@
       "uniprot_id": null
     },
     {
-      "id": "dapi",
+      "id": "brain_derived_neurotrophic_factor",
+      "class": "Protein",
+      "name": "brain-derived neurotrophic factor",
+      "synonyms": [
+        "BDNF"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "transforming_growth_factor_beta_1",
+      "class": "Protein",
+      "name": "transforming growth factor beta 1",
+      "synonyms": [
+        "TGF-\u03b21"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hoechst_33342",
       "class": "Drug",
-      "name": "DAPI",
+      "name": "Hoechst 33342",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -576,11 +247,41 @@
       "uniprot_id": null
     },
     {
-      "id": "neuronal_nuclei",
-      "class": "Protein",
-      "name": "Neuronal Nuclei",
+      "id": "pentobarbital_sodium",
+      "class": "Drug",
+      "name": "pentobarbital sodium",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cefotaxime_sodium",
+      "class": "Drug",
+      "name": "cefotaxime sodium",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "tree_shrews",
+      "class": "AnatomicalStructure",
+      "name": "tree shrews",
       "synonyms": [
-        "NeuN"
+        "Tupaia belangeri"
       ],
       "symbol": null,
       "brand_names": [],
@@ -593,11 +294,11 @@
       "uniprot_id": null
     },
     {
-      "id": "mitogen_activated_protein_kinase_kinase",
-      "class": "Protein",
-      "name": "mitogen-activated protein kinase kinase",
+      "id": "basso_beattie_bresnahan_locomotion_scale",
+      "class": "StatisticalMethod",
+      "name": "Basso, Beattie, and Bresnahan locomotion scale",
       "synonyms": [
-        "Merk"
+        "BBB"
       ],
       "symbol": null,
       "brand_names": [],
@@ -610,12 +311,123 @@
       "uniprot_id": null
     },
     {
-      "id": "phosphatidylinositol_3_kinase",
-      "class": "Protein",
-      "name": "phosphatidylinositol 3-kinase",
+      "id": "cell_transplantation",
+      "class": "Procedure",
+      "name": "cell transplantation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "stem_cell_therapy",
+      "class": "Procedure",
+      "name": "stem-cell therapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "immunofluorescence",
+      "class": "Procedure",
+      "name": "immunofluorescence",
       "synonyms": [
-        "PI3K"
+        "IF"
       ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "western_blot",
+      "class": "Procedure",
+      "name": "Western blot",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "quantitative_real_time_pcr",
+      "class": "Procedure",
+      "name": "quantitative real-time PCR",
+      "synonyms": [
+        "qRT-PCR"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "tunel_assay",
+      "class": "Procedure",
+      "name": "TUNEL assay",
+      "synonyms": [
+        "terminal-deoxynucleoitidyl transferase mediated nick end labeling"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "immunohistochemistry",
+      "class": "Procedure",
+      "name": "immunohistochemistry",
+      "synonyms": [
+        "IHC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cntf_stat3_pathway",
+      "class": "Pathway",
+      "name": "CNTF-STAT3 pathway",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -673,19 +485,6 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_2",
-      "text": "Moreover, the hSCI-induced elevations in scar formation, IL-1\u03b2, and cell apoptosis were reduced by BMSC transplantation to levels that were close to those of the sham group.",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "animal_model",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:3:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_3",
       "text": "Corresponding elevations in the expression of STAT3 and CNTF mRNA were observed in the hSCI + BMSCs group, and the levels were not significantly different from those observed in the sham group.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -709,7 +508,7 @@
   ],
   "relationships": [
     {
-      "subject": "hemi-sectioned_spinal_cord_injury",
+      "subject": "hemi_sectioned_spinal_cord_injury",
       "predicate": "CAUSES",
       "object": "spastic_paralysis",
       "evidence_ids": [
@@ -726,7 +525,7 @@
       "note": null
     },
     {
-      "subject": "hemi-sectioned_spinal_cord_injury",
+      "subject": "hemi_sectioned_spinal_cord_injury",
       "predicate": "CAUSES",
       "object": "flaccid_paralysis",
       "evidence_ids": [
@@ -743,11 +542,27 @@
       "note": null
     },
     {
-      "subject": "bone marrow mesenchymal stem cells",
+      "subject": "stem_cell_therapy",
       "predicate": "TREATS",
-      "object": "hemi-sectioned_spinal_cord_injury",
+      "object": "hemi_sectioned_spinal_cord_injury",
       "evidence_ids": [
-        "PMC_extracted:introduction:2:llm",
+        "PMC_extracted:introduction:2:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "bone_marrow_mesenchymal_stem_cells",
+      "predicate": "TREATS",
+      "object": "hemi_sectioned_spinal_cord_injury",
+      "evidence_ids": [
         "PMC_extracted:results:1:llm",
         "PMC_extracted:conclusion:1:llm"
       ],
@@ -762,12 +577,11 @@
       "note": null
     },
     {
-      "subject": "bone marrow mesenchymal stem cells",
+      "subject": "bone_marrow_mesenchymal_stem_cells",
       "predicate": "INCREASES",
-      "object": "locomotor_function",
+      "object": "basso_beattie_bresnahan_locomotion_scale",
       "evidence_ids": [
-        "PMC_extracted:results:1:llm",
-        "PMC_extracted:conclusion:1:llm"
+        "PMC_extracted:results:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -780,45 +594,11 @@
       "note": null
     },
     {
-      "subject": "bone marrow mesenchymal stem cells",
-      "predicate": "DECREASES",
-      "object": "glial_scar_formation",
-      "evidence_ids": [
-        "PMC_extracted:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "bone marrow mesenchymal stem cells",
-      "predicate": "DECREASES",
-      "object": "cell apoptosis",
-      "evidence_ids": [
-        "PMC_extracted:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "bone marrow mesenchymal stem cells",
-      "predicate": "UPREGULATES",
+      "subject": "bone_marrow_mesenchymal_stem_cells",
+      "predicate": "INCREASES",
       "object": "signal_transducer_and_activator_of_transcription_3",
       "evidence_ids": [
-        "PMC_extracted:results:3:llm",
+        "PMC_extracted:results:2:llm",
         "PMC_extracted:conclusion:1:llm"
       ],
       "source_papers": [
@@ -832,11 +612,11 @@
       "note": null
     },
     {
-      "subject": "bone marrow mesenchymal stem cells",
-      "predicate": "UPREGULATES",
-      "object": "ciliary neurotrophic factor",
+      "subject": "bone_marrow_mesenchymal_stem_cells",
+      "predicate": "INCREASES",
+      "object": "ciliary_neurotrophic_factor",
       "evidence_ids": [
-        "PMC_extracted:results:3:llm",
+        "PMC_extracted:results:2:llm",
         "PMC_extracted:conclusion:1:llm"
       ],
       "source_papers": [
@@ -850,7 +630,7 @@
       "note": null
     },
     {
-      "subject": "ciliary neurotrophic factor",
+      "subject": "ciliary_neurotrophic_factor",
       "predicate": "ACTIVATES",
       "object": "signal_transducer_and_activator_of_transcription_3",
       "evidence_ids": [
@@ -859,7 +639,7 @@
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -867,16 +647,16 @@
       "note": null
     },
     {
-      "subject": "CNTF-STAT3 pathway",
+      "subject": "cntf_stat3_pathway",
       "predicate": "MEDIATES",
-      "object": "locomotor_function",
+      "object": "bone_marrow_mesenchymal_stem_cells",
       "evidence_ids": [
         "PMC_extracted:conclusion:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -885,8 +665,7 @@
     }
   ],
   "notes": [
-    "This study demonstrates the therapeutic potential of bone marrow mesenchymal stem cell transplantation for hemi-sectioned spinal cord injury in tree shrews",
-    "The CNTF-STAT3 pathway appears to be a key mechanism underlying the therapeutic effects",
-    "Tree shrews were used as a primate-like model that may be more translatable to humans than rodent models"
+    "This study demonstrates the therapeutic potential of bone marrow mesenchymal stem cell transplantation for spinal cord injury through CNTF-STAT3 pathway activation",
+    "Tree shrews were used as an animal model that more closely resembles primates compared to rodents"
   ]
 }

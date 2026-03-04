@@ -1,9 +1,9 @@
 {
   "bundle_version": "v1",
-  "bundle_id": "ddb1adfd6deb456daa25c1d24528c5e0",
+  "bundle_id": "36a3486b68954ed2ad3d43fd07d83c65",
   "domain": "medlit",
   "label": "medical-literature",
-  "created_at": "2026-02-27T16:26:18.089936Z",
+  "created_at": "2026-03-04T19:45:05.122414Z",
   "entities": {
     "path": "entities.jsonl",
     "format": "jsonl"
@@ -25,8 +25,8 @@
     "format": "jsonl"
   },
   "metadata": {
-    "entity_count": 404,
-    "relationship_count": 380,
+    "entity_count": 355,
+    "relationship_count": 353,
     "description": "Knowledge graph bundle from two-pass medlit pipeline"
   }
 }

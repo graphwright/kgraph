@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "8d6fdac417f10eadd2a8d7444f95323012d32bf7",
+      "git_commit_short": "8d6fdac",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:18:09.457133Z",
+      "timestamp": "2026-03-04T19:37:10.224744Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 47.28
+      "duration_seconds": 46.59
     },
     "entity_resolution": null,
     "model_info": null
@@ -60,41 +60,24 @@
       "uniprot_id": null
     },
     {
-      "id": "EGFR",
-      "class": "Gene",
-      "name": "EGFR",
+      "id": "SOX11_protein",
+      "class": "Protein",
+      "name": "SOX11 protein",
       "synonyms": [
-        "epidermal growth factor receptor"
+        "SOX11"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:3236",
+      "umls_id": "C1336641",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "STAT3",
-      "class": "Gene",
-      "name": "STAT3",
-      "synonyms": [
-        "signal transducer and activator of transcription 3"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:11364",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "head_and_neck_squamous_cell_carcinoma",
+      "id": "head_neck_squamous_cell_carcinoma",
       "class": "Disease",
       "name": "head and neck squamous cell carcinoma",
       "synonyms": [
@@ -122,7 +105,41 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
+      "umls_id": "C1523298",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "STAT3_gene",
+      "class": "Gene",
+      "name": "STAT3",
+      "synonyms": [
+        "signal transducer and activator of transcription 3"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:11364",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "STAT3_protein",
+      "class": "Protein",
+      "name": "signal transducer and activator of transcription 3",
+      "synonyms": [
+        "STAT3"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0253050",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -139,14 +156,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0242275",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "TWIST1",
+      "id": "TWIST1_gene",
       "class": "Gene",
       "name": "TWIST1",
       "synonyms": [
@@ -163,30 +180,17 @@
       "uniprot_id": null
     },
     {
-      "id": "E_cadherin",
+      "id": "TWIST1_protein",
       "class": "Protein",
-      "name": "E-cadherin",
-      "synonyms": [],
+      "name": "TWIST1",
+      "synonyms": [
+        "TWIST1"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "N_cadherin",
-      "class": "Protein",
-      "name": "N-cadherin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C1336641",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -201,7 +205,7 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0042666",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -216,7 +220,37 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0016055",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "N_cadherin",
+      "class": "Protein",
+      "name": "N-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0068468",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E_cadherin",
+      "class": "Protein",
+      "name": "E-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0042172",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -240,41 +274,26 @@
       "uniprot_id": null
     },
     {
-      "id": "tumor_progression",
-      "class": "BiologicalProcess",
-      "name": "tumor progression",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cell_proliferation",
-      "class": "BiologicalProcess",
-      "name": "cell proliferation",
+      "id": "TWIST2_gene",
+      "class": "Gene",
+      "name": "TWIST2",
       "synonyms": [
-        "cellular proliferation"
+        "Twist2"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:20670",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "SNAI1",
+      "id": "SNAIL_gene",
       "class": "Gene",
-      "name": "SNAI1",
+      "name": "SNAIL",
       "synonyms": [
         "Snail",
         "Snai1"
@@ -290,9 +309,9 @@
       "uniprot_id": null
     },
     {
-      "id": "SNAI2",
+      "id": "SLUG_gene",
       "class": "Gene",
-      "name": "SNAI2",
+      "name": "SLUG",
       "synonyms": [
         "Slug",
         "Snai2"
@@ -308,7 +327,7 @@
       "uniprot_id": null
     },
     {
-      "id": "ZEB1",
+      "id": "ZEB1_gene",
       "class": "Gene",
       "name": "ZEB1",
       "synonyms": [
@@ -325,7 +344,7 @@
       "uniprot_id": null
     },
     {
-      "id": "ZEB2",
+      "id": "ZEB2_gene",
       "class": "Gene",
       "name": "ZEB2",
       "synonyms": [
@@ -342,18 +361,33 @@
       "uniprot_id": null
     },
     {
-      "id": "TWIST2",
-      "class": "Gene",
-      "name": "TWIST2",
+      "id": "Ki67",
+      "class": "Protein",
+      "name": "Ki67",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0208804",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "PCNA",
+      "class": "Protein",
+      "name": "PCNA",
       "synonyms": [
-        "Twist2"
+        "proliferating cell nuclear antigen"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:20670",
+      "umls_id": "C0033684",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -405,7 +439,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_4",
-      "text": "Knockdown of SOX11 significantly downregulated the expression of EMT-related genes, including EMT-TFs, vimentin, fibronectin, and N-cadherin, but significantly upregulated E-cadherin",
+      "text": "SOX11 upregulates EMT transcription factors, vimentin, fibronectin, and N-cadherin while downregulating E-cadherin",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -418,7 +452,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_5",
-      "text": "SOX11 overexpression significantly inhibited E-cadherin gene expression but induced the gene expression of N-cadherin, vimentin, fibronectin, and EMT-TFs",
+      "text": "SOX11 binds to the Twist1 gene promoter and regulates TWIST1 expression",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -431,11 +465,11 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_6",
-      "text": "SOX11 bound to the promoter region of the Twist1 gene in HNSCC cells",
+      "text": "SOX11 promotes tumor growth in vivo and increases expression of PCNA, Ki67, and TWIST1",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro",
+      "eco_type": "in_vivo",
       "source": "extracted"
     },
     {
@@ -444,11 +478,11 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_7",
-      "text": "SOX11 promotes tumor growth and the expression of TWIST1 in vivo",
+      "text": "Sox11 gene expression was significantly overexpressed in HNSCC tissues compared to adjacent normal tissues",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in_vivo",
+      "study_type": "observational",
+      "eco_type": "clinical",
       "source": "extracted"
     }
   ],
@@ -488,8 +522,8 @@
       "note": null
     },
     {
-      "subject": "STAT3",
-      "predicate": "REGULATES",
+      "subject": "STAT3_protein",
+      "predicate": "BINDS_TO_PROMOTER_OF",
       "object": "SOX11",
       "evidence_ids": [
         "PMC_extracted:results:3:llm"
@@ -505,235 +539,10 @@
       "note": null
     },
     {
-      "subject": "SOX11",
-      "predicate": "PROMOTES",
-      "object": "epithelial_mesenchymal_transition",
-      "evidence_ids": [
-        "PMC_extracted:results:4:llm",
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "DECREASES_EXPRESSION_OF",
-      "object": "E_cadherin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
+      "subject": "STAT3_protein",
       "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "N_cadherin",
+      "object": "SOX11",
       "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "vimentin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "fibronectin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "REGULATES",
-      "object": "TWIST1",
-      "evidence_ids": [
-        "PMC_extracted:results:6:llm",
-        "PMC_extracted:results:7:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "TWIST1",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "TWIST2",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "SNAI1",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "SNAI2",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "ZEB1",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES_EXPRESSION_OF",
-      "object": "ZEB2",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "PROMOTES",
-      "object": "tumor_progression",
-      "evidence_ids": [
-        "PMC_extracted:results:7:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "head_and_neck_squamous_cell_carcinoma",
-      "evidence_ids": [
-        "PMC_extracted:results:1:llm",
-        "PMC_extracted:results:2:llm",
         "PMC_extracted:results:3:llm"
       ],
       "source_papers": [
@@ -747,24 +556,162 @@
       "note": null
     },
     {
-      "subject": "EMEQA",
-      "predicate": "SAME_AS",
-      "object": "EGFR",
-      "evidence_ids": [],
+      "subject": "SOX11_protein",
+      "predicate": "INCREASES_EXPRESSION_OF",
+      "object": "TWIST1_gene",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "methods",
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "EMEQA is an EGFR inhibitor"
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "INCREASES_EXPRESSION_OF",
+      "object": "vimentin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "INCREASES_EXPRESSION_OF",
+      "object": "fibronectin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "INCREASES_EXPRESSION_OF",
+      "object": "N_cadherin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "DECREASES_EXPRESSION_OF",
+      "object": "E_cadherin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "BINDS_TO_PROMOTER_OF",
+      "object": "TWIST1_gene",
+      "evidence_ids": [
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "PROMOTES",
+      "object": "epithelial_mesenchymal_transition",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "OVEREXPRESSED_IN",
+      "object": "head_neck_squamous_cell_carcinoma",
+      "evidence_ids": [
+        "PMC_extracted:results:7:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11_protein",
+      "predicate": "PROMOTES_TUMOR_GROWTH_IN",
+      "object": "head_neck_squamous_cell_carcinoma",
+      "evidence_ids": [
+        "PMC_extracted:results:6:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
     }
   ],
   "notes": [
     "This study demonstrates a regulatory pathway where EGF-EGFR-STAT3 signaling upregulates SOX11, which then promotes epithelial-mesenchymal transition in head and neck squamous cell carcinoma",
     "The study used both in vitro cell culture experiments and in vivo xenograft mouse models",
-    "Multiple EMT transcription factors were shown to be regulated by SOX11"
+    "TCGA database analysis was used to validate findings in clinical samples"
   ]
 }

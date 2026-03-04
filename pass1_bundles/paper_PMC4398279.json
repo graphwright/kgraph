@@ -1,15 +1,14 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_UNKNOWN",
+    "pmcid": "PMC_extracted",
     "title": "Viscoelasticity of biofilms and their recalcitrance to mechanical and chemical challenges",
     "authors": [
-      "Bos",
-      "Van der Mei",
-      "Busscher"
+      "Busscher",
+      "Van der Mei"
     ],
-    "journal": "Unknown",
-    "year": null,
+    "journal": "FEMS Microbiology Reviews",
+    "year": 2015,
     "study_type": "review",
     "eco_type": null
   },
@@ -17,8 +16,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -32,24 +31,24 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:23:05.399951Z",
+      "timestamp": "2026-03-04T19:42:00.803754Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 41.57
+      "duration_seconds": 34.6
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "biofilms_1",
+      "id": "biofilm_1",
       "class": "BiologicalProcess",
-      "name": "biofilms",
+      "name": "biofilm",
       "synonyms": [
-        "bacterial biofilms"
+        "biofilms"
       ],
       "symbol": null,
       "brand_names": [],
@@ -83,7 +82,8 @@
       "class": "BiologicalProcess",
       "name": "EPS matrix",
       "synonyms": [
-        "extracellular polymeric substances"
+        "extracellular polymeric substances",
+        "EPS"
       ],
       "symbol": null,
       "brand_names": [],
@@ -99,38 +99,8 @@
       "id": "antimicrobial_penetration_1",
       "class": "BiologicalProcess",
       "name": "antimicrobial penetration",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "stress_relaxation_1",
-      "class": "BiologicalProcess",
-      "name": "stress relaxation",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mechanical_challenges_1",
-      "class": "BiologicalProcess",
-      "name": "mechanical challenges",
       "synonyms": [
-        "mechanical stress"
+        "antimicrobial transport"
       ],
       "symbol": null,
       "brand_names": [],
@@ -143,25 +113,12 @@
       "uniprot_id": null
     },
     {
-      "id": "chemical_challenges_1",
-      "class": "BiologicalProcess",
-      "name": "chemical challenges",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "biofilm_removal_1",
-      "class": "BiologicalProcess",
-      "name": "biofilm removal",
-      "synonyms": [],
+      "id": "stress_relaxation_1",
+      "class": "Procedure",
+      "name": "stress relaxation",
+      "synonyms": [
+        "stress relaxation analysis"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -176,22 +133,9 @@
       "id": "catheter_associated_infections_1",
       "class": "Disease",
       "name": "catheter-associated blood stream infections",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "ventilator_associated_pneumonia_1",
-      "class": "Disease",
-      "name": "ventilator-associated pneumonia",
-      "synonyms": [],
+      "synonyms": [
+        "catheter-associated infections"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -213,7 +157,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "2582",
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -228,43 +172,13 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "n_acetyl_l_cysteine_1",
-      "class": "Drug",
-      "name": "N-acetyl-L-cysteine",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "dnase_1",
-      "class": "Protein",
-      "name": "DNaseI",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "4603",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
       "id": "pseudomonas_aeruginosa_1",
-      "class": "AnatomicalStructure",
+      "class": "Other",
       "name": "Pseudomonas aeruginosa",
       "synonyms": [
         "P. aeruginosa"
@@ -281,7 +195,7 @@
     },
     {
       "id": "staphylococcus_aureus_1",
-      "class": "AnatomicalStructure",
+      "class": "Other",
       "name": "Staphylococcus aureus",
       "synonyms": [
         "S. aureus"
@@ -298,9 +212,11 @@
     },
     {
       "id": "escherichia_coli_1",
-      "class": "AnatomicalStructure",
+      "class": "Other",
       "name": "Escherichia coli",
-      "synonyms": [],
+      "synonyms": [
+        "E. coli"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -329,43 +245,11 @@
       "uniprot_id": null
     },
     {
-      "id": "atomic_force_microscopy_1",
-      "class": "Procedure",
-      "name": "atomic force microscopy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "ultrasound_treatment_1",
       "class": "Procedure",
       "name": "ultrasound treatment",
       "synonyms": [
-        "ultrasonic waves"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "powered_toothbrushing_1",
-      "class": "Procedure",
-      "name": "powered toothbrushing",
-      "synonyms": [
-        "non-contact brushing"
+        "ultrasonic treatment"
       ],
       "symbol": null,
       "brand_names": [],
@@ -391,16 +275,59 @@
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
+    },
+    {
+      "id": "n_acetyl_cysteine_1",
+      "class": "Drug",
+      "name": "N-acetyl-L-cysteine",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "1190",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "dnase_1",
+      "class": "Protein",
+      "name": "DNaseI",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
     }
   ],
   "evidence_entities": [
     {
-      "id": "PMC_UNKNOWN:introduction:1:llm",
+      "id": "PMC_extracted:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "intro_1",
-      "text": "In the medical arena, it is currently estimated that over 60% of all human infections treated by physicians are due to biofilms",
+      "text": "over 60% of all human infections treated by physicians are due to biofilms",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:results:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "results_1",
+      "text": "Penetration of chlorhexidine into oral biofilms increased with increasing relative importance of the slow and decreasing importance of the fast relaxation element",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
@@ -408,36 +335,10 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:introduction:2:llm",
+      "id": "PMC_extracted:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
-      "text_span_id": "intro_2",
-      "text": "examples being oral biofilms ('dental plaque') and biofilms involved in a variety of pathological conditions like for instance osteomyelitis, chronic otitis media, the infected diabetic foot, chronic bacterial prostatitis or in biomaterial-associated infections",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_UNKNOWN:results:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
-      "text_span_id": "results_1",
-      "text": "Penetration of chlorhexidine into oral biofilms increased with increasing relative importance of the slow and decreasing importance of the fast relaxation element",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_UNKNOWN:results:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_2",
       "text": "Gentamicin has been shown to have enhanced killing in P. aeruginosa and Escherichia coli biofilms in vitro and in vivo in rabbits after ultrasound treatment",
       "confidence": 0.9,
@@ -447,12 +348,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:3:llm",
+      "id": "PMC_extracted:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_3",
-      "text": "After exposure to detergents, S. aureus biofilms grown on stainless steel had increased expression of the slowest Maxwell element, reflecting bacterial re-arrangement",
+      "text": "After exposure to detergents, S. aureus biofilms grown on stainless steel had increased expression of the slowest Maxwell element",
       "confidence": 0.85,
       "extraction_method": "llm",
       "study_type": "review",
@@ -460,10 +361,10 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:4:llm",
+      "id": "PMC_extracted:results:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_4",
       "text": "Pseudomonas aeruginosa biofilms on stainless steel were affected by N-acetyl-L-cysteine, as both the fast and intermediate Maxwell elements were reduced by more than 50%",
       "confidence": 0.9,
@@ -475,103 +376,35 @@
   ],
   "relationships": [
     {
-      "subject": "biofilms_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "catheter_associated_infections_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "biofilms_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "chronic otitis media",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "biofilms_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "diabetic foot",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "biofilms_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "chronic bacterial prostatitis",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "biofilms_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "biomaterial-associated infections",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
       "subject": "viscoelasticity_1",
       "predicate": "ASSOCIATED_WITH",
-      "object": "antimicrobial_penetration_1",
+      "object": "biofilm_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:results:1:llm"
+        "PMC_extracted:introduction:1:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "eps_matrix_1",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "viscoelasticity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "results",
+      "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -579,15 +412,17 @@
     {
       "subject": "chlorhexidine_1",
       "predicate": "TREATS",
-      "object": "biofilms_1",
+      "object": "biofilm_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:results:1:llm"
+        "PMC_extracted:results:1:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
       "confidence": 0.85,
-      "properties": {},
+      "properties": {
+        "mechanism": "antimicrobial penetration"
+      },
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -598,13 +433,15 @@
       "predicate": "TREATS",
       "object": "pseudomonas_aeruginosa_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm"
+        "PMC_extracted:results:2:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "enhanced_by": "ultrasound"
+      },
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -615,13 +452,15 @@
       "predicate": "TREATS",
       "object": "escherichia_coli_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm"
+        "PMC_extracted:results:2:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "enhanced_by": "ultrasound"
+      },
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -629,53 +468,15 @@
     },
     {
       "subject": "ultrasound_treatment_1",
-      "predicate": "INCREASES",
+      "predicate": "INCREASES_EFFICACY",
       "object": "gentamicin_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm"
+        "PMC_extracted:results:2:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
       "confidence": 0.9,
-      "properties": {
-        "effect": "enhanced killing"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "n_acetyl_l_cysteine_1",
-      "predicate": "AFFECTS",
-      "object": "pseudomonas_aeruginosa_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "mechanism": "reduces Maxwell elements"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "viscoelasticity_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "biofilm_removal_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:1:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.85,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -683,26 +484,60 @@
       "note": null
     },
     {
-      "subject": "biofilms_1",
-      "predicate": "SAME_AS",
-      "object": "dental plaque",
+      "subject": "n_acetyl_cysteine_1",
+      "predicate": "AFFECTS",
+      "object": "pseudomonas_aeruginosa_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:introduction:2:llm"
+        "PMC_extracted:results:4:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "viscoelastic_modification"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "biofilm_1",
+      "predicate": "CAUSES",
+      "object": "catheter_associated_infections_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "oral biofilms are specifically referred to as dental plaque"
+      "note": null
+    },
+    {
+      "subject": "bio_acoustic_effect_1",
+      "predicate": "SAME_AS",
+      "object": "bio-acoustic effect",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 1.0,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": "Exact match from existing entities"
     }
   ],
   "notes": [
     "This review paper focuses on the viscoelastic properties of biofilms and their role in resistance to mechanical and chemical challenges",
-    "The paper discusses various treatment approaches including ultrasound, chemical agents, and mechanical removal methods",
-    "Multiple bacterial species and infection types are covered in relation to biofilm formation and treatment"
+    "The paper discusses various antimicrobial treatments and their enhanced efficacy when combined with physical interventions",
+    "Multiple bacterial species are discussed in the context of biofilm formation and treatment resistance"
   ]
 }

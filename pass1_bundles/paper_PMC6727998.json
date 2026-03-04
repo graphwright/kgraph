@@ -1,7 +1,7 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_PLACEHOLDER",
+    "pmcid": "extracted_paper",
     "title": "Reversible tactile hypoesthesia associated with myofascial trigger points: a pilot study on prevalence and clinical implications",
     "authors": [
       "Not specified"
@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:26:14.595761Z",
+      "timestamp": "2026-03-04T19:44:59.113636Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 31.9
+      "duration_seconds": 31.92
     },
     "entity_resolution": null,
     "model_info": null
@@ -179,12 +179,10 @@
       "uniprot_id": null
     },
     {
-      "id": "cotton_swabs",
-      "class": "Procedure",
-      "name": "cotton swabs",
-      "synonyms": [
-        "tactile stimulation"
-      ],
+      "id": "pain_intensity",
+      "class": "Biomarker",
+      "name": "pain intensity",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -196,12 +194,10 @@
       "uniprot_id": null
     },
     {
-      "id": "primary_somatosensory_cortex",
-      "class": "AnatomicalStructure",
-      "name": "primary somatosensory cortex",
-      "synonyms": [
-        "somatosensory cortex"
-      ],
+      "id": "allodynia",
+      "class": "Symptom",
+      "name": "allodynia",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -228,11 +224,11 @@
       "uniprot_id": null
     },
     {
-      "id": "postmastectomy_pain",
-      "class": "Disease",
-      "name": "postmastectomy pain",
+      "id": "primary_somatosensory_cortex",
+      "class": "AnatomicalStructure",
+      "name": "primary somatosensory cortex",
       "synonyms": [
-        "persistent postmastectomy pain"
+        "somatosensory cortex"
       ],
       "symbol": null,
       "brand_names": [],
@@ -275,12 +271,27 @@
       "uniprot_id": null
     },
     {
-      "id": "chi_square_test",
-      "class": "StatisticalMethod",
-      "name": "chi-square test",
+      "id": "postmastectomy_pain",
+      "class": "Disease",
+      "name": "postmastectomy pain",
       "synonyms": [
-        "\u03c72 test"
+        "persistent postmastectomy pain"
       ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chronic_pain",
+      "class": "Disease",
+      "name": "chronic pain",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -305,15 +316,32 @@
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
+    },
+    {
+      "id": "chi_square_test",
+      "class": "StatisticalMethod",
+      "name": "chi-square test",
+      "synonyms": [
+        "\u03c72 test"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
     }
   ],
   "evidence_entities": [
     {
-      "id": "PMC_PLACEHOLDER:abstract:1:llm",
+      "id": "extracted_paper:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_PLACEHOLDER",
-      "text_span_id": "abstract_1",
+      "paper_id": "extracted_paper",
+      "text_span_id": "results_1",
       "text": "A reduction in the size of hypoesthetic area with TPI was observed in 27 (58.7%) patients. All the 27 patients experienced a reduction in pain intensity by more than 50% in a numerical rating scale score through TPI therapy.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -322,25 +350,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_PLACEHOLDER:results:1:llm",
+      "id": "extracted_paper:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_PLACEHOLDER",
-      "text_span_id": "results_1",
-      "text": "Thirty-four (74%) of 46 patients with MTrP had tactile hypoesthesia",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "pilot study",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_PLACEHOLDER:results:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_PLACEHOLDER",
+      "paper_id": "extracted_paper",
       "text_span_id": "results_2",
-      "text": "Twenty-seven (90%) patients experienced a reduction in pain intensity by more than 50% in NRS after TPI therapy",
+      "text": "In 9 patients, the reduction in the sizes of hypoesthetic areas occurred 10 minutes after TPI. Complete disappearance of tactile hypoesthesia after TPI therapy was observed in 6 of the 27 patients.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "pilot study",
@@ -348,12 +363,25 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_PLACEHOLDER:results:3:llm",
+      "id": "extracted_paper:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_PLACEHOLDER",
+      "paper_id": "extracted_paper",
       "text_span_id": "results_3",
-      "text": "In all these 27 patients, a reduction in the size of the hypoesthetic area was observed during the course of treatment, with a complete disappearance of the tactile hypoesthesia observed in 6 patients",
+      "text": "Myofascial trigger points were located in the muscles in the vicinity of ipsilateral cutaneous dermatomes to which the hypoesthetic areas belonged.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "pilot study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "extracted_paper:results:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "extracted_paper",
+      "text_span_id": "results_4",
+      "text": "Thirty-four (74%) of 46 patients with MTrP had tactile hypoesthesia.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "pilot study",
@@ -361,13 +389,26 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_PLACEHOLDER:discussion:1:llm",
+      "id": "extracted_paper:discussion:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_PLACEHOLDER",
+      "paper_id": "extracted_paper",
       "text_span_id": "discussion_1",
-      "text": "Such inhibition of neuronal activity in the somatosensory cortex induced by ongoing afferent nociceptive input from MTrP may underlie the reversible tactile hypoesthesia in patients with MPS",
+      "text": "Several brain imaging studies have shown that the activity of the primary somatosensory cortex decreases along with a decline in touch sensation.",
       "confidence": 0.85,
+      "extraction_method": "llm",
+      "study_type": "pilot study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "extracted_paper:discussion:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "extracted_paper",
+      "text_span_id": "discussion_2",
+      "text": "Such inhibition of neuronal activity in the somatosensory cortex induced by ongoing afferent nociceptive input from MTrP may underlie the reversible tactile hypoesthesia in patients with MPS.",
+      "confidence": 0.8,
       "extraction_method": "llm",
       "study_type": "pilot study",
       "eco_type": null,
@@ -380,33 +421,13 @@
       "predicate": "TREATS",
       "object": "myofascial_pain_syndrome",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:abstract:1:llm",
-        "PMC_PLACEHOLDER:results:2:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "myofascial_pain_syndrome",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "tactile_hypoesthesia",
-      "evidence_ids": [
-        "PMC_PLACEHOLDER:results:1:llm"
-      ],
-      "source_papers": [
-        "PMC_PLACEHOLDER"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "prevalence": "74%"
-      },
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -417,55 +438,50 @@
       "predicate": "TREATS",
       "object": "tactile_hypoesthesia",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:abstract:1:llm",
-        "PMC_PLACEHOLDER:results:3:llm"
+        "extracted_paper:results:1:llm",
+        "extracted_paper:results:2:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
       "confidence": 0.95,
-      "properties": {
-        "response_rate": "58.7%"
-      },
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "lidocaine",
-      "predicate": "TREATS",
+      "subject": "tactile_hypoesthesia",
+      "predicate": "ASSOCIATED_WITH",
       "object": "myofascial_trigger_points",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:results:2:llm"
+        "extracted_paper:results:3:llm",
+        "extracted_paper:results:4:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
       "confidence": 0.9,
-      "properties": {
-        "dose": "3-5 mL of 1%"
-      },
-      "section": "methods",
+      "properties": {},
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "triamcinolone",
-      "predicate": "TREATS",
-      "object": "myofascial_trigger_points",
+      "subject": "tactile_hypoesthesia",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "myofascial_pain_syndrome",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:results:2:llm"
+        "extracted_paper:results:4:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
-      "confidence": 0.9,
-      "properties": {
-        "dose": "20-30 mg"
-      },
-      "section": "methods",
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -475,62 +491,74 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "primary_somatosensory_cortex",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:discussion:1:llm"
+        "extracted_paper:discussion:1:llm",
+        "extracted_paper:discussion:2:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
-      "confidence": 0.85,
-      "properties": {
-        "mechanism": "inhibition of neuronal activity"
-      },
+      "confidence": 0.8,
+      "properties": {},
       "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "nortriptyline",
+      "subject": "lidocaine",
       "predicate": "TREATS",
       "object": "myofascial_pain_syndrome",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:results:2:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
-      "confidence": 0.8,
-      "properties": {
-        "use": "concomitant oral medication"
-      },
-      "section": "results",
+      "confidence": 0.85,
+      "properties": {},
+      "section": "methods",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "acetaminophen",
+      "subject": "triamcinolone",
       "predicate": "TREATS",
       "object": "myofascial_pain_syndrome",
       "evidence_ids": [
-        "PMC_PLACEHOLDER:results:2:llm"
+        "extracted_paper:results:1:llm"
       ],
       "source_papers": [
-        "PMC_PLACEHOLDER"
+        "extracted_paper"
       ],
-      "confidence": 0.8,
-      "properties": {
-        "use": "concomitant oral medication"
-      },
-      "section": "results",
+      "confidence": 0.85,
+      "properties": {},
+      "section": "methods",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "tactile_hypoesthesia",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "neuropathic_pain",
+      "evidence_ids": [
+        "extracted_paper:discussion:2:llm"
+      ],
+      "source_papers": [
+        "extracted_paper"
+      ],
+      "confidence": 0.75,
+      "properties": {},
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This pilot study investigated the prevalence and clinical implications of reversible tactile hypoesthesia in patients with myofascial trigger points",
-    "The study found a 74% prevalence of tactile hypoesthesia in patients with myofascial trigger points",
-    "Trigger point injections showed effectiveness in treating both myofascial pain and associated tactile hypoesthesia"
+    "This pilot study investigated the prevalence and clinical implications of reversible tactile hypoesthesia in patients with myofascial trigger points.",
+    "The study found that 58.7% of patients showed reduction in hypoesthetic areas with trigger point injection therapy.",
+    "The relationship between myofascial trigger points and tactile hypoesthesia appears to be mediated through the primary somatosensory cortex."
   ]
 }

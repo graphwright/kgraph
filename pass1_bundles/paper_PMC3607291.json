@@ -1,19 +1,13 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC3462445",
+    "pmcid": "PMC_ID_NOT_PROVIDED",
     "title": "Differential effects of intravesical resiniferatoxin on excitability of bladder spinal neurons upon colon\u2013bladder cross-sensitization",
     "authors": [
-      "Malykhina AP",
-      "Lei Q",
-      "Erickson CS",
-      "Epstein ML",
-      "Saban MR",
-      "Davis CA",
-      "Saban R"
+      "Not specified in abstract"
     ],
-    "journal": "Neuroscience",
-    "year": 2012,
+    "journal": "Not specified",
+    "year": null,
     "study_type": "experimental",
     "eco_type": "animal_model"
   },
@@ -21,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "109074537039d927e16aec1c1a85467c58e7ed11",
+      "git_commit_short": "1090745",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -36,18 +30,52 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:21:00.124506Z",
+      "timestamp": "2026-03-04T19:39:55.078631Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 46.99
+      "duration_seconds": 36.27
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
+    {
+      "id": "interstitial_cystitis_bladder_pain_syndrome",
+      "class": "Disease",
+      "name": "interstitial cystitis/bladder pain syndrome",
+      "synonyms": [
+        "IC/BPS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0282488",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "transient_receptor_potential_vanilloid_1",
+      "class": "Protein",
+      "name": "transient receptor potential vanilloid 1",
+      "synonyms": [
+        "TRPV1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:16802",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
     {
       "id": "resiniferatoxin",
       "class": "Drug",
@@ -61,16 +89,16 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "RXN_NOT_FOUND",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "interstitial_cystitis_bladder_pain_syndrome",
-      "class": "Disease",
-      "name": "interstitial cystitis/bladder pain syndrome",
+      "id": "2_4_6_trinitrobenzene_sulfonic_acid",
+      "class": "Drug",
+      "name": "2,4,6-trinitrobenzene sulfonic acid",
       "synonyms": [
-        "IC/BPS"
+        "TNBS"
       ],
       "symbol": null,
       "brand_names": [],
@@ -78,22 +106,37 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": null,
+      "rxnorm_id": "RXN_NOT_FOUND",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "trpv1",
-      "class": "Protein",
-      "name": "transient receptor potential vanilloid 1",
+      "id": "colonic_inflammation",
+      "class": "Disease",
+      "name": "colonic inflammation",
       "synonyms": [
-        "TRPV1"
+        "colitis"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0009319",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "bladder_pain",
+      "class": "Symptom",
+      "name": "bladder pain",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0232830",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -104,8 +147,7 @@
       "class": "BiologicalProcess",
       "name": "cross-sensitization",
       "synonyms": [
-        "cross-organ sensitization",
-        "pelvic organ cross-sensitization"
+        "cross-organ sensitization"
       ],
       "symbol": null,
       "brand_names": [],
@@ -118,31 +160,10 @@
       "uniprot_id": null
     },
     {
-      "id": "colitis",
-      "class": "Disease",
-      "name": "colitis",
-      "synonyms": [
-        "colonic inflammation",
-        "experimental colitis"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "bladder_neurons",
-      "class": "AnatomicalStructure",
-      "name": "bladder spinal neurons",
-      "synonyms": [
-        "bladder neurons",
-        "bladder projecting neurons"
-      ],
+      "id": "central_sensitization",
+      "class": "BiologicalProcess",
+      "name": "central sensitization",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -171,127 +192,11 @@
       "uniprot_id": null
     },
     {
-      "id": "neurogenic_inflammation",
-      "class": "BiologicalProcess",
-      "name": "neurogenic inflammation",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "central_sensitization",
-      "class": "BiologicalProcess",
-      "name": "central sensitization",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "viscerosomatic_convergence",
-      "class": "BiologicalProcess",
-      "name": "viscerosomatic convergence",
-      "synonyms": [
-        "viscerosomatic cross-talk"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "myeloperoxidase",
-      "class": "Protein",
-      "name": "myeloperoxidase",
-      "synonyms": [
-        "MPO"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "western_blotting",
-      "class": "Procedure",
-      "name": "Western blotting",
-      "synonyms": [
-        "Western blot"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "electrophysiological_recording",
-      "class": "Procedure",
-      "name": "electrophysiological recording",
-      "synonyms": [
-        "electrophysiological recordings"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "urothelium",
+      "id": "spinal_neurons",
       "class": "AnatomicalStructure",
-      "name": "urothelium",
+      "name": "spinal neurons",
       "synonyms": [
-        "bladder urothelium"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "detrusor_muscle",
-      "class": "AnatomicalStructure",
-      "name": "detrusor muscle",
-      "synonyms": [
-        "DSM",
-        "detrusor smooth muscle"
+        "bladder spinal neurons"
       ],
       "symbol": null,
       "brand_names": [],
@@ -321,26 +226,9 @@
       "uniprot_id": null
     },
     {
-      "id": "spinal_cord",
-      "class": "AnatomicalStructure",
-      "name": "spinal cord",
-      "synonyms": [
-        "lumbosacral spinal cord"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "nociceptive_signaling",
+      "id": "neurogenic_inflammation",
       "class": "BiologicalProcess",
-      "name": "nociceptive signaling",
+      "name": "neurogenic inflammation",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -353,12 +241,10 @@
       "uniprot_id": null
     },
     {
-      "id": "receptor_desensitization",
+      "id": "viscerosomatic_convergence",
       "class": "BiologicalProcess",
-      "name": "receptor desensitization",
-      "synonyms": [
-        "TRPV1 desensitization"
-      ],
+      "name": "viscerosomatic convergence",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -370,18 +256,33 @@
       "uniprot_id": null
     },
     {
-      "id": "pelvic_pain",
-      "class": "Symptom",
-      "name": "pelvic pain",
+      "id": "myeloperoxidase",
+      "class": "Protein",
+      "name": "myeloperoxidase",
       "synonyms": [
-        "functional pelvic pain"
+        "MPO"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:7218",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "alpha_tubulin",
+      "class": "Protein",
+      "name": "alpha tubulin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:12408",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -389,11 +290,11 @@
   ],
   "evidence_entities": [
     {
-      "id": "PMC3462445:introduction:1:llm",
+      "id": "PMC_ID_NOT_PROVIDED:abstract:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "intro_1",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "abstract_1",
       "text": "Cross-sensitization in the pelvis may contribute to etiology of functional pelvic pain disorders such as interstitial cystitis/bladder pain syndrome (IC/BPS).",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -402,11 +303,11 @@
       "source": "extracted"
     },
     {
-      "id": "PMC3462445:introduction:2:llm",
+      "id": "PMC_ID_NOT_PROVIDED:abstract:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "intro_2",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "abstract_2",
       "text": "Increasing evidence suggests the involvement of transient receptor potential vanilloid 1 (TRPV1) receptors in the development of neurogenic inflammation in the pelvis and pelvic organ cross-sensitization.",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -415,11 +316,11 @@
       "source": "extracted"
     },
     {
-      "id": "PMC3462445:results:1:llm",
+      "id": "PMC_ID_NOT_PROVIDED:abstract:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "results_1",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "abstract_3",
       "text": "The duration of excitatory responses to noxious UBD during acute colonic inflammation (3 days post-TNBS) was significantly shortened in the group with RTX pretreatment (25.37\u00b1.5 s, n=49) when compared to the control group (35.1\u00b14.2 s, n=43, p\u22640.05).",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -428,64 +329,25 @@
       "source": "extracted"
     },
     {
-      "id": "PMC3462445:results:2:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC3462445",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_1",
+      "text": "The development of acute colitis at day 3 post-TNBS treatment was also confirmed by a 4.5-fold increase in MPO concentration in the distal colon without significant changes in the groups with vehicle (control) and intravesical RTX.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_ID_NOT_PROVIDED:results:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_ID_NOT_PROVIDED",
       "text_span_id": "results_2",
-      "text": "The duration of long-lasting excitatory responses, but not short-lasting responses of bladder spinal neurons during acute colitis was significantly reduced by RTX from 52.9\u00b16.6 s (n=21, vehicle group) to 34.4\u00b12.1 s (RTX group, n=21, p\u22640.05).",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "animal_model",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC3462445:results:3:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "results_3",
-      "text": "However, activation of TRPV1 receptors in the urinary bladder prior to acute colitis increased the number of bladder neurons receiving input from large somatic fields from 22.7% to 58.2% (p\u22640.01).",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "animal_model",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC3462445:results:4:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "results_4",
-      "text": "We detected a significant decrease in TRPV1 protein in the urothelium after intravesical treatment with RTX which was previously shown by other groups and was linked to long lasting reduction in bladder pain and urgency.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "animal_model",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC3462445:discussion:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "discussion_1",
-      "text": "The results of our study provide evidence that intravesical RTX reduces the effects of viscerovisceral cross-talk induced by colonic inflammation on bladder spinal neurons.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "animal_model",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC3462445:discussion:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC3462445",
-      "text_span_id": "discussion_2",
-      "text": "However, RTX enhances the responses of bladder neurons to somatic stimulation, thereby limiting its therapeutic potential.",
+      "text": "These results provide evidence for a significant decrease in TRPV1 expression after intravesical treatment with RTX in the urothelium and DSM without changes in the distal colon.",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -499,48 +361,48 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "interstitial_cystitis_bladder_pain_syndrome",
       "evidence_ids": [
-        "PMC3462445:introduction:1:llm"
+        "PMC_ID_NOT_PROVIDED:abstract:1:llm"
       ],
       "source_papers": [
-        "PMC3462445"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "trpv1",
+      "subject": "transient_receptor_potential_vanilloid_1",
       "predicate": "ASSOCIATED_WITH",
       "object": "neurogenic_inflammation",
       "evidence_ids": [
-        "PMC3462445:introduction:2:llm"
+        "PMC_ID_NOT_PROVIDED:abstract:2:llm"
       ],
       "source_papers": [
-        "PMC3462445"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "trpv1",
+      "subject": "transient_receptor_potential_vanilloid_1",
       "predicate": "ASSOCIATED_WITH",
       "object": "cross_sensitization",
       "evidence_ids": [
-        "PMC3462445:introduction:2:llm"
+        "PMC_ID_NOT_PROVIDED:abstract:2:llm"
       ],
       "source_papers": [
-        "PMC3462445"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -548,17 +410,35 @@
     {
       "subject": "resiniferatoxin",
       "predicate": "TREATS",
-      "object": "bladder_neurons",
+      "object": "spinal_neurons",
       "evidence_ids": [
-        "PMC3462445:results:1:llm",
-        "PMC3462445:results:2:llm"
+        "PMC_ID_NOT_PROVIDED:abstract:3:llm"
       ],
       "source_papers": [
-        "PMC3462445"
+        "PMC_ID_NOT_PROVIDED"
       ],
-      "confidence": 0.95,
+      "confidence": 0.85,
       "properties": {
-        "effect": "reduces excitatory response duration"
+        "mechanism": "reduces excitatory response duration"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "2_4_6_trinitrobenzene_sulfonic_acid",
+      "predicate": "INDICATES",
+      "object": "colonic_inflammation",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "biomarker": "myeloperoxidase increase"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -568,76 +448,25 @@
     {
       "subject": "resiniferatoxin",
       "predicate": "ASSOCIATED_WITH",
-      "object": "viscerosomatic_convergence",
+      "object": "transient_receptor_potential_vanilloid_1",
       "evidence_ids": [
-        "PMC3462445:results:3:llm"
+        "PMC_ID_NOT_PROVIDED:results:2:llm"
       ],
       "source_papers": [
-        "PMC3462445"
+        "PMC_ID_NOT_PROVIDED"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {
-        "effect": "increases somatic field responses"
+        "effect": "decreases expression"
       },
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
-    },
-    {
-      "subject": "resiniferatoxin",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "trpv1",
-      "evidence_ids": [
-        "PMC3462445:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC3462445"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "effect": "decreases TRPV1 protein expression"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "colitis",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "cross_sensitization",
-      "evidence_ids": [
-        "PMC3462445:discussion:1:llm"
-      ],
-      "source_papers": [
-        "PMC3462445"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "2,4,6-trinitrobenzene sulfonic acid",
-      "predicate": "SAME_AS",
-      "object": "2,4,6-trinitrobenzene sulfonic acid",
-      "evidence_ids": [],
-      "source_papers": [
-        "PMC3462445"
-      ],
-      "confidence": 1.0,
-      "properties": {},
-      "section": "methods",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": "TNBS used to induce colonic inflammation"
     }
   ],
   "notes": [
-    "This study demonstrates that resiniferatoxin has dual effects: it reduces visceral cross-sensitization but increases somatic sensitivity, limiting its therapeutic potential for pelvic pain disorders.",
-    "The research provides evidence for TRPV1 involvement in pelvic organ cross-sensitization mechanisms."
+    "This study demonstrates that TRPV1 desensitization with resiniferatoxin can reduce cross-sensitization effects but may increase somatic field responses, limiting therapeutic potential.",
+    "The experimental model uses TNBS-induced colitis to study colon-bladder cross-sensitization mechanisms."
   ]
 }

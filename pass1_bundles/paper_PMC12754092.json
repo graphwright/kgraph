@@ -1,22 +1,22 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC11362397",
+    "pmcid": "PMC_extracted",
     "title": "Yin Yang 1 activates JAK-STAT3-mediated epithelial-mesenchymal transition in Helicobacter pylori-induced gastric cancer progression",
     "authors": [
       "Not specified"
     ],
     "journal": "Not specified",
-    "year": 2024,
+    "year": null,
     "study_type": "experimental",
-    "eco_type": "in_vitro_in_vivo"
+    "eco_type": "in vitro and in vivo studies"
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "8d6fdac417f10eadd2a8d7444f95323012d32bf7",
+      "git_commit_short": "8d6fdac",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T16:06:14.353235Z",
+      "timestamp": "2026-03-04T19:25:55.282586Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 36.53
+      "duration_seconds": 32.79
     },
     "entity_resolution": null,
     "model_info": null
@@ -146,32 +146,15 @@
       "uniprot_id": null
     },
     {
-      "id": "JAK2_STAT3_pathway",
-      "class": "Pathway",
-      "name": "JAK2/STAT3 signaling pathway",
-      "synonyms": [
-        "JAK2-STAT3 pathway"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "CagA",
-      "class": "Protein",
-      "name": "CagA",
+      "id": "gastritis",
+      "class": "Disease",
+      "name": "gastritis",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0017152",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -238,51 +221,6 @@
       "uniprot_id": null
     },
     {
-      "id": "gastritis",
-      "class": "Disease",
-      "name": "gastritis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0017152",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "atrophic_gastritis",
-      "class": "Disease",
-      "name": "atrophic gastritis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0017154",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "intestinal_metaplasia",
-      "class": "Disease",
-      "name": "intestinal metaplasia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "AG490",
       "class": "Drug",
       "name": "AG490",
@@ -293,7 +231,7 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "C0389995",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -308,7 +246,22 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "C0010206",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CagA",
+      "class": "Protein",
+      "name": "CagA",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -332,68 +285,68 @@
   ],
   "evidence_entities": [
     {
-      "id": "PMC11362397:results:1:llm",
+      "id": "PMC_extracted:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC11362397",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_1",
       "text": "YY1 was highly expressed in gastric cancer tissues and cells. Kaplan-Meier survival curves indicated that high YY1 expression correlated with a poor prognosis.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "clinical_data",
+      "eco_type": "clinical analysis",
       "source": "extracted"
     },
     {
-      "id": "PMC11362397:results:2:llm",
+      "id": "PMC_extracted:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC11362397",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_2",
       "text": "YY1 expression showed a gradually increasing trend in H. pylori-induced gastritis and gastric tumors.",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro_in_vivo",
+      "eco_type": "in vitro and in vivo studies",
       "source": "extracted"
     },
     {
-      "id": "PMC11362397:results:3:llm",
+      "id": "PMC_extracted:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC11362397",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_3",
       "text": "In vivo and in vitro experiments demonstrated that H. pylori infection promoted phosphorylation of JAK2 and STAT3, thereby activating the EMT pathway, in which YY1 played a key role.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro_in_vivo",
+      "eco_type": "in vitro and in vivo studies",
       "source": "extracted"
     },
     {
-      "id": "PMC11362397:results:4:llm",
+      "id": "PMC_extracted:results:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC11362397",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_4",
       "text": "YY1 and JAK2 interaction was validated by chromatin immunoprecipitation.",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro",
+      "eco_type": "in vitro studies",
       "source": "extracted"
     },
     {
-      "id": "PMC11362397:results:5:llm",
+      "id": "PMC_extracted:results:5:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC11362397",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_5",
       "text": "YY1 knockdown or pharmacological inhibition reversed EMT and suppressed gastric cancer cell proliferation and metastasis.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro_in_vivo",
+      "eco_type": "in vitro and in vivo studies",
       "source": "extracted"
     }
   ],
@@ -403,14 +356,14 @@
       "predicate": "INCREASES_RISK",
       "object": "gastric_cancer",
       "evidence_ids": [
-        "PMC11362397:results:1:llm"
+        "PMC_extracted:results:1:llm"
       ],
       "source_papers": [
-        "PMC11362397"
+        "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {
-        "mechanism": "transcriptional_activation"
+        "mechanism": "transcriptional activation"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -422,15 +375,73 @@
       "predicate": "INCREASES_RISK",
       "object": "gastric_cancer",
       "evidence_ids": [
-        "PMC11362397:results:2:llm",
-        "PMC11362397:results:3:llm"
+        "PMC_extracted:results:2:llm",
+        "PMC_extracted:results:3:llm"
       ],
       "source_papers": [
-        "PMC11362397"
+        "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {
-        "mechanism": "chronic_inflammation"
+        "mechanism": "chronic inflammation"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "JAK2",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "transcriptional regulation"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "STAT3",
+      "evidence_ids": [
+        "PMC_extracted:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "via JAK2 activation"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "EMT",
+      "evidence_ids": [
+        "PMC_extracted:results:3:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "mechanism": "JAK2/STAT3 pathway"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -442,92 +453,14 @@
       "predicate": "INCREASES",
       "object": "YY1",
       "evidence_ids": [
-        "PMC11362397:results:2:llm"
+        "PMC_extracted:results:2:llm"
       ],
       "source_papers": [
-        "PMC11362397"
+        "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {
-        "temporal": "gradual_increase"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "YY1",
-      "predicate": "ACTIVATES",
-      "object": "JAK2_STAT3_pathway",
-      "evidence_ids": [
-        "PMC11362397:results:3:llm",
-        "PMC11362397:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC11362397"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "direct_transcriptional_activation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "YY1",
-      "predicate": "PROMOTES",
-      "object": "EMT",
-      "evidence_ids": [
-        "PMC11362397:results:3:llm",
-        "PMC11362397:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC11362397"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "pathway": "JAK2_STAT3_mediated"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "JAK2_STAT3_pathway",
-      "predicate": "PROMOTES",
-      "object": "EMT",
-      "evidence_ids": [
-        "PMC11362397:results:3:llm"
-      ],
-      "source_papers": [
-        "PMC11362397"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "mechanism": "phosphorylation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "EMT",
-      "predicate": "PROMOTES",
-      "object": "gastric_cancer",
-      "evidence_ids": [
-        "PMC11362397:results:3:llm"
-      ],
-      "source_papers": [
-        "PMC11362397"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "process": "cancer_progression"
+        "context": "gastritis progression"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -539,14 +472,14 @@
       "predicate": "TREATS",
       "object": "gastric_cancer",
       "evidence_ids": [
-        "PMC11362397:results:5:llm"
+        "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
-        "PMC11362397"
+        "PMC_extracted"
       ],
       "confidence": 0.8,
       "properties": {
-        "mechanism": "JAK2_inhibition"
+        "mechanism": "JAK2 inhibition"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -555,8 +488,8 @@
     }
   ],
   "notes": [
-    "This study demonstrates a novel mechanistic pathway linking H. pylori infection to gastric cancer through YY1-mediated activation of JAK2/STAT3 signaling and EMT",
-    "YY1 directly binds to JAK2 promoter as validated by chromatin immunoprecipitation",
-    "The study provides both in vitro and in vivo evidence for the role of YY1 in gastric carcinogenesis"
+    "This study demonstrates YY1 as a key transcription factor in H. pylori-induced gastric carcinogenesis through JAK2/STAT3-mediated EMT activation",
+    "The research provides both in vitro and in vivo evidence for YY1's role in gastric cancer progression",
+    "YY1 directly binds to JAK2 promoter as validated by chromatin immunoprecipitation"
   ]
 }

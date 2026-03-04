@@ -494,7 +494,9 @@ class MedLitRelationshipExtractor(RelationshipExtractorInterface):
         # 1) Predicate inventory from domain schema
         # Domain keys are like "treats"; we ask LLM for lowercase strings like "treats"
         predicate_keys = sorted(self._domain.relationship_types.keys())
-        allowed_predicates = [k.lower() for k in predicate_keys]
+        # Put associated_with last, not first
+        allowed_predicates = [k.lower() for k in predicate_keys if k != "associated_with"]
+        allowed_predicates.append("associated_with")   # associated_with goes last to reduce LLM anchor bias
 
         # Optional: a tiny bit of extra guidance for a few high-frequency predicates
         extra_guidance = [
@@ -511,7 +513,7 @@ class MedLitRelationshipExtractor(RelationshipExtractorInterface):
 
         examples_section = """
 EXAMPLES (follow subject/object order and use allowed predicates):
-- Text: "IHC was performed; tumor cells were positive for BerEp4." → (BerEp4, indicates, Disease) or (Disease, associated_with, BerEp4); NOT (Disease, treats, BerEp4).
+- Text: "IHC was performed; tumor cells were positive for BerEp4." → (BerEp4, indicates, Disease); NOT (Disease, treats, BerEp4).
 - Text: "positivity for BerEp4, CAM5.2, Ki67" in a paper about a cancer → extract (BerEp4, indicates, Disease), (CAM5.2, indicates, Disease), (Ki67, indicates, Disease) (one per marker).
 - Text: "Immunohistochemistry was performed on cell blocks." for disease + procedure → (Disease, diagnosed_by, Immunohistochemical staining).
 """
@@ -552,8 +554,12 @@ OUTPUT FORMAT (JSON ARRAY ONLY):
 ]
 
 IMPORTANT:
-- Use entity names from the list when possible; do not invent entities.
+- Use entity names from the list; do not invent entities.
 - confidence is a float in [0, 1].
+- If confidence would be below 0.5, OMIT the relationship entirely.
+- If the only predicate that fits is "associated_with", OMIT the relationship unless 
+  the text explicitly says something like "is associated with" or "was associated with".
+  Do NOT use it as a fallback for unclear relationships.
 - Return ONLY the JSON array, no prose, no markdown fences.
 """
 

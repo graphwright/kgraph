@@ -17,8 +17,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "8d6fdac417f10eadd2a8d7444f95323012d32bf7",
+      "git_commit_short": "8d6fdac",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -32,13 +32,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T15:55:33.433381Z",
+      "timestamp": "2026-03-04T19:15:43.128823Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 91.51
+      "duration_seconds": 73.13
     },
     "entity_resolution": null,
     "model_info": null
@@ -77,54 +77,7 @@
     {
       "id": "adrenal_medulla",
       "class": "AnatomicalStructure",
-      "name": "adrenal medulla",
-      "synonyms": [
-        "medulla"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glucocorticoids",
-      "class": "Drug",
-      "name": "glucocorticoids",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mineralocorticoids",
-      "class": "Drug",
-      "name": "mineralocorticoids",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "adrenal_androgens",
-      "class": "Drug",
-      "name": "adrenal androgens",
+      "name": "medulla",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -203,9 +156,39 @@
       "uniprot_id": null
     },
     {
-      "id": "androstenedione",
+      "id": "adrenaline",
       "class": "Drug",
-      "name": "androstenedione",
+      "name": "adrenaline",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "noradrenaline",
+      "class": "Drug",
+      "name": "noradrenaline",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "catecholamines",
+      "class": "Protein",
+      "name": "catecholamines",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -222,8 +205,8 @@
       "class": "Disease",
       "name": "autoimmune primary adrenal insufficiency",
       "synonyms": [
-        "autoimmune PAI",
-        "Autoimmune Addison's Disease"
+        "Autoimmune Addison's Disease",
+        "autoimmune PAI"
       ],
       "symbol": null,
       "brand_names": [],
@@ -335,76 +318,6 @@
       "uniprot_id": null
     },
     {
-      "id": "21_hydroxylase",
-      "class": "Protein",
-      "name": "21-hydroxylase",
-      "synonyms": [
-        "21-OH",
-        "21OH"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "21_hydroxylase_antibodies",
-      "class": "Biomarker",
-      "name": "21-hydroxylase antibodies",
-      "synonyms": [
-        "21OH-Abs",
-        "21-OH Abs"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "17_alpha_hydroxylase",
-      "class": "Protein",
-      "name": "17-alpha-hydroxylase",
-      "synonyms": [
-        "17-OH"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "side_chain_cleavage_enzyme",
-      "class": "Protein",
-      "name": "side-chain cleavage enzyme",
-      "synonyms": [
-        "SCC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "congenital_adrenal_hyperplasia",
       "class": "Disease",
       "name": "congenital adrenal hyperplasia",
@@ -457,6 +370,139 @@
       "name": "autoimmune polyendocrine syndrome type 2",
       "synonyms": [
         "APS-2"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "adrenoleukodystrophy",
+      "class": "Disease",
+      "name": "adrenoleukodystrophy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "21_hydroxylase_antibodies",
+      "class": "Biomarker",
+      "name": "21-hydroxylase antibodies",
+      "synonyms": [
+        "21OH-Abs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "21_hydroxylase",
+      "class": "Protein",
+      "name": "21-hydroxylase",
+      "synonyms": [
+        "21-OH",
+        "21OH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "17_alpha_hydroxylase",
+      "class": "Protein",
+      "name": "17-a-hydroxylase",
+      "synonyms": [
+        "17-OH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "side_chain_cleavage_enzyme",
+      "class": "Protein",
+      "name": "side-chain cleavage enzyme",
+      "synonyms": [
+        "SCC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "autoimmune_thyroid_disease",
+      "class": "Disease",
+      "name": "autoimmune thyroid disease",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "celiac_disease",
+      "class": "Disease",
+      "name": "coeliac disease",
+      "synonyms": [
+        "celiac disease"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "type_1_diabetes",
+      "class": "Disease",
+      "name": "type 1 diabetes",
+      "synonyms": [
+        "T1D"
       ],
       "symbol": null,
       "brand_names": [],
@@ -532,7 +578,7 @@
       "uniprot_id": null
     },
     {
-      "id": "CYP21A1",
+      "id": "cyp21a1",
       "class": "Gene",
       "name": "CYP21A1",
       "synonyms": [],
@@ -547,7 +593,7 @@
       "uniprot_id": null
     },
     {
-      "id": "CYP11A1",
+      "id": "cyp11a1",
       "class": "Gene",
       "name": "CYP11A1",
       "synonyms": [],
@@ -562,7 +608,7 @@
       "uniprot_id": null
     },
     {
-      "id": "MC2R",
+      "id": "mc2r",
       "class": "Gene",
       "name": "MC2R",
       "synonyms": [],
@@ -577,12 +623,10 @@
       "uniprot_id": null
     },
     {
-      "id": "NNT",
+      "id": "nnt",
       "class": "Gene",
       "name": "NNT",
-      "synonyms": [
-        "nicotinamide nucleotide transhydrogenase"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -594,12 +638,10 @@
       "uniprot_id": null
     },
     {
-      "id": "TRXR2",
+      "id": "trxr2",
       "class": "Gene",
       "name": "TRXR2",
-      "synonyms": [
-        "thioredoxin reductase 2"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -611,12 +653,10 @@
       "uniprot_id": null
     },
     {
-      "id": "StAR",
+      "id": "star",
       "class": "Gene",
       "name": "StAR",
-      "synonyms": [
-        "steroidogenic acute regulatory protein"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -628,7 +668,7 @@
       "uniprot_id": null
     },
     {
-      "id": "NR5A1",
+      "id": "nr5a1",
       "class": "Gene",
       "name": "NR5A1",
       "synonyms": [
@@ -645,7 +685,7 @@
       "uniprot_id": null
     },
     {
-      "id": "NR0B1",
+      "id": "nr0b1",
       "class": "Gene",
       "name": "NR0B1",
       "synonyms": [
@@ -662,7 +702,7 @@
       "uniprot_id": null
     },
     {
-      "id": "AIRE",
+      "id": "aire",
       "class": "Gene",
       "name": "AIRE",
       "synonyms": [],
@@ -677,7 +717,7 @@
       "uniprot_id": null
     },
     {
-      "id": "NFKB2",
+      "id": "nfkb2",
       "class": "Gene",
       "name": "NFKB2",
       "synonyms": [],
@@ -692,7 +732,7 @@
       "uniprot_id": null
     },
     {
-      "id": "RAG1",
+      "id": "rag1",
       "class": "Gene",
       "name": "RAG1",
       "synonyms": [],
@@ -707,7 +747,7 @@
       "uniprot_id": null
     },
     {
-      "id": "TNFAIP3",
+      "id": "tnfaip3",
       "class": "Gene",
       "name": "TNFAIP3",
       "synonyms": [],
@@ -722,7 +762,7 @@
       "uniprot_id": null
     },
     {
-      "id": "LAT",
+      "id": "lat",
       "class": "Gene",
       "name": "LAT",
       "synonyms": [],
@@ -737,7 +777,7 @@
       "uniprot_id": null
     },
     {
-      "id": "IKZF2",
+      "id": "ikzf2",
       "class": "Gene",
       "name": "IKZF2",
       "synonyms": [],
@@ -752,7 +792,7 @@
       "uniprot_id": null
     },
     {
-      "id": "HLA",
+      "id": "hla",
       "class": "Gene",
       "name": "HLA",
       "synonyms": [],
@@ -767,7 +807,7 @@
       "uniprot_id": null
     },
     {
-      "id": "CTLA4",
+      "id": "ctla4",
       "class": "Gene",
       "name": "CTLA4",
       "synonyms": [],
@@ -782,7 +822,7 @@
       "uniprot_id": null
     },
     {
-      "id": "BACH2",
+      "id": "bach2",
       "class": "Gene",
       "name": "BACH2",
       "synonyms": [],
@@ -797,7 +837,7 @@
       "uniprot_id": null
     },
     {
-      "id": "PTPN22",
+      "id": "ptpn22",
       "class": "Gene",
       "name": "PTPN22",
       "synonyms": [],
@@ -812,7 +852,7 @@
       "uniprot_id": null
     },
     {
-      "id": "LPP",
+      "id": "lpp",
       "class": "Gene",
       "name": "LPP",
       "synonyms": [],
@@ -827,7 +867,7 @@
       "uniprot_id": null
     },
     {
-      "id": "SH2B3",
+      "id": "sh2b3",
       "class": "Gene",
       "name": "SH2B3",
       "synonyms": [],
@@ -842,7 +882,7 @@
       "uniprot_id": null
     },
     {
-      "id": "SIGLEC5",
+      "id": "siglec5",
       "class": "Gene",
       "name": "SIGLEC5",
       "synonyms": [],
@@ -857,7 +897,7 @@
       "uniprot_id": null
     },
     {
-      "id": "UBASH3A",
+      "id": "ubash3a",
       "class": "Gene",
       "name": "UBASH3A",
       "synonyms": [],
@@ -890,10 +930,27 @@
     },
     {
       "id": "genome_wide_association_study",
-      "class": "StatisticalMethod",
+      "class": "StudyDesign",
       "name": "genome wide association study",
       "synonyms": [
         "GWAS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "primary_ovarian_insufficiency",
+      "class": "Disease",
+      "name": "primary ovarian insufficiency",
+      "synonyms": [
+        "POI"
       ],
       "symbol": null,
       "brand_names": [],
@@ -940,12 +997,57 @@
       "uniprot_id": null
     },
     {
-      "id": "primary_ovarian_insufficiency",
-      "class": "Disease",
-      "name": "primary ovarian insufficiency",
+      "id": "interferon_alpha",
+      "class": "Protein",
+      "name": "interferon alpha",
       "synonyms": [
-        "POI"
+        "IFN alpha"
       ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cd8_positive_t_cells",
+      "class": "AnatomicalStructure",
+      "name": "CD8+ T cells",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "interferon_gamma",
+      "class": "Protein",
+      "name": "interferon-gamma",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "dendritic_cells",
+      "class": "AnatomicalStructure",
+      "name": "dendritic cells",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -972,179 +1074,12 @@
       "uniprot_id": null
     },
     {
-      "id": "type_1_diabetes",
-      "class": "Disease",
-      "name": "type 1 diabetes",
+      "id": "chimeric_antigen_receptor_t_regulatory_cells",
+      "class": "Procedure",
+      "name": "chimeric antigen receptor T regulatory cells",
       "synonyms": [
-        "T1D"
+        "CAR Tregs"
       ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "autoimmune_thyroid_disease",
-      "class": "Disease",
-      "name": "autoimmune thyroid disease",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "celiac_disease",
-      "class": "Disease",
-      "name": "celiac disease",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "adrenoleukodystrophy",
-      "class": "Disease",
-      "name": "adrenoleukodystrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "adrenal_crisis",
-      "class": "Disease",
-      "name": "adrenal crisis",
-      "synonyms": [
-        "Addisonian crisis"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hyperpigmentation",
-      "class": "Symptom",
-      "name": "hyperpigmentation",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "weight_loss",
-      "class": "Symptom",
-      "name": "weight loss",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "fatigue",
-      "class": "Symptom",
-      "name": "fatigue",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "postural_hypotension",
-      "class": "Symptom",
-      "name": "postural hypotension",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hyponatremia",
-      "class": "Symptom",
-      "name": "hyponatremia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hyperkalemia",
-      "class": "Symptom",
-      "name": "hyperkalemia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypoglycemia",
-      "class": "Symptom",
-      "name": "hypoglycemia",
-      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -1171,25 +1106,12 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:introduction:2:llm",
+      "id": "paper_1:clinical:1:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "paper_1",
-      "text_span_id": "intro_2",
-      "text": "Autoimmune primary adrenal insufficiency is usually a polygenic disease where our information recently has increased due to genome association studies.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section1:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec1_1",
-      "text": "Primary AI (PAI), also known as Addison's disease, is a rare disease with a prevalence of approximately 100 per million in Europe.",
+      "text_span_id": "clinical_1",
+      "text": "Primary AI (PAI), also known as Addison's disease, is a rare disease with a prevalence of approximately 100 per million in Europe",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
@@ -1197,12 +1119,51 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:section1:2:llm",
+      "id": "paper_1:diagnosis:1:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "paper_1",
-      "text_span_id": "sec1_2",
-      "text": "The most common cause of primary adrenal insufficiency is autoimmunity; this type is often called Autoimmune Addison's Disease, or simply autoimmune PAI.",
+      "text_span_id": "diagnosis_1",
+      "text": "Morning cortisol concentration <140 nmol/L and an ACTH concentration twice the upper reference limit verifies a PAI diagnosis",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:diagnosis:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "diagnosis_2",
+      "text": "A healthy person is expected to have >500 nmol/L of plasma cortisol concentration 60 minutes after 250\u00b5g cosyntropin injection",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:autoantibodies:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "autoantibodies_1",
+      "text": "21OH-Abs are found in 80\u201390% of patients with PAI in cross-sectional studies after exclusion of known non-autoimmune causes",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:genetics:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "genetics_1",
+      "text": "Skov and collaborators recently showed, by analyzing 29 twin pairs with PAI, a concordance for monozygotic twins of 0.71 and a heritability of 0.97, revealing that PAI is a highly genetic disorder",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
@@ -1210,12 +1171,12 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:section2:1:llm",
+      "id": "paper_1:treatment:1:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "paper_1",
-      "text_span_id": "sec2_1",
-      "text": "Morning cortisol concentration <140 nmol/L and an ACTH concentration twice the upper reference limit verifies a PAI diagnosis.",
+      "text_span_id": "treatment_1",
+      "text": "The standard medication of glucocorticoid treatment for patients with AI (primary and secondary) is hydrocortisone or cortisone acetate",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "review",
@@ -1223,104 +1184,13 @@
       "source": "extracted"
     },
     {
-      "id": "paper_1:section2:2:llm",
+      "id": "paper_1:treatment:2:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "paper_1",
-      "text_span_id": "sec2_2",
-      "text": "A healthy person is expected to have >500 nmol/L of plasma cortisol concentration 60 minutes after 250\u00b5g cosyntropin injection.",
+      "text_span_id": "treatment_2",
+      "text": "Patients with primary AI additionally take fludrocortisone treatment for mineralocorticoid deficiency",
       "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section2:3:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec2_3",
-      "text": "In Western countries, where other than autoimmune causes of PAI are uncommon, serum 21-hydroxylase antibodies should be assessed.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section2:4:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec2_4",
-      "text": "The standard medication of glucocorticoid treatment for patients with AI (primary and secondary) is hydrocortisone or cortisone acetate.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section2:5:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec2_5",
-      "text": "Patients with primary AI additionally take fludrocortisone treatment for mineralocorticoid deficiency.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section3:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec3_1",
-      "text": "Skov and collaborators recently showed, by analyzing 29 twin pairs with PAI, a concordance for monozygotic twins of 0.71 and a heritability of 0.97, revealing that PAI is a highly genetic disorder.",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section3:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec3_2",
-      "text": "We recently performed the world's first GWAS on autoimmune PAI including only ~1200 patients, but which succeeded to elucidate nine genetic regions with quite remarkable risk potential for PAI.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section4:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec4_1",
-      "text": "The autoantibodies targeting 21-OH was first described in 1992 by Winqvist et al., identified as a major autoantigen in autoimmune PAI.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:section4:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "sec4_2",
-      "text": "These antibodies have since then been shown to be highly specific for autoimmune PAI in several patient cohorts, and found present in 80\u201390% of patients with PAI in cross-sectional studies after exclusion of known non-autoimmune causes.",
-      "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "review",
       "eco_type": null,
@@ -1330,27 +1200,10 @@
   "relationships": [
     {
       "subject": "autoimmune_primary_adrenal_insufficiency",
-      "predicate": "SUBTYPE_OF",
-      "object": "primary_adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section1:2:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "primary_adrenal_insufficiency",
       "predicate": "SAME_AS",
-      "object": "adrenal_insufficiency",
+      "object": "primary_adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section1:1:llm"
+        "paper_1:introduction:1:llm"
       ],
       "source_papers": [
         "paper_1"
@@ -1360,106 +1213,22 @@
       "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "PAI is also known as Addison's disease"
-    },
-    {
-      "subject": "21_hydroxylase_antibodies",
-      "predicate": "INDICATES",
-      "object": "autoimmune_primary_adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section2:3:llm",
-        "paper_1:section4:2:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "diagnosis",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "hydrocortisone",
-      "predicate": "TREATS",
-      "object": "adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section2:4:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "treatment",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cortisone_acetate",
-      "predicate": "TREATS",
-      "object": "adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section2:4:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "treatment",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "fludrocortisone",
-      "predicate": "TREATS",
-      "object": "primary_adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section2:5:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "treatment",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cosyntropin_stimulation_test",
-      "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
-      "evidence_ids": [
-        "paper_1:section2:2:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "diagnosis",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
+      "note": "Autoimmune PAI is the most common form of primary adrenal insufficiency"
     },
     {
       "subject": "cortisol",
       "predicate": "INDICATES",
       "object": "primary_adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section2:1:llm"
+        "paper_1:diagnosis:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "threshold": "<140 nmol/L"
+      },
       "section": "diagnosis",
       "asserted_by": "llm",
       "resolution": null,
@@ -1470,116 +1239,130 @@
       "predicate": "INDICATES",
       "object": "primary_adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section2:1:llm"
+        "paper_1:diagnosis:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "threshold": "twice the upper reference limit"
+      },
       "section": "diagnosis",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "CYP21A1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "congenital_adrenal_hyperplasia",
+      "subject": "cosyntropin_stimulation_test",
+      "predicate": "INDICATES",
+      "object": "adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section3:1:llm"
+        "paper_1:diagnosis:2:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
-      "section": "genetics",
+      "properties": {
+        "threshold": "<500 nmol/L cortisol at 60 minutes"
+      },
+      "section": "diagnosis",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "AIRE",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "autoimmune_polyendocrine_syndrome_type_1",
-      "evidence_ids": [
-        "paper_1:section3:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "genetics",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "21_hydroxylase",
-      "predicate": "ASSOCIATED_WITH",
+      "subject": "21_hydroxylase_antibodies",
+      "predicate": "INDICATES",
       "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section4:1:llm"
+        "paper_1:autoantibodies:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "prevalence": "80-90%"
+      },
       "section": "autoantibodies",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "hyperpigmentation",
-      "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "subject": "hydrocortisone",
+      "predicate": "TREATS",
+      "object": "adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section2:1:llm"
+        "paper_1:treatment:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
-      "section": "clinical",
+      "properties": {
+        "treatment_type": "glucocorticoid replacement"
+      },
+      "section": "treatment",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "weight_loss",
-      "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "subject": "cortisone_acetate",
+      "predicate": "TREATS",
+      "object": "adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section2:1:llm"
+        "paper_1:treatment:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
-      "confidence": 0.8,
-      "properties": {},
-      "section": "clinical",
+      "confidence": 0.9,
+      "properties": {
+        "treatment_type": "glucocorticoid replacement"
+      },
+      "section": "treatment",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "fatigue",
-      "predicate": "INDICATES",
+      "subject": "fludrocortisone",
+      "predicate": "TREATS",
       "object": "primary_adrenal_insufficiency",
       "evidence_ids": [
-        "paper_1:section2:1:llm"
+        "paper_1:treatment:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "treatment_type": "mineralocorticoid replacement"
+      },
+      "section": "treatment",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "autoimmune_primary_adrenal_insufficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "autoimmune_polyendocrine_syndrome_type_1",
+      "evidence_ids": [
+        "paper_1:introduction:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
       "confidence": 0.8,
-      "properties": {},
-      "section": "clinical",
+      "properties": {
+        "frequency": ">60% of cases"
+      },
+      "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -1595,67 +1378,56 @@
         "paper_1"
       ],
       "confidence": 0.8,
-      "properties": {},
+      "properties": {
+        "frequency": ">60% of cases"
+      },
       "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "autoimmune_primary_adrenal_insufficiency",
+      "subject": "cyp21a1",
       "predicate": "ASSOCIATED_WITH",
-      "object": "type_1_diabetes",
+      "object": "congenital_adrenal_hyperplasia",
       "evidence_ids": [
-        "paper_1:section2:3:llm"
+        "paper_1:genetics:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
-      "confidence": 0.8,
-      "properties": {},
-      "section": "diagnosis",
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "enzyme deficiency"
+      },
+      "section": "genetics",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "autoimmune_primary_adrenal_insufficiency",
+      "subject": "aire",
       "predicate": "ASSOCIATED_WITH",
-      "object": "autoimmune_thyroid_disease",
+      "object": "autoimmune_polyendocrine_syndrome_type_1",
       "evidence_ids": [
-        "paper_1:section2:3:llm"
+        "paper_1:genetics:1:llm"
       ],
       "source_papers": [
         "paper_1"
       ],
-      "confidence": 0.8,
-      "properties": {},
-      "section": "diagnosis",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "autoimmune_primary_adrenal_insufficiency",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "celiac_disease",
-      "evidence_ids": [
-        "paper_1:section2:3:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.8,
-      "properties": {},
-      "section": "diagnosis",
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "monogenic mutation"
+      },
+      "section": "genetics",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This review paper provides comprehensive coverage of autoimmune primary adrenal insufficiency, including diagnostic approaches, genetic factors, and future therapeutic perspectives.",
-    "The paper emphasizes the polygenic nature of autoimmune PAI and the importance of 21-hydroxylase antibodies in diagnosis.",
-    "Treatment focuses on hormone replacement therapy with glucocorticoids and mineralocorticoids."
+    "This review provides comprehensive coverage of autoimmune primary adrenal insufficiency including pathophysiology, diagnosis, genetics, and treatment approaches",
+    "The paper emphasizes the polygenic nature of autoimmune PAI and the potential for early identification through genetic screening and autoantibody testing",
+    "Future therapeutic approaches including targeted immunotherapy and CAR Tregs are discussed as potential treatments"
   ]
 }

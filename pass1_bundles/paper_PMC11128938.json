@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "777544707e2808fd01d9cb8fbe5dc1d74b29532b",
-      "git_commit_short": "7775447",
+      "git_commit": "8d6fdac417f10eadd2a8d7444f95323012d32bf7",
+      "git_commit_short": "8d6fdac",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:5bdf447f3cfe242d"
+      "checksum": "sha256:60a79126fad49625"
     },
     "execution": {
-      "timestamp": "2026-02-27T15:56:34.458588Z",
+      "timestamp": "2026-03-04T19:16:44.691795Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 61.0
+      "duration_seconds": 61.54
     },
     "entity_resolution": null,
     "model_info": null
@@ -128,8 +128,10 @@
     {
       "id": "entity_6",
       "class": "Biomarker",
-      "name": "cortisol",
-      "synonyms": [],
+      "name": "morning blood cortisol",
+      "synonyms": [
+        "morning cortisol"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -143,9 +145,9 @@
     {
       "id": "entity_7",
       "class": "Protein",
-      "name": "adrenocorticotropic hormone",
+      "name": "ACTH",
       "synonyms": [
-        "ACTH"
+        "adrenocorticotropic hormone"
       ],
       "symbol": null,
       "brand_names": [],
@@ -160,7 +162,7 @@
     {
       "id": "entity_8",
       "class": "Procedure",
-      "name": "dexamethasone suppression test",
+      "name": "1 mg dexamethasone suppression test",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -205,55 +207,6 @@
     {
       "id": "entity_11",
       "class": "Procedure",
-      "name": "magnetic resonance imaging",
-      "synonyms": [
-        "MRI"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_12",
-      "class": "Procedure",
-      "name": "computed tomography",
-      "synonyms": [
-        "CT"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_13",
-      "class": "Procedure",
-      "name": "DOTATATE positron emission tomography",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_14",
-      "class": "Procedure",
       "name": "Inferior petrosal sinus sampling",
       "synonyms": [
         "IPSS"
@@ -269,7 +222,24 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_15",
+      "id": "entity_12",
+      "class": "Biomarker",
+      "name": "central-to-peripheral ACTH ratio",
+      "synonyms": [
+        "C/P ACTH ratio"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_13",
       "class": "Protein",
       "name": "prolactin",
       "synonyms": [],
@@ -284,9 +254,26 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_16",
+      "id": "entity_14",
       "class": "Disease",
       "name": "corticotroph tumor",
+      "synonyms": [
+        "corticotroph adenoma"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_15",
+      "class": "Procedure",
+      "name": "pituitary surgery",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -299,7 +286,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_17",
+      "id": "entity_16",
       "class": "Disease",
       "name": "hypercortisolism",
       "synonyms": [],
@@ -314,7 +301,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_18",
+      "id": "entity_17",
       "class": "Drug",
       "name": "cabergoline",
       "synonyms": [],
@@ -329,7 +316,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_19",
+      "id": "entity_18",
       "class": "Disease",
       "name": "adrenal insufficiency",
       "synonyms": [
@@ -346,7 +333,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_20",
+      "id": "entity_19",
       "class": "Procedure",
       "name": "bilateral adrenalectomy",
       "synonyms": [],
@@ -361,7 +348,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_21",
+      "id": "entity_20",
       "class": "Disease",
       "name": "cyclic hypercortisolism",
       "synonyms": [],
@@ -376,9 +363,24 @@
       "uniprot_id": null
     },
     {
+      "id": "entity_21",
+      "class": "Protein",
+      "name": "AVPR1B receptors",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
       "id": "entity_22",
       "class": "Protein",
-      "name": "AVPR1B receptor",
+      "name": "AVPR2 receptors",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -392,36 +394,6 @@
     },
     {
       "id": "entity_23",
-      "class": "Protein",
-      "name": "AVPR2 receptor",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_24",
-      "class": "Disease",
-      "name": "corticotroph adenoma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_25",
       "class": "Gene",
       "name": "USP8",
       "synonyms": [],
@@ -436,9 +408,9 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_26",
+      "id": "entity_24",
       "class": "Disease",
-      "name": "ectopic ACTH syndrome",
+      "name": "ectopic ACTH secretion",
       "synonyms": [
         "EAS"
       ],
@@ -453,7 +425,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_27",
+      "id": "entity_25",
       "class": "Disease",
       "name": "diabetes",
       "synonyms": [],
@@ -468,7 +440,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_28",
+      "id": "entity_26",
       "class": "Disease",
       "name": "hypertension",
       "synonyms": [],
@@ -483,7 +455,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_29",
+      "id": "entity_27",
       "class": "Disease",
       "name": "hypokalemia",
       "synonyms": [],
@@ -498,7 +470,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_30",
+      "id": "entity_28",
       "class": "Disease",
       "name": "osteoporosis",
       "synonyms": [],
@@ -513,7 +485,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_31",
+      "id": "entity_29",
       "class": "Disease",
       "name": "obesity",
       "synonyms": [],
@@ -528,9 +500,43 @@
       "uniprot_id": null
     },
     {
+      "id": "entity_30",
+      "class": "Procedure",
+      "name": "magnetic resonance imaging",
+      "synonyms": [
+        "MRI"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_31",
+      "class": "Procedure",
+      "name": "computed tomography",
+      "synonyms": [
+        "CT"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
       "id": "entity_32",
-      "class": "Drug",
-      "name": "dexamethasone",
+      "class": "Procedure",
+      "name": "DOTATATE positron emission tomography",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -559,6 +565,21 @@
     },
     {
       "id": "entity_34",
+      "class": "AnatomicalStructure",
+      "name": "Crooke's cells",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_35",
       "class": "Disease",
       "name": "diabetes insipidus",
       "synonyms": [],
@@ -573,7 +594,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_35",
+      "id": "entity_36",
       "class": "Symptom",
       "name": "nausea",
       "synonyms": [],
@@ -588,7 +609,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_36",
+      "id": "entity_37",
       "class": "Symptom",
       "name": "vomiting",
       "synonyms": [],
@@ -603,7 +624,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_37",
+      "id": "entity_38",
       "class": "Symptom",
       "name": "lethargy",
       "synonyms": [],
@@ -618,7 +639,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_38",
+      "id": "entity_39",
       "class": "Drug",
       "name": "hydrocortisone",
       "synonyms": [],
@@ -633,7 +654,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_39",
+      "id": "entity_40",
       "class": "Symptom",
       "name": "diplopia",
       "synonyms": [],
@@ -648,7 +669,7 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_40",
+      "id": "entity_41",
       "class": "Disease",
       "name": "cerebellar stroke",
       "synonyms": [],
@@ -663,24 +684,9 @@
       "uniprot_id": null
     },
     {
-      "id": "entity_41",
-      "class": "Protein",
-      "name": "D2 receptor",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "entity_42",
-      "class": "AnatomicalStructure",
-      "name": "Crooke's cells",
+      "class": "Protein",
+      "name": "D2 receptors",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -734,19 +740,6 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:abstract:4:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "abstract_4",
-      "text": "Cabergoline was initiated, after which the patient rapidly developed transient severe adrenal insufficiency (AI).",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "case report",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
       "id": "PMC_extracted:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
@@ -778,7 +771,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "treatment_1",
-      "text": "However, pathology showed normal pituitary tissue with rare Crooke's cells, suggesting cortisol excess.",
+      "text": "Two weeks later, the patient was admitted to the emergency unit with nausea, vomiting, and lethargy. Upon evaluation, the patient was found to be hypotensive (80/50 mmHg), hyponatremic (132 mmol/L, normal: 135\u2013145 mmol/L), and mildly hypoglycemic (3.7 mmol/L [67 mg/dL], normal range: 4.0\u201311.1 nmol/L; 72\u2013200 mg/dL).",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "case report",
@@ -786,11 +779,11 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:outcome:1:llm",
+      "id": "PMC_extracted:treatment:2:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "PMC_extracted",
-      "text_span_id": "outcome_1",
+      "text_span_id": "treatment_2",
       "text": "AI was diagnosed, and the patient's condition promptly resolved with IV hydrocortisone and fluid resuscitation.",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -804,7 +797,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "discussion_1",
-      "text": "According to a recent meta-analysis, the desmopressin stimulation test has a sensitivity of 88% for discriminating CD from normal patients with clinical or biochemical features suggestive of CS.",
+      "text": "According to a recent meta-analysis, the desmopressin stimulation test has a sensitivity of 88% for discriminating CD from normal patients with clinical or biochemical features suggestive of CS, indicating nonetheless a false-negative rate of 12%.",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "case report",
@@ -846,9 +839,8 @@
     {
       "subject": "entity_2",
       "predicate": "ASSOCIATED_WITH",
-      "object": "entity_7",
+      "object": "entity_12",
       "evidence_ids": [
-        "PMC_extracted:abstract:2:llm",
         "PMC_extracted:abstract:3:llm"
       ],
       "source_papers": [
@@ -862,18 +854,18 @@
       "note": null
     },
     {
-      "subject": "entity_18",
-      "predicate": "INCREASES_RISK",
-      "object": "entity_19",
+      "subject": "entity_2",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "entity_21",
       "evidence_ids": [
-        "PMC_extracted:abstract:4:llm"
+        "PMC_extracted:introduction:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "abstract",
+      "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -896,35 +888,35 @@
       "note": null
     },
     {
-      "subject": "entity_2",
+      "subject": "entity_5",
       "predicate": "ASSOCIATED_WITH",
-      "object": "entity_23",
+      "object": "entity_25",
       "evidence_ids": [
-        "PMC_extracted:introduction:1:llm"
+        "PMC_extracted:case:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "case",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "entity_25",
+      "subject": "entity_5",
       "predicate": "ASSOCIATED_WITH",
-      "object": "entity_24",
+      "object": "entity_26",
       "evidence_ids": [
-        "PMC_extracted:introduction:1:llm"
+        "PMC_extracted:case:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "case",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -981,45 +973,12 @@
       "note": null
     },
     {
-      "subject": "entity_5",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "entity_30",
+      "subject": "entity_17",
+      "predicate": "INCREASES_RISK",
+      "object": "entity_18",
       "evidence_ids": [
-        "PMC_extracted:case:1:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "case",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_5",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "entity_31",
-      "evidence_ids": [
-        "PMC_extracted:case:1:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "case",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_42",
-      "predicate": "INDICATES",
-      "object": "entity_6",
-      "evidence_ids": [
-        "PMC_extracted:treatment:1:llm"
+        "PMC_extracted:treatment:1:llm",
+        "PMC_extracted:treatment:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1032,24 +991,58 @@
       "note": null
     },
     {
-      "subject": "entity_38",
+      "subject": "entity_39",
       "predicate": "TREATS",
-      "object": "entity_19",
+      "object": "entity_18",
       "evidence_ids": [
-        "PMC_extracted:outcome:1:llm"
+        "PMC_extracted:treatment:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.9,
       "properties": {},
-      "section": "outcome",
+      "section": "treatment",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "entity_3",
+      "subject": "entity_19",
+      "predicate": "TREATS",
+      "object": "entity_16",
+      "evidence_ids": [
+        "PMC_extracted:treatment:2:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "treatment",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_23",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "entity_14",
+      "evidence_ids": [
+        "PMC_extracted:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
       "predicate": "SAME_AS",
       "object": "entity_5",
       "evidence_ids": [],
@@ -1061,10 +1054,10 @@
       "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "Cushing disease is a subtype of Cushing syndrome"
+      "note": "ACTH-dependent Cushing syndrome is a subtype of Cushing syndrome"
     },
     {
-      "subject": "entity_1",
+      "subject": "entity_3",
       "predicate": "SUBTYPE_OF",
       "object": "entity_5",
       "evidence_ids": [],
@@ -1082,6 +1075,6 @@
   "notes": [
     "This case report describes an unusual presentation of ACTH-dependent Cushing syndrome with discordant peripheral and central responses to desmopressin stimulation.",
     "The patient showed no peripheral ACTH response to desmopressin but had a marked central response during inferior petrosal sinus sampling.",
-    "Cabergoline treatment resulted in acute adrenal insufficiency, which resolved after discontinuation of the drug."
+    "Treatment with cabergoline led to acute adrenal insufficiency, which resolved after discontinuation of the drug."
   ]
 }

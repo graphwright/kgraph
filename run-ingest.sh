@@ -37,6 +37,8 @@
 # | PMC11685751 | Pheochromocytoma-induced pseudo-Cushing's syndrome (differential diagnosis) | 2024 |
 # | PMC12035109 | Cognitive function and risk factors from prolonged cortisol exposure in CD | 2025 |
 # | PMC12055610 | Osilodrostat for Cushing syndrome (new steroidogenesis inhibitor) | 2025 |
+# PAPER="PMC11560769.xml,PMC11779774.xml,PMC11548364.xml,PMC2386281.xml,PMC12187266.xml,PMC4374115.xml,PMC11128938.xml,PMC11685751.xml,PMC12035109.xml,PMC12055610.xml"
+# PAPER="PMC11560769.xml,PMC11779774.xml,PMC11548364.xml,PMC2386281.xml,PMC12187266.xml"
 
 # Good topical spread — covers diagnosis, medical management, novel drugs, comorbidities, cognitive effects, edge cases (pregnancy, pseudo-Cushing's), and the classic guideline paper. All are open-access CC-licensed, so XML should be available via the PMC OA FTP or API.
 
