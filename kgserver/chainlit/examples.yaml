@@ -2,36 +2,32 @@
 # Short prompts that map to rich entities/relationships in the graph.
 # Format: "Label": "Full prompt text sent to the LLM"
 
-"BRCA mutations & cancer risk": >
-  What does the graph say about BRCA1/BRCA2 mutations and risk of breast and ovarian cancer, and what risk-reducing interventions are supported?
-
 "ST3Gal1 & ulcerative colitis": >
-  How does ST3Gal1 regulate intestinal barrier function and inflammatory cytokines in ulcerative colitis, and what downstream genes does it control?
-
-"DDR biomarkers & ES-SCLC": >
-  What is the DDR-Immune Fitness score, and how do HRD, TMB, and cGAS-STING predict response to PARP inhibitors and checkpoint blockers in ES-SCLC?
+  How does ST3Gal1 regulate intestinal barrier function and inflammatory cytokines in
+  ulcerative colitis, and what downstream genes does it control?
 
 "H. pylori → YY1 → JAK2/STAT3 → gastric cancer": >
-  How does H. pylori drive gastric cancer through the YY1–JAK2–STAT3 axis and EMT, and which drugs interrupt this pathway?
+  How does H. pylori drive gastric cancer through the YY1–JAK2–STAT3 axis and EMT,
+  and which drugs interrupt this pathway?
 
-"Bioactive glass nanoparticles & TNBC": >
-  What mechanisms do bioactive glass nanoparticles use against triple-negative breast cancer, and what cellular processes do they induce?
+"DDR biomarkers & ES-SCLC": >
+  What is the DDR-Immune Fitness score, and how do HRD, TMB, and cGAS-STING predict
+  response to PARP inhibitors and checkpoint blockers in ES-SCLC?
 
-"GenMine TOP vs FoundationOne in sarcoma": >
-  How do GenMine TOP and FoundationOne CDx compare for fusion genes and actionable targets in sarcoma, and what treatments do they enable?
+"PSMD14 → HMMR → TGF-β/PI3K in lung adenocarcinoma": >
+  How does PSMD14 stabilize HMMR through K63-deubiquitylation, and what downstream
+  TGF-β and PI3K/AKT/mTOR effects does this produce in LUAD — and what drug combination
+  does the graph support?
 
-# Endocrinology / graph-query style (plain questions to avoid excess tool-call rounds)
-"Drugs linked to Type 2 Diabetes": >
-  What drugs are linked to or treat Type 2 Diabetes in the knowledge graph?
+"PTBP1 → SLC7A11 → ferroptosis resistance in endometrial cancer": >
+  How does PTBP1 protect endometrial cancer cells from ferroptosis by stabilizing
+  SLC7A11 mRNA, and what happens to ROS, GSH, and cell viability when PTBP1 is knocked down?
 
-"Genes within 1 hop of Hypothyroidism": >
-  What genes are connected to hypothyroidism in the graph?
+"BRD7 promoter methylation & CRISPR reactivation in NPC": >
+  How is BRD7 silenced by promoter hypermethylation in nasopharyngeal carcinoma, and
+  what evidence does the graph have for reactivating it via CRISPR/dCas9-TET1CD?
 
-"Metformin and insulin resistance": >
-  Is there a direct relationship between metformin and insulin resistance in the literature graph?
-
-"Entities connected to Addison's disease": >
-  What conditions, genes, or drugs are directly connected to Addison's disease in the graph?
-
-"Documents mentioning cortisol and depression": >
-  Which papers in the graph mention both cortisol and depression?
+"Pheochromocytoma → cortisol–catecholamine feedback → ectopic Cushing": >
+  How does a pheochromocytoma create a glucocorticoid-dependent positive feedback loop
+  that drives both hypercortisolemia and hypercatecholaminemia, and what treatment
+  sequence broke this cycle?
