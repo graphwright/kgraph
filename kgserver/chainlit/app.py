@@ -122,10 +122,15 @@ def _build_model_list(
     ]
 
 
+# CLAUDE_LOW_END = "claude-haiku-4-5"
+CLAUDE_LOW_END = "claude-sonnet-4-5-20250929"
+# CLAUDE_HIGH_END = "claude-sonnet-4-6"
+CLAUDE_HIGH_END = "claude-opus-4-5-20251101"
+
 def _get_orchestrator_model() -> str:
     """Return orchestrator model string for current provider."""
     if LLM_PROVIDER == "anthropic":
-        return os.environ.get("ORCHESTRATOR_MODEL", "claude-haiku-4-5")
+        return os.environ.get("ORCHESTRATOR_MODEL", CLAUDE_LOW_END)
     if LLM_PROVIDER == "openai":
         return os.environ.get("ORCHESTRATOR_MODEL", "gpt-4o-mini")
     if LLM_PROVIDER == "ollama":
@@ -136,7 +141,7 @@ def _get_orchestrator_model() -> str:
 def _get_synthesis_model() -> str:
     """Return synthesis model string for current provider."""
     if LLM_PROVIDER == "anthropic":
-        return os.environ.get("SYNTHESIS_MODEL", os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6"))
+        return os.environ.get("SYNTHESIS_MODEL", os.environ.get("ANTHROPIC_MODEL", CLAUDE_HIGH_END))
     if LLM_PROVIDER == "openai":
         return os.environ.get("SYNTHESIS_MODEL", os.environ.get("OPENAI_MODEL", "gpt-4o"))
     if LLM_PROVIDER == "ollama":
