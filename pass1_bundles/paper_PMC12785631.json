@@ -1,7 +1,7 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC12785631",
+    "pmcid": "PMC_UNKNOWN",
     "title": "The Role of Aurora Kinase A in HBV-Associated Hepatocellular Carcinomas: A Molecular and Immunohistochemical Study",
     "authors": [
       "Not specified"
@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,20 +30,20 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:40:11.373590Z",
+      "timestamp": "2026-03-05T19:05:35.238748Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 43.34
+      "duration_seconds": 54.2
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "AURKA_enzyme",
+      "id": "AURKA_protein",
       "class": "Enzyme",
       "name": "Aurora kinase A",
       "synonyms": [
@@ -54,48 +54,13 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:11393",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "HBV_HCC_disease",
-      "class": "Disease",
-      "name": "hepatitis B virus-associated hepatocellular carcinoma",
-      "synonyms": [
-        "HBV-HCC",
-        "HBV-related HCC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "Cr_HCC_disease",
-      "class": "Disease",
-      "name": "cryptogenic hepatocellular carcinoma",
-      "synonyms": [
-        "Cr-HCC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "PLK1_enzyme",
+      "id": "PLK1_protein",
       "class": "Enzyme",
       "name": "Polo-like kinase 1",
       "synonyms": [
@@ -106,7 +71,7 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:9077",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -115,13 +80,15 @@
       "id": "P53_protein",
       "class": "Protein",
       "name": "p53",
-      "synonyms": [],
+      "synonyms": [
+        "P53"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:11998",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -138,51 +105,105 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:1100",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "P53Ser315_biomarker",
-      "class": "Biomarker",
-      "name": "Phospho-P53Ser315",
+      "id": "HBV_HCC",
+      "class": "Disease",
+      "name": "hepatitis B virus-associated hepatocellular carcinoma",
       "synonyms": [
-        "P53Ser315"
+        "HBV-HCC",
+        "HBV-related HCC"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0019204",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "PLK1Thr210_biomarker",
-      "class": "Biomarker",
-      "name": "Phospho-PLK1Thr210",
+      "id": "Cr_HCC",
+      "class": "Disease",
+      "name": "cryptogenic hepatocellular carcinoma",
       "synonyms": [
-        "PLK1Thr210"
+        "Cr-HCC"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0019204",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "HCC_disease",
+      "id": "hepatocellular_carcinoma",
       "class": "Disease",
       "name": "hepatocellular carcinoma",
       "synonyms": [
         "HCC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C2239176",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "phospho_P53Ser315",
+      "class": "Biomarker",
+      "name": "phospho-P53Ser315",
+      "synonyms": [
+        "P53Ser315",
+        "Phospho-p53Ser315"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "phospho_PLK1Thr210",
+      "class": "Biomarker",
+      "name": "phospho-PLK1Thr210",
+      "synonyms": [
+        "PLK1Thr210",
+        "Phospho-PLK1Thr210"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "AURKA_CNV",
+      "class": "Biomarker",
+      "name": "AURKA copy number variation",
+      "synonyms": [
+        "AURKA CNV"
       ],
       "symbol": null,
       "brand_names": [],
@@ -212,102 +233,8 @@
       "uniprot_id": null
     },
     {
-      "id": "CNV_mutation",
-      "class": "Mutation",
-      "name": "copy number variation",
-      "synonyms": [
-        "CNV"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "atezolizumab_drug",
-      "class": "Drug",
-      "name": "atezolizumab",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "bevacizumab_drug",
-      "class": "Drug",
-      "name": "bevacizumab",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "MLN8237_drug",
-      "class": "Drug",
-      "name": "MLN8237",
-      "synonyms": [
-        "Alisertib"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "sorafenib_drug",
-      "class": "Drug",
-      "name": "Sorafenib",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "MDM2_protein",
-      "class": "Protein",
-      "name": "MDM2",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "centrosome_amplification_biomarker",
-      "class": "Biomarker",
+      "id": "centrosome_amplification",
+      "class": "BiologicalProcess",
       "name": "centrosome amplification",
       "synonyms": [],
       "symbol": null,
@@ -321,23 +248,8 @@
       "uniprot_id": null
     },
     {
-      "id": "chromosomal_instability_biomarker",
-      "class": "Biomarker",
-      "name": "chromosomal instability",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "genomic_instability_biomarker",
-      "class": "Biomarker",
+      "id": "genomic_instability",
+      "class": "BiologicalProcess",
       "name": "genomic instability",
       "synonyms": [],
       "symbol": null,
@@ -351,11 +263,26 @@
       "uniprot_id": null
     },
     {
-      "id": "TACE_procedure",
-      "class": "Procedure",
-      "name": "transarterial chemoembolization",
+      "id": "mitotic_entry",
+      "class": "BiologicalProcess",
+      "name": "mitotic entry",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "G2_M_checkpoint",
+      "class": "BiologicalProcess",
+      "name": "G2/M checkpoint",
       "synonyms": [
-        "TACE"
+        "G2/M cell cycle checkpoint"
       ],
       "symbol": null,
       "brand_names": [],
@@ -368,7 +295,7 @@
       "uniprot_id": null
     },
     {
-      "id": "IHC_procedure",
+      "id": "immunohistochemistry",
       "class": "Procedure",
       "name": "immunohistochemistry",
       "synonyms": [
@@ -385,7 +312,7 @@
       "uniprot_id": null
     },
     {
-      "id": "TMA_procedure",
+      "id": "tissue_microarray",
       "class": "Procedure",
       "name": "tissue microarray",
       "synonyms": [
@@ -402,11 +329,125 @@
       "uniprot_id": null
     },
     {
-      "id": "qPCR_procedure",
+      "id": "quantitative_PCR",
       "class": "Procedure",
       "name": "quantitative PCR",
       "synonyms": [
-        "qPCR"
+        "qPCR",
+        "real-time PCR"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "MLN8237",
+      "class": "Drug",
+      "name": "MLN8237",
+      "synonyms": [
+        "Alisertib"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "1298331",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "sorafenib",
+      "class": "Drug",
+      "name": "sorafenib",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "681479",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "MDM2_protein",
+      "class": "Protein",
+      "name": "MDM2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:6973",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CDC2_protein",
+      "class": "Enzyme",
+      "name": "CDC2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1722",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "liver_transplantation",
+      "class": "Procedure",
+      "name": "liver transplantation",
+      "synonyms": [
+        "living-donor liver transplantation"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "RNA_fragmentation",
+      "class": "BiologicalProcess",
+      "name": "RNA fragmentation",
+      "synonyms": [
+        "RNA degradation"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "FFPE_tissue",
+      "class": "AnatomicalStructure",
+      "name": "formalin-fixed paraffin-embedded tissue",
+      "synonyms": [
+        "FFPE"
       ],
       "symbol": null,
       "brand_names": [],
@@ -421,10 +462,10 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper:results:1:llm",
+      "id": "PMC_UNKNOWN:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "results_1",
       "text": "AURKA level was significantly increased in both test groups (p < 0.001). At the protein level, AURKA was significantly higher in both cancer groups compared to the control group (p < 0.001).",
       "confidence": 0.95,
@@ -434,10 +475,10 @@
       "source": "extracted"
     },
     {
-      "id": "paper:results:2:llm",
+      "id": "PMC_UNKNOWN:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "results_2",
       "text": "Phospho-P53Ser315 levels were significantly higher in both HBV-HCC and Cr-HCC groups compared to the control group (p = 0.002 and p < 0.001, respectively). Cr-HCC cases also showed significantly higher levels compared to HBV-HCC (p = 0.025).",
       "confidence": 0.95,
@@ -447,10 +488,10 @@
       "source": "extracted"
     },
     {
-      "id": "paper:results:3:llm",
+      "id": "PMC_UNKNOWN:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "results_3",
       "text": "For phospho-PLK1Thr210, Cr-HCC cases showed statistically higher expression compared to both the control group and HBV-HCC cases (p = 0.001).",
       "confidence": 0.95,
@@ -460,10 +501,10 @@
       "source": "extracted"
     },
     {
-      "id": "paper:results:4:llm",
+      "id": "PMC_UNKNOWN:results:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "results_4",
       "text": "There was no increase in AURKA gene copy number among the groups (2\u2212\u2206\u2206Ct < 2).",
       "confidence": 0.95,
@@ -473,10 +514,49 @@
       "source": "extracted"
     },
     {
-      "id": "paper:discussion:1:llm",
+      "id": "PMC_UNKNOWN:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
+      "text_span_id": "introduction_1",
+      "text": "AURKA directly phosphorylates the Thr210 residue within the PLK1 kinase domain, initiating mitotic progression.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "case-control study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_UNKNOWN:introduction:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_UNKNOWN",
+      "text_span_id": "introduction_2",
+      "text": "Overexpression of AURKA has been shown to destabilize p53 through Ser315 phosphorylation, leading to loss of function, centrosome amplification, chromosomal instability, and oncogenic transformation.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "case-control study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_UNKNOWN:introduction:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_UNKNOWN",
+      "text_span_id": "introduction_3",
+      "text": "In HBV-related HCC, the hepatitis B viral protein HBx interacts with and binds to p53, thereby suppressing key tumor-suppressive mechanisms.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "case-control study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_UNKNOWN:discussion:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "discussion_1",
       "text": "AURKA has been shown to phosphorylate P53 at Ser315, leading to its ubiquitination by MDM2 and subsequent proteolysis.",
       "confidence": 0.9,
@@ -486,26 +566,13 @@
       "source": "extracted"
     },
     {
-      "id": "paper:discussion:2:llm",
+      "id": "PMC_UNKNOWN:discussion:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
+      "paper_id": "PMC_UNKNOWN",
       "text_span_id": "discussion_2",
-      "text": "AURKA directly phosphorylates PLK1 at the conserved Thr210 residue within its activation loop, a modification essential for PLK1 activation.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "case-control study",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper:introduction:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": "introduction_1",
-      "text": "In HBV-related HCC, the hepatitis B viral protein HBx interacts with and binds to p53, thereby suppressing key tumor-suppressive mechanisms.",
-      "confidence": 0.9,
+      "text": "experimental studies have demonstrated that MLN8237 exhibits a strong synergistic effect with Sorafenib in HCC models.",
+      "confidence": 0.85,
       "extraction_method": "llm",
       "study_type": "case-control study",
       "eco_type": null,
@@ -514,14 +581,14 @@
   ],
   "relationships": [
     {
-      "subject": "AURKA_enzyme",
+      "subject": "AURKA_protein",
       "predicate": "INCREASES_RISK",
-      "object": "HBV_HCC_disease",
+      "object": "HBV_HCC",
       "evidence_ids": [
-        "paper:results:1:llm"
+        "PMC_UNKNOWN:results:1:llm"
       ],
       "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -531,14 +598,14 @@
       "note": null
     },
     {
-      "subject": "AURKA_enzyme",
+      "subject": "AURKA_protein",
       "predicate": "INCREASES_RISK",
-      "object": "Cr_HCC_disease",
+      "object": "Cr_HCC",
       "evidence_ids": [
-        "paper:results:1:llm"
+        "PMC_UNKNOWN:results:1:llm"
       ],
       "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -548,78 +615,90 @@
       "note": null
     },
     {
-      "subject": "AURKA_enzyme",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "P53Ser315_biomarker",
+      "subject": "AURKA_protein",
+      "predicate": "PHOSPHORYLATES",
+      "object": "PLK1_protein",
       "evidence_ids": [
-        "paper:results:2:llm",
-        "paper:discussion:1:llm"
+        "PMC_UNKNOWN:introduction:1:llm"
       ],
       "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "phosphorylation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "AURKA_enzyme",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "PLK1Thr210_biomarker",
-      "evidence_ids": [
-        "paper:results:3:llm",
-        "paper:discussion:2:llm"
-      ],
-      "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "phosphorylation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "P53Ser315_biomarker",
-      "predicate": "INDICATES",
-      "object": "Cr_HCC_disease",
-      "evidence_ids": [
-        "paper:results:2:llm"
-      ],
-      "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
       "confidence": 0.9,
       "properties": {
-        "comparison": "higher than HBV-HCC"
+        "site": "Thr210"
       },
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "AURKA_protein",
+      "predicate": "PHOSPHORYLATES",
+      "object": "P53_protein",
+      "evidence_ids": [
+        "PMC_UNKNOWN:introduction:2:llm",
+        "PMC_UNKNOWN:discussion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "site": "Ser315"
+      },
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "phospho_P53Ser315",
+      "predicate": "INDICATES",
+      "object": "HBV_HCC",
+      "evidence_ids": [
+        "PMC_UNKNOWN:results:2:llm"
+      ],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.95,
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "PLK1Thr210_biomarker",
+      "subject": "phospho_P53Ser315",
       "predicate": "INDICATES",
-      "object": "Cr_HCC_disease",
+      "object": "Cr_HCC",
       "evidence_ids": [
-        "paper:results:3:llm"
+        "PMC_UNKNOWN:results:2:llm"
       ],
       "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
       "confidence": 0.95,
-      "properties": {
-        "specificity": "higher in Cr-HCC than HBV-HCC"
-      },
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "phospho_PLK1Thr210",
+      "predicate": "INDICATES",
+      "object": "Cr_HCC",
+      "evidence_ids": [
+        "PMC_UNKNOWN:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.95,
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -627,54 +706,85 @@
     },
     {
       "subject": "HBx_protein",
-      "predicate": "ASSOCIATED_WITH",
+      "predicate": "INTERACTS_WITH",
       "object": "P53_protein",
       "evidence_ids": [
-        "paper:introduction:1:llm"
+        "PMC_UNKNOWN:introduction:3:llm"
       ],
       "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
       "confidence": 0.9,
-      "properties": {
-        "mechanism": "binding and suppression"
-      },
+      "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "CNV_mutation",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "AURKA_enzyme",
+      "subject": "AURKA_protein",
+      "predicate": "CAUSES",
+      "object": "centrosome_amplification",
       "evidence_ids": [
-        "paper:results:4:llm"
+        "PMC_UNKNOWN:introduction:2:llm"
       ],
       "source_papers": [
-        "paper"
+        "PMC_UNKNOWN"
       ],
-      "confidence": 0.95,
-      "properties": {
-        "finding": "no increase detected"
-      },
-      "section": "results",
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "MLN8237_drug",
-      "predicate": "TREATS",
-      "object": "HCC_disease",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
+      "subject": "AURKA_protein",
+      "predicate": "CAUSES",
+      "object": "genomic_instability",
+      "evidence_ids": [
+        "PMC_UNKNOWN:introduction:2:llm"
       ],
-      "confidence": 0.8,
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "AURKA_protein",
+      "predicate": "REGULATES",
+      "object": "mitotic_entry",
+      "evidence_ids": [
+        "PMC_UNKNOWN:introduction:1:llm"
+      ],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "MLN8237",
+      "predicate": "TREATS",
+      "object": "hepatocellular_carcinoma",
+      "evidence_ids": [
+        "PMC_UNKNOWN:discussion:2:llm"
+      ],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.85,
       "properties": {
-        "mechanism": "AURKA inhibition",
-        "status": "clinical trials"
+        "combination_with": "sorafenib"
       },
       "section": "discussion",
       "asserted_by": "llm",
@@ -682,26 +792,43 @@
       "note": null
     },
     {
-      "subject": "atezolizumab_drug",
-      "predicate": "TREATS",
-      "object": "HCC_disease",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
+      "subject": "P53_protein",
+      "predicate": "DEGRADED_BY",
+      "object": "MDM2_protein",
+      "evidence_ids": [
+        "PMC_UNKNOWN:discussion:1:llm"
       ],
-      "confidence": 0.85,
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 0.9,
       "properties": {
-        "combination": "with bevacizumab"
+        "mechanism": "ubiquitination"
       },
-      "section": "introduction",
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
+    },
+    {
+      "subject": "Aurora kinase A",
+      "predicate": "SAME_AS",
+      "object": "AURKA_protein",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_UNKNOWN"
+      ],
+      "confidence": 1.0,
+      "properties": {},
+      "section": "title",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": "Same protein, different naming conventions"
     }
   ],
   "notes": [
-    "This study compared AURKA expression and activity between HBV-associated HCC and cryptogenic HCC, finding distinct patterns of substrate phosphorylation that may have therapeutic implications.",
-    "RNA quality issues prevented gene expression analysis, requiring reliance on immunohistochemical methods for protein-level assessment.",
-    "The study suggests that AURKA-targeted therapies may need to be stratified by HCC etiology due to different downstream signaling patterns."
+    "This study used tissue microarray and immunohistochemistry due to RNA degradation in FFPE samples",
+    "The study found differential AURKA substrate activation patterns between HBV-HCC and cryptogenic HCC",
+    "No AURKA copy number variations were detected in either HCC subtype"
   ]
 }

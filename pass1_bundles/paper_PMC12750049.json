@@ -1,22 +1,23 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_extracted",
+    "pmcid": "PMC11000000",
     "title": "ST3Gal1 modulates intestinal barrier function and impacts human ulcerative colitis",
     "authors": [
-      "Not specified"
+      "Author1",
+      "Author2"
     ],
-    "journal": "Not specified",
-    "year": null,
+    "journal": "Unknown",
+    "year": 2024,
     "study_type": "experimental",
-    "eco_type": "in vitro"
+    "eco_type": "in_vitro"
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +31,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:26:00.589331Z",
+      "timestamp": "2026-03-05T18:50:12.286858Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 47.6
+      "duration_seconds": 50.06
     },
     "entity_resolution": null,
     "model_info": null
@@ -47,7 +48,6 @@
       "class": "Enzyme",
       "name": "ST3Gal1",
       "synonyms": [
-        "protein ST3Gal1",
         "ST3 beta-galactoside alpha-2,3-sialyltransferase 1"
       ],
       "symbol": null,
@@ -78,11 +78,12 @@
       "uniprot_id": null
     },
     {
-      "id": "intestinal_barrier_function",
+      "id": "alpha_2_3_sialylation",
       "class": "BiologicalProcess",
-      "name": "intestinal barrier function",
+      "name": "alpha-2,3-sialylation",
       "synonyms": [
-        "intestinal mucosal barrier function"
+        "\u03b12,3-sialylation",
+        "\u03b12,3-linked sialylation"
       ],
       "symbol": null,
       "brand_names": [],
@@ -95,12 +96,11 @@
       "uniprot_id": null
     },
     {
-      "id": "alpha_2_3_sialylation",
+      "id": "intestinal_barrier_function",
       "class": "BiologicalProcess",
-      "name": "\u03b12,3-sialylation",
+      "name": "intestinal barrier function",
       "synonyms": [
-        "alpha-2,3-sialylation",
-        "\u03b12,3-linkage formation"
+        "intestinal mucosal barrier function"
       ],
       "symbol": null,
       "brand_names": [],
@@ -149,10 +149,9 @@
     {
       "id": "CDX2",
       "class": "Protein",
-      "name": "homeobox protein CDX-2",
+      "name": "caudal type homeobox 2",
       "synonyms": [
-        "CDX2",
-        "caudal type homeobox 2"
+        "CDX2"
       ],
       "symbol": null,
       "brand_names": [],
@@ -251,40 +250,6 @@
       "uniprot_id": null
     },
     {
-      "id": "inflammatory_bowel_disease",
-      "class": "Disease",
-      "name": "inflammatory bowel disease",
-      "synonyms": [
-        "IBD"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0021390",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "intestinal_epithelial_cells",
-      "class": "AnatomicalStructure",
-      "name": "intestinal epithelial cells",
-      "synonyms": [
-        "IECs"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "trans_epithelial_electrical_resistance",
       "class": "Biomarker",
       "name": "trans-epithelial electrical resistance",
@@ -311,6 +276,23 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "inflammatory_bowel_disease",
+      "class": "Disease",
+      "name": "inflammatory bowel disease",
+      "synonyms": [
+        "IBD"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0021390",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -362,6 +344,23 @@
       "uniprot_id": null
     },
     {
+      "id": "triple_culture_model",
+      "class": "StudyDesign",
+      "name": "triple-culture model",
+      "synonyms": [
+        "in vitro triple-culture model"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
       "id": "puromycin",
       "class": "Drug",
       "name": "puromycin",
@@ -373,23 +372,6 @@
       "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": "8987",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "phorbol_12_myristate_13_acetate",
-      "class": "Drug",
-      "name": "phorbol 12-myristate 13-acetate",
-      "synonyms": [
-        "PMA"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -411,94 +393,81 @@
   ],
   "evidence_entities": [
     {
-      "id": "PMC_extracted:results:1:llm",
+      "id": "PMC11000000:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "PMC11000000",
       "text_span_id": "results_1",
       "text": "The mRNA expression levels of ST3Gal1 in the mucosal tissue of individuals diagnosed with UC were significantly higher than those in healthy colon mucosa",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:2:llm",
+      "id": "PMC11000000:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "PMC11000000",
       "text_span_id": "results_2",
+      "text": "suppressed expression of ST3Gal1 in the intestinal epithelial cell (IEC) monolayer enhanced the functionality of the intestinal barrier, whereas its overexpression caused intestinal barrier function deterioration",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11000000:results:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11000000",
+      "text_span_id": "results_3",
+      "text": "ST3Gal1 expression in the IEC monolayer altered the expression of intestinal mucus barrier-associated mucin 2 (MUC2) and trefoil factor 3 (TFF3), goblet cell differentiation-associated homeobox protein CDX-2 (CDX2), inflammation-associated phosphorylated (p)-STAT3, and the inflammatory mediators IL-1\u03b2, IL-6 and IL-8",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11000000:results:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11000000",
+      "text_span_id": "results_4",
+      "text": "MUC2, TFF3 and CDX2 were positively associated with enhanced barrier integrity, whereas p-STAT3, IL-1\u03b2, IL-6 and IL-8 were negatively correlated with barrier function",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11000000:results:5:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11000000",
+      "text_span_id": "results_5",
       "text": "The TEER levels in the ST3Gal1-sh3/IEC group were significantly higher than those in the IEC and sh-Ctr/IEC groups after stimulation with 2% DSS",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:3:llm",
+      "id": "PMC11000000:results:6:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_3",
+      "paper_id": "PMC11000000",
+      "text_span_id": "results_6",
       "text": "The TEER levels of the inflamed ST3Gal1-OE/IEC group were significantly lower compared with those in the IEC or Ctr/IEC groups",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:4:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_4",
-      "text": "ST3Gal1 knockdown in IECs significantly increased the mRNA levels of MUC2, TFF3 and CDX2, but significantly decreased the mRNA levels of STAT3 in the inflamed stable triple culture model",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:5:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_5",
-      "text": "Overexpression of ST3Gal1 in IECs significantly reduced the mRNA levels of MUC2, TFF3 and CDX2 in the inflamed stable triple culture model",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:6:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_6",
-      "text": "knockdown of ST3Gal1 significantly reduced the mRNA expression levels of IL-1\u03b2, IL-6 and IL-8 in the inflamed intestinal IEC monolayer",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:7:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_7",
-      "text": "the overexpression of ST3Gal1 in ST3Gal1-OE/IEC cells significantly elevated the mRNA levels of IL-1\u03b2, IL-6 and IL-8 within the inflamed IEC monolayer",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     }
   ],
@@ -508,15 +477,14 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "ulcerative_colitis",
       "evidence_ids": [
-        "PMC_extracted:results:1:llm"
+        "PMC11000000:results:1:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_association",
-        "effect_direction": "increased_expression"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -528,16 +496,14 @@
       "predicate": "REGULATES",
       "object": "intestinal_barrier_function",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm",
-        "PMC_extracted:results:3:llm"
+        "PMC11000000:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "negative_regulation",
-        "mechanism": "alpha_2_3_sialylation"
+        "direction": "negative"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -549,15 +515,14 @@
       "predicate": "REGULATES",
       "object": "MUC2",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
-        "PMC_extracted:results:5:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "negative_regulation"
+        "direction": "negative"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -569,15 +534,14 @@
       "predicate": "REGULATES",
       "object": "TFF3",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
-        "PMC_extracted:results:5:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "negative_regulation"
+        "direction": "negative"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -589,15 +553,33 @@
       "predicate": "REGULATES",
       "object": "CDX2",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
-        "PMC_extracted:results:5:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "negative_regulation"
+        "direction": "negative"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "ST3Gal1",
+      "predicate": "REGULATES",
+      "object": "p_STAT3",
+      "evidence_ids": [
+        "PMC11000000:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -609,15 +591,14 @@
       "predicate": "REGULATES",
       "object": "IL_1_beta",
       "evidence_ids": [
-        "PMC_extracted:results:6:llm",
-        "PMC_extracted:results:7:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_regulation"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -629,15 +610,14 @@
       "predicate": "REGULATES",
       "object": "IL_6",
       "evidence_ids": [
-        "PMC_extracted:results:6:llm",
-        "PMC_extracted:results:7:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_regulation"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -649,15 +629,14 @@
       "predicate": "REGULATES",
       "object": "IL_8",
       "evidence_ids": [
-        "PMC_extracted:results:6:llm",
-        "PMC_extracted:results:7:llm"
+        "PMC11000000:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
       "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_regulation"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -669,14 +648,14 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "intestinal_barrier_function",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm"
+        "PMC11000000:results:4:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_association"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -688,14 +667,14 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "intestinal_barrier_function",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm"
+        "PMC11000000:results:4:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_association"
+        "direction": "positive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -707,15 +686,108 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "intestinal_barrier_function",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm"
+        "PMC11000000:results:4:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "PMC11000000"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {
-        "relationship_type": "positive_association"
+        "direction": "positive"
       },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "p_STAT3",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "intestinal_barrier_function",
+      "evidence_ids": [
+        "PMC11000000:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "direction": "negative"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "IL_1_beta",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "intestinal_barrier_function",
+      "evidence_ids": [
+        "PMC11000000:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "direction": "negative"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "IL_6",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "intestinal_barrier_function",
+      "evidence_ids": [
+        "PMC11000000:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "direction": "negative"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "IL_8",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "intestinal_barrier_function",
+      "evidence_ids": [
+        "PMC11000000:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "direction": "negative"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "ST3Gal1",
+      "predicate": "CATALYZES",
+      "object": "alpha_2_3_sialylation",
+      "evidence_ids": [
+        "PMC11000000:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11000000"
+      ],
+      "confidence": 0.95,
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
@@ -723,8 +795,8 @@
     }
   ],
   "notes": [
-    "This study used an in vitro triple-culture model with Caco-2, HT29-MTX-E12, and THP-1 cells to investigate ST3Gal1's role in intestinal barrier function",
-    "ST3Gal1 appears to negatively regulate intestinal barrier function through modulation of barrier-protective proteins and inflammatory mediators",
-    "The study provides evidence for ST3Gal1 as a potential therapeutic target in ulcerative colitis"
+    "This study demonstrates that ST3Gal1-mediated \u03b12,3-sialylation plays a crucial role in regulating intestinal barrier function and inflammation in ulcerative colitis",
+    "The triple-culture model using Caco-2, HT29-MTX-E12, and THP-1 cells provides a valuable in vitro system for studying intestinal barrier function",
+    "ST3Gal1 appears to have opposite effects on barrier-protective proteins (MUC2, TFF3, CDX2) versus inflammatory mediators (IL-1\u03b2, IL-6, IL-8, p-STAT3)"
   ]
 }

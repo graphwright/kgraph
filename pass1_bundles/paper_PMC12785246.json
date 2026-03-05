@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:39:27.952030Z",
+      "timestamp": "2026-03-05T19:04:40.995286Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 46.86
+      "duration_seconds": 47.0
     },
     "entity_resolution": null,
     "model_info": null
@@ -44,7 +44,7 @@
   "entities": [
     {
       "id": "SOX11",
-      "class": "Protein",
+      "class": "Gene",
       "name": "SOX11",
       "synonyms": [
         "Sox11"
@@ -61,7 +61,7 @@
     },
     {
       "id": "EGFR",
-      "class": "Protein",
+      "class": "Other",
       "name": "epidermal growth factor receptor",
       "synonyms": [
         "EGFR"
@@ -95,7 +95,7 @@
     },
     {
       "id": "EGF",
-      "class": "Hormone",
+      "class": "Protein",
       "name": "epidermal growth factor",
       "synonyms": [
         "EGF"
@@ -122,7 +122,7 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C1168401",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -148,7 +148,7 @@
     },
     {
       "id": "TWIST1",
-      "class": "Protein",
+      "class": "Gene",
       "name": "TWIST1",
       "synonyms": [
         "Twist1"
@@ -225,7 +225,7 @@
     },
     {
       "id": "TWIST2",
-      "class": "Protein",
+      "class": "Gene",
       "name": "TWIST2",
       "synonyms": [
         "Twist2"
@@ -242,7 +242,7 @@
     },
     {
       "id": "SNAIL",
-      "class": "Protein",
+      "class": "Gene",
       "name": "SNAIL",
       "synonyms": [
         "Snail",
@@ -260,7 +260,7 @@
     },
     {
       "id": "SLUG",
-      "class": "Protein",
+      "class": "Gene",
       "name": "SLUG",
       "synonyms": [
         "Slug",
@@ -278,7 +278,7 @@
     },
     {
       "id": "ZEB1",
-      "class": "Protein",
+      "class": "Gene",
       "name": "ZEB1",
       "synonyms": [
         "Zeb1"
@@ -295,7 +295,7 @@
     },
     {
       "id": "ZEB2",
-      "class": "Protein",
+      "class": "Gene",
       "name": "ZEB2",
       "synonyms": [
         "Zeb2"
@@ -337,7 +337,7 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:7107",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -380,8 +380,8 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_2",
-      "text": "EGFR inhibitor suppresses the expression of SOX11 in HNSCC cells",
-      "confidence": 0.95,
+      "text": "when EMEQA and EGF are both present in the culture medium, the expression of SOX11 was not significantly increased",
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
       "eco_type": "in_vitro",
@@ -393,7 +393,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_3",
-      "text": "STAT3 bound to the Sox11 gene promoter and transcriptionally upregulated the expression of Sox11 in HNSCC cells",
+      "text": "Both UM1 and UMSCC5 cells have significantly higher enrichment folds for the DNA fragments of the Sox11 gene promoter in the anti-STAT3-immunoprecipitated or anti-pSTAT3-immunoprecipitated samples",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -406,7 +406,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_4",
-      "text": "Knockdown of SOX11 significantly downregulated the expression of EMT-related genes, including EMT-TFs, vimentin, fibronectin, and N-cadherin, but significantly upregulated E-cadherin",
+      "text": "the siSox11 knockdown significantly promoted E-cadherin gene expression, whereas the gene expression of N-cadherin, vimentin, fibronectin, and EMT-TFs was inhibited by siSox11 knockdown",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -419,7 +419,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_5",
-      "text": "SOX11 overexpression significantly inhibited E-cadherin gene expression but induced the gene expression of N-cadherin, vimentin, fibronectin, and EMT-TFs",
+      "text": "overexpression of SOX11 promoted the gene expression of N-cadherin, vimentin, fibronectin, and EMT-TFs and inhibited the gene expression of E-cadherin",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -432,7 +432,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_6",
-      "text": "SOX11 bound to the promoter region of the Twist1 gene in HNSCC cells",
+      "text": "ChIP assays demonstrated that SOX11 bound to the promoter region of the Twist1 gene in HNSCC cells",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -445,8 +445,8 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_7",
-      "text": "SOX11 was found to promote HNSCC tumor growth and the expression of TWIST1 in vivo",
-      "confidence": 0.95,
+      "text": "an increase in the volume and weight of the xenograft tumors was observed in the SOX11 overexpression group when compared with the control group",
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
       "eco_type": "in_vivo",
@@ -473,7 +473,7 @@
     },
     {
       "subject": "EMEQA",
-      "predicate": "DECREASES",
+      "predicate": "INHIBITS",
       "object": "SOX11",
       "evidence_ids": [
         "PMC_extracted:results:2:llm"
@@ -481,7 +481,7 @@
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -499,6 +499,185 @@
         "PMC_extracted"
       ],
       "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INHIBITS",
+      "object": "E-cadherin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "N-cadherin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "vimentin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "fibronectin",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "REGULATES",
+      "object": "TWIST1",
+      "evidence_ids": [
+        "PMC_extracted:results:6:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "TWIST2",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "SNAIL",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "SLUG",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "ZEB1",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "SOX11",
+      "predicate": "INCREASES",
+      "object": "ZEB2",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -525,194 +704,6 @@
     },
     {
       "subject": "SOX11",
-      "predicate": "DECREASES",
-      "object": "E-cadherin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "N-cadherin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "vimentin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "fibronectin",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "REGULATES",
-      "object": "TWIST1",
-      "evidence_ids": [
-        "PMC_extracted:results:6:llm",
-        "PMC_extracted:results:7:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "TWIST1",
-      "evidence_ids": [
-        "PMC_extracted:results:7:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "TWIST2",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "SNAIL",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "SLUG",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "ZEB1",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
-      "predicate": "INCREASES",
-      "object": "ZEB2",
-      "evidence_ids": [
-        "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SOX11",
       "predicate": "ASSOCIATED_WITH",
       "object": "HNSCC",
       "evidence_ids": [
@@ -721,7 +712,7 @@
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -736,17 +727,17 @@
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
       "section": "methods",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "EMEQA is an EGFR inhibitor"
+      "note": "EMEQA is described as an EGFR inhibitor"
     }
   ],
   "notes": [
     "This study demonstrates that SOX11 is regulated by the EGF-EGFR-STAT3 signaling pathway and promotes epithelial-mesenchymal transition in head and neck squamous cell carcinoma",
     "The research includes both in vitro cell culture experiments and in vivo xenograft mouse models",
-    "Multiple EMT transcription factors are regulated by SOX11, including TWIST1, TWIST2, SNAIL, SLUG, ZEB1, and ZEB2"
+    "Multiple EMT transcription factors are shown to be regulated by SOX11"
   ]
 }

@@ -1,12 +1,14 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_CUSHING_COMORBIDITIES",
-    "title": "Comorbidities in Cushing's disease",
+    "pmcid": "PMC10667925",
+    "title": "Autoimmune primary adrenal insufficiency -current diagnostic approaches and future perspectives",
     "authors": [
-      "Not specified"
+      "AW",
+      "IK",
+      "BO"
     ],
-    "journal": "Not specified",
+    "journal": null,
     "year": null,
     "study_type": "Review",
     "eco_type": null
@@ -33,1033 +35,19 @@
       "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T19:09:31.551081Z",
+      "timestamp": "2026-03-05T18:39:56.447649Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 100.04
+      "duration_seconds": 95.26
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "cushing_disease",
-      "class": "Disease",
-      "name": "Cushing's disease",
-      "synonyms": [
-        "CD",
-        "Cushing disease"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0010481",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pituitary_adenoma",
-      "class": "Disease",
-      "name": "pituitary adenoma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0032000",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypercortisolemia",
-      "class": "Disease",
-      "name": "hypercortisolemia",
-      "synonyms": [
-        "hypercortisolism"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020626",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "transsphenoidal_surgery",
-      "class": "Procedure",
-      "name": "transsphenoidal surgery",
-      "synonyms": [
-        "TSS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "steroidogenesis_inhibitors",
-      "class": "Drug",
-      "name": "steroidogenesis inhibitors",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glucocorticoid_receptor_antagonists",
-      "class": "Drug",
-      "name": "glucocorticoid receptor antagonists",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pituitary_radiotherapy",
-      "class": "Procedure",
-      "name": "pituitary radiotherapy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "visceral_adiposity",
-      "class": "Symptom",
-      "name": "visceral adiposity",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glucose_intolerance",
-      "class": "Disease",
-      "name": "glucose intolerance",
-      "synonyms": [
-        "impaired glucose tolerance"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0271650",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "dyslipidemia",
-      "class": "Disease",
-      "name": "dyslipidemia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0242339",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "procoagulant_phenotype",
-      "class": "Symptom",
-      "name": "procoagulant phenotype",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cognitive_alterations",
-      "class": "Symptom",
-      "name": "cognitive alterations",
-      "synonyms": [
-        "cognitive impairment",
-        "cognitive dysfunction"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mood_alterations",
-      "class": "Symptom",
-      "name": "mood alterations",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "vertebral_fractures",
-      "class": "Disease",
-      "name": "vertebral fractures",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0080179",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "standardized_mortality_ratio",
-      "class": "Biomarker",
-      "name": "standardized mortality ratio",
-      "synonyms": [
-        "SMR"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cardiovascular_events",
-      "class": "Disease",
-      "name": "cardiovascular events",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cerebrovascular_events",
-      "class": "Disease",
-      "name": "cerebrovascular events",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "waist_to_hip_ratio",
-      "class": "Biomarker",
-      "name": "waist-to-hip ratio",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "oral_glucose_tolerance_test",
-      "class": "Procedure",
-      "name": "oral glucose tolerance test",
-      "synonyms": [
-        "OGTT"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "total_hdl_cholesterol_ratio",
-      "class": "Biomarker",
-      "name": "total/HDL cholesterol ratio",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "fibrinogen_levels",
-      "class": "Biomarker",
-      "name": "fibrinogen levels",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "intima_media_thickness",
-      "class": "Biomarker",
-      "name": "intima-media thickness",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "distensibility_coefficient",
-      "class": "Biomarker",
-      "name": "distensibility coefficient",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "left_ventricular_hypertrophy",
-      "class": "Disease",
-      "name": "left ventricular hypertrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0149721",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "concentric_remodeling",
-      "class": "Disease",
-      "name": "concentric remodeling",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "diastolic_dysfunction",
-      "class": "Disease",
-      "name": "diastolic dysfunction",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "venous_thromboembolism",
-      "class": "Disease",
-      "name": "venous thromboembolism",
-      "synonyms": [
-        "VTE"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C1861172",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "insulin_resistance",
-      "class": "Disease",
-      "name": "insulin resistance",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0021655",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "gluconeogenesis_enzymes",
-      "class": "Enzyme",
-      "name": "gluconeogenesis enzymes",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "homeostatic_model_assessment",
-      "class": "Procedure",
-      "name": "homeostatic model assessment",
-      "synonyms": [
-        "HOMA"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "insulin_sensitivity_index",
-      "class": "Biomarker",
-      "name": "insulin sensitivity index",
-      "synonyms": [
-        "ISI"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "ldl_cholesterol",
-      "class": "Biomarker",
-      "name": "LDL cholesterol",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "triglycerides",
-      "class": "Biomarker",
-      "name": "triglycerides",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mitotane",
-      "class": "Drug",
-      "name": "mitotane",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6960",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "ketoconazole",
-      "class": "Drug",
-      "name": "ketoconazole",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6135",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "simvastatin",
-      "class": "Drug",
-      "name": "simvastatin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "36567",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pravastatin",
-      "class": "Drug",
-      "name": "pravastatin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "42463",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "dual_energy_xray_absorptiometry",
-      "class": "Procedure",
-      "name": "dual energy X-ray absorptiometry",
-      "synonyms": [
-        "DXA"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "rib_fractures",
-      "class": "Disease",
-      "name": "rib fractures",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "osteoblastic_activity",
-      "class": "BiologicalProcess",
-      "name": "osteoblastic activity",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "osteoclastic_activity",
-      "class": "BiologicalProcess",
-      "name": "osteoclastic activity",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypogonadism",
-      "class": "Disease",
-      "name": "hypogonadism",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020619",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "growth_hormone_deficiency",
-      "class": "Disease",
-      "name": "growth hormone deficiency",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0271561",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "calcium_absorption",
-      "class": "BiologicalProcess",
-      "name": "calcium absorption",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "calcium_excretion",
-      "class": "BiologicalProcess",
-      "name": "calcium excretion",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "bone_mineral_density",
-      "class": "Biomarker",
-      "name": "bone mineral density",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypercalciuria",
-      "class": "Disease",
-      "name": "hypercalciuria",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020437",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypocitraturia",
-      "class": "Disease",
-      "name": "hypocitraturia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hyperuricosuria",
-      "class": "Disease",
-      "name": "hyperuricosuria",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hyperoxalaturia",
-      "class": "Disease",
-      "name": "hyperoxalaturia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "psychiatric_disturbance",
-      "class": "Disease",
-      "name": "psychiatric disturbance",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "irritability",
-      "class": "Symptom",
-      "name": "irritability",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "emotional_lability",
-      "class": "Symptom",
-      "name": "emotional lability",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mania",
-      "class": "Disease",
-      "name": "mania",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0338831",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "paranoia",
-      "class": "Disease",
-      "name": "paranoia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0030472",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "acute_psychosis",
-      "class": "Disease",
-      "name": "acute psychosis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "panic_attacks",
-      "class": "Disease",
-      "name": "panic attacks",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0086769",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "psychopathology",
-      "class": "Disease",
-      "name": "psychopathology",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "maladaptive_personality_traits",
-      "class": "Symptom",
-      "name": "maladaptive personality traits",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hippocampal_atrophy",
-      "class": "Disease",
-      "name": "hippocampal atrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "glucocorticoid_receptors",
-      "class": "Protein",
-      "name": "glucocorticoid receptors",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hippocampal_formation_volume",
-      "class": "Biomarker",
-      "name": "hippocampal formation volume",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "brain_volume",
-      "class": "Biomarker",
-      "name": "brain volume",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cerebral_atrophy",
-      "class": "Disease",
-      "name": "cerebral atrophy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "fractional_anisotropy",
-      "class": "Biomarker",
-      "name": "fractional anisotropy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "white_matter_integrity",
-      "class": "Biomarker",
-      "name": "white matter integrity",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "uncinate_fasciculus",
+      "id": "adrenal_glands",
       "class": "AnatomicalStructure",
-      "name": "uncinate fasciculus",
+      "name": "adrenal glands",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1072,9 +60,9 @@
       "uniprot_id": null
     },
     {
-      "id": "depressive_symptoms",
-      "class": "Symptom",
-      "name": "depressive symptoms",
+      "id": "adrenal_cortex",
+      "class": "AnatomicalStructure",
+      "name": "adrenal cortex",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1087,41 +75,11 @@
       "uniprot_id": null
     },
     {
-      "id": "executive_functioning",
-      "class": "BiologicalProcess",
-      "name": "executive functioning",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "eucortisolemia",
-      "class": "Disease",
-      "name": "eucortisolemia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "health_related_quality_of_life",
-      "class": "Biomarker",
-      "name": "health related quality of life",
+      "id": "adrenal_medulla",
+      "class": "AnatomicalStructure",
+      "name": "adrenal medulla",
       "synonyms": [
-        "HRQoL"
+        "medulla"
       ],
       "symbol": null,
       "brand_names": [],
@@ -1134,9 +92,9 @@
       "uniprot_id": null
     },
     {
-      "id": "fatigue",
-      "class": "Symptom",
-      "name": "fatigue",
+      "id": "glucocorticoids",
+      "class": "Hormone",
+      "name": "glucocorticoids",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1149,9 +107,9 @@
       "uniprot_id": null
     },
     {
-      "id": "weakness",
-      "class": "Symptom",
-      "name": "weakness",
+      "id": "mineralocorticoids",
+      "class": "Hormone",
+      "name": "mineralocorticoids",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1164,9 +122,9 @@
       "uniprot_id": null
     },
     {
-      "id": "physical_appearance_changes",
-      "class": "Symptom",
-      "name": "physical appearance changes",
+      "id": "adrenal_androgens",
+      "class": "Hormone",
+      "name": "adrenal androgens",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1179,9 +137,26 @@
       "uniprot_id": null
     },
     {
-      "id": "emotional_instability",
-      "class": "Symptom",
-      "name": "emotional instability",
+      "id": "cortisol",
+      "class": "Hormone",
+      "name": "cortisol",
+      "synonyms": [
+        "stress hormone"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "aldosterone",
+      "class": "Hormone",
+      "name": "aldosterone",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1194,9 +169,43 @@
       "uniprot_id": null
     },
     {
-      "id": "work_performance_impairment",
-      "class": "Symptom",
-      "name": "work performance impairment",
+      "id": "dehydroepiandrosterone",
+      "class": "Hormone",
+      "name": "dehydroepiandrosterone",
+      "synonyms": [
+        "DHEA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "dehydroepiandrosterone_sulfate",
+      "class": "Hormone",
+      "name": "dehydroepiandrosterone sulfate",
+      "synonyms": [
+        "DHEAS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "androstenedione",
+      "class": "Hormone",
+      "name": "androstenedione",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1209,9 +218,9 @@
       "uniprot_id": null
     },
     {
-      "id": "cognitive_problems",
-      "class": "Symptom",
-      "name": "cognitive problems",
+      "id": "adrenaline",
+      "class": "Hormone",
+      "name": "adrenaline",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1224,9 +233,9 @@
       "uniprot_id": null
     },
     {
-      "id": "sleeping_difficulties",
-      "class": "Symptom",
-      "name": "sleeping difficulties",
+      "id": "noradrenaline",
+      "class": "Hormone",
+      "name": "noradrenaline",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1239,11 +248,175 @@
       "uniprot_id": null
     },
     {
-      "id": "short_form_36",
+      "id": "catecholamines",
+      "class": "Hormone",
+      "name": "catecholamines",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "adrenal_insufficiency",
+      "class": "Disease",
+      "name": "adrenal insufficiency",
+      "synonyms": [
+        "AI"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "primary_adrenal_insufficiency",
+      "class": "Disease",
+      "name": "primary adrenal insufficiency",
+      "synonyms": [
+        "PAI",
+        "Addison's disease"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "secondary_adrenal_insufficiency",
+      "class": "Disease",
+      "name": "secondary adrenal insufficiency",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "tertiary_adrenal_insufficiency",
+      "class": "Disease",
+      "name": "tertiary adrenal insufficiency",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "autoimmune_primary_adrenal_insufficiency",
+      "class": "Disease",
+      "name": "autoimmune primary adrenal insufficiency",
+      "synonyms": [
+        "autoimmune PAI",
+        "Autoimmune Addison's Disease"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "ACTH",
+      "class": "Hormone",
+      "name": "ACTH",
+      "synonyms": [
+        "adrenocorticotropic hormone",
+        "adrenocorticotrophic hormone",
+        "adrenocorticotrophin hormone"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "corticotropin_releasing_hormone",
+      "class": "Hormone",
+      "name": "corticotropin-releasing hormone",
+      "synonyms": [
+        "CRH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "congenital_adrenal_hyperplasia",
+      "class": "Disease",
+      "name": "congenital adrenal hyperplasia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "bilateral_adrenalectomy",
       "class": "Procedure",
-      "name": "short-form 36",
+      "name": "bilateral adrenalectomy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "autoimmune_polyendocrine_syndrome_type_1",
+      "class": "Disease",
+      "name": "autoimmune polyendocrine syndrome type 1",
       "synonyms": [
-        "SF-36"
+        "APS-1"
       ],
       "symbol": null,
       "brand_names": [],
@@ -1256,54 +429,43 @@
       "uniprot_id": null
     },
     {
-      "id": "biochemical_remission",
-      "class": "Biomarker",
-      "name": "biochemical remission",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "self_assessed_disease_status",
-      "class": "Biomarker",
-      "name": "self-assessed disease status",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypopituitarism",
+      "id": "autoimmune_polyendocrine_syndrome_type_2",
       "class": "Disease",
-      "name": "hypopituitarism",
-      "synonyms": [],
+      "name": "autoimmune polyendocrine syndrome type 2",
+      "synonyms": [
+        "APS-2"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020635",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "illness_perceptions",
-      "class": "Symptom",
-      "name": "illness perceptions",
+      "id": "autoimmune_polyglandular_syndromes",
+      "class": "Disease",
+      "name": "autoimmune polyglandular syndromes",
+      "synonyms": [
+        "APS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "adrenoleukodystrophy",
+      "class": "Disease",
+      "name": "adrenoleukodystrophy",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1316,9 +478,95 @@
       "uniprot_id": null
     },
     {
-      "id": "health_care_costs",
+      "id": "21_hydroxylase",
+      "class": "Enzyme",
+      "name": "21-hydroxylase",
+      "synonyms": [
+        "21-OH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "21_hydroxylase_antibodies",
       "class": "Biomarker",
-      "name": "health care costs",
+      "name": "21-hydroxylase antibodies",
+      "synonyms": [
+        "21OH-Abs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "17_alpha_hydroxylase",
+      "class": "Enzyme",
+      "name": "17-alpha-hydroxylase",
+      "synonyms": [
+        "17-OH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "side_chain_cleavage_enzyme",
+      "class": "Enzyme",
+      "name": "side-chain cleavage enzyme",
+      "synonyms": [
+        "SCC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cosyntropin_stimulation_test",
+      "class": "Procedure",
+      "name": "cosyntropin stimulation test",
+      "synonyms": [
+        "ACTH 1-24 stimulation test",
+        "short synacthen test"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hydrocortisone",
+      "class": "Drug",
+      "name": "hydrocortisone",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1331,9 +579,9 @@
       "uniprot_id": null
     },
     {
-      "id": "working_ability",
-      "class": "Biomarker",
-      "name": "working ability",
+      "id": "cortisone_acetate",
+      "class": "Drug",
+      "name": "cortisone acetate",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1346,9 +594,620 @@
       "uniprot_id": null
     },
     {
-      "id": "sick_leave",
+      "id": "fludrocortisone",
+      "class": "Drug",
+      "name": "fludrocortisone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CYP21A1",
+      "class": "Gene",
+      "name": "CYP21A1",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CYP11A1",
+      "class": "Gene",
+      "name": "CYP11A1",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "MC2R",
+      "class": "Gene",
+      "name": "MC2R",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "NNT",
+      "class": "Gene",
+      "name": "NNT",
+      "synonyms": [
+        "nicotinamide nucleotide transhydrogenase"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "TRXR2",
+      "class": "Gene",
+      "name": "TRXR2",
+      "synonyms": [
+        "thioredoxin reductase 2"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "StAR",
+      "class": "Gene",
+      "name": "StAR",
+      "synonyms": [
+        "steroidogenic acute regulatory protein"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "NR5A1",
+      "class": "Gene",
+      "name": "NR5A1",
+      "synonyms": [
+        "steroidogenic factor-1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "NR0B1",
+      "class": "Gene",
+      "name": "NR0B1",
+      "synonyms": [
+        "DAX-1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "AIRE",
+      "class": "Gene",
+      "name": "AIRE",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "NFKB2",
+      "class": "Gene",
+      "name": "NFKB2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "RAG1",
+      "class": "Gene",
+      "name": "RAG1",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "TNFAIP3",
+      "class": "Gene",
+      "name": "TNFAIP3",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "LAT",
+      "class": "Gene",
+      "name": "LAT",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "IKZF2",
+      "class": "Gene",
+      "name": "IKZF2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "HLA",
+      "class": "Gene",
+      "name": "HLA",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CTLA4",
+      "class": "Gene",
+      "name": "CTLA4",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "BACH2",
+      "class": "Gene",
+      "name": "BACH2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "PTPN22",
+      "class": "Gene",
+      "name": "PTPN22",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "LPP",
+      "class": "Gene",
+      "name": "LPP",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "SH2B3",
+      "class": "Gene",
+      "name": "SH2B3",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "SIGLEC5",
+      "class": "Gene",
+      "name": "SIGLEC5",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "UBASH3A",
+      "class": "Gene",
+      "name": "UBASH3A",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "polygenic_risk_score",
       "class": "Biomarker",
-      "name": "sick leave",
+      "name": "polygenic risk score",
+      "synonyms": [
+        "PRS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "interferon_omega",
+      "class": "Protein",
+      "name": "interferon omega",
+      "synonyms": [
+        "IFN omega"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "interleukin_22",
+      "class": "Protein",
+      "name": "interleukin 22",
+      "synonyms": [
+        "IL-22"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "interferon_alpha",
+      "class": "Protein",
+      "name": "interferon alpha",
+      "synonyms": [
+        "IFN alpha"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "primary_ovarian_insufficiency",
+      "class": "Disease",
+      "name": "primary ovarian insufficiency",
+      "synonyms": [
+        "POI"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CD8_T_cells",
+      "class": "AnatomicalStructure",
+      "name": "CD8+ T cells",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "interferon_gamma",
+      "class": "Protein",
+      "name": "interferon-gamma",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "dendritic_cells",
+      "class": "AnatomicalStructure",
+      "name": "dendritic cells",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "granzyme_B",
+      "class": "Enzyme",
+      "name": "granzyme B",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "type_1_diabetes",
+      "class": "Disease",
+      "name": "type 1 diabetes",
+      "synonyms": [
+        "T1D"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "celiac_disease",
+      "class": "Disease",
+      "name": "celiac disease",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "autoimmune_thyroid_disease",
+      "class": "Disease",
+      "name": "autoimmune thyroid disease",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "teplizumab",
+      "class": "Drug",
+      "name": "teplizumab",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chimeric_antigen_receptor_T_regulatory_cells",
+      "class": "Procedure",
+      "name": "chimeric antigen receptor T regulatory cells",
+      "synonyms": [
+        "CAR Tregs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "genome_wide_association_study",
+      "class": "StudyDesign",
+      "name": "genome wide association study",
+      "synonyms": [
+        "GWAS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "twin_study",
+      "class": "StudyDesign",
+      "name": "twin study",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cross_sectional_study",
+      "class": "StudyDesign",
+      "name": "cross-sectional study",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -1363,12 +1222,12 @@
   ],
   "evidence_entities": [
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:introduction:1:llm",
+      "id": "paper_1:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
+      "paper_id": "paper_1",
       "text_span_id": "intro_1",
-      "text": "Cushing's disease is a rare disorder characterized by overproduction of ACTH from a pituitary adenoma leading to hypercortisolemia that in turn leads to increased morbidity and mortality.",
+      "text": "The adrenal glands are small endocrine glands located on top of each kidney, producing hormones regulating important functions in our body like metabolism and stress.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1376,38 +1235,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:results:1:llm",
+      "id": "paper_1:introduction:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "results_1",
-      "text": "Recent evidence suggests that correction of hypercortisolemia may not lead to complete resolution of comorbidities associated with this condition. In particular, increased cardiovascular risk may persist despite long-term remission of hypercortisolemia.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "Review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_CUSHING_COMORBIDITIES:results:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "results_2",
-      "text": "This may be related to persistence of visceral adiposity, adverse adipokine profile, glucose intolerance, hypertension, dyslipidemia, atherosclerosis and a procoagulant phenotype.",
-      "confidence": 0.85,
-      "extraction_method": "llm",
-      "study_type": "Review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_CUSHING_COMORBIDITIES:mortality:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "mortality_1",
-      "text": "Multiple studies show that the standardized mortality ratio (SMR) is increased in CD (1.7\u20134.8), especially in patients with persistent hypercortisolism (3.7\u20134.2) compared to those in remission (1.8\u20133.17).",
+      "paper_id": "paper_1",
+      "text_span_id": "intro_2",
+      "text": "There are several underlying causes for adrenal insufficiency, where an autoimmune attack by the immune system is the most common cause.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1415,25 +1248,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:cardiovascular:1:llm",
+      "id": "paper_1:section1:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "cardiovascular_1",
-      "text": "Cardiovascular risk is increased in CD patients even 5 years after remission. Compared with controls, CD patients had significantly higher waist-to-hip ratio, diastolic blood pressure, oral glucose tolerance test\u2014stimulated glucose and insulin levels, total/HDL cholesterol ratio and fibrinogen levels.",
-      "confidence": 0.9,
-      "extraction_method": "llm",
-      "study_type": "Review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_CUSHING_COMORBIDITIES:hypertension:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "hypertension_1",
-      "text": "Hypertension occurs in 55\u201385 % of CD patients, but resolves after remission in only 44\u201375 %.",
+      "paper_id": "paper_1",
+      "text_span_id": "sec1_1",
+      "text": "The adrenal cortex is responsible for producing glucocorticoids, mineralocorticoids, and adrenal androgens whereas the medulla produces adrenaline and noradrenaline, also referred to as catecholamines",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1441,12 +1261,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:thromboembolism:1:llm",
+      "id": "paper_1:section1:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "thromboembolism_1",
-      "text": "In one systematic review, the incidence of venous thromboembolism (VTE) in CS was 2.5\u20133.1 per 1000 persons/year compared to 1.0\u20132.0 per 1000 persons/year in the general population.",
+      "paper_id": "paper_1",
+      "text_span_id": "sec1_2",
+      "text": "Primary AI (PAI), also known as Addison's disease, is a rare disease with a prevalence of approximately 100 per million in Europe",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1454,12 +1274,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm",
+      "id": "paper_1:section1:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "diabetes_1",
-      "text": "The prevalence of overt diabetes mellitus is 20\u201347 % and that of impaired glucose tolerance is 21\u201364 % in CD.",
+      "paper_id": "paper_1",
+      "text_span_id": "sec1_3",
+      "text": "The most common cause of primary adrenal insufficiency is autoimmunity; this type is often called Autoimmune Addison's Disease, or simply autoimmune PAI.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1467,12 +1287,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:bone:1:llm",
+      "id": "paper_1:section2:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "bone_1",
-      "text": "The prevalence of fractures and osteoporosis as assessed by dual energy X-ray absorptiometry (DXA) has been reported to be 15\u201350 and 38\u201350 % respectively, and may be a presenting feature of CD.",
+      "paper_id": "paper_1",
+      "text_span_id": "sec2_1",
+      "text": "Morning cortisol concentration <140 nmol/L and an ACTH concentration twice the upper reference limit verifies a PAI diagnosis",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1480,12 +1300,12 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm",
+      "id": "paper_1:section2:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "psychiatric_1",
-      "text": "Most (54\u201385 %) patients with CD have some psychiatric disturbance. Depression and irritability are most common emotional lability, mania, paranoia, acute psychosis, anxiety and panic attacks also occur.",
+      "paper_id": "paper_1",
+      "text_span_id": "sec2_2",
+      "text": "A healthy person is expected to have >500 nmol/L of plasma cortisol concentration 60 minutes after 250\u00b5g cosyntropin injection.",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
@@ -1493,13 +1313,78 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_CUSHING_COMORBIDITIES:cognitive:1:llm",
+      "id": "paper_1:section2:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_CUSHING_COMORBIDITIES",
-      "text_span_id": "cognitive_1",
-      "text": "Chronic hypercortisolism is associated with cognitive dysfunction including impairment of memory, visual and spatial information, reasoning, verbal learning and language performance.",
-      "confidence": 0.9,
+      "paper_id": "paper_1",
+      "text_span_id": "sec2_3",
+      "text": "In Western countries, where other than autoimmune causes of PAI are uncommon, serum 21-hydroxylase antibodies should be assessed.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:section3:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "sec3_1",
+      "text": "Skov and collaborators recently showed, by analyzing 29 twin pairs with PAI, a concordance for monozygotic twins of 0.71 and a heritability of 0.97, revealing that PAI is a highly genetic disorder",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:section3:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "sec3_2",
+      "text": "We recently performed the world's first GWAS on autoimmune PAI including only ~1200 patients, but which succeeded to elucidate nine genetic regions with quite remarkable risk potential for PAI",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:section4:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "sec4_1",
+      "text": "The autoantibodies targeting 21-OH was first described in 1992 by Winqvist et al., identified as a major autoantigen in autoimmune PAI",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:section4:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "sec4_2",
+      "text": "These antibodies have since then been shown to be highly specific for autoimmune PAI in several patient cohorts, and found present in 80\u201390% of patients with PAI in cross-sectional studies",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:section5:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "sec5_1",
+      "text": "Two immunodominant peptides have been found to be recognized by CD8+ T cells.",
+      "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "Review",
       "eco_type": null,
@@ -1508,14 +1393,159 @@
   ],
   "relationships": [
     {
-      "subject": "pituitary_adenoma",
-      "predicate": "CAUSES",
-      "object": "cushing_disease",
+      "subject": "adrenal_glands",
+      "predicate": "PRODUCES",
+      "object": "glucocorticoids",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "paper_1:section1:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenal_glands",
+      "predicate": "PRODUCES",
+      "object": "mineralocorticoids",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenal_glands",
+      "predicate": "PRODUCES",
+      "object": "adrenal_androgens",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenal_medulla",
+      "predicate": "PRODUCES",
+      "object": "adrenaline",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenal_medulla",
+      "predicate": "PRODUCES",
+      "object": "noradrenaline",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenaline",
+      "predicate": "SAME_AS",
+      "object": "catecholamines",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "resolution": null,
+        "note": "adrenaline and noradrenaline are referred to as catecholamines"
+      },
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "noradrenaline",
+      "predicate": "SAME_AS",
+      "object": "catecholamines",
+      "evidence_ids": [
+        "paper_1:section1:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "resolution": null,
+        "note": "adrenaline and noradrenaline are referred to as catecholamines"
+      },
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "primary_adrenal_insufficiency",
+      "predicate": "SAME_AS",
+      "object": "autoimmune_primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_1:section1:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "resolution": null,
+        "note": "autoimmunity is the most common cause of primary adrenal insufficiency"
+      },
+      "section": "section1",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "autoimmune_primary_adrenal_insufficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "autoimmune_polyglandular_syndromes",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -1525,318 +1555,232 @@
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "CAUSES",
-      "object": "hypercortisolemia",
+      "subject": "21_hydroxylase_antibodies",
+      "predicate": "INDICATES",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "paper_1:section2:3:llm",
+        "paper_1:section4:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "introduction",
+      "section": "section2",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "hypercortisolemia",
+      "subject": "cosyntropin_stimulation_test",
+      "predicate": "INDICATES",
+      "object": "adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_1:section2:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section2",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hydrocortisone",
+      "predicate": "TREATS",
+      "object": "adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_1:section2:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section2",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cortisone_acetate",
+      "predicate": "TREATS",
+      "object": "adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_1:section2:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section2",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "fludrocortisone",
+      "predicate": "TREATS",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_1:section2:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section2",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "CYP21A1",
+      "predicate": "ENCODES",
+      "object": "21_hydroxylase",
+      "evidence_ids": [
+        "paper_1:section3:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "section3",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "AIRE",
       "predicate": "INCREASES_RISK",
-      "object": "cardiovascular_disease",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:1:llm",
-        "PMC_CUSHING_COMORBIDITIES:cardiovascular:1:llm"
+        "paper_1:section3:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
-      "section": "results",
+      "section": "section3",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "visceral_adiposity",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "glucose_intolerance",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm",
-        "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "hypertension",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm",
-        "PMC_CUSHING_COMORBIDITIES:hypertension:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "dyslipidemia",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "atherosclerosis",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "procoagulant_phenotype",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
+      "subject": "BACH2",
       "predicate": "INCREASES_RISK",
-      "object": "venous_thromboembolism",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:thromboembolism:1:llm"
+        "paper_1:section3:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "cardiovascular",
+      "section": "section3",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "diabetes_mellitus",
+      "subject": "PTPN22",
+      "predicate": "INCREASES_RISK",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm"
+        "paper_1:section3:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "metabolic",
+      "section": "section3",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "osteoporosis",
+      "subject": "CTLA4",
+      "predicate": "INCREASES_RISK",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:bone:1:llm"
+        "paper_1:section3:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "bone",
+      "section": "section3",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "vertebral_fractures",
+      "subject": "CD8_T_cells",
+      "predicate": "RECOGNIZES",
+      "object": "21_hydroxylase",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:bone:1:llm"
+        "paper_1:section5:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "bone",
+      "section": "section5",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "psychiatric_disturbance",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "psychiatric",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "depression",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "psychiatric",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "cushing_disease",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "cognitive_alterations",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:cognitive:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "cognitive",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "transsphenoidal_surgery",
+      "subject": "teplizumab",
       "predicate": "TREATS",
-      "object": "cushing_disease",
+      "object": "type_1_diabetes",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "paper_1:section6:1:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
-      "section": "introduction",
+      "section": "section6",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "steroidogenesis_inhibitors",
-      "predicate": "TREATS",
-      "object": "cushing_disease",
+      "subject": "polygenic_risk_score",
+      "predicate": "INDICATES",
+      "object": "autoimmune_primary_adrenal_insufficiency",
       "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+        "paper_1:section3:2:llm"
       ],
       "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
+        "paper_1"
       ],
-      "confidence": 0.85,
+      "confidence": 0.95,
       "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "glucocorticoid_receptor_antagonists",
-      "predicate": "TREATS",
-      "object": "cushing_disease",
-      "evidence_ids": [
-        "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
-      ],
-      "source_papers": [
-        "PMC_CUSHING_COMORBIDITIES"
-      ],
-      "confidence": 0.85,
-      "properties": {},
-      "section": "introduction",
+      "section": "section3",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This review paper provides comprehensive coverage of comorbidities associated with Cushing's disease, including cardiovascular, metabolic, bone, psychiatric, and cognitive complications.",
-    "The paper emphasizes that many comorbidities persist even after successful treatment and normalization of cortisol levels.",
-    "Prevalence ranges are provided for most comorbidities based on multiple studies referenced in the original paper."
+    "This review paper covers autoimmune primary adrenal insufficiency, focusing on diagnostic approaches, genetics, autoantibodies, and future therapeutic perspectives.",
+    "The paper discusses both monogenic and polygenic causes of adrenal insufficiency, with particular emphasis on autoimmune mechanisms.",
+    "Key diagnostic markers include 21-hydroxylase antibodies and cosyntropin stimulation test results.",
+    "Treatment involves hormone replacement therapy with hydrocortisone and fludrocortisone."
   ]
 }

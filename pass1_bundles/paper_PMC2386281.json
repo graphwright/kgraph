@@ -13,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,20 +28,20 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:41:31.660148Z",
+      "timestamp": "2026-03-05T19:06:48.380938Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 26.01
+      "duration_seconds": 28.94
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "E1",
+      "id": "cushing_syndrome",
       "class": "Disease",
       "name": "Cushing's syndrome",
       "synonyms": [
@@ -58,7 +58,7 @@
       "uniprot_id": null
     },
     {
-      "id": "E2",
+      "id": "exogenous_glucocorticoids",
       "class": "Drug",
       "name": "exogenous glucocorticoids",
       "synonyms": [
@@ -75,22 +75,7 @@
       "uniprot_id": null
     },
     {
-      "id": "E3",
-      "class": "Disease",
-      "name": "adrenal incidentaloma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E4",
+      "id": "urine_cortisol",
       "class": "Biomarker",
       "name": "urine cortisol",
       "synonyms": [
@@ -107,7 +92,7 @@
       "uniprot_id": null
     },
     {
-      "id": "E5",
+      "id": "late_night_salivary_cortisol",
       "class": "Biomarker",
       "name": "late night salivary cortisol",
       "synonyms": [
@@ -124,11 +109,11 @@
       "uniprot_id": null
     },
     {
-      "id": "E6",
+      "id": "1mg_overnight_dexamethasone_suppression_test",
       "class": "Procedure",
       "name": "1 mg overnight dexamethasone suppression test",
       "synonyms": [
-        "overnight dexamethasone suppression test"
+        "1mg overnight DST"
       ],
       "symbol": null,
       "brand_names": [],
@@ -141,11 +126,11 @@
       "uniprot_id": null
     },
     {
-      "id": "E7",
+      "id": "2mg_48h_dexamethasone_suppression_test",
       "class": "Procedure",
       "name": "2 mg 48-h dexamethasone suppression test",
       "synonyms": [
-        "48-hour dexamethasone suppression test"
+        "2mg 48h DST"
       ],
       "symbol": null,
       "brand_names": [],
@@ -158,7 +143,7 @@
       "uniprot_id": null
     },
     {
-      "id": "E8",
+      "id": "serum_midnight_cortisol",
       "class": "Biomarker",
       "name": "serum midnight cortisol",
       "synonyms": [
@@ -175,41 +160,11 @@
       "uniprot_id": null
     },
     {
-      "id": "E9",
-      "class": "Procedure",
-      "name": "dexamethasone-CRH test",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E10",
+      "id": "cyclic_hypercortisolism",
       "class": "Disease",
       "name": "cyclic hypercortisolism",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E11",
-      "class": "Institution",
-      "name": "The Endocrine Society",
       "synonyms": [
-        "Endocrine Society"
+        "cyclical hypercortisolism"
       ],
       "symbol": null,
       "brand_names": [],
@@ -222,11 +177,11 @@
       "uniprot_id": null
     },
     {
-      "id": "E12",
-      "class": "Institution",
-      "name": "Clinical Guidelines Subcommittee",
+      "id": "endocrinologist",
+      "class": "AnatomicalStructure",
+      "name": "endocrinologist",
       "synonyms": [
-        "CGS"
+        "endocrine specialist"
       ],
       "symbol": null,
       "brand_names": [],
@@ -239,10 +194,29 @@
       "uniprot_id": null
     },
     {
-      "id": "E13",
-      "class": "Institution",
-      "name": "Clinical Affairs Core Committee",
-      "synonyms": [],
+      "id": "systematic_reviews",
+      "class": "StudyDesign",
+      "name": "systematic reviews",
+      "synonyms": [
+        "systematic review"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "diagnostic_accuracy",
+      "class": "StatisticalMethod",
+      "name": "diagnostic accuracy",
+      "synonyms": [
+        "accuracy"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -256,11 +230,11 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper_id:abstract:1:llm",
+      "id": "paper_1:abstract:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "abstract_1",
       "text": "After excluding exogenous glucocorticoid use, we recommend testing for Cushing's syndrome in patients with multiple and progressive features compatible with the syndrome, particularly those with a high discriminatory value, and patients with adrenal incidentaloma.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -269,11 +243,11 @@
       "source": "extracted"
     },
     {
-      "id": "paper_id:abstract:2:llm",
+      "id": "paper_1:abstract:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "abstract_2",
       "text": "We recommend initial use of one test with high diagnostic accuracy (urine cortisol, late night salivary cortisol, 1 mg overnight or 2 mg 48-h dexamethasone suppression test).",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -282,11 +256,11 @@
       "source": "extracted"
     },
     {
-      "id": "paper_id:abstract:3:llm",
+      "id": "paper_1:abstract:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "abstract_3",
       "text": "We recommend that patients with an abnormal result see an endocrinologist and undergo a second test, either one of the above or, in some cases, a serum midnight cortisol or dexamethasone-CRH test.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -295,11 +269,11 @@
       "source": "extracted"
     },
     {
-      "id": "paper_id:abstract:4:llm",
+      "id": "paper_1:abstract:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "abstract_4",
       "text": "We recommend additional testing in patients with discordant results, normal responses suspected of cyclic hypercortisolism, or initially normal responses who accumulate additional features over time.",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -310,14 +284,14 @@
   ],
   "relationships": [
     {
-      "subject": "E4",
+      "subject": "urine_cortisol",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:2:llm"
+        "paper_1:abstract:2:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -327,14 +301,14 @@
       "note": null
     },
     {
-      "subject": "E5",
+      "subject": "late_night_salivary_cortisol",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:2:llm"
+        "paper_1:abstract:2:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -344,14 +318,14 @@
       "note": null
     },
     {
-      "subject": "E6",
+      "subject": "1mg_overnight_dexamethasone_suppression_test",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:2:llm"
+        "paper_1:abstract:2:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -361,14 +335,14 @@
       "note": null
     },
     {
-      "subject": "E7",
+      "subject": "2mg_48h_dexamethasone_suppression_test",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:2:llm"
+        "paper_1:abstract:2:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -378,14 +352,14 @@
       "note": null
     },
     {
-      "subject": "E8",
+      "subject": "serum_midnight_cortisol",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:3:llm"
+        "paper_1:abstract:3:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -395,14 +369,14 @@
       "note": null
     },
     {
-      "subject": "E9",
+      "subject": "dexamethasone-CRH test",
       "predicate": "INDICATES",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:3:llm"
+        "paper_1:abstract:3:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -412,33 +386,54 @@
       "note": null
     },
     {
-      "subject": "E3",
+      "subject": "exogenous_glucocorticoids",
       "predicate": "ASSOCIATED_WITH",
-      "object": "E1",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:1:llm"
+        "paper_1:abstract:1:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.9,
-      "properties": {},
+      "properties": {
+        "relationship_type": "exclusion_criteria"
+      },
       "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "E10",
-      "predicate": "SUBTYPE_OF",
-      "object": "E1",
+      "subject": "adrenal incidentaloma",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "cushing_syndrome",
       "evidence_ids": [
-        "paper_id:abstract:4:llm"
+        "paper_1:abstract:1:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "paper_1"
       ],
       "confidence": 0.9,
+      "properties": {
+        "relationship_type": "indication_for_testing"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cyclic_hypercortisolism",
+      "predicate": "SUBTYPE_OF",
+      "object": "cushing_syndrome",
+      "evidence_ids": [
+        "paper_1:abstract:4:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.85,
       "properties": {},
       "section": "abstract",
       "asserted_by": "llm",
@@ -447,8 +442,8 @@
     }
   ],
   "notes": [
-    "This clinical practice guideline provides recommendations for diagnosing Cushing's syndrome using various biochemical tests and procedures.",
-    "The guideline emphasizes a stepwise approach with initial screening tests followed by confirmatory testing.",
-    "Special consideration is given to cyclic hypercortisolism and patients with adrenal incidentalomas."
+    "This clinical practice guideline provides recommendations for diagnostic testing of Cushing's syndrome",
+    "The guideline emphasizes a stepwise approach with initial screening followed by confirmatory testing",
+    "Multiple diagnostic tests are recommended with specific protocols for different clinical scenarios"
   ]
 }

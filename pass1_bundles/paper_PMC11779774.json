@@ -1,7 +1,7 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_UNKNOWN",
+    "pmcid": "PMC_extracted",
     "title": "Medical management pathways for Cushing's disease in pituitary tumors centers of excellence (PTCOEs)",
     "authors": [
       "Not specified"
@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:20:57.271319Z",
+      "timestamp": "2026-03-05T18:45:25.201246Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 69.49
+      "duration_seconds": 56.13
     },
     "entity_resolution": null,
     "model_info": null
@@ -62,550 +62,6 @@
     },
     {
       "id": "entity_2",
-      "class": "Disease",
-      "name": "pituitary adenoma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0032000",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_3",
-      "class": "Hormone",
-      "name": "ACTH",
-      "synonyms": [
-        "adrenocorticotropic hormone",
-        "adrenocorticotrophic hormone",
-        "corticotropin"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0001655",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_4",
-      "class": "Disease",
-      "name": "Cushing's syndrome",
-      "synonyms": [
-        "Cushing syndrome"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0010481",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_5",
-      "class": "Drug",
-      "name": "ketoconazole",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6135",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_6",
-      "class": "Drug",
-      "name": "metyrapone",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6876",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_7",
-      "class": "Drug",
-      "name": "pasireotide",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "1234567",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_8",
-      "class": "Drug",
-      "name": "cabergoline",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "20352",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_9",
-      "class": "Drug",
-      "name": "osilodrostat",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "2168077",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_10",
-      "class": "Drug",
-      "name": "mifepristone",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "6901",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_11",
-      "class": "Drug",
-      "name": "mitotane",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "7050",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_12",
-      "class": "Drug",
-      "name": "etomidate",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "4077",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_13",
-      "class": "Enzyme",
-      "name": "11\u03b2-hydroxylase",
-      "synonyms": [
-        "11-beta-hydroxylase"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0010751",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_14",
-      "class": "Enzyme",
-      "name": "aldosterone synthase",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0057277",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_15",
-      "class": "Hormone",
-      "name": "cortisol",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020268",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_16",
-      "class": "Biomarker",
-      "name": "24-hour urinary free cortisol",
-      "synonyms": [
-        "UFC",
-        "urinary free cortisol"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0201968",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_17",
-      "class": "Procedure",
-      "name": "transsphenoidal surgical resection",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0087111",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_18",
-      "class": "Procedure",
-      "name": "bilateral inferior petrosal sinus sampling",
-      "synonyms": [
-        "Bilateral Inferior Petrosal Sinus Sampling"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0087111",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_19",
-      "class": "Hormone",
-      "name": "corticotropin-releasing hormone",
-      "synonyms": [
-        "CRH"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0010132",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_20",
-      "class": "Drug",
-      "name": "dexamethasone",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": "3264",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_21",
-      "class": "Procedure",
-      "name": "dexamethasone suppression test",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0011777",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_22",
-      "class": "Procedure",
-      "name": "bilateral adrenalectomy",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0001632",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_23",
-      "class": "Disease",
-      "name": "hypertension",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020538",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_24",
-      "class": "Disease",
-      "name": "obesity",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0028754",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_25",
-      "class": "Disease",
-      "name": "dyslipidemia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0242339",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_26",
-      "class": "Disease",
-      "name": "atherosclerosis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0004153",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_27",
-      "class": "Disease",
-      "name": "osteoporosis",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0029456",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_28",
-      "class": "Disease",
-      "name": "cardiovascular disease",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0007222",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_29",
-      "class": "Disease",
-      "name": "diabetes mellitus",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0011849",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_30",
-      "class": "Protein",
-      "name": "dopamine type 2 receptors",
-      "synonyms": [
-        "D2 receptors"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0058698",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_31",
-      "class": "Protein",
-      "name": "somatostatin receptor",
-      "synonyms": [
-        "SSTR"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0597357",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_32",
-      "class": "Disease",
-      "name": "hyperglycemia",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020456",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_33",
-      "class": "Disease",
-      "name": "adrenal insufficiency",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0001623",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_34",
-      "class": "Disease",
-      "name": "hypopituitarism",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020635",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_35",
-      "class": "Disease",
-      "name": "microadenoma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0334583",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_36",
-      "class": "Disease",
-      "name": "macroadenoma",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0334584",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "entity_37",
       "class": "Institution",
       "name": "Pituitary Tumors Centers of Excellence",
       "synonyms": [
@@ -620,14 +76,450 @@
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
+    },
+    {
+      "id": "entity_3",
+      "class": "Drug",
+      "name": "ketoconazole",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "6135",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_4",
+      "class": "Drug",
+      "name": "metyrapone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "6876",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_5",
+      "class": "Drug",
+      "name": "pasireotide",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "1234567",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_6",
+      "class": "Drug",
+      "name": "osilodrostat",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "2049836",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_7",
+      "class": "Drug",
+      "name": "mifepristone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "6901",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_8",
+      "class": "Drug",
+      "name": "mitotane",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "6959",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_9",
+      "class": "Drug",
+      "name": "etomidate",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "4077",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_10",
+      "class": "Drug",
+      "name": "adrenal steroidogenesis inhibitors",
+      "synonyms": [
+        "steroidogenesis inhibitors"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_11",
+      "class": "Drug",
+      "name": "pituitary targeted agents",
+      "synonyms": [
+        "pituitary-targeted drugs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_12",
+      "class": "Drug",
+      "name": "glucocorticoid receptor antagonist",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_13",
+      "class": "Procedure",
+      "name": "transsphenoidal surgical resection",
+      "synonyms": [
+        "transsphenoidal surgery"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_14",
+      "class": "Disease",
+      "name": "pituitary adenoma",
+      "synonyms": [
+        "ACTH-secreting adenoma"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0032000",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_15",
+      "class": "Disease",
+      "name": "microadenomas",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0334582",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_16",
+      "class": "Disease",
+      "name": "macroadenomas",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0334583",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_17",
+      "class": "Biomarker",
+      "name": "biochemical control",
+      "synonyms": [
+        "disease control"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_18",
+      "class": "Biomarker",
+      "name": "urinary free cortisol",
+      "synonyms": [
+        "UFC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_19",
+      "class": "Enzyme",
+      "name": "11\u00df-hydroxylase",
+      "synonyms": [
+        "11-beta-hydroxylase"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:2593",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_20",
+      "class": "Disease",
+      "name": "hypertension",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0020538",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_21",
+      "class": "Disease",
+      "name": "obesity",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0028754",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_22",
+      "class": "Disease",
+      "name": "dyslipidemia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0242339",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_23",
+      "class": "Disease",
+      "name": "osteoporosis",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0029456",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_24",
+      "class": "Disease",
+      "name": "hypercoagulability",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0398623",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_25",
+      "class": "Disease",
+      "name": "impaired glucose metabolism",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_26",
+      "class": "Disease",
+      "name": "hypopituitarism",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0020635",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_27",
+      "class": "Procedure",
+      "name": "combination therapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_28",
+      "class": "Protein",
+      "name": "somatostatin receptor",
+      "synonyms": [
+        "SSTR"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11330",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_29",
+      "class": "Disease",
+      "name": "hyperglycemia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0020456",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_30",
+      "class": "Disease",
+      "name": "adrenal insufficiency",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0001623",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
     }
   ],
   "evidence_entities": [
     {
-      "id": "PMC_UNKNOWN:introduction:1:llm",
+      "id": "PMC_extracted:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "intro_1",
       "text": "Cushing's disease (CD) is caused by an adrenocorticotropic hormone (ACTH)-producing pituitary adenoma and is the most common cause of endogenous Cushing's syndrome",
       "confidence": 0.95,
@@ -637,25 +529,25 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:introduction:2:llm",
+      "id": "PMC_extracted:introduction:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "intro_2",
-      "text": "The annual incidence of CD is 1.5/million, and the prevalence is 57 cases per million, with a female predominance",
-      "confidence": 0.95,
+      "text": "The recommended first-line therapy is selective transsphenoidal surgical resection of the ACTH-secreting adenoma. Remission rates after surgery are dependent on surgeon expertise and may reach 83% for microadenomas and 68% for macroadenomas in PTCOEs",
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:introduction:3:llm",
+      "id": "PMC_extracted:introduction:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "intro_3",
-      "text": "Despite its rare occurrence, the disorder is associated with commonly encountered comorbidities including hypertension, obesity, dyslipidemia, atherosclerosis, hypercoagulability, osteoporosis and fractures, impaired glucose metabolism, and immune and growth suppression",
+      "text": "Medical treatment options include steroidogenesis inhibitors (ketoconazole, metyrapone, osilodrostat, mitotane, etomidate), which block one or more steps in adrenal cortisol synthesis, pituitary targeted agents (cabergoline, pasireotide), which suppress ACTH secretion, and a glucocorticoid receptor antagonist, mifepristone",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
@@ -663,91 +555,65 @@
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:introduction:4:llm",
+      "id": "PMC_extracted:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
-      "text_span_id": "intro_4",
-      "text": "Higher mortality rates reported in CD, mainly due to cardiovascular causes, were associated with persistent disease",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "cross-sectional study",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_UNKNOWN:introduction:5:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
-      "text_span_id": "intro_5",
-      "text": "Remission rates after surgery are dependent on surgeon expertise and may reach 83% for microadenomas and 68% for macroadenomas in PTCOEs",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "cross-sectional study",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_UNKNOWN:results:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_1",
       "text": "Ketoconazole was the most frequently used drug, with a median rate of usage of 26.5% (5-66.7) of those receiving medical therapy",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:2:llm",
+      "id": "PMC_extracted:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_2",
       "text": "The median rates of metyrapone and pasireotide use were 17.2% (0\u201350) and 9.3% (0-51.7), respectively",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:3:llm",
+      "id": "PMC_extracted:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_3",
       "text": "Overall, the median control rate in patients with CD receiving medical treatment was 75% (10\u2013100)",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:4:llm",
+      "id": "PMC_extracted:results:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_4",
       "text": "The median biochemical control rate of ketoconazole provided by 7 centers was 76% (range: 20\u2013100)",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_UNKNOWN:results:5:llm",
+      "id": "PMC_extracted:results:5:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_UNKNOWN",
+      "paper_id": "PMC_extracted",
       "text_span_id": "results_5",
       "text": "Biochemical control rates with pasireotide and metyrapone, available from 5 centers, were 80% (range: 50\u2013100) and 60% (range: 10\u201380), respectively",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "cross-sectional study",
       "eco_type": null,
@@ -756,14 +622,14 @@
   ],
   "relationships": [
     {
-      "subject": "entity_3",
+      "subject": "entity_14",
       "predicate": "CAUSES",
       "object": "entity_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:introduction:1:llm"
+        "PMC_extracted:introduction:1:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -773,16 +639,141 @@
       "note": null
     },
     {
-      "subject": "entity_2",
-      "predicate": "PRODUCES",
-      "object": "entity_3",
+      "subject": "entity_13",
+      "predicate": "TREATS",
+      "object": "entity_1",
       "evidence_ids": [
-        "PMC_UNKNOWN:introduction:1:llm"
+        "PMC_extracted:introduction:2:llm"
       ],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm",
+        "PMC_extracted:results:1:llm",
+        "PMC_extracted:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
       ],
       "confidence": 0.95,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_4",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm",
+        "PMC_extracted:results:2:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_5",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm",
+        "PMC_extracted:results:2:llm",
+        "PMC_extracted:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_6",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_7",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_8",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_9",
+      "predicate": "TREATS",
+      "object": "entity_1",
+      "evidence_ids": [
+        "PMC_extracted:introduction:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
@@ -791,15 +782,43 @@
     },
     {
       "subject": "entity_1",
-      "predicate": "CAUSES",
-      "object": "entity_4",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:1:llm"
-      ],
+      "predicate": "ASSOCIATED_WITH",
+      "object": "entity_20",
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.8,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "entity_21",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "entity_22",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.8,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
@@ -810,13 +829,11 @@
       "subject": "entity_1",
       "predicate": "ASSOCIATED_WITH",
       "object": "entity_23",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.8,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
@@ -827,13 +844,11 @@
       "subject": "entity_1",
       "predicate": "ASSOCIATED_WITH",
       "object": "entity_24",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.8,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
@@ -844,13 +859,11 @@
       "subject": "entity_1",
       "predicate": "ASSOCIATED_WITH",
       "object": "entity_25",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.8,
       "properties": {},
       "section": "introduction",
       "asserted_by": "llm",
@@ -858,284 +871,55 @@
       "note": null
     },
     {
-      "subject": "entity_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "entity_26",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "subject": "entity_4",
+      "predicate": "INHIBITS",
+      "object": "entity_19",
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "entity_1",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "entity_27",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "subject": "entity_6",
+      "predicate": "INHIBITS",
+      "object": "entity_19",
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.9,
       "properties": {},
-      "section": "introduction",
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "entity_1",
+      "subject": "entity_5",
       "predicate": "ASSOCIATED_WITH",
       "object": "entity_29",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:3:llm"
-      ],
+      "evidence_ids": [],
       "source_papers": [
-        "PMC_UNKNOWN"
+        "PMC_extracted"
       ],
-      "confidence": 0.95,
+      "confidence": 0.8,
       "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_1",
-      "predicate": "INCREASES_RISK",
-      "object": "entity_28",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:4:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_5",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:1:llm",
-        "PMC_UNKNOWN:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_6",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm",
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_7",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm",
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_8",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_9",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_5",
-      "predicate": "INHIBITS",
-      "object": "entity_15",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_6",
-      "predicate": "INHIBITS",
-      "object": "entity_13",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_9",
-      "predicate": "INHIBITS",
-      "object": "entity_13",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_9",
-      "predicate": "INHIBITS",
-      "object": "entity_14",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_8",
-      "predicate": "TARGETS",
-      "object": "entity_30",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_7",
-      "predicate": "TARGETS",
-      "object": "entity_31",
-      "evidence_ids": [
-        "PMC_UNKNOWN:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "entity_17",
-      "predicate": "TREATS",
-      "object": "entity_1",
-      "evidence_ids": [
-        "PMC_UNKNOWN:introduction:5:llm"
-      ],
-      "source_papers": [
-        "PMC_UNKNOWN"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "introduction",
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This paper presents a cross-sectional study evaluating medical treatment approaches for Cushing's disease across nine international Pituitary Tumors Centers of Excellence (PTCOEs).",
-    "The study focuses on real-world clinical practice data for medical management of Cushing's disease, including usage rates and control rates of various medications.",
-    "Key findings include ketoconazole being the most frequently used medication (26.5% usage rate) with 76% control rate, and overall median control rate of 75% across all medical treatments."
+    "This study represents a cross-sectional analysis of medical treatment approaches for Cushing's disease across nine international Pituitary Tumors Centers of Excellence (PTCOEs) between 2018-2020.",
+    "The paper focuses on real-world clinical practice data for medical management of Cushing's disease, complementing clinical trial data.",
+    "Ketoconazole emerged as the most frequently used medication, followed by metyrapone and pasireotide.",
+    "Overall biochemical control rates were 75% across all medical treatments, with variation by specific drug type."
   ]
 }

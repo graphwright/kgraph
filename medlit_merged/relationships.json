@@ -1,37 +1,290 @@
 [
   {
-    "subject": "canon-b1a6e1a74448",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0032000",
+    "subject": "C0001625",
+    "predicate": "PRODUCES",
+    "object": "C0017710",
     "evidence_ids": [
-      "editorial:contributions:1:llm"
+      "paper_1:section1:1:llm"
     ],
     "source_papers": [
-      "editorial"
+      "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "canon-063581b150b1",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0032000",
+    "subject": "C0001625",
+    "predicate": "PRODUCES",
+    "object": "canon-fd2481dd39b0",
     "evidence_ids": [
-      "editorial:contributions:1:llm"
+      "paper_1:section1:1:llm"
     ],
     "source_papers": [
-      "editorial"
+      "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0001625",
+    "predicate": "PRODUCES",
+    "object": "canon-0eea0d1f9260",
+    "evidence_ids": [
+      "paper_1:section1:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-72b8efe5f753",
+    "predicate": "PRODUCES",
+    "object": "C0014563",
+    "evidence_ids": [
+      "paper_1:section1:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0001403",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0085859",
+    "evidence_ids": [
+      "paper_1:introduction:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-9b2701077313",
+    "predicate": "INDICATES",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section2:3:llm",
+      "paper_1:section4:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0201517",
+    "predicate": "INDICATES",
+    "object": "C0001623",
+    "evidence_ids": [
+      "paper_1:section2:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0020268",
+    "predicate": "TREATS",
+    "object": "C0001623",
+    "evidence_ids": [
+      "paper_1:section2:3:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0010137",
+    "predicate": "TREATS",
+    "object": "C0001623",
+    "evidence_ids": [
+      "paper_1:section2:3:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0016314",
+    "predicate": "TREATS",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section2:3:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1413642",
+    "predicate": "ENCODES",
+    "object": "C0038462",
+    "evidence_ids": [
+      "paper_1:section3:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1412427",
+    "predicate": "INCREASES_RISK",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section3:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1413643",
+    "predicate": "INCREASES_RISK",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section3:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1420314",
+    "predicate": "INCREASES_RISK",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section3:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0242629",
+    "predicate": "RECOGNIZES",
+    "object": "C0038462",
+    "evidence_ids": [
+      "paper_1:section5:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1721343",
+    "predicate": "TREATS",
+    "object": "C0011854",
+    "evidence_ids": [
+      "paper_1:section6:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-b0ac25942cf0",
+    "predicate": "INDICATES",
+    "object": "C0001403",
+    "evidence_ids": [
+      "paper_1:section3:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1871526",
+    "predicate": "CAUSES",
+    "object": "C0020456",
+    "evidence_ids": [
+      "paper_1:results:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
   },
   {
     "subject": "C0001622",
     "predicate": "CAUSES",
-    "object": "C0010481",
+    "object": "C0221406",
     "evidence_ids": [
-      "editorial:contributions:1:llm"
+      "PMC_EDITORIAL_CUSHING:contributions:1:llm"
     ],
     "source_papers": [
-      "editorial"
+      "PMC_EDITORIAL_CUSHING"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-412b38b328c2",
+    "predicate": "DIFFERENTIATES",
+    "object": "canon-f68e9b819d48",
+    "evidence_ids": [
+      "PMC_EDITORIAL_CUSHING:contributions:3:llm"
+    ],
+    "source_papers": [
+      "PMC_EDITORIAL_CUSHING"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "canon-412b38b328c2",
+    "predicate": "DIFFERENTIATES",
+    "object": "canon-2a23521509f5",
+    "evidence_ids": [
+      "PMC_EDITORIAL_CUSHING:contributions:3:llm"
+    ],
+    "source_papers": [
+      "PMC_EDITORIAL_CUSHING"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C1871526",
+    "predicate": "TREATS",
+    "object": "C0010481",
+    "evidence_ids": [
+      "PMC_EDITORIAL_CUSHING:contributions:4:llm"
+    ],
+    "source_papers": [
+      "PMC_EDITORIAL_CUSHING"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0107870",
+    "predicate": "TREATS",
+    "object": "C0010481",
+    "evidence_ids": [
+      "PMC_EDITORIAL_CUSHING:contributions:4:llm"
+    ],
+    "source_papers": [
+      "PMC_EDITORIAL_CUSHING"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-f263d7e2bf74",
+    "predicate": "TREATS",
+    "object": "C0010481",
+    "evidence_ids": [
+      "PMC_EDITORIAL_CUSHING:contributions:5:llm"
+    ],
+    "source_papers": [
+      "PMC_EDITORIAL_CUSHING"
     ],
     "confidence": 0.9
   },
@@ -39,54 +292,11 @@
     "subject": "C0020626",
     "predicate": "AFFECTS",
     "object": "C3887843",
-    "evidence_ids": [
-      "editorial:contributions:3:llm"
-    ],
+    "evidence_ids": [],
     "source_papers": [
-      "editorial"
+      "PMC_EDITORIAL_CUSHING"
     ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0020626",
-    "predicate": "CAUSES",
-    "object": "canon-a34e4b23b2ff",
-    "evidence_ids": [
-      "editorial:contributions:3:llm"
-    ],
-    "source_papers": [
-      "editorial"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C1871526",
-    "predicate": "TREATS",
-    "object": "C0010481",
-    "evidence_ids": [
-      "editorial:contributions:4:llm",
-      "PMC_UNKNOWN:results:2:llm",
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "editorial",
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0107870",
-    "predicate": "TREATS",
-    "object": "C0010481",
-    "evidence_ids": [
-      "editorial:contributions:4:llm",
-      "PMC_UNKNOWN:results:2:llm"
-    ],
-    "source_papers": [
-      "editorial",
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
+    "confidence": 0.8
   },
   {
     "subject": "C0031511",
@@ -94,7 +304,7 @@
     "object": "C0342482",
     "evidence_ids": [
       "PMC_UNKNOWN:case_report:1:llm",
-      "PMC_UNKNOWN:case_report:2:llm"
+      "PMC_UNKNOWN:case_report:3:llm"
     ],
     "source_papers": [
       "PMC_UNKNOWN"
@@ -104,7 +314,7 @@
   {
     "subject": "C0031511",
     "predicate": "INCREASES",
-    "object": "C0025825",
+    "object": "C0025598",
     "evidence_ids": [
       "PMC_UNKNOWN:case_report:1:llm"
     ],
@@ -114,23 +324,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0025856",
-    "predicate": "DECREASES",
-    "object": "C0025825",
+    "subject": "3616",
+    "predicate": "TREATS",
+    "object": "C0031511",
     "evidence_ids": [
-      "PMC_UNKNOWN:case_report:3:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0007412",
-    "predicate": "CAUSES",
-    "object": "canon-82d4b33d5581",
-    "evidence_ids": [
-      "PMC_UNKNOWN:discussion:1:llm"
+      "PMC_UNKNOWN:case_report:2:llm"
     ],
     "source_papers": [
       "PMC_UNKNOWN"
@@ -138,7 +336,20 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-82d4b33d5581",
+    "subject": "C0025856",
+    "predicate": "TREATS",
+    "object": "C0020626",
+    "evidence_ids": [
+      "PMC_UNKNOWN:case_report:2:llm",
+      "PMC_UNKNOWN:discussion:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0014563",
     "predicate": "ACTIVATES",
     "object": "C0597719",
     "evidence_ids": [
@@ -150,59 +361,59 @@
     "confidence": 0.9
   },
   {
-    "subject": "C0342482",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C3714552",
-    "evidence_ids": [
-      "PMC_UNKNOWN:case_report:1:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0342482",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-2dd85daa942d",
-    "evidence_ids": [
-      "PMC_UNKNOWN:case_report:1:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0342482",
-    "predicate": "ASSOCIATED_WITH",
+    "subject": "C0014563",
+    "predicate": "CAUSES",
     "object": "C0020621",
     "evidence_ids": [
-      "PMC_UNKNOWN:case_report:1:llm"
+      "PMC_UNKNOWN:discussion:1:llm"
     ],
     "source_papers": [
       "PMC_UNKNOWN"
     ],
     "confidence": 0.9
+  },
+  {
+    "subject": "C0014563",
+    "predicate": "CAUSES",
+    "object": "C0021368",
+    "evidence_ids": [
+      "PMC_UNKNOWN:discussion:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0020621",
+    "predicate": "ACTIVATES",
+    "object": "C0023796",
+    "evidence_ids": [
+      "PMC_UNKNOWN:discussion:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C0020621",
+    "predicate": "ACTIVATES",
+    "object": "C0017715",
+    "evidence_ids": [
+      "PMC_UNKNOWN:discussion:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.85
   },
   {
     "subject": "C0342482",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0020456",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0020626",
     "evidence_ids": [
       "PMC_UNKNOWN:case_report:1:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0001655",
-    "predicate": "CAUSES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:1:llm"
     ],
     "source_papers": [
       "PMC_UNKNOWN"
@@ -211,252 +422,224 @@
   },
   {
     "subject": "C0032000",
-    "predicate": "PRODUCES",
-    "object": "C0001655",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:1:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
     "predicate": "CAUSES",
-    "object": "C0010481",
+    "object": "C0221406",
     "evidence_ids": [
-      "PMC_UNKNOWN:introduction:1:llm"
+      "PMC_extracted:introduction:1:llm",
+      "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
     ],
     "source_papers": [
-      "PMC_UNKNOWN"
+      "PMC_extracted",
+      "PMC_CUSHING_COMORBIDITIES"
     ],
     "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0020538",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm",
-      "extracted_paper:hypertension:0:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN",
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0028754",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm",
-      "extracted_paper:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN",
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0242339",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0004153",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0029456",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm",
-      "extracted_paper:osteoporosis:0:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN",
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0011849",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:3:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "INCREASES_RISK",
-    "object": "C0007222",
-    "evidence_ids": [
-      "PMC_UNKNOWN:introduction:4:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "6135",
-    "predicate": "TREATS",
-    "object": "C0010481",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:1:llm",
-      "PMC_UNKNOWN:results:4:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0025856",
-    "predicate": "TREATS",
-    "object": "C0010481",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:2:llm",
-      "PMC_UNKNOWN:results:5:llm",
-      "extracted_paper:introduction:0:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN",
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "2168077",
-    "predicate": "TREATS",
-    "object": "C0010481",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "6135",
-    "predicate": "INHIBITS",
-    "object": "C0020268",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:4:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0025856",
-    "predicate": "INHIBITS",
-    "object": "C0010751",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "2168077",
-    "predicate": "INHIBITS",
-    "object": "C0010751",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "2168077",
-    "predicate": "INHIBITS",
-    "object": "C0057277",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0107870",
-    "predicate": "TARGETS",
-    "object": "C0058698",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C1871526",
-    "predicate": "TARGETS",
-    "object": "C0597357",
-    "evidence_ids": [
-      "PMC_UNKNOWN:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_UNKNOWN"
-    ],
-    "confidence": 0.9
   },
   {
     "subject": "C0087111",
     "predicate": "TREATS",
-    "object": "C0010481",
+    "object": "C0221406",
     "evidence_ids": [
-      "PMC_UNKNOWN:introduction:5:llm",
-      "extracted_paper:introduction:0:llm"
+      "PMC_extracted:introduction:2:llm",
+      "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
     ],
     "source_papers": [
-      "PMC_UNKNOWN",
-      "extracted_paper"
+      "PMC_extracted",
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0022625",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm",
+      "PMC_extracted:results:1:llm",
+      "PMC_extracted:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
     ],
     "confidence": 0.95
+  },
+  {
+    "subject": "C0025856",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm",
+      "PMC_extracted:results:2:llm",
+      "PMC_extracted:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1871526",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm",
+      "PMC_extracted:results:2:llm",
+      "PMC_extracted:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C3852966",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0026272",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0026259",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0015130",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_extracted:introduction:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0020538",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0028754",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0242339",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted",
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0029456",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0398623",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-8231f96e2c6f",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C0025856",
+    "predicate": "INHIBITS",
+    "object": "HGNC:2593",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C3852966",
+    "predicate": "INHIBITS",
+    "object": "HGNC:2593",
+    "evidence_ids": [
+      "extracted_paper_1:mechanism:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted",
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1871526",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0020456",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.8
   },
   {
     "subject": "C0001627",
     "predicate": "SUBTYPE_OF",
     "object": "C0001627",
     "evidence_ids": [
-      "PMC_extracted:abstract:1:llm",
-      "PMC_extracted:introduction:1:llm",
-      "PMC_extracted:introduction:3:llm"
+      "PMC_extracted:abstract:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -464,11 +647,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:2599",
+    "subject": "HGNC:2600",
     "predicate": "ENCODES",
-    "object": "C0020249",
+    "object": "C0038462",
     "evidence_ids": [
-      "PMC_extracted:abstract:2:llm"
+      "PMC_extracted:abstract:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -476,11 +659,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0020249",
+    "subject": "C0038462",
     "predicate": "INVOLVED_IN",
     "object": "C0020268",
     "evidence_ids": [
-      "PMC_extracted:abstract:2:llm"
+      "PMC_extracted:abstract:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -488,11 +671,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0020249",
+    "subject": "C0038462",
     "predicate": "INVOLVED_IN",
     "object": "C0002006",
     "evidence_ids": [
-      "PMC_extracted:abstract:2:llm"
+      "PMC_extracted:abstract:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -500,11 +683,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0020249",
+    "subject": "C0038462",
     "predicate": "CONVERTS",
     "object": "C0020249",
     "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
+      "PMC_extracted:introduction:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -512,10 +695,22 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0020249",
+    "subject": "C0038462",
     "predicate": "CONVERTS",
     "object": "C0011777",
     "evidence_ids": [
+      "PMC_extracted:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-95d8948e488e",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0001627",
+    "evidence_ids": [
       "PMC_extracted:introduction:2:llm"
     ],
     "source_papers": [
@@ -524,9 +719,33 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0001627",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0020268",
+    "subject": "canon-6a4f7d980c2b",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0001627",
+    "evidence_ids": [
+      "PMC_extracted:introduction:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-4572cc294bdf",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0001627",
+    "evidence_ids": [
+      "PMC_extracted:introduction:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0020249",
+    "predicate": "INDICATES",
+    "object": "C0001627",
     "evidence_ids": [
       "PMC_extracted:introduction:3:llm"
     ],
@@ -536,11 +755,35 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0001627",
+    "subject": "canon-dea53aad6370",
     "predicate": "ASSOCIATED_WITH",
-    "object": "C0002006",
+    "object": "C0001627",
     "evidence_ids": [
-      "PMC_extracted:introduction:3:llm"
+      "PMC_extracted:genetics:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-cb62192a0088",
+    "predicate": "CAUSED_BY",
+    "object": "HGNC:11976",
+    "evidence_ids": [
+      "PMC_extracted:genetics:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-cb62192a0088",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0013720",
+    "evidence_ids": [
+      "PMC_extracted:genetics:3:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -552,43 +795,19 @@
     "predicate": "TREATS",
     "object": "C0001627",
     "evidence_ids": [
-      "PMC_extracted:introduction:3:llm"
+      "PMC_extracted:treatment:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "C0026351",
+    "subject": "C0016314",
     "predicate": "TREATS",
-    "object": "C0001627",
+    "object": "canon-95d8948e488e",
     "evidence_ids": [
-      "PMC_extracted:introduction:3:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0013720",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0013720",
-    "evidence_ids": [
-      "PMC_extracted:genetics:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C1955073",
-    "predicate": "USED_FOR",
-    "object": "C0001627",
-    "evidence_ids": [
-      "PMC_extracted:diagnosis:1:llm"
+      "PMC_extracted:treatment:2:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -596,23 +815,35 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0032520",
-    "predicate": "USED_FOR",
-    "object": "C0001627",
+    "subject": "C0001627",
+    "predicate": "INCREASES_RISK",
+    "object": "canon-2a326f6e9095",
     "evidence_ids": [
-      "PMC_extracted:diagnosis:1:llm"
+      "PMC_extracted:treatment:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.85
   },
   {
-    "subject": "canon-b0cbfa0cd185",
+    "subject": "C0001627",
+    "predicate": "INCREASES_RISK",
+    "object": "C0029456",
+    "evidence_ids": [
+      "PMC_extracted:treatment:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "canon-a9aa4920bd65",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-af0d887e64f4",
+    "object": "canon-59470d59646c",
     "evidence_ids": [
-      "paper_1:introduction:4:llm"
+      "paper_1:introduction:3:llm"
     ],
     "source_papers": [
       "paper_1"
@@ -620,146 +851,165 @@
     "confidence": 0.9
   },
   {
-    "subject": "2168077",
-    "predicate": "TREATS",
-    "object": "canon-2f858d8809b7",
+    "subject": "canon-a9aa4920bd65",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-c2e93f7d0884",
     "evidence_ids": [
-      "paper_1:background:1:llm"
+      "paper_1:introduction:3:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C3852966",
+    "predicate": "TREATS",
+    "object": "C0010481",
+    "evidence_ids": [
+      "extracted_paper_1:indication:1:llm"
+    ],
+    "source_papers": [
+      "extracted_paper_1"
+    ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
+    "subject": "HGNC:2593",
+    "predicate": "CATALYZES",
+    "object": "C0020268",
+    "evidence_ids": [
+      "extracted_paper_1:mechanism:1:llm"
+    ],
+    "source_papers": [
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C3852966",
     "predicate": "CAUSES",
     "object": "C0001623",
     "evidence_ids": [
-      "paper_1:adverse_effects:1:llm"
+      "extracted_paper_1:adverse_effects:1:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "extracted_paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
+    "subject": "C3852966",
     "predicate": "CAUSES",
     "object": "C0027497",
     "evidence_ids": [
-      "paper_1:adverse_effects:2:llm"
+      "extracted_paper_1:adverse_effects:2:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "extracted_paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
+    "subject": "C3852966",
+    "predicate": "CAUSES",
+    "object": "C0003862",
+    "evidence_ids": [
+      "extracted_paper_1:adverse_effects:2:llm"
+    ],
+    "source_papers": [
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C3852966",
     "predicate": "CAUSES",
     "object": "C0018681",
     "evidence_ids": [
-      "paper_1:adverse_effects:2:llm"
+      "extracted_paper_1:adverse_effects:2:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "extracted_paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
-    "predicate": "INCREASES",
-    "object": "C0039601",
-    "evidence_ids": [
-      "paper_1:adverse_effects:3:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "2168077",
+    "subject": "C3852966",
     "predicate": "CAUSES",
     "object": "C0019572",
     "evidence_ids": [
-      "paper_1:adverse_effects:3:llm"
+      "extracted_paper_1:adverse_effects:3:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "extracted_paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
-    "predicate": "DECREASES",
-    "object": "canon-01ab537ee758",
-    "evidence_ids": [
-      "paper_1:adverse_effects:4:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "2168077",
+    "subject": "C3852966",
     "predicate": "CAUSES",
-    "object": "canon-b628c3e9f435",
+    "object": "C0001144",
     "evidence_ids": [
-      "paper_1:adverse_effects:4:llm"
+      "extracted_paper_1:adverse_effects:3:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "extracted_paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "2168077",
-    "predicate": "CAUSES",
-    "object": "canon-868ffebd0f49",
-    "evidence_ids": [
-      "paper_1:adverse_effects:4:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "2168077",
+    "subject": "C3852966",
     "predicate": "INHIBITS",
     "object": "C0057223",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_1"
+    "evidence_ids": [
+      "extracted_paper_1:drug_interactions:1:llm"
     ],
-    "confidence": 0.9
+    "source_papers": [
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
   },
   {
-    "subject": "2168077",
+    "subject": "C3852966",
     "predicate": "INHIBITS",
-    "object": "canon-452e57cdf4c7",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_1"
+    "object": "C0059563",
+    "evidence_ids": [
+      "extracted_paper_1:drug_interactions:1:llm"
     ],
-    "confidence": 0.9
+    "source_papers": [
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
   },
   {
-    "subject": "2168077",
-    "predicate": "CAUSES",
-    "object": "canon-860647d97ae4",
-    "evidence_ids": [],
+    "subject": "C0221406",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0010481",
+    "evidence_ids": [
+      "extracted_paper_1:indication:1:llm"
+    ],
     "source_papers": [
+      "extracted_paper_1",
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-8fdae97a9be5",
+    "predicate": "CAUSES",
+    "object": "C0221406",
+    "evidence_ids": [
+      "extracted_paper_1:indication:1:llm"
+    ],
+    "source_papers": [
+      "extracted_paper_1"
+    ],
+    "confidence": 0.95
   },
   {
     "subject": "C0010481",
-    "predicate": "CHARACTERIZED_BY",
+    "predicate": "ASSOCIATED_WITH",
     "object": "C0017710",
     "evidence_ids": [
       "paper_1:background:1:llm"
@@ -770,7 +1020,7 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-98fa18ebef2a",
+    "subject": "canon-d482467479e5",
     "predicate": "INDICATES",
     "object": "C0010481",
     "evidence_ids": [
@@ -782,32 +1032,8 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0011777",
+    "subject": "canon-2739b9cfa4b9",
     "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_1:methods:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-a583c36fa84d",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_1:methods:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-1ebac4446d64",
-    "predicate": "PREDICTS",
     "object": "C0010481",
     "evidence_ids": [
       "paper_1:results:1:llm"
@@ -818,11 +1044,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0001655",
-    "predicate": "STIMULATES",
-    "object": "C0020268",
+    "subject": "canon-39e1df3413f2",
+    "predicate": "INDICATES",
+    "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:2:llm"
     ],
     "source_papers": [
       "paper_1"
@@ -830,11 +1056,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-e993161a1170",
-    "predicate": "SUBTYPE_OF",
+    "subject": "canon-c8da4e2db058",
+    "predicate": "INDICATES",
     "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:2:llm"
     ],
     "source_papers": [
       "paper_1"
@@ -842,111 +1068,104 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-dce133e3d721",
-    "predicate": "SUBTYPE_OF",
+    "subject": "canon-42ef9f32f2ee",
+    "predicate": "INDICATES",
     "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:2:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "canon-92b3664e0919",
-    "predicate": "SUBTYPE_OF",
+    "subject": "canon-11e3e17f4823",
+    "predicate": "INDICATES",
     "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:2:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "C3839636",
-    "predicate": "SUBTYPE_OF",
+    "subject": "canon-ee780f6b0745",
+    "predicate": "INDICATES",
     "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:2:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "C0001624",
-    "predicate": "CAUSES",
-    "object": "canon-dce133e3d721",
+    "subject": "canon-decbe6490a21",
+    "predicate": "INDICATES",
+    "object": "C0010481",
     "evidence_ids": [
-      "paper_1:introduction:2:llm"
+      "paper_1:results:3:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "C0001623",
-    "predicate": "CAUSES",
-    "object": "canon-dce133e3d721",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
+    "subject": "canon-1d4cdc46ed07",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0010481",
+    "evidence_ids": [],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "C0796393",
-    "predicate": "DIFFERENTIATES",
-    "object": "canon-92b3664e0919",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
+    "subject": "C0221407",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0010481",
+    "evidence_ids": [],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.85
+    "confidence": 0.95
   },
   {
-    "subject": "C0796393",
-    "predicate": "DIFFERENTIATES",
-    "object": "canon-e993161a1170",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
+    "subject": "C3160718",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0010481",
+    "evidence_ids": [],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.85
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:10861",
     "predicate": "ASSOCIATED_WITH",
     "object": "C0009324",
     "evidence_ids": [
-      "PMC_extracted:results:1:llm"
+      "PMC11000000:results:1:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
   {
     "subject": "HGNC:10861",
     "predicate": "REGULATES",
-    "object": "canon-32882822cef8",
+    "object": "canon-160391191eb7",
     "evidence_ids": [
-      "PMC_extracted:results:2:llm",
-      "PMC_extracted:results:3:llm"
+      "PMC11000000:results:2:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -955,11 +1174,10 @@
     "predicate": "REGULATES",
     "object": "HGNC:7512",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm",
-      "PMC_extracted:results:5:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -968,11 +1186,10 @@
     "predicate": "REGULATES",
     "object": "HGNC:11757",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm",
-      "PMC_extracted:results:5:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -981,11 +1198,22 @@
     "predicate": "REGULATES",
     "object": "HGNC:1806",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm",
-      "PMC_extracted:results:5:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:10861",
+    "predicate": "REGULATES",
+    "object": "canon-fb840314ec90",
+    "evidence_ids": [
+      "PMC11000000:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -994,11 +1222,10 @@
     "predicate": "REGULATES",
     "object": "HGNC:5992",
     "evidence_ids": [
-      "PMC_extracted:results:6:llm",
-      "PMC_extracted:results:7:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -1007,11 +1234,10 @@
     "predicate": "REGULATES",
     "object": "HGNC:6018",
     "evidence_ids": [
-      "PMC_extracted:results:6:llm",
-      "PMC_extracted:results:7:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
@@ -1020,93 +1246,114 @@
     "predicate": "REGULATES",
     "object": "HGNC:6025",
     "evidence_ids": [
-      "PMC_extracted:results:6:llm",
-      "PMC_extracted:results:7:llm"
+      "PMC11000000:results:3:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
   {
     "subject": "HGNC:7512",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-32882822cef8",
+    "object": "canon-160391191eb7",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm"
+      "PMC11000000:results:4:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:11757",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-32882822cef8",
+    "object": "canon-160391191eb7",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm"
+      "PMC11000000:results:4:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
+      "PMC11000000"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:1806",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-32882822cef8",
+    "object": "canon-160391191eb7",
     "evidence_ids": [
-      "PMC_extracted:results:4:llm"
+      "PMC11000000:results:4:llm"
     ],
     "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "HGNC:9581",
-    "predicate": "REGULATES",
-    "object": "C4505026",
-    "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:4:llm",
-      "PMC_ID_NOT_PROVIDED:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_ID_NOT_PROVIDED"
+      "PMC11000000"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9581",
-    "predicate": "BINDS_TO",
-    "object": "HGNC:11059",
-    "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:6:llm"
-    ],
-    "source_papers": [
-      "PMC_ID_NOT_PROVIDED"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:9581",
-    "predicate": "REGULATES",
-    "object": "canon-f0b23eb642a1",
-    "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:7:llm"
-    ],
-    "source_papers": [
-      "PMC_ID_NOT_PROVIDED"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:9581",
+    "subject": "canon-fb840314ec90",
     "predicate": "ASSOCIATED_WITH",
-    "object": "C0476089",
+    "object": "canon-160391191eb7",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:1:llm",
+      "PMC11000000:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:5992",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-160391191eb7",
+    "evidence_ids": [
+      "PMC11000000:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:6018",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-160391191eb7",
+    "evidence_ids": [
+      "PMC11000000:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:6025",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-160391191eb7",
+    "evidence_ids": [
+      "PMC11000000:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:10861",
+    "predicate": "CATALYZES",
+    "object": "canon-508a59084e8d",
+    "evidence_ids": [
+      "PMC11000000:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC11000000"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9581",
+    "predicate": "REGULATES",
+    "object": "C4235027",
+    "evidence_ids": [
       "PMC_ID_NOT_PROVIDED:results:2:llm",
       "PMC_ID_NOT_PROVIDED:results:3:llm"
     ],
@@ -1116,11 +1363,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:11059",
-    "predicate": "REGULATES",
-    "object": "C4505026",
+    "subject": "HGNC:9581",
+    "predicate": "BINDS",
+    "object": "HGNC:11059",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:8:llm"
+      "PMC_ID_NOT_PROVIDED:results:4:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
@@ -1128,327 +1375,386 @@
     "confidence": 0.95
   },
   {
-    "subject": "C4505026",
-    "predicate": "INCREASES_RISK",
-    "object": "C0476089",
+    "subject": "HGNC:9581",
+    "predicate": "REGULATES",
+    "object": "canon-abc1a574c29d",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:4:llm",
       "PMC_ID_NOT_PROVIDED:results:5:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "HGNC:9581",
+    "subject": "HGNC:11059",
     "predicate": "REGULATES",
-    "object": "C0162772",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:4:llm"
+      "PMC_ID_NOT_PROVIDED:introduction:2:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:9581",
-    "predicate": "REGULATES",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0476089",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C4235027",
+    "predicate": "CHARACTERIZED_BY",
+    "object": "C0023775",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9581",
+    "predicate": "DECREASES",
     "object": "C0017817",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:4:llm"
+      "PMC_ID_NOT_PROVIDED:results:2:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9581",
+    "predicate": "INCREASES",
+    "object": "C0162772",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9581",
+    "predicate": "INCREASES",
+    "object": "C0024643",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9581",
+    "predicate": "INCREASES",
+    "object": "canon-52901c652b5c",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:9581",
     "predicate": "REGULATES",
     "object": "HGNC:3571",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:5:llm"
+      "PMC_ID_NOT_PROVIDED:results:3:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:9581",
     "predicate": "REGULATES",
     "object": "HGNC:4556",
     "evidence_ids": [
-      "PMC_ID_NOT_PROVIDED:results:5:llm"
+      "PMC_ID_NOT_PROVIDED:results:3:llm"
     ],
     "source_papers": [
       "PMC_ID_NOT_PROVIDED"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "HGNC:16848",
-    "predicate": "INCREASES_RISK",
-    "object": "C0024623",
+    "subject": "HGNC:9581",
+    "predicate": "REGULATES",
+    "object": "HGNC:5246",
     "evidence_ids": [
-      "PMC11725234:results:1:llm"
+      "PMC_ID_NOT_PROVIDED:results:3:llm"
     ],
     "source_papers": [
-      "PMC11725234"
+      "PMC_ID_NOT_PROVIDED"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-bc185b9be8df",
-    "predicate": "INCREASES",
+    "subject": "HGNC:11059",
+    "predicate": "RESCUES",
+    "object": "C4235027",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:6:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:16848",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0024623",
+    "evidence_ids": [
+      "PMC11362215:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC11362215"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:16848",
+    "predicate": "INDICATES",
+    "object": "C4086681",
+    "evidence_ids": [
+      "PMC11362215:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC11362215"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-0edf63c3aad1",
+    "predicate": "INCREASES_RISK",
+    "object": "C0024623",
+    "evidence_ids": [
+      "PMC11362215:results:2:llm",
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC11362215",
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-0edf63c3aad1",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:16848",
     "evidence_ids": [
-      "PMC11725234:results:2:llm"
+      "PMC11362215:results:2:llm"
     ],
     "source_papers": [
-      "PMC11725234"
+      "PMC11362215"
     ],
     "confidence": 0.9
   },
   {
     "subject": "HGNC:16848",
-    "predicate": "ACTIVATES",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-4dfdbf7eb57d",
+    "evidence_ids": [
+      "PMC11362215:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC11362215"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:16848",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C1523298",
+    "evidence_ids": [
+      "PMC11362215:results:3:llm",
+      "PMC11362215:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC11362215"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:16848",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:6192",
     "evidence_ids": [
-      "PMC11725234:results:4:llm"
+      "PMC11362215:results:4:llm"
     ],
     "source_papers": [
-      "PMC11725234"
+      "PMC11362215"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "HGNC:16848",
-    "predicate": "ACTIVATES",
-    "object": "HGNC:11364",
+    "subject": "canon-0edf63c3aad1",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-25970b182172",
     "evidence_ids": [
-      "PMC11725234:results:3:llm"
+      "PMC11362215:results:2:llm"
     ],
     "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:16848",
-    "predicate": "ACTIVATES",
-    "object": "C1523298",
-    "evidence_ids": [
-      "PMC11725234:results:3:llm",
-      "PMC11725234:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-bc185b9be8df",
-    "predicate": "INCREASES_RISK",
-    "object": "C0024623",
-    "evidence_ids": [
-      "PMC11725234:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
+      "PMC11362215"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "HGNC:6192",
-    "predicate": "ACTIVATES",
-    "object": "HGNC:11364",
-    "evidence_ids": [
-      "PMC11725234:results:3:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:11364",
-    "predicate": "ACTIVATES",
-    "object": "C1523298",
-    "evidence_ids": [
-      "PMC11725234:results:3:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C1523298",
-    "predicate": "PROMOTES",
-    "object": "C0024623",
-    "evidence_ids": [
-      "PMC11725234:results:3:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-bc185b9be8df",
-    "predicate": "CAUSES",
-    "object": "C0017152",
-    "evidence_ids": [
-      "PMC11725234:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC11725234"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "HGNC:9555",
-    "predicate": "INCREASES_RISK",
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
     "object": "C0152013",
     "evidence_ids": [
-      "paper_id:results:1:llm",
-      "paper_id:results:3:llm"
+      "PMC_extracted:results:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9555",
+    "subject": "HGNC:9563",
     "predicate": "INDICATES",
-    "object": "C0152013",
+    "object": "C4086681",
     "evidence_ids": [
-      "paper_id:results:2:llm"
+      "PMC_extracted:results:3:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9555",
-    "predicate": "INTERACTS_WITH",
+    "subject": "HGNC:9563",
+    "predicate": "INDICATES",
+    "object": "canon-e99ee9574e15",
+    "evidence_ids": [
+      "PMC_extracted:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9563",
+    "predicate": "INDICATES",
+    "object": "canon-3afef1abd7fa",
+    "evidence_ids": [
+      "PMC_extracted:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9563",
+    "predicate": "INDICATES",
+    "object": "canon-2d5c4dc89658",
+    "evidence_ids": [
+      "PMC_extracted:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:5012",
     "evidence_ids": [
-      "paper_id:results:4:llm"
+      "PMC_extracted:results:4:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9555",
-    "predicate": "REGULATES",
-    "object": "HGNC:5012",
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-aa5ff662971c",
     "evidence_ids": [
-      "paper_id:results:4:llm",
-      "paper_id:results:5:llm"
+      "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9555",
-    "predicate": "ACTIVATES",
-    "object": "canon-f4d7f683069a",
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-25dff0822500",
     "evidence_ids": [
-      "paper_id:results:7:llm"
+      "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:9555",
-    "predicate": "ACTIVATES",
-    "object": "canon-be81e027f6ab",
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-87f8c54a7d9c",
     "evidence_ids": [
-      "paper_id:results:7:llm"
+      "PMC_extracted:results:6:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "1797884",
+    "subject": "HGNC:9563",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-565b3797af34",
+    "evidence_ids": [
+      "PMC_extracted:results:6:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "1726313",
     "predicate": "TREATS",
     "object": "C0152013",
     "evidence_ids": [
-      "paper_id:results:8:llm"
+      "PMC_extracted:results:7:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_extracted"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "HGNC:5012",
-    "predicate": "MEDIATES",
-    "object": "HGNC:9555",
-    "evidence_ids": [
-      "paper_id:results:9:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:9555",
-    "predicate": "PERFORMS",
-    "object": "canon-19c30863a8bd",
-    "evidence_ids": [
-      "paper_id:results:5:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:9555",
-    "predicate": "PERFORMS",
-    "object": "canon-14f94211b2f3",
-    "evidence_ids": [
-      "paper_id:results:5:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-14f94211b2f3",
-    "predicate": "INCREASES",
-    "object": "C0033684",
-    "evidence_ids": [
-      "paper_id:results:5:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-8e89f6206bbc",
+    "subject": "canon-5531dad4dbfc",
     "predicate": "INDICATES",
     "object": "C0149925",
     "evidence_ids": [
-      "paper_id:background:1:llm"
+      "paper_id:background:2:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1456,12 +1762,59 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-8e89f6206bbc",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-ff72f1077fa9",
+    "subject": "canon-5531dad4dbfc",
+    "predicate": "COMPOSED_OF",
+    "object": "canon-c191903015b3",
     "evidence_ids": [
-      "paper_id:background:1:llm",
-      "paper_id:results:4:llm"
+      "paper_id:methods:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-5531dad4dbfc",
+    "predicate": "COMPOSED_OF",
+    "object": "canon-97da9005a3bf",
+    "evidence_ids": [
+      "paper_id:methods:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-5531dad4dbfc",
+    "predicate": "COMPOSED_OF",
+    "object": "canon-9975518e377d",
+    "evidence_ids": [
+      "paper_id:methods:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-5531dad4dbfc",
+    "predicate": "PREDICTS",
+    "object": "canon-94d0285ec068",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-5531dad4dbfc",
+    "predicate": "PREDICTS",
+    "object": "canon-2a149e65c9bb",
+    "evidence_ids": [
+      "paper_id:validation:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1473,7 +1826,7 @@
     "predicate": "TREATS",
     "object": "C0149925",
     "evidence_ids": [
-      "paper_id:background:1:llm"
+      "paper_id:results:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1485,7 +1838,7 @@
     "predicate": "TREATS",
     "object": "C0149925",
     "evidence_ids": [
-      "paper_id:background:1:llm"
+      "paper_id:results:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1493,120 +1846,23 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-e4fd2906d7f0",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-8e89f6206bbc",
+    "object": "C0149925",
     "evidence_ids": [
-      "paper_id:methods:3:llm"
+      "paper_id:results:1:llm"
     ],
     "source_papers": [
       "paper_id"
     ],
     "confidence": 0.95
-  },
-  {
-    "subject": "canon-5b18265b679f",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-8e89f6206bbc",
-    "evidence_ids": [
-      "paper_id:methods:3:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-04e5e748fe38",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-8e89f6206bbc",
-    "evidence_ids": [
-      "paper_id:methods:3:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-197fcaaa9f9a",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0149925",
-    "evidence_ids": [
-      "paper_id:background:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0242629",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0149925",
-    "evidence_ids": [
-      "paper_id:background:1:llm",
-      "paper_id:results:6:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "canon-d662ff20b698",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0242629",
-    "evidence_ids": [
-      "paper_id:results:6:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "canon-8e89f6206bbc",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-ef3f9a131243",
-    "evidence_ids": [
-      "paper_id:results:7:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-cecaed2c4413",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0149925",
-    "evidence_ids": [
-      "paper_id:results:4:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "C0376571",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0149925",
-    "evidence_ids": [
-      "paper_id:results:4:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.85
   },
   {
     "subject": "C0376571",
     "predicate": "INCREASES_RISK",
     "object": "C0006142",
     "evidence_ids": [
-      "paper_id:introduction:3:llm",
+      "paper_id:introduction:2:llm",
       "paper_1:results:1:llm"
     ],
     "source_papers": [
@@ -1620,7 +1876,7 @@
     "predicate": "INCREASES_RISK",
     "object": "C0029925",
     "evidence_ids": [
-      "paper_id:introduction:3:llm"
+      "paper_id:introduction:2:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1629,7 +1885,7 @@
   },
   {
     "subject": "C0024485",
-    "predicate": "INDICATES",
+    "predicate": "USED_FOR",
     "object": "C0006142",
     "evidence_ids": [
       "paper_id:screening:1:llm"
@@ -1637,62 +1893,14 @@
     "source_papers": [
       "paper_id"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "10324",
+    "subject": "1151",
     "predicate": "TREATS",
     "object": "C0006142",
     "evidence_ids": [
       "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "35035",
-    "predicate": "TREATS",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "69278",
-    "predicate": "TREATS",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "84857",
-    "predicate": "TREATS",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0195471",
-    "predicate": "TREATS",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_id:surgery:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1700,11 +1908,49 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0195471",
+    "subject": "10324",
+    "predicate": "SUBTYPE_OF",
+    "object": "1151",
+    "evidence_ids": [
+      "paper_id:chemoprevention:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "56946",
+    "predicate": "SUBTYPE_OF",
+    "object": "1151",
+    "evidence_ids": [
+      "paper_id:chemoprevention:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0242363",
+    "predicate": "TREATS",
+    "object": "C0006142",
+    "evidence_ids": [
+      "paper_id:surgery:1:llm",
+      "paper_id:bso_benefits:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0242363",
     "predicate": "TREATS",
     "object": "C0029925",
     "evidence_ids": [
-      "paper_id:surgery:1:llm"
+      "paper_id:surgery:1:llm",
+      "paper_id:bso_benefits:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1716,7 +1962,8 @@
     "predicate": "TREATS",
     "object": "C0006142",
     "evidence_ids": [
-      "paper_id:surgery:2:llm"
+      "paper_id:surgery:1:llm",
+      "paper_id:mastectomy:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1724,11 +1971,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "10324",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0360135",
+    "subject": "C0242363",
+    "predicate": "DECREASES",
+    "object": "C0026565",
     "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
+      "paper_id:bso_benefits:1:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -1736,297 +1983,167 @@
     "confidence": 0.95
   },
   {
-    "subject": "35035",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0360135",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "69278",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0593802",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "84857",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0593802",
-    "evidence_ids": [
-      "paper_id:chemoprevention:1:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "114979",
-    "predicate": "SUBTYPE_OF",
-    "object": "C0593802",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-32a2345c83f7",
-    "predicate": "INDICATES",
-    "object": "C0919532",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "ASSOCIATED_WITH",
+    "object": "C0476089",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:background:1:llm"
+    ],
+    "source_papers": [
+      "PMC_PLACEHOLDER"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-c191903015b3",
+    "predicate": "INDICATES",
     "object": "HGNC:11998",
     "evidence_ids": [
-      "paper_1:results:1:llm"
+      "PMC_PLACEHOLDER:background:1:llm",
+      "PMC_PLACEHOLDER:results:1:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-0b38847ffd73",
+    "object": "canon-b5cfef513e64",
     "evidence_ids": [
-      "paper_1:results:1:llm"
+      "PMC_PLACEHOLDER:background:1:llm",
+      "PMC_PLACEHOLDER:results:3:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-32a2345c83f7",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-8319ac43b306",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "INDICATES",
-    "object": "canon-d61f3e2fc106",
+    "object": "canon-b56e427e53d0",
     "evidence_ids": [
-      "paper_1:results:2:llm"
+      "PMC_PLACEHOLDER:background:2:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-38d8ed5ad5b5",
+    "object": "HGNC:9817",
     "evidence_ids": [
-      "paper_1:results:5:llm"
+      "PMC_PLACEHOLDER:results:1:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-884a406c07f2",
+    "object": "HGNC:11254",
     "evidence_ids": [
-      "paper_1:results:5:llm"
+      "PMC_PLACEHOLDER:results:1:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-32a2345c83f7",
+    "subject": "canon-c191903015b3",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-ab480b626242",
+    "object": "canon-eea12370b416",
     "evidence_ids": [
-      "paper_1:results:6:llm"
+      "PMC_PLACEHOLDER:results:2:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-a8ca04e0cb88",
+    "subject": "canon-c191903015b3",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-cb34f21a76f3",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_PLACEHOLDER"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-8f56f74899a1",
     "predicate": "SUBTYPE_OF",
-    "object": "canon-32a2345c83f7",
-    "evidence_ids": [],
+    "object": "canon-c191903015b3",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:background:1:llm"
+    ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-b25e881152a6",
+    "subject": "canon-5c532047400f",
     "predicate": "SUBTYPE_OF",
-    "object": "canon-32a2345c83f7",
-    "evidence_ids": [],
+    "object": "canon-c191903015b3",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:background:1:llm"
+    ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-bdfc74fcdf1a",
+    "subject": "canon-88e1dfb8ed28",
     "predicate": "SUBTYPE_OF",
-    "object": "canon-32a2345c83f7",
-    "evidence_ids": [],
+    "object": "canon-c191903015b3",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:background:1:llm"
+    ],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C1882413",
-    "predicate": "TREATS",
-    "object": "canon-32a2345c83f7",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_1"
+    "subject": "canon-c191903015b3",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0919532",
+    "evidence_ids": [
+      "PMC_PLACEHOLDER:results:2:llm"
     ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C4048328",
-    "predicate": "TREATS",
-    "object": "canon-32a2345c83f7",
-    "evidence_ids": [],
     "source_papers": [
-      "paper_1"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "C0281477",
     "predicate": "INDICATES",
-    "object": "C0242379",
+    "object": "C0006826",
     "evidence_ids": [
       "paper_1:introduction:2:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0281477",
-    "predicate": "INDICATES",
-    "object": "C0024623",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0281477",
-    "predicate": "INDICATES",
-    "object": "C1527249",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0281477",
-    "predicate": "INDICATES",
-    "object": "C0023903",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0281477",
-    "predicate": "INDICATES",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0281477",
-    "predicate": "INDICATES",
-    "object": "C0007847",
-    "evidence_ids": [
-      "paper_1:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "C1531652",
-    "predicate": "INDICATES",
+    "predicate": "USED_FOR",
     "object": "C0242379",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0203446",
-    "predicate": "INDICATES",
-    "object": "C0023903",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0002210",
-    "predicate": "INDICATES",
-    "object": "C0023903",
     "evidence_ids": [
       "paper_1:results:1:llm"
     ],
@@ -2037,7 +2154,7 @@
   },
   {
     "subject": "C0009378",
-    "predicate": "INDICATES",
+    "predicate": "USED_FOR",
     "object": "C1527249",
     "evidence_ids": [
       "paper_1:results:1:llm"
@@ -2049,7 +2166,7 @@
   },
   {
     "subject": "C1531481",
-    "predicate": "INDICATES",
+    "predicate": "USED_FOR",
     "object": "C1527249",
     "evidence_ids": [
       "paper_1:results:1:llm"
@@ -2060,8 +2177,92 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-364dcccc81e9",
-    "predicate": "INDICATES",
+    "subject": "C0203446",
+    "predicate": "USED_FOR",
+    "object": "C0023903",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0002210",
+    "predicate": "USED_FOR",
+    "object": "C0023903",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0203446",
+    "predicate": "USED_FOR",
+    "object": "C0006142",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0024671",
+    "predicate": "USED_FOR",
+    "object": "C0006142",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-39a723f78ae7",
+    "predicate": "USED_FOR",
+    "object": "C0007847",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0009417",
+    "predicate": "USED_FOR",
+    "object": "C0007847",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0017195",
+    "predicate": "USED_FOR",
+    "object": "C0024623",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-e6afbc8fe986",
+    "predicate": "USED_FOR",
     "object": "C0024623",
     "evidence_ids": [
       "paper_1:results:1:llm"
@@ -2073,7 +2274,7 @@
   },
   {
     "subject": "C0017150",
-    "predicate": "INDICATES",
+    "predicate": "USED_FOR",
     "object": "C0024623",
     "evidence_ids": [
       "paper_1:results:1:llm"
@@ -2082,66 +2283,6 @@
       "paper_1"
     ],
     "confidence": 0.9
-  },
-  {
-    "subject": "canon-a8882674d192",
-    "predicate": "INDICATES",
-    "object": "C0024623",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0024671",
-    "predicate": "INDICATES",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0203430",
-    "predicate": "INDICATES",
-    "object": "C0006142",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-59663785564b",
-    "predicate": "INDICATES",
-    "object": "C0007847",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0024117",
-    "predicate": "INCREASES_RISK",
-    "object": "C0242379",
-    "evidence_ids": [
-      "paper_1:results:1:llm"
-    ],
-    "source_papers": [
-      "paper_1"
-    ],
-    "confidence": 0.8
   },
   {
     "subject": "C0017152",
@@ -2153,7 +2294,7 @@
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.8
+    "confidence": 0.85
   },
   {
     "subject": "C0023890",
@@ -2165,7 +2306,7 @@
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.8
+    "confidence": 0.85
   },
   {
     "subject": "C0524909",
@@ -2177,7 +2318,7 @@
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.8
+    "confidence": 0.85
   },
   {
     "subject": "C0524910",
@@ -2189,100 +2330,112 @@
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.8
+    "confidence": 0.85
   },
   {
-    "subject": "C0333983",
-    "predicate": "INCREASES_RISK",
-    "object": "C0006142",
+    "subject": "canon-2049e635eee2",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0281477",
     "evidence_ids": [
-      "paper_1:results:1:llm"
+      "paper_1:results:2:llm",
+      "paper_1:results:3:llm"
     ],
     "source_papers": [
       "paper_1"
     ],
-    "confidence": 0.8
+    "confidence": 0.95
   },
   {
-    "subject": "canon-e9abda340553",
+    "subject": "canon-7a495f391b8c",
+    "predicate": "INCREASES_RISK",
+    "object": "C0006142",
+    "evidence_ids": [
+      "paper_1:discussion:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-091f653a8ad4",
+    "predicate": "INCREASES_RISK",
+    "object": "C0006142",
+    "evidence_ids": [
+      "paper_1:discussion:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0376571",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-e5f80a350110",
+    "object": "C0238033",
     "evidence_ids": [
-      "PMC_PLACEHOLDER:results:3:llm"
+      "paper_1:discussion:1:llm"
     ],
     "source_papers": [
-      "PMC_PLACEHOLDER"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-106c60c8fec6",
-    "predicate": "NOT_ASSOCIATED_WITH",
-    "object": "canon-e9abda340553",
+    "subject": "C0011847",
+    "predicate": "INCREASES_RISK",
+    "object": "C0238033",
     "evidence_ids": [
-      "PMC_PLACEHOLDER:results:4:llm"
+      "paper_1:discussion:3:llm"
     ],
     "source_papers": [
-      "PMC_PLACEHOLDER"
+      "paper_1"
     ],
-    "confidence": 0.95
+    "confidence": 0.85
   },
   {
-    "subject": "canon-106c60c8fec6",
-    "predicate": "NOT_ASSOCIATED_WITH",
-    "object": "canon-54c508c682df",
+    "subject": "C0028754",
+    "predicate": "INCREASES_RISK",
+    "object": "C0238033",
     "evidence_ids": [
-      "PMC_PLACEHOLDER:results:5:llm"
+      "paper_1:discussion:3:llm"
     ],
     "source_papers": [
-      "PMC_PLACEHOLDER"
+      "paper_1"
     ],
-    "confidence": 0.95
+    "confidence": 0.85
   },
   {
-    "subject": "canon-e9abda340553",
+    "subject": "canon-7a495f391b8c",
     "predicate": "ASSOCIATED_WITH",
-    "object": "C0013216",
+    "object": "C0376571",
     "evidence_ids": [
-      "PMC_PLACEHOLDER:results:6:llm"
+      "paper_1:discussion:1:llm"
     ],
     "source_papers": [
-      "PMC_PLACEHOLDER"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C0238033",
-    "predicate": "INDICATES",
-    "object": "canon-c4679a813efc",
+    "subject": "canon-091f653a8ad4",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0376571",
     "evidence_ids": [
-      "PMC_PLACEHOLDER:results:1:llm"
+      "paper_1:discussion:1:llm"
     ],
     "source_papers": [
-      "PMC_PLACEHOLDER"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C0238033",
-    "predicate": "INDICATES",
-    "object": "canon-dc26659b9093",
-    "evidence_ids": [
-      "PMC_PLACEHOLDER:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_PLACEHOLDER"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-e764d76d3814",
+    "subject": "canon-ffa96923644d",
     "predicate": "DETECTS_MORE_THAN",
-    "object": "canon-9f433779f055",
+    "object": "canon-f7c18413a9f5",
     "evidence_ids": [
       "paper_id:results:1:llm",
       "paper_id:results:5:llm",
-      "paper_id:results:6:llm",
       "paper_id:results:2:llm"
     ],
     "source_papers": [
@@ -2291,9 +2444,9 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-e764d76d3814",
+    "subject": "canon-ffa96923644d",
     "predicate": "ENABLES_MORE_THAN",
-    "object": "canon-9f433779f055",
+    "object": "canon-f7c18413a9f5",
     "evidence_ids": [
       "paper_id:results:3:llm"
     ],
@@ -2303,9 +2456,9 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-e764d76d3814",
+    "subject": "canon-ffa96923644d",
     "predicate": "DETECTS",
-    "object": "canon-881b2169fff8",
+    "object": "canon-40d7bfaca8cd",
     "evidence_ids": [
       "paper_id:results:4:llm"
     ],
@@ -2315,8 +2468,8 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-8bf0fd6888b4",
-    "predicate": "ASSOCIATED_WITH",
+    "subject": "canon-0888c8ef70c3",
+    "predicate": "INDICATES",
     "object": "C0553580",
     "evidence_ids": [
       "paper_id:results:1:llm"
@@ -2327,8 +2480,8 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-286da2f351ed",
-    "predicate": "ASSOCIATED_WITH",
+    "subject": "canon-b6183a051952",
+    "predicate": "INDICATES",
     "object": "C0039101",
     "evidence_ids": [
       "paper_id:results:1:llm"
@@ -2339,9 +2492,9 @@
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:6973",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C1266042",
+    "subject": "canon-9fa790cdf20e",
+    "predicate": "INDICATES",
+    "object": "C1266119",
     "evidence_ids": [
       "paper_id:results:1:llm"
     ],
@@ -2351,9 +2504,170 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-b28fbaeb2a8e",
-    "predicate": "INDICATES",
-    "object": "canon-7fe16f160aca",
+    "subject": "2103189",
+    "predicate": "TREATS",
+    "object": "canon-4f216c5e2633",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "2284718",
+    "predicate": "TREATS",
+    "object": "canon-4f216c5e2633",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "1598392",
+    "predicate": "TREATS",
+    "object": "C0376571",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11998",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0085390",
+    "evidence_ids": [
+      "paper_id:results:1:llm",
+      "PMC_UNKNOWN:genetics:1:llm"
+    ],
+    "source_papers": [
+      "paper_id",
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:7765",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0027831",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "TREATS",
+    "object": "C3539878",
+    "evidence_ids": [
+      "paper_id:results:1:llm",
+      "paper_id:results:2:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "INCREASES",
+    "object": "C0162772",
+    "evidence_ids": [
+      "paper_id:results:2:llm",
+      "paper_id:results:4:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "CAUSES",
+    "object": "canon-1028e24e9ab6",
+    "evidence_ids": [
+      "paper_id:results:2:llm",
+      "paper_id:results:5:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "CAUSES",
+    "object": "C0012860",
+    "evidence_ids": [
+      "paper_id:results:2:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "INDUCES",
+    "object": "C0162638",
+    "evidence_ids": [
+      "paper_id:results:2:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "UPREGULATES",
+    "object": "HGNC:11998",
+    "evidence_ids": [
+      "paper_id:results:3:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "DOWNREGULATES",
+    "object": "HGNC:990",
+    "evidence_ids": [
+      "paper_id:results:3:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-63c3772a10d4",
+    "predicate": "DOWNREGULATES",
+    "object": "canon-681d9ac9a38e",
+    "evidence_ids": [
+      "paper_id:results:3:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0162772",
+    "predicate": "CAUSES",
+    "object": "C0012860",
     "evidence_ids": [
       "paper_id:results:2:llm"
     ],
@@ -2363,9 +2677,21 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-551155de5659",
-    "predicate": "ENABLES",
-    "object": "canon-3a5b0c3535e0",
+    "subject": "C0162772",
+    "predicate": "CAUSES",
+    "object": "canon-1028e24e9ab6",
+    "evidence_ids": [
+      "paper_id:results:2:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11998",
+    "predicate": "PROMOTES",
+    "object": "C0162638",
     "evidence_ids": [
       "paper_id:results:3:llm"
     ],
@@ -2375,49 +2701,42 @@
     "confidence": 0.9
   },
   {
-    "subject": "C0003947",
-    "predicate": "INCREASES_RISK",
-    "object": "C0812413",
-    "evidence_ids": [
-      "paper_id:introduction:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C1449894",
-    "predicate": "INDICATES",
-    "object": "C0812413",
-    "evidence_ids": [
-      "paper_id:discussion:1:llm",
-      "paper_id:discussion:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C2986635",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0021083",
-    "evidence_ids": [
-      "paper_id:discussion:3:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-02bc85783996",
+    "subject": "HGNC:990",
     "predicate": "INHIBITS",
-    "object": "canon-9517c726a988",
+    "object": "C0162638",
     "evidence_ids": [
-      "paper_id:discussion:4:llm"
+      "paper_id:results:3:llm"
     ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C3539878",
+    "predicate": "LACKS",
+    "object": "C0034804",
+    "evidence_ids": [],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C3539878",
+    "predicate": "LACKS",
+    "object": "C0034833",
+    "evidence_ids": [],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C3539878",
+    "predicate": "LACKS",
+    "object": "canon-474e81a7f0cd",
+    "evidence_ids": [],
     "source_papers": [
       "paper_id"
     ],
@@ -2426,157 +2745,182 @@
   {
     "subject": "C1449894",
     "predicate": "INDICATES",
-    "object": "C4086681",
+    "object": "C0812413",
     "evidence_ids": [
-      "paper_id:discussion:5:llm"
+      "paper_1:discussion:1:llm",
+      "paper_1:discussion:2:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.95
-  },
-  {
-    "subject": "C3657270",
-    "predicate": "TREATS",
-    "object": "C0812413",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C1367202",
-    "predicate": "TREATS",
-    "object": "C0812413",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C3658706",
-    "predicate": "TREATS",
-    "object": "C0812413",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
   },
   {
     "subject": "C0069676",
     "predicate": "INDICATES",
     "object": "C0812413",
-    "evidence_ids": [],
+    "evidence_ids": [
+      "paper_1:discussion:3:llm"
+    ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "C0008031",
-    "predicate": "SYMPTOM_OF",
+    "subject": "C4277706",
+    "predicate": "ASSOCIATED_WITH",
     "object": "C0812413",
-    "evidence_ids": [],
+    "evidence_ids": [
+      "paper_1:discussion:4:llm"
+    ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "C0032227",
-    "predicate": "SYMPTOM_OF",
+    "subject": "canon-27a5a9e0663c",
+    "predicate": "INCREASES_RISK",
     "object": "C0812413",
-    "evidence_ids": [],
+    "evidence_ids": [
+      "paper_1:discussion:5:llm",
+      "paper_1:discussion:6:llm"
+    ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.9
+  },
+  {
+    "subject": "canon-27a5a9e0663c",
+    "predicate": "REGULATES",
+    "object": "C1431710",
+    "evidence_ids": [
+      "paper_1:discussion:5:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-27a5a9e0663c",
+    "predicate": "REGULATES",
+    "object": "C1431709",
+    "evidence_ids": [
+      "paper_1:discussion:6:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C3657270",
+    "predicate": "TREATS",
+    "object": "C0812413",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C1367202",
+    "predicate": "TREATS",
+    "object": "C0812413",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C3658706",
+    "predicate": "TREATS",
+    "object": "C0812413",
+    "evidence_ids": [
+      "paper_1:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "subject": "C1449894",
+    "predicate": "SAME_AS",
+    "object": "C0069676",
+    "evidence_ids": [],
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "confidence": 0.0
   },
   {
     "subject": "HGNC:12363",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-8a64eb211ba9",
+    "object": "C2239176",
     "evidence_ids": [
-      "PMC11729386:results:2:llm"
+      "PMC11729509:results:2:llm",
+      "PMC11729509:discussion:1:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
     ],
     "confidence": 0.95
   },
   {
     "subject": "HGNC:12363",
-    "predicate": "REGULATES",
-    "object": "canon-880554d0e637",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-72256e3cb8a2",
     "evidence_ids": [
-      "PMC11729386:discussion:1:llm"
+      "PMC11729509:results:2:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-dfcda3ce2148",
+    "predicate": "INHIBITS",
+    "object": "C1515673",
+    "evidence_ids": [
+      "PMC11729509:discussion:2:llm"
+    ],
+    "source_papers": [
+      "PMC11729509"
     ],
     "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:2514",
-    "predicate": "REGULATES",
-    "object": "canon-27ebf40da842",
-    "evidence_ids": [
-      "PMC11729386:discussion:2:llm"
-    ],
-    "source_papers": [
-      "PMC11729386"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-27ebf40da842",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C2239176",
-    "evidence_ids": [
-      "PMC11729386:discussion:2:llm"
-    ],
-    "source_papers": [
-      "PMC11729386"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-35cf52656962",
-    "predicate": "INDICATES",
-    "object": "canon-284f8dcca715",
-    "evidence_ids": [
-      "PMC11729386:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC11729386"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:11998",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C2239176",
-    "evidence_ids": [
-      "PMC11729386:results:3:llm",
-      "PMC11729386:results:4:llm"
-    ],
-    "source_papers": [
-      "PMC11729386"
-    ],
-    "confidence": 0.9
   },
   {
     "subject": "HGNC:11110",
     "predicate": "ASSOCIATED_WITH",
     "object": "C2239176",
     "evidence_ids": [
-      "PMC11729386:results:3:llm"
+      "PMC11729509:results:3:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11998",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C2239176",
+    "evidence_ids": [
+      "PMC11729509:results:3:llm",
+      "PMC11729509:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC11729509"
     ],
     "confidence": 0.9
   },
@@ -2585,23 +2929,23 @@
     "predicate": "ASSOCIATED_WITH",
     "object": "C2239176",
     "evidence_ids": [
-      "PMC11729386:results:3:llm",
-      "PMC11729386:results:4:llm"
+      "PMC11729509:results:3:llm",
+      "PMC11729509:results:4:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "HGNC:3661",
+    "subject": "HGNC:2514",
     "predicate": "ASSOCIATED_WITH",
     "object": "C2239176",
     "evidence_ids": [
-      "PMC11729386:results:3:llm"
+      "PMC11729509:results:4:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
     ],
     "confidence": 0.9
   },
@@ -2610,17 +2954,90 @@
     "predicate": "ASSOCIATED_WITH",
     "object": "C2239176",
     "evidence_ids": [
-      "PMC11729386:results:4:llm"
+      "PMC11729509:results:4:llm"
     ],
     "source_papers": [
-      "PMC11729386"
+      "PMC11729509"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "C1512554",
+    "subject": "HGNC:3661",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-98d70602c548",
+    "object": "C2239176",
+    "evidence_ids": [
+      "PMC11729509:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC11729509"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-4fc8766ab848",
+    "predicate": "TREATS",
+    "object": "C2931822",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:3:llm",
+      "PMC_ID_NOT_PROVIDED:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-419f67b335c2",
+    "predicate": "INCREASES_RISK",
+    "object": "C2931822",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:abstract:1:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-da88fd562c6d",
+    "predicate": "PART_OF",
+    "object": "canon-4fc8766ab848",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:abstract:2:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-f2425b7fec22",
+    "predicate": "PART_OF",
+    "object": "canon-4fc8766ab848",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:abstract:2:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-79ed2e259f89",
+    "predicate": "ENABLES",
+    "object": "canon-4fc8766ab848",
+    "evidence_ids": [
+      "PMC_ID_NOT_PROVIDED:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC_ID_NOT_PROVIDED"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "EXTENDS",
+    "object": "canon-369882fa428e",
     "evidence_ids": [
       "paper_id:abstract:2:llm"
     ],
@@ -2630,11 +3047,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "C0011902",
-    "predicate": "PROMOTES",
-    "object": "canon-c2a5964fb1c4",
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "INCORPORATES",
+    "object": "canon-f37f67380e7a",
     "evidence_ids": [
-      "paper_id:results:2:llm"
+      "paper_id:abstract:2:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -2642,11 +3059,11 @@
     "confidence": 0.95
   },
   {
-    "subject": "canon-b97c4c53572b",
-    "predicate": "INHIBITS",
-    "object": "C2931822",
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "INCORPORATES",
+    "object": "canon-666d97fcb09d",
     "evidence_ids": [
-      "paper_id:results:2:llm"
+      "paper_id:abstract:2:llm"
     ],
     "source_papers": [
       "paper_id"
@@ -2655,98 +3072,122 @@
   },
   {
     "subject": "HGNC:3527",
-    "predicate": "ASSOCIATED_WITH",
+    "predicate": "INDICATES",
     "object": "C0376545",
     "evidence_ids": [
-      "paper_1:results:1:llm"
+      "paper_id:results:4:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
     "confidence": 0.9
   },
   {
     "subject": "HGNC:3527",
-    "predicate": "INTERACTS_WITH",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:6204",
     "evidence_ids": [
-      "paper_1:results:2:llm"
+      "paper_id:results:5:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:3527",
-    "predicate": "INTERACTS_WITH",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:9955",
     "evidence_ids": [
-      "paper_1:results:2:llm"
+      "paper_id:results:5:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:3071",
-    "predicate": "INTERACTS_WITH",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:4096",
     "evidence_ids": [
-      "paper_1:results:3:llm"
+      "paper_id:results:6:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:1775",
-    "predicate": "INTERACTS_WITH",
+    "predicate": "ASSOCIATED_WITH",
     "object": "HGNC:10840",
     "evidence_ids": [
-      "paper_1:results:4:llm"
+      "paper_id:results:7:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
-    "subject": "HGNC:3071",
-    "predicate": "REGULATES",
-    "object": "C0596290",
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "IDENTIFIES",
+    "object": "canon-cd5364b9e5a6",
     "evidence_ids": [
-      "paper_1:results:3:llm"
+      "paper_id:results:0:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
-    "subject": "HGNC:1775",
-    "predicate": "REGULATES",
-    "object": "C0596290",
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "IDENTIFIES",
+    "object": "canon-a6c02117c39e",
     "evidence_ids": [
-      "paper_1:results:4:llm"
+      "paper_id:results:0:llm"
     ],
     "source_papers": [
-      "paper_1"
+      "paper_id"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-cd5364b9e5a6",
+    "predicate": "PREDICTS",
+    "object": "canon-28ac3656fe91",
+    "evidence_ids": [
+      "paper_id:results:1:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-bb48ca2f206c",
+    "predicate": "IDENTIFIES",
+    "object": "C0376545",
+    "evidence_ids": [
+      "paper_id:results:3:llm"
+    ],
+    "source_papers": [
+      "paper_id"
+    ],
+    "confidence": 0.9
   },
   {
     "subject": "C0302583",
     "predicate": "REQUIRED_FOR",
-    "object": "C4505026",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:introduction:1:llm",
-      "PMC_FERROPTOSIS_2024:players:1:llm"
+      "PMC_UNKNOWN:introduction:1:llm",
+      "PMC_UNKNOWN:players:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
   },
@@ -2755,234 +3196,176 @@
     "predicate": "CAUSES",
     "object": "C0023775",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:introduction:1:llm"
+      "PMC_UNKNOWN:introduction:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0023775",
-    "predicate": "CAUSES",
-    "object": "C4505026",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:introduction:1:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-3c72728aaa8d",
-    "predicate": "COMPONENT_OF",
-    "object": "canon-d0cc079673cd",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
-  },
-  {
-    "subject": "canon-76cc27fa3e59",
-    "predicate": "COMPONENT_OF",
-    "object": "canon-d0cc079673cd",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-d0cc079673cd",
-    "predicate": "TRANSPORTS",
-    "object": "C0010654",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0010654",
-    "predicate": "PRECURSOR_OF",
-    "object": "C0017817",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0017817",
-    "predicate": "PREVENTS",
-    "object": "C4505026",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
-    ],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.9
   },
   {
     "subject": "HGNC:4556",
-    "predicate": "PREVENTS",
-    "object": "C4505026",
+    "predicate": "PROTECTS_AGAINST",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:players:2:llm"
+      "PMC_UNKNOWN:players:2:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "HGNC:11998",
     "predicate": "PROMOTES",
-    "object": "C4505026",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:suppression:1:llm"
+      "PMC_UNKNOWN:suppression:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
+  },
+  {
+    "subject": "HGNC:11998",
+    "predicate": "DOWNREGULATES",
+    "object": "canon-12d0e42bde3d",
+    "evidence_ids": [
+      "PMC_UNKNOWN:suppression:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
   },
   {
     "subject": "C3852718",
     "predicate": "INHIBITS",
-    "object": "canon-d0cc079673cd",
+    "object": "canon-d384497efe94",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:1:llm"
+      "PMC_UNKNOWN:therapeutics:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
   },
   {
     "subject": "C3852718",
     "predicate": "INDUCES",
-    "object": "C4505026",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:1:llm"
+      "PMC_UNKNOWN:therapeutics:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "canon-809c42a522b2",
+    "subject": "canon-22d0b07deac2",
     "predicate": "INHIBITS",
     "object": "HGNC:4556",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:2:llm"
+      "PMC_UNKNOWN:therapeutics:2:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-809c42a522b2",
+    "subject": "canon-22d0b07deac2",
     "predicate": "INDUCES",
-    "object": "C4505026",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:2:llm"
+      "PMC_UNKNOWN:therapeutics:2:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "C1516119",
     "predicate": "TREATS",
     "object": "C2239176",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:3:llm"
+      "PMC_UNKNOWN:therapeutics:3:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "C1516119",
     "predicate": "INDUCES",
-    "object": "C4505026",
+    "object": "C4235027",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:therapeutics:3:llm"
+      "PMC_UNKNOWN:therapeutics:3:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
-    "subject": "canon-3605cf7cd31c",
+    "subject": "canon-fc1b7fa86143",
     "predicate": "DOWNREGULATES",
-    "object": "canon-3c72728aaa8d",
+    "object": "canon-12d0e42bde3d",
     "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:immune:1:llm"
+      "PMC_UNKNOWN:immune:1:llm"
     ],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-fc1b7fa86143",
+    "predicate": "PROMOTES",
+    "object": "C4235027",
+    "evidence_ids": [
+      "PMC_UNKNOWN:immune:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C4235027",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C2239176",
+    "evidence_ids": [
+      "PMC_UNKNOWN:therapeutics:3:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "canon-3605cf7cd31c",
-    "predicate": "PROMOTES",
-    "object": "C4505026",
-    "evidence_ids": [
-      "PMC_FERROPTOSIS_2024:immune:1:llm"
-    ],
+    "subject": "C4235027",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C1335302",
+    "evidence_ids": [],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.85
   },
   {
-    "subject": "C3852719",
-    "predicate": "INHIBITS",
-    "object": "C4505026",
+    "subject": "C4235027",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C3539878",
     "evidence_ids": [],
     "source_papers": [
-      "PMC_FERROPTOSIS_2024"
+      "PMC_UNKNOWN"
     ],
-    "confidence": 0.8
-  },
-  {
-    "subject": "canon-1dc3c6375e10",
-    "predicate": "INHIBITS",
-    "object": "C4505026",
-    "evidence_ids": [],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.8
-  },
-  {
-    "subject": "C0042874",
-    "predicate": "INHIBITS",
-    "object": "C4505026",
-    "evidence_ids": [],
-    "source_papers": [
-      "PMC_FERROPTOSIS_2024"
-    ],
-    "confidence": 0.8
+    "confidence": 0.85
   },
   {
     "subject": "HGNC:3229",
@@ -2997,8 +3380,8 @@
     "confidence": 0.95
   },
   {
-    "subject": "HGNC:3236",
-    "predicate": "DECREASES",
+    "subject": "canon-169c1e966367",
+    "predicate": "INHIBITS",
     "object": "HGNC:11191",
     "evidence_ids": [
       "PMC_extracted:results:2:llm"
@@ -3006,7 +3389,7 @@
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:11364",
@@ -3022,8 +3405,8 @@
   },
   {
     "subject": "HGNC:11191",
-    "predicate": "PROMOTES",
-    "object": "C1523298",
+    "predicate": "INHIBITS",
+    "object": "C0042172",
     "evidence_ids": [
       "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
@@ -3035,9 +3418,10 @@
   },
   {
     "subject": "HGNC:11191",
-    "predicate": "DECREASES",
-    "object": "HGNC:1748",
+    "predicate": "INCREASES",
+    "object": "C0068408",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
@@ -3048,20 +3432,9 @@
   {
     "subject": "HGNC:11191",
     "predicate": "INCREASES",
-    "object": "HGNC:1759",
+    "object": "C0042666",
     "evidence_ids": [
-      "PMC_extracted:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:11191",
-    "predicate": "INCREASES",
-    "object": "HGNC:12692",
-    "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
@@ -3074,6 +3447,7 @@
     "predicate": "INCREASES",
     "object": "HGNC:3778",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
@@ -3086,20 +3460,7 @@
     "predicate": "REGULATES",
     "object": "HGNC:12428",
     "evidence_ids": [
-      "PMC_extracted:results:6:llm",
-      "PMC_extracted:results:7:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "HGNC:11191",
-    "predicate": "INCREASES",
-    "object": "HGNC:12428",
-    "evidence_ids": [
-      "PMC_extracted:results:7:llm"
+      "PMC_extracted:results:6:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -3111,54 +3472,72 @@
     "predicate": "INCREASES",
     "object": "HGNC:20670",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:11191",
     "predicate": "INCREASES",
     "object": "HGNC:11128",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:11191",
     "predicate": "INCREASES",
     "object": "HGNC:11129",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:11191",
     "predicate": "INCREASES",
     "object": "HGNC:11642",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
     "subject": "HGNC:11191",
     "predicate": "INCREASES",
     "object": "HGNC:14881",
     "evidence_ids": [
+      "PMC_extracted:results:4:llm",
+      "PMC_extracted:results:5:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11191",
+    "predicate": "PROMOTES",
+    "object": "C1523298",
+    "evidence_ids": [
+      "PMC_extracted:results:4:llm",
       "PMC_extracted:results:5:llm"
     ],
     "source_papers": [
@@ -3176,250 +3555,264 @@
     "source_papers": [
       "PMC_extracted"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
   },
   {
-    "subject": "C1449832",
+    "subject": "HGNC:11393",
     "predicate": "INCREASES_RISK",
-    "object": "canon-8ff7f56065fc",
+    "object": "C0019204",
     "evidence_ids": [
-      "paper:results:1:llm"
+      "PMC_UNKNOWN:results:1:llm"
     ],
     "source_papers": [
-      "paper"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C1449832",
-    "predicate": "INCREASES_RISK",
-    "object": "canon-0cdf0b055587",
+    "subject": "HGNC:11393",
+    "predicate": "PHOSPHORYLATES",
+    "object": "HGNC:9077",
     "evidence_ids": [
-      "paper:results:1:llm"
+      "PMC_UNKNOWN:introduction:1:llm"
     ],
     "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C1449832",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-b148f2aa67b9",
-    "evidence_ids": [
-      "paper:results:2:llm",
-      "paper:discussion:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C1449832",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-fd87b886d8b1",
-    "evidence_ids": [
-      "paper:results:3:llm",
-      "paper:discussion:2:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-b148f2aa67b9",
-    "predicate": "INDICATES",
-    "object": "canon-0cdf0b055587",
-    "evidence_ids": [
-      "paper:results:2:llm"
-    ],
-    "source_papers": [
-      "paper"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "canon-fd87b886d8b1",
-    "predicate": "INDICATES",
-    "object": "canon-0cdf0b055587",
+    "subject": "HGNC:11393",
+    "predicate": "PHOSPHORYLATES",
+    "object": "HGNC:11998",
     "evidence_ids": [
-      "paper:results:3:llm"
+      "PMC_UNKNOWN:introduction:2:llm",
+      "PMC_UNKNOWN:discussion:1:llm"
     ],
     "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-35fab50a14be",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0080055",
-    "evidence_ids": [
-      "paper:introduction:1:llm"
-    ],
-    "source_papers": [
-      "paper"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "C2717925",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C1449832",
+    "subject": "canon-c54aba3e03bb",
+    "predicate": "INDICATES",
+    "object": "C0019204",
     "evidence_ids": [
-      "paper:results:4:llm"
+      "PMC_UNKNOWN:results:2:llm"
     ],
     "source_papers": [
-      "paper"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C2607886",
-    "predicate": "TREATS",
-    "object": "C2239176",
-    "evidence_ids": [],
-    "source_papers": [
-      "paper"
+    "subject": "canon-a2299371bf38",
+    "predicate": "INDICATES",
+    "object": "C0019204",
+    "evidence_ids": [
+      "PMC_UNKNOWN:results:3:llm"
     ],
-    "confidence": 0.8
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.95
   },
   {
-    "subject": "C4055433",
+    "subject": "canon-9601876da19e",
+    "predicate": "INTERACTS_WITH",
+    "object": "HGNC:11998",
+    "evidence_ids": [
+      "PMC_UNKNOWN:introduction:3:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11393",
+    "predicate": "CAUSES",
+    "object": "canon-9eae72d67f83",
+    "evidence_ids": [
+      "PMC_UNKNOWN:introduction:2:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11393",
+    "predicate": "CAUSES",
+    "object": "C0919532",
+    "evidence_ids": [
+      "PMC_UNKNOWN:introduction:2:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "HGNC:11393",
+    "predicate": "REGULATES",
+    "object": "C1155873",
+    "evidence_ids": [
+      "PMC_UNKNOWN:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "1298331",
     "predicate": "TREATS",
     "object": "C2239176",
-    "evidence_ids": [],
+    "evidence_ids": [
+      "PMC_UNKNOWN:discussion:2:llm"
+    ],
     "source_papers": [
-      "paper"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.85
   },
   {
     "subject": "HGNC:11998",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0026046",
+    "predicate": "DEGRADED_BY",
+    "object": "HGNC:6973",
     "evidence_ids": [
-      "paper_id:genetics:3:llm",
-      "paper_id:genetics:4:llm"
+      "PMC_UNKNOWN:discussion:1:llm"
     ],
     "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.98
-  },
-  {
-    "subject": "canon-056e5fc3fbcb",
-    "predicate": "INDICATES",
-    "object": "C0026046",
-    "evidence_ids": [
-      "paper_id:genetics:4:llm"
-    ],
-    "source_papers": [
-      "paper_id"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "canon-c52934cbe8f1",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-f8cb992a2be9",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-859b3df5f419",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-820d1e017161",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:2:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-0917621c7ae2",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:3:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-26c679203618",
-    "predicate": "INDICATES",
-    "object": "C0010481",
-    "evidence_ids": [
-      "paper_id:abstract:3:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0750952",
+    "subject": "C4551538",
     "predicate": "ASSOCIATED_WITH",
-    "object": "C0010481",
+    "object": "HGNC:11998",
     "evidence_ids": [
-      "paper_id:abstract:1:llm"
+      "PMC_UNKNOWN:genetics:3:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_UNKNOWN"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "canon-9f2b2ffa91c2",
+    "subject": "C0024881",
+    "predicate": "TREATS",
+    "object": "C0007124",
+    "evidence_ids": [
+      "PMC_UNKNOWN:case_overview:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0024881",
+    "predicate": "TREATS",
+    "object": "C0334108",
+    "evidence_ids": [
+      "PMC_UNKNOWN:case_overview:1:llm"
+    ],
+    "source_papers": [
+      "PMC_UNKNOWN"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-bafb184e008a",
+    "predicate": "INDICATES",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-d7749eb201b3",
+    "predicate": "INDICATES",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-1c9c2119a34e",
+    "predicate": "INDICATES",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-c5bbd944c97a",
+    "predicate": "INDICATES",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:2:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-2c289426d49e",
+    "predicate": "INDICATES",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:3:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-e16892cad257",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0010481",
+    "evidence_ids": [
+      "paper_1:abstract:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-45350a02a02c",
     "predicate": "SUBTYPE_OF",
     "object": "C0010481",
     "evidence_ids": [
-      "paper_id:abstract:4:llm"
+      "paper_1:abstract:4:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
-    "confidence": 0.9
+    "confidence": 0.85
   },
   {
-    "subject": "canon-2b1cd0ba74e3",
-    "predicate": "INCREASES_RISK",
+    "subject": "canon-3835ad18f605",
+    "predicate": "ASSOCIATED_WITH",
     "object": "C0282488",
     "evidence_ids": [
       "PMC_extracted:introduction:1:llm"
@@ -3444,7 +3837,7 @@
   {
     "subject": "C1565686",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-2b1cd0ba74e3",
+    "object": "canon-3835ad18f605",
     "evidence_ids": [
       "PMC_extracted:introduction:2:llm"
     ],
@@ -3456,19 +3849,7 @@
   {
     "subject": "C0073379",
     "predicate": "TREATS",
-    "object": "C0009319",
-    "evidence_ids": [
-      "PMC_extracted:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0076136",
-    "predicate": "INDICATES",
-    "object": "C0009319",
+    "object": "canon-5ad0802c48e1",
     "evidence_ids": [
       "PMC_extracted:results:1:llm"
     ],
@@ -3479,8 +3860,8 @@
   },
   {
     "subject": "C0073379",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-56a2921596ed",
+    "predicate": "INCREASES_RISK",
+    "object": "canon-a621f13fe650",
     "evidence_ids": [
       "PMC_extracted:results:2:llm"
     ],
@@ -3502,191 +3883,11 @@
     "confidence": 0.9
   },
   {
-    "subject": "canon-0e79fe41156f",
-    "predicate": "INTERACTS_WITH",
-    "object": "canon-01bac647cb09",
-    "evidence_ids": [
-      "paper:results:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-cef949b5dba7",
-    "predicate": "REGULATES",
-    "object": "canon-33b225254e9d",
-    "evidence_ids": [
-      "paper:conclusion:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-c09e49915179",
-    "predicate": "REGULATES",
-    "object": "canon-33b225254e9d",
-    "evidence_ids": [
-      "paper:conclusion:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-996a5cbe587e",
-    "predicate": "REGULATES",
-    "object": "canon-33b225254e9d",
-    "evidence_ids": [
-      "paper:conclusion:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "canon-9dffb629e4a9",
-    "predicate": "MODULATES",
-    "object": "canon-33b225254e9d",
-    "evidence_ids": [
-      "paper:significance:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-fe30dda346a4",
-    "predicate": "REGULATES",
-    "object": "canon-33b225254e9d",
-    "evidence_ids": [
-      "paper:significance:1:llm"
-    ],
-    "source_papers": [
-      "paper"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "C0010481",
+    "subject": "C0009319",
     "predicate": "ASSOCIATED_WITH",
-    "object": "C0020626",
+    "object": "canon-3835ad18f605",
     "evidence_ids": [
-      "extracted_paper:introduction:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0032000",
-    "predicate": "INCREASES_RISK",
-    "object": "C0010481",
-    "evidence_ids": [
-      "extracted_paper:introduction:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0271650",
-    "evidence_ids": [
-      "extracted_paper:diabetes:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0016658",
-    "evidence_ids": [
-      "extracted_paper:osteoporosis:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-456a57bc71c5",
-    "evidence_ids": [
-      "extracted_paper:psychiatric:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C1269683",
-    "evidence_ids": [
-      "extracted_paper:psychiatric:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-b9ba09426a1e",
-    "evidence_ids": [
-      "extracted_paper:cognitive:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C4023662",
-    "evidence_ids": [
-      "extracted_paper:cognitive:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "C0010481",
-    "predicate": "INCREASES_RISK",
-    "object": "canon-f6743048cb8e",
-    "evidence_ids": [
-      "extracted_paper:mortality:0:llm"
-    ],
-    "source_papers": [
-      "extracted_paper"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0011389",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
+      "PMC_extracted:discussion:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
@@ -3694,410 +3895,478 @@
     "confidence": 0.9
   },
   {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0029443",
+    "subject": "canon-61522b9f8c29",
+    "predicate": "TRIGGERS",
+    "object": "C0002395",
     "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
+      "paper_1:background:1:llm"
     ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0271441",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0206172",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0149870",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0011389",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-46b529b542a5",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-ee096ab8efd6",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-02145876e491",
-    "evidence_ids": [
-      "PMC_extracted:introduction:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0008196",
-    "predicate": "TREATS",
-    "object": "C0011389",
-    "evidence_ids": [
-      "PMC_extracted:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0017436",
-    "predicate": "TREATS",
-    "object": "C0033809",
-    "evidence_ids": [
-      "PMC_extracted:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0017436",
-    "predicate": "TREATS",
-    "object": "C0014834",
-    "evidence_ids": [
-      "PMC_extracted:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "canon-1dd0f82f91d9",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "canon-5b32ad893f5e",
-    "evidence_ids": [
-      "PMC_extracted:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0001047",
-    "predicate": "TREATS",
-    "object": "C0033809",
-    "evidence_ids": [
-      "PMC_extracted:results:4:llm",
-      "PMC_extracted:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0011519",
-    "predicate": "TREATS",
-    "object": "C0033809",
-    "evidence_ids": [
-      "PMC_extracted:results:5:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "11289",
-    "predicate": "SUBTYPE_OF",
-    "object": "canon-46a8a5c191d2",
-    "evidence_ids": [],
     "source_papers": [
       "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C0201517",
-    "predicate": "INDICATES",
-    "object": "C0001403",
+    "subject": "C0033684",
+    "predicate": "INTERACTS_WITH",
+    "object": "canon-ea9957fc14bc",
     "evidence_ids": [
-      "paper_id:abstract:2:llm"
+      "paper_1:background:1:llm",
+      "paper_1:results:1:llm",
+      "paper_1:conclusion:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-61352672590e",
-    "predicate": "INDICATES",
-    "object": "C0001403",
+    "subject": "canon-c3f976cbc3ee",
+    "predicate": "INTERACTS_WITH",
+    "object": "canon-ea9957fc14bc",
     "evidence_ids": [
-      "paper_id:abstract:3:llm"
+      "paper_1:results:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "canon-f3a03fbb5c14",
-    "predicate": "INDICATES",
-    "object": "C0001403",
+    "subject": "canon-c3f976cbc3ee",
+    "predicate": "SUBTYPE_OF",
+    "object": "C0033684",
     "evidence_ids": [
-      "paper_id:abstract:3:llm"
+      "paper_1:results:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "4316",
-    "predicate": "TREATS",
-    "object": "C0001403",
-    "evidence_ids": [
-      "paper_id:abstract:5:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0020268",
-    "predicate": "TREATS",
-    "object": "C0001403",
-    "evidence_ids": [
-      "paper_id:abstract:5:llm",
-      "paper_id:abstract:6:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0027497",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0001403",
-    "evidence_ids": [
-      "paper_id:abstract:7:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0015672",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0001403",
-    "evidence_ids": [
-      "paper_id:abstract:7:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0020649",
-    "predicate": "ASSOCIATED_WITH",
-    "object": "C0001403",
-    "evidence_ids": [
-      "paper_id:abstract:7:llm"
-    ],
-    "source_papers": [
-      "paper_id"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0282488",
-    "predicate": "CAUSES",
-    "object": "C1565686",
-    "evidence_ids": [
-      "PMC_extracted:introduction:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0282488",
-    "predicate": "CAUSES",
-    "object": "C0073379",
-    "evidence_ids": [
-      "PMC_extracted:introduction:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0005682",
-    "predicate": "TREATS",
-    "object": "C0282488",
-    "evidence_ids": [
-      "PMC_extracted:introduction:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.9
-  },
-  {
-    "subject": "C0076136",
-    "predicate": "IMPROVES",
-    "object": "C0224435",
-    "evidence_ids": [
-      "PMC_extracted:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0076136",
-    "predicate": "REDUCES",
-    "object": "canon-d150a1dbc1cb",
-    "evidence_ids": [
-      "PMC_extracted:results:1:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0076136",
-    "predicate": "INCREASES",
-    "object": "C0017070",
-    "evidence_ids": [
-      "PMC_extracted:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0076136",
-    "predicate": "INCREASES",
-    "object": "C0227692",
-    "evidence_ids": [
-      "PMC_extracted:results:2:llm"
-    ],
-    "source_papers": [
-      "PMC_extracted"
-    ],
-    "confidence": 0.95
-  },
-  {
-    "subject": "C0227692",
+    "subject": "canon-0bd4caae7c6a",
     "predicate": "REGULATES",
-    "object": "C0017070",
+    "object": "canon-8daea16b8f5e",
     "evidence_ids": [
-      "PMC_extracted:conclusion:1:llm"
+      "paper_1:conclusion:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0243192",
+    "predicate": "REGULATES",
+    "object": "canon-8daea16b8f5e",
+    "evidence_ids": [
+      "paper_1:conclusion:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0003139",
+    "predicate": "REGULATES",
+    "object": "canon-8daea16b8f5e",
+    "evidence_ids": [
+      "paper_1:conclusion:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "canon-8daea16b8f5e",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0002395",
+    "evidence_ids": [
+      "paper_1:background:1:llm",
+      "paper_1:significance:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "CAUSES",
+    "object": "C0020626",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-e4239c063127",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0271650",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:results:2:llm",
+      "PMC_CUSHING_COMORBIDITIES:diabetes:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-e2062a5fb9a9",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "INCREASES_RISK",
+    "object": "C1861172",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:thromboembolism:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "C0080179",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:bone:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-d98dff3f6a8c",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:psychiatric:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0221406",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-63bcadce2a81",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:cognitive:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-4ff1744c9506",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "canon-67c3b4d8b43a",
+    "predicate": "TREATS",
+    "object": "C0221406",
+    "evidence_ids": [
+      "PMC_CUSHING_COMORBIDITIES:introduction:1:llm"
+    ],
+    "source_papers": [
+      "PMC_CUSHING_COMORBIDITIES"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "canon-c91a596418c7",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-3e5e085e2fad",
+    "evidence_ids": [
+      "PMC4498709:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0008196",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-3e5e085e2fad",
+    "evidence_ids": [
+      "PMC4498709:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-7fc7c07cb4b2",
+    "predicate": "INCREASES",
+    "object": "C3854019",
+    "evidence_ids": [
+      "PMC4498709:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0015350",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-c91a596418c7",
+    "evidence_ids": [
+      "PMC4498709:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C0001047",
+    "predicate": "AFFECTS",
+    "object": "canon-c91a596418c7",
+    "evidence_ids": [
+      "PMC4498709:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "C0011519",
+    "predicate": "AFFECTS",
+    "object": "canon-c91a596418c7",
+    "evidence_ids": [
+      "PMC4498709:results:4:llm"
+    ],
+    "source_papers": [
+      "PMC4498709"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "subject": "canon-6e0fe6afcb5f",
+    "predicate": "CAUSES",
+    "object": "C0030552",
+    "evidence_ids": [
+      "PMC_extracted:abstract:1:llm"
     ],
     "source_papers": [
       "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1257975",
+    "predicate": "TREATS",
+    "object": "canon-6e0fe6afcb5f",
+    "evidence_ids": [
+      "PMC_extracted:abstract:2:llm",
+      "PMC_extracted:abstract:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0472699",
+    "predicate": "IMPROVES",
+    "object": "canon-2cd29051d5e0",
+    "evidence_ids": [
+      "PMC_extracted:abstract:2:llm",
+      "PMC_extracted:abstract:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1257975",
+    "predicate": "INCREASES",
+    "object": "C0008779",
+    "evidence_ids": [
+      "PMC_extracted:abstract:3:llm",
+      "PMC_extracted:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C1257975",
+    "predicate": "INCREASES",
+    "object": "HGNC:11364",
+    "evidence_ids": [
+      "PMC_extracted:abstract:3:llm",
+      "PMC_extracted:results:1:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0472699",
+    "predicate": "REDUCES",
+    "object": "C0008767",
+    "evidence_ids": [
+      "PMC_extracted:results:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0472699",
+    "predicate": "REDUCES",
+    "object": "canon-72b293f90974",
+    "evidence_ids": [
+      "PMC_extracted:results:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0008779",
+    "predicate": "REGULATES",
+    "object": "HGNC:11364",
+    "evidence_ids": [
+      "PMC_extracted:abstract:3:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "C1257975",
+    "predicate": "SECRETES",
+    "object": "C0027754",
+    "evidence_ids": [
+      "PMC_extracted:abstract:2:llm"
+    ],
+    "source_papers": [
+      "PMC_extracted"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "subject": "C0185624",
+    "predicate": "TREATS",
+    "object": "C0022359",
+    "evidence_ids": [
+      "paper_1:case_report:1:llm"
+    ],
+    "source_papers": [
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
     "subject": "C1623258",
     "predicate": "INDICATES",
-    "object": "canon-286d8ab1b205",
+    "object": "canon-9bf95cc9eb58",
     "evidence_ids": [
-      "case_report:abstract:1:llm"
+      "paper_1:case_report:1:llm"
     ],
     "source_papers": [
-      "case_report"
+      "paper_1"
     ],
     "confidence": 0.95
   },
   {
-    "subject": "C0023660",
+    "subject": "C0002921",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-286d8ab1b205",
+    "object": "canon-9bf95cc9eb58",
     "evidence_ids": [
-      "case_report:abstract:2:llm"
+      "paper_1:case_report:2:llm"
     ],
     "source_papers": [
-      "case_report"
+      "paper_1"
     ],
-    "confidence": 0.85
+    "confidence": 0.95
   },
   {
-    "subject": "C0039044",
-    "predicate": "CAUSES",
-    "object": "canon-286d8ab1b205",
+    "subject": "C0014563",
+    "predicate": "INCREASES",
+    "object": "C0039044",
     "evidence_ids": [
-      "case_report:abstract:3:llm"
+      "paper_1:case_report:3:llm"
     ],
     "source_papers": [
-      "case_report"
-    ],
-    "confidence": 0.85
-  },
-  {
-    "subject": "canon-8a475c6b68fb",
-    "predicate": "CAUSES",
-    "object": "canon-4507c2739f36",
-    "evidence_ids": [
-      "case_report:abstract:4:llm"
-    ],
-    "source_papers": [
-      "case_report"
+      "paper_1"
     ],
     "confidence": 0.9
   },
   {
-    "subject": "canon-4507c2739f36",
-    "predicate": "SUBTYPE_OF",
-    "object": "canon-286d8ab1b205",
+    "subject": "C0039044",
+    "predicate": "ACTIVATES",
+    "object": "canon-5701745c3781",
     "evidence_ids": [
-      "case_report:abstract:4:llm"
+      "paper_1:case_report:3:llm"
     ],
     "source_papers": [
-      "case_report"
+      "paper_1"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "subject": "canon-5701745c3781",
+    "predicate": "ASSOCIATED_WITH",
+    "object": "canon-9bf95cc9eb58",
+    "evidence_ids": [
+      "paper_1:case_report:3:llm"
+    ],
+    "source_papers": [
+      "paper_1"
     ],
     "confidence": 0.9
   },
@@ -4106,11 +4375,11 @@
     "predicate": "TREATS",
     "object": "C0027073",
     "evidence_ids": [
-      "paper_id:abstract:1:llm",
-      "paper_id:results:1:llm"
+      "PMC_PLACEHOLDER:abstract:1:llm",
+      "PMC_PLACEHOLDER:results:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
@@ -4119,12 +4388,12 @@
     "predicate": "TREATS",
     "object": "C0020580",
     "evidence_ids": [
-      "paper_id:abstract:1:llm",
-      "paper_id:results:1:llm",
-      "paper_id:results:3:llm"
+      "PMC_PLACEHOLDER:abstract:1:llm",
+      "PMC_PLACEHOLDER:results:1:llm",
+      "PMC_PLACEHOLDER:results:3:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
@@ -4133,11 +4402,11 @@
     "predicate": "ASSOCIATED_WITH",
     "object": "C0027073",
     "evidence_ids": [
-      "paper_id:abstract:1:llm",
-      "paper_id:results:4:llm"
+      "PMC_PLACEHOLDER:abstract:1:llm",
+      "PMC_PLACEHOLDER:results:4:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
     "confidence": 0.95
   },
@@ -4146,59 +4415,59 @@
     "predicate": "ASSOCIATED_WITH",
     "object": "C0020580",
     "evidence_ids": [
-      "paper_id:results:4:llm"
+      "PMC_PLACEHOLDER:results:4:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
   },
   {
     "subject": "C0023660",
     "predicate": "TREATS",
     "object": "C0027073",
     "evidence_ids": [
-      "paper_id:results:1:llm"
+      "PMC_PLACEHOLDER:results:2:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
     "subject": "C0040864",
     "predicate": "TREATS",
     "object": "C0027073",
     "evidence_ids": [
-      "paper_id:results:1:llm"
+      "PMC_PLACEHOLDER:results:2:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
-    "subject": "C0458343",
+    "subject": "canon-b8e2e24a91f8",
     "predicate": "ASSOCIATED_WITH",
-    "object": "canon-48ba2ef73ce1",
+    "object": "C0020580",
     "evidence_ids": [
-      "paper_id:discussion:1:llm"
+      "PMC_PLACEHOLDER:discussion:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.8
+    "confidence": 0.9
   },
   {
     "subject": "C0020580",
     "predicate": "ASSOCIATED_WITH",
     "object": "C3714625",
     "evidence_ids": [
-      "paper_id:discussion:1:llm"
+      "PMC_PLACEHOLDER:discussion:1:llm"
     ],
     "source_papers": [
-      "paper_id"
+      "PMC_PLACEHOLDER"
     ],
-    "confidence": 0.75
+    "confidence": 0.85
   }
 ]

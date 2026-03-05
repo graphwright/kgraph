@@ -1,22 +1,22 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC12764803",
+    "pmcid": "PMC_PLACEHOLDER",
     "title": "Integrating homologous recombination deficiency subtyping with TCGA molecular classification for enhanced prognostic stratification and personalised therapy in endometrial cancer",
     "authors": [
       "Not specified"
     ],
     "journal": "Not specified",
-    "year": null,
-    "study_type": "cohort study",
+    "year": 2024,
+    "study_type": "retrospective cohort study",
     "eco_type": null
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:31:22.253366Z",
+      "timestamp": "2026-03-05T18:55:47.691053Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 60.71
+      "duration_seconds": 61.07
     },
     "entity_resolution": null,
     "model_info": null
@@ -78,7 +78,7 @@
     },
     {
       "id": "tcga_molecular_classification",
-      "class": "Procedure",
+      "class": "StudyDesign",
       "name": "TCGA molecular classification",
       "synonyms": [
         "Cancer Genome Atlas molecular classification"
@@ -176,7 +176,7 @@
     },
     {
       "id": "disease_free_survival",
-      "class": "Biomarker",
+      "class": "StudyDesign",
       "name": "disease-free survival",
       "synonyms": [
         "DFS"
@@ -193,26 +193,11 @@
     },
     {
       "id": "overall_survival",
-      "class": "Biomarker",
+      "class": "StudyDesign",
       "name": "overall survival",
       "synonyms": [
         "OS"
       ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "chromosomal_instability",
-      "class": "Biomarker",
-      "name": "chromosomal instability",
-      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -239,11 +224,11 @@
       "uniprot_id": null
     },
     {
-      "id": "msi_h",
+      "id": "microsatellite_instability_high",
       "class": "Biomarker",
-      "name": "MSI-H",
+      "name": "microsatellite instability-high",
       "synonyms": [
-        "microsatellite instability-high"
+        "MSI-H"
       ],
       "symbol": null,
       "brand_names": [],
@@ -281,6 +266,36 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": "HGNC:11110",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "rad51",
+      "class": "Gene",
+      "name": "RAD51",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:9817",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "spop",
+      "class": "Gene",
+      "name": "SPOP",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11254",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -331,39 +346,39 @@
       "uniprot_id": null
     },
     {
-      "id": "rad51",
+      "id": "brca1",
       "class": "Gene",
-      "name": "RAD51",
+      "name": "BRCA1",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:9817",
+      "hgnc_id": "HGNC:1100",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "spop",
+      "id": "brca2",
       "class": "Gene",
-      "name": "SPOP",
+      "name": "BRCA2",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:11254",
+      "hgnc_id": "HGNC:1101",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "aneuploidy_score",
-      "class": "Biomarker",
-      "name": "aneuploidy score",
+      "id": "parp_inhibitors",
+      "class": "Drug",
+      "name": "PARP inhibitors",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -376,28 +391,11 @@
       "uniprot_id": null
     },
     {
-      "id": "structural_complexity_score",
-      "class": "Biomarker",
-      "name": "structural complexity score",
+      "id": "immune_checkpoint_inhibitors",
+      "class": "Drug",
+      "name": "immune checkpoint inhibitors",
       "synonyms": [
-        "SCIN"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "whole_genome_doubling",
-      "class": "Biomarker",
-      "name": "whole-genome doubling",
-      "synonyms": [
-        "WGD"
+        "ICIs"
       ],
       "symbol": null,
       "brand_names": [],
@@ -425,7 +423,7 @@
       "uniprot_id": null
     },
     {
-      "id": "pd_l1",
+      "id": "pdl1",
       "class": "Protein",
       "name": "PD-L1",
       "synonyms": [],
@@ -515,41 +513,11 @@
       "uniprot_id": null
     },
     {
-      "id": "pan_ck",
-      "class": "Protein",
-      "name": "Pan-CK",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "parp_inhibitors",
-      "class": "Drug",
-      "name": "PARP inhibitors",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "immune_checkpoint_inhibitors",
-      "class": "Drug",
-      "name": "immune checkpoint inhibitors",
+      "id": "homologous_recombination_repair",
+      "class": "BiologicalProcess",
+      "name": "homologous recombination repair",
       "synonyms": [
-        "ICIs"
+        "HRR"
       ],
       "symbol": null,
       "brand_names": [],
@@ -562,10 +530,74 @@
       "uniprot_id": null
     },
     {
-      "id": "platinum_based_chemotherapy",
-      "class": "Drug",
-      "name": "platinum-based chemotherapy",
+      "id": "dna_double_strand_breaks",
+      "class": "BiologicalProcess",
+      "name": "DNA double-strand breaks",
       "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "genomic_instability",
+      "class": "BiologicalProcess",
+      "name": "genomic instability",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "whole_genome_doubling",
+      "class": "BiologicalProcess",
+      "name": "whole-genome doubling",
+      "synonyms": [
+        "WGD"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "aneuploidy_score",
+      "class": "Biomarker",
+      "name": "aneuploidy score",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "structural_complexity_score",
+      "class": "Biomarker",
+      "name": "structural complexity score",
+      "synonyms": [
+        "SCIN"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -624,130 +656,6 @@
       "uniprot_id": null
     },
     {
-      "id": "brca1",
-      "class": "Gene",
-      "name": "BRCA1",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:1100",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "brca2",
-      "class": "Gene",
-      "name": "BRCA2",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:1101",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "homologous_recombination_repair",
-      "class": "BiologicalProcess",
-      "name": "homologous recombination repair",
-      "synonyms": [
-        "HRR"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "dna_double_strand_breaks",
-      "class": "Mutation",
-      "name": "DNA double-strand breaks",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "genomic_instability",
-      "class": "BiologicalProcess",
-      "name": "genomic instability",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "tumour_mutational_burden",
-      "class": "Biomarker",
-      "name": "tumour mutational burden",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "next_generation_sequencing",
-      "class": "Procedure",
-      "name": "next-generation sequencing",
-      "synonyms": [
-        "NGS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "multiplex_immunohistochemistry",
-      "class": "Procedure",
-      "name": "multiplex immunohistochemistry",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "support_vector_machine",
       "class": "StatisticalMethod",
       "name": "support vector machine",
@@ -765,61 +673,12 @@
       "uniprot_id": null
     },
     {
-      "id": "c_index",
+      "id": "concordance_index",
       "class": "StatisticalMethod",
-      "name": "C-index",
+      "name": "concordance index",
       "synonyms": [
-        "concordance index"
+        "C-index"
       ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "area_under_curve",
-      "class": "StatisticalMethod",
-      "name": "area under the curve",
-      "synonyms": [
-        "AUC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "kaplan_meier_curves",
-      "class": "StatisticalMethod",
-      "name": "Kaplan-Meier curves",
-      "synonyms": [
-        "KM curves"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "cox_proportional_hazards_regression",
-      "class": "StatisticalMethod",
-      "name": "Cox proportional hazards regression",
-      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -863,9 +722,165 @@
       "uniprot_id": null
     },
     {
-      "id": "roc_curve_analysis",
+      "id": "kaplan_meier_curves",
       "class": "StatisticalMethod",
-      "name": "ROC curve analysis",
+      "name": "Kaplan-Meier curves",
+      "synonyms": [
+        "KM curves"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cox_proportional_hazards_regression",
+      "class": "StatisticalMethod",
+      "name": "Cox proportional hazards regression",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "multiplex_immunohistochemistry",
+      "class": "Procedure",
+      "name": "multiplex immunohistochemistry",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "next_generation_sequencing",
+      "class": "Procedure",
+      "name": "next-generation sequencing",
+      "synonyms": [
+        "NGS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "rna_sequencing",
+      "class": "Procedure",
+      "name": "RNA sequencing",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gene_expression_profiling",
+      "class": "Procedure",
+      "name": "gene expression profiling",
+      "synonyms": [
+        "GEP"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chemotherapy",
+      "class": "Procedure",
+      "name": "chemotherapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "radiotherapy",
+      "class": "Procedure",
+      "name": "radiotherapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chemoradiotherapy",
+      "class": "Procedure",
+      "name": "chemoradiotherapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hysterectomy",
+      "class": "Procedure",
+      "name": "hysterectomy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "bilateral_salpingo_oophorectomy",
+      "class": "Procedure",
+      "name": "bilateral salpingo-oophorectomy",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -880,80 +895,67 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper_1:results:1:llm",
+      "id": "PMC_PLACEHOLDER:background:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_1",
+      "paper_id": "PMC_PLACEHOLDER",
+      "text_span_id": "background_1",
       "text": "HRD subtyping identified distinct genomic, pathological, and immunological features. HRD-High tumours were associated with advanced FIGO stages, TP53 mutations, higher chromosomal instability, and elevated CD8\u207aPD-1\u207a T-cell infiltration.",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "cohort study",
+      "study_type": "retrospective cohort study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:results:2:llm",
+      "id": "PMC_PLACEHOLDER:background:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_2",
+      "paper_id": "PMC_PLACEHOLDER",
+      "text_span_id": "background_2",
       "text": "HRD subtyping independently predicted disease-free survival and showed superior prognostic accuracy (C-index = 0.857) compared to TCGA subtyping (C-index = 0.751).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "cohort study",
+      "study_type": "retrospective cohort study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:results:3:llm",
+      "id": "PMC_PLACEHOLDER:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_3",
-      "text": "Integrating HRD and TCGA classifiers further improved predictive performance (C-index = 0.903).",
+      "paper_id": "PMC_PLACEHOLDER",
+      "text_span_id": "results_1",
+      "text": "Compared to the other two groups, the HRD-high group exhibited higher mutation frequencies in TP53, RAD51, and SPOP, but fewer mutations in PTEN, ARID1A, PIK3R1, CTNNB1, and CTCF (all P < 0.05).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "cohort study",
+      "study_type": "retrospective cohort study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:results:4:llm",
+      "id": "PMC_PLACEHOLDER:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_4",
-      "text": "An SVM model incorporating HRD score and immune features achieved an AUC of 0.733 for recurrence prediction.",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "cohort study",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper_1:results:5:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_5",
+      "paper_id": "PMC_PLACEHOLDER",
+      "text_span_id": "results_2",
       "text": "The HRD score was strongly positively correlated with genomic instability markers, such as SCIN (R = 0.93, p < 0.01) and aneuploidy score (R = 0.83, p < 0.001).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "cohort study",
+      "study_type": "retrospective cohort study",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper_1:results:6:llm",
+      "id": "PMC_PLACEHOLDER:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_1",
-      "text_span_id": "results_6",
-      "text": "HRD scores were significantly higher in WGD-positive samples compared to WGD-negative samples (p < 0.001).",
+      "paper_id": "PMC_PLACEHOLDER",
+      "text_span_id": "results_3",
+      "text": "HRD-High patients exhibited significantly elevated numbers of CD3+PD-1+ T cells and CD8+PD-1+ T cells in their tumour-immune microenvironment compared to HRD-Middle and HRD-Low groups (all p < 0.05).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "cohort study",
+      "study_type": "retrospective cohort study",
       "eco_type": null,
       "source": "extracted"
     }
@@ -961,47 +963,31 @@
   "relationships": [
     {
       "subject": "homologous_recombination_deficiency",
-      "predicate": "INDICATES",
-      "object": "genomic_instability",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "endometrial_cancer",
       "evidence_ids": [
-        "paper_1:results:1:llm"
+        "PMC_PLACEHOLDER:background:1:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "results",
+      "section": "background",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
       "subject": "homologous_recombination_deficiency",
-      "predicate": "ASSOCIATED_WITH",
+      "predicate": "INDICATES",
       "object": "tp53",
       "evidence_ids": [
-        "paper_1:results:1:llm"
+        "PMC_PLACEHOLDER:background:1:llm",
+        "PMC_PLACEHOLDER:results:1:llm"
       ],
       "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "homologous_recombination_deficiency",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "chromosomal_instability",
-      "evidence_ids": [
-        "paper_1:results:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -1015,10 +1001,11 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "cd8_positive_pd1_positive_t_cells",
       "evidence_ids": [
-        "paper_1:results:1:llm"
+        "PMC_PLACEHOLDER:background:1:llm",
+        "PMC_PLACEHOLDER:results:3:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -1032,10 +1019,61 @@
       "predicate": "INDICATES",
       "object": "disease_free_survival",
       "evidence_ids": [
-        "paper_1:results:2:llm"
+        "PMC_PLACEHOLDER:background:2:llm"
       ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "background",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "homologous_recombination_deficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "rad51",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "homologous_recombination_deficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "spop",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "homologous_recombination_deficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "aneuploidy_score",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:results:2:llm"
+      ],
+      "source_papers": [
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -1049,48 +1087,10 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "structural_complexity_score",
       "evidence_ids": [
-        "paper_1:results:5:llm"
+        "PMC_PLACEHOLDER:results:2:llm"
       ],
       "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "correlation": "0.93"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "homologous_recombination_deficiency",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "aneuploidy_score",
-      "evidence_ids": [
-        "paper_1:results:5:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "correlation": "0.83"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "homologous_recombination_deficiency",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "whole_genome_doubling",
-      "evidence_ids": [
-        "paper_1:results:6:llm"
-      ],
-      "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -1103,13 +1103,15 @@
       "subject": "loss_of_heterozygosity",
       "predicate": "SUBTYPE_OF",
       "object": "homologous_recombination_deficiency",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:background:1:llm"
+      ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "methods",
+      "section": "background",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -1118,13 +1120,15 @@
       "subject": "telomeric_allelic_imbalance",
       "predicate": "SUBTYPE_OF",
       "object": "homologous_recombination_deficiency",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:background:1:llm"
+      ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "methods",
+      "section": "background",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -1133,51 +1137,40 @@
       "subject": "large_scale_state_transitions",
       "predicate": "SUBTYPE_OF",
       "object": "homologous_recombination_deficiency",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:background:1:llm"
+      ],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "methods",
+      "section": "background",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "parp_inhibitors",
-      "predicate": "TREATS",
-      "object": "homologous_recombination_deficiency",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper_1"
+      "subject": "homologous_recombination_deficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "genomic_instability",
+      "evidence_ids": [
+        "PMC_PLACEHOLDER:results:2:llm"
       ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "discussion",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "immune_checkpoint_inhibitors",
-      "predicate": "TREATS",
-      "object": "homologous_recombination_deficiency",
-      "evidence_ids": [],
       "source_papers": [
-        "paper_1"
+        "PMC_PLACEHOLDER"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
-      "section": "discussion",
+      "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This study demonstrates that HRD subtyping provides superior prognostic accuracy compared to TCGA molecular classification in endometrial cancer",
-    "The combination of HRD and TCGA classifiers achieved the highest predictive performance (C-index = 0.903)",
-    "HRD-High tumours showed distinct immune microenvironment features with elevated CD8+PD-1+ T-cell infiltration"
+    "This study demonstrates the clinical utility of HRD subtyping as a complementary biomarker to TCGA molecular classification in endometrial cancer",
+    "HRD-High tumours showed distinct molecular features including TP53 mutations and elevated immune cell infiltration",
+    "The integration of HRD scoring with immune profiling may inform personalized treatment strategies"
   ]
 }

@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:42:07.652833Z",
+      "timestamp": "2026-03-05T19:07:25.511020Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 35.96
+      "duration_seconds": 37.09
     },
     "entity_resolution": null,
     "model_info": null
@@ -95,23 +95,6 @@
     },
     {
       "id": "E4",
-      "class": "Drug",
-      "name": "2,4,6-trinitrobenzene sulfonic acid",
-      "synonyms": [
-        "TNBS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E5",
       "class": "AnatomicalStructure",
       "name": "urinary bladder",
       "synonyms": [
@@ -128,11 +111,28 @@
       "uniprot_id": null
     },
     {
-      "id": "E6",
-      "class": "AnatomicalStructure",
-      "name": "colon",
+      "id": "E5",
+      "class": "BiologicalProcess",
+      "name": "cross-sensitization",
       "synonyms": [
-        "distal colon"
+        "cross-organ sensitization"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E6",
+      "class": "Disease",
+      "name": "colitis",
+      "synonyms": [
+        "colonic inflammation"
       ],
       "symbol": null,
       "brand_names": [],
@@ -146,11 +146,10 @@
     },
     {
       "id": "E7",
-      "class": "BiologicalProcess",
-      "name": "cross-sensitization",
+      "class": "AnatomicalStructure",
+      "name": "bladder spinal neurons",
       "synonyms": [
-        "cross-organ sensitization",
-        "pelvic organ cross-sensitization"
+        "bladder neurons"
       ],
       "symbol": null,
       "brand_names": [],
@@ -164,11 +163,10 @@
     },
     {
       "id": "E8",
-      "class": "Disease",
-      "name": "colitis",
+      "class": "Procedure",
+      "name": "urinary bladder distension",
       "synonyms": [
-        "colonic inflammation",
-        "experimental colitis"
+        "UBD"
       ],
       "symbol": null,
       "brand_names": [],
@@ -182,12 +180,9 @@
     },
     {
       "id": "E9",
-      "class": "AnatomicalStructure",
-      "name": "spinal neurons",
-      "synonyms": [
-        "bladder spinal neurons",
-        "second-order spinal neurons"
-      ],
+      "class": "BiologicalProcess",
+      "name": "central sensitization",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -201,7 +196,7 @@
     {
       "id": "E10",
       "class": "BiologicalProcess",
-      "name": "central sensitization",
+      "name": "peripheral sensitization",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -233,7 +228,7 @@
     {
       "id": "E12",
       "class": "AnatomicalStructure",
-      "name": "urothelium",
+      "name": "lumbosacral spinal cord",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -247,6 +242,53 @@
     },
     {
       "id": "E13",
+      "class": "BiologicalProcess",
+      "name": "neurogenic inflammation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E14",
+      "class": "Protein",
+      "name": "myeloperoxidase",
+      "synonyms": [
+        "MPO"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E15",
+      "class": "AnatomicalStructure",
+      "name": "urothelium",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E16",
       "class": "AnatomicalStructure",
       "name": "detrusor muscle",
       "synonyms": [
@@ -263,58 +305,9 @@
       "uniprot_id": null
     },
     {
-      "id": "E14",
-      "class": "Protein",
-      "name": "alpha tubulin",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E15",
-      "class": "Enzyme",
-      "name": "myeloperoxidase",
-      "synonyms": [
-        "MPO"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E16",
-      "class": "Procedure",
-      "name": "urinary bladder distension",
-      "synonyms": [
-        "UBD"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
       "id": "E17",
-      "class": "BiologicalProcess",
-      "name": "neurogenic inflammation",
+      "class": "AnatomicalStructure",
+      "name": "distal colon",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -328,21 +321,6 @@
     },
     {
       "id": "E18",
-      "class": "Symptom",
-      "name": "bladder pain",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "E19",
       "class": "BiologicalProcess",
       "name": "viscerosomatic convergence",
       "synonyms": [],
@@ -357,9 +335,24 @@
       "uniprot_id": null
     },
     {
+      "id": "E19",
+      "class": "BiologicalProcess",
+      "name": "nocigenic inhibition",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
       "id": "E20",
-      "class": "Drug",
-      "name": "sodium pentobarbital",
+      "class": "Symptom",
+      "name": "bladder pain",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -431,7 +424,20 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_3",
-      "text": "A significant decrease in TRPV1 expression after intravesical treatment with RTX in the urothelium and DSM without changes in the distal colon.",
+      "text": "These results provide evidence for a significant decrease in TRPV1 expression after intravesical treatment with RTX in the urothelium and DSM without changes in the distal colon.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:discussion:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "discussion_1",
+      "text": "desensitization of TRPV1 receptors in the urinary bladder prior to the onset of colonic inflammatory insult significantly reduced the duration and enhanced the latency period of excitatory responses in bladder neurons.",
       "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -441,8 +447,8 @@
   ],
   "relationships": [
     {
-      "subject": "E7",
-      "predicate": "INCREASES_RISK",
+      "subject": "E5",
+      "predicate": "ASSOCIATED_WITH",
       "object": "E1",
       "evidence_ids": [
         "PMC_extracted:introduction:1:llm"
@@ -460,7 +466,7 @@
     {
       "subject": "E2",
       "predicate": "ASSOCIATED_WITH",
-      "object": "E17",
+      "object": "E13",
       "evidence_ids": [
         "PMC_extracted:introduction:2:llm"
       ],
@@ -477,7 +483,7 @@
     {
       "subject": "E2",
       "predicate": "ASSOCIATED_WITH",
-      "object": "E7",
+      "object": "E5",
       "evidence_ids": [
         "PMC_extracted:introduction:2:llm"
       ],
@@ -494,7 +500,7 @@
     {
       "subject": "E3",
       "predicate": "TREATS",
-      "object": "E8",
+      "object": "E7",
       "evidence_ids": [
         "PMC_extracted:results:1:llm"
       ],
@@ -503,26 +509,7 @@
       ],
       "confidence": 0.95,
       "properties": {
-        "mechanism": "reduces excitatory response duration"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "E4",
-      "predicate": "INDICATES",
-      "object": "E8",
-      "evidence_ids": [
-        "PMC_extracted:results:1:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "timepoint": "3 days post-treatment"
+        "effect": "reduces excitatory response duration"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -531,8 +518,8 @@
     },
     {
       "subject": "E3",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "E19",
+      "predicate": "INCREASES_RISK",
+      "object": "E18",
       "evidence_ids": [
         "PMC_extracted:results:2:llm"
       ],
@@ -560,15 +547,34 @@
       ],
       "confidence": 0.9,
       "properties": {
-        "effect": "decreases expression"
+        "effect": "decreases TRPV1 expression"
       },
       "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "E6",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "E5",
+      "evidence_ids": [
+        "PMC_extracted:discussion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "discussion",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This study demonstrates that resiniferatoxin (RTX) has dual effects: it reduces cross-sensitization between colon and bladder but increases viscerosomatic convergence, limiting its therapeutic potential for pelvic pain disorders."
+    "This study demonstrates that resiniferatoxin (RTX) has dual effects: it reduces bladder neuron excitability during cross-sensitization but increases somatic field responses, limiting its therapeutic potential.",
+    "The experimental model uses TNBS-induced colitis to study colon-bladder cross-sensitization in rats.",
+    "TRPV1 receptors play a key role in pelvic organ cross-sensitization and neurogenic inflammation."
   ]
 }

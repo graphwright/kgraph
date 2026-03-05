@@ -8,15 +8,15 @@
     ],
     "journal": "Not specified",
     "year": null,
-    "study_type": "review",
+    "study_type": "Review",
     "eco_type": null
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,20 +30,20 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:22:10.530093Z",
+      "timestamp": "2026-03-05T18:46:43.379368Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 73.23
+      "duration_seconds": 78.14
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "e1",
+      "id": "congenital_adrenal_hyperplasia",
       "class": "Disease",
       "name": "congenital adrenal hyperplasia",
       "synonyms": [
@@ -53,14 +53,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e2",
+      "id": "21_hydroxylase_deficiency",
       "class": "Disease",
       "name": "21-hydroxylase deficiency",
       "synonyms": [
@@ -70,14 +70,31 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e3",
+      "id": "21_hydroxylase",
+      "class": "Enzyme",
+      "name": "21-hydroxylase",
+      "synonyms": [
+        "21OH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CYP21A2",
       "class": "Gene",
       "name": "CYP21A2",
       "synonyms": [],
@@ -92,24 +109,7 @@
       "uniprot_id": null
     },
     {
-      "id": "e4",
-      "class": "Enzyme",
-      "name": "21-hydroxylase",
-      "synonyms": [
-        "21OH"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0020249",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e5",
+      "id": "cortisol",
       "class": "Hormone",
       "name": "cortisol",
       "synonyms": [],
@@ -117,14 +117,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020268",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e6",
+      "id": "aldosterone",
       "class": "Hormone",
       "name": "aldosterone",
       "synonyms": [],
@@ -132,14 +132,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0002006",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e7",
+      "id": "11beta_hydroxylase",
       "class": "Enzyme",
       "name": "11\u03b2-hydroxylase",
       "synonyms": [
@@ -149,14 +149,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e8",
+      "id": "17alpha_hydroxylase",
       "class": "Enzyme",
       "name": "17\u03b1-hydroxylase",
       "synonyms": [
@@ -167,14 +167,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e9",
+      "id": "3beta_hydroxysteroid_dehydrogenase_type_2",
       "class": "Enzyme",
       "name": "3\u03b2-hydroxysteroid dehydrogenase type 2",
       "synonyms": [
@@ -184,14 +184,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e10",
+      "id": "steroidogenic_acute_regulatory_protein",
       "class": "Protein",
       "name": "steroidogenic acute regulatory protein",
       "synonyms": [
@@ -201,14 +201,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0389995",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e11",
+      "id": "P450_cholesterol_side_chain_cleavage_enzyme",
       "class": "Enzyme",
       "name": "P450 cholesterol side-chain cleavage enzyme",
       "synonyms": [
@@ -218,14 +218,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e12",
+      "id": "P450_oxidoreductase",
       "class": "Enzyme",
       "name": "P450 oxidoreductase",
       "synonyms": [
@@ -235,31 +235,33 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e13",
+      "id": "ACTH",
       "class": "Hormone",
-      "name": "adrenocorticotropic hormone",
+      "name": "ACTH",
       "synonyms": [
-        "ACTH"
+        "adrenocorticotropic hormone",
+        "adrenocorticotrophic hormone",
+        "adrenocorticotrophin hormone"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001655",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e14",
+      "id": "adrenal_cortex",
       "class": "AnatomicalStructure",
       "name": "adrenal cortex",
       "synonyms": [],
@@ -267,14 +269,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001613",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e15",
+      "id": "17alpha_hydroxyprogesterone",
       "class": "Biomarker",
       "name": "17\u03b1-hydroxyprogesterone",
       "synonyms": [
@@ -284,14 +286,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0020249",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e16",
+      "id": "11_deoxycortisol",
       "class": "Hormone",
       "name": "11-deoxycortisol",
       "synonyms": [],
@@ -299,31 +301,61 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0011777",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e17",
+      "id": "deoxycorticosterone",
       "class": "Hormone",
-      "name": "11-deoxycorticosterone",
+      "name": "deoxycorticosterone",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0011777",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e18",
+      "id": "androstenedione",
+      "class": "Hormone",
+      "name": "androstenedione",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "dehydroepiandrosterone",
+      "class": "Hormone",
+      "name": "dehydroepiandrosterone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "salt_wasting_CAH",
       "class": "Disease",
-      "name": "salt-wasting",
+      "name": "salt-wasting CAH",
       "synonyms": [
         "SW"
       ],
@@ -331,16 +363,16 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e19",
+      "id": "simple_virilizing_CAH",
       "class": "Disease",
-      "name": "simple virilizing",
+      "name": "simple virilizing CAH",
       "synonyms": [
         "SV"
       ],
@@ -348,16 +380,16 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e20",
+      "id": "nonclassic_CAH",
       "class": "Disease",
-      "name": "nonclassic",
+      "name": "nonclassic CAH",
       "synonyms": [
         "NC"
       ],
@@ -365,14 +397,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e21",
+      "id": "adrenal_crisis",
       "class": "Disease",
       "name": "adrenal crisis",
       "synonyms": [],
@@ -380,14 +412,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0001623",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e22",
+      "id": "newborn_screening",
       "class": "Procedure",
       "name": "newborn screening",
       "synonyms": [
@@ -397,14 +429,29 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0027617",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e23",
+      "id": "ACTH_stimulation_test",
+      "class": "Procedure",
+      "name": "ACTH stimulation test",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "glucocorticoids",
       "class": "Drug",
       "name": "glucocorticoids",
       "synonyms": [],
@@ -412,14 +459,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0017710",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e24",
+      "id": "mineralocorticoids",
       "class": "Drug",
       "name": "mineralocorticoids",
       "synonyms": [],
@@ -427,14 +474,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0026351",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e25",
+      "id": "fludrocortisone",
       "class": "Drug",
       "name": "fludrocortisone",
       "synonyms": [],
@@ -444,12 +491,12 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "4316",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e26",
+      "id": "cardiometabolic_diseases",
       "class": "Disease",
       "name": "cardiometabolic diseases",
       "synonyms": [],
@@ -457,14 +504,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0025517",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e27",
+      "id": "osteoporosis",
       "class": "Disease",
       "name": "osteoporosis",
       "synonyms": [],
@@ -472,14 +519,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0029456",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e28",
+      "id": "testicular_adrenal_rest_tumors",
       "class": "Disease",
       "name": "testicular adrenal rest tumors",
       "synonyms": [],
@@ -487,33 +534,53 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0039590",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e29",
-      "class": "Gene",
-      "name": "CYP21A1P",
-      "synonyms": [],
+      "id": "RCCX_copy_number_variation",
+      "class": "Mutation",
+      "name": "RCCX copy number variation",
+      "synonyms": [
+        "RCCX CNV"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:2599",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e30",
+      "id": "major_histocompatibility_complex",
+      "class": "AnatomicalStructure",
+      "name": "major histocompatibility complex",
+      "synonyms": [
+        "MHC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "STK19",
       "class": "Gene",
       "name": "STK19",
       "synonyms": [
-        "RP1"
+        "RP1",
+        "serine/threonine kinase 19"
       ],
       "symbol": null,
       "brand_names": [],
@@ -526,7 +593,7 @@
       "uniprot_id": null
     },
     {
-      "id": "e31",
+      "id": "complement_4",
       "class": "Gene",
       "name": "complement 4",
       "synonyms": [
@@ -537,13 +604,13 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:1323",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e32",
+      "id": "tenascin_X",
       "class": "Gene",
       "name": "tenascin-X",
       "synonyms": [
@@ -554,13 +621,28 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:11976",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e33",
+      "id": "CYP21A1P",
+      "class": "Gene",
+      "name": "CYP21A1P",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "TNXB",
       "class": "Gene",
       "name": "TNXB",
       "synonyms": [],
@@ -575,7 +657,7 @@
       "uniprot_id": null
     },
     {
-      "id": "e34",
+      "id": "TNXA",
       "class": "Gene",
       "name": "TNXA",
       "synonyms": [],
@@ -584,13 +666,43 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:11975",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e35",
+      "id": "nonallelic_homologous_recombination",
+      "class": "BiologicalProcess",
+      "name": "nonallelic homologous recombination",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gene_conversion",
+      "class": "BiologicalProcess",
+      "name": "gene conversion",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CAH_X_syndrome",
       "class": "Disease",
       "name": "CAH-X syndrome",
       "synonyms": [],
@@ -598,14 +710,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0013720",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e36",
+      "id": "Ehlers_Danlos_syndrome",
       "class": "Disease",
       "name": "Ehlers-Danlos syndrome",
       "synonyms": [
@@ -615,31 +727,59 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0013720",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e37",
-      "class": "Procedure",
-      "name": "multiplex ligation-dependent probe amplification",
-      "synonyms": [
-        "MLPA"
-      ],
+      "id": "tenascin_X_deficiency",
+      "class": "Disease",
+      "name": "tenascin-X deficiency",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C1955073",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e38",
+      "id": "joint_hypermobility",
+      "class": "Symptom",
+      "name": "joint hypermobility",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "skin_hyperextensibility",
+      "class": "Symptom",
+      "name": "skin hyperextensibility",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "polymerase_chain_reaction",
       "class": "Procedure",
       "name": "polymerase chain reaction",
       "synonyms": [
@@ -649,14 +789,31 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0032520",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e39",
+      "id": "multiplex_ligation_dependent_probe_amplification",
+      "class": "Procedure",
+      "name": "multiplex ligation-dependent probe amplification",
+      "synonyms": [
+        "MLPA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "next_generation_sequencing",
       "class": "Procedure",
       "name": "next-generation sequencing",
       "synonyms": [
@@ -666,14 +823,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C2936622",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e40",
+      "id": "dexamethasone",
       "class": "Drug",
       "name": "dexamethasone",
       "synonyms": [],
@@ -683,12 +840,12 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "3264",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e41",
+      "id": "chorionic_villus_sampling",
       "class": "Procedure",
       "name": "chorionic villus sampling",
       "synonyms": [
@@ -698,14 +855,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0008509",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e42",
+      "id": "amniocentesis",
       "class": "Procedure",
       "name": "amniocentesis",
       "synonyms": [],
@@ -713,14 +870,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0002627",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e43",
+      "id": "cell_free_DNA",
       "class": "Biomarker",
       "name": "cell-free DNA",
       "synonyms": [
@@ -730,14 +887,31 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C4288282",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "e44",
+      "id": "sex_determining_region_Y",
+      "class": "Gene",
+      "name": "sex-determining region Y",
+      "synonyms": [
+        "SRY"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11441",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "massively_parallel_sequencing",
       "class": "Procedure",
       "name": "massively parallel sequencing",
       "synonyms": [
@@ -747,21 +921,6 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C2936622",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e45",
-      "class": "Mutation",
-      "name": "p.Pro31Leu",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
@@ -769,69 +928,9 @@
       "uniprot_id": null
     },
     {
-      "id": "e46",
-      "class": "Mutation",
-      "name": "p.Ile173Asn",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e47",
-      "class": "Mutation",
-      "name": "p.Gly111fs",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e48",
-      "class": "Mutation",
-      "name": "c.293-13A/C>G",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e49",
-      "class": "Mutation",
-      "name": "p.Gln319Ter",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "e50",
-      "class": "Mutation",
-      "name": "p.Val282Leu",
+      "id": "preimplantation_genetic_testing",
+      "class": "Procedure",
+      "name": "preimplantation genetic testing",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -851,23 +950,10 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "abstract_1",
-      "text": "Of all congenital adrenal hyperplasia (CAH), 95% to 99% is 21-hydroxylase deficiency (21OHD), an autosomal recessive disease.",
+      "text": "Of all congenital adrenal hyperplasia (CAH), 95% to 99% is 21-hydroxylase deficiency (21OHD), an autosomal recessive disease. 21OHD is due to an insufficiency of 21-hydroxylase enzyme, which is encoded by the CYP21A2 gene and involved in cortisol and aldosterone production.",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:abstract:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "abstract_2",
-      "text": "21OHD is due to an insufficiency of 21-hydroxylase enzyme, which is encoded by the CYP21A2 gene and involved in cortisol and aldosterone production.",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
@@ -877,10 +963,10 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "introduction_1",
-      "text": "The predominant enzyme deficiency that accounts for 95% to 99% of all CAH cases is 21-hydroxylase deficiency (21OHD).",
+      "text": "The predominant enzyme deficiency that accounts for 95% to 99% of all CAH cases is 21-hydroxylase deficiency (21OHD). The 21OH enzyme converts 17\u03b1-hydroxyprogesterone to 11-deoxycortisol and progesterone to deoxycorticosterone.",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
@@ -890,10 +976,10 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "introduction_2",
-      "text": "The 21OH enzyme converts 17\u03b1-hydroxyprogesterone to 11-deoxycortisol and progesterone to deoxycorticosterone.",
+      "text": "21OHD comprises 2 groups, the classic and nonclassic (NC) form. Classic 21OHD is further divided into salt-wasting (SW) (cortisol and aldosterone deficiency) and simple virilizing (SV) phenotype (cortisol and milder aldosterone deficiency).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
@@ -903,10 +989,10 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "introduction_3",
-      "text": "21OHD comprises 2 groups, the classic and nonclassic (NC) form. Classic 21OHD is further divided into salt-wasting (SW) (cortisol and aldosterone deficiency) and simple virilizing (SV) phenotype (cortisol and milder aldosterone deficiency).",
+      "text": "The serum 17\u03b1-hydroxyprogesterone (17OHP) concentration is utilized as the principal marker for 21OHD, since CAH due to 21OHD is detected in NBS programs using 17OHP concentration measurements in dried blood spots.",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
@@ -919,7 +1005,7 @@
       "text": "Over 95% of deleterious variants leading to 21OHD are attributable to intergenic recombination events where microconversions, consisting in the transfer to CYP21A2 of deleterious variants usually present in the CYP21A1P pseudogene, represent 70% to 75%.",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
@@ -929,54 +1015,60 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "genetics_2",
-      "text": "The classification formulated by Speiser et al allows establishment of a genotype-phenotype correlation by distributing the causative variants into 4 different groups based on the residual enzymatic activity established by means of in vitro experiments.",
+      "text": "The genetic cause of CAH-X syndrome is a recombination event between TNXB and its pseudogene TNXA. The resulting 30 kb deletion includes the entire CYP21A2 gene sequence and part of the TNXB gene and produces a chimeric TNXA/TNXB gene (CAH-X chimera).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:diagnosis:1:llm",
+      "id": "PMC_extracted:genetics:3:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "PMC_extracted",
-      "text_span_id": "diagnosis_1",
-      "text": "To date, polymerase chain reaction (PCR)-based sequence analysis together with the multiplex ligation-dependent probe amplification (MLPA) test represents the best-practice genotyping able to respond to the diagnostic challenge.",
+      "text_span_id": "genetics_3",
+      "text": "The functional consequence of this rearrangement is the complete absence of the 21OH enzyme and the deficiency of tenascin-X, while the resulting phenotype is a hypermobility form of Ehlers-Danlos syndrome (EDS).",
       "confidence": 0.95,
       "extraction_method": "llm",
-      "study_type": "review",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:treatment:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "treatment_1",
+      "text": "The main therapies in CAH are glucocorticoids to replace the deficiency and normalize the adrenal androgens and mineralocorticoids, compulsory in SW CAH but often also used in SV CAH.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:treatment:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "treatment_2",
+      "text": "Mineralocorticoids, in the form of fludrocortisone, are particularly important prior to (since they may induce ovulation) and during pregnancy in patients with SW CAH but may also be used in those with SV CAH.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "Review",
       "eco_type": null,
       "source": "extracted"
     }
   ],
   "relationships": [
     {
-      "subject": "e2",
+      "subject": "21_hydroxylase_deficiency",
       "predicate": "SUBTYPE_OF",
-      "object": "e1",
+      "object": "congenital_adrenal_hyperplasia",
       "evidence_ids": [
-        "PMC_extracted:abstract:1:llm",
-        "PMC_extracted:introduction:1:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "percentage": "95% to 99%"
-      },
-      "section": "abstract",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "e3",
-      "predicate": "ENCODES",
-      "object": "e4",
-      "evidence_ids": [
-        "PMC_extracted:abstract:2:llm"
+        "PMC_extracted:abstract:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -989,11 +1081,28 @@
       "note": null
     },
     {
-      "subject": "e4",
-      "predicate": "INVOLVED_IN",
-      "object": "e5",
+      "subject": "CYP21A2",
+      "predicate": "ENCODES",
+      "object": "21_hydroxylase",
       "evidence_ids": [
-        "PMC_extracted:abstract:2:llm"
+        "PMC_extracted:abstract:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "21_hydroxylase",
+      "predicate": "INVOLVED_IN",
+      "object": "cortisol",
+      "evidence_ids": [
+        "PMC_extracted:abstract:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1008,11 +1117,11 @@
       "note": null
     },
     {
-      "subject": "e4",
+      "subject": "21_hydroxylase",
       "predicate": "INVOLVED_IN",
-      "object": "e6",
+      "object": "aldosterone",
       "evidence_ids": [
-        "PMC_extracted:abstract:2:llm"
+        "PMC_extracted:abstract:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1027,11 +1136,11 @@
       "note": null
     },
     {
-      "subject": "e4",
+      "subject": "21_hydroxylase",
       "predicate": "CONVERTS",
-      "object": "e15",
+      "object": "17alpha_hydroxyprogesterone",
       "evidence_ids": [
-        "PMC_extracted:introduction:2:llm"
+        "PMC_extracted:introduction:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1046,11 +1155,11 @@
       "note": null
     },
     {
-      "subject": "e4",
+      "subject": "21_hydroxylase",
       "predicate": "CONVERTS",
-      "object": "e17",
+      "object": "deoxycorticosterone",
       "evidence_ids": [
-        "PMC_extracted:introduction:2:llm"
+        "PMC_extracted:introduction:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1065,11 +1174,11 @@
       "note": null
     },
     {
-      "subject": "e18",
+      "subject": "salt_wasting_CAH",
       "predicate": "SUBTYPE_OF",
-      "object": "e2",
+      "object": "21_hydroxylase_deficiency",
       "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
+        "PMC_extracted:introduction:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1084,11 +1193,11 @@
       "note": null
     },
     {
-      "subject": "e19",
+      "subject": "simple_virilizing_CAH",
       "predicate": "SUBTYPE_OF",
-      "object": "e2",
+      "object": "21_hydroxylase_deficiency",
       "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
+        "PMC_extracted:introduction:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -1103,9 +1212,26 @@
       "note": null
     },
     {
-      "subject": "e20",
+      "subject": "nonclassic_CAH",
       "predicate": "SUBTYPE_OF",
-      "object": "e2",
+      "object": "21_hydroxylase_deficiency",
+      "evidence_ids": [
+        "PMC_extracted:introduction:2:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "17alpha_hydroxyprogesterone",
+      "predicate": "INDICATES",
+      "object": "21_hydroxylase_deficiency",
       "evidence_ids": [
         "PMC_extracted:introduction:3:llm"
       ],
@@ -1114,7 +1240,7 @@
       ],
       "confidence": 0.95,
       "properties": {
-        "classification": "nonclassic"
+        "marker_type": "principal"
       },
       "section": "introduction",
       "asserted_by": "llm",
@@ -1122,85 +1248,9 @@
       "note": null
     },
     {
-      "subject": "e18",
+      "subject": "CYP21A1P",
       "predicate": "ASSOCIATED_WITH",
-      "object": "e5",
-      "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "relationship": "deficiency"
-      },
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "e18",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "e6",
-      "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "relationship": "deficiency"
-      },
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "e23",
-      "predicate": "TREATS",
-      "object": "e2",
-      "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "purpose": "replace deficiency and normalize adrenal androgens"
-      },
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "e24",
-      "predicate": "TREATS",
-      "object": "e18",
-      "evidence_ids": [
-        "PMC_extracted:introduction:3:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "indication": "compulsory in SW CAH"
-      },
-      "section": "introduction",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "e29",
-      "predicate": "SAME_AS",
-      "object": "e3",
+      "object": "21_hydroxylase_deficiency",
       "evidence_ids": [
         "PMC_extracted:genetics:1:llm"
       ],
@@ -1208,25 +1258,27 @@
         "PMC_extracted"
       ],
       "confidence": 0.95,
-      "properties": {},
+      "properties": {
+        "mechanism": "gene conversion"
+      },
       "section": "genetics",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "CYP21A1P is the pseudogene of CYP21A2"
+      "note": null
     },
     {
-      "subject": "e35",
-      "predicate": "SUBTYPE_OF",
-      "object": "e36",
+      "subject": "CAH_X_syndrome",
+      "predicate": "CAUSED_BY",
+      "object": "TNXB",
       "evidence_ids": [
         "PMC_extracted:genetics:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {
-        "type": "hypermobility form"
+        "mechanism": "recombination with TNXA"
       },
       "section": "genetics",
       "asserted_by": "llm",
@@ -1234,47 +1286,104 @@
       "note": null
     },
     {
-      "subject": "e37",
-      "predicate": "USED_FOR",
-      "object": "e2",
+      "subject": "CAH_X_syndrome",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "Ehlers_Danlos_syndrome",
       "evidence_ids": [
-        "PMC_extracted:diagnosis:1:llm"
+        "PMC_extracted:genetics:3:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {
-        "purpose": "molecular diagnosis"
+        "phenotype": "hypermobility form"
       },
-      "section": "diagnosis",
+      "section": "genetics",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "e38",
-      "predicate": "USED_FOR",
-      "object": "e2",
+      "subject": "glucocorticoids",
+      "predicate": "TREATS",
+      "object": "congenital_adrenal_hyperplasia",
       "evidence_ids": [
-        "PMC_extracted:diagnosis:1:llm"
+        "PMC_extracted:treatment:1:llm"
       ],
       "source_papers": [
         "PMC_extracted"
       ],
       "confidence": 0.95,
       "properties": {
-        "purpose": "molecular diagnosis"
+        "mechanism": "replacement therapy"
       },
-      "section": "diagnosis",
+      "section": "treatment",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "fludrocortisone",
+      "predicate": "TREATS",
+      "object": "salt_wasting_CAH",
+      "evidence_ids": [
+        "PMC_extracted:treatment:2:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "drug_class": "mineralocorticoid"
+      },
+      "section": "treatment",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "21_hydroxylase_deficiency",
+      "predicate": "INCREASES_RISK",
+      "object": "cardiometabolic_diseases",
+      "evidence_ids": [
+        "PMC_extracted:treatment:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.85,
+      "properties": {
+        "mechanism": "supraphysiological glucocorticoid therapy"
+      },
+      "section": "treatment",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "21_hydroxylase_deficiency",
+      "predicate": "INCREASES_RISK",
+      "object": "osteoporosis",
+      "evidence_ids": [
+        "PMC_extracted:treatment:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.85,
+      "properties": {
+        "mechanism": "supraphysiological glucocorticoid therapy"
+      },
+      "section": "treatment",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     }
   ],
   "notes": [
-    "This paper provides a comprehensive review of the genetics of 21-hydroxylase deficiency, the most common form of congenital adrenal hyperplasia",
-    "The review covers molecular mechanisms, diagnostic approaches, and clinical implications",
-    "Multiple genetic variants and their phenotypic correlations are discussed in detail"
+    "This review provides comprehensive coverage of the genetics of 21-hydroxylase deficiency, including gene structure, variants, and clinical implications",
+    "The paper emphasizes the complexity of molecular diagnosis due to the presence of pseudogenes and frequent recombination events",
+    "CAH-X syndrome represents an important complication involving both adrenal and connective tissue manifestations"
   ]
 }

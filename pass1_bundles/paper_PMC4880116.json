@@ -13,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
-      "git_commit_short": "5b19555",
+      "git_commit": "09b354088c18282f3bcdeb3e32e4c2060b496bc9",
+      "git_commit_short": "09b3540",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,13 +28,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:672db49148cdf860"
+      "checksum": "sha256:b8ebee1e680fecdb"
     },
     "execution": {
-      "timestamp": "2026-03-05T17:45:55.664578Z",
+      "timestamp": "2026-03-05T19:11:42.373619Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 36.27
+      "duration_seconds": 31.91
     },
     "entity_resolution": null,
     "model_info": null
@@ -133,9 +133,9 @@
       "uniprot_id": null
     },
     {
-      "id": "morning_cortisol",
+      "id": "morning_cortisol_levels",
       "class": "Biomarker",
-      "name": "morning cortisol",
+      "name": "morning cortisol levels",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -363,9 +363,9 @@
   ],
   "relationships": [
     {
-      "subject": "short_corticotropin_test",
+      "subject": "short corticotropin test",
       "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:2:llm"
       ],
@@ -380,9 +380,9 @@
       "note": null
     },
     {
-      "subject": "morning_plasma_acth",
+      "subject": "morning plasma ACTH",
       "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:3:llm"
       ],
@@ -397,9 +397,9 @@
       "note": null
     },
     {
-      "subject": "morning_cortisol",
+      "subject": "morning cortisol levels",
       "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:3:llm"
       ],
@@ -416,7 +416,7 @@
     {
       "subject": "21-hydroxylase antibodies",
       "predicate": "INDICATES",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:4:llm"
       ],
@@ -433,7 +433,7 @@
     {
       "subject": "fludrocortisone",
       "predicate": "TREATS",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:5:llm"
       ],
@@ -452,7 +452,7 @@
     {
       "subject": "hydrocortisone",
       "predicate": "TREATS",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:5:llm",
         "paper_id:abstract:6:llm"
@@ -473,7 +473,7 @@
     {
       "subject": "cortisone acetate",
       "predicate": "TREATS",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:5:llm"
       ],
@@ -492,7 +492,7 @@
     {
       "subject": "nausea",
       "predicate": "ASSOCIATED_WITH",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:7:llm"
       ],
@@ -511,7 +511,7 @@
     {
       "subject": "fatigue",
       "predicate": "ASSOCIATED_WITH",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:7:llm"
       ],
@@ -530,7 +530,7 @@
     {
       "subject": "hypotension",
       "predicate": "ASSOCIATED_WITH",
-      "object": "primary_adrenal_insufficiency",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [
         "paper_id:abstract:7:llm"
       ],
@@ -547,23 +547,26 @@
       "note": null
     },
     {
-      "subject": "primary_adrenal_insufficiency",
-      "predicate": "SAME_AS",
-      "object": "autoimmune primary adrenal insufficiency",
+      "subject": "autoimmune thyroid disease",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "primary adrenal insufficiency",
       "evidence_ids": [],
-      "source_papers": [],
+      "source_papers": [
+        "paper_id"
+      ],
       "confidence": 0.85,
-      "properties": {},
+      "properties": {
+        "context": "associated autoimmune diseases"
+      },
       "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "Primary adrenal insufficiency includes autoimmune forms as the most common cause"
+      "note": null
     }
   ],
   "notes": [
     "This clinical practice guideline provides comprehensive recommendations for diagnosis and treatment of primary adrenal insufficiency",
-    "The short corticotropin test is established as the gold standard diagnostic tool",
-    "Treatment involves replacement therapy with both glucocorticoids and mineralocorticoids",
-    "Special considerations are provided for pregnant women and children"
+    "The guideline emphasizes the importance of early diagnosis, especially in acutely ill patients and pregnant women",
+    "Treatment recommendations include specific dosing for both adults and children"
   ]
 }
