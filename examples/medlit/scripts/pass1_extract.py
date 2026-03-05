@@ -215,8 +215,10 @@ Entity type classification: Classify at the most specific functional role. If an
 - Protein: structural or signaling proteins that are NOT better classified as Enzyme, Hormone, Receptor, or Antibody.
 - Hormone: peptide or steroid hormones (e.g. ACTH, cortisol, catecholamines).
 - Enzyme: proteins with catalytic function (e.g. aldosterone synthase, kinases).
-- Biomarker: measurable clinical indicators. Do not use for microbial communities (e.g. gut microbiota) — use BiologicalProcess or AnatomicalStructure instead if applicable.
-Counterexamples: ACTH and cortisol are hormones; aldosterone synthase is an enzyme.
+- Biomarker: measurable indicators of biological state (e.g. tumor mutational burden, aneuploidy score, hormone levels). Do NOT use for: pathways (→ Pathway), drugs (→ Drug), cell types (→ AnatomicalStructure), biological processes (→ BiologicalProcess), microbial communities (→ BiologicalProcess), or clinical outcomes like survival (→ StudyDesign).
+- Pathway: biological pathways (e.g. STING pathway).
+- BiologicalProcess: biological processes or phenomena (e.g. homologous recombination, genomic instability, chromosomal instability, whole-genome doubling).
+Counterexamples: ACTH and cortisol are hormones; aldosterone synthase is an enzyme. Homologous recombination is BiologicalProcess; PARP inhibitors is Drug; STING pathway is Pathway; disease-free survival is StudyDesign; CD8+ T cells is AnatomicalStructure.
 
 Use "class" for entity type (Disease, Gene, Drug, Hormone, Enzyme, Evidence, etc.). Predicates: TREATS, INCREASES_RISK, INDICATES, ASSOCIATED_WITH, SAME_AS, SUBTYPE_OF, etc. Evidence id format: {paper_id}:{section}:{paragraph_idx}:llm."""
 
