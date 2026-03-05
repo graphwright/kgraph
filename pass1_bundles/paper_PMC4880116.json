@@ -13,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "2a442dbf852af4abe2a9ce0e0df96f2ecfb63a31",
-      "git_commit_short": "2a442db",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,13 +28,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T16:08:52.115062Z",
+      "timestamp": "2026-03-05T17:45:55.664578Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 34.29
+      "duration_seconds": 36.27
     },
     "entity_resolution": null,
     "model_info": null
@@ -442,7 +442,7 @@
       ],
       "confidence": 0.95,
       "properties": {
-        "dosage": "0.1 mg once daily"
+        "dosage": "0.1 mg daily"
       },
       "section": "abstract",
       "asserted_by": "llm",
@@ -548,27 +548,22 @@
     },
     {
       "subject": "primary_adrenal_insufficiency",
-      "predicate": "ASSOCIATED_WITH",
-      "object": "autoimmune thyroid disease",
-      "evidence_ids": [
-        "paper_id:abstract:7:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
+      "predicate": "SAME_AS",
+      "object": "autoimmune primary adrenal insufficiency",
+      "evidence_ids": [],
+      "source_papers": [],
       "confidence": 0.85,
-      "properties": {
-        "relationship_type": "comorbidity"
-      },
+      "properties": {},
       "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
-      "note": null
+      "note": "Primary adrenal insufficiency includes autoimmune forms as the most common cause"
     }
   ],
   "notes": [
     "This clinical practice guideline provides comprehensive recommendations for diagnosis and treatment of primary adrenal insufficiency",
-    "The guideline emphasizes the importance of early diagnosis, especially in acutely ill patients and pregnant women",
-    "Treatment recommendations include specific dosing for both adults and children"
+    "The short corticotropin test is established as the gold standard diagnostic tool",
+    "Treatment involves replacement therapy with both glucocorticoids and mineralocorticoids",
+    "Special considerations are provided for pregnant women and children"
   ]
 }

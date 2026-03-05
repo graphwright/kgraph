@@ -1,7 +1,7 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC_extracted",
+    "pmcid": "PMC12780067",
     "title": "Bioactive glass nanoparticles induce intrinsic p53-dependent apoptosis and promote genomic instability via ROS overproduction and mitochondrial depolarization in triple-negative breast cancer cells",
     "authors": [
       "Not specified"
@@ -9,14 +9,14 @@
     "journal": "Not specified",
     "year": null,
     "study_type": "experimental",
-    "eco_type": "in vitro"
+    "eco_type": null
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5f8a89591cf658b96292f1d71c8b28eab09231b1",
-      "git_commit_short": "5f8a895",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T16:01:37.223226Z",
+      "timestamp": "2026-03-05T17:34:31.463365Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 41.81
+      "duration_seconds": 36.49
     },
     "entity_resolution": null,
     "model_info": null
@@ -112,9 +112,7 @@
       "id": "E5",
       "class": "BiologicalProcess",
       "name": "genomic instability",
-      "synonyms": [
-        "DNA damage"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -146,9 +144,7 @@
       "id": "E7",
       "class": "BiologicalProcess",
       "name": "mitochondrial depolarization",
-      "synonyms": [
-        "mitochondrial dysfunction"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -163,9 +159,7 @@
       "id": "E8",
       "class": "AnatomicalStructure",
       "name": "MDA-MB-231 cells",
-      "synonyms": [
-        "MDA-MB-231 breast cancer cells"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -181,7 +175,7 @@
       "class": "Gene",
       "name": "Bcl-2",
       "synonyms": [
-        "BCL-2"
+        "Bcl2"
       ],
       "symbol": null,
       "brand_names": [],
@@ -226,9 +220,9 @@
     {
       "id": "E12",
       "class": "Procedure",
-      "name": "comet assay",
+      "name": "alkaline comet assay",
       "synonyms": [
-        "alkaline comet assay"
+        "comet assay"
       ],
       "symbol": null,
       "brand_names": [],
@@ -275,9 +269,9 @@
     {
       "id": "E15",
       "class": "Drug",
-      "name": "DAPI",
+      "name": "4',6-diamidino-2-phenylindole",
       "synonyms": [
-        "4',6-diamidino-2-phenylindole"
+        "DAPI"
       ],
       "symbol": null,
       "brand_names": [],
@@ -323,8 +317,8 @@
     },
     {
       "id": "E18",
-      "class": "AnatomicalStructure",
-      "name": "mitochondria",
+      "class": "BiologicalProcess",
+      "name": "mitochondrial dysfunction",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -339,7 +333,7 @@
     {
       "id": "E19",
       "class": "BiologicalProcess",
-      "name": "cytotoxicity",
+      "name": "DNA damage",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -353,8 +347,8 @@
     },
     {
       "id": "E20",
-      "class": "Biomarker",
-      "name": "IC50",
+      "class": "Procedure",
+      "name": "chemotherapy",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -369,81 +363,68 @@
   ],
   "evidence_entities": [
     {
-      "id": "PMC_extracted:results:1:llm",
+      "id": "paper_1:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "paper_1",
       "text_span_id": "results_1",
       "text": "BGNps exerted potent, concentration-dependent cytotoxicity in MDA-MB-231 cells, with an IC50 value of 184.3 \u00b5g/ml",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:2:llm",
+      "id": "paper_1:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "paper_1",
       "text_span_id": "results_2",
       "text": "Treatment with BGNps at the IC50 concentration induced excessive reactive oxygen species (ROS) generation, severe mitochondrial membrane depolarization, extensive genomic DNA damage, and pronounced apoptotic cell death in MDA-MB-231 cancer cells",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:3:llm",
+      "id": "paper_1:results:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "paper_1",
       "text_span_id": "results_3",
       "text": "These effects were associated with marked upregulation of p53 and concurrent downregulation of anti-apoptotic Bcl-2 and mitochondrial ND3 genes",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:4:llm",
+      "id": "paper_1:results:4:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "paper_1",
       "text_span_id": "results_4",
-      "text": "dramatic loss of genomic stability and high DNA damage in highly aggressive triple negative MDA-MB-231 breast cancer cells after 72 h exposure to BGNps at the IC50 concentration of 184.3 \u00b5g/ml",
+      "text": "BGNps triggered significant genomic DNA damage, as confirmed by the statistically significant increases in key alkaline Comet assay parameters; tail length, %DNA in tail and tail moment",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "PMC_extracted:results:5:llm",
+      "id": "paper_1:results:5:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "PMC_extracted",
+      "paper_id": "paper_1",
       "text_span_id": "results_5",
-      "text": "exposure of triple-negative MDA-MB-231 breast cancer cells to BGNps at the IC50 concentration (184.3 \u00b5g/ml) for 72 h resulted in a significant elevation of intracellular ROS level",
+      "text": "exposure of triple-negative MDA-MB-231 breast cancer cells to BGNps at the IC50 concentration resulted in a significant elevation of intracellular ROS level",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
-      "source": "extracted"
-    },
-    {
-      "id": "PMC_extracted:results:6:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "PMC_extracted",
-      "text_span_id": "results_6",
-      "text": "dramatic loss of mitochondrial membrane potential integrity in MDA-MB-231 breast cancer cells following 72 h of exposure to BGNps at the IC50 concentration (184.3 \u00b5g/ml)",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": null,
       "source": "extracted"
     }
   ],
@@ -453,11 +434,11 @@
       "predicate": "TREATS",
       "object": "triple-negative breast cancer",
       "evidence_ids": [
-        "PMC_extracted:results:1:llm",
-        "PMC_extracted:results:2:llm"
+        "paper_1:results:1:llm",
+        "paper_1:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.9,
       "properties": {
@@ -473,35 +454,15 @@
       "predicate": "INCREASES",
       "object": "reactive oxygen species",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm",
-        "PMC_extracted:results:5:llm"
+        "paper_1:results:2:llm",
+        "paper_1:results:5:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "cell_type": "MDA-MB-231"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "bioactive glass nanoparticles",
-      "predicate": "CAUSES",
-      "object": "genomic instability",
-      "evidence_ids": [
-        "PMC_extracted:results:2:llm",
-        "PMC_extracted:results:4:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "cell_type": "MDA-MB-231"
+        "effect": "excessive generation"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -513,15 +474,34 @@
       "predicate": "CAUSES",
       "object": "mitochondrial depolarization",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm",
-        "PMC_extracted:results:6:llm"
+        "paper_1:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "cell_type": "MDA-MB-231"
+        "severity": "severe"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "bioactive glass nanoparticles",
+      "predicate": "CAUSES",
+      "object": "genomic instability",
+      "evidence_ids": [
+        "paper_1:results:2:llm",
+        "paper_1:results:4:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "extent": "extensive"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -533,15 +513,15 @@
       "predicate": "INDUCES",
       "object": "apoptosis",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm"
+        "paper_1:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "mechanism": "p53-dependent",
-        "cell_type": "MDA-MB-231"
+        "type": "p53-dependent",
+        "pathway": "intrinsic"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -553,14 +533,14 @@
       "predicate": "UPREGULATES",
       "object": "p53",
       "evidence_ids": [
-        "PMC_extracted:results:3:llm"
+        "paper_1:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "cell_type": "MDA-MB-231"
+        "regulation": "marked upregulation"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -572,14 +552,14 @@
       "predicate": "DOWNREGULATES",
       "object": "Bcl-2",
       "evidence_ids": [
-        "PMC_extracted:results:3:llm"
+        "paper_1:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "cell_type": "MDA-MB-231"
+        "regulation": "concurrent downregulation"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -591,14 +571,14 @@
       "predicate": "DOWNREGULATES",
       "object": "ND3",
       "evidence_ids": [
-        "PMC_extracted:results:3:llm"
+        "paper_1:results:3:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.95,
       "properties": {
-        "cell_type": "MDA-MB-231"
+        "regulation": "concurrent downregulation"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -608,16 +588,16 @@
     {
       "subject": "reactive oxygen species",
       "predicate": "CAUSES",
-      "object": "genomic instability",
+      "object": "DNA damage",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm"
+        "paper_1:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.9,
       "properties": {
-        "mechanism": "oxidative damage"
+        "mechanism": "oxidative stress"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -627,54 +607,16 @@
     {
       "subject": "reactive oxygen species",
       "predicate": "CAUSES",
-      "object": "mitochondrial depolarization",
+      "object": "mitochondrial dysfunction",
       "evidence_ids": [
-        "PMC_extracted:results:2:llm"
+        "paper_1:results:2:llm"
       ],
       "source_papers": [
-        "PMC_extracted"
+        "paper_1"
       ],
       "confidence": 0.9,
       "properties": {
         "mechanism": "oxidative damage"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "p53",
-      "predicate": "PROMOTES",
-      "object": "apoptosis",
-      "evidence_ids": [
-        "PMC_extracted:results:3:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "pathway": "intrinsic"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "mitochondrial depolarization",
-      "predicate": "LEADS_TO",
-      "object": "apoptosis",
-      "evidence_ids": [
-        "PMC_extracted:results:2:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "pathway": "intrinsic"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -683,8 +625,7 @@
     }
   ],
   "notes": [
-    "This study demonstrates the anticancer potential of bioactive glass nanoparticles against triple-negative breast cancer through multiple mechanisms including ROS generation, DNA damage, mitochondrial dysfunction, and p53-dependent apoptosis.",
-    "The IC50 value of 184.3 \u00b5g/ml was determined for BGNps cytotoxicity in MDA-MB-231 cells.",
-    "The study was conducted exclusively in vitro using MDA-MB-231 cell line as a model for triple-negative breast cancer."
+    "This study demonstrates the anticancer potential of bioactive glass nanoparticles against triple-negative breast cancer through multiple mechanisms including ROS generation, mitochondrial dysfunction, and p53-dependent apoptosis",
+    "The research was conducted exclusively in vitro using MDA-MB-231 cells and requires further validation in vivo and with normal cell controls"
   ]
 }

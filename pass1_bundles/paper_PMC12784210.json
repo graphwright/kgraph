@@ -1,7 +1,7 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC12784210",
+    "pmcid": "PMC_ID_NOT_PROVIDED",
     "title": "Targeted demethylation of the BRD7 promoter based on CRISPR/dCas9 system inhibits the malignant progression of nasopharyngeal carcinoma",
     "authors": [
       "Ming Zhou",
@@ -19,7 +19,7 @@
       "Wei Xiong",
       "Zhaoyang Zeng"
     ],
-    "journal": null,
+    "journal": "Not specified",
     "year": null,
     "study_type": "experimental",
     "eco_type": "in_vitro_in_vivo"
@@ -28,8 +28,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "9ab95ab359b033e07f84b797d25c7c5d2fbe8e06",
-      "git_commit_short": "9ab95ab",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -43,25 +43,40 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:9afda6d111da068a"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T15:55:33.149691Z",
+      "timestamp": "2026-03-05T17:36:42.733811Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 41.07
+      "duration_seconds": 40.37
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "BRD7_promoter",
+      "id": "nasopharyngeal_carcinoma",
+      "class": "Disease",
+      "name": "nasopharyngeal carcinoma",
+      "synonyms": [
+        "NPC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "brd7_promoter",
       "class": "AnatomicalStructure",
       "name": "BRD7 promoter",
-      "synonyms": [
-        "BRD7 promoter region"
-      ],
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -73,13 +88,10 @@
       "uniprot_id": null
     },
     {
-      "id": "LentiCRISPRv2_dCas9_TET1CD_sgRNAs",
-      "class": "Procedure",
-      "name": "LentiCRISPRv2/dCas9-TET1CD-sgRNAs system",
-      "synonyms": [
-        "demethylation system",
-        "BRD7-targeted demethylation system"
-      ],
+      "id": "cpg_island",
+      "class": "AnatomicalStructure",
+      "name": "CpG island",
+      "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -91,8 +103,38 @@
       "uniprot_id": null
     },
     {
-      "id": "TET1CD",
-      "class": "Enzyme",
+      "id": "hypermethylation",
+      "class": "BiologicalProcess",
+      "name": "hypermethylation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "demethylation",
+      "class": "BiologicalProcess",
+      "name": "demethylation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "tet1_catalytic_domain",
+      "class": "Protein",
       "name": "TET1 catalytic domain",
       "synonyms": [
         "TET1CD"
@@ -108,9 +150,9 @@
       "uniprot_id": null
     },
     {
-      "id": "sgRNA2",
-      "class": "Gene",
-      "name": "sgRNA2",
+      "id": "lenticrisprv2_dcas9_tet1cd_sgrnas",
+      "class": "Procedure",
+      "name": "LentiCRISPRv2/dCas9-TET1CD-sgRNAs system",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -123,159 +165,11 @@
       "uniprot_id": null
     },
     {
-      "id": "sgRNA5",
-      "class": "Gene",
-      "name": "sgRNA5",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hypermethylation_BRD7",
-      "class": "Mutation",
-      "name": "hypermethylation of BRD7 promoter",
-      "synonyms": [
-        "BRD7 promoter hypermethylation"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "CpG_island_BRD7",
-      "class": "AnatomicalStructure",
-      "name": "CpG island in BRD7 promoter",
-      "synonyms": [
-        "BRD7 promoter CpG island"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "methylation_specific_PCR",
+      "id": "methylation_specific_pcr",
       "class": "Procedure",
       "name": "methylation-specific polymerase chain reaction",
       "synonyms": [
-        "MSP",
-        "methylation-specific PCR"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "xenograft_tumor_model",
-      "class": "Procedure",
-      "name": "xenograft tumor model",
-      "synonyms": [
-        "xenograft tumour model"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "lentivirus_mediated_delivery",
-      "class": "Procedure",
-      "name": "lentivirus-mediated delivery",
-      "synonyms": [
-        "lentiviral delivery"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "CNE2_cells",
-      "class": "AnatomicalStructure",
-      "name": "CNE2 cells",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "5_8F_cells",
-      "class": "AnatomicalStructure",
-      "name": "5-8F cells",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "NP69_cells",
-      "class": "AnatomicalStructure",
-      "name": "NP69 cells",
-      "synonyms": [
-        "nasopharyngeal epithelial cell line NP69"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "tumor_suppression_rate",
-      "class": "Biomarker",
-      "name": "tumor suppression rate",
-      "synonyms": [
-        "tumour suppression rate"
+        "MSP"
       ],
       "symbol": null,
       "brand_names": [],
@@ -301,20 +195,277 @@
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
+    },
+    {
+      "id": "tumor_suppressor",
+      "class": "BiologicalProcess",
+      "name": "tumor suppressor",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "xenograft_tumor_model",
+      "class": "Procedure",
+      "name": "xenograft tumor model",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "lentivirus_mediated_delivery",
+      "class": "Procedure",
+      "name": "lentivirus-mediated delivery",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "rna_polymerase_ii",
+      "class": "Enzyme",
+      "name": "RNA polymerase II",
+      "synonyms": [
+        "RNA Pol II"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "epithelial_mesenchymal_transition",
+      "class": "BiologicalProcess",
+      "name": "epithelial-mesenchymal transition",
+      "synonyms": [
+        "EMT"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "zo_1",
+      "class": "Protein",
+      "name": "ZO-1",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "e_cadherin",
+      "class": "Protein",
+      "name": "E-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "n_cadherin",
+      "class": "Protein",
+      "name": "N-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "vimentin",
+      "class": "Protein",
+      "name": "Vimentin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "snail",
+      "class": "Protein",
+      "name": "Snail",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cleaved_parp",
+      "class": "Protein",
+      "name": "Cleaved-PARP",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "ki67",
+      "class": "Biomarker",
+      "name": "Ki67",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "p21",
+      "class": "Protein",
+      "name": "P21",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cdk4",
+      "class": "Protein",
+      "name": "CDK4",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "birc2",
+      "class": "Protein",
+      "name": "BIRC2",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pten",
+      "class": "Protein",
+      "name": "PTEN",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
     }
   ],
   "evidence_entities": [
     {
-      "id": "paper_id:methods:1:llm",
+      "id": "paper_id:abstract:1:llm",
       "class": "Evidence",
       "entity_id": null,
       "paper_id": "paper_id",
-      "text_span_id": "methods_1",
-      "text": "Methylation\u2010specific polymerase chain reaction (PCR) was used to identify the methylation levels of BRD7 promoter.",
+      "text_span_id": "abstract_1",
+      "text": "BRD7 has been confirmed to be lowly expressed in nasopharyngeal carcinoma (NPC) tissues and exerts tumour suppressive roles",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro",
+      "eco_type": "in_vitro_in_vivo",
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "abstract_2",
+      "text": "There was hypermethylation modification in BRD7 promoter, which was negatively correlated with BRD7 expression",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro_in_vivo",
       "source": "extracted"
     },
     {
@@ -323,7 +474,7 @@
       "entity_id": null,
       "paper_id": "paper_id",
       "text_span_id": "results_1",
-      "text": "There was hypermethylation modification in BRD7 promoter, which was negatively correlated with BRD7 expression.",
+      "text": "all five sgRNA-guided CRISPR/dCas9 systems could activate BRD7 and inhibit cell proliferation to varying degrees, among which sgRNA2&sgRNA5 were the most significant",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -336,11 +487,11 @@
       "entity_id": null,
       "paper_id": "paper_id",
       "text_span_id": "results_2",
-      "text": "We constructed a LentiCRISPRv2/dCas9\u2010TET1CD\u2010sgRNAs system targeting specific methylation sites of BRD7 promoter based on five sgRNAs, and confirmed that all five sgRNA\u2010guided CRISPR/dCas9 systems could activate BRD7 and inhibit cell proliferation to varying degrees, among which sgRNA2&sgRNA5 were the most significant.",
+      "text": "both sgRNA2&sgRNA5 could promote the transcriptional activation by reducing its methylation, and inhibit the cell proliferation, migration, invasion and tumour growth in vivo of NPC",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in_vitro",
+      "eco_type": "in_vitro_in_vivo",
       "source": "extracted"
     },
     {
@@ -349,44 +500,70 @@
       "entity_id": null,
       "paper_id": "paper_id",
       "text_span_id": "results_3",
-      "text": "Both sgRNA2&sgRNA5 could promote the transcriptional activation by reducing its methylation, and inhibit the cell proliferation, migration, invasion and tumour growth in vivo of NPC, and the combination of them has a more significant demethylation, transcriptional activation and anti\u2010tumour effect.",
+      "text": "BRD7 had hypermethylation modification in its promoter and decreased expression in NPC tissues, and both of them were negatively correlated",
       "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in_vivo",
-      "source": "extracted"
-    },
-    {
-      "id": "paper_id:results:4:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "results_4",
-      "text": "BRD7 had hypermethylation modification in its promoter and decreased expression in NPC tissues, and both of them were negatively correlated, making it a potential diagnostic marker for NPC diagnosis.",
-      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "experimental",
       "eco_type": "clinical",
-      "source": "extracted"
-    },
-    {
-      "id": "paper_id:results:5:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "results_5",
-      "text": "The LV\u2010dCas9\u2010TET1CD\u2010sgRNA2 and sgRNA5 groups were significantly reduced, with tumour suppression rates of 68% and 79%, respectively. Among them, the combination group exhibited the most pronounced suppression effect, with a tumour suppression rate of 90%.",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in_vivo",
       "source": "extracted"
     }
   ],
   "relationships": [
     {
-      "subject": "hypermethylation_BRD7",
-      "predicate": "CAUSES",
+      "subject": "BRD7",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "tumor_suppressor",
+      "evidence_ids": [
+        "paper_id:abstract:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hypermethylation",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "brd7_promoter",
+      "evidence_ids": [
+        "paper_id:abstract:2:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hypermethylation",
+      "predicate": "NEGATIVELY_CORRELATED_WITH",
+      "object": "BRD7",
+      "evidence_ids": [
+        "paper_id:abstract:2:llm",
+        "paper_id:results:3:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "lenticrisprv2_dcas9_tet1cd_sgrnas",
+      "predicate": "ACTIVATES",
       "object": "BRD7",
       "evidence_ids": [
         "paper_id:results:1:llm"
@@ -395,18 +572,33 @@
         "paper_id"
       ],
       "confidence": 0.95,
-      "properties": {
-        "relationship_type": "negative_regulation"
-      },
+      "properties": {},
       "section": "results",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "LentiCRISPRv2_dCas9_TET1CD_sgRNAs",
-      "predicate": "TARGETS",
-      "object": "BRD7_promoter",
+      "subject": "lenticrisprv2_dcas9_tet1cd_sgrnas",
+      "predicate": "INHIBITS",
+      "object": "cell proliferation",
+      "evidence_ids": [
+        "paper_id:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "demethylation",
+      "predicate": "PROMOTES",
+      "object": "transcriptional_activation",
       "evidence_ids": [
         "paper_id:results:2:llm"
       ],
@@ -414,86 +606,6 @@
         "paper_id"
       ],
       "confidence": 0.95,
-      "properties": {
-        "mechanism": "demethylation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "sgRNA2",
-      "predicate": "INCREASES",
-      "object": "BRD7",
-      "evidence_ids": [
-        "paper_id:results:2:llm",
-        "paper_id:results:3:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "transcriptional_activation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "sgRNA5",
-      "predicate": "INCREASES",
-      "object": "BRD7",
-      "evidence_ids": [
-        "paper_id:results:2:llm",
-        "paper_id:results:3:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "transcriptional_activation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "LentiCRISPRv2_dCas9_TET1CD_sgRNAs",
-      "predicate": "TREATS",
-      "object": "nasopharyngeal carcinoma",
-      "evidence_ids": [
-        "paper_id:results:3:llm",
-        "paper_id:results:5:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "mechanism": "BRD7_activation"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "BRD7",
-      "predicate": "INHIBITS",
-      "object": "cell proliferation",
-      "evidence_ids": [
-        "paper_id:results:2:llm",
-        "paper_id:results:3:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
       "properties": {},
       "section": "results",
       "asserted_by": "llm",
@@ -502,9 +614,10 @@
     },
     {
       "subject": "BRD7",
-      "predicate": "INHIBITS",
-      "object": "cell migration",
+      "predicate": "DOWNREGULATED_IN",
+      "object": "nasopharyngeal_carcinoma",
       "evidence_ids": [
+        "paper_id:abstract:1:llm",
         "paper_id:results:3:llm"
       ],
       "source_papers": [
@@ -512,51 +625,15 @@
       ],
       "confidence": 0.95,
       "properties": {},
-      "section": "results",
+      "section": "abstract",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "BRD7",
+      "subject": "lenticrisprv2_dcas9_tet1cd_sgrnas",
       "predicate": "INHIBITS",
-      "object": "cell invasion",
-      "evidence_ids": [
-        "paper_id:results:3:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "hypermethylation_BRD7",
-      "predicate": "INDICATES",
-      "object": "nasopharyngeal carcinoma",
-      "evidence_ids": [
-        "paper_id:results:4:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.9,
-      "properties": {
-        "biomarker_type": "diagnostic"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "TET1CD",
-      "predicate": "CATALYZES",
-      "object": "demethylation",
+      "object": "nasopharyngeal_carcinoma",
       "evidence_ids": [
         "paper_id:results:2:llm"
       ],
@@ -571,5 +648,9 @@
       "note": null
     }
   ],
-  "notes": []
+  "notes": [
+    "This study demonstrates a novel CRISPR/dCas9-based approach for targeted demethylation of the BRD7 promoter as a therapeutic strategy for nasopharyngeal carcinoma",
+    "The research shows that hypermethylation of the BRD7 promoter is a key mechanism for BRD7 downregulation in NPC",
+    "The lentivirus-mediated delivery system shows promise for clinical translation with demonstrated safety and efficacy in xenograft models"
+  ]
 }

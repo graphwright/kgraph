@@ -13,8 +13,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5f8a89591cf658b96292f1d71c8b28eab09231b1",
-      "git_commit_short": "5f8a895",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,56 +28,84 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T15:59:19.667176Z",
+      "timestamp": "2026-03-05T17:30:21.502801Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 59.51
+      "duration_seconds": 66.13
     },
     "entity_resolution": null,
     "model_info": null
   },
   "entities": [
     {
-      "id": "BRCA1_pathogenic_variants",
-      "class": "Mutation",
-      "name": "BRCA1 pathogenic variants",
+      "id": "BRCA1_gene",
+      "class": "Gene",
+      "name": "BRCA1",
       "synonyms": [
-        "BRCA1 mutations",
-        "BRCA1 P/LP variants"
+        "breast cancer 1"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": null,
+      "hgnc_id": "HGNC:1100",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "BRCA2_pathogenic_variants",
-      "class": "Mutation",
-      "name": "BRCA2 pathogenic variants",
+      "id": "BRCA2_gene",
+      "class": "Gene",
+      "name": "BRCA2",
       "synonyms": [
-        "BRCA2 mutations",
-        "BRCA2 P/LP variants"
+        "breast cancer 2"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
+      "hgnc_id": "HGNC:1101",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "breast_cancer_disease",
+      "class": "Disease",
+      "name": "breast cancer",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0006142",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "ductal_carcinoma_in_situ",
+      "id": "ovarian_cancer_disease",
+      "class": "Disease",
+      "name": "ovarian cancer",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0029925",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "ductal_carcinoma_in_situ_disease",
       "class": "Disease",
       "name": "ductal carcinoma in situ",
       "synonyms": [
@@ -87,14 +115,31 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0007124",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "lobular_carcinoma_in_situ",
+      "id": "atypical_hyperplasia_disease",
+      "class": "Disease",
+      "name": "atypical hyperplasia",
+      "synonyms": [
+        "AH"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0333983",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "lobular_carcinoma_in_situ_disease",
       "class": "Disease",
       "name": "lobular carcinoma in situ",
       "synonyms": [
@@ -104,14 +149,14 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0279565",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "tamoxifen",
+      "id": "tamoxifen_drug",
       "class": "Drug",
       "name": "tamoxifen",
       "synonyms": [],
@@ -126,7 +171,7 @@
       "uniprot_id": null
     },
     {
-      "id": "raloxifene",
+      "id": "raloxifene_drug",
       "class": "Drug",
       "name": "raloxifene",
       "synonyms": [],
@@ -136,12 +181,12 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "35472",
+      "rxnorm_id": "35035",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "exemestane",
+      "id": "exemestane_drug",
       "class": "Drug",
       "name": "exemestane",
       "synonyms": [],
@@ -156,7 +201,22 @@
       "uniprot_id": null
     },
     {
-      "id": "letrozole",
+      "id": "anastrozole_drug",
+      "class": "Drug",
+      "name": "anastrozole",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": "84857",
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "letrozole_drug",
       "class": "Drug",
       "name": "letrozole",
       "synonyms": [],
@@ -166,12 +226,12 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "72965",
+      "rxnorm_id": "114979",
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "denosumab",
+      "id": "denosumab_drug",
       "class": "Drug",
       "name": "denosumab",
       "synonyms": [],
@@ -186,69 +246,24 @@
       "uniprot_id": null
     },
     {
-      "id": "magnetic_resonance_imaging",
+      "id": "bilateral_salpingo_oophorectomy_procedure",
       "class": "Procedure",
-      "name": "magnetic resonance imaging",
+      "name": "bilateral salpingo-oophorectomy",
       "synonyms": [
-        "MRI"
+        "BSO"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0195471",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "mammography",
-      "class": "Procedure",
-      "name": "mammography",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "breast_ultrasound",
-      "class": "Procedure",
-      "name": "breast ultrasound",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "transvaginal_ultrasound",
-      "class": "Procedure",
-      "name": "transvaginal ultrasound",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "prophylactic_bilateral_mastectomy",
+      "id": "prophylactic_bilateral_mastectomy_procedure",
       "class": "Procedure",
       "name": "prophylactic bilateral mastectomy",
       "synonyms": [
@@ -260,31 +275,93 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0024881",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "risk_reducing_salpingo_oophorectomy",
+      "id": "magnetic_resonance_imaging_procedure",
       "class": "Procedure",
-      "name": "risk-reducing salpingo-oophorectomy",
+      "name": "magnetic resonance imaging",
       "synonyms": [
-        "RRSO"
+        "MRI"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0024485",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "germline_genetic_testing",
+      "id": "mammography_procedure",
+      "class": "Procedure",
+      "name": "mammography",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0024671",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "breast_ultrasound_procedure",
+      "class": "Procedure",
+      "name": "breast ultrasound",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0203430",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "transvaginal_ultrasound_procedure",
+      "class": "Procedure",
+      "name": "transvaginal ultrasound",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0430022",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cancer_antigen_125_biomarker",
+      "class": "Biomarker",
+      "name": "cancer antigen 125",
+      "synonyms": [
+        "CA-125"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0006610",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "germline_genetic_testing_procedure",
       "class": "Procedure",
       "name": "germline genetic testing",
       "synonyms": [],
@@ -292,257 +369,29 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0679560",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "cascade_testing",
+      "id": "cascade_testing_procedure",
       "class": "Procedure",
       "name": "cascade testing",
-      "synonyms": [
-        "family cascade testing"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "genetic_counseling",
-      "class": "Procedure",
-      "name": "genetic counseling",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C4277667",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "ovarian_cancer",
-      "class": "Disease",
-      "name": "ovarian cancer",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "pancreatic_cancer",
-      "class": "Disease",
-      "name": "pancreatic cancer",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "prostate_cancer",
-      "class": "Disease",
-      "name": "prostate cancer",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "triple_negative_breast_cancer",
-      "class": "Disease",
-      "name": "triple-negative breast cancer",
-      "synonyms": [
-        "TNBC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "hereditary_breast_and_ovarian_cancer",
-      "class": "Disease",
-      "name": "hereditary breast and ovarian cancer",
-      "synonyms": [
-        "HBOC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "contralateral_breast_cancer",
-      "class": "Disease",
-      "name": "contralateral breast cancer",
-      "synonyms": [
-        "CBC"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "variants_of_uncertain_significance",
-      "class": "Mutation",
-      "name": "variants of uncertain significance",
-      "synonyms": [
-        "VUS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "PARP_inhibitors",
-      "class": "Drug",
-      "name": "PARP inhibitors",
-      "synonyms": [
-        "poly (ADP-ribose) polymerase inhibitors"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "RANK_RANKL_pathway",
-      "class": "BiologicalProcess",
-      "name": "RANK/RANKL pathway",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "sex_hormone_binding_globulin",
-      "class": "Protein",
-      "name": "sex hormone-binding globulin",
-      "synonyms": [
-        "SHBG"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:10839",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "estrogen_receptor",
-      "class": "Protein",
-      "name": "estrogen receptor",
-      "synonyms": [
-        "ER"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:3467",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "aromatase_enzyme",
-      "class": "Enzyme",
-      "name": "aromatase enzyme",
-      "synonyms": [
-        "aromatase"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:2594",
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "mindfulness_based_interventions",
-      "class": "Procedure",
-      "name": "mindfulness-based interventions",
-      "synonyms": [],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "direct_to_consumer_genetic_testing",
+      "id": "direct_to_consumer_genetic_testing_procedure",
       "class": "Procedure",
       "name": "direct-to-consumer genetic testing",
       "synonyms": [
@@ -552,37 +401,314 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C3853643",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "population_based_testing",
+      "id": "genetic_counseling_procedure",
       "class": "Procedure",
-      "name": "population-based testing",
+      "name": "genetic counseling",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0017382",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "liquid_biopsies",
-      "class": "Procedure",
-      "name": "liquid biopsies",
+      "id": "variants_of_uncertain_significance_mutation",
+      "class": "Mutation",
+      "name": "variants of uncertain significance",
+      "synonyms": [
+        "VUS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C3640076",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pathogenic_variants_mutation",
+      "class": "Mutation",
+      "name": "pathogenic variants",
+      "synonyms": [
+        "P/LP variants"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C4521986",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "selective_estrogen_receptor_modulators_drug",
+      "class": "Drug",
+      "name": "selective estrogen receptor modulators",
+      "synonyms": [
+        "SERMs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0360135",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "aromatase_inhibitors_drug",
+      "class": "Drug",
+      "name": "aromatase inhibitors",
+      "synonyms": [
+        "AIs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0593802",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "contralateral_breast_cancer_disease",
+      "class": "Disease",
+      "name": "contralateral breast cancer",
+      "synonyms": [
+        "CBC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0238033",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hereditary_breast_and_ovarian_cancer_disease",
+      "class": "Disease",
+      "name": "hereditary breast and ovarian cancer",
+      "synonyms": [
+        "HBOC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C2931822",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "triple_negative_breast_cancer_disease",
+      "class": "Disease",
+      "name": "triple-negative breast cancer",
+      "synonyms": [
+        "TNBC"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C3539878",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pancreatic_cancer_disease",
+      "class": "Disease",
+      "name": "pancreatic cancer",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": null,
+      "umls_id": "C0030274",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "prostate_cancer_disease",
+      "class": "Disease",
+      "name": "prostate cancer",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0376358",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "diffuse_gastric_cancer_disease",
+      "class": "Disease",
+      "name": "diffuse gastric cancer",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1708349",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "aromatase_enzyme",
+      "class": "Enzyme",
+      "name": "aromatase",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0003805",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "RANK_RANKL_pathway_biologicalprocess",
+      "class": "BiologicalProcess",
+      "name": "RANK/RANKL pathway",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1155362",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "sex_hormone_binding_globulin_protein",
+      "class": "Protein",
+      "name": "sex hormone-binding globulin",
+      "synonyms": [
+        "SHBG"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0036883",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cognitive_behavioral_therapy_procedure",
+      "class": "Procedure",
+      "name": "cognitive-behavioral therapy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0009244",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mindfulness_based_interventions_procedure",
+      "class": "Procedure",
+      "name": "mindfulness-based interventions",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C3542996",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "PARP_inhibitors_drug",
+      "class": "Drug",
+      "name": "PARP inhibitors",
+      "synonyms": [
+        "poly (ADP-ribose) polymerase inhibitors"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C1882413",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "estrogen_receptor_positive_disease",
+      "class": "Disease",
+      "name": "estrogen receptor-positive breast cancer",
+      "synonyms": [
+        "ER-positive"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0279754",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "estrogen_receptor_negative_disease",
+      "class": "Disease",
+      "name": "estrogen receptor-negative breast cancer",
+      "synonyms": [
+        "ER-negative"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0279756",
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -591,11 +717,11 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper:introduction:1:llm",
+      "id": "paper_id:introduction:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "intro_1",
       "text": "Breast cancer remains the most frequently diagnosed malignancy in women worldwide. In 2022, almost 2.3 million cases were diagnosed, with an estimated death toll of over 666,000",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -604,11 +730,11 @@
       "source": "extracted"
     },
     {
-      "id": "paper:introduction:2:llm",
+      "id": "paper_id:introduction:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "intro_2",
       "text": "Hereditary breast cancer contributes to approximately 10-15% of all breast cancers",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -617,11 +743,11 @@
       "source": "extracted"
     },
     {
-      "id": "paper:introduction:3:llm",
+      "id": "paper_id:introduction:3:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "intro_3",
       "text": "Carriers of pathogenic BRCA2 variants have a lifetime risk of developing breast cancer ranging from 38% to 84%, while the risk of developing ovarian cancer ranges from 16.5% to 27.0%",
       "confidence": 0.95,
       "extraction_method": "llm",
@@ -630,50 +756,24 @@
       "source": "extracted"
     },
     {
-      "id": "paper:screening:1:llm",
+      "id": "paper_id:screening:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "screening_1",
       "text": "Annual magnetic resonance imaging (MRI) remains the most sensitive screening tool for early breast cancer detection in high-risk individuals",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "extraction_method": "llm",
       "study_type": "narrative review",
       "eco_type": null,
       "source": "extracted"
     },
     {
-      "id": "paper:rrs:1:llm",
+      "id": "paper_id:chemoprevention:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
-      "text": "Prophylactic bilateral mastectomy (PBM) has been shown to reduce the incidence of breast cancer by approximately 90%",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "narrative review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper:rrs:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
-      "text": "Risk-reducing BSO was associated with reduced breast cancer-specific mortality (2% vs. 6%; HR: 0.44 (95% CI: 0.26 - 0.76)), lower ovarian cancer-specific mortality (0.4% vs. 3%; HR: 0.21 (95% CI: 0.06 - 0.80)), and decreased all-cause mortality (3% vs. 10%; HR: 0.40 (95% CI: 0.26 - 0.61))",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "narrative review",
-      "eco_type": null,
-      "source": "extracted"
-    },
-    {
-      "id": "paper:chemoprevention:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "chemo_1",
       "text": "Studies utilizing selective estrogen receptor modulators (SERMs), including tamoxifen and raloxifene, and aromatase inhibitors (AIs) such as exemestane and anastrozole, have shown significant efficacy in lowering the risk of first breast cancer among high-risk individuals",
       "confidence": 0.9,
       "extraction_method": "llm",
@@ -682,12 +782,25 @@
       "source": "extracted"
     },
     {
-      "id": "paper:chemoprevention:2:llm",
+      "id": "paper_id:surgery:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper",
-      "text_span_id": null,
-      "text": "The adjusted HRs for contralateral breast cancer were 0.38 (95% CI: 0.27 - 0.55) for BRCA1 carriers and 0.33 (95% CI: 0.22 - 0.50) for BRCA2 carriers with tamoxifen use",
+      "paper_id": "paper_id",
+      "text_span_id": "surgery_1",
+      "text": "Risk-reducing surgeries, such as bilateral salpingo-oophorectomy (BSO) and mastectomy, significantly lower the risk of breast and ovarian cancer",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "narrative review",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:surgery:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": "surgery_2",
+      "text": "Patients with BRCA1 or BRCA2-mutated carriers are advised to consider prophylactic bilateral mastectomy (PBM) which has been shown to reduce the incidence of breast cancer by approximately 90%",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "narrative review",
@@ -697,14 +810,14 @@
   ],
   "relationships": [
     {
-      "subject": "BRCA1_pathogenic_variants",
+      "subject": "BRCA1_gene",
       "predicate": "INCREASES_RISK",
-      "object": "breast cancer",
+      "object": "breast_cancer_disease",
       "evidence_ids": [
-        "paper:introduction:3:llm"
+        "paper_id:introduction:3:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -714,14 +827,14 @@
       "note": null
     },
     {
-      "subject": "BRCA2_pathogenic_variants",
+      "subject": "BRCA2_gene",
       "predicate": "INCREASES_RISK",
-      "object": "breast cancer",
+      "object": "breast_cancer_disease",
       "evidence_ids": [
-        "paper:introduction:3:llm"
+        "paper_id:introduction:3:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -731,14 +844,14 @@
       "note": null
     },
     {
-      "subject": "BRCA1_pathogenic_variants",
+      "subject": "BRCA1_gene",
       "predicate": "INCREASES_RISK",
-      "object": "ovarian_cancer",
+      "object": "ovarian_cancer_disease",
       "evidence_ids": [
-        "paper:introduction:3:llm"
+        "paper_id:introduction:3:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -748,14 +861,14 @@
       "note": null
     },
     {
-      "subject": "BRCA2_pathogenic_variants",
+      "subject": "BRCA2_gene",
       "predicate": "INCREASES_RISK",
-      "object": "ovarian_cancer",
+      "object": "ovarian_cancer_disease",
       "evidence_ids": [
-        "paper:introduction:3:llm"
+        "paper_id:introduction:3:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -765,155 +878,164 @@
       "note": null
     },
     {
-      "subject": "magnetic_resonance_imaging",
-      "predicate": "USED_FOR",
-      "object": "breast cancer",
+      "subject": "magnetic_resonance_imaging_procedure",
+      "predicate": "INDICATES",
+      "object": "breast_cancer_disease",
       "evidence_ids": [
-        "paper:screening:1:llm"
+        "paper_id:screening:1:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
-      "confidence": 0.95,
-      "properties": {
-        "purpose": "screening"
-      },
+      "confidence": 0.9,
+      "properties": {},
       "section": "screening",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "prophylactic_bilateral_mastectomy",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
+      "subject": "tamoxifen_drug",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
       "evidence_ids": [
-        "paper:rrs:1:llm"
+        "paper_id:chemoprevention:1:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "chemoprevention",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "raloxifene_drug",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "chemoprevention",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "exemestane_drug",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "chemoprevention",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "anastrozole_drug",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "chemoprevention",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "bilateral_salpingo_oophorectomy_procedure",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
+      "evidence_ids": [
+        "paper_id:surgery:1:llm"
+      ],
+      "source_papers": [
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {
-        "reduction": "90%"
+        "indication": "prevention"
       },
-      "section": "rrs",
+      "section": "surgery",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "bilateral_salpingo-oophorectomy",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
+      "subject": "bilateral_salpingo_oophorectomy_procedure",
+      "predicate": "TREATS",
+      "object": "ovarian_cancer_disease",
       "evidence_ids": [
-        "paper:rrs:2:llm"
+        "paper_id:surgery:1:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
-      "properties": {},
-      "section": "rrs",
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "surgery",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "bilateral_salpingo-oophorectomy",
-      "predicate": "REDUCES_RISK",
-      "object": "ovarian_cancer",
+      "subject": "prophylactic_bilateral_mastectomy_procedure",
+      "predicate": "TREATS",
+      "object": "breast_cancer_disease",
       "evidence_ids": [
-        "paper:rrs:2:llm"
+        "paper_id:surgery:2:llm"
       ],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
-      "properties": {},
-      "section": "rrs",
+      "properties": {
+        "indication": "prevention"
+      },
+      "section": "surgery",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
     },
     {
-      "subject": "tamoxifen",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
+      "subject": "tamoxifen_drug",
+      "predicate": "SUBTYPE_OF",
+      "object": "selective_estrogen_receptor_modulators_drug",
       "evidence_ids": [
-        "paper:chemoprevention:1:llm",
-        "paper:chemoprevention:2:llm"
+        "paper_id:chemoprevention:1:llm"
       ],
       "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "chemoprevention",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "raloxifene",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
-      "evidence_ids": [
-        "paper:chemoprevention:1:llm"
-      ],
-      "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "chemoprevention",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "exemestane",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
-      "evidence_ids": [
-        "paper:chemoprevention:1:llm"
-      ],
-      "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "chemoprevention",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "anastrozole",
-      "predicate": "REDUCES_RISK",
-      "object": "breast cancer",
-      "evidence_ids": [
-        "paper:chemoprevention:1:llm"
-      ],
-      "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.9,
-      "properties": {},
-      "section": "chemoprevention",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "tamoxifen",
-      "predicate": "REDUCES_RISK",
-      "object": "contralateral_breast_cancer",
-      "evidence_ids": [
-        "paper:chemoprevention:2:llm"
-      ],
-      "source_papers": [
-        "paper"
+        "paper_id"
       ],
       "confidence": 0.95,
       "properties": {},
@@ -923,74 +1045,65 @@
       "note": null
     },
     {
-      "subject": "tamoxifen",
-      "predicate": "SAME_AS",
-      "object": "selective estrogen receptor modulators",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
+      "subject": "raloxifene_drug",
+      "predicate": "SUBTYPE_OF",
+      "object": "selective_estrogen_receptor_modulators_drug",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
       ],
-      "confidence": 1.0,
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
       "properties": {},
       "section": "chemoprevention",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "Tamoxifen is a type of SERM"
+      "note": null
     },
     {
-      "subject": "raloxifene",
-      "predicate": "SAME_AS",
-      "object": "selective estrogen receptor modulators",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
+      "subject": "exemestane_drug",
+      "predicate": "SUBTYPE_OF",
+      "object": "aromatase_inhibitors_drug",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
       ],
-      "confidence": 1.0,
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
       "properties": {},
       "section": "chemoprevention",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "Raloxifene is a type of SERM"
+      "note": null
     },
     {
-      "subject": "exemestane",
-      "predicate": "SAME_AS",
-      "object": "aromatase inhibitors",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
+      "subject": "anastrozole_drug",
+      "predicate": "SUBTYPE_OF",
+      "object": "aromatase_inhibitors_drug",
+      "evidence_ids": [
+        "paper_id:chemoprevention:1:llm"
       ],
-      "confidence": 1.0,
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
       "properties": {},
       "section": "chemoprevention",
       "asserted_by": "llm",
       "resolution": null,
-      "note": "Exemestane is a type of aromatase inhibitor"
+      "note": null
     },
     {
-      "subject": "anastrozole",
-      "predicate": "SAME_AS",
-      "object": "aromatase inhibitors",
+      "subject": "letrozole_drug",
+      "predicate": "SUBTYPE_OF",
+      "object": "aromatase_inhibitors_drug",
       "evidence_ids": [],
       "source_papers": [
-        "paper"
+        "paper_id"
       ],
-      "confidence": 1.0,
-      "properties": {},
-      "section": "chemoprevention",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": "Anastrozole is a type of aromatase inhibitor"
-    },
-    {
-      "subject": "denosumab",
-      "predicate": "TARGETS",
-      "object": "RANK_RANKL_pathway",
-      "evidence_ids": [],
-      "source_papers": [
-        "paper"
-      ],
-      "confidence": 0.9,
+      "confidence": 0.95,
       "properties": {},
       "section": "chemoprevention",
       "asserted_by": "llm",
@@ -999,8 +1112,8 @@
     }
   ],
   "notes": [
-    "This is a narrative review summarizing evidence on screening and risk reduction strategies for unaffected BRCA1/BRCA2 carriers",
-    "The paper discusses multiple interventions including surveillance, chemoprevention, and risk-reducing surgeries",
-    "Evidence quality varies as this is a narrative review rather than a systematic review or meta-analysis"
+    "This paper is a narrative review focusing on screening and risk reduction strategies for unaffected BRCA1/BRCA2 carriers",
+    "The paper discusses multiple clinical trials and studies but is itself a review article",
+    "Evidence entities capture key findings and recommendations from the review"
   ]
 }

@@ -15,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5f8a89591cf658b96292f1d71c8b28eab09231b1",
-      "git_commit_short": "5f8a895",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T16:02:25.512940Z",
+      "timestamp": "2026-03-05T17:39:27.952030Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 48.15
+      "duration_seconds": 46.86
     },
     "entity_resolution": null,
     "model_info": null
@@ -61,7 +61,7 @@
     },
     {
       "id": "EGFR",
-      "class": "Other",
+      "class": "Protein",
       "name": "epidermal growth factor receptor",
       "synonyms": [
         "EGFR"
@@ -122,7 +122,7 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C1168401",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -337,7 +337,7 @@
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:7107",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -445,7 +445,7 @@
       "entity_id": null,
       "paper_id": "PMC_extracted",
       "text_span_id": "results_7",
-      "text": "SOX11 promotes tumor growth and the expression of TWIST1 in vivo",
+      "text": "SOX11 was found to promote HNSCC tumor growth and the expression of TWIST1 in vivo",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
@@ -472,8 +472,8 @@
       "note": null
     },
     {
-      "subject": "EGFR",
-      "predicate": "REGULATES",
+      "subject": "EMEQA",
+      "predicate": "DECREASES",
       "object": "SOX11",
       "evidence_ids": [
         "PMC_extracted:results:2:llm"
@@ -528,7 +528,6 @@
       "predicate": "DECREASES",
       "object": "E-cadherin",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -546,7 +545,6 @@
       "predicate": "INCREASES",
       "object": "N-cadherin",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -564,7 +562,6 @@
       "predicate": "INCREASES",
       "object": "vimentin",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -582,7 +579,6 @@
       "predicate": "INCREASES",
       "object": "fibronectin",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -618,7 +614,6 @@
       "predicate": "INCREASES",
       "object": "TWIST1",
       "evidence_ids": [
-        "PMC_extracted:results:5:llm",
         "PMC_extracted:results:7:llm"
       ],
       "source_papers": [
@@ -636,7 +631,6 @@
       "predicate": "INCREASES",
       "object": "TWIST2",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -654,7 +648,6 @@
       "predicate": "INCREASES",
       "object": "SNAIL",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -672,7 +665,6 @@
       "predicate": "INCREASES",
       "object": "SLUG",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -690,7 +682,6 @@
       "predicate": "INCREASES",
       "object": "ZEB1",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
       ],
       "source_papers": [
@@ -708,25 +699,7 @@
       "predicate": "INCREASES",
       "object": "ZEB2",
       "evidence_ids": [
-        "PMC_extracted:results:4:llm",
         "PMC_extracted:results:5:llm"
-      ],
-      "source_papers": [
-        "PMC_extracted"
-      ],
-      "confidence": 0.95,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "EMEQA",
-      "predicate": "INHIBITS",
-      "object": "EGFR",
-      "evidence_ids": [
-        "PMC_extracted:results:2:llm"
       ],
       "source_papers": [
         "PMC_extracted"
@@ -743,7 +716,6 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "HNSCC",
       "evidence_ids": [
-        "PMC_extracted:results:1:llm",
         "PMC_extracted:results:7:llm"
       ],
       "source_papers": [
@@ -755,11 +727,26 @@
       "asserted_by": "llm",
       "resolution": null,
       "note": null
+    },
+    {
+      "subject": "EMEQA",
+      "predicate": "SAME_AS",
+      "object": "EGFR",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "methods",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": "EMEQA is an EGFR inhibitor"
     }
   ],
   "notes": [
-    "This study demonstrates a regulatory pathway where EGF-EGFR-STAT3 signaling upregulates SOX11, which then promotes epithelial-mesenchymal transition in head and neck squamous cell carcinoma",
-    "The study used both in vitro cell culture experiments and in vivo xenograft mouse models to validate findings",
-    "Multiple EMT transcription factors and markers were shown to be regulated by SOX11"
+    "This study demonstrates that SOX11 is regulated by the EGF-EGFR-STAT3 signaling pathway and promotes epithelial-mesenchymal transition in head and neck squamous cell carcinoma",
+    "The research includes both in vitro cell culture experiments and in vivo xenograft mouse models",
+    "Multiple EMT transcription factors are regulated by SOX11, including TWIST1, TWIST2, SNAIL, SLUG, ZEB1, and ZEB2"
   ]
 }

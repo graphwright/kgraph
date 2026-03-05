@@ -3,7 +3,9 @@
     "doi": null,
     "pmcid": "PMC12764813",
     "title": "Knowledge attitude and practice regarding cancer screening among Chinese medical students",
-    "authors": [],
+    "authors": [
+      "Not specified"
+    ],
     "journal": "Scientific Reports",
     "year": 2025,
     "study_type": "cross-sectional study",
@@ -13,8 +15,8 @@
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "5f8a89591cf658b96292f1d71c8b28eab09231b1",
-      "git_commit_short": "5f8a895",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -28,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T16:00:18.022985Z",
+      "timestamp": "2026-03-05T17:32:22.485598Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 58.29
+      "duration_seconds": 60.15
     },
     "entity_resolution": null,
     "model_info": null
@@ -216,9 +218,9 @@
     {
       "id": "alpha_fetoprotein",
       "class": "Biomarker",
-      "name": "alpha-fetoprotein",
+      "name": "Alpha-Fetoprotein",
       "synonyms": [
-        "alpha-fetoprotein",
+        "Alpha-Fetoprotein",
         "AFP"
       ],
       "symbol": null,
@@ -288,7 +290,8 @@
       "class": "Biomarker",
       "name": "pepsinogen",
       "synonyms": [
-        "pepsinogen"
+        "pepsinogen",
+        "pepsinogen I/II"
       ],
       "symbol": null,
       "brand_names": [],
@@ -318,12 +321,11 @@
       "uniprot_id": null
     },
     {
-      "id": "helicobacter_pylori",
-      "class": "AnatomicalStructure",
-      "name": "Helicobacter pylori",
+      "id": "helicobacter_pylori_antibodies",
+      "class": "Biomarker",
+      "name": "Helicobacter pylori antibodies",
       "synonyms": [
-        "Helicobacter pylori",
-        "H. pylori"
+        "Helicobacter pylori antibodies"
       ],
       "symbol": null,
       "brand_names": [],
@@ -389,10 +391,10 @@
     {
       "id": "hpv_testing",
       "class": "Procedure",
-      "name": "HPV testing",
+      "name": "high-risk human papillomavirus testing",
       "synonyms": [
-        "HPV testing",
-        "human papillomavirus testing"
+        "high-risk human papillomavirus testing",
+        "HPV testing"
       ],
       "symbol": null,
       "brand_names": [],
@@ -409,7 +411,8 @@
       "class": "Procedure",
       "name": "colposcopy",
       "synonyms": [
-        "colposcopy"
+        "colposcopy",
+        "vaginal colposcopy examination"
       ],
       "symbol": null,
       "brand_names": [],
@@ -460,8 +463,7 @@
       "class": "Disease",
       "name": "chronic obstructive pulmonary disease",
       "synonyms": [
-        "chronic obstructive pulmonary disease",
-        "COPD"
+        "chronic obstructive pulmonary disease"
       ],
       "symbol": null,
       "brand_names": [],
@@ -478,8 +480,7 @@
       "class": "Disease",
       "name": "liver cirrhosis",
       "synonyms": [
-        "liver cirrhosis",
-        "cirrhosis"
+        "liver cirrhosis"
       ],
       "symbol": null,
       "brand_names": [],
@@ -577,6 +578,41 @@
       "uniprot_id": null
     },
     {
+      "id": "knowledge_attitude_practice",
+      "class": "StudyDesign",
+      "name": "Knowledge, Attitude, and Practice",
+      "synonyms": [
+        "Knowledge, Attitude, and Practice",
+        "KAP"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cross_sectional_study",
+      "class": "StudyDesign",
+      "name": "cross-sectional study",
+      "synonyms": [
+        "cross-sectional study"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
       "id": "structural_equation_modeling",
       "class": "StatisticalMethod",
       "name": "structural equation modeling",
@@ -631,11 +667,11 @@
       "uniprot_id": null
     },
     {
-      "id": "cross_sectional_study",
-      "class": "StudyDesign",
-      "name": "cross-sectional study",
+      "id": "cronbachs_alpha",
+      "class": "StatisticalMethod",
+      "name": "Cronbach's alpha",
       "synonyms": [
-        "cross-sectional study"
+        "Cronbach's alpha"
       ],
       "symbol": null,
       "brand_names": [],
@@ -648,12 +684,28 @@
       "uniprot_id": null
     },
     {
-      "id": "knowledge_attitude_practice",
-      "class": "StudyDesign",
-      "name": "Knowledge, Attitude, and Practice survey",
+      "id": "anova",
+      "class": "StatisticalMethod",
+      "name": "ANOVA",
       "synonyms": [
-        "Knowledge, Attitude, and Practice survey",
-        "KAP survey"
+        "ANOVA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "kruskal_wallis_test",
+      "class": "StatisticalMethod",
+      "name": "Kruskal-Wallis test",
+      "synonyms": [
+        "Kruskal-Wallis test"
       ],
       "symbol": null,
       "brand_names": [],
@@ -956,6 +1008,23 @@
       "note": null
     },
     {
+      "subject": "helicobacter_pylori_antibodies",
+      "predicate": "INDICATES",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
       "subject": "mammography",
       "predicate": "INDICATES",
       "object": "breast_cancer",
@@ -1025,23 +1094,6 @@
     },
     {
       "subject": "chronic_atrophic_gastritis",
-      "predicate": "INCREASES_RISK",
-      "object": "stomach_cancer",
-      "evidence_ids": [
-        "paper_1:results:1:llm"
-      ],
-      "source_papers": [
-        "paper_1"
-      ],
-      "confidence": 0.8,
-      "properties": {},
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "helicobacter_pylori",
       "predicate": "INCREASES_RISK",
       "object": "stomach_cancer",
       "evidence_ids": [
@@ -1162,7 +1214,7 @@
   ],
   "notes": [
     "This study focuses on knowledge, attitudes, and practices regarding cancer screening among Chinese medical students",
-    "The study used structural equation modeling to analyze relationships between knowledge, attitude, and practice",
-    "Multiple cancer screening methods and biomarkers were discussed in the context of different cancer types"
+    "The study used structural equation modeling to analyze relationships between knowledge, attitude, and practice components",
+    "Multiple cancer screening methods and biomarkers were discussed in the context of Chinese national guidelines"
   ]
 }

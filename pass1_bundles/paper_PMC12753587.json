@@ -1,22 +1,22 @@
 {
   "paper": {
     "doi": null,
-    "pmcid": "PMC12753587",
+    "pmcid": "PMC_ID_NOT_PROVIDED",
     "title": "PTBP1 functions as a suppressor of ferroptosis in endometrial carcinoma cells by stabilizing SLC7A11 mRNA",
     "authors": [
-      "Not specified"
+      "Not specified in abstract"
     ],
     "journal": "Not specified",
     "year": 2025,
     "study_type": "experimental",
-    "eco_type": "in vitro and in vivo"
+    "eco_type": "in_vitro_in_vivo"
   },
   "extraction_provenance": {
     "extraction_pipeline": {
       "name": "medlit_pass1_extract",
       "version": "0.1.0",
-      "git_commit": "9ab95ab359b033e07f84b797d25c7c5d2fbe8e06",
-      "git_commit_short": "9ab95ab",
+      "git_commit": "5b195551cfdd00988ab12b30347201cc55903b2d",
+      "git_commit_short": "5b19555",
       "git_branch": "main",
       "git_dirty": true,
       "repo_url": "https://github.com/org/medlit"
@@ -30,13 +30,13 @@
     "prompt": {
       "version": "v1",
       "template": "medlit_extraction_v1",
-      "checksum": "sha256:7dc528451098ea67"
+      "checksum": "sha256:672db49148cdf860"
     },
     "execution": {
-      "timestamp": "2026-03-05T15:57:44.829174Z",
+      "timestamp": "2026-03-05T17:26:47.889825Z",
       "hostname": "unknown",
       "python_version": "3.13.3",
-      "duration_seconds": 46.89
+      "duration_seconds": 47.26
     },
     "entity_resolution": null,
     "model_info": null
@@ -60,12 +60,12 @@
       "uniprot_id": null
     },
     {
-      "id": "SLC7A11",
+      "id": "SLC7A11_protein",
       "class": "Protein",
       "name": "solute carrier family 7 member 11",
       "synonyms": [
         "SLC7A11",
-        "cystine/glutamate antiporter solute carrier family 7 member 11"
+        "cystine/glutamate antiporter"
       ],
       "symbol": null,
       "brand_names": [],
@@ -99,7 +99,9 @@
       "id": "ferroptosis",
       "class": "BiologicalProcess",
       "name": "ferroptosis",
-      "synonyms": [],
+      "synonyms": [
+        "iron-dependent cell death"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
@@ -111,7 +113,7 @@
       "uniprot_id": null
     },
     {
-      "id": "GPX4",
+      "id": "GPX4_protein",
       "class": "Enzyme",
       "name": "glutathione peroxidase 4",
       "synonyms": [
@@ -128,7 +130,7 @@
       "uniprot_id": null
     },
     {
-      "id": "ACSL4",
+      "id": "ACSL4_protein",
       "class": "Enzyme",
       "name": "acyl-CoA synthetase long-chain family member 4",
       "synonyms": [
@@ -155,7 +157,7 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0017817",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -172,24 +174,7 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0024643",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "reactive_oxygen_species",
-      "class": "Biomarker",
-      "name": "reactive oxygen species",
-      "synonyms": [
-        "ROS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0162772",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -206,14 +191,31 @@
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0060240",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "NOX1",
+      "id": "reactive_oxygen_species",
+      "class": "Biomarker",
+      "name": "reactive oxygen species",
+      "synonyms": [
+        "ROS"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "NOX1_protein",
       "class": "Enzyme",
       "name": "NADPH oxidase 1",
       "synonyms": [
@@ -230,7 +232,7 @@
       "uniprot_id": null
     },
     {
-      "id": "HSP27",
+      "id": "HSP27_protein",
       "class": "Protein",
       "name": "heat shock protein 27",
       "synonyms": [
@@ -247,34 +249,18 @@
       "uniprot_id": null
     },
     {
-      "id": "Ki67",
+      "id": "Ki67_protein",
       "class": "Biomarker",
       "name": "Ki-67",
       "synonyms": [
-        "Ki67"
+        "Ki67",
+        "cell cycle marker"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
-      "umls_id": "C0208804",
-      "hgnc_id": null,
-      "rxnorm_id": null,
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "4-hydroxynonenal",
-      "class": "Biomarker",
-      "name": "4-hydroxynonenal",
-      "synonyms": [
-        "4-HNE"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": "C0044828",
+      "umls_id": null,
       "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
@@ -284,14 +270,16 @@
       "id": "erastin",
       "class": "Drug",
       "name": "erastin",
-      "synonyms": [],
+      "synonyms": [
+        "ferroptosis inducer"
+      ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "1946870",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
@@ -300,7 +288,8 @@
       "class": "Drug",
       "name": "ferrostatin-1",
       "synonyms": [
-        "Fer-1"
+        "Fer-1",
+        "ferroptosis inhibitor"
       ],
       "symbol": null,
       "brand_names": [],
@@ -308,14 +297,14 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "1946871",
+      "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "actinomycin_D",
-      "class": "Drug",
-      "name": "actinomycin D",
+      "id": "lipid_peroxidation",
+      "class": "BiologicalProcess",
+      "name": "lipid peroxidation",
       "synonyms": [],
       "symbol": null,
       "brand_names": [],
@@ -323,57 +312,57 @@
       "canonical_id": null,
       "umls_id": null,
       "hgnc_id": null,
-      "rxnorm_id": "704",
-      "loinc_code": null,
-      "uniprot_id": null
-    },
-    {
-      "id": "CBS",
-      "class": "Enzyme",
-      "name": "cystathionine beta-synthase",
-      "synonyms": [
-        "CBS"
-      ],
-      "symbol": null,
-      "brand_names": [],
-      "source": "extracted",
-      "canonical_id": null,
-      "umls_id": null,
-      "hgnc_id": "HGNC:1550",
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "NRF2",
-      "class": "Protein",
-      "name": "nuclear factor erythroid 2-related factor 2",
+      "id": "mRNA_stability",
+      "class": "BiologicalProcess",
+      "name": "mRNA stability",
       "synonyms": [
-        "NRF2"
+        "post-transcriptional regulation"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:7782",
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
     },
     {
-      "id": "p53",
-      "class": "Protein",
-      "name": "tumor protein p53",
+      "id": "Ishikawa_cells",
+      "class": "AnatomicalStructure",
+      "name": "Ishikawa cells",
       "synonyms": [
-        "p53"
+        "Ishikawa EC cells"
       ],
       "symbol": null,
       "brand_names": [],
       "source": "extracted",
       "canonical_id": null,
       "umls_id": null,
-      "hgnc_id": "HGNC:11998",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "KLE_cells",
+      "class": "AnatomicalStructure",
+      "name": "KLE cells",
+      "synonyms": [
+        "KLE EC cells"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
       "rxnorm_id": null,
       "loinc_code": null,
       "uniprot_id": null
@@ -381,94 +370,107 @@
   ],
   "evidence_entities": [
     {
-      "id": "paper_id:introduction:1:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:1:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "intro_1",
-      "text": "Ferroptosis, an iron-dependent form of programmed cell death triggered by lipid peroxidation, has emerged as a promising therapeutic avenue due to its involvement in critical cancer progression processes including tumorigenesis, development, and therapy resistance",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro and in vivo",
-      "source": "extracted"
-    },
-    {
-      "id": "paper_id:introduction:2:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "intro_2",
-      "text": "The cystine/glutamate antiporter solute carrier family 7 member 11 (SLC7A11) serves as a core regulator of ferroptosis by mediating cystine uptake for GSH synthesis, thereby suppressing lipid peroxidation and ferroptosis execution",
-      "confidence": 0.95,
-      "extraction_method": "llm",
-      "study_type": "experimental",
-      "eco_type": "in vitro and in vivo",
-      "source": "extracted"
-    },
-    {
-      "id": "paper_id:results:1:llm",
-      "class": "Evidence",
-      "entity_id": null,
-      "paper_id": "paper_id",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
       "text_span_id": "results_1",
       "text": "Transfection of shRNA vectors targeting PTBP1 effectively reduced PTBP1 expression in Ishikawa and KLE cell lines and substantially inhibited cell viability in these two EC cell lines",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "paper_id:results:2:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:2:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
       "text_span_id": "results_2",
+      "text": "PTBP1 knockdown significantly suppressed tumor growth in vivo. Specifically, results from Ishikawa cell xenografts showed a significant reduction in tumor volume and weight",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vivo",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_ID_NOT_PROVIDED:results:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_3",
+      "text": "PTBP1 protein levels were significantly elevated in EC tissues compared to adjacent normal tissues in all 12 paired samples",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "clinical",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_ID_NOT_PROVIDED:results:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_4",
       "text": "PTBP1 knockdown significantly increased ROS levels, reduced intracellular GSH concentrations, and elevated levels of both MDA and ferrous ions in Ishikawa and KLE cells",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "paper_id:results:3:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:5:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "results_3",
-      "text": "The fold enrichment of SLC7A11 mRNA in anti-PTBP1 immunoprecipitations, compared to anti-IgG controls, revealed approximately a four-fold increase in SLC7A11 enrichment, supporting the interaction between PTBP1 and SLC7A11 mRNA",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_5",
+      "text": "PTBP1 knockdown significantly upregulated the expression of ACSL4, while downregulating the expression of GPX4 and HSP27 in Ishikawa and KLE cells",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "paper_id:results:4:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:6:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "results_4",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_6",
+      "text": "The fold enrichment of SLC7A11 mRNA in anti-PTBP1 immunoprecipitations, compared to anti-IgG controls, revealed approximately a four-fold increase in SLC7A11 enrichment",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_ID_NOT_PROVIDED:results:7:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_7",
       "text": "The half-life of SLC7A11 mRNA was significantly shortened upon PTBP1 disruption, and SLC7A11 protein levels were also reduced in PTBP1-depleted EC cells",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     },
     {
-      "id": "paper_id:results:5:llm",
+      "id": "PMC_ID_NOT_PROVIDED:results:8:llm",
       "class": "Evidence",
       "entity_id": null,
-      "paper_id": "paper_id",
-      "text_span_id": "results_5",
-      "text": "Co-transfection with an SLC7A11 ORF plasmid (SLC7A11-ov) significantly increased SLC7A11 protein levels in PTBP1-depleted cells. Cell viability, which was reduced in PTBP1 knockdown cells, was partially but significantly rescued by SLC7A11 restoration",
+      "paper_id": "PMC_ID_NOT_PROVIDED",
+      "text_span_id": "results_8",
+      "text": "Co-transfection with an SLC7A11 ORF plasmid significantly increased SLC7A11 protein levels in PTBP1-depleted cells. Cell viability, which was reduced in PTBP1 knockdown cells, was partially but significantly rescued by SLC7A11 restoration",
       "confidence": 0.95,
       "extraction_method": "llm",
       "study_type": "experimental",
-      "eco_type": "in vitro",
+      "eco_type": "in_vitro",
       "source": "extracted"
     }
   ],
@@ -478,11 +480,11 @@
       "predicate": "REGULATES",
       "object": "ferroptosis",
       "evidence_ids": [
-        "paper_id:introduction:1:llm",
-        "paper_id:results:2:llm"
+        "PMC_ID_NOT_PROVIDED:results:4:llm",
+        "PMC_ID_NOT_PROVIDED:results:5:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.95,
       "properties": {
@@ -496,12 +498,12 @@
     {
       "subject": "PTBP1",
       "predicate": "BINDS_TO",
-      "object": "SLC7A11",
+      "object": "SLC7A11_protein",
       "evidence_ids": [
-        "paper_id:results:3:llm"
+        "PMC_ID_NOT_PROVIDED:results:6:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.95,
       "properties": {
@@ -514,38 +516,19 @@
     },
     {
       "subject": "PTBP1",
-      "predicate": "STABILIZES",
-      "object": "SLC7A11",
+      "predicate": "REGULATES",
+      "object": "mRNA_stability",
       "evidence_ids": [
-        "paper_id:results:4:llm"
+        "PMC_ID_NOT_PROVIDED:results:7:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.95,
       "properties": {
-        "mechanism": "mRNA_stability"
+        "target": "SLC7A11"
       },
       "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SLC7A11",
-      "predicate": "REGULATES",
-      "object": "ferroptosis",
-      "evidence_ids": [
-        "paper_id:introduction:2:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "mechanism": "suppression"
-      },
-      "section": "introduction",
       "asserted_by": "llm",
       "resolution": null,
       "note": null
@@ -555,10 +538,12 @@
       "predicate": "ASSOCIATED_WITH",
       "object": "endometrial_carcinoma",
       "evidence_ids": [
-        "paper_id:results:1:llm"
+        "PMC_ID_NOT_PROVIDED:results:1:llm",
+        "PMC_ID_NOT_PROVIDED:results:2:llm",
+        "PMC_ID_NOT_PROVIDED:results:3:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.95,
       "properties": {
@@ -570,94 +555,114 @@
       "note": null
     },
     {
-      "subject": "PTBP1",
-      "predicate": "INCREASES",
-      "object": "reactive_oxygen_species",
-      "evidence_ids": [
-        "paper_id:results:2:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "direction": "knockdown_increases"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "PTBP1",
-      "predicate": "DECREASES",
-      "object": "glutathione",
-      "evidence_ids": [
-        "paper_id:results:2:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "direction": "knockdown_decreases"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "PTBP1",
-      "predicate": "INCREASES",
-      "object": "malondialdehyde",
-      "evidence_ids": [
-        "paper_id:results:2:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "direction": "knockdown_increases"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "PTBP1",
-      "predicate": "INCREASES",
-      "object": "ferrous_iron",
-      "evidence_ids": [
-        "paper_id:results:2:llm"
-      ],
-      "source_papers": [
-        "paper_id"
-      ],
-      "confidence": 0.95,
-      "properties": {
-        "direction": "knockdown_increases"
-      },
-      "section": "results",
-      "asserted_by": "llm",
-      "resolution": null,
-      "note": null
-    },
-    {
-      "subject": "SLC7A11",
-      "predicate": "RESCUES",
+      "subject": "SLC7A11_protein",
+      "predicate": "REGULATES",
       "object": "ferroptosis",
       "evidence_ids": [
-        "paper_id:results:5:llm"
+        "PMC_ID_NOT_PROVIDED:results:8:llm"
       ],
       "source_papers": [
-        "paper_id"
+        "PMC_ID_NOT_PROVIDED"
       ],
       "confidence": 0.95,
       "properties": {
-        "context": "PTBP1_knockdown"
+        "mechanism": "suppression"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "ferroptosis",
+      "predicate": "INCREASES_RISK",
+      "object": "endometrial_carcinoma",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:4:llm",
+        "PMC_ID_NOT_PROVIDED:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "cell_death_induction"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "PTBP1",
+      "predicate": "REGULATES",
+      "object": "reactive_oxygen_species",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "direction": "decreases"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "PTBP1",
+      "predicate": "REGULATES",
+      "object": "glutathione",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "direction": "increases"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "PTBP1",
+      "predicate": "REGULATES",
+      "object": "ACSL4_protein",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "direction": "decreases"
+      },
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "PTBP1",
+      "predicate": "REGULATES",
+      "object": "GPX4_protein",
+      "evidence_ids": [
+        "PMC_ID_NOT_PROVIDED:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC_ID_NOT_PROVIDED"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "direction": "increases"
       },
       "section": "results",
       "asserted_by": "llm",
@@ -666,7 +671,8 @@
     }
   ],
   "notes": [
-    "This study demonstrates a novel regulatory axis where PTBP1 suppresses ferroptosis in endometrial carcinoma cells by stabilizing SLC7A11 mRNA through direct binding to its 5'UTR",
-    "The ferroptosis-suppressive function of PTBP1 appears to be cell-type specific, as previous studies showed opposite effects in liver cancer cells"
+    "This study identifies PTBP1 as a novel regulator of ferroptosis in endometrial carcinoma through stabilization of SLC7A11 mRNA",
+    "The PTBP1-SLC7A11 axis represents a potential therapeutic target for endometrial cancer treatment",
+    "PTBP1 shows context-dependent roles in ferroptosis regulation across different cancer types"
   ]
 }
