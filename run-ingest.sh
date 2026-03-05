@@ -65,8 +65,9 @@ DEBUG="--debug"
 TIMEOUT=1000
 
 # Clean up first
-git rm -rf medlit_bundle/* medlit_merged/* pass1_bundles/* pass1_vocab/*
-git commit -m 'start fresh'
+git rm -rf medlit_bundle/* medlit_merged/* pass1_bundles/* pass1_vocab/* || true
+rm -rf medlit_bundle/* medlit_merged/* pass1_bundles/* pass1_vocab/* || true
+git commit -m 'start fresh' || true
 
 # Legacy ingest.py removed (PLAN10). Use four-pass pipeline: 1a (vocab) → 1b (extract) → 2 (dedup) → 3 (bundle).
 

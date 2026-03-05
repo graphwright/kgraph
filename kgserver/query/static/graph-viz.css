@@ -353,15 +353,51 @@ marker path {
     display: none !important;
 }
 
-/* Entity type colors */
-.node-disease circle { fill: #e94560; }
-.node-drug circle { fill: #4fc3f7; }
-.node-gene circle { fill: #66bb6a; }
-.node-protein circle { fill: #ab47bc; }
-.node-procedure circle { fill: #ffa726; }
-.node-symptom circle { fill: #ef5350; }
-.node-anatomy circle { fill: #8d6e63; }
-.node-default circle { fill: #78909c; }
+/* Node colors applied via JS from ENTITY_TYPE_COLORS (single source of truth) */
+
+/* Graph legend (overlaid on graph canvas, positioned relative to #graph-container) */
+.graph-legend {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 10;
+    background-color: rgba(22, 33, 62, 0.9);
+    border: 1px solid #0f3460;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    color: #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.legend-title {
+    font-weight: 600;
+    color: #eee;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 /* Loading state */
 .loading {

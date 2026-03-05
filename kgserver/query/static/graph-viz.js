@@ -39,12 +39,28 @@ const totalEntitiesEl = document.getElementById('total-entities');
 const totalRelationshipsEl = document.getElementById('total-relationships');
 const truncatedWarning = document.getElementById('truncated-warning');
 
+/** Single source of truth for entity type colors. Used for node fill and legend. */
+const ENTITY_TYPE_COLORS = {
+    disease: { color: '#e94560', label: 'Disease' },
+    drug: { color: '#4fc3f7', label: 'Drug' },
+    gene: { color: '#66bb6a', label: 'Gene' },
+    protein: { color: '#ab47bc', label: 'Protein' },
+    procedure: { color: '#ffa726', label: 'Procedure' },
+    symptom: { color: '#ef5350', label: 'Symptom' },
+    anatomy: { color: '#8d6e63', label: 'Anatomy' },
+    biomarker: { color: '#26a69a', label: 'Biomarker' },
+    pathway: { color: '#7e57c2', label: 'Pathway' },
+    biologicalprocess: { color: '#5c6bc0', label: 'Biological process' },
+    default: { color: '#78909c', label: 'Other' },
+};
+
 // Initialize
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     setupSVG();
     setupEventListeners();
+    initLegend();
 
     // Check URL params for initial load
     const params = new URLSearchParams(window.location.search);
@@ -419,7 +435,7 @@ function renderGraph(data) {
         .selectAll('g')
         .data(nodes)
         .join('g')
-        .attr('class', d => `node node-${getNodeTypeClass(d.entity_type)}`)
+        .attr('class', 'node')
         .call(d3.drag()
             .on('start', dragstarted)
             .on('drag', dragged)
@@ -429,9 +445,13 @@ function renderGraph(data) {
         .on('mouseenter', (event, d) => showNodeTooltip(event, d))
         .on('mouseleave', hideTooltip);
     
-    // Add circles to nodes
+    // Add circles to nodes (fill from ENTITY_TYPE_COLORS)
     node.append('circle')
-        .attr('r', d => d.id === data.center_id ? 12 : 8);
+        .attr('r', d => d.id === data.center_id ? 12 : 8)
+        .attr('fill', d => {
+            const typeClass = getNodeTypeClass(d.entity_type);
+            return (ENTITY_TYPE_COLORS[typeClass] || ENTITY_TYPE_COLORS.default).color;
+        });
     
     // Add labels to nodes
     node.append('text')
@@ -488,10 +508,30 @@ function renderGraph(data) {
     });
 }
 
+/** Map API entity_type (lowercase) to ENTITY_TYPE_COLORS key. Extend when adding new backend types. */
+const TYPE_TO_LEGEND_KEY = {
+    anatomicalstructure: 'anatomy',
+    hormone: 'default',
+    enzyme: 'default',
+};
+
 function getNodeTypeClass(entityType) {
-    const type = (entityType || '').toLowerCase();
-    const knownTypes = ['disease', 'drug', 'gene', 'protein', 'procedure', 'symptom', 'anatomy'];
-    return knownTypes.includes(type) ? type : 'default';
+    const type = (entityType || '').toLowerCase().replace(/\s+/g, '');
+    return TYPE_TO_LEGEND_KEY[type] || (ENTITY_TYPE_COLORS.hasOwnProperty(type) ? type : 'default');
+}
+
+function initLegend() {
+    const container = document.getElementById('graph-legend');
+    if (!container) return;
+    const types = Object.entries(ENTITY_TYPE_COLORS);
+    container.innerHTML =
+        '<div class="legend-title">Entity types</div>' +
+        types
+            .map(
+                ([key, { color, label }]) =>
+                    `<div class="legend-item"><span class="legend-dot" style="background-color:${color}"></span>${escapeHtml(label)}</div>`
+            )
+            .join('');
 }
 
 function truncateLabel(label, maxLength) {
