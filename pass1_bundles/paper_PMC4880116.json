@@ -1,0 +1,574 @@
+{
+  "paper": {
+    "doi": null,
+    "pmcid": "PMC4880116",
+    "title": "Diagnosis and Treatment of Primary Adrenal Insufficiency: An Endocrine Society Clinical Practice Guideline",
+    "authors": [],
+    "journal": null,
+    "year": null,
+    "study_type": "clinical practice guideline",
+    "eco_type": null
+  },
+  "extraction_provenance": {
+    "extraction_pipeline": {
+      "name": "medlit_pass1_extract",
+      "version": "0.1.0",
+      "git_commit": "2a442dbf852af4abe2a9ce0e0df96f2ecfb63a31",
+      "git_commit_short": "2a442db",
+      "git_branch": "main",
+      "git_dirty": true,
+      "repo_url": "https://github.com/org/medlit"
+    },
+    "models": {
+      "llm": {
+        "name": "claude-sonnet-4-20250514",
+        "version": ""
+      }
+    },
+    "prompt": {
+      "version": "v1",
+      "template": "medlit_extraction_v1",
+      "checksum": "sha256:7dc528451098ea67"
+    },
+    "execution": {
+      "timestamp": "2026-03-05T16:08:52.115062Z",
+      "hostname": "unknown",
+      "python_version": "3.13.3",
+      "duration_seconds": 34.29
+    },
+    "entity_resolution": null,
+    "model_info": null
+  },
+  "entities": [
+    {
+      "id": "primary_adrenal_insufficiency",
+      "class": "Disease",
+      "name": "primary adrenal insufficiency",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "endocrine_society",
+      "class": "Institution",
+      "name": "Endocrine Society",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "european_society_endocrinology",
+      "class": "Institution",
+      "name": "European Society of Endocrinology",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "grade_system",
+      "class": "StatisticalMethod",
+      "name": "Grading of Recommendations, Assessment, Development, and Evaluation",
+      "synonyms": [
+        "GRADE"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "short_corticotropin_test",
+      "class": "Procedure",
+      "name": "short corticotropin test",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "morning_plasma_acth",
+      "class": "Biomarker",
+      "name": "morning plasma ACTH",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "morning_cortisol",
+      "class": "Biomarker",
+      "name": "morning cortisol",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "fludrocortisone",
+      "class": "Drug",
+      "name": "fludrocortisone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hydrocortisone",
+      "class": "Drug",
+      "name": "hydrocortisone",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "nausea",
+      "class": "Symptom",
+      "name": "nausea",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "fatigue",
+      "class": "Symptom",
+      "name": "fatigue",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hypotension",
+      "class": "Symptom",
+      "name": "hypotension",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "steroid_card",
+      "class": "Procedure",
+      "name": "steroid card",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "glucocorticoid_preparation",
+      "class": "Drug",
+      "name": "glucocorticoid preparation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "parenteral_emergency_administration",
+      "class": "Procedure",
+      "name": "parenteral emergency administration",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    }
+  ],
+  "evidence_entities": [
+    {
+      "id": "paper_id:abstract:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "We recommend diagnostic tests for the exclusion of primary adrenal insufficiency in all patients with indicative clinical symptoms or signs.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "We recommend a short corticotropin test (250 \u03bcg) as the 'gold standard' diagnostic tool to establish the diagnosis.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "We recommend an initial screening procedure comprising the measurement of morning plasma ACTH and cortisol levels.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "Diagnosis of the underlying cause should include a validated assay of autoantibodies against 21-hydroxylase.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:5:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "We recommend once-daily fludrocortisone (median, 0.1 mg) and hydrocortisone (15\u201325 mg/d) or cortisone acetate replacement (20\u201335 mg/d) applied in two to three daily doses in adults.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:6:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "In children, hydrocortisone (\u223c8 mg/m2/d) is recommended.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_id:abstract:7:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_id",
+      "text_span_id": null,
+      "text": "This is also recommended for pregnant women with unexplained persistent nausea, fatigue, and hypotension.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "clinical practice guideline",
+      "eco_type": null,
+      "source": "extracted"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "short_corticotropin_test",
+      "predicate": "INDICATES",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:2:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "morning_plasma_acth",
+      "predicate": "INDICATES",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:3:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "morning_cortisol",
+      "predicate": "INDICATES",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:3:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "21-hydroxylase antibodies",
+      "predicate": "INDICATES",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:4:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "fludrocortisone",
+      "predicate": "TREATS",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:5:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "dosage": "0.1 mg once daily"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hydrocortisone",
+      "predicate": "TREATS",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:5:llm",
+        "paper_id:abstract:6:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "dosage_adults": "15-25 mg/d",
+        "dosage_children": "8 mg/m2/d"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cortisone acetate",
+      "predicate": "TREATS",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:5:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "dosage": "20-35 mg/d"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "nausea",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:7:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "context": "pregnant women"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "fatigue",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:7:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "context": "pregnant women"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hypotension",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "primary_adrenal_insufficiency",
+      "evidence_ids": [
+        "paper_id:abstract:7:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "context": "pregnant women"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "primary_adrenal_insufficiency",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "autoimmune thyroid disease",
+      "evidence_ids": [
+        "paper_id:abstract:7:llm"
+      ],
+      "source_papers": [
+        "paper_id"
+      ],
+      "confidence": 0.85,
+      "properties": {
+        "relationship_type": "comorbidity"
+      },
+      "section": "abstract",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    }
+  ],
+  "notes": [
+    "This clinical practice guideline provides comprehensive recommendations for diagnosis and treatment of primary adrenal insufficiency",
+    "The guideline emphasizes the importance of early diagnosis, especially in acutely ill patients and pregnant women",
+    "Treatment recommendations include specific dosing for both adults and children"
+  ]
+}

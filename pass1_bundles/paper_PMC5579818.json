@@ -1,0 +1,455 @@
+{
+  "paper": {
+    "doi": null,
+    "pmcid": "PMC5579818",
+    "title": "Junctional Rhythm Preoperatively and During General Anesthesia for Oral and Maxillofacial Surgery",
+    "authors": [],
+    "journal": null,
+    "year": null,
+    "study_type": "case report",
+    "eco_type": null
+  },
+  "extraction_provenance": {
+    "extraction_pipeline": {
+      "name": "medlit_pass1_extract",
+      "version": "0.1.0",
+      "git_commit": "2a442dbf852af4abe2a9ce0e0df96f2ecfb63a31",
+      "git_commit_short": "2a442db",
+      "git_branch": "main",
+      "git_dirty": true,
+      "repo_url": "https://github.com/org/medlit"
+    },
+    "models": {
+      "llm": {
+        "name": "claude-sonnet-4-20250514",
+        "version": ""
+      }
+    },
+    "prompt": {
+      "version": "v1",
+      "template": "medlit_extraction_v1",
+      "checksum": "sha256:7dc528451098ea67"
+    },
+    "execution": {
+      "timestamp": "2026-03-05T16:10:04.318710Z",
+      "hostname": "unknown",
+      "python_version": "3.13.3",
+      "duration_seconds": 25.58
+    },
+    "entity_resolution": null,
+    "model_info": null
+  },
+  "entities": [
+    {
+      "id": "junctional_rhythm",
+      "class": "Disease",
+      "name": "junctional rhythm",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "general_anesthesia",
+      "class": "Procedure",
+      "name": "general anesthesia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "oral_maxillofacial_surgery",
+      "class": "Procedure",
+      "name": "oral and maxillofacial surgery",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "bilateral_sagittal_split_ramus_osteotomy",
+      "class": "Procedure",
+      "name": "bilateral sagittal split ramus osteotomy",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "jaw_deformity",
+      "class": "Disease",
+      "name": "jaw deformity",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "electrocardiography",
+      "class": "Procedure",
+      "name": "electrocardiography",
+      "synonyms": [
+        "ECG"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "heart_rate",
+      "class": "Biomarker",
+      "name": "heart rate",
+      "synonyms": [
+        "HR"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "local_anesthesia",
+      "class": "Procedure",
+      "name": "local anesthesia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "lidocaine",
+      "class": "Drug",
+      "name": "lidocaine",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "adrenaline",
+      "class": "Hormone",
+      "name": "adrenaline",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "atrioventricular_nodal_pacemaker_cells",
+      "class": "AnatomicalStructure",
+      "name": "atrioventricular nodal pacemaker cells",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "sympathetic_activity",
+      "class": "BiologicalProcess",
+      "name": "sympathetic activity",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "escaped_beat",
+      "class": "Disease",
+      "name": "escaped beat",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "primary_pacemaker",
+      "class": "AnatomicalStructure",
+      "name": "primary pacemaker",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "anesthetic_management",
+      "class": "Procedure",
+      "name": "anesthetic management",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    }
+  ],
+  "evidence_entities": [
+    {
+      "id": "paper_1:case_report:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "case_report_1",
+      "text": "A 19-year-old woman was scheduled to undergo bilateral sagittal split ramus osteotomy after being diagnosed with a jaw deformity. Preoperative electrocardiography (ECG) revealed a junctional rhythm with a slow heart rate (HR).",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "case report",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:case_report:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "case_report_2",
+      "text": "At 90 minutes after anesthesia induction, local anesthesia with 10 mL of 1% lidocaine and 1:100,000 adrenaline was administered. A junctional rhythm appeared 15 minutes after the local anesthesia.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "case report",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:case_report:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "case_report_3",
+      "text": "We believe that the atrioventricular nodal pacemaker cells accelerated because of the increased sympathetic activity due to the adrenaline.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "case report",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:case_report:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "case_report_4",
+      "text": "On the preoperative ECG, the junctional rhythm with slow HR appeared as an escaped beat caused by slowing of the primary pacemaker.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "case report",
+      "eco_type": null,
+      "source": "extracted"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "bilateral_sagittal_split_ramus_osteotomy",
+      "predicate": "TREATS",
+      "object": "jaw_deformity",
+      "evidence_ids": [
+        "paper_1:case_report:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "electrocardiography",
+      "predicate": "INDICATES",
+      "object": "junctional_rhythm",
+      "evidence_ids": [
+        "paper_1:case_report:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "local_anesthesia",
+      "predicate": "ASSOCIATED_WITH",
+      "object": "junctional_rhythm",
+      "evidence_ids": [
+        "paper_1:case_report:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.95,
+      "properties": {
+        "temporal_relationship": "15 minutes after"
+      },
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "adrenaline",
+      "predicate": "INCREASES",
+      "object": "sympathetic_activity",
+      "evidence_ids": [
+        "paper_1:case_report:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "sympathetic_activity",
+      "predicate": "ACTIVATES",
+      "object": "atrioventricular_nodal_pacemaker_cells",
+      "evidence_ids": [
+        "paper_1:case_report:3:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "primary_pacemaker",
+      "predicate": "CAUSES",
+      "object": "escaped_beat",
+      "evidence_ids": [
+        "paper_1:case_report:4:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {
+        "mechanism": "slowing"
+      },
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "escaped_beat",
+      "predicate": "SUBTYPE_OF",
+      "object": "junctional_rhythm",
+      "evidence_ids": [
+        "paper_1:case_report:4:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "case_report",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    }
+  ],
+  "notes": [
+    "This case report describes two different mechanisms for junctional rhythm: preoperative junctional rhythm due to primary pacemaker slowing (escaped beat) and intraoperative junctional rhythm due to adrenaline-induced sympathetic activation of AV nodal pacemaker cells."
+  ]
+}

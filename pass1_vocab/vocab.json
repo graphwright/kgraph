@@ -1,0 +1,8807 @@
+[
+  {
+    "name": "lung adenocarcinoma",
+    "type": "disease",
+    "abbreviations": [
+      "LUAD"
+    ],
+    "umls_id": "C0152013",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "non-small cell lung cancer",
+    "type": "disease",
+    "abbreviations": [
+      "NSCLC"
+    ],
+    "umls_id": "C0007131",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PSMD14",
+    "type": "protein",
+    "abbreviations": [
+      "POH1",
+      "Proteasome 26S Subunit, Non-ATPase 14",
+      "RPN11"
+    ],
+    "umls_id": "C1335439",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hyaluronan-mediated motility receptor",
+    "type": "protein",
+    "abbreviations": [
+      "HMMR"
+    ],
+    "umls_id": "C1335439",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transforming growth factor beta",
+    "type": "protein",
+    "abbreviations": [
+      "TGF-\u03b2"
+    ],
+    "umls_id": "C0040690",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Smad",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0529204",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "phosphatidylinositol 3-kinase",
+    "type": "enzyme",
+    "abbreviations": [
+      "PI3K"
+    ],
+    "umls_id": "C0044602",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "AKT",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0164786",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mechanistic target of rapamycin",
+    "type": "protein",
+    "abbreviations": [
+      "mTOR"
+    ],
+    "umls_id": "C1307407",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ubiquitin-proteasome system",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "UPS"
+    ],
+    "umls_id": "C1523807",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "deubiquitinating enzymes",
+    "type": "enzyme",
+    "abbreviations": [
+      "DUBs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ubiquitination",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1519751",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "proliferation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0596290",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "apoptosis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0162638",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875",
+      "PMC12783088",
+      "PMC12784210",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "migration",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1622501",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "invasion",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C2699153",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "epithelial-mesenchymal transition",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "EMT"
+    ],
+    "umls_id": "C1523298",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Capzimin",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "galunisertib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3852671",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cycloheximide",
+    "type": "drug",
+    "abbreviations": [
+      "CHX"
+    ],
+    "umls_id": "C0010583",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MG132",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0525077",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cell cycle",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0007586",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA damage",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0012860",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA repair",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0012899",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genomic instability",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0919532",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor microenvironment",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "TME"
+    ],
+    "umls_id": "C1956108",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immunosuppression",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0021079",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD8+ T cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0242629",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "overall survival",
+    "type": "biomarker",
+    "abbreviations": [
+      "OS"
+    ],
+    "umls_id": "C0282416",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "disease-specific survival",
+    "type": "biomarker",
+    "abbreviations": [
+      "DSS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "progression-free interval",
+    "type": "biomarker",
+    "abbreviations": [
+      "PFI"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "disease-free interval",
+    "type": "biomarker",
+    "abbreviations": [
+      "DFI"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "The Cancer Genome Atlas",
+    "type": "institution",
+    "abbreviations": [
+      "TCGA"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Gene Expression Omnibus",
+    "type": "institution",
+    "abbreviations": [
+      "GEO"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Clinical Proteomic Tumor Analysis Consortium",
+    "type": "institution",
+    "abbreviations": [
+      "CPTAC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Genotype-Tissue Expression",
+    "type": "institution",
+    "abbreviations": [
+      "GTEx"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CCK-8 assay",
+    "type": "procedure",
+    "abbreviations": [
+      "Cell Counting Kit-8"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "colony formation assay",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Transwell assay",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "xenograft",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0520484",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "co-immunoprecipitation",
+    "type": "procedure",
+    "abbreviations": [
+      "Co-IP"
+    ],
+    "umls_id": "C0021044",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Western blotting",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0949466",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immunohistochemistry",
+    "type": "procedure",
+    "abbreviations": [
+      "IHC"
+    ],
+    "umls_id": "C0021044",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12780394",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "flow cytometry",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0016263",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mass spectrometry",
+    "type": "procedure",
+    "abbreviations": [
+      "MS"
+    ],
+    "umls_id": "C0037813",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "receiver operating characteristic",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "ROC"
+    ],
+    "umls_id": "C0035787",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "area under the curve",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "AUC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Kaplan-Meier",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "KM"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "log-rank test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Cox proportional hazards regression",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": "C0010235",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Pearson correlation",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Spearman correlation",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Student's t-test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": "C0871472",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Wilcoxon rank-sum test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ANOVA",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Chi-square test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Fisher's exact test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Kruskal-Wallis test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Hosmer-Lemeshow test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Gene Set Variation Analysis",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "GSVA"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "breast cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0006142",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210",
+      "PMC12784249",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hepatocellular carcinoma",
+    "type": "disease",
+    "abbreviations": [
+      "HCC"
+    ],
+    "umls_id": "C2239176",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "bladder cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0005695",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "glioblastoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0017636",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "osteosarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "OS"
+    ],
+    "umls_id": "C0029463",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mitochondrial membrane potential",
+    "type": "biomarker",
+    "abbreviations": [
+      "\u0394\u03a8m"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lactate dehydrogenase",
+    "type": "enzyme",
+    "abbreviations": [
+      "LDH"
+    ],
+    "umls_id": "C0022917",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "caspase-3",
+    "type": "enzyme",
+    "abbreviations": [],
+    "umls_id": "C0291573",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "caspase-9",
+    "type": "enzyme",
+    "abbreviations": [],
+    "umls_id": "C0910167",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PARP-1",
+    "type": "enzyme",
+    "abbreviations": [
+      "poly(ADP-ribose) polymerase 1"
+    ],
+    "umls_id": "C0032405",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Bax",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0219474",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Bcl-2",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0219474",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Vimentin",
+    "type": "protein",
+    "abbreviations": [
+      "VIM"
+    ],
+    "umls_id": "C0042666",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "N-Cadherin",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0054706",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "E-Cadherin",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0042172",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MMP2",
+    "type": "enzyme",
+    "abbreviations": [
+      "matrix metalloproteinase 2"
+    ],
+    "umls_id": "C0172537",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDK4",
+    "type": "enzyme",
+    "abbreviations": [
+      "cyclin-dependent kinase 4"
+    ],
+    "umls_id": "C0108855",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDK6",
+    "type": "enzyme",
+    "abbreviations": [
+      "cyclin-dependent kinase 6"
+    ],
+    "umls_id": "C0108856",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Cyclin B1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0174680",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Cyclin D1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0174680",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "P21",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0288472",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "P27",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0288472",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "XRCC1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CHK1",
+    "type": "enzyme",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RAD51",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PCNA",
+    "type": "protein",
+    "abbreviations": [
+      "proliferating cell nuclear antigen"
+    ],
+    "umls_id": "C0033684",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "53BP1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FANCD2",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "\u03b3-H2AX",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD44",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0242896",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GAPDH",
+    "type": "enzyme",
+    "abbreviations": [
+      "glyceraldehyde-3-phosphate dehydrogenase"
+    ],
+    "umls_id": "C0017040",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "extensive-stage small cell lung cancer",
+    "type": "disease",
+    "abbreviations": [
+      "ES-SCLC"
+    ],
+    "umls_id": "C0149925",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "small cell lung cancer",
+    "type": "disease",
+    "abbreviations": [
+      "SCLC"
+    ],
+    "umls_id": "C0149925",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "programmed death-ligand 1",
+    "type": "protein",
+    "abbreviations": [
+      "PD-L1"
+    ],
+    "umls_id": "C4277682",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA damage repair",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "DDR"
+    ],
+    "umls_id": "C1155291",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immune checkpoint blockers",
+    "type": "drug",
+    "abbreviations": [
+      "ICB"
+    ],
+    "umls_id": "C4048328",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "homologous recombination deficiency",
+    "type": "mutation",
+    "abbreviations": [
+      "HRD"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor mutational burden",
+    "type": "biomarker",
+    "abbreviations": [
+      "TMB"
+    ],
+    "umls_id": "C4277550",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "stimulator of interferon genes",
+    "type": "protein",
+    "abbreviations": [
+      "STING"
+    ],
+    "umls_id": "C3888056",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "poly(ADP-ribose) polymerase",
+    "type": "enzyme",
+    "abbreviations": [
+      "PARP"
+    ],
+    "umls_id": "C0032405",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD8 positive T lymphocytes",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "CD8+ T cells"
+    ],
+    "umls_id": "C0242629",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cyclic GMP-AMP synthase",
+    "type": "enzyme",
+    "abbreviations": [
+      "cGAS"
+    ],
+    "umls_id": "C4277892",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ataxia telangiectasia mutated",
+    "type": "gene",
+    "abbreviations": [
+      "ATM"
+    ],
+    "umls_id": "C1332823",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "breast cancer 1",
+    "type": "gene",
+    "abbreviations": [
+      "BRCA1"
+    ],
+    "umls_id": "C0376571",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "breast cancer 2",
+    "type": "gene",
+    "abbreviations": [
+      "BRCA2"
+    ],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RAD51 recombinase",
+    "type": "protein",
+    "abbreviations": [
+      "RAD51"
+    ],
+    "umls_id": "C0164786",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Schlafen family member 11",
+    "type": "protein",
+    "abbreviations": [
+      "SLFN11"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "interferon beta",
+    "type": "hormone",
+    "abbreviations": [
+      "IFN-\u03b2"
+    ],
+    "umls_id": "C0021745",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chemokine (C-X-C motif) ligand 10",
+    "type": "protein",
+    "abbreviations": [
+      "CXCL10"
+    ],
+    "umls_id": "C1308754",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "regulatory T cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "Tregs"
+    ],
+    "umls_id": "C0039198",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "myeloid-derived suppressor cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "MDSCs"
+    ],
+    "umls_id": "C4277543",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "major histocompatibility complex class I",
+    "type": "protein",
+    "abbreviations": [
+      "MHC-I"
+    ],
+    "umls_id": "C0019630",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "dendritic cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "DCs"
+    ],
+    "umls_id": "C0011306",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "reactive oxygen species",
+    "type": "biomarker",
+    "abbreviations": [
+      "ROS"
+    ],
+    "umls_id": "C0162772",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cisplatin",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0008838",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "etoposide",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0015133",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "atezolizumab",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C4055433",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "olaparib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C2316164",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "durvalumab",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C4055109",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "talazoparib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3852718",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "niraparib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3657270",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lurbinectedin",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1138226",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "objective response rate",
+    "type": "biomarker",
+    "abbreviations": [
+      "ORR"
+    ],
+    "umls_id": "C0282416",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "progression-free survival",
+    "type": "biomarker",
+    "abbreviations": [
+      "PFS"
+    ],
+    "umls_id": "C0242792",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "elastic net regression",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "area under the receiver operating characteristic curve",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "AUC",
+      "AUROC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "single-cell RNA sequencing",
+    "type": "procedure",
+    "abbreviations": [
+      "scRNA-seq"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "whole-exome sequencing",
+    "type": "procedure",
+    "abbreviations": [
+      "WES"
+    ],
+    "umls_id": "C3640077",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "multiplex immunofluorescence",
+    "type": "procedure",
+    "abbreviations": [
+      "multiplex-IF"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "phase II clinical trial",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": "C0282460",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Memorial Sloan Kettering Cancer Center",
+    "type": "institution",
+    "abbreviations": [
+      "MSK"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875",
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PRISMA guidelines",
+    "type": "studydesign",
+    "abbreviations": [
+      "PRISMA-2020"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "synthetic lethality",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "SL"
+    ],
+    "umls_id": "C3178870",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "homologous recombination",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "HR"
+    ],
+    "umls_id": "C0599773",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "non-homologous end joining",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "NHEJ"
+    ],
+    "umls_id": "C1158560",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mismatch repair",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "MMR"
+    ],
+    "umls_id": "C0598773",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "base excision repair",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "BER"
+    ],
+    "umls_id": "C1158568",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "double-strand breaks",
+    "type": "mutation",
+    "abbreviations": [
+      "DSBs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "single-strand breaks",
+    "type": "mutation",
+    "abbreviations": [
+      "SSBs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "T cell exhaustion",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C4277550",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immune evasion",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1654934",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor infiltrating lymphocytes",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "TILs"
+    ],
+    "umls_id": "C0079722",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor-associated macrophages",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "TAMs"
+    ],
+    "umls_id": "C0242632",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "natural killer cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "NK cells"
+    ],
+    "umls_id": "C0022688",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cytotoxic T lymphocytes",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "CTLs"
+    ],
+    "umls_id": "C0039195",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "damage-associated molecular patterns",
+    "type": "biomarker",
+    "abbreviations": [
+      "DAMPs"
+    ],
+    "umls_id": "C2936307",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "type I interferons",
+    "type": "hormone",
+    "abbreviations": [],
+    "umls_id": "C0021747",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Warburg effect",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1155265",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lactate",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0022924",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "glycolysis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0017952",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "neoantigens",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C4277550",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "antigen presentation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0206431",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genomic instability",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0919532",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immunotherapy",
+    "type": "procedure",
+    "abbreviations": [
+      "ICT"
+    ],
+    "umls_id": "C0021083",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chemotherapy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0013216",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12780394",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "radiotherapy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0034619",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12780394",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "precision oncology",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875",
+      "PMC12764803",
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "biomarker",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0005516",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "homologous recombination deficiency",
+    "type": "biomarker",
+    "abbreviations": [
+      "HRD"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "endometrial cancer",
+    "type": "disease",
+    "abbreviations": [
+      "EC"
+    ],
+    "umls_id": "C0476089",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "The Cancer Genome Atlas",
+    "type": "studydesign",
+    "abbreviations": [
+      "TCGA"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "loss of heterozygosity",
+    "type": "mutation",
+    "abbreviations": [
+      "LOH"
+    ],
+    "umls_id": "C0162832",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "telomeric allelic imbalance",
+    "type": "mutation",
+    "abbreviations": [
+      "TAI"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "large-scale state transitions",
+    "type": "mutation",
+    "abbreviations": [
+      "LST"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TP53",
+    "type": "gene",
+    "abbreviations": [
+      "tumor protein p53"
+    ],
+    "umls_id": "C0079419",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD8",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0085358",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PD-1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0135710",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "disease-free survival",
+    "type": "biomarker",
+    "abbreviations": [
+      "DFS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "support vector machine",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "SVM"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FIGO stage",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chromosomal instability",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C3178874",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immune checkpoint inhibitors",
+    "type": "drug",
+    "abbreviations": [
+      "ICIs"
+    ],
+    "umls_id": "C4277512",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PARP inhibitors",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1443775",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "homologous recombination repair",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "HRR"
+    ],
+    "umls_id": "C1523983",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA double-strand breaks",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0012860",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "platinum-based chemotherapy",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumour mutational burden",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRCA1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0376571",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12784210",
+      "PMC12784249",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRCA2",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561",
+      "PMC12784249",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ARID1A",
+    "type": "gene",
+    "abbreviations": [
+      "BAF250A"
+    ],
+    "umls_id": "C1425134",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "POLE",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335439",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "microsatellite instability",
+    "type": "mutation",
+    "abbreviations": [
+      "MSI"
+    ],
+    "umls_id": "C0920269",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "next-generation sequencing",
+    "type": "procedure",
+    "abbreviations": [
+      "NGS"
+    ],
+    "umls_id": "C2936622",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "maximally selected rank statistics",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "maxstat"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "multiplex immunohistochemistry",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Peking University Cancer Hospital",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "total hysterectomy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0020699",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "bilateral salpingo-oophorectomy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0195471",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "copy-number variations",
+    "type": "mutation",
+    "abbreviations": [
+      "CNVs"
+    ],
+    "umls_id": "C2717925",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lymphovascular space invasion",
+    "type": "symptom",
+    "abbreviations": [
+      "LVSI"
+    ],
+    "umls_id": "C1708726",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "myometrial invasion",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0854178",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "aneuploidy score",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "structural complexity score",
+    "type": "biomarker",
+    "abbreviations": [
+      "SCIN"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "whole-genome doubling",
+    "type": "mutation",
+    "abbreviations": [
+      "WGD"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RNA sequencing",
+    "type": "procedure",
+    "abbreviations": [
+      "RNA-seq"
+    ],
+    "umls_id": "C0917793",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene expression profiling",
+    "type": "procedure",
+    "abbreviations": [
+      "GEP"
+    ],
+    "umls_id": "C0752248",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PD-L1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C4277634",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD3",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0108779",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD68",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0108799",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD163",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0667932",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD56",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0108747",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Pan-CK",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "T cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0039194",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "macrophages",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0024432",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "concordance index",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "C-index"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "body mass index",
+    "type": "biomarker",
+    "abbreviations": [
+      "BMI"
+    ],
+    "umls_id": "C1305855",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "endometrioid",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334044",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "serous carcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334044",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "clear cell carcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334044",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chemoradiotherapy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0436307",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PTEN",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0694897",
+    "source_papers": [
+      "PMC12764803",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RAD51",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SPOP",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1425134",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PIK3R1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CTNNB1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CTCF",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PI3K-AKT pathway",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": "C1515673",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Wnt pathway",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": "C1520113",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "recurrence",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0034897",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C1261473",
+    "source_papers": [
+      "PMC12775561",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cancer genomic profiling",
+    "type": "procedure",
+    "abbreviations": [
+      "CGP"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GenMine TOP Cancer Genome Profiling System",
+    "type": "procedure",
+    "abbreviations": [
+      "GenMine TOP",
+      "GenMineTOP"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FoundationOne CDx",
+    "type": "procedure",
+    "abbreviations": [
+      "F1CDx"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Center for Cancer Genomics and Advanced Therapeutics",
+    "type": "institution",
+    "abbreviations": [
+      "C-CAT"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "fusion genes",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "kinase fusions",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "translocation-related sarcomas",
+    "type": "disease",
+    "abbreviations": [
+      "TRS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gastrointestinal stromal tumor",
+    "type": "disease",
+    "abbreviations": [
+      "GIST"
+    ],
+    "umls_id": "C0238198",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "germline pathogenic variants",
+    "type": "mutation",
+    "abbreviations": [
+      "GPVs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "molecular tumor boards",
+    "type": "procedure",
+    "abbreviations": [
+      "MTB"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "American College of Medical Genetics and Genomics and the Association for Molecular Pathology",
+    "type": "institution",
+    "abbreviations": [
+      "ACMG/AMP"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "copy number variations",
+    "type": "mutation",
+    "abbreviations": [
+      "CNV"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Catalogue of Somatic Mutations in Cancer",
+    "type": "institution",
+    "abbreviations": [
+      "COSMIC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cancer predisposition syndromes",
+    "type": "disease",
+    "abbreviations": [
+      "CPS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "dedifferentiated liposarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "DDLS"
+    ],
+    "umls_id": "C1266042",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "dermatofibrosarcoma protuberans",
+    "type": "disease",
+    "abbreviations": [
+      "DFSP"
+    ],
+    "umls_id": "C0011634",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ewing sarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "ES"
+    ],
+    "umls_id": "C0553580",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "leiomyosarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "LMS"
+    ],
+    "umls_id": "C0023269",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "microsatellite instability",
+    "type": "biomarker",
+    "abbreviations": [
+      "MSI"
+    ],
+    "umls_id": "C0920269",
+    "source_papers": [
+      "PMC12775561",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "microsatellite-stable",
+    "type": "biomarker",
+    "abbreviations": [
+      "MSS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "National Cancer Center",
+    "type": "institution",
+    "abbreviations": [
+      "NCC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "single nucleotide variants",
+    "type": "mutation",
+    "abbreviations": [
+      "SNV",
+      "SNVs"
+    ],
+    "umls_id": "C0752046",
+    "source_papers": [
+      "PMC12775561",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "soft tissue sarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "STS"
+    ],
+    "umls_id": "C0037579",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "synovial sarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "SYNS"
+    ],
+    "umls_id": "C0039101",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor mutation burden",
+    "type": "biomarker",
+    "abbreviations": [
+      "TMB"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "uterine leiomyosarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "ULMS"
+    ],
+    "umls_id": "C0854893",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "variants of unknown significance",
+    "type": "mutation",
+    "abbreviations": [
+      "VUS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EWSR1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1333516",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FLI1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1333516",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SYT",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SSX",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MDM2",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0085246",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "KIT",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0072471",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RB1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0694889",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TERT",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NF1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0027831",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PIK3CA",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335212",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDK4",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0108855",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CCND3",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1332360",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDKN2A",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0079427",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDKN2B",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1332360",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NTRK",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FGFR",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRAF",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0812241",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RAF1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ALK",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1332257",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RET",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0035245",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ROS1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EGFR",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0034802",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PMS2",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pazopanib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1831796",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "larotrectinib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C4505511",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pembrolizumab",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3658706",
+    "source_papers": [
+      "PMC12775561",
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "crizotinib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C2974289",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "alectinib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C2698946",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "entrectinib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C4079830",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "imatinib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0935989",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "doxorubicin",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0013089",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chondrosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0008479",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "fibrosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0016057",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "alveolar rhabdomyosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C1266043",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "clear cell sarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0206692",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "epithelioid hemangioendothelioma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0206633",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "extraskeletal myxoid chondrosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C1266044",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "desmoplastic small round cell tumor",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334634",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "solitary fibrous tumor",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334121",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "malignant peripheral nerve sheath tumor",
+    "type": "disease",
+    "abbreviations": [
+      "MPNST"
+    ],
+    "umls_id": "C0751690",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "undifferentiated pleomorphic sarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "UPS"
+    ],
+    "umls_id": "C1266045",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "angiosarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "ANGS"
+    ],
+    "umls_id": "C0018923",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "myxofibrosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C1266046",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "neurofibromatosis type 1",
+    "type": "disease",
+    "abbreviations": [
+      "NF1"
+    ],
+    "umls_id": "C0027831",
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Li-Fraumeni syndrome",
+    "type": "disease",
+    "abbreviations": [
+      "LFS"
+    ],
+    "umls_id": "C0085390",
+    "source_papers": [
+      "PMC12775561",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tyrosine kinase inhibitors",
+    "type": "drug",
+    "abbreviations": [
+      "TKIs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "targeted small-molecule inhibitors",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Eastern Cooperative Oncology Group performance status",
+    "type": "biomarker",
+    "abbreviations": [
+      "ECOG"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "World Health Organization classification",
+    "type": "procedure",
+    "abbreviations": [
+      "WHO"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Kaplan-Meier method",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Cox proportional hazards regression analysis",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pleural mesothelioma",
+    "type": "disease",
+    "abbreviations": [
+      "PM"
+    ],
+    "umls_id": "C0812413",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "malignant mesothelioma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0025500",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mesothelin",
+    "type": "protein",
+    "abbreviations": [
+      "SMRP"
+    ],
+    "umls_id": "C1449894",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "programmed cell death ligand-1",
+    "type": "protein",
+    "abbreviations": [
+      "PD-L1"
+    ],
+    "umls_id": "C0965245",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "programmed cell death protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "PD-1"
+    ],
+    "umls_id": "C0135710",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "osteopontin",
+    "type": "protein",
+    "abbreviations": [
+      "OPN",
+      "SPP1"
+    ],
+    "umls_id": "C0069676",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "microRNA",
+    "type": "gene",
+    "abbreviations": [
+      "miR",
+      "miRNA"
+    ],
+    "umls_id": "C1101610",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRCA1-associated protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "BAP1"
+    ],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "carcinoembryonic antigen",
+    "type": "biomarker",
+    "abbreviations": [
+      "CEA"
+    ],
+    "umls_id": "C0007082",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CYFRA 21-1",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0376690",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "KL-6",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0673018",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "forkhead box O3",
+    "type": "protein",
+    "abbreviations": [
+      "FOXO3"
+    ],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "forkhead box O1",
+    "type": "protein",
+    "abbreviations": [
+      "FOXO1"
+    ],
+    "umls_id": "C1336640",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "nivolumab",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3657270",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ipilimumab",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1367202",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pemetrexed",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0210657",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "asbestos exposure",
+    "type": "adverseevent",
+    "abbreviations": [],
+    "umls_id": "C0003947",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chest pain",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0008031",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pleural effusion",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0032227",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pathological biopsy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0005558",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "surgical resection",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0015252",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chimeric antigen receptor T-cell therapy",
+    "type": "procedure",
+    "abbreviations": [
+      "CAR-T"
+    ],
+    "umls_id": "C4055223",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pleura",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0032225",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "peritoneum",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0031153",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pericardium",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0031050",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tunica vaginalis",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0041620",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mesothelial cells",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0225336",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "absolute eosinophil count",
+    "type": "biomarker",
+    "abbreviations": [
+      "AEC"
+    ],
+    "umls_id": "C0200638",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "epigenetics",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1516924",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "proteomics",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0872252",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genomics",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0887950",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CheckMate 743",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "KEYNOTE-028",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "IFCT-1501 MAPS2",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "INITIATE",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NIBIT-MESO-1",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "University of Western Australia",
+    "type": "institution",
+    "abbreviations": [
+      "UWA"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Sir Charles Gairdner Hospital",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "New York University",
+    "type": "institution",
+    "abbreviations": [
+      "NYU"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "University of Pisa",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Jenette Creaney",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Glen Reid",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Harvey I. Pass",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Michele Carbone",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Bruce W. Robinson",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "bibliometric analysis",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "VOSviewer",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CiteSpace",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Web of Science Core Collection",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "WoSCC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "logic learning machine",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "LLM"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "K-nearest neighbor algorithm",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "KNN"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "drug resistance",
+    "type": "adverseevent",
+    "abbreviations": [],
+    "umls_id": "C0013203",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor progression",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0178874",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor microenvironment",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1956108",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "liquid biopsy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C4288282",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "multi-omics",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "precision medicine",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C4039285",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chimpanzees",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "Pan troglodytes"
+    ],
+    "umls_id": "C0008066",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "humans",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0086418",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0006826",
+    "source_papers": [
+      "PMC12783088",
+      "PMC12784249",
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "somatic mutation",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0544886",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "\u03b2-catenin",
+    "type": "protein",
+    "abbreviations": [
+      "CTNNB1"
+    ],
+    "umls_id": "C0105770",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TSC2",
+    "type": "gene",
+    "abbreviations": [
+      "Tuberin",
+      "Tuberous Sclerosis Complex 2"
+    ],
+    "umls_id": "C1367307",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FAP",
+    "type": "protein",
+    "abbreviations": [
+      "Fibroblast activation protein"
+    ],
+    "umls_id": "C0071838",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TGF-\u03b2",
+    "type": "protein",
+    "abbreviations": [
+      "transforming growth factor beta"
+    ],
+    "umls_id": "C0040690",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "whole-genome sequencing",
+    "type": "procedure",
+    "abbreviations": [
+      "WGS"
+    ],
+    "umls_id": "C3640076",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FAT1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1425762",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FAT4",
+    "type": "gene",
+    "abbreviations": [
+      "FAT Atypical Cadherin 4"
+    ],
+    "umls_id": "C1425765",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FGA",
+    "type": "gene",
+    "abbreviations": [
+      "fibrinogen alpha chain"
+    ],
+    "umls_id": "C1414466",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TTN",
+    "type": "gene",
+    "abbreviations": [
+      "titin"
+    ],
+    "umls_id": "C1420693",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "insertions and deletions",
+    "type": "mutation",
+    "abbreviations": [
+      "indels"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "non-synonymous mutations",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0599155",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "frameshift mutations",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0079380",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "missense mutations",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0599155",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "nonsense mutations",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0599155",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mTOR signaling pathway",
+    "type": "pathway",
+    "abbreviations": [
+      "mammalian target of rapamycin"
+    ],
+    "umls_id": "C1515673",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Wnt/\u03b2-catenin signaling",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": "C1520113",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "p53 signaling pathway",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": "C1155266",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumorigenesis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0007621",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "oncogenesis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0007621",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "liver",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0023884",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "kidney",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0022646",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "heart",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0018787",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lymph nodes",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0024204",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lungs",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0024109",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Hepatitis B virus",
+    "type": "disease",
+    "abbreviations": [
+      "HBV"
+    ],
+    "umls_id": "C0019169",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Hepatitis C virus",
+    "type": "disease",
+    "abbreviations": [
+      "HCV"
+    ],
+    "umls_id": "C0220847",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "human immunodeficiency virus",
+    "type": "disease",
+    "abbreviations": [
+      "HIV"
+    ],
+    "umls_id": "C0019682",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Schistosoma mansoni",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0036323",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hepatitis",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0019158",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "metastases",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0027627",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "scirrhous subtype",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "uterine leiomyomas",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0042133",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ovarian stromal tumors",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0919267",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Tuberous Sclerosis Complex",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0041341",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "histopathology",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0344441",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GATK MuTect2",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ensembl VEP",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "Variant Effect Predictor"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TCGA",
+    "type": "institution",
+    "abbreviations": [
+      "The Cancer Genome Atlas"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ICGC",
+    "type": "institution",
+    "abbreviations": [
+      "International Cancer Genome Consortium"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor suppressor",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0079427",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "oncogene",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0029016",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mTOR inhibitors",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1515673",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Southwest National Primate Research Center",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Texas Biomedical Research Institute",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "nasopharyngeal carcinoma",
+    "type": "disease",
+    "abbreviations": [
+      "NPC"
+    ],
+    "umls_id": "C2931822",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRD7",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1413502",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CRISPR/dCas9",
+    "type": "procedure",
+    "abbreviations": [
+      "dCas9"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TET1",
+    "type": "enzyme",
+    "abbreviations": [
+      "TET1CD"
+    ],
+    "umls_id": "C3888327",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "methylation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0025723",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "demethylation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0011902",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "promoter",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0033413",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "polymerase chain reaction",
+    "type": "procedure",
+    "abbreviations": [
+      "PCR"
+    ],
+    "umls_id": "C0032520",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chromatin immunoprecipitation",
+    "type": "procedure",
+    "abbreviations": [
+      "ChIP"
+    ],
+    "umls_id": "C1328856",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cell proliferation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0596290",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cell migration",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1622501",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cell invasion",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C2699153",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor growth",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1519267",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hypermethylation",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0376452",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CpG island",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0282523",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transcriptional activation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0040649",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "5-methylcytosine",
+    "type": "biomarker",
+    "abbreviations": [
+      "5mC"
+    ],
+    "umls_id": "C0046274",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "decitabine",
+    "type": "drug",
+    "abbreviations": [
+      "5-AZA-CdR",
+      "5-Aza-2'-deoxycytidine"
+    ],
+    "umls_id": "C0049065",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "azacitidine",
+    "type": "drug",
+    "abbreviations": [
+      "AZA"
+    ],
+    "umls_id": "C0004475",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA methyltransferase",
+    "type": "enzyme",
+    "abbreviations": [
+      "DNMT"
+    ],
+    "umls_id": "C0011851",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "myelodysplastic syndromes",
+    "type": "disease",
+    "abbreviations": [
+      "MDS"
+    ],
+    "umls_id": "C3463824",
+    "source_papers": [
+      "PMC12784210",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "leukemia",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0023418",
+    "source_papers": [
+      "PMC12784210",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ERK",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0600388",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PI3K/AKT",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": "C1515673",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Rb/E2F",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TRIM28",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "c-Myc",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0080086",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "p16",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0288472",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Rb",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0080095",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PTEN",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0694897",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ZNF154",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRCA1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0376571",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Western blot",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0005863",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "quantitative RT-PCR",
+    "type": "procedure",
+    "abbreviations": [
+      "qRT-PCR"
+    ],
+    "umls_id": "C1514628",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "wound healing assay",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429",
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transwell invasion assay",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immunohistochemical staining",
+    "type": "procedure",
+    "abbreviations": [
+      "IHC"
+    ],
+    "umls_id": "C0021044",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "xenograft tumor model",
+    "type": "studydesign",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ZO-1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0085862",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Snail",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0753137",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PARP",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0032405",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDK4",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0108855",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GAPDH",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0017040",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ki67",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0208804",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RNA polymerase II",
+    "type": "enzyme",
+    "abbreviations": [
+      "RNA Pol II"
+    ],
+    "umls_id": "C0035679",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BIRC2",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1332716",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lentivirus",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0086493",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Central South University",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Second Xiangya Hospital",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ming Zhou",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Jianxia Wei",
+    "type": "author",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "statistical significance",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "one-way ANOVA",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "ANOVA"
+    ],
+    "umls_id": "C0002780",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "correlation analysis",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": "C0010101",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chi-squared test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": "C0008041",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "synthetic dosage lethality",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "SDL"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genetic Minimal Cut Set",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "gMCS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genetic Minimal Intervention Sets",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "gMIS"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hematological malignancies",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0018939",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EZH2",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1333042",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "JUN",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0080090",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RELA",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DUSP4",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1413851",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GADD45B",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1333042",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CDK5RAP3",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1413851",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SHC1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1335239",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CRISPR-Cas9",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C3658355",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene knockout",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0206850",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene knock-in",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cellular proliferation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0596290",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cellular death",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0007587",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor suppressor genes",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0079427",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "essential genes",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "metabolic networks",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "regulatory networks",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genome-scale metabolic networks",
+    "type": "pathway",
+    "abbreviations": [
+      "GEMs"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "integrated metabolic and regulatory networks",
+    "type": "pathway",
+    "abbreviations": [
+      "iMR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "biomass reaction",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene expression",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0017262",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RNA-seq",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "The Cancer Dependency Map",
+    "type": "clinicaltrial",
+    "abbreviations": [
+      "DepMap"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mixed-integer linear program",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "MILP"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "positive predictive value",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "PPV"
+    ],
+    "umls_id": "C1514243",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sensitivity",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "SE"
+    ],
+    "umls_id": "C0036667",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Wilcoxon test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hypergeometric test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Fisher's test",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "polycomb-group protein complexes",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1335962",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transcription factors",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0040648",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "histone methylation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1156199",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transcription initiation",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C1158770",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "University of Navarra",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Donostia International Physics Center",
+    "type": "institution",
+    "abbreviations": [
+      "DIPC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ferroptosis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C4277695",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pyroptosis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C4236896",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "necroptosis",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C3178870",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mitochondria",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0026237",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "polyunsaturated fatty acids",
+    "type": "biomarker",
+    "abbreviations": [
+      "PUFAs"
+    ],
+    "umls_id": "C0015689",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pancreatic ductal adenocarcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C1335302",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "clear cell renal cell carcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0279702",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "triple-negative breast cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C3539878",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "iron",
+    "type": "biomarker",
+    "abbreviations": [
+      "Fe"
+    ],
+    "umls_id": "C0302583",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hydrogen peroxide",
+    "type": "biomarker",
+    "abbreviations": [
+      "H2O2"
+    ],
+    "umls_id": "C0020281",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "transferrin receptor",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0034830",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Six-Transmembrane Epithelial Antigen of Prostate 3",
+    "type": "enzyme",
+    "abbreviations": [
+      "STEAP3"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Nuclear Receptor Coactivator 4",
+    "type": "protein",
+    "abbreviations": [
+      "NCOA4"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Acyl-CoA Synthetase Long Chain Family Member 4",
+    "type": "enzyme",
+    "abbreviations": [
+      "ACSL4"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Lysophosphatidylcholine Acyltransferase 3",
+    "type": "enzyme",
+    "abbreviations": [
+      "LPCAT3"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "arachidonate lipoxygenases",
+    "type": "enzyme",
+    "abbreviations": [
+      "ALOXs"
+    ],
+    "umls_id": "C0023764",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cytochrome P450 oxidoreductase",
+    "type": "enzyme",
+    "abbreviations": [
+      "POR"
+    ],
+    "umls_id": "C0068355",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cystine transporter solute carrier family 7 member 11",
+    "type": "protein",
+    "abbreviations": [
+      "SLC7A11"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cystine transporter solute carrier family 3 member 2",
+    "type": "protein",
+    "abbreviations": [
+      "SLC3A2"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "glutathione",
+    "type": "biomarker",
+    "abbreviations": [
+      "GSH"
+    ],
+    "umls_id": "C0017817",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "glutathione peroxidase 4",
+    "type": "enzyme",
+    "abbreviations": [
+      "GPX4"
+    ],
+    "umls_id": "C0017822",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ferritin",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0015879",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor protein 53",
+    "type": "gene",
+    "abbreviations": [
+      "TP53",
+      "p53"
+    ],
+    "umls_id": "C0080055",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BRCA1-associated protein-1",
+    "type": "protein",
+    "abbreviations": [
+      "BAP1"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "APC membrane recruitment protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "AMER1"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Nuclear factor (erythroid-derived 2)-like 2",
+    "type": "protein",
+    "abbreviations": [
+      "NRF2"
+    ],
+    "umls_id": "C0289507",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "kelch-like ECH-associated protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "KEAP1"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "alternative reading frame",
+    "type": "protein",
+    "abbreviations": [
+      "ARF"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ferroptosis suppressor protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "FSP1"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cyclin-dependent kinase inhibitor p27",
+    "type": "protein",
+    "abbreviations": [
+      "p27"
+    ],
+    "umls_id": "C0288472",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ovarian cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0029925",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lysine methyltransferase 2B",
+    "type": "enzyme",
+    "abbreviations": [
+      "MLL4"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RAS proto-oncogenes",
+    "type": "gene",
+    "abbreviations": [
+      "RAS"
+    ],
+    "umls_id": "C0080055",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "enolase 1",
+    "type": "enzyme",
+    "abbreviations": [
+      "ENO1"
+    ],
+    "umls_id": "C0014429",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "dynamin-related protein 1",
+    "type": "protein",
+    "abbreviations": [
+      "DRP1"
+    ],
+    "umls_id": "C1431043",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "erastin",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C2936924",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "RSL3",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sorafenib",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C1516119",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "indole-3-aldehyde",
+    "type": "biomarker",
+    "abbreviations": [
+      "I3A"
+    ],
+    "umls_id": "C0021234",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "aryl hydrocarbon receptor",
+    "type": "protein",
+    "abbreviations": [
+      "AHR"
+    ],
+    "umls_id": "C0052334",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "melanoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0025202",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Lactobacillus reuteri",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0317597",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ferrostatin-1",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C3252051",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "liproxstatin-1",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "vitamin E",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0042874",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "phosphatidylethanolamine",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0031618",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "4-hydroxynoneal",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0044828",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "malondialdehyde",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0024643",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TLR4",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0670896",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "interferon-\u03b3",
+    "type": "hormone",
+    "abbreviations": [
+      "IFN-\u03b3"
+    ],
+    "umls_id": "C3539881",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CRISPR",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C3658355",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lipidomics",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C1655731",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PRLX93936",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Carbon Nanoparticle-Loaded Iron",
+    "type": "drug",
+    "abbreviations": [
+      "CNSI-Fe(II)"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Phase I/II trial",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": "C0282461",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lung cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0242379",
+    "source_papers": [
+      "PMC12784773"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor protein p53",
+    "type": "gene",
+    "abbreviations": [
+      "TP53",
+      "p53"
+    ],
+    "umls_id": "C0079419",
+    "source_papers": [
+      "PMC12757875",
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ductal carcinoma in situ",
+    "type": "disease",
+    "abbreviations": [
+      "DCIS"
+    ],
+    "umls_id": "C0007124",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "phyllodes tumor",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0206650",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "eosinophilic esophagitis",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0341106",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "asthma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0004096",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "estrogen receptor",
+    "type": "protein",
+    "abbreviations": [
+      "ER"
+    ],
+    "umls_id": "C0034804",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "progesterone receptor",
+    "type": "protein",
+    "abbreviations": [
+      "PR"
+    ],
+    "umls_id": "C0034833",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "human epidermal growth factor receptor 2",
+    "type": "protein",
+    "abbreviations": [
+      "HER-2",
+      "HER2"
+    ],
+    "umls_id": "C0069515",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Ki-67",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C0208804",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mammography",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0024671",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "magnetic resonance imaging",
+    "type": "procedure",
+    "abbreviations": [
+      "MRI"
+    ],
+    "umls_id": "C0024485",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mastectomy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0024881",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sentinel lymph node biopsy",
+    "type": "procedure",
+    "abbreviations": [
+      "SLNB"
+    ],
+    "umls_id": "C1519247",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "clonal hematopoiesis of indeterminate potential",
+    "type": "disease",
+    "abbreviations": [
+      "CHIP"
+    ],
+    "umls_id": "C4551538",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mosaicism",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0026046",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "adrenocortical carcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0001624",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "central nervous system tumors",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0027651",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "radiation therapy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C1522449",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tamoxifen",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0039286",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "fatigue",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0015672",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "diarrhea",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0011991",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "uterine cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0042138",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "renal cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0740457",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "brain cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0006118",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "colonoscopy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0009378",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "stereotactic needle biopsy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C1293130",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ultrasound",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0041618",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "liposarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0023827",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD34",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0054953",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "smooth muscle actin",
+    "type": "protein",
+    "abbreviations": [
+      "SMA"
+    ],
+    "umls_id": "C0001271",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "fluorescence in situ hybridization",
+    "type": "procedure",
+    "abbreviations": [
+      "FISH"
+    ],
+    "umls_id": "C0162789",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mouse double minute 2 homolog",
+    "type": "gene",
+    "abbreviations": [
+      "MDM2",
+      "MDNW"
+    ],
+    "umls_id": "C0080068",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "in vitro fertilization",
+    "type": "procedure",
+    "abbreviations": [
+      "IVF"
+    ],
+    "umls_id": "C0015915",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "preimplantation genetic diagnosis",
+    "type": "procedure",
+    "abbreviations": [
+      "PGD"
+    ],
+    "umls_id": "C0206672",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "variant allele frequency",
+    "type": "biomarker",
+    "abbreviations": [
+      "VAF"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "superparamagnetic iron oxide",
+    "type": "drug",
+    "abbreviations": [
+      "SPIO"
+    ],
+    "umls_id": "C0919233",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "technetium-99m",
+    "type": "drug",
+    "abbreviations": [
+      "99mTc"
+    ],
+    "umls_id": "C0303611",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "aromatase inhibitors",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": "C0593802",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "selective estrogen receptor modulators",
+    "type": "drug",
+    "abbreviations": [
+      "SERM"
+    ],
+    "umls_id": "C1257987",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lymphedema",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0024236",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sensory neuropathy",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0151313",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "motor neuropathy",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0270921",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "axillary web syndrome",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C3178874",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "National Comprehensive Cancer Network",
+    "type": "institution",
+    "abbreviations": [
+      "NCCN"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Radiation Therapy Oncology Group",
+    "type": "institution",
+    "abbreviations": [
+      "RTOG"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "National Surgical Adjuvant Breast and Bowel Project",
+    "type": "institution",
+    "abbreviations": [
+      "NSABP"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "European Organization for Research and Treatment of Cancer",
+    "type": "institution",
+    "abbreviations": [
+      "EORTC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "HMMR",
+    "type": "protein",
+    "abbreviations": [
+      "Hyaluronan-mediated motility receptor"
+    ],
+    "umls_id": "C1335439",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PI3K",
+    "type": "enzyme",
+    "abbreviations": [
+      "phosphoinositide 3-kinase"
+    ],
+    "umls_id": "C0044602",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "mTOR",
+    "type": "protein",
+    "abbreviations": [
+      "mechanistic target of rapamycin"
+    ],
+    "umls_id": "C1307407",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "deubiquitination",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FOXM1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1431582",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Smad3",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0529161",
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EdU assay",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GEO",
+    "type": "institution",
+    "abbreviations": [
+      "Gene Expression Omnibus"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CPTAC",
+    "type": "institution",
+    "abbreviations": [
+      "Clinical Proteomic Tumor Analysis Consortium"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CTRP",
+    "type": "institution",
+    "abbreviations": [
+      "Cancer Therapeutics Response Portal"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PRISM",
+    "type": "institution",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757429"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "genomic instability",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": "C3178870",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12757875",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "aneuploidy",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0002938",
+    "source_papers": [
+      "PMC12757429",
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD8-positive T-lymphocytes",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "CD8+ T cells"
+    ],
+    "umls_id": "C0242629",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SLFN11",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "interferon beta",
+    "type": "protein",
+    "abbreviations": [
+      "IFN-\u03b2"
+    ],
+    "umls_id": "C0021745",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "regulatory T-lymphocytes",
+    "type": "anatomicalstructure",
+    "abbreviations": [
+      "Tregs"
+    ],
+    "umls_id": "C0039198",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PRISMA",
+    "type": "studydesign",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "systematic review",
+    "type": "studydesign",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "meta-analysis",
+    "type": "studydesign",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "interferon",
+    "type": "protein",
+    "abbreviations": [
+      "IFN"
+    ],
+    "umls_id": "C0021747",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CXCL10",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1308754",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CCL5",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0164707",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TIGIT",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C4308575",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "LAG-3",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1431982",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "VSIG4",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD155",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0299583",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD112",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CCR8",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1336641",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "GPR81",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MCT4",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "E2F1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0080090",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CHK1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CHK2",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ATR",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1412427",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA-PKcs",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0253050",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "KU70",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0253050",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MLH1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1334634",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "MSH2",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1334634",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EML4-ALK",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TMEM173",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TBK1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "IRF3",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "IRF7",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NF-\u03baB",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0079904",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "IFNB1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C1334634",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD86",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0108779",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CD206",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0299583",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Foxp3",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "STAT1",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C1528558",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "IL-10",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0085295",
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "AZD6738",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CYT-0851",
+    "type": "drug",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "T-cell exhaustion",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "neoantigen",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "primary resistance",
+    "type": "adverseevent",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "HLA loss of heterozygosity",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "overfitting",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "cross-validation",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Youden's index",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hazard ratio",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "HR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "confidence interval",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "CI"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "risk ratio",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "interquartile range",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "IQR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12757875"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "telomeric allelic imbalance",
+    "type": "biomarker",
+    "abbreviations": [
+      "TAI"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "large-scale state transitions",
+    "type": "biomarker",
+    "abbreviations": [
+      "LST"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "microsatellite instability-high",
+    "type": "biomarker",
+    "abbreviations": [
+      "MSI-H"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FIGO staging",
+    "type": "procedure",
+    "abbreviations": [
+      "FIGO"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "unsupervised clustering",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hierarchical clustering",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "hysterectomy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0020699",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "chromosomal instability",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "immune microenvironment",
+    "type": "biomarker",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "single nucleotide polymorphism",
+    "type": "mutation",
+    "abbreviations": [
+      "SNP"
+    ],
+    "umls_id": "C0752046",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "formalin-fixed paraffin-embedded",
+    "type": "procedure",
+    "abbreviations": [
+      "FFPE"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "endometrioid carcinoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0334088",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor recurrence",
+    "type": "adverseevent",
+    "abbreviations": [],
+    "umls_id": "C0027651",
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "personalized therapy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12764803"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EWSR1::FLI1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SYT::SSX",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "COL1A1::PDGFB",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CIC::DUX4",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NR4A3::EWSR1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EML4::NTRK3",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "BCOR::CCNB3",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "EWSR1::SSX1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PAX3::FOXO1",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "CIC-rearranged sarcoma",
+    "type": "disease",
+    "abbreviations": [
+      "CIC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "sarcoma with BCOR genetic alterations",
+    "type": "disease",
+    "abbreviations": [
+      "BCOR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NTRK-rearranged spindle cell neoplasm",
+    "type": "disease",
+    "abbreviations": [
+      "NTRK"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "spindle cell/sclerosing rhabdomyosarcoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12775561"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "carcinoembryonic antigen",
+    "type": "protein",
+    "abbreviations": [
+      "CEA"
+    ],
+    "umls_id": "C0007082",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "KL-6",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0753463",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "calretinin",
+    "type": "protein",
+    "abbreviations": [],
+    "umls_id": "C0054889",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "eosinophils",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0014467",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "drug resistance",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0013203",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "NCT01355965",
+    "type": "clinicaltrial",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene sequencing",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C1294197",
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Food and Drug Administration",
+    "type": "institution",
+    "abbreviations": [
+      "FDA"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "World Health Organization",
+    "type": "institution",
+    "abbreviations": [
+      "WHO"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12780394"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "beta-catenin",
+    "type": "protein",
+    "abbreviations": [
+      "\u03b2-catenin",
+      "CTNNB1"
+    ],
+    "umls_id": "C0105770",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "FAP",
+    "type": "gene",
+    "abbreviations": [
+      "Fibroblast activation protein"
+    ],
+    "umls_id": "C1412427",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "somatic variants",
+    "type": "mutation",
+    "abbreviations": [],
+    "umls_id": "C0544886",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "liver cancer",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0023903",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "kidneys",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0022646",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA mismatch repair",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0012860",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "tumor suppressor gene",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0079427",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "International Cancer Genome Consortium",
+    "type": "institution",
+    "abbreviations": [
+      "ICGC"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "aging",
+    "type": "biologicalprocess",
+    "abbreviations": [],
+    "umls_id": "C0001811",
+    "source_papers": [
+      "PMC12783088"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "p16",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0079427",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Rb",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": "C0080095",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "ZNF154",
+    "type": "gene",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DNA methyltransferase inhibitors",
+    "type": "drug",
+    "abbreviations": [
+      "DNMTis"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "PARP",
+    "type": "enzyme",
+    "abbreviations": [],
+    "umls_id": "C0032405",
+    "source_papers": [
+      "PMC12784210",
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "statistical analysis",
+    "type": "statisticalmethod",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "one-way analysis of variance",
+    "type": "statisticalmethod",
+    "abbreviations": [
+      "ANOVA"
+    ],
+    "umls_id": "C0002780",
+    "source_papers": [
+      "PMC12784210"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "gene-protein reaction rules",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "GPR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "extended gene-protein reaction rules",
+    "type": "biologicalprocess",
+    "abbreviations": [
+      "eGPR"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Cancer Cell Line Encyclopedia",
+    "type": "clinicaltrial",
+    "abbreviations": [
+      "CCLE"
+    ],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "DoRothEA",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Omnipath",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TRRUST",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Signor3.0",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "Human1",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "TSGene2.0",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "SLKB database",
+    "type": "pathway",
+    "abbreviations": [],
+    "umls_id": null,
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": false,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "targeted therapies",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C2699893",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lymphoid cell lines",
+    "type": "anatomicalstructure",
+    "abbreviations": [],
+    "umls_id": "C0024264",
+    "source_papers": [
+      "PMC12784249"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "fibrocystic breast disease",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0016037",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "neuropathy",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0442874",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "seroma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0262627",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "wound infection",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0043241",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "pain",
+    "type": "symptom",
+    "abbreviations": [],
+    "umls_id": "C0030193",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "acute myeloid leukemia",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0023467",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "lymphoma",
+    "type": "disease",
+    "abbreviations": [],
+    "umls_id": "C0024299",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "endoscopy",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0014245",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "endoscopic ultrasound",
+    "type": "procedure",
+    "abbreviations": [],
+    "umls_id": "C0376443",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "complete blood count",
+    "type": "procedure",
+    "abbreviations": [
+      "CBC"
+    ],
+    "umls_id": "C0009555",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  },
+  {
+    "name": "erythrocyte sedimentation rate",
+    "type": "procedure",
+    "abbreviations": [
+      "ESR"
+    ],
+    "umls_id": "C0013845",
+    "source_papers": [
+      "PMC12788344"
+    ],
+    "umls_type_validated": true,
+    "umls_type_conflict": null
+  }
+]

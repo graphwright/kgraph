@@ -230,6 +230,27 @@ def test_provenance_denylist_excludes_pmc_placeholder(tmp_path):
     assert rec.get("first_seen_document") is None
 
 
+def test_provenance_denylist_excludes_pmc_id_not_provided(tmp_path):
+    """Entities with only PMC_ID_NOT_PROVIDED in relationships get usage_count 0, first_seen_document None."""
+    id_map = {"PMC_ID_NOT_PROVIDED": {"e1": "canon-xyz789"}}
+    bundle_data = {
+        "paper": {"pmcid": "PMC_ID_NOT_PROVIDED", "title": "No ID", "authors": []},
+        "entities": [{"id": "e1", "class": "Disease", "name": "foo", "synonyms": [], "source": "extracted"}],
+        "evidence_entities": [{"id": "PMC_ID_NOT_PROVIDED:abstract:0:llm", "class": "Evidence", "paper_id": "PMC_ID_NOT_PROVIDED", "text": "x", "confidence": 0.5, "source": "extracted"}],
+        "relationships": [
+            {"subject": "e1", "predicate": "ASSOCIATED_WITH", "object": "e1", "evidence_ids": ["PMC_ID_NOT_PROVIDED:abstract:0:llm"], "source_papers": ["PMC_ID_NOT_PROVIDED"]},
+        ],
+    }
+    bundles_dir = tmp_path / "bundles"
+    bundles_dir.mkdir()
+    (bundles_dir / "paper_PMC_ID_NOT_PROVIDED.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
+    bundles = load_pass1_bundles(bundles_dir)
+    usage = _entity_usage_from_bundles(bundles, id_map)
+    rec = usage.get("canon-xyz789", {})
+    assert rec.get("usage_count", 0) == 0
+    assert rec.get("first_seen_document") is None
+
+
 def test_provenance_denylist_excludes_pmc_unknown(tmp_path):
     """Entities with only PMC_UNKNOWN in supporting_documents get usage_count 0."""
     id_map = {"PMC_UNKNOWN": {"e1": "canon-abc123"}}
@@ -298,3 +319,8 @@ def test_zero_mention_orphan_dropped(tmp_path):
     entity_ids = [e["entity_id"] for e in entity_lines]
     assert "canon-abc" not in entity_ids, "Zero-mention orphan should be dropped"
     assert "HGNC:1100" in entity_ids, "Entity with evidence should remain"
+    # Orphan relationship guard: relationship referencing dropped canon-abc should not appear
+    with open(output_dir / "relationships.jsonl", encoding="utf-8") as f:
+        rel_lines = [json.loads(line) for line in f if line.strip()]
+    rel_subjects = {r["subject_id"] for r in rel_lines}
+    assert "canon-abc" not in rel_subjects, "Relationship referencing dropped entity should be filtered"

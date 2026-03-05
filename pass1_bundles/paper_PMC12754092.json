@@ -1,0 +1,546 @@
+{
+  "paper": {
+    "doi": null,
+    "pmcid": "PMC11725217",
+    "title": "Yin Yang 1 activates JAK-STAT3-mediated epithelial-mesenchymal transition in Helicobacter pylori-induced gastric cancer progression",
+    "authors": [
+      "Not specified"
+    ],
+    "journal": "Not specified",
+    "year": 2024,
+    "study_type": "experimental",
+    "eco_type": "in_vitro_in_vivo"
+  },
+  "extraction_provenance": {
+    "extraction_pipeline": {
+      "name": "medlit_pass1_extract",
+      "version": "0.1.0",
+      "git_commit": "9ab95ab359b033e07f84b797d25c7c5d2fbe8e06",
+      "git_commit_short": "9ab95ab",
+      "git_branch": "main",
+      "git_dirty": true,
+      "repo_url": "https://github.com/org/medlit"
+    },
+    "models": {
+      "llm": {
+        "name": "claude-sonnet-4-20250514",
+        "version": ""
+      }
+    },
+    "prompt": {
+      "version": "v1",
+      "template": "medlit_extraction_v1",
+      "checksum": "sha256:7dc528451098ea67"
+    },
+    "execution": {
+      "timestamp": "2026-03-05T15:58:19.888138Z",
+      "hostname": "unknown",
+      "python_version": "3.13.3",
+      "duration_seconds": 34.81
+    },
+    "entity_resolution": null,
+    "model_info": null
+  },
+  "entities": [
+    {
+      "id": "YY1",
+      "class": "Protein",
+      "name": "Yin Yang 1",
+      "synonyms": [
+        "YY1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:16848",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "JAK2",
+      "class": "Enzyme",
+      "name": "Janus kinase 2",
+      "synonyms": [
+        "JAK2"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:6192",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "STAT3",
+      "class": "Protein",
+      "name": "signal transducer and activator of transcription 3",
+      "synonyms": [
+        "STAT3"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11364",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "H_pylori",
+      "class": "Other",
+      "name": "Helicobacter pylori",
+      "synonyms": [
+        "H. pylori"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gastric_cancer",
+      "class": "Disease",
+      "name": "gastric cancer",
+      "synonyms": [
+        "stomach cancer",
+        "gastric carcinoma"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0024623",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "EMT",
+      "class": "BiologicalProcess",
+      "name": "epithelial-mesenchymal transition",
+      "synonyms": [
+        "EMT"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "E_cadherin",
+      "class": "Protein",
+      "name": "E-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1748",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "N_cadherin",
+      "class": "Protein",
+      "name": "N-cadherin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1759",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "Snail",
+      "class": "Protein",
+      "name": "Snail",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11128",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "Vimentin",
+      "class": "Protein",
+      "name": "Vimentin",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:12692",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "CagA",
+      "class": "Protein",
+      "name": "CagA",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gastritis",
+      "class": "Disease",
+      "name": "gastritis",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0017152",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "atrophic_gastritis",
+      "class": "Disease",
+      "name": "atrophic gastritis",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0017154",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "intestinal_metaplasia",
+      "class": "Disease",
+      "name": "intestinal metaplasia",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": "C0021828",
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "Ki67",
+      "class": "Biomarker",
+      "name": "Ki-67",
+      "synonyms": [
+        "Ki67"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "TFF1",
+      "class": "Protein",
+      "name": "trefoil factor 1",
+      "synonyms": [
+        "TFF1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:11755",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    }
+  ],
+  "evidence_entities": [
+    {
+      "id": "PMC11725217:results:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11725217",
+      "text_span_id": "results_1",
+      "text": "YY1 was highly expressed in gastric cancer tissues and cells. Kaplan-Meier survival curves indicated that high YY1 expression correlated with a poor prognosis.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "clinical",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11725217:results:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11725217",
+      "text_span_id": "results_2",
+      "text": "YY1 expression showed a gradually increasing trend in H. pylori-induced gastritis and gastric tumors.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro_in_vivo",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11725217:results:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11725217",
+      "text_span_id": "results_3",
+      "text": "In vivo and in vitro experiments demonstrated that H. pylori infection promoted phosphorylation of JAK2 and STAT3, thereby activating the EMT pathway, in which YY1 played a key role.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro_in_vivo",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11725217:results:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11725217",
+      "text_span_id": "results_4",
+      "text": "YY1 and JAK2 interaction was validated by chromatin immunoprecipitation.",
+      "confidence": 0.9,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC11725217:results:5:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC11725217",
+      "text_span_id": "results_5",
+      "text": "YY1 knockdown or pharmacological inhibition reversed EMT and suppressed gastric cancer cell proliferation and metastasis.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "in_vitro_in_vivo",
+      "source": "extracted"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "YY1",
+      "predicate": "INCREASES_RISK",
+      "object": "gastric_cancer",
+      "evidence_ids": [
+        "PMC11725217:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "H_pylori",
+      "predicate": "INCREASES",
+      "object": "YY1",
+      "evidence_ids": [
+        "PMC11725217:results:2:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "JAK2",
+      "evidence_ids": [
+        "PMC11725217:results:4:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "STAT3",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "YY1",
+      "predicate": "ACTIVATES",
+      "object": "EMT",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm",
+        "PMC11725217:results:5:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "H_pylori",
+      "predicate": "INCREASES_RISK",
+      "object": "gastric_cancer",
+      "evidence_ids": [
+        "PMC11725217:results:2:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "H_pylori",
+      "predicate": "ACTIVATES",
+      "object": "JAK2",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "H_pylori",
+      "predicate": "ACTIVATES",
+      "object": "STAT3",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "JAK2",
+      "predicate": "ACTIVATES",
+      "object": "STAT3",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "EMT",
+      "predicate": "PROMOTES",
+      "object": "gastric_cancer",
+      "evidence_ids": [
+        "PMC11725217:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC11725217"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    }
+  ],
+  "notes": [
+    "This study demonstrates that YY1 acts as a key transcription factor in H. pylori-induced gastric carcinogenesis by directly activating JAK2 transcription and promoting JAK2/STAT3-mediated epithelial-mesenchymal transition."
+  ]
+}

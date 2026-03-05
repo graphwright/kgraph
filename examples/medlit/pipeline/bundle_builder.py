@@ -28,7 +28,12 @@ from examples.medlit.bundle_models import PerPaperBundle
 from examples.medlit.pipeline.canonical_urls import build_canonical_url
 
 # Paper IDs to exclude from supporting_documents (synthetic/fallback provenance)
-PROVENANCE_DENYLIST = frozenset({"PMC_UNKNOWN", "PMC_extracted", "PMC_PLACEHOLDER"})
+PROVENANCE_DENYLIST = frozenset({
+    "PMC_UNKNOWN",
+    "PMC_extracted",
+    "PMC_PLACEHOLDER",
+    "PMC_ID_NOT_PROVIDED",
+})
 
 
 def load_merged_output(merged_dir: Path) -> tuple[list[dict], list[dict], dict, dict]:
@@ -368,14 +373,26 @@ def run_pass3(merged_dir: Path, bundles_dir: Path, output_dir: Path) -> dict[str
     created_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
     usage = _entity_usage_from_bundles(bundles, id_map)
-    evidence_stats = _relationship_evidence_stats(relationships_list, bundles, id_map)
 
     # Drop zero-mention orphans (entities in relationships but never in evidence_ids)
     entities_list = [e for e in entities_list if usage.get(e["entity_id"], {}).get("usage_count", 0) > 0]
+    surviving_entity_ids = {e["entity_id"] for e in entities_list}
+
+    # Drop relationships referencing entities that were dropped (orphan relationship guard)
+    relationships_list = [
+        r
+        for r in relationships_list
+        if r["subject"] in surviving_entity_ids and r["object"] in surviving_entity_ids
+    ]
+
     entity_rows = [_merged_entity_to_entity_row(ent, usage.get(ent["entity_id"], {}), created_at) for ent in entities_list]
+    evidence_stats = _relationship_evidence_stats(relationships_list, bundles, id_map)
     relationship_rows = [_merged_rel_to_relationship_row(rel, evidence_stats, created_at) for rel in relationships_list]
     evidence_rows = _build_evidence_rows(bundles, id_map, relationships_list)
     mention_rows = _build_mention_rows(bundles, id_map, created_at)
+
+    # Drop mentions for entities that were filtered out (orphan mention guard)
+    mention_rows = [m for m in mention_rows if m.entity_id in surviving_entity_ids]
 
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "docs").mkdir(exist_ok=True)

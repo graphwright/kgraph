@@ -1,0 +1,822 @@
+{
+  "paper": {
+    "doi": null,
+    "pmcid": "PMC_extracted",
+    "title": "Bone Marrow Mesenchymal Stem-Cell Transplantation Promotes Functional Improvement Associated with CNTF-STAT3 Activation after Hemi-Sectioned Spinal Cord Injury in Tree Shrews",
+    "authors": [
+      "L-LX",
+      "FL",
+      "T-HW",
+      "B-TL",
+      "X-JD",
+      "JL",
+      "PZ",
+      "R-PZ",
+      "W-LZ"
+    ],
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2017,
+    "study_type": "experimental",
+    "eco_type": "animal_model"
+  },
+  "extraction_provenance": {
+    "extraction_pipeline": {
+      "name": "medlit_pass1_extract",
+      "version": "0.1.0",
+      "git_commit": "2a442dbf852af4abe2a9ce0e0df96f2ecfb63a31",
+      "git_commit_short": "2a442db",
+      "git_branch": "main",
+      "git_dirty": true,
+      "repo_url": "https://github.com/org/medlit"
+    },
+    "models": {
+      "llm": {
+        "name": "claude-sonnet-4-20250514",
+        "version": ""
+      }
+    },
+    "prompt": {
+      "version": "v1",
+      "template": "medlit_extraction_v1",
+      "checksum": "sha256:7dc528451098ea67"
+    },
+    "execution": {
+      "timestamp": "2026-03-05T16:09:38.689500Z",
+      "hostname": "unknown",
+      "python_version": "3.13.3",
+      "duration_seconds": 46.53
+    },
+    "entity_resolution": null,
+    "model_info": null
+  },
+  "entities": [
+    {
+      "id": "entity_1",
+      "class": "Procedure",
+      "name": "bone marrow mesenchymal stem cell transplantation",
+      "synonyms": [
+        "BMSC transplantation"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_2",
+      "class": "Disease",
+      "name": "hemi-sectioned spinal cord injury",
+      "synonyms": [
+        "hSCI",
+        "hemi-transected spinal cord injury"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_3",
+      "class": "AnatomicalStructure",
+      "name": "bone marrow mesenchymal stem cells",
+      "synonyms": [
+        "BMSCs"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_4",
+      "class": "Protein",
+      "name": "ciliary neurotrophic factor",
+      "synonyms": [
+        "CNTF"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_5",
+      "class": "Protein",
+      "name": "signal transducer and activator of transcription 3",
+      "synonyms": [
+        "STAT3"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_6",
+      "class": "AnatomicalStructure",
+      "name": "tree shrews",
+      "synonyms": [
+        "Tupaia belangeri"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_7",
+      "class": "Disease",
+      "name": "spinal cord injury",
+      "synonyms": [
+        "SCI"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_8",
+      "class": "Protein",
+      "name": "brain-derived neurotrophic factor",
+      "synonyms": [
+        "BDNF"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_9",
+      "class": "Protein",
+      "name": "transforming growth factor beta 1",
+      "synonyms": [
+        "TGF-\u03b21"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_10",
+      "class": "Protein",
+      "name": "interleukin 1 beta",
+      "synonyms": [
+        "IL-1\u03b2"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_11",
+      "class": "Procedure",
+      "name": "Basso Beattie and Bresnahan locomotion scale",
+      "synonyms": [
+        "BBB scoring system"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_12",
+      "class": "BiologicalProcess",
+      "name": "apoptosis",
+      "synonyms": [
+        "cell apoptosis"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_13",
+      "class": "Protein",
+      "name": "glial fibrillary acidic protein",
+      "synonyms": [
+        "GFAP"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_14",
+      "class": "AnatomicalStructure",
+      "name": "motoneurons",
+      "synonyms": [
+        "motor neurons"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_15",
+      "class": "BiologicalProcess",
+      "name": "scar formation",
+      "synonyms": [
+        "glial scar formation"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_16",
+      "class": "Drug",
+      "name": "cyclosporin A",
+      "synonyms": [
+        "cyclosporin-A"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_17",
+      "class": "Drug",
+      "name": "Hoechst 33342",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_18",
+      "class": "Protein",
+      "name": "CD44",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_19",
+      "class": "Protein",
+      "name": "CD29",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_20",
+      "class": "Protein",
+      "name": "CD45",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_21",
+      "class": "BiologicalProcess",
+      "name": "cell proliferation",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_22",
+      "class": "BiologicalProcess",
+      "name": "axonal regeneration",
+      "synonyms": [],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_23",
+      "class": "Protein",
+      "name": "mitogen-activated protein kinase kinase",
+      "synonyms": [
+        "Merk"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "entity_24",
+      "class": "Protein",
+      "name": "phosphatidylinositol 3-kinase",
+      "synonyms": [
+        "PI3K"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    }
+  ],
+  "evidence_entities": [
+    {
+      "id": "PMC_extracted:results:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "results_1",
+      "text": "At 28 days after injury, compared with the sham group, the hSCI group displayed scar formation and dramatic elevations in the mean interleukin 1 beta (IL-1\u03b2) density and cell apoptosis level, whereas the expression of signal transducer and activator of transcription 3 (STAT3) and ciliary neurotrophic factor (CNTF) mRNA was reduced.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:results:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "results_2",
+      "text": "Following BMSC transplantation, motoneurons extent of shrinkage were reduced and the animals' Basso, Beattie, and Bresnahan (BBB) locomotion scale scores were significantly higher at 21 and 28 days after injury when compared with the injured group.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:results:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "results_3",
+      "text": "Moreover, the hSCI-induced elevations in scar formation, IL-1\u03b2, and cell apoptosis were reduced by BMSC transplantation to levels that were close to those of the sham group.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:results:4:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "results_4",
+      "text": "Corresponding elevations in the expression of STAT3 and CNTF mRNA were observed in the hSCI + BMSCs group, and the levels were not significantly different from those observed in the sham group.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    },
+    {
+      "id": "PMC_extracted:conclusion:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "PMC_extracted",
+      "text_span_id": "conclusion_1",
+      "text": "Together, our results support that grafted BMSCs can significantly improve locomotor function in tree shrews subjected to hSCI and that this improvement is associated with the upregulation of CNTF and STAT3 signaling.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "experimental",
+      "eco_type": "animal_model",
+      "source": "extracted"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "entity_1",
+      "predicate": "TREATS",
+      "object": "entity_2",
+      "evidence_ids": [
+        "PMC_extracted:results:2:llm",
+        "PMC_extracted:conclusion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "INCREASES",
+      "object": "entity_11",
+      "evidence_ids": [
+        "PMC_extracted:results:2:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "DECREASES",
+      "object": "entity_15",
+      "evidence_ids": [
+        "PMC_extracted:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "DECREASES",
+      "object": "entity_10",
+      "evidence_ids": [
+        "PMC_extracted:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "DECREASES",
+      "object": "entity_12",
+      "evidence_ids": [
+        "PMC_extracted:results:3:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "INCREASES",
+      "object": "entity_5",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:conclusion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_1",
+      "predicate": "INCREASES",
+      "object": "entity_4",
+      "evidence_ids": [
+        "PMC_extracted:results:4:llm",
+        "PMC_extracted:conclusion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_2",
+      "predicate": "INCREASES",
+      "object": "entity_15",
+      "evidence_ids": [
+        "PMC_extracted:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_2",
+      "predicate": "INCREASES",
+      "object": "entity_10",
+      "evidence_ids": [
+        "PMC_extracted:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_2",
+      "predicate": "INCREASES",
+      "object": "entity_12",
+      "evidence_ids": [
+        "PMC_extracted:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_2",
+      "predicate": "DECREASES",
+      "object": "entity_5",
+      "evidence_ids": [
+        "PMC_extracted:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_2",
+      "predicate": "DECREASES",
+      "object": "entity_4",
+      "evidence_ids": [
+        "PMC_extracted:results:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.95,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_4",
+      "predicate": "REGULATES",
+      "object": "entity_5",
+      "evidence_ids": [
+        "PMC_extracted:conclusion:1:llm"
+      ],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "conclusion",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "EXPRESSES",
+      "object": "entity_18",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "EXPRESSES",
+      "object": "entity_19",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "SECRETES",
+      "object": "entity_4",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "SECRETES",
+      "object": "entity_8",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "entity_3",
+      "predicate": "SECRETES",
+      "object": "entity_9",
+      "evidence_ids": [],
+      "source_papers": [
+        "PMC_extracted"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    }
+  ],
+  "notes": [
+    "This study demonstrates that bone marrow mesenchymal stem cell transplantation improves functional recovery after hemi-sectioned spinal cord injury in tree shrews through CNTF-STAT3 signaling pathway activation."
+  ]
+}

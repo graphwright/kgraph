@@ -1,0 +1,1168 @@
+{
+  "paper": {
+    "doi": null,
+    "pmcid": "PMC12764813",
+    "title": "Knowledge attitude and practice regarding cancer screening among Chinese medical students",
+    "authors": [],
+    "journal": "Scientific Reports",
+    "year": 2025,
+    "study_type": "cross-sectional study",
+    "eco_type": null
+  },
+  "extraction_provenance": {
+    "extraction_pipeline": {
+      "name": "medlit_pass1_extract",
+      "version": "0.1.0",
+      "git_commit": "5f8a89591cf658b96292f1d71c8b28eab09231b1",
+      "git_commit_short": "5f8a895",
+      "git_branch": "main",
+      "git_dirty": true,
+      "repo_url": "https://github.com/org/medlit"
+    },
+    "models": {
+      "llm": {
+        "name": "claude-sonnet-4-20250514",
+        "version": ""
+      }
+    },
+    "prompt": {
+      "version": "v1",
+      "template": "medlit_extraction_v1",
+      "checksum": "sha256:7dc528451098ea67"
+    },
+    "execution": {
+      "timestamp": "2026-03-05T16:00:18.022985Z",
+      "hostname": "unknown",
+      "python_version": "3.13.3",
+      "duration_seconds": 58.29
+    },
+    "entity_resolution": null,
+    "model_info": null
+  },
+  "entities": [
+    {
+      "id": "cancer_screening",
+      "class": "Procedure",
+      "name": "cancer screening",
+      "synonyms": [
+        "cancer screening",
+        "screening"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "lung_cancer",
+      "class": "Disease",
+      "name": "lung cancer",
+      "synonyms": [
+        "lung cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "stomach_cancer",
+      "class": "Disease",
+      "name": "stomach cancer",
+      "synonyms": [
+        "stomach cancer",
+        "gastric cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "colorectal_cancer",
+      "class": "Disease",
+      "name": "colorectal cancer",
+      "synonyms": [
+        "colorectal cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "esophageal_cancer",
+      "class": "Disease",
+      "name": "esophageal cancer",
+      "synonyms": [
+        "esophageal cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "liver_cancer",
+      "class": "Disease",
+      "name": "liver cancer",
+      "synonyms": [
+        "liver cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "breast_cancer",
+      "class": "Disease",
+      "name": "breast cancer",
+      "synonyms": [
+        "breast cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cervical_cancer",
+      "class": "Disease",
+      "name": "cervical cancer",
+      "synonyms": [
+        "cervical cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "nasopharyngeal_cancer",
+      "class": "Disease",
+      "name": "nasopharyngeal cancer",
+      "synonyms": [
+        "nasopharyngeal cancer"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "low_dose_spiral_ct",
+      "class": "Procedure",
+      "name": "low-dose spiral CT",
+      "synonyms": [
+        "low-dose spiral CT",
+        "low-dose CT"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "alpha_fetoprotein",
+      "class": "Biomarker",
+      "name": "alpha-fetoprotein",
+      "synonyms": [
+        "alpha-fetoprotein",
+        "AFP"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "abdominal_ultrasound",
+      "class": "Procedure",
+      "name": "abdominal ultrasound",
+      "synonyms": [
+        "abdominal ultrasound"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "colonoscopy",
+      "class": "Procedure",
+      "name": "colonoscopy",
+      "synonyms": [
+        "colonoscopy"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "fecal_immunochemical_testing",
+      "class": "Procedure",
+      "name": "fecal immunochemical testing",
+      "synonyms": [
+        "fecal immunochemical testing",
+        "FIT"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "pepsinogen",
+      "class": "Biomarker",
+      "name": "pepsinogen",
+      "synonyms": [
+        "pepsinogen"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gastrin_17",
+      "class": "Biomarker",
+      "name": "gastrin-17",
+      "synonyms": [
+        "gastrin-17"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "helicobacter_pylori",
+      "class": "AnatomicalStructure",
+      "name": "Helicobacter pylori",
+      "synonyms": [
+        "Helicobacter pylori",
+        "H. pylori"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "gastroscopy",
+      "class": "Procedure",
+      "name": "gastroscopy",
+      "synonyms": [
+        "gastroscopy"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "mammography",
+      "class": "Procedure",
+      "name": "mammography",
+      "synonyms": [
+        "mammography"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "breast_ultrasound",
+      "class": "Procedure",
+      "name": "breast ultrasound",
+      "synonyms": [
+        "breast ultrasound"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "hpv_testing",
+      "class": "Procedure",
+      "name": "HPV testing",
+      "synonyms": [
+        "HPV testing",
+        "human papillomavirus testing"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "colposcopy",
+      "class": "Procedure",
+      "name": "colposcopy",
+      "synonyms": [
+        "colposcopy"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cytological_examination",
+      "class": "Procedure",
+      "name": "cytological examination",
+      "synonyms": [
+        "cytological examination"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chronic_atrophic_gastritis",
+      "class": "Disease",
+      "name": "chronic atrophic gastritis",
+      "synonyms": [
+        "chronic atrophic gastritis"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chronic_obstructive_pulmonary_disease",
+      "class": "Disease",
+      "name": "chronic obstructive pulmonary disease",
+      "synonyms": [
+        "chronic obstructive pulmonary disease",
+        "COPD"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "liver_cirrhosis",
+      "class": "Disease",
+      "name": "liver cirrhosis",
+      "synonyms": [
+        "liver cirrhosis",
+        "cirrhosis"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chronic_hepatitis_b",
+      "class": "Disease",
+      "name": "chronic hepatitis B",
+      "synonyms": [
+        "chronic hepatitis B"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "chronic_hepatitis_c",
+      "class": "Disease",
+      "name": "chronic hepatitis C",
+      "synonyms": [
+        "chronic hepatitis C"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "brca1",
+      "class": "Gene",
+      "name": "BRCA1",
+      "synonyms": [
+        "BRCA1"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1100",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "brca2",
+      "class": "Gene",
+      "name": "BRCA2",
+      "synonyms": [
+        "BRCA2"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": "HGNC:1101",
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "atypical_hyperplasia",
+      "class": "Disease",
+      "name": "atypical hyperplasia",
+      "synonyms": [
+        "atypical hyperplasia"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "structural_equation_modeling",
+      "class": "StatisticalMethod",
+      "name": "structural equation modeling",
+      "synonyms": [
+        "structural equation modeling",
+        "SEM"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "confirmatory_factor_analysis",
+      "class": "StatisticalMethod",
+      "name": "confirmatory factor analysis",
+      "synonyms": [
+        "confirmatory factor analysis",
+        "CFA"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "spearman_correlation",
+      "class": "StatisticalMethod",
+      "name": "Spearman's rank correlation",
+      "synonyms": [
+        "Spearman's rank correlation",
+        "Spearman correlation"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "cross_sectional_study",
+      "class": "StudyDesign",
+      "name": "cross-sectional study",
+      "synonyms": [
+        "cross-sectional study"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    },
+    {
+      "id": "knowledge_attitude_practice",
+      "class": "StudyDesign",
+      "name": "Knowledge, Attitude, and Practice survey",
+      "synonyms": [
+        "Knowledge, Attitude, and Practice survey",
+        "KAP survey"
+      ],
+      "symbol": null,
+      "brand_names": [],
+      "source": "extracted",
+      "canonical_id": null,
+      "umls_id": null,
+      "hgnc_id": null,
+      "rxnorm_id": null,
+      "loinc_code": null,
+      "uniprot_id": null
+    }
+  ],
+  "evidence_entities": [
+    {
+      "id": "paper_1:introduction:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "intro_1",
+      "text": "Cancer represents a significant global health challenge, with a staggering 19.3 million new cases and 10.0 million fatalities reported in 2020. This issue is particularly pronounced in China, where nearly 23.7% of new cases and 30.2% of the recorded deaths recorded.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "cross-sectional study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:introduction:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "intro_2",
+      "text": "As a critical component of cancer control, cancer screening assumes a pivotal role in early detection, potentially saving lives by identifying cancers in their early stages or preventing their development altogether.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "cross-sectional study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:results:1:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "results_1",
+      "text": "The scores for knowledge, attitude, and practice were 9.39 \u00b1 3.82 (possible range: 0\u201320), 31.4 \u00b1 4.06 (possible range: 8\u201340), and 25.2 \u00b1 7.04 (possible range: 8\u201340), respectively.",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "cross-sectional study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:results:2:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "results_2",
+      "text": "Structural equation modeling (SEM) indicated that knowledge directly influenced attitude (\u03b2 = 0.140, P = 0.003), attitude directly affected practice (\u03b2 = 0.145, P = 0.002), and knowledge had a substantial and direct impact on practice impact on practice (\u03b2 = 0.219, P < 0.001).",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "cross-sectional study",
+      "eco_type": null,
+      "source": "extracted"
+    },
+    {
+      "id": "paper_1:results:3:llm",
+      "class": "Evidence",
+      "entity_id": null,
+      "paper_id": "paper_1",
+      "text_span_id": "results_3",
+      "text": "Correlation analysis demonstrated significant positive correlations between knowledge and practice (r = 0.230, P < 0.001), as well as between attitude and practice (r = 0.136, P = 0.002).",
+      "confidence": 0.95,
+      "extraction_method": "llm",
+      "study_type": "cross-sectional study",
+      "eco_type": null,
+      "source": "extracted"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "lung_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "colorectal_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "cancer_screening",
+      "predicate": "INDICATES",
+      "object": "cervical_cancer",
+      "evidence_ids": [
+        "paper_1:introduction:2:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "introduction",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "low_dose_spiral_ct",
+      "predicate": "INDICATES",
+      "object": "lung_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "abdominal_ultrasound",
+      "predicate": "INDICATES",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "alpha_fetoprotein",
+      "predicate": "INDICATES",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "colonoscopy",
+      "predicate": "INDICATES",
+      "object": "colorectal_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "fecal_immunochemical_testing",
+      "predicate": "INDICATES",
+      "object": "colorectal_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "pepsinogen",
+      "predicate": "INDICATES",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "gastrin_17",
+      "predicate": "INDICATES",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "mammography",
+      "predicate": "INDICATES",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "breast_ultrasound",
+      "predicate": "INDICATES",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "hpv_testing",
+      "predicate": "INDICATES",
+      "object": "cervical_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "chronic_obstructive_pulmonary_disease",
+      "predicate": "INCREASES_RISK",
+      "object": "lung_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "chronic_atrophic_gastritis",
+      "predicate": "INCREASES_RISK",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "helicobacter_pylori",
+      "predicate": "INCREASES_RISK",
+      "object": "stomach_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "liver_cirrhosis",
+      "predicate": "INCREASES_RISK",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "chronic_hepatitis_b",
+      "predicate": "INCREASES_RISK",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "chronic_hepatitis_c",
+      "predicate": "INCREASES_RISK",
+      "object": "liver_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "brca1",
+      "predicate": "INCREASES_RISK",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "brca2",
+      "predicate": "INCREASES_RISK",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.9,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    },
+    {
+      "subject": "atypical_hyperplasia",
+      "predicate": "INCREASES_RISK",
+      "object": "breast_cancer",
+      "evidence_ids": [
+        "paper_1:results:1:llm"
+      ],
+      "source_papers": [
+        "paper_1"
+      ],
+      "confidence": 0.8,
+      "properties": {},
+      "section": "results",
+      "asserted_by": "llm",
+      "resolution": null,
+      "note": null
+    }
+  ],
+  "notes": [
+    "This study focuses on knowledge, attitudes, and practices regarding cancer screening among Chinese medical students",
+    "The study used structural equation modeling to analyze relationships between knowledge, attitude, and practice",
+    "Multiple cancer screening methods and biomarkers were discussed in the context of different cancer types"
+  ]
+}
