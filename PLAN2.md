@@ -244,3 +244,4 @@ After each change:
    - `medlit_merged/entities.json` — fewer duplicates, no PMC_UNKNOWN in supporting_documents
    - `medlit_merged/relationships.json` — SAME_AS edges for reconciled duplicates
 3. Compare entity count before/after to confirm reduction.
+4. As always, finish with `lint.sh` to verify no outstanding linter issues.
