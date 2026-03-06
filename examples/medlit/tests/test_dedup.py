@@ -211,16 +211,16 @@ def test_preferred_authoritative_id_returns_umls_when_only_umls():
 
 
 def test_is_authoritative_id():
-    """_is_authoritative_id correctly identifies authoritative vs canon- slugs."""
+    """_is_authoritative_id correctly identifies authoritative vs prov- slugs."""
     assert _is_authoritative_id("HGNC:11998") is True
     assert _is_authoritative_id("C0079419") is True
-    assert _is_authoritative_id("canon-abc123def456") is False
+    assert _is_authoritative_id("prov-abc123def456") is False
     assert _is_authoritative_id("MeSH:D001943") is True
 
 
 def test_canonical_id_slug_format():
-    """_canonical_id_slug produces canon- prefixed hex."""
+    """_canonical_id_slug produces prov- prefixed hex."""
     slug = _canonical_id_slug()
-    assert slug.startswith("canon-")
-    assert len(slug) == len("canon-") + 12
-    assert all(c in "0123456789abcdef" for c in slug[6:])
+    assert slug.startswith("prov-")
+    assert len(slug) == len("prov-") + 12
+    assert all(c in "0123456789abcdef" for c in slug[5:])

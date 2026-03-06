@@ -41,7 +41,7 @@ def _is_authoritative_id(s: str) -> bool:
     """Return True if s looks like an authoritative ontology ID, not a synthetic slug."""
     if not s or not s.strip():
         return False
-    if s.startswith("canon-"):
+    if s.startswith("prov-"):
         return False
     # MeSH (D + digits or MeSH:...)
     if s.startswith("MeSH:"):
@@ -122,7 +122,7 @@ def _entity_class_to_lookup_type(entity_class: str) -> Optional[str]:
 
 def _canonical_id_slug() -> str:
     """Generate a short synthetic merge key for entities without authoritative ID."""
-    return "canon-" + uuid.uuid4().hex[:12]
+    return "prov-" + uuid.uuid4().hex[:12]
 
 
 def run_pass2(  # pylint: disable=too-many-statements
@@ -481,7 +481,7 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
     # 7b) Embedding-based dedup for provisional entities (optional)
     cross_type_candidates: list[dict[str, Any]] = []
     if embedding_generator is not None:
-        prov_entities = [e for e in canonical_entities.values() if (e.get("entity_id") or "").startswith("canon-")]
+        prov_entities = [e for e in canonical_entities.values() if (e.get("entity_id") or "").startswith("prov-")]
         if prov_entities:
             from kgraph.storage.memory import _cosine_similarity
 
@@ -570,7 +570,7 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
                                 _merge_entity_into(loser, winner, canonical_entities, triple_to_rel, local_to_canonical, name_type_to_canonical)
                                 merged_ids.add(loser)
                 # Cross-type candidates (flag-only)
-                prov_remaining = [e for e in canonical_entities.values() if (e.get("entity_id") or "").startswith("canon-")]
+                prov_remaining = [e for e in canonical_entities.values() if (e.get("entity_id") or "").startswith("prov-")]
                 for i, a in enumerate(prov_remaining):
                     for j, b in enumerate(prov_remaining):
                         if i >= j or (a.get("class") or "") == (b.get("class") or ""):

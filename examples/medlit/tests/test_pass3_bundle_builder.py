@@ -211,7 +211,7 @@ def test_load_pass1_bundles(minimal_bundles_dir):
 
 def test_provenance_denylist_excludes_pmc_placeholder(tmp_path):
     """Entities with only PMC_PLACEHOLDER in relationships get usage_count 0, first_seen_document None."""
-    id_map = {"PMC_PLACEHOLDER": {"e1": "canon-abc123"}}
+    id_map = {"PMC_PLACEHOLDER": {"e1": "prov-abc123"}}
     bundle_data = {
         "paper": {"pmcid": "PMC_PLACEHOLDER", "title": "Placeholder", "authors": []},
         "entities": [{"id": "e1", "class": "Disease", "name": "pleural mesothelioma", "synonyms": [], "source": "extracted"}],
@@ -225,14 +225,14 @@ def test_provenance_denylist_excludes_pmc_placeholder(tmp_path):
     (bundles_dir / "paper_PMC_PLACEHOLDER.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
     bundles = load_pass1_bundles(bundles_dir)
     usage = _entity_usage_from_bundles(bundles, id_map)
-    rec = usage.get("canon-abc123", {})
+    rec = usage.get("prov-abc123", {})
     assert rec.get("usage_count", 0) == 0
     assert rec.get("first_seen_document") is None
 
 
 def test_provenance_denylist_excludes_pmc_id_not_provided(tmp_path):
     """Entities with only PMC_ID_NOT_PROVIDED in relationships get usage_count 0, first_seen_document None."""
-    id_map = {"PMC_ID_NOT_PROVIDED": {"e1": "canon-xyz789"}}
+    id_map = {"PMC_ID_NOT_PROVIDED": {"e1": "prov-xyz789"}}
     bundle_data = {
         "paper": {"pmcid": "PMC_ID_NOT_PROVIDED", "title": "No ID", "authors": []},
         "entities": [{"id": "e1", "class": "Disease", "name": "foo", "synonyms": [], "source": "extracted"}],
@@ -246,14 +246,14 @@ def test_provenance_denylist_excludes_pmc_id_not_provided(tmp_path):
     (bundles_dir / "paper_PMC_ID_NOT_PROVIDED.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
     bundles = load_pass1_bundles(bundles_dir)
     usage = _entity_usage_from_bundles(bundles, id_map)
-    rec = usage.get("canon-xyz789", {})
+    rec = usage.get("prov-xyz789", {})
     assert rec.get("usage_count", 0) == 0
     assert rec.get("first_seen_document") is None
 
 
 def test_provenance_denylist_excludes_pmc_unknown(tmp_path):
     """Entities with only PMC_UNKNOWN in supporting_documents get usage_count 0."""
-    id_map = {"PMC_UNKNOWN": {"e1": "canon-abc123"}}
+    id_map = {"PMC_UNKNOWN": {"e1": "prov-abc123"}}
     bundle_data = {
         "paper": {"pmcid": "PMC_UNKNOWN", "title": "Unknown", "authors": []},
         "entities": [{"id": "e1", "class": "Disease", "name": "foo", "synonyms": [], "source": "extracted"}],
@@ -265,13 +265,13 @@ def test_provenance_denylist_excludes_pmc_unknown(tmp_path):
     # Need evidence_entities for the relationship to count
     bundle_data["evidence_entities"] = [{"id": "ev1", "class": "Evidence", "paper_id": "PMC_UNKNOWN", "text": "x", "confidence": 0.5, "source": "extracted"}]
     bundle_data["entities"].append({"id": "e2", "class": "Disease", "name": "bar", "synonyms": [], "source": "extracted"})
-    id_map["PMC_UNKNOWN"]["e2"] = "canon-def456"
+    id_map["PMC_UNKNOWN"]["e2"] = "prov-def456"
     bundles_dir = tmp_path / "bundles"
     bundles_dir.mkdir()
     (bundles_dir / "paper_PMC_UNKNOWN.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
     bundles = load_pass1_bundles(bundles_dir)
     usage = _entity_usage_from_bundles(bundles, id_map)
-    # canon-abc123 and canon-def456 get usage from evidence
+    # prov-abc123 and prov-def456 get usage from evidence
     # But paper_id PMC_UNKNOWN is denylisted, so supporting_documents stays empty
     for _, rec in usage.items():
         assert "PMC_UNKNOWN" not in (rec.get("supporting_documents") or [])
@@ -280,15 +280,15 @@ def test_provenance_denylist_excludes_pmc_unknown(tmp_path):
 def test_zero_mention_orphan_dropped(tmp_path):
     """Entity in relationship but with no evidence_ids gets usage_count 0 and is dropped."""
     entities = [
-        {"entity_id": "canon-abc", "canonical_id": None, "class": "Drug", "name": "liproxstatin-1", "synonyms": [], "source": "extracted", "source_papers": []},
+        {"entity_id": "prov-abc", "canonical_id": None, "class": "Drug", "name": "liproxstatin-1", "synonyms": [], "source": "extracted", "source_papers": []},
         {"entity_id": "HGNC:1100", "canonical_id": "HGNC:1100", "class": "Gene", "name": "BRCA2", "synonyms": [], "source": "extracted", "source_papers": []},
         {"entity_id": "C0006142", "canonical_id": "C0006142", "class": "Disease", "name": "breast cancer", "synonyms": [], "source": "extracted", "source_papers": []},
     ]
     relationships = [
-        {"subject": "canon-abc", "predicate": "ASSOCIATED_WITH", "object": "HGNC:1100", "evidence_ids": [], "source_papers": ["PMC123"], "confidence": 0.5},
+        {"subject": "prov-abc", "predicate": "ASSOCIATED_WITH", "object": "HGNC:1100", "evidence_ids": [], "source_papers": ["PMC123"], "confidence": 0.5},
         {"subject": "HGNC:1100", "predicate": "INCREASES_RISK", "object": "C0006142", "evidence_ids": ["ev1"], "source_papers": ["PMC123"], "confidence": 0.8},
     ]
-    id_map = {"PMC123": {"e1": "canon-abc", "g1": "HGNC:1100", "d1": "C0006142"}}
+    id_map = {"PMC123": {"e1": "prov-abc", "g1": "HGNC:1100", "d1": "C0006142"}}
     bundle_data = {
         "paper": {"pmcid": "PMC123", "title": "T", "authors": []},
         "entities": [
@@ -317,13 +317,13 @@ def test_zero_mention_orphan_dropped(tmp_path):
     with open(output_dir / "entities.jsonl", encoding="utf-8") as f:
         entity_lines = [json.loads(line) for line in f if line.strip()]
     entity_ids = [e["entity_id"] for e in entity_lines]
-    assert "canon-abc" not in entity_ids, "Zero-mention orphan should be dropped"
+    assert "prov-abc" not in entity_ids, "Zero-mention orphan should be dropped"
     assert "HGNC:1100" in entity_ids, "Entity with evidence should remain"
-    # Orphan relationship guard: relationship referencing dropped canon-abc should not appear
+    # Orphan relationship guard: relationship referencing dropped prov-abc should not appear
     with open(output_dir / "relationships.jsonl", encoding="utf-8") as f:
         rel_lines = [json.loads(line) for line in f if line.strip()]
     rel_subjects = {r["subject_id"] for r in rel_lines}
-    assert "canon-abc" not in rel_subjects, "Relationship referencing dropped entity should be filtered"
+    assert "prov-abc" not in rel_subjects, "Relationship referencing dropped entity should be filtered"
 
 
 def test_run_pass3_copies_sources_when_pmc_xmls_dir_provided(tmp_path):

@@ -133,8 +133,8 @@ def test_is_authoritative_id():
     assert _is_authoritative_id("RxNorm:161") is True
     assert _is_authoritative_id("P38398") is True
     assert _is_authoritative_id("DBPedia:Breast_cancer") is True
-    assert _is_authoritative_id("canon-abc123") is False
-    assert _is_authoritative_id("canon-960ca8acbab3") is False
+    assert _is_authoritative_id("prov-abc123") is False
+    assert _is_authoritative_id("prov-960ca8acbab3") is False
     assert _is_authoritative_id("") is False
 
 
@@ -150,7 +150,7 @@ def test_pass2_output_has_entity_id_and_canonical_id_null_when_synthetic(fixture
         entities = json.load(f)
     for e in entities:
         assert "entity_id" in e, "every entity must have entity_id"
-        if e["entity_id"].startswith("canon-"):
+        if e["entity_id"].startswith("prov-"):
             assert e.get("canonical_id") is None, "synthetic entity_id must have canonical_id null"
 
 
