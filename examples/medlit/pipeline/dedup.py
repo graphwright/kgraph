@@ -187,12 +187,14 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
     if not bundle_files:
         return {"error": "no bundle files", "entities_count": 0, "relationships_count": 0}
 
+    # Use filename as ground truth for paper_id. Never trust bundle.paper.pmcid — the LLM
+    # can hallucinate wrong IDs (e.g. from citations), causing document_id mix-ups.
     bundles: list[tuple[str, PerPaperBundle]] = []
     for path in bundle_files:
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         bundle = PerPaperBundle.from_bundle_dict(data)
-        paper_id = bundle.paper.pmcid or bundle.paper.doi or path.stem.replace("paper_", "")
+        paper_id = path.stem.replace("paper_", "")
         bundles.append((paper_id, bundle))
 
     # (name_lower, entity_class) -> merge key (authoritative or synthetic)

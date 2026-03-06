@@ -32,8 +32,16 @@ class PostgresStorage(StorageInterface):
             return
 
         print(f"Loading bundle {bundle_manifest.bundle_id} from {bundle_path}")
-        # Truncate all bundle tables so re-loads are idempotent
-        self._session.execute(text("TRUNCATE TABLE bundle, relationship, entity RESTART IDENTITY CASCADE"))
+        # Truncate all bundle tables so re-loads are idempotent. Must include
+        # bundle_mention and bundle_evidence — they have no FKs to entity/relationship,
+        # so CASCADE would not clear them. Old mentions with wrong document_ids would
+        # otherwise persist across runs and contaminate query results.
+        self._session.execute(
+            text(
+                "TRUNCATE TABLE bundle, relationship, entity, bundle_mention, bundle_evidence "
+                "RESTART IDENTITY CASCADE"
+            )
+        )
         self._session.commit()
 
         # Load entities

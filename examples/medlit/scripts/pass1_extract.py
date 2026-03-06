@@ -260,15 +260,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
     vocab_file: Optional[Path] = None,
 ) -> None:
     """Run Pass 1: for each paper in input_dir, call LLM and write bundle JSON to output_dir."""
-    import json as _json
-
     from examples.medlit.pipeline.pass1_llm import get_pass1_llm
-
-    # Phantom document IDs: known LLM hallucinations. Fail early if detected.
-    # TODO: Remove "11362215" when ingesting psychiatry papers — PMC11362215 is a real paper
-    # (persistent negative symptoms in psychosis) that was hallucinated into gastric-cancer
-    # evidence; it will be legitimate once we ingest that domain.
-    _phantom_ids = frozenset({"11362215"})
 
     llm = get_pass1_llm(llm_backend)
     base_prompt = system_prompt or _default_system_prompt()
@@ -338,14 +330,6 @@ async def run_pass1(  # pylint: disable=too-many-statements
             continue
         duration = time.perf_counter() - start
 
-        # Phantom ID check: fail early if LLM hallucinated a known phantom document ID.
-        raw_str = _json.dumps(raw_bundle)
-        for pid in _phantom_ids:
-            if pid in raw_str:
-                raise ValueError(
-                    f"Phantom document ID {pid} detected in LLM response for {path.name} (hallucination). " "Refusing to write bundle. Remove from _phantom_ids when ingesting that domain."
-                )
-
         # Normalize entity types to bundle PascalCase, then parse rows
         raw_entities = raw_bundle.get("entities", [])
         for en in raw_entities:
@@ -364,9 +348,11 @@ async def run_pass1(  # pylint: disable=too-many-statements
             authors = [raw_authors] if raw_authors.strip() else []
         else:
             authors = list(paper_info.authors) if paper_info.authors else []
+        # Never use raw_paper.get("pmcid") — the LLM can hallucinate wrong IDs (e.g. from
+        # citations or training). Use only parser/file-derived IDs for document provenance.
         paper = PaperInfo(
             doi=raw_paper.get("doi") or paper_info.doi,
-            pmcid=raw_paper.get("pmcid") or paper_info.pmcid or paper_id,
+            pmcid=paper_info.pmcid or (paper_id if str(paper_id).startswith("PMC") else None),
             title=raw_paper.get("title") or paper_info.title,
             authors=authors,
             journal=raw_paper.get("journal"),

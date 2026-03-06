@@ -77,12 +77,13 @@ def load_pass1_bundles(bundles_dir: Path) -> list[tuple[str, PerPaperBundle]]:
     """Load all paper_*.json bundles from bundles_dir. Returns list of (paper_id, bundle)."""
     result: list[tuple[str, PerPaperBundle]] = []
     for path in sorted(bundles_dir.glob("paper_*.json")):
+        # Use filename as ground truth for document_id. Never trust bundle.paper.pmcid —
+        # the LLM can hallucinate wrong IDs (e.g. from citations), causing mentions from
+        # paper A to be tagged with paper B's ID.
         paper_id = path.stem.replace("paper_", "")
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         bundle = PerPaperBundle.from_bundle_dict(data)
-        if bundle.paper.pmcid:
-            paper_id = bundle.paper.pmcid
         result.append((paper_id, bundle))
     return result
 
