@@ -35,6 +35,13 @@ PROVENANCE_DENYLIST = frozenset({
     "PMC_ID_NOT_PROVIDED",
 })
 
+# Phantom document IDs: known LLM hallucinations that must never appear in the bundle.
+# If found, fail early. Add IDs here as discovered.
+# TODO: Remove "11362215" when ingesting psychiatry papers — PMC11362215 is a real paper
+# (persistent negative symptoms in psychosis) that was hallucinated into gastric-cancer
+# evidence; it will be legitimate once we ingest that domain.
+PHANTOM_DOCUMENT_IDS = frozenset({"11362215"})
+
 
 def load_merged_output(merged_dir: Path) -> tuple[list[dict], list[dict], dict, dict]:
     """Load merged Pass 2 output and id_map.
@@ -456,6 +463,17 @@ def run_pass3(merged_dir: Path, bundles_dir: Path, output_dir: Path) -> dict[str
         "Medlit bundle built from Pass 1 + Pass 2 output.\n",
         encoding="utf-8",
     )
+
+    # Phantom ID check: fail if known hallucinated document IDs appear in the bundle
+    for phantom in PHANTOM_DOCUMENT_IDS:
+        for path in (output_dir / "mentions.jsonl", output_dir / "evidence.jsonl", output_dir / "entities.jsonl", output_dir / "relationships.jsonl"):
+            if path.exists():
+                content = path.read_text(encoding="utf-8")
+                if phantom in content:
+                    raise ValueError(
+                        f"Phantom document ID {phantom} detected in {path.name} (LLM hallucination). "
+                        "This ID is not in the pipeline; remove from PHANTOM_DOCUMENT_IDS once resolved."
+                    )
 
     return {
         "entity_count": len(entity_rows),
