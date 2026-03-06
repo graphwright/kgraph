@@ -85,7 +85,9 @@ Always cite the papers you draw evidence from when possible."""
 ORCHESTRATOR_SYSTEM_PROMPT = """You have tools to query a medical literature knowledge graph.
 Decide which tools to call to answer the user's question. Call tools as needed; when you have enough information, respond with a final answer."""
 
-SYNTHESIS_SYSTEM_PROMPT = """You are an expert assistant. Answer the user's question using the retrieved knowledge graph evidence. Cite papers and sources when possible.
+SYNTHESIS_SYSTEM_PROMPT = """You are an expert assistant. Answer the user's question ONLY using the retrieved knowledge graph evidence. Cite papers and sources when possible.
+
+CRITICAL: If the retrieved knowledge graph has no relevant entities for this query — for example, empty results, or results that relate to a different topic (e.g. from a previous question) — you MUST DECLINE TO ANSWER. Do NOT answer from general medical or scientific literature. Do NOT fabricate PMC citations. Simply state that you cannot answer because the graph has no relevant information for this query.
 
 When citing PMC articles, format PMC IDs (e.g. PMC11000000) as markdown links: [PMC11000000](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11000000/). Use the same pattern for any PMC ID you mention."""
 
