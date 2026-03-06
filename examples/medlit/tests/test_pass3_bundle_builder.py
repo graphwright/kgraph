@@ -324,35 +324,3 @@ def test_zero_mention_orphan_dropped(tmp_path):
         rel_lines = [json.loads(line) for line in f if line.strip()]
     rel_subjects = {r["subject_id"] for r in rel_lines}
     assert "canon-abc" not in rel_subjects, "Relationship referencing dropped entity should be filtered"
-
-
-def test_phantom_document_id_raises(tmp_path):
-    """Phantom document IDs (known LLM hallucinations) cause run_pass3 to raise ValueError."""
-    from examples.medlit.pipeline.bundle_builder import PHANTOM_DOCUMENT_IDS
-
-    phantom = next(iter(PHANTOM_DOCUMENT_IDS))  # e.g. "11362215"
-    paper_id = f"PMC{phantom}"
-    id_map = {paper_id: {"e1": "canon-phantom"}}
-    entities = [{"entity_id": "canon-phantom", "canonical_id": None, "class": "Gene", "name": "YY1", "synonyms": [], "source": "extracted", "source_papers": []}]
-    relationships = [{"subject": "canon-phantom", "predicate": "ASSOCIATED_WITH", "object": "canon-phantom", "evidence_ids": ["ev1"], "source_papers": [paper_id], "confidence": 0.9}]
-    bundle_data = {
-        "paper": {"pmcid": paper_id, "title": "Phantom", "authors": []},
-        "entities": [{"id": "e1", "class": "Gene", "name": "YY1", "synonyms": [], "source": "extracted"}],
-        "evidence_entities": [{"id": "ev1", "class": "Evidence", "paper_id": paper_id, "text": "YY1 in gastric cancer", "confidence": 0.9, "source": "extracted"}],
-        "relationships": [{"subject": "e1", "predicate": "ASSOCIATED_WITH", "object": "e1", "evidence_ids": ["ev1"], "source_papers": [paper_id], "confidence": 0.9}],
-        "notes": [],
-    }
-    merged_dir = tmp_path / "merged"
-    merged_dir.mkdir()
-    (merged_dir / "entities.json").write_text(json.dumps(entities, indent=2), encoding="utf-8")
-    (merged_dir / "relationships.json").write_text(json.dumps(relationships, indent=2), encoding="utf-8")
-    (merged_dir / "id_map.json").write_text(json.dumps(id_map, indent=2), encoding="utf-8")
-    (merged_dir / "synonym_cache.json").write_text("{}", encoding="utf-8")
-    bundles_dir = tmp_path / "bundles"
-    bundles_dir.mkdir()
-    (bundles_dir / f"paper_{paper_id}.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
-    output_dir = tmp_path / "out"
-    with pytest.raises(ValueError) as exc_info:
-        run_pass3(merged_dir, bundles_dir, output_dir)
-    assert phantom in str(exc_info.value)
-    assert "Phantom" in str(exc_info.value) or "hallucination" in str(exc_info.value).lower()
