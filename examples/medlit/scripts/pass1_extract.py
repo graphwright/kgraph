@@ -22,7 +22,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 # Add repo root for imports
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -47,6 +47,7 @@ from examples.medlit.bundle_models import (  # noqa: E402  # pylint: disable=wro
     PaperInfo,
     PerPaperBundle,
     RelationshipRow,
+    StudyDesignMetadata,
 )
 from examples.medlit_schema.base import (  # noqa: E402  # pylint: disable=wrong-import-position
     ExecutionInfo,
@@ -222,6 +223,38 @@ async def _paper_content_from_parser(raw_content: bytes, content_type: str, sour
     return text or "(no content)", info
 
 
+STUDY_DESIGN_PROMPT = """Extract study design metadata from this biomedical paper. Focus on the Methods section and abstract.
+
+Return a single JSON object with exactly these keys:
+- "study_type": string or null (e.g. "RCT", "observational", "case_report", "meta_analysis", "review")
+- "sample_size": integer or null (number of participants/subjects)
+- "multicenter": boolean (true if multi-site study)
+- "held_out_validation": boolean (true if held-out/test set used for validation)
+
+Return ONLY valid JSON, no markdown or commentary."""
+
+
+async def _extract_study_design(llm: Any, content: str) -> Optional[StudyDesignMetadata]:
+    """Second LLM call: extract study design from Methods/abstract. Returns None on failure."""
+    try:
+        raw = await llm.generate_json(
+            system_prompt=STUDY_DESIGN_PROMPT,
+            user_message=content[:50000],
+            temperature=0.0,
+            max_tokens=512,
+        )
+        if not isinstance(raw, dict):
+            return None
+        return StudyDesignMetadata(
+            study_type=raw.get("study_type"),
+            sample_size=raw.get("sample_size"),
+            multicenter=bool(raw.get("multicenter", False)),
+            held_out_validation=bool(raw.get("held_out_validation", False)),
+        )
+    except Exception:  # pylint: disable=broad-except
+        return None
+
+
 def _paper_content_fallback(raw_content: bytes, source_uri: str) -> tuple[str, PaperInfo]:
     """Fallback: use raw text and filename for paper id."""
     text = raw_content.decode("utf-8", errors="replace")
@@ -336,6 +369,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
             authors = list(paper_info.authors) if paper_info.authors else []
         # Never use raw_paper.get("pmcid") — the LLM can hallucinate wrong IDs (e.g. from
         # citations or training). Use only parser/file-derived IDs for document provenance.
+        study_design = await _extract_study_design(llm, content)
         paper = PaperInfo(
             doi=raw_paper.get("doi") or paper_info.doi,
             pmcid=paper_info.pmcid or (paper_id if str(paper_id).startswith("PMC") else None),
@@ -345,6 +379,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
             year=raw_paper.get("year"),
             study_type=raw_paper.get("study_type"),
             eco_type=raw_paper.get("eco_type"),
+            study_design=study_design,
         )
         llm_name = getattr(llm, "model", llm_backend)
         provenance = build_provenance(

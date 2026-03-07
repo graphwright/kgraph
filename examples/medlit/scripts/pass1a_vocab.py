@@ -31,8 +31,8 @@ try:
 except ImportError:
     pass
 
-from examples.medlit.pipeline.config_loader import load_entity_types
-from examples.medlit.scripts.pass1_extract import _normalized_to_bundle_class
+from examples.medlit.pipeline.config_loader import load_entity_types  # noqa: E402  # pylint: disable=wrong-import-position
+from examples.medlit.scripts.pass1_extract import _normalized_to_bundle_class  # noqa: E402  # pylint: disable=wrong-import-position
 
 
 def _pass1a_system_prompt(config_dir: Path) -> str:

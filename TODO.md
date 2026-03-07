@@ -6,22 +6,21 @@ Items left from PLAN2.md after the initial implementation. See PLAN2.md and inge
 
 ## Phase D (remaining)
 
-### D2: Study design trust signal (per-paper)
+### D2: Study design trust signal (per-paper) ✅ **DONE**
 
-- **Create** `StudyDesignMetadata` model in `examples/medlit/bundle_models.py`:
+- **Created** `StudyDesignMetadata` model in `examples/medlit/bundle_models.py`:
   - Fields: `study_type`, `sample_size`, `multicenter`, `held_out_validation`
-- **Modify** Pass 1b (`pass1_extract`): add a second LLM call per paper after main extraction
+- **Modified** Pass 1b (`pass1_extract`): second LLM call per paper after main extraction
   - Structured prompt against Methods section (and abstract if needed)
   - Returns the four fields above
 - **Storage:** Attach to paper-level node in bundle. Pass 3 output includes `study_design` on paper metadata.
-- **Note:** D2 and D3 both touch bundle_models.py; consider doing them in one pass.
 
-### D3: Provenance list structure
+### D3: Provenance list structure ✅ **DONE**
 
-- **Modify** bundle models and Pass 3 output:
-  - Relationship record: support `provenance: list[{section, sentence, citation_markers}]` in addition to or replacing single `evidence_ids`
-  - Accumulate evidence per (sub, pred, obj) as list; don't flatten
-- **Acceptance:** Schema supports multiple provenance records per relationship. Pass 3 emits it when available.
+- **Modified** bundle models and Pass 3 output:
+  - Relationship record: `ProvenanceEntry` with `section`, `sentence`, `citation_markers`; `RelationshipRow.provenance` list
+  - Dedup accumulates provenance from evidence per (sub, pred, obj)
+- **Acceptance:** Schema supports multiple provenance records per relationship. Pass 3 emits it in `properties["provenance"]` when available.
 
 ---
 

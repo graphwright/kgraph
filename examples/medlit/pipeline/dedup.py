@@ -13,7 +13,7 @@ import uuid
 from pathlib import Path
 from typing import Any, Optional
 
-from examples.medlit.bundle_models import ExtractedEntityRow, PerPaperBundle
+from examples.medlit.bundle_models import ExtractedEntityRow, PerPaperBundle, ProvenanceEntry
 from examples.medlit.pipeline.config_loader import load_entity_types
 from examples.medlit.pipeline.synonym_cache import (
     add_same_as_to_cache,
@@ -392,14 +392,22 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
                     "predicate": rel.predicate,
                     "object": obj_c,
                     "evidence_ids": [],
+                    "provenance": [],
                     "source_papers": [],
                     "confidence": rel.confidence,
                     "linguistic_trust": getattr(rel, "linguistic_trust", None),
                 }
             r = triple_to_rel[key]
+            ev_by_id = {ev.id: ev for ev in bundle.evidence_entities}
             for eid in rel.evidence_ids or []:
                 if eid not in r["evidence_ids"]:
                     r["evidence_ids"].append(eid)
+                    ev = ev_by_id.get(eid)
+                    # Evidence ID format: paper_id:section:paragraph_idx:method (e.g. PMC12756687:abstract:0:llm)
+                    parts = eid.split(":")
+                    section = parts[1] if len(parts) >= 2 else None
+                    sentence = ev.text if ev else None
+                    r["provenance"].append(ProvenanceEntry(section=section, sentence=sentence, citation_markers=[]).model_dump())
             for sp in rel.source_papers or [paper_id]:
                 if sp not in r["source_papers"]:
                     r["source_papers"].append(sp)

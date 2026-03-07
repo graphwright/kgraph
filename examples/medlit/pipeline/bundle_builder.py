@@ -256,6 +256,8 @@ def _merged_rel_to_relationship_row(
     props = dict(rel.get("properties", {}))
     if rel.get("linguistic_trust"):
         props["linguistic_trust"] = rel["linguistic_trust"]
+    if rel.get("provenance"):
+        props["provenance"] = rel["provenance"]
     return RelationshipRow(
         subject_id=rel["subject"],
         object_id=rel["object"],
@@ -447,6 +449,13 @@ def run_pass3(
     with open(output_dir / "doc_assets.jsonl", "w", encoding="utf-8") as f:
         f.write(doc_asset.model_dump_json() + "\n")
 
+    papers_metadata: dict[str, dict[str, Any]] = {}
+    for paper_id, bundle in bundles:
+        if bundle.paper.study_design is not None:
+            papers_metadata[paper_id] = {
+                "study_design": bundle.paper.study_design.model_dump(mode="json"),
+            }
+
     manifest = BundleManifestV1(
         bundle_version="v1",
         bundle_id=uuid.uuid4().hex,
@@ -462,6 +471,7 @@ def run_pass3(
             "entity_count": len(entity_rows),
             "relationship_count": len(relationship_rows),
             "description": "Knowledge graph bundle from two-pass medlit pipeline",
+            "papers": papers_metadata,
         },
     )
     with open(output_dir / "manifest.json", "w", encoding="utf-8") as f:

@@ -114,6 +114,26 @@ def test_pass2_accumulates_relationship_sources(fixture_bundle_dir, tmp_path):
         assert "source_papers" in r and isinstance(r["source_papers"], list)
 
 
+def test_pass2_accumulates_provenance_from_evidence(fixture_bundle_dir, tmp_path):
+    """Merged relationships have provenance built from evidence_entities (section, sentence)."""
+    output_dir = tmp_path / "merged"
+    run_pass2(
+        bundle_dir=fixture_bundle_dir,
+        output_dir=output_dir,
+        synonym_cache_path=output_dir / "synonym_cache.json",
+    )
+    with open(output_dir / "relationships.json", encoding="utf-8") as f:
+        rels = json.load(f)
+    rels_with_evidence = [r for r in rels if r.get("evidence_ids")]
+    assert len(rels_with_evidence) >= 1, "fixture bundles have relationships with evidence"
+    for r in rels_with_evidence:
+        assert "provenance" in r and isinstance(r["provenance"], list)
+        assert len(r["provenance"]) >= 1, "each evidence_id should produce a provenance entry"
+        entry = r["provenance"][0]
+        assert "section" in entry
+        assert "sentence" in entry
+
+
 def test_fixture_bundles_load(fixture_bundle_dir):
     """Fixture bundles are valid PerPaperBundle."""
     for path in sorted(fixture_bundle_dir.glob("paper_*.json")):

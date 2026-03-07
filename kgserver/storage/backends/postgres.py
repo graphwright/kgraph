@@ -36,7 +36,7 @@ class PostgresStorage(StorageInterface):
         # bundle_mention and bundle_evidence — they have no FKs to entity/relationship,
         # so CASCADE would not clear them. Old mentions with wrong document_ids would
         # otherwise persist across runs and contaminate query results.
-        self._session.execute(text("TRUNCATE TABLE bundle, relationship, entity, bundle_mention, bundle_evidence " "RESTART IDENTITY CASCADE"))
+        self._session.execute(text("TRUNCATE TABLE bundle, relationship, entity, bundle_mention, bundle_evidence RESTART IDENTITY CASCADE"))
         self._session.commit()
 
         # Load entities

@@ -16,6 +16,25 @@ from examples.medlit_schema.base import ExtractionProvenance
 # -----------------------------------------------------------------------------
 
 
+class StudyDesignMetadata(BaseModel):
+    """Study design trust signal extracted from Methods/abstract (second LLM call per paper)."""
+
+    study_type: Optional[str] = None  # e.g. RCT, observational, case_report
+    sample_size: Optional[int] = None
+    multicenter: bool = False
+    held_out_validation: bool = False
+
+    @field_validator("sample_size", mode="before")
+    @classmethod
+    def coerce_sample_size(cls, v):
+        if v is None:
+            return None
+        try:
+            return int(v)
+        except (ValueError, TypeError):
+            return None
+
+
 class PaperInfo(BaseModel):
     """Paper metadata in the per-paper bundle."""
 
@@ -27,6 +46,7 @@ class PaperInfo(BaseModel):
     year: Optional[int] = None
     study_type: Optional[str] = None
     eco_type: Optional[str] = None
+    study_design: Optional[StudyDesignMetadata] = None
 
     @field_validator("year", mode="before")
     @classmethod
@@ -95,6 +115,14 @@ class EvidenceEntityRow(BaseModel):
 LinguisticTrust = Literal["asserted", "suggested", "speculative"]
 
 
+class ProvenanceEntry(BaseModel):
+    """One provenance record for a relationship (section, sentence, optional citation markers)."""
+
+    section: Optional[str] = None
+    sentence: Optional[str] = None
+    citation_markers: list[str] = Field(default_factory=list)
+
+
 class RelationshipRow(BaseModel):
     """One relationship in the bundle. evidence_ids optional for SAME_AS."""
 
@@ -104,6 +132,10 @@ class RelationshipRow(BaseModel):
     predicate: str
     object_id: str = Field(alias="object", description="Object entity ID (bundle-local or canonical)")
     evidence_ids: list[str] = Field(default_factory=list)
+    provenance: list[ProvenanceEntry] = Field(
+        default_factory=list,
+        description="Provenance list: section, sentence, citation_markers per occurrence.",
+    )
     source_papers: list[str] = Field(default_factory=list)
     confidence: float = 0.5
     linguistic_trust: Optional[LinguisticTrust] = None  # asserted | suggested | speculative

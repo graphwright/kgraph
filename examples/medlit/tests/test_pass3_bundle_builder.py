@@ -43,6 +43,9 @@ def minimal_merged_dir(tmp_path):
             "predicate": "INCREASES_RISK",
             "object": "C0006142",
             "evidence_ids": ["PMC12756687:abstract:0:llm"],
+            "provenance": [
+                {"section": "abstract", "sentence": "BRCA2 increases risk of breast cancer", "citation_markers": []},
+            ],
             "source_papers": ["PMC12756687"],
             "confidence": 0.55,
         },
@@ -152,6 +155,23 @@ def test_first_seen_section_populated_from_evidence_id(minimal_merged_dir, minim
     entities_with_section = [e for e in entities if e.get("first_seen_section")]
     assert len(entities_with_section) >= 1, "At least one entity should have first_seen_section"
     assert any(e.get("first_seen_section") == "abstract" for e in entities_with_section)
+
+
+def test_relationship_row_includes_provenance_in_properties(minimal_merged_dir, minimal_bundles_dir, tmp_path):
+    """When merged relationships have provenance, Pass 3 emits it in properties."""
+    output_dir = tmp_path / "out"
+    run_pass3(minimal_merged_dir, minimal_bundles_dir, output_dir)
+
+    with open(output_dir / "relationships.jsonl", encoding="utf-8") as f:
+        rel_lines = [json.loads(line) for line in f if line.strip()]
+    assert len(rel_lines) >= 1
+    rel = rel_lines[0]
+    assert "properties" in rel
+    assert "provenance" in rel["properties"]
+    prov = rel["properties"]["provenance"]
+    assert len(prov) >= 1
+    assert prov[0].get("section") == "abstract"
+    assert "BRCA2" in (prov[0].get("sentence") or "")
 
 
 def test_evidence_row_relationship_key_uses_merge_keys(minimal_merged_dir, minimal_bundles_dir, tmp_path):
