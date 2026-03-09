@@ -16,6 +16,7 @@ domain implementations.
 
 from kgschema.canonical_id import CanonicalId
 from kgschema.document import BaseDocument
+from kgschema.spec import EntitySpec, EvidenceSpec, MentionsSpec, PredicateSpec
 from kgschema.domain import DomainSchema
 from kgschema.entity import BaseEntity, EntityMention, EntityStatus, PromotionConfig
 from kgschema.promotion import PromotionPolicy
@@ -27,6 +28,10 @@ from kgschema.storage import (
 )
 
 __all__ = [
+    "EntitySpec",
+    "EvidenceSpec",
+    "MentionsSpec",
+    "PredicateSpec",
     "BaseDocument",
     "BaseEntity",
     "BaseRelationship",

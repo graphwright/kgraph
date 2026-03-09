@@ -23,7 +23,7 @@ from examples.medlit.pipeline.parser import JournalArticleParser
 from examples.medlit.pipeline.mentions import MedLitEntityExtractor
 from examples.medlit.pipeline.resolve import MedLitEntityResolver
 from examples.medlit.pipeline.relationships import MedLitRelationshipExtractor
-from examples.medlit.pipeline.embeddings import OllamaMedLitEmbeddingGenerator
+from kgraph.pipeline.ollama_embedding import OllamaEmbeddingGenerator
 
 
 @pytest.fixture
@@ -34,7 +34,7 @@ async def medlit_orchestrator(
 ):
     """Create orchestrator with MedLit domain for promotion testing."""
     domain = MedLitDomainSchema()
-    embedding_generator = OllamaMedLitEmbeddingGenerator()
+    embedding_generator = OllamaEmbeddingGenerator()
     return IngestionOrchestrator(
         domain=domain,
         parser=JournalArticleParser(),

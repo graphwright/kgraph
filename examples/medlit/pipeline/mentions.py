@@ -10,7 +10,7 @@ from kgschema.domain import DomainSchema
 from kgschema.entity import EntityMention
 from kgraph.pipeline.interfaces import EntityExtractorInterface
 
-from .llm_client import LLMClientInterface
+from kgraph.pipeline.llm_client import LLMClientInterface
 
 
 def _normalize_mention_key(name: str, entity_type: str) -> tuple[str, str]:

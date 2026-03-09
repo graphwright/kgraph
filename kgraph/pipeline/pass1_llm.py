@@ -11,7 +11,6 @@ import os
 from abc import ABC, abstractmethod
 from typing import Any, Optional
 
-# Optional: Anthropic
 try:
     import anthropic
 
@@ -19,7 +18,6 @@ try:
 except ImportError:
     ANTHROPIC_AVAILABLE = False
 
-# Optional: OpenAI (used for OpenAI API and Lambda Labs / OpenAI-compatible endpoints)
 try:
     from openai import AsyncOpenAI
 
@@ -94,7 +92,6 @@ class AnthropicPass1LLM(Pass1LLMInterface):
             ),
             timeout=self.timeout,
         )
-        # First content block may be TextBlock or other; extract .text only from text blocks
         text = ""
         if response.content:
             for block in response.content:
@@ -160,7 +157,6 @@ class OllamaPass1LLM(Pass1LLMInterface):
         temperature: float = 0.1,
         max_tokens: int = 16384,
     ) -> dict[str, Any]:
-        # Ollama client expects a single prompt; combine system + user
         combined = f"{system_prompt}\n\n---\n\n{user_message}"
         result = await self._client.generate_json(combined, temperature=temperature)
         if isinstance(result, list):
@@ -179,7 +175,7 @@ def get_pass1_llm(
     """Return a Pass 1 LLM for the given backend.
 
     backend: "anthropic" | "openai" | "ollama"
-    model: Override default model (e.g. ANTHROPIC_MODEL, OPENAI_MODEL).
+    model: Override default model.
     base_url: For OpenAI-compatible endpoints (e.g. Lambda Labs).
     ollama_client: For backend "ollama", an OllamaLLMClient instance.
     """
@@ -197,7 +193,7 @@ def get_pass1_llm(
         )
     if backend == "ollama":
         if ollama_client is None:
-            from examples.medlit.pipeline.llm_client import OllamaLLMClient
+            from kgraph.pipeline.llm_client import OllamaLLMClient
 
             ollama_client = OllamaLLMClient(
                 model=os.environ.get("OLLAMA_MODEL", "llama3.1:8b"),

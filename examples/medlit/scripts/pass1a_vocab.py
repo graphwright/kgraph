@@ -173,7 +173,7 @@ def _vocab_to_seeded_cache(
     normalized_to_bundle: dict[str, str],
 ) -> dict[str, list[dict[str, Any]]]:
     """Build Pass 2 synonym cache format from vocab list so lookup_entity returns canonical_id."""
-    from examples.medlit.pipeline.synonym_cache import _normalize
+    from kgraph.pipeline.synonym_cache import _normalize
 
     cache: dict[str, list[dict[str, Any]]] = {}
     for e in vocab_entries:
@@ -229,7 +229,7 @@ async def run_pass1a(
     config_dir: Optional[Path] = None,
 ) -> None:
     """Run Pass 1a: extract vocabulary from papers, merge, validate UMLS types, write vocab + seeded cache."""
-    from examples.medlit.pipeline.pass1_llm import get_pass1_llm
+    from kgraph.pipeline.pass1_llm import get_pass1_llm
 
     default_config = REPO_ROOT / "examples" / "medlit" / "config"
     cfg_dir = config_dir if config_dir is not None else default_config

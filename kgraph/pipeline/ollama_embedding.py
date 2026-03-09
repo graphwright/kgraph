@@ -1,4 +1,4 @@
-"""Embedding generation for medical entities.
+"""Ollama embedding generator.
 
 Uses Ollama's /api/embed endpoint (single or batch input).
 """
@@ -11,12 +11,12 @@ import httpx
 from kgraph.pipeline.embedding import EmbeddingGeneratorInterface
 
 
-class OllamaMedLitEmbeddingGenerator(EmbeddingGeneratorInterface):
-    """Real embedding generator using Ollama.
+class OllamaEmbeddingGenerator(EmbeddingGeneratorInterface):
+    """Embedding generator using Ollama.
 
     Uses Ollama's /api/embed API. Supports single text or batch of texts
     in one request. Default model is nomic-embed-text; mxbai-embed-large
-    also works well on medical text.
+    also works well.
     """
 
     def __init__(
@@ -26,7 +26,9 @@ class OllamaMedLitEmbeddingGenerator(EmbeddingGeneratorInterface):
         timeout: float = 30.0,
     ):
         self.model = model
-        self.ollama_host: str = ollama_host or os.getenv("OLLAMA_HOST", "http://localhost:11434") or "http://localhost:11434"
+        self.ollama_host: str = (
+            ollama_host or os.getenv("OLLAMA_HOST", "http://localhost:11434") or "http://localhost:11434"
+        )
         self.timeout = timeout
         self._dimension: Optional[int] = None
 
@@ -47,14 +49,7 @@ class OllamaMedLitEmbeddingGenerator(EmbeddingGeneratorInterface):
         return f"{self.ollama_host.rstrip('/')}/api/embed"
 
     async def generate(self, text: str) -> tuple[float, ...]:
-        """Generate embedding for a single text using Ollama /api/embed.
-
-        Args:
-            text: The text to generate an embedding for.
-
-        Returns:
-            Tuple of float values representing the embedding vector.
-        """
+        """Generate embedding for a single text using Ollama /api/embed."""
         result = await self._request_batch([text])
         return result[0]
 
@@ -81,15 +76,7 @@ class OllamaMedLitEmbeddingGenerator(EmbeddingGeneratorInterface):
         return [tuple(e) for e in emb_list]
 
     async def generate_batch(self, texts: Sequence[str]) -> list[tuple[float, ...]]:
-        """Generate embeddings for multiple texts in one request when possible.
-
-        Args:
-            texts: Sequence of texts to generate embeddings for.
-
-        Returns:
-            List of embedding tuples in the same order as input texts.
-        """
+        """Generate embeddings for multiple texts in one request when possible."""
         if not texts:
             return []
-        texts_list = list(texts)
-        return await self._request_batch(texts_list)
+        return await self._request_batch(list(texts))

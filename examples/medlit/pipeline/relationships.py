@@ -20,7 +20,7 @@ from kgschema.entity import BaseEntity
 from kgschema.relationship import BaseRelationship
 
 from ..relationships import MedicalClaimRelationship
-from .llm_client import LLMClientInterface
+from kgraph.pipeline.llm_client import LLMClientInterface
 
 # Default directory for relationship extraction trace files
 DEFAULT_TRACE_DIR = Path("/tmp/kgraph-relationship-traces")

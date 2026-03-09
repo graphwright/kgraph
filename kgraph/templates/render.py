@@ -7,6 +7,16 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
+def _format_from_domain_spec(domain_spec: Any) -> tuple[str, str, str]:
+    """Build entity_types_str, predicates_str, domain_instructions from domain_spec module."""
+    bundle_to_entity = getattr(domain_spec, "BUNDLE_CLASS_TO_ENTITY", {})
+    entity_types_str = ", ".join(sorted(bundle_to_entity.keys())) if bundle_to_entity else "Disease, Gene, Drug, etc."
+    predicates = getattr(domain_spec, "PREDICATES", {})
+    predicates_str = ", ".join(sorted(predicates.keys())) if predicates else "TREATS, INCREASES_RISK, etc."
+    domain_instructions = (getattr(domain_spec, "PROMPT_INSTRUCTIONS", "") or "").strip() + "\n\n"
+    return entity_types_str, predicates_str, domain_instructions
+
+
 def _load_config(config_dir: Path) -> tuple[dict[str, Any], dict[str, Any], str]:
     """Load entity_types, predicates, domain_instructions from config_dir."""
     if not config_dir.exists():
@@ -56,19 +66,20 @@ def _format_vocab_section(vocab_entries: list[dict[str, Any]]) -> str:
 
 
 def render_extraction_prompt(
-    config_dir: Path,
+    config_dir: Optional[Path] = None,
     vocab_entries: Optional[list[dict[str, Any]]] = None,
+    domain_spec: Optional[Any] = None,
 ) -> str:
     """Render entity/relationship extraction prompt from config and optional vocab.
 
-    Loads entity_types.yaml, predicates.yaml, domain_instructions.md from config_dir.
-    Pre-formats entity_types and predicates into strings. Renders
-    entity_relationship_extraction.j2 and appends vocab_section if provided.
+    When domain_spec is provided, uses it as single source of truth (ENTITY_CLASSES,
+    PREDICATES, PROMPT_INSTRUCTIONS). Otherwise loads from config_dir.
 
     Args:
         config_dir: Directory containing entity_types.yaml, predicates.yaml,
-            domain_instructions.md.
+            domain_instructions.md. Ignored when domain_spec is provided.
         vocab_entries: Optional list of {"name", "type", ...} for corpus vocab.
+        domain_spec: Optional module with ENTITY_CLASSES, PREDICATES, PROMPT_INSTRUCTIONS.
 
     Returns:
         Full prompt string for LLM.
@@ -80,12 +91,14 @@ def render_extraction_prompt(
     )
     template = env.get_template("entity_relationship_extraction.j2")
 
-    # Load config (with fallbacks when config_dir missing)
-    entity_types, predicates, domain = _load_config(config_dir)
-
-    entity_types_str = _format_entity_types_for_prompt(entity_types)
-    predicates_str = _format_predicates_for_prompt(predicates)
-    domain_instructions = domain.strip() + "\n\n" if domain.strip() else ""
+    if domain_spec is not None:
+        entity_types_str, predicates_str, domain_instructions = _format_from_domain_spec(domain_spec)
+    else:
+        config_dir = config_dir or Path(".")
+        entity_types, predicates, domain = _load_config(config_dir)
+        entity_types_str = _format_entity_types_for_prompt(entity_types)
+        predicates_str = _format_predicates_for_prompt(predicates)
+        domain_instructions = domain.strip() + "\n\n" if domain.strip() else ""
     vocab_section = _format_vocab_section(vocab_entries or [])
 
     return template.render(

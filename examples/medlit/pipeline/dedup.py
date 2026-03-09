@@ -15,7 +15,7 @@ from typing import Any, Optional
 
 from examples.medlit.bundle_models import ExtractedEntityRow, PerPaperBundle, ProvenanceEntry
 from examples.medlit.pipeline.config_loader import load_entity_types
-from examples.medlit.pipeline.synonym_cache import (
+from kgraph.pipeline.synonym_cache import (
     add_same_as_to_cache,
     load_synonym_cache,
     lookup_entity,

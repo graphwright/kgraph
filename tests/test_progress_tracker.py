@@ -1,4 +1,4 @@
-"""Tests for ProgressTracker (examples/medlit/progress.py).
+"""Tests for ProgressTracker (kgraph.progress).
 
 Tests progress tracking and reporting functionality.
 """
@@ -7,7 +7,7 @@ import time
 from io import StringIO
 from unittest.mock import patch
 
-from examples.medlit.progress import ProgressTracker
+from kgraph.progress import ProgressTracker
 
 
 class TestProgressTrackerBasics:

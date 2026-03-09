@@ -196,11 +196,19 @@ def normalize_entity_type(raw_type: str, normalized_to_bundle: dict[str, str]) -
     return normalized_to_bundle.get(normalized, "Other")
 
 
-def _default_system_prompt(config_dir: Path, vocab_entries: Optional[list[dict]] = None) -> str:
-    """Build system prompt from config via Jinja2 template."""
+def _default_system_prompt(
+    config_dir: Path,
+    vocab_entries: Optional[list[dict]] = None,
+    domain_spec: Optional[Any] = None,
+) -> str:
+    """Build system prompt from config or domain_spec via Jinja2 template."""
     from kgraph.templates import render_extraction_prompt
 
-    return render_extraction_prompt(config_dir, vocab_entries)
+    return render_extraction_prompt(
+        config_dir=config_dir,
+        vocab_entries=vocab_entries,
+        domain_spec=domain_spec,
+    )
 
 
 async def _paper_content_from_parser(raw_content: bytes, content_type: str, source_uri: str) -> tuple[str, Optional[PaperInfo]]:
@@ -273,12 +281,15 @@ async def run_pass1(  # pylint: disable=too-many-statements
     config_dir: Optional[Path] = None,
 ) -> None:
     """Run Pass 1: for each paper in input_dir, call LLM and write bundle JSON to output_dir."""
-    from examples.medlit.pipeline.pass1_llm import get_pass1_llm
+    from kgraph.pipeline.pass1_llm import get_pass1_llm
+
+    import examples.medlit.domain_spec as _ds
 
     default_config = REPO_ROOT / "examples" / "medlit" / "config"
     cfg_dir = config_dir if config_dir is not None else default_config
-    entity_types = load_entity_types(cfg_dir)
-    normalized_to_bundle = _normalized_to_bundle_class(entity_types)
+    normalized_to_bundle = getattr(_ds, "NORMALIZED_TO_BUNDLE", None) or _normalized_to_bundle_class(
+        load_entity_types(cfg_dir)
+    )
     schema_version = get_schema_version(cfg_dir) if cfg_dir.exists() else None
 
     vocab_entries: Optional[list[dict]] = None
@@ -293,7 +304,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
             vocab_entries = None
 
     llm = get_pass1_llm(llm_backend)
-    prompt = system_prompt or _default_system_prompt(cfg_dir, vocab_entries)
+    prompt = system_prompt or _default_system_prompt(cfg_dir, vocab_entries, domain_spec=_ds)
     prompt_checksum = hashlib.sha256(prompt.encode()).hexdigest()[:16]
 
     # Discover input files: by glob patterns or all *.xml/*.json

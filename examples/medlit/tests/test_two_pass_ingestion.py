@@ -10,7 +10,7 @@ from pathlib import Path
 
 from examples.medlit.bundle_models import PerPaperBundle
 from examples.medlit.pipeline.dedup import _is_authoritative_id, run_pass2
-from examples.medlit.pipeline.synonym_cache import load_synonym_cache
+from kgraph.pipeline.synonym_cache import load_synonym_cache
 
 FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures" / "bundles"
 

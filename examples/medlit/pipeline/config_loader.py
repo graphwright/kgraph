@@ -1,4 +1,11 @@
-"""Config loader for medlit schema. Loads entity_types, predicates, domain_instructions from config dir."""
+"""Config loader for medlit schema. Loads entity_types, predicates, domain_instructions from config dir.
+
+TODO: migrate to domain_spec. Full migration: (1) Switch pass1_extract, pass1a_vocab,
+dedup to use NORMALIZED_TO_BUNDLE and entity data from domain_spec. (2) Replace
+get_schema_version with a hash of domain_spec module source (e.g.
+hashlib.sha256(inspect.getsource(domain_spec).encode()).hexdigest()[:8]). (3) Delete
+entity_types.yaml, predicates.yaml, domain_instructions.md and this module.
+"""
 
 import hashlib
 from pathlib import Path

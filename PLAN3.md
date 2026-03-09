@@ -223,6 +223,18 @@ Final: `uv run pytest` and manual check that Pass 1 extraction, Pass 2 dedup, Pa
 
 ---
 
+## Deferred: Complete config_loader → domain_spec migration
+
+The ssot branch establishes `domain_spec.py` as SSOT for prompts and pass1 type mapping,
+but `config_loader.py` remains load-bearing in pass1_extract (get_schema_version, fallback),
+pass1a_vocab, and dedup. Full migration: wire those three to domain_spec, replace
+get_schema_version with hash of domain_spec module source, then delete YAML files and
+config_loader. See `config_loader.py` TODO. Also: change `render_extraction_prompt` to
+raise an explicit error when both `domain_spec` and `config_dir` are None (instead of
+silently falling back to `Path(".")`).
+
+---
+
 ## Domain-Agnostic Moves to kgraph Core
 
 **North star:** A new domain implementor provides `domain_spec.py` (entity classes + specs, PREDICATES, PROMPT_INSTRUCTIONS, EVIDENCE, MENTIONS), BaseDocument subclass, and PromotionPolicy. Everything else inherited from core.

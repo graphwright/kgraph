@@ -1,4 +1,4 @@
-"""Progress tracking for long-running medlit operations (extracted from legacy ingest)."""
+"""Progress tracking for long-running pipeline operations."""
 
 import sys
 import time
