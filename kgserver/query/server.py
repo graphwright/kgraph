@@ -14,6 +14,7 @@ from .bundle_loader import load_bundle_at_startup
 from .routers import rest_api
 from .routers import graphiql_custom
 from .routers import graph_api
+from .routers import subgraph_api
 from .graphql_schema import Query
 from storage.interfaces import StorageInterface
 
@@ -49,6 +50,9 @@ app.include_router(rest_api.router)
 
 # Mount Graph Visualization API
 app.include_router(graph_api.router)
+
+# Mount REST Subgraph API (LLM-friendly)
+app.include_router(subgraph_api.router)
 
 
 # Create a context getter that uses your dependency

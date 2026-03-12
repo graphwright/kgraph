@@ -230,6 +230,89 @@ def extract_subgraph(
     )
 
 
+def _extract_subgraph_multi_seed(
+    storage: StorageInterface,
+    seed_ids: list[str],
+    hops: int = 2,
+    max_nodes: int = DEFAULT_MAX_NODES,
+    min_confidence: Optional[float] = None,
+    predicate_set: Optional[frozenset[str]] = None,
+) -> tuple[list, list, bool]:
+    """
+    Multi-seed BFS returning raw Entity and Relationship objects.
+
+    Returns (entities, relationships, truncated).
+    Used by REST subgraph API.
+    """
+    hops = min(hops, MAX_HOPS)
+    max_nodes = min(max_nodes, MAX_NODES_LIMIT)
+
+    visited_ids: set[str] = set()
+    frontier: set[str] = set()
+    for eid in seed_ids:
+        ent = storage.get_entity(eid)
+        if ent:
+            visited_ids.add(eid)
+            frontier.add(eid)
+
+    if not frontier:
+        return [], [], False
+
+    collected_edges: list = []
+    truncated = False
+
+    for _ in range(hops):
+        if not frontier:
+            break
+
+        next_frontier: set[str] = set()
+
+        for entity_id in frontier:
+            subject_rels = storage.find_relationships(subject_id=entity_id, limit=1000)
+            object_rels = storage.find_relationships(object_id=entity_id, limit=1000)
+            all_rels = list(subject_rels) + list(object_rels)
+
+            for rel in all_rels:
+                if min_confidence is not None and (rel.confidence or 0) < min_confidence:
+                    continue
+                if predicate_set is not None and rel.predicate.upper() not in predicate_set:
+                    continue
+
+                edge_key = (rel.subject_id, rel.predicate, rel.object_id)
+                if not any((e.subject_id, e.predicate, e.object_id) == edge_key for e in collected_edges):
+                    collected_edges.append(rel)
+
+                if rel.subject_id == entity_id:
+                    neighbor = rel.object_id
+                else:
+                    neighbor = rel.subject_id
+
+                if neighbor not in visited_ids:
+                    next_frontier.add(neighbor)
+                    visited_ids.add(neighbor)
+                    if len(visited_ids) >= max_nodes:
+                        truncated = True
+                        break
+
+            if truncated:
+                break
+
+        if truncated:
+            break
+
+        frontier = next_frontier
+
+    entities = []
+    for eid in visited_ids:
+        ent = storage.get_entity(eid)
+        if ent:
+            entities.append(ent)
+
+    relationships = [rel for rel in collected_edges if rel.subject_id in visited_ids and rel.object_id in visited_ids]
+
+    return entities, relationships, truncated
+
+
 def extract_full_graph(
     storage: StorageInterface,
     max_nodes: int = DEFAULT_MAX_NODES,

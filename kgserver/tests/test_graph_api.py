@@ -14,12 +14,14 @@ from query.graph_traversal import (
 
 @pytest.fixture
 def app():
-    """Create FastAPI app with Graph API router (module-level for use by all API test classes)."""
+    """Create FastAPI app with Graph API and Subgraph API routers."""
     from fastapi import FastAPI
     from query.routers import graph_api
+    from query.routers import subgraph_api
 
     _app = FastAPI()
     _app.include_router(graph_api.router)
+    _app.include_router(subgraph_api.router)
     return _app
 
 
@@ -358,6 +360,98 @@ class TestGraphAPI:
         data = response.json()
         assert "evidence" in data
         assert data["evidence"] == []
+
+
+class TestSubgraphAPI:
+    """Tests for REST Subgraph API."""
+
+    @pytest.fixture
+    def file_storage(self, tmp_path, sample_entities, sample_relationships):
+        """Create SQLite storage for thread-safe testing."""
+        from storage.backends.sqlite import SQLiteStorage
+
+        db_path = tmp_path / "test_subgraph.db"
+        storage = SQLiteStorage(str(db_path), check_same_thread=False)
+        for entity in sample_entities:
+            storage.add_entity(entity)
+        for rel in sample_relationships:
+            storage.add_relationship(rel)
+        try:
+            yield storage
+        finally:
+            storage.close()
+            if db_path.exists():
+                db_path.unlink()
+
+    @pytest.fixture
+    def client(self, app, file_storage):
+        """Create test client with storage dependency override."""
+        from query.storage_factory import get_storage
+
+        def override_get_storage():
+            yield file_storage
+
+        app.dependency_overrides[get_storage] = override_get_storage
+        client = TestClient(app)
+        yield client
+        app.dependency_overrides.clear()
+
+    def test_subgraph_requires_entity_or_name(self, client):
+        """GET /api/v1/subgraph with no params returns 400."""
+        response = client.get("/api/v1/subgraph")
+        assert response.status_code == 400
+        assert "entity or name" in response.json()["detail"].lower()
+
+    def test_subgraph_by_entity_id(self, client):
+        """entity=test:entity:1&hops=1 returns 200, entities non-empty, query.seeds correct."""
+        response = client.get(
+            "/api/v1/subgraph",
+            params={"entity": "test:entity:1", "hops": 1},
+        )
+        assert response.status_code == 200
+        data = response.json()
+        assert "entities" in data
+        assert len(data["entities"]) > 0
+        assert data["query"]["seeds"] == ["test:entity:1"]
+        assert "relationships" in data
+
+    def test_subgraph_by_name_glob(self, client):
+        """name=Test&hops=1 resolves seeds from name match."""
+        response = client.get(
+            "/api/v1/subgraph",
+            params={"name": "Test", "hops": 1},
+        )
+        assert response.status_code == 200
+        data = response.json()
+        assert "entities" in data
+        assert len(data["entities"]) > 0
+        assert len(data["query"]["seeds"]) > 0
+
+    def test_subgraph_empty_seeds(self, client):
+        """entity=nonexistent123 returns 200 with empty entities and relationships."""
+        response = client.get(
+            "/api/v1/subgraph",
+            params={"entity": "nonexistent123", "hops": 1},
+        )
+        assert response.status_code == 200
+        data = response.json()
+        assert data["entities"] == []
+        assert data["relationships"] == []
+        assert data["query"]["seeds"] == []
+
+    def test_subgraph_query_echo(self, client):
+        """Response includes query with seeds, hops, filters, truncated."""
+        response = client.get(
+            "/api/v1/subgraph",
+            params={"entity": "test:entity:1", "hops": 2},
+        )
+        assert response.status_code == 200
+        data = response.json()
+        assert "query" in data
+        assert "seeds" in data["query"]
+        assert "hops" in data["query"]
+        assert "filters" in data["query"]
+        assert "truncated" in data["query"]
 
 
 class TestGraphAPIProvenance:

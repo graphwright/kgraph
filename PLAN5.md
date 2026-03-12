@@ -1,6 +1,6 @@
 # PLAN5: REST Subgraph API
 
-**Status:** Draft. Execute in order. Run `./lint.sh` after completing all steps.
+**Status:** Implemented. Run `./lint.sh` to verify.
 
 **Goal:** Add `GET /api/v1/subgraph` returning `{entities, relationships, query}` with entity selection (ID, name glob) and filters (hops, min_confidence, predicates).
 
