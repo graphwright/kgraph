@@ -41,7 +41,11 @@ class Pass1LLMInterface(ABC):
 
 
 def _parse_json_from_text(response_text: str) -> dict[str, Any]:
-    """Extract and parse a JSON object from response text."""
+    """Extract and parse a JSON object from response text.
+
+    Brace counting skips { and } inside JSON string literals so that text spans
+    containing braces (e.g. "The {gene} increases risk") do not break parsing.
+    """
     text = response_text.strip()
     if text.startswith("```"):
         lines = text.split("\n")
@@ -50,13 +54,33 @@ def _parse_json_from_text(response_text: str) -> dict[str, Any]:
     if start == -1:
         raise ValueError("No JSON object found in response")
     depth = 0
-    for i in range(start, len(text)):
-        if text[i] == "{":
+    in_string = False
+    skip_next = False
+    i = start
+    while i < len(text):
+        c = text[i]
+        if skip_next:
+            skip_next = False
+            i += 1
+            continue
+        if in_string:
+            if c == "\\":
+                skip_next = True
+            elif c == '"':
+                in_string = False
+            i += 1
+            continue
+        if c == '"':
+            in_string = True
+            i += 1
+            continue
+        if c == "{":
             depth += 1
-        elif text[i] == "}":
+        elif c == "}":
             depth -= 1
             if depth == 0:
                 return json.loads(text[start : i + 1])
+        i += 1
     raise ValueError("Unbalanced braces in JSON")
 
 
