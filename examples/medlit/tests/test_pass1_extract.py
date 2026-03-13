@@ -3,6 +3,7 @@
 import examples.medlit.domain_spec as _ds
 from examples.medlit.scripts.pass1_extract import (
     _default_system_prompt,
+    _fix_evidence_paper_id,
     normalize_entity_type,
 )
 
@@ -65,3 +66,23 @@ class TestBuildSystemPromptWithVocab:
         assert "Cushing syndrome" in out
         assert "disease" in out
         assert "already been identified" in out or "exact names and types" in out
+
+
+class TestFixEvidencePaperId:
+    """Replace LLM placeholder paper IDs in evidence with actual paper_id."""
+
+    def test_pmc_unknown_replaced(self):
+        """PMC_UNKNOWN in evidence ID is replaced with actual paper_id."""
+        assert _fix_evidence_paper_id("PMC_UNKNOWN:abstract:1:llm", "PMC11128938") == "PMC11128938:abstract:1:llm"
+
+    def test_paper_id_literal_replaced(self):
+        """'paper_id' literal is replaced."""
+        assert _fix_evidence_paper_id("paper_id:results:2:llm", "PMC12757875") == "PMC12757875:results:2:llm"
+
+    def test_real_paper_id_unchanged(self):
+        """Real paper IDs are left as-is."""
+        assert _fix_evidence_paper_id("PMC11128938:abstract:1:llm", "PMC11128938") == "PMC11128938:abstract:1:llm"
+
+    def test_no_colon_unchanged(self):
+        """Evidence IDs without colon are returned unchanged."""
+        assert _fix_evidence_paper_id("ev1", "PMC11128938") == "ev1"

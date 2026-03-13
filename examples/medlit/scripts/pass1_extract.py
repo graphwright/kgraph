@@ -55,6 +55,21 @@ from examples.medlit_schema.base import (  # noqa: E402  # pylint: disable=wrong
     PromptInfo,
 )
 
+# Placeholders the LLM outputs when it lacks the real paper ID; replace with actual paper_id
+_EVIDENCE_PAPER_ID_PLACEHOLDERS = frozenset(
+    {"paper_id", "PMC_PLACEHOLDER", "PMC_ID_NOT_PROVIDED", "PMC_UNKNOWN"}
+)
+
+
+def _fix_evidence_paper_id(evidence_id: str, paper_id: str) -> str:
+    """Replace placeholder paper_id in evidence ID (format paper_id:section:idx:method) with actual."""
+    if ":" not in evidence_id:
+        return evidence_id
+    first, rest = evidence_id.split(":", 1)
+    if first in _EVIDENCE_PAPER_ID_PLACEHOLDERS:
+        return f"{paper_id}:{rest}"
+    return evidence_id
+
 
 def _git_info() -> dict:
     """Return git_commit, git_commit_short, git_branch, git_dirty, repo_url."""
@@ -333,6 +348,13 @@ async def run_pass1(  # pylint: disable=too-many-statements
         # Override source_papers with actual paper_id — LLM often outputs "paper_id" literally
         for rel in relationships:
             rel.source_papers = [paper_id]
+        # Replace placeholder paper IDs in evidence (LLM outputs PMC_UNKNOWN, paper_id, etc.)
+        for ev in evidence_entities:
+            if ev.paper_id in _EVIDENCE_PAPER_ID_PLACEHOLDERS:
+                ev.paper_id = paper_id
+            ev.id = _fix_evidence_paper_id(ev.id, paper_id)
+        for rel in relationships:
+            rel.evidence_ids = [_fix_evidence_paper_id(eid, paper_id) for eid in (rel.evidence_ids or [])]
 
         # Use paper from LLM if present and valid, else parser
         raw_paper = raw_bundle.get("paper") or {}
