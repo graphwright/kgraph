@@ -39,6 +39,8 @@ def test_expand_provenance_creates_author_institution_paper() -> None:
 
     entity_ids = {e.id for e in exp_entities}
     assert "Paper:PMC123" in entity_ids
+    paper_entity = next(e for e in exp_entities if e.id == "Paper:PMC123")
+    assert paper_entity.canonical_id == "PMC123"
     assert any("Author:" in eid and "smith" in eid.lower() for eid in entity_ids)
     assert any("Author:" in eid and "jones" in eid.lower() for eid in entity_ids)
     assert any("Institution:" in eid for eid in entity_ids)

@@ -216,6 +216,7 @@ def test_is_authoritative_id():
     assert _is_authoritative_id("C0079419") is True
     assert _is_authoritative_id("prov-abc123def456") is False
     assert _is_authoritative_id("MeSH:D001943") is True
+    assert _is_authoritative_id("PMC11795198") is True
 
 
 def test_canonical_id_slug_format():

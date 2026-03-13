@@ -71,9 +71,17 @@ def expand_provenance(bundle: PerPaperBundle) -> tuple[list[ExtractedEntityRow],
                 )
             )
 
-    # Paper entity
+    # Paper entity (set canonical_id when document_id is a PMC ID so dedup uses it)
     if paper_entity_id not in seen_entity_ids:
-        new_entities.append(ExtractedEntityRow(id=paper_entity_id, entity_class="Paper", name=bundle.paper.title))
+        canonical = document_id if document_id.startswith("PMC") and document_id[3:].isdigit() else None
+        new_entities.append(
+            ExtractedEntityRow(
+                id=paper_entity_id,
+                entity_class="Paper",
+                name=bundle.paper.title,
+                canonical_id=canonical,
+            )
+        )
         seen_entity_ids.add(paper_entity_id)
 
     # AUTHORED(Author, Paper)
