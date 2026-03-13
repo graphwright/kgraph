@@ -39,6 +39,7 @@ except ImportError:
     pass
 
 from examples.medlit.bundle_models import (  # noqa: E402  # pylint: disable=wrong-import-position
+    AuthorInfo,
     EvidenceEntityRow,
     ExtractedEntityRow,
     PaperInfo,
@@ -185,10 +186,14 @@ async def _paper_content_from_parser(raw_content: bytes, content_type: str, sour
         parts.append(str(doc.content))
     text = "\n\n".join(p for p in parts if p)
     paper_id = doc.document_id or Path(source_uri).stem
+    author_details_raw = doc.metadata.get("author_details", []) if doc.metadata else []
+    author_details = [AuthorInfo(**a) if isinstance(a, dict) else a for a in author_details_raw] if author_details_raw else None
     info = PaperInfo(
         pmcid=paper_id if paper_id.startswith("PMC") else None,
         title=doc.title or "",
         authors=list(getattr(doc, "authors", [])) or [],
+        author_details=author_details,
+        document_id=doc.document_id or "",
     )
     return text or "(no content)", info
 
@@ -341,11 +346,14 @@ async def run_pass1(  # pylint: disable=too-many-statements
         # Never use raw_paper.get("pmcid") — the LLM can hallucinate wrong IDs (e.g. from
         # citations or training). Use only parser/file-derived IDs for document provenance.
         study_design = await _extract_study_design(llm, content)
+        author_details = paper_info.author_details or [AuthorInfo(name=a, affiliations=[]) for a in (authors or [])]
         paper = PaperInfo(
             doi=raw_paper.get("doi") or paper_info.doi,
             pmcid=paper_info.pmcid or (paper_id if str(paper_id).startswith("PMC") else None),
             title=raw_paper.get("title") or paper_info.title,
             authors=authors,
+            author_details=author_details,
+            document_id=paper_id,
             journal=raw_paper.get("journal"),
             year=raw_paper.get("year"),
             study_type=raw_paper.get("study_type"),
@@ -368,6 +376,12 @@ async def run_pass1(  # pylint: disable=too-many-statements
             relationships=relationships,
             notes=raw_bundle.get("notes", []),
         )
+        # Provenance expansion: Author, Institution, Paper + AUTHORED, AFFILIATED_WITH, DESCRIBED, COAUTHORED_WITH
+        from examples.medlit.pipeline.provenance_expansion import expand_provenance
+
+        exp_entities, exp_rels = expand_provenance(bundle)
+        bundle.entities.extend(exp_entities)
+        bundle.relationships.extend(exp_rels)
         with open(out_path, "w", encoding="utf-8") as f:
             import json
 

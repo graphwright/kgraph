@@ -10,7 +10,9 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 def _format_from_domain_spec(domain_spec: Any) -> tuple[str, str, str]:
     """Build entity_types_str, predicates_str, domain_instructions from domain_spec module."""
     bundle_to_entity = getattr(domain_spec, "BUNDLE_CLASS_TO_ENTITY", {})
-    entity_types_str = ", ".join(sorted(bundle_to_entity.keys())) if bundle_to_entity else "Disease, Gene, Drug, etc."
+    # Exclude metadata_only entities from extraction prompt (Paper, Author, Institution)
+    entity_types_for_prompt = [k for k, cls in bundle_to_entity.items() if not getattr(getattr(cls, "spec", None), "metadata_only", False)]
+    entity_types_str = ", ".join(sorted(entity_types_for_prompt)) if entity_types_for_prompt else "Disease, Gene, Drug, etc."
     predicates = getattr(domain_spec, "PREDICATES", {})
     predicates_str = ", ".join(sorted(predicates.keys())) if predicates else "TREATS, INCREASES_RISK, etc."
     domain_instructions = (getattr(domain_spec, "PROMPT_INSTRUCTIONS", "") or "").strip() + "\n\n"

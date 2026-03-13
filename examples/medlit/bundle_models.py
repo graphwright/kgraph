@@ -35,6 +35,13 @@ class StudyDesignMetadata(BaseModel):
             return None
 
 
+class AuthorInfo(BaseModel):
+    """Author with optional affiliations."""
+
+    name: str
+    affiliations: list[str] = Field(default_factory=list)
+
+
 class PaperInfo(BaseModel):
     """Paper metadata in the per-paper bundle."""
 
@@ -42,6 +49,8 @@ class PaperInfo(BaseModel):
     pmcid: Optional[str] = None
     title: str = ""
     authors: list[str] = Field(default_factory=list)
+    author_details: Optional[list[AuthorInfo]] = None
+    document_id: str = ""
     journal: Optional[str] = None
     year: Optional[int] = None
     study_type: Optional[str] = None

@@ -3,6 +3,12 @@ Graph traversal logic for subgraph extraction.
 
 Provides BFS-based traversal to extract subgraphs centered on a given entity,
 returning D3.js-compatible node and edge data structures.
+
+Symmetric predicates (PredicateSpec.symmetric=True): Storage uses canonical
+(min,max) ordering for subject/object. Traversal MUST treat such edges as
+undirected: we follow both subject_id and object_id (see BFS below), so
+queries like "everyone X has collaborated with" work regardless of storage
+direction.
 """
 
 from typing import Any, Optional

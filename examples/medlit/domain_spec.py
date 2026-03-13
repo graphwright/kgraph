@@ -168,6 +168,7 @@ class AuthorEntity(BaseEntity):
         description="Authors.",
         color="#795548",
         label="Author",
+        metadata_only=True,
     )
 
     def get_entity_type(self) -> str:
@@ -179,10 +180,23 @@ class InstitutionEntity(BaseEntity):
         description="Institutions, organizations.",
         color="#78909c",
         label="Institution",
+        metadata_only=True,
     )
 
     def get_entity_type(self) -> str:
         return "institution"
+
+
+class PaperEntity(BaseEntity):
+    spec: ClassVar[EntitySpec] = EntitySpec(
+        description="A published paper or document.",
+        color="#9e9e9e",
+        label="Paper",
+        metadata_only=True,
+    )
+
+    def get_entity_type(self) -> str:
+        return "paper"
 
 
 class HypothesisEntity(BaseEntity):
@@ -235,6 +249,7 @@ class EthnicityEntity(BaseEntity):
 ENTITY_CLASSES = [
     DiseaseEntity,
     GeneEntity,
+    PaperEntity,
     DrugEntity,
     ProteinEntity,
     HormoneEntity,
@@ -291,12 +306,15 @@ PREDICATES: dict[str, PredicateSpec] = {
         subject_types=None,
         object_types=None,
         specificity=1,
+        symmetric=True,
     ),
     "SAME_AS": PredicateSpec(
         description="Entity A is the same as entity B (for coreference/merge).",
         subject_types=None,
         object_types=None,
         specificity=0,
+        symmetric=True,
+        is_merge_signal=True,
     ),
     "SUBTYPE_OF": PredicateSpec(
         description="Entity A is a subtype of entity B.",
@@ -333,12 +351,45 @@ PREDICATES: dict[str, PredicateSpec] = {
         subject_types=[DrugEntity],
         object_types=[DrugEntity],
         specificity=2,
+        symmetric=True,
     ),
     "ENCODES": PredicateSpec(
         description="Gene encodes a protein.",
         subject_types=[GeneEntity],
         object_types=[ProteinEntity],
         specificity=2,
+    ),
+    "AUTHORED": PredicateSpec(
+        description="Author wrote this paper.",
+        subject_types=[AuthorEntity],
+        object_types=[PaperEntity],
+        specificity=1,
+    ),
+    "AFFILIATED_WITH": PredicateSpec(
+        description="Author's institutional affiliation at time of publication.",
+        subject_types=[AuthorEntity],
+        object_types=[InstitutionEntity],
+        specificity=2,
+    ),
+    "DESCRIBED": PredicateSpec(
+        description="Paper describes this entity (disease, drug, etc.).",
+        subject_types=[PaperEntity],
+        object_types=None,
+        specificity=1,
+    ),
+    "COAUTHORED_WITH": PredicateSpec(
+        description="Authors co-authored at least one paper.",
+        subject_types=[AuthorEntity],
+        object_types=[AuthorEntity],
+        specificity=2,
+        symmetric=True,
+    ),
+    "IS_COLLEAGUE": PredicateSpec(
+        description="Authors are colleagues (e.g. same institution) from a source other than co-authorship. Do not create when COAUTHORED_WITH exists.",
+        subject_types=[AuthorEntity],
+        object_types=[AuthorEntity],
+        specificity=2,
+        symmetric=True,
     ),
 }
 
@@ -387,8 +438,6 @@ MENTIONS = MentionsSpec(
         SymptomEntity,
         ProcedureEntity,
         PathwayEntity,
-        AuthorEntity,
-        InstitutionEntity,
     ],
     skip_name_equals_type=True,
 )

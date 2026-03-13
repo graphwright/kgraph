@@ -38,6 +38,11 @@ predicate_subtype_of = "subtype_of"
 predicate_cites = "cites"
 predicate_studied_in = "studied_in"
 predicate_authored_by = "authored_by"
+predicate_authored = "authored"
+predicate_affiliated_with = "affiliated_with"
+predicate_described = "described"
+predicate_coauthored_with = "coauthored_with"
+predicate_is_colleague = "is_colleague"
 predicate_part_of = "part_of"
 predicate_predicts = "predicts"
 predicate_refutes = "refutes"
@@ -81,6 +86,11 @@ ALL_PREDICATES = {
     predicate_cites,
     predicate_studied_in,
     predicate_authored_by,
+    predicate_authored,
+    predicate_affiliated_with,
+    predicate_described,
+    predicate_coauthored_with,
+    predicate_is_colleague,
     predicate_part_of,
     predicate_predicts,
     predicate_refutes,

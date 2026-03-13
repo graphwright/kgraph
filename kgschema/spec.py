@@ -17,6 +17,10 @@ class EntitySpec(BaseModel):
     prompt_guidance: str = Field(default="", description="Richer prompt text for extraction")
     color: str = Field(default="#78909c", description="Hex color for graph-viz")
     label: str = Field(description="Display name (e.g. 'Disease')")
+    metadata_only: bool = Field(
+        default=False,
+        description="If True, entity is derived from metadata only; exclude from LLM extraction prompt.",
+    )
 
 
 class PredicateSpec(BaseModel):
@@ -24,6 +28,8 @@ class PredicateSpec(BaseModel):
 
     subject_types/object_types: when None, means any entity type.
     specificity: for dedup; higher = prefer when (s,o) has multiple predicates.
+    symmetric: if True, store with canonical (min,max) ordering; query layer treats as undirected.
+    is_merge_signal: if True, drives entity canonicalization (e.g. SAME_AS). Distinct from plain symmetric.
     """
 
     model_config = ConfigDict(frozen=True)
@@ -31,13 +37,21 @@ class PredicateSpec(BaseModel):
     description: str = Field(description="Predicate definition")
     subject_types: Optional[list[type]] = Field(
         default=None,
-        description="Entity classes valid as subject. None = any.",
+        description="Entity classes valid as subject. None = any entity type.",
     )
     object_types: Optional[list[type]] = Field(
         default=None,
-        description="Entity classes valid as object. None = any.",
+        description="Entity classes valid as object. None = any entity type.",
     )
     specificity: int = Field(default=0, description="Dedup priority; higher = prefer")
+    symmetric: bool = Field(
+        default=False,
+        description="If True, store with canonical (min,max) ordering; query layer treats as undirected.",
+    )
+    is_merge_signal: bool = Field(
+        default=False,
+        description="If True, drives entity canonicalization (e.g. SAME_AS). Distinct from plain symmetric.",
+    )
 
 
 class EvidenceSpec(BaseModel):

@@ -124,8 +124,22 @@ class JournalArticleParser(DocumentParserInterface):
         if body_elem is not None:
             full_text = "".join(body_elem.itertext()).strip()
 
-        # Authors
+        # Affiliations: aff id -> text
+        aff_id_to_text: dict[str, str] = {}
+        for aff in root.findall(".//aff"):
+            aff_id = aff.get("id", "")
+            inst_elem = aff.find("institution[@content-type='orgname']") or aff.find("institution")
+            if inst_elem is not None and inst_elem.text:
+                text = inst_elem.text.strip()
+            else:
+                text = "".join(aff.itertext()).strip()
+            if aff_id:
+                aff_id_to_text[aff_id] = text
+                aff_id_to_text[aff_id.lstrip("#")] = text
+
+        # Authors with affiliations
         authors: list[str] = []
+        author_details: list[dict[str, Any]] = []
         for contrib in root.findall('.//contrib[@contrib-type="author"]'):
             name_elem = contrib.find(".//name")
             if name_elem is not None:
@@ -136,6 +150,14 @@ class JournalArticleParser(DocumentParserInterface):
                     if given is not None and given.text:
                         author = f"{given.text} {author}"
                     authors.append(author)
+                    # Affiliations for this author
+                    affs: list[str] = []
+                    for xref in contrib.findall("xref[@ref-type='aff']"):
+                        rid = (xref.get("rid") or "").lstrip("#")
+                        aff_text = aff_id_to_text.get(rid) or aff_id_to_text.get(xref.get("rid", ""))
+                        if aff_text:
+                            affs.append(aff_text)
+                    author_details.append({"name": author, "affiliations": affs})
 
         # Keywords
         keywords: list[str] = []
@@ -149,6 +171,7 @@ class JournalArticleParser(DocumentParserInterface):
             "title": title,
             "abstract": abstract,
             "authors": authors,
+            "author_details": author_details,
         }
 
         # Add full_text if it exists
@@ -225,6 +248,7 @@ class JournalArticleParser(DocumentParserInterface):
 
         # Extract metadata
         metadata: dict[str, Any] = {}
+        metadata["author_details"] = data.get("author_details", [])
 
         # Map PaperMetadata fields
         paper_metadata = data.get("metadata", {})
