@@ -346,6 +346,48 @@ def test_zero_mention_orphan_dropped(tmp_path):
     assert "prov-abc" not in rel_subjects, "Relationship referencing dropped entity should be filtered"
 
 
+def test_provenance_derived_entities_retained(tmp_path):
+    """Paper, Author, Institution from provenance_expansion (no evidence_ids) get usage_count and are retained."""
+    entities = [
+        {"entity_id": "prov-author1", "canonical_id": None, "class": "Author", "name": "Jane Smith", "synonyms": [], "source": "extracted", "source_papers": []},
+        {"entity_id": "prov-paper1", "canonical_id": None, "class": "Paper", "name": "A Study", "synonyms": [], "source": "extracted", "source_papers": []},
+    ]
+    relationships = [
+        {"subject": "prov-author1", "predicate": "AUTHORED", "object": "prov-paper1", "evidence_ids": [], "source_papers": ["PMC123"], "confidence": 0.9},
+    ]
+    id_map = {"PMC123": {"Author:smith_j": "prov-author1", "Paper:PMC123": "prov-paper1"}}
+    bundle_data = {
+        "paper": {"pmcid": "PMC123", "title": "A Study", "authors": ["Jane Smith"], "author_details": [{"name": "Jane Smith", "affiliations": []}]},
+        "entities": [
+            {"id": "Author:smith_j", "class": "Author", "name": "Jane Smith", "synonyms": [], "source": "extracted"},
+            {"id": "Paper:PMC123", "class": "Paper", "name": "A Study", "synonyms": [], "source": "extracted"},
+        ],
+        "evidence_entities": [],
+        "relationships": [
+            {"subject": "Author:smith_j", "predicate": "AUTHORED", "object": "Paper:PMC123", "evidence_ids": [], "source_papers": ["PMC123"], "confidence": 0.9},
+        ],
+        "notes": [],
+    }
+    merged_dir = tmp_path / "merged"
+    merged_dir.mkdir()
+    (merged_dir / "entities.json").write_text(json.dumps(entities, indent=2), encoding="utf-8")
+    (merged_dir / "relationships.json").write_text(json.dumps(relationships, indent=2), encoding="utf-8")
+    (merged_dir / "id_map.json").write_text(json.dumps(id_map, indent=2), encoding="utf-8")
+    (merged_dir / "synonym_cache.json").write_text("{}", encoding="utf-8")
+    bundles_dir = tmp_path / "bundles"
+    bundles_dir.mkdir()
+    (bundles_dir / "paper_PMC123.json").write_text(json.dumps(bundle_data, indent=2), encoding="utf-8")
+    output_dir = tmp_path / "out"
+    run_pass3(merged_dir, bundles_dir, output_dir)
+    with open(output_dir / "entities.jsonl", encoding="utf-8") as f:
+        entity_lines = [json.loads(line) for line in f if line.strip()]
+    entity_ids = [e["entity_id"] for e in entity_lines]
+    paper_entities = [e for e in entity_lines if e.get("entity_type") == "paper"]
+    assert "prov-paper1" in entity_ids, "Paper entity should be retained (provenance-derived)"
+    assert "prov-author1" in entity_ids, "Author entity should be retained (provenance-derived)"
+    assert len(paper_entities) >= 1, "At least one Paper entity should appear in entities.jsonl"
+
+
 def test_run_pass3_copies_sources_when_pmc_xmls_dir_provided(tmp_path):
     """When --pmc-xmls-dir is provided, copy XML files into output_dir/sources/."""
     from examples.medlit.pipeline.bundle_builder import run_pass3

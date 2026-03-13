@@ -414,6 +414,7 @@ Use linguistic_trust: "asserted" | "suggested" | "speculative" in the JSON.
 
 ## Evidence format
 Evidence id format: {paper_id}:{section}:{paragraph_idx}:llm
+Use ==CURRENT_PAPER== as the paper_id when you do not have the PMC ID; it will be replaced automatically.
 
 ## Output structure
 Use "class" for entity type. Return ONLY valid JSON, no markdown or commentary.

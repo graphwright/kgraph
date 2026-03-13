@@ -18,6 +18,7 @@ import argparse
 import hashlib
 import inspect
 import os
+import re
 import subprocess
 import sys
 import time
@@ -57,18 +58,49 @@ from examples.medlit_schema.base import (  # noqa: E402  # pylint: disable=wrong
 
 # Placeholders the LLM outputs when it lacks the real paper ID; replace with actual paper_id
 _EVIDENCE_PAPER_ID_PLACEHOLDERS = frozenset(
-    {"paper_id", "PMC_PLACEHOLDER", "PMC_ID_NOT_PROVIDED", "PMC_UNKNOWN"}
+    {
+        "paper_id",
+        "PMC_PLACEHOLDER",
+        "PMC_ID_NOT_PROVIDED",
+        "PMC_UNKNOWN",
+        "PMC11000000",
+        "==CURRENT_PAPER==",
+    }
 )
 
 
 def _fix_evidence_paper_id(evidence_id: str, paper_id: str) -> str:
-    """Replace placeholder paper_id in evidence ID (format paper_id:section:idx:method) with actual."""
+    """Replace placeholder or hallucinated paper_id in evidence ID with actual.
+
+    When processing paper X, the only valid paper_id in evidence is X. Replace:
+    - Placeholders (PMC_UNKNOWN, paper_id, PMC11000000, etc.)
+    - PMC IDs that are not the current paper (hallucinated citations)
+    """
     if ":" not in evidence_id:
         return evidence_id
     first, rest = evidence_id.split(":", 1)
     if first in _EVIDENCE_PAPER_ID_PLACEHOLDERS:
         return f"{paper_id}:{rest}"
+    # PMC[0-9]+ that is not the current paper → hallucinated citation, replace
+    if re.match(r"^PMC\d+$", first) and first != paper_id:
+        return f"{paper_id}:{rest}"
     return evidence_id
+
+
+def _replace_current_paper_in_bundle(obj: Any, paper_id: str) -> None:
+    """Recursively replace ==CURRENT_PAPER== with paper_id in dict/list/str (mutates in place)."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if isinstance(v, str) and "==CURRENT_PAPER==" in v:
+                obj[k] = v.replace("==CURRENT_PAPER==", paper_id)
+            else:
+                _replace_current_paper_in_bundle(v, paper_id)
+    elif isinstance(obj, list):
+        for i, item in enumerate(obj):
+            if isinstance(item, str) and "==CURRENT_PAPER==" in item:
+                obj[i] = item.replace("==CURRENT_PAPER==", paper_id)
+            else:
+                _replace_current_paper_in_bundle(item, paper_id)
 
 
 def _git_info() -> dict:
@@ -332,6 +364,7 @@ async def run_pass1(  # pylint: disable=too-many-statements
                 temperature=0.1,
                 max_tokens=16384,
             )
+            _replace_current_paper_in_bundle(raw_bundle, paper_id)
         except Exception as e:
             print(f"  ERROR {path.name}: {e}", file=sys.stderr)
             continue

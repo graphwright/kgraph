@@ -4,6 +4,7 @@ import examples.medlit.domain_spec as _ds
 from examples.medlit.scripts.pass1_extract import (
     _default_system_prompt,
     _fix_evidence_paper_id,
+    _replace_current_paper_in_bundle,
     normalize_entity_type,
 )
 
@@ -86,3 +87,43 @@ class TestFixEvidencePaperId:
     def test_no_colon_unchanged(self):
         """Evidence IDs without colon are returned unchanged."""
         assert _fix_evidence_paper_id("ev1", "PMC11128938") == "ev1"
+
+    def test_pmc11000000_replaced(self):
+        """PMC11000000 placeholder is replaced."""
+        assert _fix_evidence_paper_id("PMC11000000:abstract:0:llm", "PMC123") == "PMC123:abstract:0:llm"
+
+    def test_current_paper_replaced(self):
+        """==CURRENT_PAPER== placeholder is replaced."""
+        assert _fix_evidence_paper_id("==CURRENT_PAPER==:results:1:llm", "PMC456") == "PMC456:results:1:llm"
+
+    def test_hallucinated_pmc_replaced(self):
+        """PMC ID from citation/hallucination (not current paper) is replaced."""
+        assert _fix_evidence_paper_id("PMC99999999:abstract:0:llm", "PMC123") == "PMC123:abstract:0:llm"
+
+    def test_current_paper_unchanged(self):
+        """Evidence with correct current paper_id is left as-is."""
+        assert _fix_evidence_paper_id("PMC123:abstract:0:llm", "PMC123") == "PMC123:abstract:0:llm"
+
+
+class TestReplaceCurrentPaperInBundle:
+    """Global replace of ==CURRENT_PAPER== in raw bundle before parsing."""
+
+    def test_replaces_in_evidence_ids(self):
+        """==CURRENT_PAPER== in evidence_entities and relationships is replaced."""
+        bundle = {
+            "evidence_entities": [
+                {"id": "==CURRENT_PAPER==:abstract:0:llm", "text": "x"},
+            ],
+            "relationships": [
+                {"evidence_ids": ["==CURRENT_PAPER==:results:1:llm"]},
+            ],
+        }
+        _replace_current_paper_in_bundle(bundle, "PMC123")
+        assert bundle["evidence_entities"][0]["id"] == "PMC123:abstract:0:llm"
+        assert bundle["relationships"][0]["evidence_ids"] == ["PMC123:results:1:llm"]
+
+    def test_leaves_other_strings_unchanged(self):
+        """Strings without ==CURRENT_PAPER== are unchanged."""
+        bundle = {"paper": {"pmcid": "PMC456"}, "entities": []}
+        _replace_current_paper_in_bundle(bundle, "PMC123")
+        assert bundle["paper"]["pmcid"] == "PMC456"

@@ -34,8 +34,12 @@ PROVENANCE_DENYLIST = frozenset(
         "PMC_extracted",
         "PMC_PLACEHOLDER",
         "PMC_ID_NOT_PROVIDED",
+        "PMC11000000",
     }
 )
+
+# Predicates from provenance_expansion (no evidence_ids; paper metadata is the source)
+PROVENANCE_DERIVED_PREDICATES = frozenset({"AUTHORED", "AFFILIATED_WITH", "DESCRIBED", "COAUTHORED_WITH"})
 
 
 def load_merged_output(merged_dir: Path) -> tuple[list[dict], list[dict], dict, dict]:
@@ -108,49 +112,43 @@ def _entity_usage_from_bundles(
     # merge_key -> usage_count, total_mentions, supporting_documents, first_seen_document, first_seen_section
     by_key: dict[str, dict[str, Any]] = {}
 
+    def _credit_entity(merge_key: str | None, evidence_id: str | None) -> None:
+        """Credit merge_key with one mention from paper_id."""
+        if not merge_key:
+            return
+        by_key.setdefault(
+            merge_key,
+            {
+                "usage_count": 0,
+                "total_mentions": 0,
+                "supporting_documents": [],
+                "first_seen_document": None,
+                "first_seen_section": None,
+            },
+        )
+        rec = by_key[merge_key]
+        rec["total_mentions"] += 1
+        if paper_id not in rec["supporting_documents"] and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
+            rec["supporting_documents"].append(paper_id)
+        if rec["first_seen_document"] is None and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
+            rec["first_seen_document"] = paper_id
+            rec["first_seen_section"] = _section_from_evidence_id(evidence_id) if evidence_id else None
+
     for paper_id, bundle in bundles:
         paper_map = id_map.get(paper_id) or {}
         for rel in bundle.relationships:
             sub_merge = paper_map.get(rel.subject)
             obj_merge = paper_map.get(rel.object_id)
             evidence_ids = rel.evidence_ids or []
-            for evidence_id in evidence_ids:
-                if sub_merge:
-                    by_key.setdefault(
-                        sub_merge,
-                        {
-                            "usage_count": 0,
-                            "total_mentions": 0,
-                            "supporting_documents": [],
-                            "first_seen_document": None,
-                            "first_seen_section": None,
-                        },
-                    )
-                    rec = by_key[sub_merge]
-                    rec["total_mentions"] += 1
-                    if paper_id not in rec["supporting_documents"] and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
-                        rec["supporting_documents"].append(paper_id)
-                    if rec["first_seen_document"] is None and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
-                        rec["first_seen_document"] = paper_id
-                        rec["first_seen_section"] = _section_from_evidence_id(evidence_id)
-                if obj_merge:
-                    by_key.setdefault(
-                        obj_merge,
-                        {
-                            "usage_count": 0,
-                            "total_mentions": 0,
-                            "supporting_documents": [],
-                            "first_seen_document": None,
-                            "first_seen_section": None,
-                        },
-                    )
-                    rec = by_key[obj_merge]
-                    rec["total_mentions"] += 1
-                    if paper_id not in rec["supporting_documents"] and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
-                        rec["supporting_documents"].append(paper_id)
-                    if rec["first_seen_document"] is None and paper_id not in PROVENANCE_DENYLIST and not paper_id.startswith("PMC_UNKNOWN_"):
-                        rec["first_seen_document"] = paper_id
-                        rec["first_seen_section"] = _section_from_evidence_id(evidence_id)
+            if evidence_ids:
+                for evidence_id in evidence_ids:
+                    _credit_entity(sub_merge, evidence_id)
+                    _credit_entity(obj_merge, evidence_id)
+            elif rel.predicate in PROVENANCE_DERIVED_PREDICATES:
+                # Provenance-derived relationships have no evidence_ids; the paper itself is the source.
+                # Credit entities so Paper, Author, Institution get usage_count > 0 and are not dropped.
+                _credit_entity(sub_merge, None)
+                _credit_entity(obj_merge, None)
 
     for rec in by_key.values():
         rec["usage_count"] = len(rec["supporting_documents"])

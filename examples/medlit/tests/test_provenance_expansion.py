@@ -1,13 +1,10 @@
 """Tests for provenance expansion (Author, Institution, Paper, derived relationships)."""
 
-import pytest
-
 from examples.medlit.bundle_models import (
     AuthorInfo,
     ExtractedEntityRow,
     PaperInfo,
     PerPaperBundle,
-    RelationshipRow,
 )
 from examples.medlit.pipeline.provenance_expansion import expand_provenance
 from examples.medlit.pipeline.utils import canonicalize_symmetric
