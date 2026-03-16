@@ -52,6 +52,7 @@ services:
       PASS1_LLM_BACKEND: ${PASS1_LLM_BACKEND:-anthropic}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      REDIS_URL: redis://redis:6379
     volumes:
       - ./medlit_bundle:/bundle:ro
     ports:
@@ -59,6 +60,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      redis:
+        condition: service_started
     restart: unless-stopped
     networks:
       - kgserver-network
@@ -120,6 +123,13 @@ services:
     # Models will be pulled on first use or manually via:
     # docker exec -it med-lit-ollama ollama pull nomic-embed-text
     profiles: ["ollama", "jupyter"]
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    networks:
+      - kgserver-network
+    profiles: ["api"]
 
   postgres:
     image: pgvector/pgvector:pg16

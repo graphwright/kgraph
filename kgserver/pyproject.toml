@@ -32,6 +32,7 @@ dependencies = [
     "typing>=3.10.0.0",
     "uvicorn>=0.40.0",
     "asyncpg>=0.31.0",
+    "redis>=5.0.0",
     "playwright>=1.58.0",
     "pytest-playwright>=0.7.2",
 ]

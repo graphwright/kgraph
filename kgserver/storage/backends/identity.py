@@ -22,25 +22,154 @@ column (``ALTER TABLE entity ADD COLUMN embedding vector(N)``), the
 ``find_synonyms`` implementation can be swapped to a native vector query with
 no interface change.
 
-Authority-lookup caching (Redis) is deferred; ``resolve`` currently delegates
-to the domain's ``PromotionPolicy.assign_canonical_id`` without caching.
+Authority-lookup caching uses Redis when a client is provided.  If Redis is
+unavailable the server degrades gracefully to uncached lookups.  See
+``AuthorityCache`` below.
 """
 
+import json
 import logging
 import math
 import uuid
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Any, Optional
 
 from sqlalchemy import text
 from sqlmodel import Session, select
 
 from kgschema.domain import DomainSchema
-from kgschema.entity import EntityStatus
+from kgschema.entity import BaseEntity, EntityStatus
 from kgschema.identity import IdentityServer
 from storage.models.entity import Entity
 
 logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Authority-lookup cache
+# ---------------------------------------------------------------------------
+
+#: Sentinel stored in Redis to represent a confirmed negative result
+#: (authority returned no canonical ID for this mention).
+_NEGATIVE_SENTINEL = "__negative__"
+
+#: Default TTL (seconds) for positive cache entries.
+_POSITIVE_TTL = 86400  # 24 hours
+
+#: Default TTL for negative entries — shorter so that a mention newly added
+#: to an authority source stops being provisional within a reasonable window.
+_NEGATIVE_TTL = 3600  # 1 hour
+
+
+class AuthorityCache:
+    """Redis cache for authority-lookup results in ``resolve``.
+
+    Keys have the form ``resolve:{authority_version}:{entity_type}:{mention}``
+    so that a UMLS/DBPedia release can be invalidated by bumping
+    ``authority_version`` without touching unrelated entries.
+
+    Values are JSON-serialised ``CanonicalId`` dicts (positive hit) or
+    ``_NEGATIVE_SENTINEL`` (confirmed miss).
+
+    Designed for graceful degradation: every public method catches Redis
+    errors and logs at DEBUG level so a Redis outage never breaks ingestion.
+
+    Parameters
+    ----------
+    redis_client:
+        A ``redis.Redis`` (sync) client.  Pass ``None`` to disable caching.
+    authority_version:
+        Opaque version string for the authority source, e.g. ``"umls-2026AA"``.
+        Bump this to invalidate all cached lookups for that source.
+    positive_ttl:
+        Seconds before a positive cache entry expires.
+    negative_ttl:
+        Seconds before a negative cache entry expires.
+    """
+
+    def __init__(
+        self,
+        redis_client: Optional[Any],
+        authority_version: str = "v1",
+        positive_ttl: int = _POSITIVE_TTL,
+        negative_ttl: int = _NEGATIVE_TTL,
+    ) -> None:
+        self._redis: Optional[Any] = redis_client
+        self._version = authority_version
+        self._positive_ttl = positive_ttl
+        self._negative_ttl = negative_ttl
+
+    def _key(self, entity_type: str, mention: str) -> str:
+        # Normalise mention to lower-case stripped form so that trivial
+        # capitalisation differences share a cache entry.
+        normalised = mention.strip().lower()
+        return f"resolve:{self._version}:{entity_type}:{normalised}"
+
+    def get(self, entity_type: str, mention: str) -> Optional[Any]:
+        """Return cached ``CanonicalId``-like dict, ``None`` (miss), or
+        ``_NEGATIVE_SENTINEL`` (confirmed negative).
+
+        Returns ``None`` on any Redis error so the caller falls through to the
+        live authority lookup.
+        """
+        if self._redis is None:
+            return None
+        try:
+            raw = self._redis.get(self._key(entity_type, mention))  # type: ignore[union-attr]
+            if raw is None:
+                return None
+            decoded = raw.decode() if isinstance(raw, bytes) else raw
+            if decoded == _NEGATIVE_SENTINEL:
+                return _NEGATIVE_SENTINEL
+            return json.loads(decoded)
+        except Exception:  # pylint: disable=broad-except
+            logger.debug("AuthorityCache.get failed", exc_info=True)
+            return None
+
+    def put_positive(self, entity_type: str, mention: str, canonical_id: object) -> None:
+        """Cache a positive authority result.  ``canonical_id`` must be
+        JSON-serialisable (plain dict or object with ``__dict__``).
+        """
+        if self._redis is None:
+            return
+        try:
+            payload = json.dumps(canonical_id.__dict__ if hasattr(canonical_id, "__dict__") else canonical_id)
+            self._redis.setex(self._key(entity_type, mention), self._positive_ttl, payload)  # type: ignore[union-attr]
+        except Exception:  # pylint: disable=broad-except
+            logger.debug("AuthorityCache.put_positive failed", exc_info=True)
+
+    def put_negative(self, entity_type: str, mention: str) -> None:
+        """Cache a confirmed negative (no canonical ID found)."""
+        if self._redis is None:
+            return
+        try:
+            self._redis.setex(self._key(entity_type, mention), self._negative_ttl, _NEGATIVE_SENTINEL)  # type: ignore[union-attr]
+        except Exception:  # pylint: disable=broad-except
+            logger.debug("AuthorityCache.put_negative failed", exc_info=True)
+
+    @classmethod
+    def from_env(cls, authority_version: str = "v1") -> "AuthorityCache":
+        """Build an ``AuthorityCache`` from the ``REDIS_URL`` environment variable.
+
+        Returns a no-op cache (``redis_client=None``) if ``REDIS_URL`` is unset
+        or if the ``redis`` package is not installed, so the server starts
+        cleanly in environments without Redis.
+        """
+        import os
+
+        redis_url = os.environ.get("REDIS_URL")
+        if not redis_url:
+            logger.debug("AuthorityCache.from_env: REDIS_URL not set; caching disabled")
+            return cls(None, authority_version=authority_version)
+        try:
+            import redis as _redis
+
+            client = _redis.Redis.from_url(redis_url, decode_responses=False)
+            client.ping()
+            logger.info("AuthorityCache: connected to Redis at %s", redis_url)
+            return cls(client, authority_version=authority_version)
+        except Exception:  # pylint: disable=broad-except
+            logger.warning("AuthorityCache.from_env: could not connect to Redis; caching disabled", exc_info=True)
+            return cls(None, authority_version=authority_version)
 
 
 def _cosine_similarity(a: list[float], b: list[float]) -> float:
@@ -81,6 +210,11 @@ class PostgresIdentityServer(IdentityServer):
         Default 0.90 — intentionally conservative.
     embedding_dim:
         Expected embedding dimension.  Used for validation only.
+    authority_cache:
+        Optional ``AuthorityCache`` instance backed by Redis.  If omitted,
+        authority lookups are performed on every ``resolve`` call with no
+        caching.  Construct one via ``AuthorityCache.from_env()`` or pass a
+        pre-built instance.
     """
 
     def __init__(
@@ -89,11 +223,13 @@ class PostgresIdentityServer(IdentityServer):
         domain: DomainSchema,
         similarity_threshold: float = 0.90,
         embedding_dim: Optional[int] = None,
+        authority_cache: Optional[AuthorityCache] = None,
     ) -> None:
         self._session = session
         self._domain = domain
         self._similarity_threshold = similarity_threshold
         self._embedding_dim = embedding_dim
+        self._authority_cache = authority_cache or AuthorityCache(None)
 
     # ------------------------------------------------------------------
     # resolve
@@ -126,16 +262,28 @@ class PostgresIdentityServer(IdentityServer):
                 return existing.merged_into
             return existing.entity_id
 
-        # Attempt authority lookup via promotion policy.
-        policy = self._domain.get_promotion_policy()
+        # Authority lookup — check cache first, then call the domain policy.
         canonical_id_result = None
-        if policy is not None:
-            try:
-                # assign_canonical_id is async; build a minimal stub entity for it.
-                stub = _make_stub_entity(mention, entity_type, document_id, embedding)
-                canonical_id_result = await policy.assign_canonical_id(stub)
-            except Exception:  # pylint: disable=broad-except
-                logger.debug("resolve: authority lookup failed for '%s'", mention, exc_info=True)
+        cached = self._authority_cache.get(entity_type, mention)
+        if cached is _NEGATIVE_SENTINEL:
+            # Confirmed miss: skip the live API call.
+            logger.debug("resolve: cache negative hit for '%s' (%s)", mention, entity_type)
+        elif cached is not None:
+            # Positive hit: reconstruct a minimal CanonicalId-like object.
+            logger.debug("resolve: cache positive hit for '%s' (%s)", mention, entity_type)
+            canonical_id_result = _dict_to_canonical_id(cached if isinstance(cached, dict) else {})
+        else:
+            policy = self._domain.get_promotion_policy()
+            if policy is not None:
+                try:
+                    stub = _make_stub_entity(mention, entity_type, document_id, embedding)
+                    canonical_id_result = await policy.assign_canonical_id(stub)
+                except Exception:  # pylint: disable=broad-except
+                    logger.debug("resolve: authority lookup failed for '%s'", mention, exc_info=True)
+            if canonical_id_result is not None:
+                self._authority_cache.put_positive(entity_type, mention, canonical_id_result)
+            else:
+                self._authority_cache.put_negative(entity_type, mention)
 
         if canonical_id_result is not None:
             entity_id = canonical_id_result.id
@@ -153,9 +301,7 @@ class PostgresIdentityServer(IdentityServer):
         """)
         synonyms_json = "[]"
         if canonical_id_result and canonical_id_result.synonyms:
-            import json as _json
-
-            synonyms_json = _json.dumps(list(canonical_id_result.synonyms))
+            synonyms_json = json.dumps(list(canonical_id_result.synonyms))
 
         self._session.execute(
             stmt,
@@ -367,11 +513,9 @@ class PostgresIdentityServer(IdentityServer):
 
     def _store_embedding(self, entity_id: str, embedding: list[float]) -> None:
         """Persist an embedding vector to the entity row (JSON column)."""
-        import json as _json
-
         self._session.execute(
             text("UPDATE entity SET embedding = CAST(:emb AS json) WHERE entity_id = :eid"),
-            {"emb": _json.dumps(embedding), "eid": entity_id},
+            {"emb": json.dumps(embedding), "eid": entity_id},
         )
 
 
@@ -380,54 +524,69 @@ class PostgresIdentityServer(IdentityServer):
 # ---------------------------------------------------------------------------
 
 
-class _StubEntity:
-    """Minimal kgschema.BaseEntity-compatible stub for use with domain policies.
+class _StubEntity(BaseEntity):
+    """Minimal BaseEntity subclass used to call domain policies from kgserver.
 
-    The domain's ``preferred_entity`` and ``PromotionPolicy`` methods need a
-    ``BaseEntity``-like object.  Rather than instantiating a domain-specific
-    subclass (which we don't know here), we use a simple attribute container
-    that satisfies the duck-typed interface.
+    Domain ``preferred_entity`` and ``PromotionPolicy`` methods require a
+    ``BaseEntity`` instance.  We don't know the domain-specific subclass here,
+    so we use a generic concrete subclass and bypass pydantic validation with
+    ``model_construct`` to avoid requiring all optional fields.
     """
-
-    def __init__(self, row: "Entity") -> None:
-        self.entity_id: str = row.entity_id
-        self.status = EntityStatus(row.status) if row.status else EntityStatus.PROVISIONAL
-        self.name: str = row.name or ""
-        self.synonyms: tuple = tuple(row.synonyms or [])
-        self.embedding = tuple(row.embedding) if row.embedding else None
-        self.canonical_ids: dict = {}
-        if row.canonical_url:
-            self.canonical_ids["url"] = row.canonical_url
-        self.confidence: float = row.confidence or 1.0
-        self.usage_count: int = row.usage_count or 0
-        self.created_at: datetime = datetime.now(timezone.utc)  # fallback; row has no created_at column
-        self.source: str = row.source or ""
-        self.metadata: dict = {}
-        self.merged_into: Optional[str] = row.merged_into
-        self.promotable: bool = True
 
     def get_entity_type(self) -> str:
         return ""  # not needed for identity operations
 
 
-def _entity_row_to_stub(row: "Entity") -> "_StubEntity":
-    return _StubEntity(row)
+def _entity_row_to_stub(row: Entity) -> _StubEntity:
+    """Convert a kgserver ``Entity`` ORM row to a ``_StubEntity`` for domain calls."""
+    canonical_ids: dict[str, str] = {}
+    if row.canonical_url:
+        canonical_ids["url"] = row.canonical_url
+    return _StubEntity.model_construct(
+        entity_id=row.entity_id,
+        status=EntityStatus(row.status) if row.status else EntityStatus.PROVISIONAL,
+        name=row.name or "",
+        synonyms=tuple(row.synonyms or []),
+        embedding=tuple(row.embedding) if row.embedding else None,
+        canonical_ids=canonical_ids,
+        confidence=row.confidence or 1.0,
+        usage_count=row.usage_count or 0,
+        created_at=datetime.now(timezone.utc),
+        source=row.source or "",
+        metadata={},
+        merged_into=row.merged_into,
+        promotable=True,
+    )
 
 
-def _make_stub_entity(mention: str, entity_type: str, document_id: str, embedding: Optional[list[float]]) -> "_StubEntity":
-    """Build a minimal stub for authority lookup (no DB row yet)."""
+def _make_stub_entity(mention: str, entity_type: str, document_id: str, embedding: Optional[list[float]]) -> _StubEntity:
+    """Build a minimal stub for authority lookup (no DB row exists yet)."""
+    return _StubEntity.model_construct(
+        entity_id=f"prov:{uuid.uuid4().hex}",
+        status=EntityStatus.PROVISIONAL,
+        name=mention,
+        synonyms=(),
+        embedding=tuple(embedding) if embedding else None,
+        canonical_ids={},
+        confidence=1.0,
+        usage_count=0,
+        created_at=datetime.now(timezone.utc),
+        source=document_id,
+        metadata={},
+        merged_into=None,
+        promotable=True,
+    )
 
-    class _FakeRow:
-        entity_id = f"prov:{uuid.uuid4().hex}"
-        status = EntityStatus.PROVISIONAL.value
-        name = mention
-        synonyms: list = []
-        embedding = embedding
-        canonical_url = None
-        canonical_ids: dict = {}
-        confidence = 1.0
-        usage_count = 0
-        source = document_id
-        merged_into = None
 
-    return _StubEntity(_FakeRow())  # type: ignore[arg-type]
+class _CachedCanonicalId:
+    """Minimal CanonicalId-like object reconstructed from a Redis-cached dict."""
+
+    def __init__(self, data: dict) -> None:
+        self.id: str = data.get("id", "")
+        self.url: Optional[str] = data.get("url")
+        self.synonyms: tuple = tuple(data.get("synonyms") or [])
+
+
+def _dict_to_canonical_id(data: dict) -> _CachedCanonicalId:
+    """Reconstruct a minimal CanonicalId-like object from a cached dict."""
+    return _CachedCanonicalId(data)

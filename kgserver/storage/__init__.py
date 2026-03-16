@@ -26,11 +26,12 @@ Example:
 For more information, see the README.md in this directory.
 """
 
-from storage.backends.identity import PostgresIdentityServer
+from storage.backends.identity import AuthorityCache, PostgresIdentityServer
 
 __all__ = [
     "interfaces",
     "backends",
     "models",
+    "AuthorityCache",
     "PostgresIdentityServer",
 ]
