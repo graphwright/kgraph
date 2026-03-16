@@ -124,7 +124,7 @@ class SQLiteStorage(StorageInterface):
         self.record_bundle(bundle_manifest)
         self._session.commit()
 
-    def load_bundle_incremental(self, bundle_manifest: BundleManifestV1, bundle_path: str) -> None:
+    def load_bundle_incremental(self, bundle_manifest: BundleManifestV1, bundle_path: str) -> None:  # pylint: disable=too-many-statements
         """
         Load a bundle without truncating; upsert entities (accumulate usage_count)
         and relationships, append provenance.

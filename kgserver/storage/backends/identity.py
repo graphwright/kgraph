@@ -37,9 +37,9 @@ from typing import Any, Optional
 from sqlalchemy import text
 from sqlmodel import Session, select
 
-from kgschema.domain import DomainSchema
-from kgschema.entity import BaseEntity, EntityStatus
-from kgschema.identity import IdentityServer
+from kgschema.domain import DomainSchema  # pylint: disable=import-error
+from kgschema.entity import BaseEntity, EntityStatus  # pylint: disable=import-error
+from kgschema.identity import IdentityServer  # pylint: disable=import-error
 from storage.models.entity import Entity
 
 logger = logging.getLogger(__name__)

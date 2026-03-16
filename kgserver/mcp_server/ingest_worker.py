@@ -92,8 +92,8 @@ def _run_pass2_pass3_load(
     """Run Pass 2, Pass 3, and load_bundle_incremental under workspace lock. Raises on failure."""
     from kgbundle import BundleManifestV1
 
-    from examples.medlit.pipeline.bundle_builder import run_pass3
-    from examples.medlit.pipeline.dedup import run_pass2
+    from examples.medlit.pipeline.bundle_builder import run_pass3  # pylint: disable=import-error
+    from examples.medlit.pipeline.dedup import run_pass2  # pylint: disable=import-error
 
     seeded_cache = workspace_root / "pass1_vocab" / "seeded_synonym_cache.json"
     synonym_cache_path = seeded_cache if seeded_cache.exists() else merged_dir / "synonym_cache.json"
@@ -195,14 +195,14 @@ async def _run_ingest_job(job_id: str) -> None:
         close_storage()
 
 
-async def _run_ingest_job_impl(job_id: str, storage: StorageInterface, job) -> None:
+async def _run_ingest_job_impl(job_id: str, storage: StorageInterface, job) -> None:  # pylint: disable=too-many-statements
     """Core implementation: fetch URL, run pipeline, load bundle."""
     import json
 
     from kgbundle import BundleManifestV1
 
-    from examples.medlit.scripts.pass1_extract import run_pass1
-    from examples.medlit.scripts.pass1a_vocab import run_pass1a
+    from examples.medlit.scripts.pass1_extract import run_pass1  # pylint: disable=import-error
+    from examples.medlit.scripts.pass1a_vocab import run_pass1a  # pylint: disable=import-error
 
     url = job.url
     logger.info("Ingest job %s starting: url=%s", job_id, url)
