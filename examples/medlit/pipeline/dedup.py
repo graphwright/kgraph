@@ -437,7 +437,7 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
         # Try each class we know about (collect all matching canonical IDs)
         candidates: set[str] = set()
         for (n, _ec), cid in name_type_to_canonical.items():
-            if n == norm or n == dedup_norm:
+            if n in (norm, dedup_norm):
                 candidates.add(cid)
         if len(candidates) == 1:
             return next(iter(candidates))

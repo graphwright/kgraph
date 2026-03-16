@@ -27,6 +27,7 @@ unavailable the server degrades gracefully to uncached lookups.  See
 ``AuthorityCache`` below.
 """
 
+import hashlib
 import json
 import logging
 import math
@@ -37,9 +38,9 @@ from typing import Any, Optional
 from sqlalchemy import text
 from sqlmodel import Session, select
 
-from kgschema.domain import DomainSchema  # pylint: disable=import-error
-from kgschema.entity import BaseEntity, EntityStatus  # pylint: disable=import-error
-from kgschema.identity import IdentityServer  # pylint: disable=import-error
+from kgschema.domain import DomainSchema
+from kgschema.entity import BaseEntity, EntityStatus
+from kgschema.identity import IdentityServer
 from storage.models.entity import Entity
 
 logger = logging.getLogger(__name__)
@@ -189,8 +190,9 @@ def _advisory_lock_key(entity_ids: list[str]) -> int:
     key regardless of argument order, preventing deadlocks.
     """
     combined = "|".join(sorted(entity_ids))
-    # fold the full hash into a signed 64-bit range Postgres accepts
-    return hash(combined) % (2**63)
+    digest = hashlib.md5(combined.encode()).digest()
+    # fold to signed 64-bit range Postgres accepts
+    return int.from_bytes(digest[:8], "big") % (2**63)
 
 
 class PostgresIdentityServer(IdentityServer):
@@ -293,11 +295,15 @@ class PostgresIdentityServer(IdentityServer):
             status = EntityStatus.PROVISIONAL.value
 
         now = datetime.now(timezone.utc).isoformat()
+        # ON CONFLICT targets (name, entity_type) — requires a unique constraint
+        # on those columns (see CONCURRENCY.md).  This eliminates the TOCTOU race
+        # between the SELECT above and this INSERT: whichever worker wins the
+        # INSERT owns the row; the loser gets DO NOTHING and re-reads the winner.
         stmt = text("""
             INSERT INTO entity (entity_id, entity_type, name, status, confidence, usage_count, source, synonyms, properties)
             VALUES (:entity_id, :entity_type, :name, :status, :confidence, :usage_count, :source,
                     CAST(:synonyms AS json), CAST(:properties AS json))
-            ON CONFLICT (entity_id) DO NOTHING
+            ON CONFLICT (name, entity_type) DO NOTHING
         """)
         synonyms_json = "[]"
         if canonical_id_result and canonical_id_result.synonyms:
@@ -317,6 +323,12 @@ class PostgresIdentityServer(IdentityServer):
                 "properties": f'{{"created_at": "{now}"}}',
             },
         )
+
+        # Re-read the winner: our row if we won the INSERT, or the concurrent
+        # row that beat us.  This is safe because either way a durable row exists.
+        winner = self._session.exec(select(Entity).where(Entity.name == mention, Entity.entity_type == entity_type)).first()
+        if winner is not None:
+            entity_id = winner.entity_id
 
         # Store embedding if provided (JSON column for now).
         if embedding is not None:
@@ -366,13 +378,13 @@ class PostgresIdentityServer(IdentityServer):
             return provisional_id
 
         new_id = canonical_id_result.id
-        # Update the row in-place (entity_id is PK — we update via raw SQL to
-        # change the PK and status atomically, then update relationship refs).
+        # Update relationship refs BEFORE mutating the PK so there is no window
+        # where relationships reference a nonexistent entity_id.
+        self._update_relationship_refs(provisional_id, new_id)
         self._session.execute(
             text("UPDATE entity SET entity_id = :new_id, status = 'canonical', canonical_url = :url WHERE entity_id = :old_id AND status = 'provisional'"),
             {"new_id": new_id, "url": canonical_id_result.url, "old_id": provisional_id},
         )
-        self._update_relationship_refs(provisional_id, new_id)
         logger.info("promote: '%s' promoted to canonical '%s'", provisional_id, new_id)
         return new_id
 
@@ -494,6 +506,16 @@ class PostgresIdentityServer(IdentityServer):
         # Convert to kgschema BaseEntity stubs for preferred_entity.
         stubs: list[BaseEntity] = [_entity_row_to_stub(r) for r in rows]
         survivor_stub = self._domain.preferred_entity(stubs)
+
+        # Log before merging — merges are irreversible, so this audit trail
+        # is important for diagnosing miscalibrated similarity thresholds.
+        logger.warning(
+            "on_entity_added: auto-merging %d entities into survivor '%s' (threshold=%.2f, candidates=%s)",
+            len(all_ids),
+            survivor_stub.entity_id,
+            self._similarity_threshold,
+            all_ids,
+        )
         await self.merge(all_ids, survivor_stub.entity_id)
 
     # ------------------------------------------------------------------
@@ -534,7 +556,7 @@ class _StubEntity(BaseEntity):
     """
 
     def get_entity_type(self) -> str:
-        return ""  # not needed for identity operations
+        raise NotImplementedError("_StubEntity does not have a domain entity type")
 
 
 def _entity_row_to_stub(row: Entity) -> _StubEntity:
