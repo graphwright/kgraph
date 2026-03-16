@@ -297,8 +297,30 @@ domain:
 |---|---|---|
 | Authority lookup | Domain implementation | e.g. UMLS API, DBPedia SPARQL, no-op |
 | Synonym criteria | Domain implementation | e.g. cosine similarity threshold, shared CUI |
-| Merge survivor selection | Caller / domain policy | The ABC accepts an explicit `survivor_id` |
+| Merge survivor selection | Domain schema `preferred_entity` method | See below |
 | Promotion thresholds | Domain promotion policy | Reuses existing `PromotionPolicy` ABC |
+
+#### Survivor selection via domain schema
+
+The domain schema (a pydantic model) should declare an abstract method for
+survivor selection:
+
+```python
+@abstractmethod
+def preferred_entity(self, candidates: list[Entity]) -> Entity:
+    """
+    Given a list of synonym candidates, return the preferred survivor.
+
+    Domain implementations encode their own preference rules, e.g.:
+    - prefer canonical over provisional
+    - prefer the entity with the most mentions
+    - prefer the entity with an external CUI / authoritative ID
+    """
+```
+
+`on_entity_added` calls `preferred_entity` to determine `survivor_id` before
+calling `merge`. This keeps survivor policy out of the identity server ABC and
+fully domain-controlled.
 
 ---
 
@@ -323,9 +345,36 @@ is preferred because:
 - **`merge`**: acquire a Postgres advisory lock keyed on the sorted pair of
   entity IDs before beginning the merge transaction. This prevents two workers
   from merging the same pair in opposite orders.
-- **`on_entity_added`**: runs synonym detection outside a transaction (read-only
-  queries), then calls `merge` for each confirmed pair (which acquires its own
-  lock).
+- **`on_entity_added`**: must be called inside the same transaction as the
+  entity insert, so synonym detection is triggered only after the row is
+  durably committed and visible. This prevents the race where two workers both
+  see each other as merge candidates before either is fully written. Synonym
+  detection itself is read-only; `merge` acquires its own lock.
+
+#### Authority lookup caching in `resolve`
+
+Authority lookup (e.g. UMLS API, DBPedia SPARQL) is an external network call
+and therefore not idempotent in the face of transient failures. Caching the
+result mitigates this:
+
+1. Check cache keyed on normalized mention string → hit: use cached ID, skip
+   API call entirely.
+2. Miss: call the authority API, store result in cache, then do the DB insert.
+
+**Cache backend**: Redis (already proposed for Issues 1 and 2) is preferred
+over an in-process dict so the cache is shared across replicas.
+
+**Negative caching**: a "no canonical match" result should also be cached,
+with a shorter TTL, so a mention that later gets added to the authority source
+doesn't stay provisional forever.
+
+**Cache key versioning**: prefix keys with the authority source version, e.g.
+`resolve:umls:v2026.01:{mention}`, so a UMLS release can be handled by
+flushing or re-keying without invalidating unrelated entries.
+
+**Residual risk**: if the API call succeeds but the process crashes before the
+DB insert commits, a retry will hit the cache and get the canonical ID, then
+re-attempt the insert. `ON CONFLICT DO NOTHING` handles this correctly.
 
 #### Schema notes (deferred to implementer)
 
@@ -337,6 +386,36 @@ implementer, but the single-table approach is recommended.
 Merged entities should be retained with `status = 'merged'` and a
 `merged_into` foreign key, so that stale external references can be resolved
 via a single lookup.
+
+#### Synonym detection via pgvector
+
+`find_synonyms` uses vector embeddings and cosine similarity, which is exactly
+what the `pgvector` extension (already in the stack) is optimized for.
+Approximate nearest-neighbor search at scale is its core capability, and
+keeping similarity queries inside Postgres means they share the same
+transaction boundary as entity operations with no additional service.
+
+`on_entity_added` embeds the new entity and queries pgvector for neighbors
+above a domain-defined similarity threshold. The result list is passed to
+`preferred_entity` and then to `merge`.
+
+#### Merge × promotion status rules
+
+The status of the survivor after a merge is determined as follows:
+
+- **provisional + provisional → provisional**: the merged entity is
+  promotable via the normal promotion policy.
+- **canonical + anything → canonical**: the survivor retains canonical
+  status regardless of the absorbed entity's status.
+
+`promote` behavior by status:
+
+- **provisional**: check promotion policy, upgrade if warranted.
+- **canonical**: no-op; returns the existing canonical ID (promotion is a
+  one-time transition).
+- **merged**: the entity has been absorbed into another. Redirect to the
+  survivor and emit a log statement for tracking; do not raise an error, as
+  the caller likely holds a stale ID.
 
 #### Idempotency contract
 
