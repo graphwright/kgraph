@@ -423,12 +423,41 @@ def _run_pass2_impl(  # pylint: disable=too-many-statements
     domain = MedLitDomainSchema()
     predicate_constraints = domain.predicate_constraints
     triple_to_rel: dict[tuple[str, str, str], dict[str, Any]] = {}
+
+    def _resolve_by_name(name: str) -> Optional[str]:
+        """Fuzzy fallback: resolve a free-form name string to a canonical ID.
+
+        When the LLM writes a relationship subject/object as a plain name (e.g.
+        "FOLFIRINOX") rather than the entity ID it assigned ("mfolfirinox"),
+        local_to_canonical misses. This searches name_type_to_canonical across
+        all entity classes using exact, normalized, and synonym matches.
+        """
+        norm = name.lower().strip()
+        dedup_norm = _normalize_for_dedup(name)
+        # Try each class we know about (collect all matching canonical IDs)
+        candidates: set[str] = set()
+        for (n, _ec), cid in name_type_to_canonical.items():
+            if n == norm or n == dedup_norm:
+                candidates.add(cid)
+        if len(candidates) == 1:
+            return next(iter(candidates))
+        # Ambiguous (multiple classes) — prefer authoritative ID if unique
+        auth = [c for c in candidates if _is_authoritative_id(c)]
+        if len(auth) == 1:
+            return auth[0]
+        return None
+
     for paper_id, bundle in bundles:
         for rel in bundle.relationships:
             if rel.predicate == SAME_AS_PREDICATE and rel.confidence >= 0.85:
                 continue  # already merged
             sub_c = local_to_canonical.get((paper_id, rel.subject))
             obj_c = local_to_canonical.get((paper_id, rel.object_id))
+            # Fallback: LLM may have used a free-form name instead of an entity ID
+            if not sub_c:
+                sub_c = _resolve_by_name(rel.subject)
+            if not obj_c:
+                obj_c = _resolve_by_name(rel.object_id)
             if not sub_c or not obj_c:
                 continue
             _, sub_class = _entity_name_class(bundle, rel.subject)

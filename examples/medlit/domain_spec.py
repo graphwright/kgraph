@@ -417,6 +417,11 @@ Use linguistic_trust: "asserted" | "suggested" | "speculative" in the JSON.
 Evidence id format: {paper_id}:{section}:{paragraph_idx}:llm
 Use ==CURRENT_PAPER== as the paper_id when you do not have the PMC ID; it will be replaced automatically.
 
+## Relationship subject/object must be entity IDs
+Every "subject" and "object" in a relationship must be the "id" of an entry in the "entities" array.
+If a drug, gene, biomarker, or other entity appears only in a relationship, extract it as an entity first and use that entity's "id".
+Common entities to always extract if mentioned: chemotherapy regimens (FOLFIRINOX, gemcitabine, capecitabine, nab-paclitaxel), radiation modalities (SBRT, IMRT, IGRT), surgical procedures, biomarkers (CA19-9, KRAS, SMAD4/DPC4), and any novel agents.
+
 ## Output structure
 Use "class" for entity type. Return ONLY valid JSON, no markdown or commentary.
 """.strip()

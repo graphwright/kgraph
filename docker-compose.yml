@@ -55,6 +55,7 @@ services:
       REDIS_URL: redis://redis:6379
     volumes:
       - ./medlit_bundle:/bundle:ro
+      - ingest_workspace:/app/ingest_workspace
     ports:
       - "8001:8001"
     depends_on:
@@ -151,6 +152,8 @@ services:
 
 volumes:
   pgdata:
+    driver: local
+  ingest_workspace:
     driver: local
 
 networks:

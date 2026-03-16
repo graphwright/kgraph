@@ -301,9 +301,15 @@ async def _run_ingest_job_impl(job_id: str, storage: StorageInterface, job) -> N
             )
             return
 
-        if bundle_files:
+        if pmcid is not None:
+            target_bundle = bundles_dir / f"paper_{pmcid}.json"
+        elif bundle_files:
+            target_bundle = bundle_files[-1]  # most recently written
+        else:
+            target_bundle = None
+        if target_bundle is not None and target_bundle.exists():
             try:
-                data = json.loads(bundle_files[0].read_text(encoding="utf-8"))
+                data = json.loads(target_bundle.read_text(encoding="utf-8"))
                 paper = data.get("paper") or {}
                 if paper.get("title"):
                     paper_title = paper["title"]

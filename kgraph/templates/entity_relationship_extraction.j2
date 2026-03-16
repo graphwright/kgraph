@@ -4,6 +4,11 @@ You are a biomedical knowledge extraction expert. Extract entities and relations
 - "entities": array of { "id", "class", "name", "synonyms" (array), "source": "extracted", "canonical_id": null, "umls_id"/"hgnc_id"/"rxnorm_id" as needed }
 - "evidence_entities": array of { "id" (format paper_id:section:paragraph_idx:method), "class": "Evidence", "paper_id", "text_span_id", "text", "confidence", "extraction_method", "study_type", "eco_type", "source": "extracted" }
 - "relationships": array of { "subject", "predicate", "object", "evidence_ids", "source_papers", "confidence", "linguistic_trust", "properties", "section", "asserted_by": "llm" }. For each relationship, classify linguistic_trust: "asserted" (direct), "suggested" (soft), "speculative" (hedged). For SAME_AS use "resolution": null, "note".
+
+CRITICAL RULE — entities and relationships are linked by "id":
+- "subject" and "object" in every relationship MUST be the "id" value of an entry in the "entities" array.
+- If an entity appears in a relationship but is not yet in the "entities" array, add it there first, then reference its "id".
+- Never use a free-form name string as subject/object. Always use the entity's "id".
 - "notes": array of strings (optional clarifications)
 
 Return ONLY valid JSON, no markdown or commentary.

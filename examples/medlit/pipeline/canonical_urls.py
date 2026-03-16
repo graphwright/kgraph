@@ -70,6 +70,18 @@ def build_canonical_url(canonical_id: str, entity_type: Optional[str] = None) ->
         # RxNorm doesn't provide direct entity links
         return None
 
+    # Handle ROR IDs (format: "ROR:04aj4c181" or full URL "https://ror.org/04aj4c181")
+    if canonical_id.startswith("ROR:"):
+        ror_id = canonical_id.replace("ROR:", "")
+        return f"https://ror.org/{ror_id}"
+    if canonical_id.startswith("https://ror.org/"):
+        return canonical_id
+
+    # Handle ORCID iDs (format: "ORCID:0000-0001-2345-6789")
+    if canonical_id.startswith("ORCID:"):
+        orcid_id = canonical_id.replace("ORCID:", "")
+        return f"https://orcid.org/{orcid_id}"
+
     return None
 
 

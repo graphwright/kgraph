@@ -3,6 +3,7 @@
 Converts raw paper input (PMC XML, JSON, etc.) into JournalArticle documents.
 """
 
+import re
 from datetime import datetime, timezone
 from typing import Any
 
@@ -133,6 +134,8 @@ class JournalArticleParser(DocumentParserInterface):
                 text = inst_elem.text.strip()
             else:
                 text = "".join(aff.itertext()).strip()
+            # Strip leading affiliation index digits (e.g. "1Department..." → "Department...")
+            text = re.sub(r"^\d+\s*", "", text).strip()
             if aff_id:
                 aff_id_to_text[aff_id] = text
                 aff_id_to_text[aff_id.lstrip("#")] = text

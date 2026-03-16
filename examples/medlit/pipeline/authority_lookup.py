@@ -319,6 +319,12 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
             canonical_id_str = await self._lookup_rxnorm(term)
         elif entity_type == "protein":
             canonical_id_str = await self._lookup_uniprot(term)
+        elif entity_type == "institution":
+            canonical_id_str = await self._lookup_ror(term)
+            skip_dbpedia = True
+        elif entity_type == "author":
+            canonical_id_str = await self._lookup_orcid(term)
+            skip_dbpedia = True
 
         # Fallback to DBPedia for any entity type if specialized lookup failed
         if canonical_id_str is None and not skip_dbpedia:
@@ -896,6 +902,67 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                     "term": term,
                     "error": str(e),
                 },
+                pprint=True,
+            )
+            return None
+
+    async def _lookup_ror(self, term: str) -> Optional[str]:
+        """Look up ROR ID for a research institution using the affiliation endpoint.
+
+        Uses the ROR affiliation-matching endpoint which is designed for messy
+        affiliation strings (e.g. department names, abbreviations, addresses).
+        Returns a ROR ID (format "ROR:{id}") for confident matches only.
+        No authentication required.
+        """
+        try:
+            url = "https://api.ror.org/organizations"
+            response = await self.client.get(url, params={"affiliation": term})
+            if response.status_code != 200:
+                return None
+            data = response.json()
+            items = data.get("items", [])
+            # Only accept the top result when the API marks it as a chosen match
+            for item in items:
+                if item.get("chosen"):
+                    org = item.get("organization", {})
+                    ror_id = org.get("id", "")  # full URL e.g. "https://ror.org/04aj4c181"
+                    if ror_id:
+                        # Extract just the path component as the short ID
+                        short_id = ror_id.rstrip("/").split("/")[-1]
+                        return f"ROR:{short_id}"
+            return None
+        except Exception as e:
+            logger.warning(
+                {"message": f"ROR lookup failed for '{term}'", "term": term, "error": str(e)},
+                pprint=True,
+            )
+            return None
+
+    async def _lookup_orcid(self, term: str) -> Optional[str]:
+        """Look up ORCID iD for a researcher by name using the ORCID public API.
+
+        Uses the ORCID public search API (no authentication required for search).
+        Returns an ORCID iD (format "ORCID:0000-0001-2345-6789") when a single
+        unambiguous result is found for the name.
+        """
+        try:
+            url = "https://pub.orcid.org/v3.0/search/"
+            headers = {"Accept": "application/json"}
+            # Search by name — use quoted phrase for better precision
+            response = await self.client.get(url, headers=headers, params={"q": f'"{term}"', "rows": "3"})
+            if response.status_code != 200:
+                return None
+            data = response.json()
+            results = data.get("result", []) or []
+            # Only accept when exactly one result is returned (unambiguous match)
+            if len(results) == 1:
+                orcid_id = results[0].get("orcid-identifier", {}).get("path")
+                if orcid_id:
+                    return f"ORCID:{orcid_id}"
+            return None
+        except Exception as e:
+            logger.warning(
+                {"message": f"ORCID lookup failed for '{term}'", "term": term, "error": str(e)},
                 pprint=True,
             )
             return None

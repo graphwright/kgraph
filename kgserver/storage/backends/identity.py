@@ -263,7 +263,7 @@ class PostgresIdentityServer(IdentityServer):
             return existing.entity_id
 
         # Authority lookup — check cache first, then call the domain policy.
-        canonical_id_result = None
+        canonical_id_result: Optional[Any] = None
         cached = self._authority_cache.get(entity_type, mention)
         if cached is _NEGATIVE_SENTINEL:
             # Confirmed miss: skip the live API call.
@@ -492,7 +492,7 @@ class PostgresIdentityServer(IdentityServer):
             return
 
         # Convert to kgschema BaseEntity stubs for preferred_entity.
-        stubs = [_entity_row_to_stub(r) for r in rows]
+        stubs: list[BaseEntity] = [_entity_row_to_stub(r) for r in rows]
         survivor_stub = self._domain.preferred_entity(stubs)
         await self.merge(all_ids, survivor_stub.entity_id)
 
