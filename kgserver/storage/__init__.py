@@ -26,7 +26,7 @@ Example:
 For more information, see the README.md in this directory.
 """
 
-from kgserver.storage.backends.identity import AuthorityCache, PostgresIdentityServer
+from .backends.identity import AuthorityCache, PostgresIdentityServer
 
 __all__ = [
     "interfaces",

@@ -41,7 +41,7 @@ from sqlmodel import Session, select
 from kgschema.domain import DomainSchema
 from kgschema.entity import BaseEntity, EntityStatus
 from kgschema.identity import IdentityServer
-from kgserver.storage.models.entity import Entity
+from ..models.entity import Entity
 
 logger = logging.getLogger(__name__)
 
