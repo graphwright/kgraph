@@ -644,7 +644,7 @@ function showNodeDetails(node) {
     let html = '';
     const props = node.properties || {};
     
-    html += createProperty('Entity ID', props.entity_id);
+    html += createProperty('Entity ID', formatEntityIdLink(props.entity_id));
     html += createProperty('Type', props.entity_type);
     html += createProperty('Name', props.name);
     html += createProperty('Status', props.status);
@@ -717,6 +717,80 @@ function formatSourceLink(source) {
     
     // Return as-is if no pattern matches
     return source;
+}
+
+/**
+ * Format a canonical entity ID as a clickable link to its authority source.
+ * Provisional IDs (prov:...) are returned as plain text.
+ */
+function formatEntityIdLink(entityId) {
+    if (!entityId) return '';
+
+    // Provisional — no authority
+    if (entityId.startsWith('prov:') || entityId.startsWith('prov-')) {
+        return entityId;
+    }
+
+    // PMC paper ID
+    const pmcMatch = entityId.match(/^PMC(\d+)$/i);
+    if (pmcMatch) {
+        return `<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/${entityId}/" target="_blank" title="View on PubMed Central">${entityId}</a>`;
+    }
+
+    // UMLS CUI (C followed by digits)
+    const umlsMatch = entityId.match(/^C(\d+)$/);
+    if (umlsMatch) {
+        return `<a href="https://uts.nlm.nih.gov/uts/umls/concept/${entityId}" target="_blank" title="View in UMLS">${entityId}</a>`;
+    }
+
+    // HGNC gene ID
+    if (entityId.startsWith('HGNC:')) {
+        const hgncId = entityId.replace('HGNC:', '');
+        return `<a href="https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/${entityId}" target="_blank" title="View in HGNC">${entityId}</a>`;
+    }
+
+    // RxNorm drug ID
+    if (entityId.startsWith('RxNorm:')) {
+        const rxcui = entityId.replace('RxNorm:', '');
+        return `<a href="https://rxnav.nlm.nih.gov/RxNavUI.html#?query=${rxcui}" target="_blank" title="View in RxNav">${entityId}</a>`;
+    }
+
+    // UniProt protein ID
+    if (entityId.startsWith('UniProt:')) {
+        const uniprotId = entityId.replace('UniProt:', '');
+        return `<a href="https://www.uniprot.org/uniprotkb/${uniprotId}" target="_blank" title="View in UniProt">${entityId}</a>`;
+    }
+    // Bare UniProt accession (P/Q + alphanumeric, 6 chars)
+    if (/^[PQ][A-Z0-9]{5}$/.test(entityId)) {
+        return `<a href="https://www.uniprot.org/uniprotkb/${entityId}" target="_blank" title="View in UniProt">${entityId}</a>`;
+    }
+
+    // MeSH descriptor ID
+    if (entityId.startsWith('MeSH:') || /^D\d{6,}$/.test(entityId)) {
+        const meshId = entityId.replace('MeSH:', '');
+        return `<a href="https://meshb.nlm.nih.gov/record/ui?ui=${meshId}" target="_blank" title="View in MeSH">${entityId}</a>`;
+    }
+
+    // DBpedia URI
+    if (entityId.startsWith('DBPedia:') || entityId.startsWith('http://dbpedia.org/')) {
+        const label = entityId.replace('DBPedia:', '');
+        const url = entityId.startsWith('http') ? entityId : `http://dbpedia.org/resource/${label}`;
+        return `<a href="${url}" target="_blank" title="View in DBpedia">${entityId}</a>`;
+    }
+
+    // DOI
+    if (entityId.startsWith('10.') || entityId.toLowerCase().startsWith('doi:')) {
+        const doi = entityId.replace(/^doi:/i, '');
+        return `<a href="https://doi.org/${doi}" target="_blank" title="View via DOI">${entityId}</a>`;
+    }
+
+    // PMID
+    const pmidMatch = entityId.match(/^(?:PMID[:\s]*)?(\d{6,9})$/i);
+    if (pmidMatch) {
+        return `<a href="https://pubmed.ncbi.nlm.nih.gov/${pmidMatch[1]}/" target="_blank" title="View on PubMed">${entityId}</a>`;
+    }
+
+    return entityId;
 }
 
 function showEdgeDetails(edge) {
