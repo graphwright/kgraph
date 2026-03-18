@@ -248,7 +248,7 @@ async def run_fetch_vocab(
             raw = await llm.generate_json(
                 system_prompt=_pass1a_system_prompt(),
                 user_message=content[:500000],
-                temperature=0.1,
+                temperature=0.0,
                 max_tokens=8192,
             )
         except Exception as e:
