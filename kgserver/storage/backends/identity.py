@@ -258,7 +258,11 @@ class PostgresIdentityServer(IdentityServer):
         embedding = context.get("embedding")
 
         # Check whether an entity already exists with this name + type.
-        existing = self._session.exec(select(Entity).where(Entity.name == mention, Entity.entity_type == entity_type)).first()
+        # Use no_autoflush to avoid flushing pending ORM inserts (e.g. from a
+        # concurrent load_bundle_incremental call) which would violate the
+        # (name, entity_type) unique constraint before our INSERT can run.
+        with self._session.no_autoflush:
+            existing = self._session.exec(select(Entity).where(Entity.name == mention, Entity.entity_type == entity_type)).first()
         if existing is not None:
             if existing.status == EntityStatus.MERGED.value and existing.merged_into:
                 logger.debug("resolve: mention '%s' maps to merged entity %s → redirecting to %s", mention, existing.entity_id, existing.merged_into)
@@ -601,7 +605,7 @@ def _make_stub_entity(mention: str, entity_type: str, document_id: str, embeddin
         merged_into=None,
         promotable=True,
     )
-    stub._entity_type = entity_type
+    stub._entity_type = entity_type  # pylint: disable=protected-access
     return stub
 
 

@@ -49,11 +49,7 @@ def main() -> None:
     parser.add_argument(
         "--use-identity-server",
         action="store_true",
-        help=(
-            "Use PostgresIdentityServer for entity resolution instead of the "
-            "legacy file-based synonym cache and authority lookup chain. "
-            "Requires DATABASE_URL env var."
-        ),
+        help=("Use PostgresIdentityServer for entity resolution instead of the " "legacy file-based synonym cache and authority lookup chain. " "Requires DATABASE_URL env var."),
     )
     # Legacy options (only used when --use-identity-server is NOT set)
     parser.add_argument(

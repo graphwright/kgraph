@@ -141,6 +141,13 @@ class SQLiteStorage(StorageInterface):
                         continue
                     entity_data = self._normalize_entity(entity_data)
                     existing = self.get_entity(entity_data["entity_id"])
+                    if not existing:
+                        # Also check by (name, entity_type) — a re-ingest may produce a
+                        # different provisional entity_id for the same logical entity.
+                        name = entity_data.get("name")
+                        etype = entity_data.get("entity_type")
+                        if name and etype:
+                            existing = self._session.exec(select(Entity).where(Entity.name == name, Entity.entity_type == etype)).first()
                     if existing:
                         existing.usage_count = (existing.usage_count or 0) + (entity_data.get("usage_count") or 0)
                         existing.name = entity_data.get("name") or existing.name

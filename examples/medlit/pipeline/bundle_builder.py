@@ -11,14 +11,11 @@ import json
 import logging
 import shutil
 import time
-import urllib.parse
 import urllib.request
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
-logger = logging.getLogger(__name__)
 
 from kgbundle import (
     BundleFile,
@@ -32,6 +29,8 @@ from kgbundle import (
 
 from examples.medlit.bundle_models import PerPaperBundle
 from examples.medlit.pipeline.canonical_urls import build_canonical_url
+
+logger = logging.getLogger(__name__)
 
 # Paper IDs to exclude from supporting_documents (synthetic/fallback provenance)
 PROVENANCE_DENYLIST = frozenset(
@@ -392,10 +391,7 @@ def _fetch_pmc_titles(pmc_ids: list[str], batch_size: int = 200) -> dict[str, st
     for i in range(0, len(numeric_ids), batch_size):
         batch = numeric_ids[i : i + batch_size]
         ids_param = ",".join(batch)
-        url = (
-            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
-            f"?db=pmc&id={ids_param}&retmode=json"
-        )
+        url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi" f"?db=pmc&id={ids_param}&retmode=json"
         try:
             with urllib.request.urlopen(url, timeout=15) as resp:
                 data = json.loads(resp.read())
@@ -447,11 +443,7 @@ def run_build_bundle(
     entity_rows = [_merged_entity_to_entity_row(ent, usage.get(ent["entity_id"], {}), created_at) for ent in entities_list]
 
     # Patch cited-paper names: fetch titles from NCBI for paper entities whose name is just a PMC ID
-    cited_paper_ids = [
-        row.entity_id
-        for row in entity_rows
-        if row.entity_type == "paper" and row.name == row.entity_id
-    ]
+    cited_paper_ids = [row.entity_id for row in entity_rows if row.entity_type == "paper" and row.name == row.entity_id]
     if cited_paper_ids:
         logger.info("Fetching titles for %d cited papers from NCBI esummary...", len(cited_paper_ids))
         pmc_titles = _fetch_pmc_titles(cited_paper_ids)

@@ -837,9 +837,7 @@ async def run_ingest_with_identity_server(
     _RESOLVE_CONCURRENCY = 20
     semaphore = asyncio.Semaphore(_RESOLVE_CONCURRENCY)
 
-    async def _resolve_entity(
-        paper_id: str, e: ExtractedEntityRow
-    ) -> tuple[tuple[str, str], str]:
+    async def _resolve_entity(paper_id: str, e: ExtractedEntityRow) -> tuple[tuple[str, str], str]:
         async with semaphore:
             if e.canonical_id and _is_authoritative_id(e.canonical_id):
                 entity_id = e.canonical_id
@@ -860,23 +858,20 @@ async def run_ingest_with_identity_server(
             )
             return (paper_id, e.id), entity_id
 
-    tasks = [
-        _resolve_entity(paper_id, e)
-        for paper_id, bundle in bundles
-        for e in bundle.entities
-    ]
+    tasks = [_resolve_entity(paper_id, e) for paper_id, bundle in bundles for e in bundle.entities]
     results = await asyncio.gather(*tasks)
-    for key, entity_id in results:
-        local_to_canonical[key] = entity_id
+    for local_key, entity_id in results:
+        local_to_canonical[local_key] = entity_id
 
     # 2) Build canonical_entities from resolved IDs.
     #    One row per unique resolved entity_id; accumulate source_papers and synonyms.
     canonical_entities: dict[str, dict[str, Any]] = {}
     for paper_id, bundle in bundles:
         for e in bundle.entities:
-            entity_id = local_to_canonical.get((paper_id, e.id))
-            if entity_id is None:
+            entity_id_or_none = local_to_canonical.get((paper_id, e.id))
+            if entity_id_or_none is None:
                 continue
+            entity_id = entity_id_or_none
             if entity_id not in canonical_entities:
                 canonical_entities[entity_id] = {
                     "entity_id": entity_id,
@@ -908,15 +903,21 @@ async def run_ingest_with_identity_server(
         for rel in bundle.relationships:
             if rel.predicate == SAME_AS_PREDICATE:
                 continue  # identity server handles these via on_entity_added
-            sub_c = local_to_canonical.get((paper_id, rel.subject))
-            obj_c = local_to_canonical.get((paper_id, rel.object_id))
-            if not sub_c or not obj_c:
+            sub_c_or_none = local_to_canonical.get((paper_id, rel.subject))
+            obj_c_or_none = local_to_canonical.get((paper_id, rel.object_id))
+            if not sub_c_or_none or not obj_c_or_none:
                 continue
+            sub_c: str = sub_c_or_none
+            obj_c: str = obj_c_or_none
             _, sub_class = _entity_name_class(bundle, rel.subject)
             _, obj_class = _entity_name_class(bundle, rel.object_id)
             if _should_swap_relationship(
-                rel.predicate, sub_class, obj_class,
-                predicate_constraints, entity_class_to_lookup, entity_class_to_predicate_type,
+                rel.predicate,
+                sub_class,
+                obj_class,
+                predicate_constraints,
+                entity_class_to_lookup,
+                entity_class_to_predicate_type,
             ):
                 sub_c, obj_c = obj_c, sub_c
             pred_spec = _ds.PREDICATES.get(rel.predicate.upper()) or _ds.PREDICATES.get(rel.predicate)
