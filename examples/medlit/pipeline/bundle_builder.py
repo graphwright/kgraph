@@ -8,11 +8,17 @@ and extracted paper_*.json bundles; writes a kgbundle directory loadable by kgse
 from __future__ import annotations
 
 import json
+import logging
 import shutil
+import time
+import urllib.parse
+import urllib.request
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
 
 from kgbundle import (
     BundleFile,
@@ -366,6 +372,48 @@ def _build_mention_rows(
     return rows
 
 
+def _fetch_pmc_titles(pmc_ids: list[str], batch_size: int = 200) -> dict[str, str]:
+    """Batch-fetch paper titles from NCBI esummary for a list of PMC IDs.
+
+    Returns a dict mapping PMC ID (e.g. 'PMC12345') -> title string.
+    IDs not found in the response are omitted. Rate-limited to NCBI guidelines
+    (max 3 req/s without API key; we use 0.34s delay between batches).
+    """
+    titles: dict[str, str] = {}
+    # Strip 'PMC' prefix for the API, keep mapping back
+    numeric_ids = []
+    id_map: dict[str, str] = {}  # numeric -> PMC-prefixed
+    for pid in pmc_ids:
+        numeric = pid[3:] if pid.upper().startswith("PMC") else pid
+        if numeric.isdigit():
+            numeric_ids.append(numeric)
+            id_map[numeric] = pid
+
+    for i in range(0, len(numeric_ids), batch_size):
+        batch = numeric_ids[i : i + batch_size]
+        ids_param = ",".join(batch)
+        url = (
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
+            f"?db=pmc&id={ids_param}&retmode=json"
+        )
+        try:
+            with urllib.request.urlopen(url, timeout=15) as resp:
+                data = json.loads(resp.read())
+            result = data.get("result", {})
+            for numeric_id in batch:
+                doc = result.get(numeric_id)
+                if doc and isinstance(doc, dict):
+                    title = doc.get("title", "").strip()
+                    if title:
+                        titles[id_map[numeric_id]] = title
+        except Exception:
+            logger.warning("esummary fetch failed for batch starting at index %d", i, exc_info=True)
+        if i + batch_size < len(numeric_ids):
+            time.sleep(0.34)  # stay under NCBI's 3 req/s limit
+
+    return titles
+
+
 def run_build_bundle(
     merged_dir: Path,
     bundles_dir: Path,
@@ -397,6 +445,20 @@ def run_build_bundle(
     relationships_list = [r for r in relationships_list if r["subject"] in surviving_entity_ids and r["object"] in surviving_entity_ids]
 
     entity_rows = [_merged_entity_to_entity_row(ent, usage.get(ent["entity_id"], {}), created_at) for ent in entities_list]
+
+    # Patch cited-paper names: fetch titles from NCBI for paper entities whose name is just a PMC ID
+    cited_paper_ids = [
+        row.entity_id
+        for row in entity_rows
+        if row.entity_type == "paper" and row.name == row.entity_id
+    ]
+    if cited_paper_ids:
+        logger.info("Fetching titles for %d cited papers from NCBI esummary...", len(cited_paper_ids))
+        pmc_titles = _fetch_pmc_titles(cited_paper_ids)
+        logger.info("Retrieved %d titles", len(pmc_titles))
+        for row in entity_rows:
+            if row.entity_type == "paper" and row.entity_id in pmc_titles:
+                row.name = pmc_titles[row.entity_id]
     evidence_stats = _relationship_evidence_stats(relationships_list, bundles, id_map)
     relationship_rows = [_merged_rel_to_relationship_row(rel, evidence_stats, created_at) for rel in relationships_list]
     evidence_rows = _build_evidence_rows(bundles, id_map, relationships_list)
