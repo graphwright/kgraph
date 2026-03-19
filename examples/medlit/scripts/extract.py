@@ -377,7 +377,16 @@ async def run_extract(  # pylint: disable=too-many-statements
         for en in raw_entities:
             if isinstance(en, dict) and "class" in en:
                 en["class"] = normalize_entity_type(en.get("class") or "", normalized_to_bundle)
-        entities = [ExtractedEntityRow.model_validate(en) for en in raw_entities]
+        valid_entities = []
+        for en in raw_entities:
+            if isinstance(en, dict) and not en.get("name"):
+                print(f"  SKIP entity missing name: {en}", file=sys.stderr)
+                continue
+            try:
+                valid_entities.append(ExtractedEntityRow.model_validate(en))
+            except Exception as ve:
+                print(f"  SKIP invalid entity ({ve}): {en}", file=sys.stderr)
+        entities = valid_entities
         evidence_entities = [EvidenceEntityRow.model_validate(ev) for ev in raw_bundle.get("evidence_entities", [])]
         relationships = [RelationshipRow.model_validate(r) for r in raw_bundle.get("relationships", [])]
         # Override source_papers with actual paper_id — LLM often outputs "paper_id" literally
