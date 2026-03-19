@@ -1,6 +1,6 @@
 #!/bin/bash -e
 # Three-pass medlit ingestion using the PostgresIdentityServer for ingest.
-# Requires Postgres to be running (docker-compose --profile storage up -d postgres).
+# Requires Postgres to be running with the host port exposed (local profile only).
 #
 # This is the new pipeline counterpart to run-ingest.sh.  The only difference
 # is that ingest uses --use-identity-server instead of the legacy file-based
@@ -8,7 +8,7 @@
 #
 # Prerequisite:
 #   export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/kgserver
-#   docker-compose --profile storage up -d postgres   # start Postgres if not running
+#   docker-compose --profile local up -d postgres-local   # start Postgres with host port exposed
 #
 # Usage:
 #   ./run-ingest-new.sh --list              Show available paper lists and descriptions
@@ -50,7 +50,7 @@ _show_help() {
     echo ""
     echo "Requires:"
     echo "  DATABASE_URL env var pointing to a running Postgres instance."
-    echo "  Quickest way: docker-compose --profile storage up -d postgres"
+    echo "  Quickest way: docker-compose --profile local up -d postgres-local"
     echo "  then: export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/kgserver"
     echo ""
     echo "Options:"
@@ -116,7 +116,7 @@ if [[ -z "${DATABASE_URL:-}" ]]; then
     echo "Error: DATABASE_URL is not set." >&2
     echo "" >&2
     echo "Start Postgres and set the variable:" >&2
-    echo "  docker-compose --profile storage up -d postgres" >&2
+    echo "  docker-compose --profile local up -d postgres-local" >&2
     echo "  export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/kgserver" >&2
     exit 1
 fi

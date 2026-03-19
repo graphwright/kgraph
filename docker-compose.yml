@@ -145,12 +145,32 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    ports:
-      - "5432:5432"
     restart: unless-stopped
     networks:
       - kgserver-network
     profiles: ["api", "storage"]
+
+  # postgres with host port exposed for local ingest scripts (run-ingest-new.sh).
+  # Never use this profile on a public-facing server.
+  postgres-local:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: kgserver
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d kgserver"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "127.0.0.1:5432:5432"
+    restart: unless-stopped
+    networks:
+      - kgserver-network
+    profiles: ["local"]
 
 volumes:
   pgdata:
