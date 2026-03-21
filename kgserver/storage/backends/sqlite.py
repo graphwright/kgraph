@@ -388,7 +388,7 @@ class SQLiteStorage(StorageInterface):
             statement = statement.where(Entity.source == source)
         if status:
             statement = statement.where(Entity.status == status)
-        statement = statement.limit(limit).offset(offset)
+        statement = statement.order_by(Entity.usage_count.desc()).limit(limit).offset(offset)  # type: ignore[union-attr]
         return self._session.exec(statement).all()
 
     def count_entities(
