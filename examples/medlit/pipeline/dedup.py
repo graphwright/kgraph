@@ -74,6 +74,14 @@ def _is_authoritative_id(s: str) -> bool:
     # PMC (PubMed Central) paper IDs
     if s.startswith("PMC") and len(s) > 3 and s[3:].isdigit():
         return True
+    # ROR (Research Organization Registry)
+    if s.startswith("ROR:"):
+        return True
+    if s.startswith("https://ror.org/"):
+        return True
+    # ORCID (Open Researcher and Contributor ID)
+    if s.startswith("ORCID:"):
+        return True
     return False
 
 

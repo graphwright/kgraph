@@ -19,7 +19,7 @@ services:
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
       EXAMPLES_FILE: /app/chainlit/examples.yaml
     volumes:
-      - ./medlit_bundle:/bundle:ro
+      - ./bundle:/bundle:ro
       - ./kgserver/chainlit/examples.yaml:/app/chainlit/examples.yaml:ro
     #  # - /home/wware/S.zip:/bundle/S.zip:ro
     ports:
@@ -54,7 +54,7 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       REDIS_URL: redis://redis:6379
     volumes:
-      - ./medlit_bundle:/bundle:ro
+      - ./bundle:/bundle:ro
       - ingest_workspace:/app/ingest_workspace
     ports:
       - "8001:8001"

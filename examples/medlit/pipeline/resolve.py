@@ -246,8 +246,12 @@ class MedLitEntityResolver(BaseModel, EntityResolverInterface):
         """
         canonical_ids: dict[str, str] = {}
 
-        # Check for prefix format (HGNC:1100, RxNorm:1187832)
-        if ":" in entity_id:
+        # Check for full ROR URL (https://ror.org/...) — must be handled before
+        # the generic ":" split, which would yield prefix="https" otherwise.
+        if entity_id.startswith("https://ror.org/"):
+            canonical_ids["ror"] = entity_id
+        # Check for prefix format (HGNC:1100, RxNorm:1187832, ROR:04aj4c181, ORCID:...)
+        elif ":" in entity_id:
             prefix, _ = entity_id.split(":", 1)
             prefix_lower = prefix.lower()
             canonical_ids[prefix_lower] = entity_id

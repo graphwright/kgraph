@@ -778,6 +778,18 @@ function formatEntityIdLink(entityId) {
         return `<a href="${url}" target="_blank" title="View in DBpedia">${entityId}</a>`;
     }
 
+    // ORCID author ID
+    if (entityId.startsWith('ORCID:')) {
+        const orcidId = entityId.replace('ORCID:', '');
+        return `<a href="https://orcid.org/${orcidId}" target="_blank" title="View on ORCID">${entityId}</a>`;
+    }
+
+    // ROR organization ID
+    if (entityId.startsWith('ROR:')) {
+        const rorId = entityId.replace('ROR:', '');
+        return `<a href="https://ror.org/${rorId}" target="_blank" title="View on ROR">${entityId}</a>`;
+    }
+
     // DOI
     if (entityId.startsWith('10.') || entityId.toLowerCase().startsWith('doi:')) {
         const doi = entityId.replace(/^doi:/i, '');
