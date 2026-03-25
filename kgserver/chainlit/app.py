@@ -100,7 +100,9 @@ Decide which tools to call to answer the user's question. Call tools as needed; 
 - predicates: optional list of predicate names — only these edges get full metadata; others appear as stubs
 - topology_only: if True, return only IDs and types for all nodes/edges (useful for initial structural survey)
 - If you don't have an entity ID yet, call search_entities first to resolve a name to an ID.
-- Stub nodes: {id, entity_type} only. Stub edges: {subject, predicate, object} only. Omitting a filter returns full data for all nodes or edges."""
+- Stub nodes: {id, entity_type} only. Stub edges: {subject, predicate, object} only. Omitting a filter returns full data for all nodes or edges.
+
+**Tool priority:** Always prefer describe_schema, search_entities, bfs_query, and describe_entity for answering questions about the graph. Only use graphql_query, get_mentions, or get_paper_source as a last resort when the BFS-QL tools genuinely cannot answer the question. Never use ingest_paper or check_ingest_status unless the user explicitly asks to ingest a paper."""
 
 SYNTHESIS_SYSTEM_PROMPT = """You are an expert assistant. Answer the user's question ONLY using the retrieved knowledge graph evidence. Cite papers and sources when possible.
 
