@@ -42,6 +42,15 @@ uv run pytest tests/test_entities.py::test_canonical_promotion -v
 
 Preferred linter tools and **order** are defined in **`lint.sh`**. Run that script to lint and test. Order: **ruff** (check, with auto-fix on failure) → **mypy** → **black** (check) → **flake8** → **pylint**, then **pytest**. Scope is `kgraph`, `kgbundle`, `kgschema`, `kgserver`, and `examples`; `kgserver/chainlit/app.py` is excluded from mypy and pylint. If a step fails, `fixes_needed` runs `black` and `ruff check --fix` and exits so you can re-run.
 
+## Python Tooling — Mandatory Rules
+
+- **NEVER** invoke `python`, `python3`, or `pip` directly. Always use `uv`.
+  - Install packages: `uv add <pkg>` (or `uv pip install` inside a venv when needed)
+  - Run Python: `uv run python ...`
+  - Run tools: `uv run pytest`, `uv run mypy`, etc.
+- **ripgrep (`rg`)** is available on this system and may be used for fast content searches.
+- The **bfs-ql** source code lives at `/home/wware/bfs-ql` — read it there when you need to understand `bfsql` internals.
+
 ## Python and Testing Conventions
 
 - Prefer **`uv`** for virtualenvs and running commands. Use Python 3.12 or 3.13.

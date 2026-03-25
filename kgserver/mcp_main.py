@@ -27,7 +27,8 @@ async def lifespan(app: FastAPI):
     SQLModel.metadata.create_all(engine, tables=[IngestJob.__table__])
     max_workers = int(os.environ.get("INGEST_MAX_WORKERS", "1"))
     await ingest_worker.start_worker(max_workers=max_workers)
-    yield
+    async with sse_app.lifespan(sse_app):
+        yield
     await ingest_worker.stop_worker()
 
 
