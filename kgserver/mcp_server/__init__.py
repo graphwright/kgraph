@@ -1,14 +1,12 @@
 """
-MCP (Model Context Protocol) server for Knowledge Graph GraphQL API.
+MCP (Model Context Protocol) server for Knowledge Graph.
 
-This module provides an MCP server that wraps the GraphQL API, making it
-accessible to AI agents like Claude or Cursor IDE.
-
-The server can run in two modes:
-1. HTTP/SSE mode: Mounted as FastAPI routes for remote access
-2. STDIO mode: Standalone server for local subprocess communication
+Uses bfsql (BFS-QL) as the core graph query engine, exposing four standard
+tools (describe_schema, search_entities, bfs_query, describe_entity) plus
+kgserver-specific tools for ingestion and bundle inspection.
 """
 
 from .server import mcp_server
+from . import ingest_worker
 
-__all__ = ["mcp_server"]
+__all__ = ["mcp_server", "ingest_worker"]

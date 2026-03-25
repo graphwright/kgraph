@@ -12,7 +12,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from sqlmodel import SQLModel
 
-from mcp_server import ingest_worker, mcp_server
+from mcp_server import mcp_server
+from mcp_server import ingest_worker
 from query.storage_factory import get_engine
 from storage.models import IngestJob
 
@@ -33,7 +34,6 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Knowledge Graph MCP", version="0.1.0", lifespan=lifespan)
 
 
-# Register /health before the mount so it takes precedence
 @app.get("/health")
 async def health():
     """Health check for container/orchestration."""
