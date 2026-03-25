@@ -1401,6 +1401,17 @@ wheels = [
 ]
 
 [[package]]
+name = "kgschema"
+version = "0.1.0"
+source = { editable = "../kgschema" }
+dependencies = [
+    { name = "pydantic" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pydantic", specifier = ">=2.0" }]
+
+[[package]]
 name = "kgserver"
 version = "0.1.0"
 source = { virtual = "." }
@@ -1412,6 +1423,7 @@ dependencies = [
     { name = "fastmcp" },
     { name = "flake8" },
     { name = "httpx" },
+    { name = "kgschema" },
     { name = "litellm" },
     { name = "mcp" },
     { name = "mypy" },
@@ -1451,6 +1463,7 @@ requires-dist = [
     { name = "fastmcp", specifier = ">=2.14.4" },
     { name = "flake8", specifier = ">=7.3.0" },
     { name = "httpx", specifier = ">=0.27.0" },
+    { name = "kgschema", editable = "../kgschema" },
     { name = "litellm", specifier = "==1.81.15" },
     { name = "mcp", specifier = ">=1.25.0" },
     { name = "mypy", specifier = ">=1.19.1" },

@@ -35,6 +35,7 @@ dependencies = [
     "redis>=5.0.0",
     "playwright>=1.58.0",
     "pytest-playwright>=0.7.2",
+    "kgschema",
 ]
 
 [project.optional-dependencies]
@@ -72,6 +73,9 @@ markers = [
 
 [tool.setuptools]
 packages = ["storage", "query", "mcp_server"]
+
+[tool.uv.sources]
+kgschema = { path = "../kgschema", editable = true }
 
 #[tool.uv.sources]
 #kgbundle = { path = "../kgbundle", editable = true }
