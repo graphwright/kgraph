@@ -1,8 +1,8 @@
 """
 MCP Server implementation using bfsql (BFS-QL) as the core graph query engine.
 
-Provides the four standard BFS-QL tools (describe_schema, search_entities,
-bfs_query, describe_entity) via PostgresBackend, plus kgserver-specific tools
+Provides the five standard BFS-QL tools (describe_schema, search_entities,
+bfs_query, intersect_subgraphs, describe_entity) via PostgresBackend, plus kgserver-specific tools
 for ingestion, bundle inspection, and paper source retrieval.
 """
 
