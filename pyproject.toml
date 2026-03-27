@@ -9,6 +9,8 @@ description = "Domain-agnostic knowledge graph framework for entity and relation
 requires-python = ">=3.12"
 license = "MIT"
 dependencies = [
+    "kgbundle",
+    "kgschema",
     "jinja2>=3.1.0",
     "kgbundle",
     "pyyaml>=6.0",
@@ -81,6 +83,7 @@ disable_error_code = ["call-arg", "import-untyped"]
 
 [tool.uv.sources]
 kgbundle = { path = "kgbundle", editable = true }
+kgschema = { path = "kgschema", editable = true }
 
 [dependency-groups]
 dev = [

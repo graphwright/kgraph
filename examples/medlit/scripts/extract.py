@@ -388,7 +388,13 @@ async def run_extract(  # pylint: disable=too-many-statements
                 print(f"  SKIP invalid entity ({ve}): {en}", file=sys.stderr)
         entities = valid_entities
         evidence_entities = [EvidenceEntityRow.model_validate(ev) for ev in raw_bundle.get("evidence_entities", [])]
-        relationships = [RelationshipRow.model_validate(r) for r in raw_bundle.get("relationships", [])]
+        valid_relationships = []
+        for r in raw_bundle.get("relationships", []):
+            try:
+                valid_relationships.append(RelationshipRow.model_validate(r))
+            except Exception as ve:
+                print(f"  SKIP invalid relationship ({ve}): {r}", file=sys.stderr)
+        relationships = valid_relationships
         # Override source_papers with actual paper_id — LLM often outputs "paper_id" literally
         for rel in relationships:
             rel.source_papers = [paper_id]
