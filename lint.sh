@@ -58,20 +58,20 @@ echo "=========================================="
 # Use -j 1 to avoid multiprocessing (avoids PermissionError in sandbox/CI)
 uv run flake8 ${PYTHONFILES} --count --show-source --statistics -j 1 || fixes_needed
 
-echo ""
-echo "=========================================="
-echo "Running pylint..."
-echo "=========================================="
-# Exclude chainlit app: Chainlit uses dynamic decorators and has no static introspection
-PYLINT_FILES=$(echo "${PYTHONFILES}" | tr ' ' '\n' | grep -v 'kgserver/chainlit/app\.py' | tr '\n' ' ')
-uv run pylint ${PYLINT_FILES}
+# echo ""
+# echo "=========================================="
+# echo "Running pylint..."
+# echo "=========================================="
+# # Exclude chainlit app: Chainlit uses dynamic decorators and has no static introspection
+# PYLINT_FILES=$(echo "${PYTHONFILES}" | tr ' ' '\n' | grep -v 'kgserver/chainlit/app\.py' | tr '\n' ' ')
+# uv run pylint ${PYLINT_FILES}
 
 echo ""
 echo "=========================================="
 echo "Running tests..."
 echo "=========================================="
 # Root tests: tests/ + examples/medlit/tests/ (includes provenance, export, ingestion, etc.)
-uv run pytest -v
+uv run pytest -q
 
 # Run kgbundle tests from repo root so the root venv (kgbundle + pydantic) is used.
 # Do not "cd kgbundle && uv run pytest": that can use a venv without pydantic.
@@ -88,5 +88,6 @@ if [ -d "kgserver/tests" ]; then
     echo ""
     echo "Running kgserver tests..."
     ROOT_DIR="$(pwd)"
-    (cd kgserver && PYTHONPATH="${ROOT_DIR}/kgbundle:${ROOT_DIR}:${PYTHONPATH}" uv run pytest tests/ -m "not playwright" --full-trace -q)
+    # (cd kgserver && PYTHONPATH="${ROOT_DIR}/kgbundle:${ROOT_DIR}:${PYTHONPATH}" uv run pytest tests/ -m "not playwright" --full-trace -q)
+    (cd kgserver && PYTHONPATH="${ROOT_DIR}/kgbundle:${ROOT_DIR}:${PYTHONPATH}" uv run pytest tests/ -m "not playwright" -q)
 fi

@@ -114,8 +114,8 @@ class TestListEntities:
         assert response.status_code == 200
         data = response.json()
         assert len(data) == 2
-        # Should skip first entity
-        assert data[0]["entity_id"] != "test:entity:1"
+        # Should skip first entity (ordered by usage_count DESC, so entity:3 is first)
+        assert data[0]["entity_id"] != "test:entity:3"
 
     def test_list_entities_empty_result(self, client):
         """Test listing entities with offset beyond available."""

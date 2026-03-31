@@ -32,6 +32,23 @@ mcp_server = create_server(
 # ------------------------------------------------------------------
 
 
+def _get_storage():
+    """Context manager yielding a storage instance. Extracted for testability."""
+    from contextlib import contextmanager, closing
+    from query.storage_factory import get_engine, get_storage as _storage_factory
+
+    @contextmanager
+    def _cm():
+        get_engine()
+        with closing(_storage_factory()) as storage_gen:
+            storage = next(storage_gen, None)
+            if storage is None:
+                raise RuntimeError("Failed to get storage instance")
+            yield storage
+
+    return _cm()
+
+
 def _get_bundle_path() -> Path:
     """Resolve BUNDLE_PATH; raise ValueError if unset or invalid."""
     path_str = os.getenv("BUNDLE_PATH")
@@ -254,16 +271,10 @@ def graphql_query(query: str, variables: Optional[dict[str, Any]] = None) -> dic
         (list of error dicts, or None if successful).
     """
     import strawberry
-    from contextlib import closing
     from query.graphql_schema import Query
-    from query.storage_factory import get_engine, get_storage
 
     graphql_schema = strawberry.Schema(query=Query)
-    get_engine()
-    with closing(get_storage()) as storage_gen:
-        storage = next(storage_gen, None)
-        if storage is None:
-            raise RuntimeError("Failed to get storage instance")
+    with _get_storage() as storage:
         context = {"storage": storage}
         result = graphql_schema.execute_sync(
             query,

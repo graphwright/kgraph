@@ -85,6 +85,7 @@ def _parse_json_from_text(response_text: str) -> dict[str, Any]:
     # Strict parse failed — attempt repair
     try:
         from json_repair import repair_json  # type: ignore[import]
+
         repaired = repair_json(text[start:], return_objects=True)
         if isinstance(repaired, dict):
             return repaired

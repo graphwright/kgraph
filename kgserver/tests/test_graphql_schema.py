@@ -106,8 +106,8 @@ class TestEntityQueries:
         assert result["entities"]["limit"] == 2
         assert result["entities"]["offset"] == 1
         assert len(result["entities"]["items"]) == 2
-        # Should skip first entity
-        assert result["entities"]["items"][0]["entityId"] != "test:entity:1"
+        # Should skip first entity (ordered by usage_count DESC, so entity:3 is first)
+        assert result["entities"]["items"][0]["entityId"] != "test:entity:3"
 
     def test_entities_filter_by_type(self, graphql_schema, graphql_context):
         """Test filtering entities by entity type."""
