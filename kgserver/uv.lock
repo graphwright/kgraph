@@ -301,7 +301,7 @@ wheels = [
 
 [[package]]
 name = "bfs-ql"
-version = "0.1.7"
+version = "0.1.8"
 source = { registry = "https://test.pypi.org/simple/" }
 dependencies = [
     { name = "aiohttp" },
@@ -312,9 +312,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "python-dotenv" },
 ]
-sdist = { url = "https://test-files.pythonhosted.org/packages/0e/11/db28db99d9ce9ee76825996ac4446bca4d40bd76a7b9516107ef292a6d30/bfs_ql-0.1.7.tar.gz", hash = "sha256:919360baf9730205f3ff8d03de708a4624a09e1a53756b7152aa18b23a320c2c", size = 208215, upload_time = "2026-03-30T15:38:43.44Z" }
+sdist = { url = "https://test-files.pythonhosted.org/packages/e7/5e/c7ba6f579c5fe369aa7eb1d2e2346f1d299d86a8f782b5ed4036dd7bd4ea/bfs_ql-0.1.8.tar.gz", hash = "sha256:42bb024a073393bfada0c0a6cd62dc015216c8a16a5b9029c2486ca26f2cda3a", size = 209281, upload_time = "2026-04-01T15:35:35.437Z" }
 wheels = [
-    { url = "https://test-files.pythonhosted.org/packages/8a/59/fc807e8cce919e468487709f2e8bd10791e9cfcf44f14fc6fe50ddf3fd7f/bfs_ql-0.1.7-py3-none-any.whl", hash = "sha256:729283325f2e343e6570576ec40690f691009e40bc60949da2585efb6ad078ad", size = 35987, upload_time = "2026-03-30T15:38:42.522Z" },
+    { url = "https://test-files.pythonhosted.org/packages/ce/a8/b2dee8c83c7c56007c3d23d41fe149510ca6522a379fb06abc406f3c3882/bfs_ql-0.1.8-py3-none-any.whl", hash = "sha256:900f56c20b91769043d27de72b752dc8607a85d36027874f2e0bb328508de883", size = 37201, upload_time = "2026-04-01T15:35:34.431Z" },
 ]
 
 [[package]]
@@ -1477,7 +1477,7 @@ e2e = [
 [package.metadata]
 requires-dist = [
     { name = "asyncpg", specifier = ">=0.31.0" },
-    { name = "bfs-ql", index = "https://test.pypi.org/simple/" },
+    { name = "bfs-ql", specifier = "==0.1.8", index = "https://test.pypi.org/simple/" },
     { name = "black", extras = ["jupyter"], specifier = ">=26.1.0" },
     { name = "chainlit", specifier = ">=2.0.0" },
     { name = "fastapi", specifier = ">=0.128.0" },
