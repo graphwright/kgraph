@@ -8,7 +8,6 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       BUNDLE_PATH: /bundle
-      # Chainlit (mounted at /chat on same server)
       MCP_SSE_URL: ${MCP_SSE_URL:-http://mcpserver:8001/sse}
       LLM_PROVIDER: ${LLM_PROVIDER:-anthropic}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
@@ -17,10 +16,8 @@ services:
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
-      EXAMPLES_FILE: /app/chainlit/examples.yaml
     volumes:
       - ./bundle:/bundle:ro
-      - ./kgserver/chainlit/examples.yaml:/app/chainlit/examples.yaml:ro
     #  # - /home/wware/S.zip:/bundle/S.zip:ro
     ports:
       - "8000:8000"

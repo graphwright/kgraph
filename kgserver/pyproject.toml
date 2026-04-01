@@ -9,7 +9,6 @@ dependencies = [
     "black[jupyter]>=26.1.0",
     "numpy>=1.26.0",
     "scikit-learn>=1.3.0",
-    "chainlit>=2.0.0",
     "fastapi>=0.128.0",
     "fastmcp>=2.14.4",
     "flake8>=7.3.0",

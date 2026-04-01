@@ -1,3 +1,0 @@
-# Hide chain-of-thought steps; only the thinking-message spinner is shown until the answer appears.
-[UI]
-cot = "hidden"
