@@ -46,3 +46,6 @@ Thumbs.db
 # gwchat build artifacts
 gwchat/node_modules/
 gwchat/.next/
+
+# gwchat/lib/ is TypeScript source — un-ignore it (root lib/ rule above catches it)
+!gwchat/lib/
