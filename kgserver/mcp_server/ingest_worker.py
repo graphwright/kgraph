@@ -92,20 +92,20 @@ def _run_pass2_pass3_load(
     """Run ingest, build_bundle, and load_bundle_incremental under workspace lock. Raises on failure."""
     from kgbundle import BundleManifestV1
 
-    from examples.medlit.pipeline.bundle_builder import run_build_bundle  # pylint: disable=import-error
-    from examples.medlit.pipeline.dedup import run_ingest  # pylint: disable=import-error
+    from pipeline_loader import get_pipeline
 
+    pipeline = get_pipeline()
     seeded_cache = workspace_root / "vocab" / "seeded_synonym_cache.json"
     synonym_cache_path = seeded_cache if seeded_cache.exists() else merged_dir / "synonym_cache.json"
 
     with _workspace_lock(workspace_root):
-        run_ingest(
+        pipeline.run_ingest(
             bundle_dir=bundles_dir,
             output_dir=merged_dir,
             synonym_cache_path=synonym_cache_path,
             canonical_id_cache_path=None,
         )
-        run_build_bundle(merged_dir, bundles_dir, output_dir)
+        pipeline.build_bundle(merged_dir, bundles_dir, output_dir)
         manifest_path = output_dir / "manifest.json"
         if not manifest_path.exists():
             raise FileNotFoundError(f"build_bundle did not produce {manifest_path}")
@@ -201,9 +201,9 @@ async def _run_ingest_job_impl(job_id: str, storage: StorageInterface, job) -> N
 
     from kgbundle import BundleManifestV1
 
-    from examples.medlit.scripts.extract import run_extract  # pylint: disable=import-error
-    from examples.medlit.scripts.fetch_vocab import run_fetch_vocab  # pylint: disable=import-error
+    from pipeline_loader import get_pipeline
 
+    pipeline = get_pipeline()
     url = job.url
     logger.info("Ingest job %s starting: url=%s", job_id, url)
     storage.update_ingest_job(job_id, status="running", started_at=datetime.now(timezone.utc))
@@ -271,11 +271,11 @@ async def _run_ingest_job_impl(job_id: str, storage: StorageInterface, job) -> N
         # fetch_vocab: merge this paper's vocab into workspace vocab (outside lock)
         llm_backend = os.environ.get("PASS1_LLM_BACKEND", "anthropic")
         logger.info("Ingest job %s: starting fetch_vocab (backend=%s)", job_id, llm_backend)
-        await run_fetch_vocab(input_dir, vocab_dir, llm_backend, papers=None, limit=1)
+        await pipeline.fetch_vocab(input_dir, vocab_dir, llm_backend, papers=None, limit=1)
         # extract: full extraction with vocabulary context
         logger.info("Ingest job %s: starting extract (backend=%s)", job_id, llm_backend)
         t0 = time.perf_counter()
-        await run_extract(
+        await pipeline.extract(
             input_dir,
             bundles_dir,
             llm_backend,

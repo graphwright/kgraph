@@ -3,8 +3,8 @@
 fixes_needed() {
     echo "Something needs fixing, trying to fix it"
     set -x
-    uv run black kgraph kgbundle kgserver examples
-    uv run ruff check --fix kgraph kgbundle kgserver examples
+    uv run black kgraph kgbundle kgserver
+    uv run ruff check --fix kgraph kgbundle kgserver
     exit 1
 }
 
@@ -29,7 +29,7 @@ echo "UV Version:"
 uv --version
 
 # Only list .py files that exist (git ls-files includes deleted-but-unstaged files)
-PYTHONFILES=$(git ls-files -- kgraph kgbundle kgschema kgserver examples | grep -E '\.py$' | while read -r f; do [ -f "$f" ] && echo "$f"; done)
+PYTHONFILES=$(git ls-files -- kgraph kgbundle kgschema kgserver | grep -E '\.py$' | while read -r f; do [ -f "$f" ] && echo "$f"; done)
 
 echo ""
 echo "=========================================="
@@ -70,7 +70,7 @@ echo ""
 echo "=========================================="
 echo "Running tests..."
 echo "=========================================="
-# Root tests: tests/ + examples/medlit/tests/ (includes provenance, export, ingestion, etc.)
+# Root tests: tests/ (includes provenance, export, ingestion, etc.)
 uv run pytest -q
 
 # Run kgbundle tests from repo root so the root venv (kgbundle + pydantic) is used.

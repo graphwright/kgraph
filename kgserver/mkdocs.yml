@@ -36,9 +36,6 @@ nav:
   - Canonical IDs and Entity Resolution: canonical-ids-and-entity-resolution.md
   - Storage and Export: storage-and-export.md
   - Adapting to Your Domain: adapting-to-your-domain.md
-  - Examples:
-    - Medlit: examples/medlit.md
-    - Sherlock: examples/sherlock.md
   - Deployment and Operations: deployment-and-operations.md
   - Contributing: contributing.md
 

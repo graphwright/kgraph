@@ -43,6 +43,6 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Example data files (can be regenerated)
-examples/medlit/pmc_json/
-examples/medlit/pmc_paper_json/
+# gwchat build artifacts
+gwchat/node_modules/
+gwchat/.next/

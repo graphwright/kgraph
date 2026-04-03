@@ -5,7 +5,7 @@ description = "Containerized server for knowledge graph data"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    # "kgbundle",
+    # "kgbundle",  # not on PyPI; installed via COPY in Dockerfile / local path in dev
     "black[jupyter]>=26.1.0",
     "numpy>=1.26.0",
     "scikit-learn>=1.3.0",
@@ -82,6 +82,3 @@ bfs-ql = { index = "testpypi" }
 name = "testpypi"
 url = "https://test.pypi.org/simple/"
 explicit = true
-
-#[tool.uv.sources]
-#kgbundle = { path = "../kgbundle", editable = true }

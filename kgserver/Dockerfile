@@ -6,7 +6,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 WORKDIR /app
 
-# Copy local dependencies first
+# kgbundle is not on PyPI; copy source so uv can install it as a local dep
 COPY kgbundle ./kgbundle
 
 # Copy dependency files from kgserver
@@ -46,19 +46,13 @@ COPY --from=builder /app/docs /app/docs
 COPY --from=builder /app/site /app/site
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
-# Copy kgbundle first, then kgserver (includes kgserver/chainlit for /chat UI)
 COPY kgbundle ./kgbundle
 COPY kgserver/ .
-# Ingest worker (MCP ingest_paper) imports examples.medlit -> examples.medlit_schema -> kgschema
-COPY kgschema ./kgschema
-COPY kgraph ./kgraph
-COPY medlit_bundle /bundle
-COPY examples ./examples
 
 ENV PATH="/app/.venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONPATH="/app:/app/kgbundle:/app/kgschema"
+    PYTHONPATH="/app:/app/kgbundle"
 
 EXPOSE 8000
 

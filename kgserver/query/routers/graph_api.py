@@ -46,29 +46,15 @@ router = APIRouter(prefix="/api/v1/graph", tags=["Graph Visualization"])
 
 def _get_entity_types_from_domain_spec() -> dict[str, dict[str, str]]:
     """
-    Load entity type metadata (color, label) from domain_spec.
+    Load entity type metadata (color, label) from the configured pipeline.
     Returns {entity_type: {color, label}}. Includes 'default' for unknown types.
     """
     try:
-        from examples.medlit.domain_spec import ENTITY_CLASSES
+        from pipeline_loader import get_pipeline
 
-        result: dict[str, dict[str, str]] = {}
-        for cls in ENTITY_CLASSES:
-            entity_type = cls.__name__.replace("Entity", "").lower()
-            spec = getattr(cls, "spec", None)
-            if spec is not None:
-                color = getattr(spec, "color", "#78909c") or "#78909c"
-                label = getattr(spec, "label", entity_type) or entity_type
-            else:
-                color = "#78909c"
-                label = entity_type
-            result[entity_type] = {"color": color, "label": label}
-        result["default"] = {"color": "#78909c", "label": "Other"}
-        return result
-    except ImportError:
-        return {
-            "default": {"color": "#78909c", "label": "Other"},
-        }
+        return get_pipeline().get_entity_type_specs()
+    except RuntimeError:
+        return {"default": {"color": "#78909c", "label": "Other"}}
 
 
 class EntityTypeSpec(BaseModel):
