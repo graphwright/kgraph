@@ -1,9 +1,0 @@
-# Medlit pipeline configuration (rc-style).
-# Override path with MEDLIT_CONFIG env var if needed.
-
-[chunker]
-# Window size in characters for streaming document content to the LLM.
-# Smaller windows reduce context size and can avoid timeouts and OOM.
-window_size = 1536
-# Overlap between consecutive windows (characters).
-overlap = 400
