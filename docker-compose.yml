@@ -16,6 +16,7 @@ services:
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      IDENTITY_SERVER_URL: http://identity-server:8080
     volumes:
       - ./bundle:/bundle:ro
     #  # - /home/wware/S.zip:/bundle/S.zip:ro
@@ -50,6 +51,7 @@ services:
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       REDIS_URL: redis://redis:6379
+      IDENTITY_SERVER_URL: http://identity-server:8080
     volumes:
       - ./bundle:/bundle:ro
       - ingest_workspace:/app/ingest_workspace
@@ -95,6 +97,52 @@ services:
     restart: unless-stopped
     networks:
       - kgserver-network
+    profiles: ["api"]
+
+  identity-server:
+    build:
+      context: ../identity-server
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
+      REDIS_URL: redis://redis:6379
+      DOMAIN_SERVICE_URL: http://medlit-domain:8080
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      medlit-domain:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - kgserver-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    profiles: ["api"]
+
+  medlit-domain:
+    build:
+      context: ../medlit
+      dockerfile: Dockerfile.domain-service
+    environment:
+      UMLS_API_KEY: ${UMLS_API_KEY:-}
+      CANONICAL_ID_CACHE_PATH: /data/canonical_id_cache.json
+    volumes:
+      - canonical_id_cache:/data
+    restart: unless-stopped
+    networks:
+      - kgserver-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
     profiles: ["api"]
 
   ollama:
@@ -168,6 +216,8 @@ volumes:
   pgdata:
     driver: local
   ingest_workspace:
+    driver: local
+  canonical_id_cache:
     driver: local
 
 networks:
