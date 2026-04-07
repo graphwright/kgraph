@@ -107,10 +107,17 @@ if _chainlit_app is not None:
 else:
     logger.info("Chainlit not mounted: no app at CHAINLIT_APP_PATH or kgserver/chainlit/app.py")
 
-# Mount MkDocs static site at /site (not at /) so FastAPI's /docs and /openapi.json
-# are never shadowed. On Docker the site is pre-built; locally the dir may be missing.
+# Optional MkDocs tree at /site (zensical build). Disabled by default in Docker so public
+# ingress never needs /site in the URL — use graphwright.io docs on :8003 or nginx / instead.
 _mkdocs_site = Path(__file__).parent.parent / "site"
-if _mkdocs_site.exists():
+_serve_mkdocs_site = os.environ.get("KGSERVER_SERVE_MKDOCS_SITE", "false").lower() in (
+    "1",
+    "true",
+    "yes",
+)
+_public_marketing_site = (os.environ.get("PUBLIC_MARKETING_SITE_URL") or "").strip()
+
+if _serve_mkdocs_site and _mkdocs_site.exists():
     # Zensical generates nav links with .md but the built output is .html. Rewrite .md -> .html.
     @app.middleware("http")
     async def _site_md_rewrite(request, call_next):
@@ -121,7 +128,16 @@ if _mkdocs_site.exists():
 
     app.mount("/site", StaticFiles(directory=_mkdocs_site, html=True), name="mkdocs")
 
-    @app.get("/", include_in_schema=False)
-    async def _root_redirect():
-        """Send root to the docs site so / still lands somewhere useful."""
-        return RedirectResponse(url="/site/", status_code=302)
+
+@app.get("/", include_in_schema=False)
+async def _root_redirect():
+    """Redirect to marketing URL when set; otherwise JSON pointers (no /site/ in public URLs)."""
+    if _public_marketing_site:
+        return RedirectResponse(url=_public_marketing_site.rstrip("/") + "/", status_code=302)
+    return {
+        "title": "Medical Literature Knowledge Graph API",
+        "health": "/health",
+        "openapi_docs": "/docs",
+        "rest_api": "/api/v1",
+        "graphql": "/graphql",
+    }
