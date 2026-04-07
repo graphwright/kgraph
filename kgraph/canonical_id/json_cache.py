@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from kgraph.logging import setup_logging
+from kgraph.pprint_logging import setup_logging
 
 from .models import CanonicalId, CanonicalIdCacheInterface
 

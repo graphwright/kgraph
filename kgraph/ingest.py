@@ -55,7 +55,7 @@ from pydantic import BaseModel, ConfigDict
 from sklearn.metrics.pairwise import cosine_similarity  # type: ignore
 
 from kgraph.canonical_id import CanonicalId
-from kgraph.logging import setup_logging
+from kgraph.pprint_logging import setup_logging
 from kgraph.provenance import ProvenanceAccumulator
 from kgraph.promotion import PromotionPolicy
 from kgraph.pipeline.embedding import EmbeddingGeneratorInterface

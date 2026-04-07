@@ -15,7 +15,7 @@ from io import StringIO
 
 import pytest
 
-from kgraph.logging import PprintLogger, setup_logging
+from kgraph.pprint_logging import PprintLogger, setup_logging
 
 try:
     from pydantic import BaseModel
