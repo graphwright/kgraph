@@ -1,4 +1,4 @@
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 # Build-time base path (e.g. /chat when served behind nginx at /chat).
 # Pass via: docker build --build-arg NEXT_PUBLIC_BASE_PATH=/chat
