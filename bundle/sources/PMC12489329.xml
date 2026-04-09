@@ -1,0 +1,900 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article id="jdi70127" xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">J Diabetes Investig</journal-id><journal-id journal-id-type="iso-abbrev">J Diabetes Investig</journal-id><journal-id journal-id-type="pmc-domain-id">2358</journal-id><journal-id journal-id-type="pmc-domain">jdi</journal-id><journal-id journal-id-type="publisher-id">JDI</journal-id><journal-title-group><journal-title>Journal of Diabetes Investigation</journal-title></journal-title-group><issn pub-type="ppub">2040-1116</issn><issn pub-type="epub">2040-1124</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12489329</article-id><article-id pub-id-type="pmcid-ver">PMC12489329.1</article-id><article-id pub-id-type="pmcaid">12489329</article-id><article-id pub-id-type="pmcaiid">12489329</article-id><article-id pub-id-type="pmid">40776608</article-id><article-id pub-id-type="doi">10.1111/jdi.70127</article-id><article-id pub-id-type="publisher-id">JDI70127</article-id><article-id pub-id-type="other">JDI-OAR-2025-0399.R1</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Original Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Articles</subject><subj-group subj-group-type="heading"><subject>Clinical Science and Care</subject></subj-group></subj-group></article-categories><title-group><article-title>Distinct patterns of hypogonadism in a cross‐sectional study of Malaysian men with type 2 diabetes mellitus: The role of insulin resistance, visceral adiposity, and aging</article-title><alt-title alt-title-type="right-running-head">Hypogonadism subtypes in diabetes men</alt-title><alt-title alt-title-type="left-running-head">Kang <italic toggle="no">et al.</italic>
+</alt-title></title-group><contrib-group><contrib id="jdi70127-cr-0001" contrib-type="author"><name name-style="western"><surname>Kang</surname><given-names initials="WH">Waye‐Hann</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3209-7196</contrib-id><xref rid="jdi70127-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jdi70127-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="jdi70127-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="jdi70127-cr-0002" contrib-type="author" corresp="yes"><name name-style="western"><surname>Sukor</surname><given-names initials="N">Norlela</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5434-2087</contrib-id><xref rid="jdi70127-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="jdi70127-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><address><email>drlela2020@yahoo.com</email></address></contrib><contrib id="jdi70127-cr-0003" contrib-type="author"><name name-style="western"><surname>Kamaruddin</surname><given-names initials="NA">Nor Azmi</given-names></name><xref rid="jdi70127-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib></contrib-group><aff id="jdi70127-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine, Faculty of Medicine and Health Sciences</named-content>
+<institution>University Tunku Abdul Rahman</institution>
+<city>Kajang</city>
+<named-content content-type="country-part">Selangor</named-content>
+<country country="MY">Malaysia</country>
+</aff><aff id="jdi70127-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Endocrinology Unit, Department of Medicine</named-content>
+<institution>Hospital Canselor Tuanku Muhriz</institution>
+<city>Kuala Lumpur</city>
+<country country="MY">Malaysia</country>
+</aff><aff id="jdi70127-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine, Faculty of Medicine</named-content>
+<institution>Universiti Kebangsaan Malaysia</institution>
+<city>Cheras</city>
+<country country="MY">Malaysia</country>
+</aff><aff id="jdi70127-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Institute Jantung Negara</institution>
+<city>Kuala Lumpur</city>
+<country country="MY">Malaysia</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence</bold>
+<break/>
+Norlela Sukor<break/>
+Tel.: +603‐91456074<break/>
+Fax: +603‐91456679<break/>
+E‐mail address: <email>drlela2020@yahoo.com</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>08</day><month>8</month><year>2025</year></pub-date><pub-date pub-type="collection"><month>10</month><year>2025</year></pub-date><volume>16</volume><issue seq="120">10</issue><issue-id pub-id-type="pmc-issue-id">498158</issue-id><issue-id pub-id-type="doi">10.1111/jdi.v16.10</issue-id><fpage>1881</fpage><lpage>1889</lpage><history><date date-type="rev-recd"><day>09</day><month>7</month><year>2025</year></date><date date-type="received"><day>20</day><month>5</month><year>2025</year></date><date date-type="accepted"><day>11</day><month>7</month><year>2025</year></date></history><pub-history><event event-type="pmc-release"><date><day>08</day><month>08</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>03</day><month>10</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-10-03 00:25:14.440"><day>03</day><month>10</month><year>2025</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). <italic toggle="yes">Journal of Diabetes Investigation</italic> published by Asian Association for the Study of Diabetes (AASD) and John Wiley &amp; Sons Australia, Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JDI-16-1881.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JDI-16-1881.pdf"/><abstract><title>ABSTRACT</title><sec id="jdi70127-sec-0001"><title>Introduction</title><p>Hypogonadism is common among male patients living with type 2 diabetes mellitus and can be divided into hypergonadotropic hypogonadism (hyper‐H) and hypogonadotropic hypogonadism (hypo‐H). Hypo‐H is strongly linked to insulin resistance and visceral adiposity, while hyper‐H in type 2 diabetes mellitus males has not been extensively studied. We aimed to study factors associated with the two subtypes of hypogonadal type 2 diabetes mellitus males in Malaysia, where obesity and poorly controlled diabetes are highly prevalent.</p></sec><sec id="jdi70127-sec-0002"><title>Patients and Methods</title><p>We screened 360 type 2 diabetes mellitus males for hypogonadism (H), defined by total testosterone &lt;12 nmol/L, repeated calculated free testosterone &lt;0.255 nmol/L, and Aging Male Symptoms (AMS) scale &gt;26. Subjects were classified into hypogonadotropic hypogonadism (hypo‐H) and hypergonadotropic hypogonadism (hyper‐H) based on luteinizing hormone (LH) levels. We further analyzed their sociodemographic and clinical parameters in comparison to the control group of eugonadal males.</p></sec><sec id="jdi70127-sec-0003"><title>Results</title><p>55.6% of the 63 hypogonadal subjects have hypo‐H. Significant differences in weight (<italic toggle="no">P =</italic> 0.001), BMI (<italic toggle="no">P &lt;</italic> 0.001), waist circumference (<italic toggle="no">P &lt;</italic> 0.001), serum HDL‐C (<italic toggle="no">P &lt;</italic> 0.001), serum triglycerides (<italic toggle="no">P =</italic> 0.001) and TyG index (<italic toggle="no">P &lt;</italic> 0.001) were observed between hypo‐H and eugonadal males. For hyper‐H males, only age differed significantly from eugonadal males (<italic toggle="no">P</italic> = 0.034).</p></sec><sec id="jdi70127-sec-0004"><title>Conclusions</title><p>Age is significantly associated with hyper‐H, while insulin resistance and visceral adiposity are strongly linked to hypo‐H. Older and obese Malaysian type 2 diabetes mellitus males, particularly those with coronary artery disease and lower HDL‐C levels, are at a higher risk of developing hypogonadism. Diabetic treatments aimed at improving insulin resistance and reducing visceral adiposity could be highly effective for hypogonadal type 2 diabetes mellitus males in Malaysia.</p></sec></abstract><abstract abstract-type="graphical"><p>Age is significantly associated with hypergonadotropic hypogonadism, while insulin resistance and visceral adiposity are strongly linked to hypogonadotropic hypogonadism. Older and obese Malaysian type 2 diabetes mellitus males, particularly those with coronary artery disease and lower HDL‐C levels, are at higher risk. Diabetic treatments targeting insulin resistance and visceral adiposity could be highly effective for hypogonadal type 2 diabetes males in Malaysia.<boxed-text position="anchor" content-type="graphic" id="jdi70127-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JDI-16-1881-g002.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jdi70127-kwd-0001">Aging</kwd><kwd id="jdi70127-kwd-0002">Hypogonadism</kwd><kwd id="jdi70127-kwd-0003">Insulin resistance</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>Fakulti Perubatan, Universiti Kebangsaan Malaysia</institution></institution-wrap>
+</funding-source><award-id>FF‐2019‐201</award-id></award-group><award-group id="funding-0002"><funding-source>
+<institution-wrap><institution>Universiti Tunku Abdul Rahman</institution><institution-id institution-id-type="doi">10.13039/501100002671</institution-id></institution-wrap>
+</funding-source><award-id>IPSR/RMC/UTARRF/2019‐C2/K01</award-id></award-group></funding-group><counts><fig-count count="2"/><table-count count="3"/><page-count count="9"/><word-count count="6751"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>October 2025</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.6.4 mode:remove_FC converted:02.10.2025</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="jdi70127-body-0001"><sec id="jdi70127-sec-0005"><title>INTRODUCTION</title><p>Hypogonadism is common among male patients living with type 2 diabetes mellitus.<xref rid="jdi70127-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref>, <xref rid="jdi70127-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref> Hypogonadism can be further divided into 2 groups, that is, hypergonadotropic hypogonadism (hyper‐H), where LH and/or FSH levels are elevated; or hypogonadotropic hypogonadism (hypo‐H), where there are low or inappropriately normal luteinizing hormone (LH) and/or follicle stimulating hormone (FSH) levels. Generally, hyper‐H is often related to dysfunction of the testicles, while hypogonadotropic hypogonadism is often explained by a defective hypothalamus–pituitary–testicular axis.<xref rid="jdi70127-bib-0003" ref-type="bibr">
+<sup>3</sup>
+</xref>
+</p><p>Previous studies have reported a high prevalence of hypo‐H among diabetic men with hypogonadism. This is not surprising as hypo‐H is strongly linked to the dysglycemic state of type 2 diabetes mellitus, characterized by insulin resistance and visceral adiposity.<xref rid="jdi70127-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref> These factors contribute to a disruption of the hypothalamus–pituitary–gonadal axis, driven by elevated pro‐inflammatory cytokines that lower SHBG levels and exert negative feedback on the axis, along with increased leptin levels, which inhibit Leydig cell function.<xref rid="jdi70127-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref> Additionally, testosterone deficiency further exacerbates visceral obesity. Although the exact mechanisms remain unclear, it is suggested that low testosterone promotes adipocyte proliferation, leading to increased visceral fat.<xref rid="jdi70127-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>
+</p><p>The incidence of hyper‐H, on the contrary, is much lower among hypogonadal diabetic men. It has been suggested that this may be due to Leydig cell dysfunction and a reduced amplitude of LH pulses in elderly males, leading to a compensatory rise in LH levels. Other contributing factors may include coexisting medical conditions or medications that affect testicular function.<xref rid="jdi70127-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>
+</p><p>The primary aim of our study is to determine factors that are associated with hypogonadism among our type 2 diabetes mellitus males within a Malaysian population, which is characterized by high rates of obesity and poorly controlled diabetes (HbA1c &gt;10%).<xref rid="jdi70127-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref>, <xref rid="jdi70127-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref>, <xref rid="jdi70127-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="jdi70127-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="jdi70127-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref> The factors that were studied included sociodemographic factors (age and ethnicity), as well as clinico‐biochemical parameters, that is, body mass index, waist circumference, HbA1c, lipid parameters, eGFR, etc.</p></sec><sec sec-type="materials-and-methods" id="jdi70127-sec-0006"><title>MATERIAL AND METHODS</title><p>This cross‐sectional study was conducted at a tertiary hospital and included male type 2 diabetes mellitus patients aged 18–70 years from January 2019 until December 2020 type 2 diabetes mellitus males were recruited from the diabetes and general endocrinology clinic using via convenient sampling. Based on a prevalence of 35.2% reported by Zheng <italic toggle="yes">et al</italic>., we calculated using the formula <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-1" display="inline" overflow="scroll"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>Z</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mi>P</mml:mi><mml:mfenced open="(" close=")"><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>P</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:msup><mml:mi>d</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mfrac></mml:mrow></mml:math> and calculated that a sample size of 351 participants was adequately powered for this study, with <italic toggle="yes">Z</italic> = 1.96 (corresponding to 95% confidence interval) and <italic toggle="yes">d</italic> = 0.05.<xref rid="jdi70127-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>
+</p><p>All males who were diagnosed at least 3 months with type 2 diabetes mellitus and able to provide consent were included in this study. We excluded type 2 diabetes mellitus males with any of the following (i) established pituitary or testicular disorder; (ii) acute or critical illness for the past 3 months; (iii) liver cirrhosis, chronic kidney disease with estimated glomerular filtration rate (eGFR) &lt;30 mL/min, severe heart failure, active malignancy; (iv) receiving hormone replacement therapy; (v) current consumption of herbal or traditional medications where steroids or androgens as an ingredient cannot be excluded; or (vi) psychiatric illness.</p><p>A semi‐structured questionnaire was used to collect their clinical and sociodemographic parameters. The diagnosis of type 2 diabetes mellitus was based on the American Diabetes Association criteria of abnormal fasting blood glucose or modified oral glucose tolerance test (mOGTT), or a HbA1c of &gt;6.3% according to local guidelines.<xref rid="jdi70127-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="jdi70127-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref> Obesity was defined if the body mass index (BMI) was &gt;25.0 according to the World Health Organization, and diabetes control was considered poor if it was &gt;8%.<xref rid="jdi70127-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="jdi70127-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref>
+</p><p>Patient was diagnosed with hypogonadism if they have (i) low total testosterone (tT) level (&lt;12 nmol/L), (ii) low repeated calculated free testosterone (cFT) levels (&lt;0.255 nmol/L), and (iii) Aging Male Symptoms (AMS) score of ≥27. FT were calculated from SHBG, serum albumin and tT using the formula suggested by Vermeulen et al, with levels &lt;0.255 nmol/L deemed as low.<xref rid="jdi70127-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref> All participants with biochemically low testosterone were assessed with the AMS questionnaire by the authors via face‐to‐face for hypogonadal symptoms and quality of life. Participants with an AMS score of &lt;27 were classified as having few or no symptoms, 27–36 as being mild, 37–49 as moderate, and ≥50 as severe. The AMS scale has been translated and validated in the local language.<xref rid="jdi70127-bib-0018" ref-type="bibr">
+<sup>18</sup>
+</xref> Patients with normal total testosterone levels were grouped as eugonadism. Hyper‐H was defined if the patients with hypogonadism had luteinizing hormone (LH) levels &gt;8.6 mIU/mL, while hypogonadotropic hypogonadism was defined if LH levels ≤8.6 mIU/mL.<xref rid="jdi70127-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref> We used the triglyceride‐glucose index (TyG index), calculated as ln [fasting TG (mg/dL) × fasting plasma glucose (mg/dL)/2], as a surrogate marker of insulin resistance.<xref rid="jdi70127-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>
+</p><sec id="jdi70127-sec-0007"><title>Sample collection, preparation, and analysis</title><p>Venous blood samples were drawn from the cubital fossa or dorsum of the hand veins between 8.00 am and 10.00 am after an overnight fast. The blood samples were transferred into plain tubes, left to clot for 30 min, and centrifuged at 3000RPM for 10 min. The serum was aliquoted and stored at −20°C. Serum tT was measured using chemiluminescent immunometric assays (Roche Cobas e411; Roche Diagnostics GmbH, Mannheim, Germany). The normal values for T were 8–28 nmol/L; for LH: 1.7–8.6 mIU/mL; for estradiol (E2): 11.3–43.2 pg/mL; for SHBG: 18.3–54.1 nmol/L. Laboratory technicians were blinded to the details of the subjects.</p></sec><sec id="jdi70127-sec-0008"><title>Statistical analysis</title><p>Statistical analysis was performed using SPSS 23 software (IBM Corp. Released 2014. IBM SPSS Statistics for Windows, version 23.0. Armonk, NY: IBM Corp). Continuous data were presented as mean ± SE, while categorical data were represented as frequencies and proportions. The chi‐square test and Fisher's exact test were used as tests of significance for associations between the sociodemographic and clinico‐biochemical parameters and gonadal statuses. The ANOVA was used as a test of significance to identify the mean difference between eugonadal, hyper‐H, and hypo‐H respondents. All relationships were assessed by univariate and multivariate regression analysis to reduce bias in a cross‐sectional study. A <italic toggle="yes">P</italic>‐value of &lt;0.05 was considered statistically significant.</p></sec><sec id="jdi70127-sec-0009"><title>Ethical approval and consent</title><p>Ethical approval was obtained from the institutional ethics committee (JEP 2019‐421). All patients provided written consent prior to recruitment for this study.</p></sec></sec><sec sec-type="results" id="jdi70127-sec-0010"><title>RESULTS</title><p>Among our cohort of 360 type 2 diabetes mellitus male subjects, we identified 63 with hypogonadism, of whom 44.4% had hyper‐H and 55.6% had hypo‐H. The prevalence of hyper‐H increased steadily with age, and the hyper‐H group had a significantly higher mean age (61.7 years) compared to those with normal testosterone levels (56.4 years) (<italic toggle="yes">P</italic> = 0.043) (Table <xref rid="jdi70127-tbl-0001" ref-type="table">1</xref>).</p><table-wrap position="float" id="jdi70127-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Sociodemographic and biochemical parameters of hypergonadotropic hypogonadal, hypogonadotropic hypogonadal, and eugonadal diabetic male (<italic toggle="no">n</italic> = 360)</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variables</th><th align="left" valign="bottom" rowspan="1" colspan="1">Total (<italic toggle="yes">n</italic> = 360)</th><th align="left" valign="bottom" rowspan="1" colspan="1">hyper‐H (<italic toggle="yes">n</italic> = 28)</th><th align="left" valign="bottom" rowspan="1" colspan="1">hypo‐H (<italic toggle="yes">n</italic> = 35)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Eugonadal (<italic toggle="yes">n</italic> = 297)</th><th align="left" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">P</italic>‐value (<sc>anova</sc>)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Age, year</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">56.8 ± 10.80</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">61.7 ± 7.07</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">58.7 ± 9.92</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">56.4 ± 10.95</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.043<xref rid="jdi70127-note-0001" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Duration of diabetes, year</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">14.3 ± 9.29</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">16.3 ± 9.78</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">14.8 ± 10.51</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">14.2 ± 9.03</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.457</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Weight, kg</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">83.2 ± 16.12</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">85.8 ± 13.84</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">89.3 ± 18.00</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">81.9 ± 15.42</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.001<xref rid="jdi70127-note-0001" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Waist circumference, cm</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">100.9 ± 12.46</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">103.8 ± 11.84</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">106.6 ± 15.05</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">99.69 ± 11.51</td><td align="char" char="." valign="top" rowspan="1" colspan="1">&lt;0.001<xref rid="jdi70127-note-0001" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">BMI, kg/m<sup>2</sup>
+</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">29.1 ± 5.15</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">29.8 ± 4.71</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">31.34 ± 6.50</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">28.7 ± 4.69</td><td align="char" char="." valign="top" rowspan="1" colspan="1">&lt;0.001<xref rid="jdi70127-note-0001" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">eGFR, mL/min/1.73 m<sup>2</sup>
+</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">74.6 ± 21.23</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">71.3 ± 22.46</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">71.6 ± 21.89</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">75.28 ± 21.07</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.456</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">HbA1c, %</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">8.4 ± 1.97</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">8.4 ± 1.97</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">8.5 ± 2.08</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">8.4 ± 1.95</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.923</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">HDL‐C, mmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.13 ± 0.259</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.05 ± 0.221</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.03 ± 0.206</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.16 ± 0.264</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.002<xref rid="jdi70127-note-0001" ref-type="table-fn">
+<italic toggle="yes">*</italic>
+</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Non‐HDL‐C, mmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">3.40 ± 1.214</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">3.13 ± 0.952</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">3.21 ± 0.984</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">3.44 ± 1.256</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.343</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Tg, mmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.68 ± 1.217</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">2.00 ± 1.630</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">2.07 ± 1.802</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">1.59 ± 1.038</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.018<xref rid="jdi70127-note-0001" ref-type="table-fn">
+<italic toggle="yes">*</italic>
+</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">ALT, IU/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">32.4 ± 18.70</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">26.4 ± 11.01</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">33.9 ± 19.16</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">32.1 ± 18.61</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.013<xref rid="jdi70127-note-0001" ref-type="table-fn">
+<italic toggle="yes">*</italic>
+</xref>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">TyG Index, mg<sup>2</sup>/dL<sup>2</sup>
+</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">4.87 ± 0.373</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">4.95 ± 0.441</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">4.95 ± 0.417</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">4.85 ± 0.361</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.0488</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">tT, nmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">14.90 ± 5.130</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">9.09 ± 2.863</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">7.94 ± 2.647</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">16.26 ± 4.426</td><td align="char" char="." valign="top" rowspan="1" colspan="1">&lt;0.001<xref rid="jdi70127-note-0001" ref-type="table-fn">
+<italic toggle="yes">*</italic>
+</xref>
+</td></tr></tbody></table><table-wrap-foot id="jdi70127-ntgp-0001"><fn id="jdi70127-note-0001"><label>
+<sup>*</sup>
+</label><p>
+<italic toggle="yes">P</italic>‐value is significant (&lt;0.05). ALT, alanine aminotransferase; BMI, body mass index; eGFR, estimated glomerular filtration rate; HDL‐C, high‐density lipoprotein‐cholesterol; hyper‐H, hypogonadotropic hypogonadism; hypo‐H, hypogonadotropic hypogonadism; Tg, triglycerides; tT, total testosterone; TyG, triglyceride‐glucose.</p></fn></table-wrap-foot></table-wrap><p>In contrast, hypo‐H was more prevalent among the younger age group (mean age 58.7 years). This group also exhibited significantly higher BMI, greater abdominal adiposity, elevated serum levels of triglycerides (Tg) and ALT, and significantly lower serum HDL‐C levels. Furthermore, they had higher insulin resistance, as indicated by the TyG index (<italic toggle="yes">P</italic> = 0.048) (Figure <xref rid="jdi70127-fig-0001" ref-type="fig">1</xref>). However, no significant differences were observed in the symptoms or other biochemical profiles between the two groups (Tables <xref rid="jdi70127-tbl-0002" ref-type="table">2</xref> and <xref rid="jdi70127-tbl-0003" ref-type="table">3</xref>).</p><fig position="float" fig-type="Figure" id="jdi70127-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Bar charts showing significant differences in the mean age, weight, body mass index, waist circumference, serum HDL‐C levels, serum triglyceride levels, serum alanine transaminase levels, and serum total testosterone levels among the three groups (<italic toggle="yes">n</italic> = 360).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="JDI-16-1881-g001.jpg"/></fig><table-wrap position="float" id="jdi70127-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Sociodemographic, clinical, and biochemical parameters according to presence of clinical hypogonadism (<italic toggle="no">n</italic> = 360)</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variables</th><th align="left" valign="bottom" rowspan="1" colspan="1">Total (%) (<italic toggle="yes">n</italic> = 360)</th><th align="left" valign="bottom" rowspan="1" colspan="1">hyper‐H (%) (<italic toggle="yes">n</italic> = 28)</th><th align="left" valign="bottom" rowspan="1" colspan="1">hypo‐H (%) (<italic toggle="yes">n</italic> = 35)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Eugonadal (%) (<italic toggle="yes">n</italic> = 297)</th><th align="left" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">P</italic>‐value</th></tr></thead><tbody valign="top"><tr><td colspan="6" align="left" valign="top" rowspan="1">Age group</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">18–24</td><td align="left" valign="top" rowspan="1" colspan="1">4 (1.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">4 (1.3)</td><td rowspan="6" align="left" valign="top" colspan="1">0.620</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">25–34</td><td align="left" valign="top" rowspan="1" colspan="1">7 (1.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">7 (2.4)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">35–44</td><td align="left" valign="top" rowspan="1" colspan="1">48 (13.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">1 (3.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">8 (22.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">39 (13.1)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">45–54</td><td align="left" valign="top" rowspan="1" colspan="1">57 (158)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">4 (14.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">4 (11.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">49 (16.5)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">55–64</td><td align="left" valign="top" rowspan="1" colspan="1">143 (39.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">11 (39.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">14 (40.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">118 (39.7)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">65–70</td><td align="left" valign="top" rowspan="1" colspan="1">101 (28.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">12 (42.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">9 (25.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">80 (26.9)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Ethnicity</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Malay</td><td align="left" valign="top" rowspan="1" colspan="1">196</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">14 (50.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">22 (62.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">160 (53.9)</td><td rowspan="4" align="left" valign="top" colspan="1">0.559</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Chinese</td><td align="left" valign="top" rowspan="1" colspan="1">109</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">12 (42.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">10 (28.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">87 (29.3)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Indian</td><td align="left" valign="top" rowspan="1" colspan="1">52</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">2 (7.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">3 (8.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">47 (15.8)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Others</td><td align="left" valign="top" rowspan="1" colspan="1">3</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">3 (1.0)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Duration of diabetes</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">≤10 years</td><td align="left" valign="top" rowspan="1" colspan="1">160 (44.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">12 (42.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">19 (54.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">129 (43.4)</td><td rowspan="2" align="left" valign="top" colspan="1">0.467</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">&gt;10 years</td><td align="left" valign="top" rowspan="1" colspan="1">200 (55.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">16 (57.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">16 (45.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">168 (56.6)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Waist circumference</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">≤94 cm</td><td align="left" valign="top" rowspan="1" colspan="1">109 (30.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">7 (25.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">3 (8.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">99 (33.3)</td><td rowspan="2" align="left" valign="top" colspan="1">0.009<xref rid="jdi70127-note-0003" ref-type="table-fn">
+<italic toggle="yes">*</italic>
+</xref>
+</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">&gt;94 cm</td><td align="left" valign="top" rowspan="1" colspan="1">251 (69.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">21 (75.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">32 (91.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">198 (66.7)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">BMI group</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">&lt;25</td><td align="left" valign="top" rowspan="1" colspan="1">61 (16.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">3 (10.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">2 (5.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">56 (18.9)</td><td rowspan="2" align="left" valign="top" colspan="1">0.089</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">≥25</td><td align="left" valign="top" rowspan="1" colspan="1">299 (83.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">25 (89.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">33 (94.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">241 (81.1)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Hypertensive</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">313 (86.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">28 (100)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">33 (94.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">252 (84.8)</td><td rowspan="2" align="left" valign="top" colspan="1">0.024<xref rid="jdi70127-note-0003" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">47 (13.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">2 (5.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">45 (15.2)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Dyslipidaemia</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">341 (94.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">28 (100)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">34 (97.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">279 (93.9)</td><td rowspan="2" align="left" valign="top" colspan="1">0.500</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">19 (5.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">1 (2.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">18 (6.1)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Smoking</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">91 (25.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">4 (14.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">9 (25.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">78 (26.3)</td><td rowspan="2" align="left" valign="top" colspan="1">0.378</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">269 (74.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">24 (85.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">26 (74.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">219 (73.7)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Heart failure</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">5 (1.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">1 (3.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">0 (0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">4 (1.3)</td><td rowspan="2" align="left" valign="top" colspan="1">0.388</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">355 (98.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">27 (96.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">35 (100)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">293 (98.7)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">CAD</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">86 (23.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">13 (46.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">10 (28.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">63 (21.2)</td><td rowspan="2" align="left" valign="top" colspan="1">0.009<xref rid="jdi70127-note-0003" ref-type="table-fn">*</xref>
+</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">274 (76.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">15 (53.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">25 (71.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">234 (78.8)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">CKD</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Stage 1</td><td align="left" valign="top" rowspan="1" colspan="1">96 (26.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">7 (25.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">7 (20.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">82 (27.6)</td><td rowspan="3" align="left" valign="top" colspan="1">0.879</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Stage 2</td><td align="left" valign="top" rowspan="1" colspan="1">169 (46.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">13 (46.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">17 (28.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">139 (46.8)</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Stage 3</td><td align="left" valign="top" rowspan="1" colspan="1">95 (26.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">8 (28.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">11 (31.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">76 (25.6)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">Proteinuria</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">173 (48.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">16 (57.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">19 (54.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">138 (46.5)</td><td rowspan="2" align="left" valign="top" colspan="1">0.412</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">187 (51.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">12 (42.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">16 (45.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">159 (53.5)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">PAD</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">Yes</td><td align="left" valign="top" rowspan="1" colspan="1">170 (47.2)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">16 (57.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">22 (62.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">132 (44.4)</td><td rowspan="2" align="left" valign="top" colspan="1">0.065</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">190 (52.8)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">12 (42.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">13 (37.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">165 (55.6)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">HbA1c group</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">≤6.5%</td><td align="left" valign="top" rowspan="1" colspan="1">54 (15.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">5 (17.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">5 (14.3)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">44 (14.8)</td><td rowspan="2" align="justify" valign="top" colspan="1">0.840</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">&gt;6.5%</td><td align="left" valign="top" rowspan="1" colspan="1">306 (85.0)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">23 (82.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">30 (85.7)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">253 (85.2)</td></tr><tr><td colspan="6" align="left" valign="top" rowspan="1">TyG index</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">&gt;4.68 mg<sup>2</sup>/dL<sup>2</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">238 (66.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">19 (67.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">25 (71.4)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">194 (65.3)</td><td rowspan="2" align="justify" valign="top" colspan="1">0.755</td></tr><tr><td align="left" style="padding-left:10%" valign="top" rowspan="1" colspan="1">≤4.68 mg<sup>2</sup>/dL<sup>2</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">122 (33.9)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">9 (32.1)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">10 (28.6)</td><td align="char" char="(" valign="top" rowspan="1" colspan="1">103 (34.7)</td></tr></tbody></table><table-wrap-foot id="jdi70127-ntgp-0002"><fn id="jdi70127-note-0003"><label>
+<sup>*</sup>
+</label><p>
+<italic toggle="yes">P</italic>‐value is significant (&lt;0.05). BMI, body mass index; CAD, coronary artery disease; CKD, chronic kidney disease; hyper‐H, hypogonadotropic hypogonadism; hypo‐H, hypogonadotropic hypogonadism; PAD, peripheral artery disease; TyG, triglyceride‐glucose.</p></fn></table-wrap-foot></table-wrap><table-wrap position="float" id="jdi70127-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>A comparison of sex hormones investigations and hypogonadal symptoms among hypogonadal diabetic males (<italic toggle="no">n</italic> = 63)</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variables</th><th align="left" valign="bottom" rowspan="1" colspan="1">hyper‐H (<italic toggle="yes">n</italic> = 28)</th><th align="left" valign="bottom" rowspan="1" colspan="1">hypo‐H (<italic toggle="yes">n</italic> = 35)</th><th align="left" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">P</italic>‐value (<italic toggle="yes">t</italic>‐test)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">cfT, nmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">9.09 ± 2.863</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">7.94 ± 2.647</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.106</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">SHBG, nmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">30.65 ± 10.484</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">25.43 ± 10.627</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.056</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">E2, nmol/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">30.62 ± 7.610</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">29.02 ± 2.647</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.420</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">LH, mIU/L</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">14.10 ± 5.099</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">5.33 ± 1.776</td><td align="char" char="." valign="top" rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">AMS score</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">39.46 ± 8.103</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">38.43 ± 9.796</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.655</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">IIEF‐5 score</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">6.25 ± 6.363</td><td align="char" char="±" valign="top" rowspan="1" colspan="1">8.11 ± 7.024</td><td align="char" char="." valign="top" rowspan="1" colspan="1">0.280</td></tr></tbody></table><table-wrap-foot id="jdi70127-ntgp-0003"><fn id="jdi70127-note-0005"><p>AMS, aging male scale; cfT, calculated free testosterone; E2, estradiol; hyper‐H, hypogonadotropic hypogonadism; hypo‐H, hypogonadotropic hypogonadism; IIEF‐5, international index of erectile dysfunction; LH, luteinizing hormone; SHBG, sex hormone binding globulin.</p></fn></table-wrap-foot></table-wrap><p>Univariate analysis showed that predictors for hypogonadism in type 2 diabetes mellitus males included increasing body weight, waist circumference, BMI, or serum triglyceride levels, and the presence of hypertension, CAD, or peripheral arterial disease. On the contrary, increasing HDL‐C was associated with a reduction in the likelihood of developing hypogonadism. In the multivariate analysis, after adjusting for serum triglyceride levels, TyG index, eGFR, and the presence of hypertension, peripheral artery disease, dyslipidemia, and proteinuria, significant risk predictors for clinical hypogonadism included advancing age (OR 1.043, 95% CI 1.003–1.085, <italic toggle="yes">P</italic> = 0.035), higher BMI (OR 1.1.08, 95% CI 1.045–1.174, <italic toggle="yes">P</italic> = 0.001), and the presence of coronary artery disease (OR 2.096, 95% CI 1.090–4.030, <italic toggle="yes">P</italic> = 0.027). Conversely, higher serum HDL‐C levels were found to significantly reduce the risk of developing clinical hypogonadism (OR 0.224, 95% CI 0.057–0.885, <italic toggle="yes">P</italic> = 0.033).</p></sec><sec sec-type="discussion" id="jdi70127-sec-0011"><title>DISCUSSION</title><p>hyper‐H and hypo‐H are two distinct conditions with different underlying pathophysiologies. Hypo‐H is often seen in patients with diabesity or metabolic syndrome, and this entity is known as male obesity secondary hypogonadism.<xref rid="jdi70127-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref>, <xref rid="jdi70127-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref> The hallmark features of metabolic syndrome are insulin resistance, visceral adiposity, atherogenic dyslipidaemia, and endothelial dysfunction, all of which are commonly observed in type 2 diabetes mellitus patients.</p><p>In line with previous studies, we identified high BMI and low HDL‐C levels as predictors of hypogonadism.<xref rid="jdi70127-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref>, <xref rid="jdi70127-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref>, <xref rid="jdi70127-bib-0024" ref-type="bibr">
+<sup>24</sup>
+</xref>, <xref rid="jdi70127-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref>, <xref rid="jdi70127-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref> Lorigo <italic toggle="yes">et al</italic>.<xref rid="jdi70127-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref> examined the association between testosterone and an abnormal pro‐atherogenic profile in males and concluded that testosterone levels are inversely associated with Tg levels but positively correlated with HDL‐C levels. Furthermore, high levels of serum Tg and low levels of serum HDL‐C have been associated with an elevated risk of CAD among diabetic adults, despite a myriad of other possible contributory factors.<xref rid="jdi70127-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>, <xref rid="jdi70127-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref>, <xref rid="jdi70127-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref> Our study demonstrated that type 2 diabetes mellitus males with CAD are twice more likely to develop clinical hypogonadism, which is in tandem with previous studies that have reported a positive correlation between low T levels and CAD.<xref rid="jdi70127-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref>, <xref rid="jdi70127-bib-0032" ref-type="bibr">
+<sup>32</sup>
+</xref> Nonetheless, the question of whether hypogonadism is an independent risk factor for CAD or a surrogate marker for CAD is still being debated.<xref rid="jdi70127-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref>, <xref rid="jdi70127-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+</p><p>Insulin resistance, using HOMA‐IR, increases the likelihood of developing low testosterone levels or hypogonadism.<xref rid="jdi70127-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref>, <xref rid="jdi70127-bib-0035" ref-type="bibr">
+<sup>35</sup>
+</xref>, <xref rid="jdi70127-bib-0036" ref-type="bibr">
+<sup>36</sup>
+</xref> In our study, TyG index was used as a surrogate marker for insulin resistance as it has been shown to have a strong correlation with HOMA‐IR and total glucose metabolism rates in hyperinsulinemic–euglycemic clamp studies, and perhaps a more superior tool for predicting insulin resistance in terms of cost‐effectiveness and easy accessibility by omitting the need to measure insulin levels.<xref rid="jdi70127-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>, <xref rid="jdi70127-bib-0037" ref-type="bibr">
+<sup>37</sup>
+</xref> TyG index was also shown to be a sensitive predictor for hypogonadism in type 2 diabetic male patients.<xref rid="jdi70127-bib-0038" ref-type="bibr">
+<sup>38</sup>
+</xref>, <xref rid="jdi70127-bib-0039" ref-type="bibr">
+<sup>39</sup>
+</xref> However, since the majority of the type 2 diabetes mellitus males in our study population were either obese (67.5%) or had poor glycemic control (73.3%), this may explain why TyG index was not a significant predictor for hypogonadism in our population.</p><p>Several mechanisms have been postulated for hypo‐H among type 2 diabetic males.<xref rid="jdi70127-bib-0040" ref-type="bibr">
+<sup>40</sup>
+</xref> A bidirectional relationship exists between obesity‐induced insulin resistance and hypogonadism, creating a vicious cycle, where insulin resistance impairs testosterone secretion from Leydig cells through the production of cytokines, which in turn exacerbates insulin resistance, further reducing testosterone secretion. Another proposed pathophysiological mechanism involves the downregulation of the hypothalamic–pituitary‐gonadal axis, caused by the suppression of inflammatory markers like TNF‐α and IL‐6, which is mediated by reduced activity of kisspeptins.<xref rid="jdi70127-bib-0041" ref-type="bibr">
+<sup>41</sup>
+</xref> This finding was further verified by the fact that insulin sensitivity improves with testosterone replacement therapy in obese hypogonadal males with insulin resistance.<xref rid="jdi70127-bib-0042" ref-type="bibr">
+<sup>42</sup>
+</xref> It is a well‐known fact that obesity contributes to insulin resistance due to excessive release of free fatty acids, reactive oxygen species, and pro‐inflammatory cytokines that cause dysregulation of cellular organelles, resulting in a disruption of insulin sensitivity and glucose homeostasis at cellular and subsequently systemic levels.<xref rid="jdi70127-bib-0043" ref-type="bibr">
+<sup>43</sup>
+</xref>
+</p><p>We were unable to demonstrate any significant association between glycemic control and testosterone levels. Previous postulations had stipulated that both acute and chronic hyperglycemia could affect the hypothalamic–pituitary‐gonadal (HPG) axis.<xref rid="jdi70127-bib-0044" ref-type="bibr">
+<sup>44</sup>
+</xref> Historically, several studies have shown that glucose load suppressed GnRH and LH levels and subsequently reduced testosterone levels, suggesting that acute hyperglycemia negatively inhibits the HPG axis. Nonetheless, hypogonadism is also rarely observed in males with type 1 diabetes, regardless of their glycemic control, leading to the belief that insulin resistance may play a bigger role in suppressing the axis, compared to just hyperglycemia alone.<xref rid="jdi70127-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref>, <xref rid="jdi70127-bib-0045" ref-type="bibr">
+<sup>45</sup>
+</xref>, <xref rid="jdi70127-bib-0046" ref-type="bibr">
+<sup>46</sup>
+</xref>, <xref rid="jdi70127-bib-0047" ref-type="bibr">
+<sup>47</sup>
+</xref>
+</p><p>On the contrary, hyper‐H is known to be primarily associated with aging. Numerous literatures have reported a higher prevalence of hypogonadism as age increases, with age‐related hypogonadism manifesting as hyper‐H or compensated hypogonadism.<xref rid="jdi70127-bib-0048" ref-type="bibr">
+<sup>48</sup>
+</xref>, <xref rid="jdi70127-bib-0049" ref-type="bibr">
+<sup>49</sup>
+</xref> Late onset hypogonadism, or LOH, usually presents with hypo‐H due to diminished GnRH levels and GnRH/LH pulse amplitude in the hypopituitary–pituitary level of the axis.<xref rid="jdi70127-bib-0050" ref-type="bibr">
+<sup>50</sup>
+</xref>, <xref rid="jdi70127-bib-0051" ref-type="bibr">
+<sup>51</sup>
+</xref> Furthermore, most elderly hypogonadal males have coexisting comorbidities, especially metabolic diseases, which result in a hypo‐H profile.<xref rid="jdi70127-bib-0050" ref-type="bibr">
+<sup>50</sup>
+</xref> In our cohort, surprisingly, the proportion of hyper‐H was much higher than in previous studies, suggesting that there may be other contributory factors to the low testosterone levels unlike hypo‐H, which is strongly related to insulin resistance and visceral adiposity.<xref rid="jdi70127-bib-0052" ref-type="bibr">
+<sup>52</sup>
+</xref>, <xref rid="jdi70127-bib-0053" ref-type="bibr">
+<sup>53</sup>
+</xref>
+</p><p>One plausible explanation is the environmental influence of endocrine‐disruptor compounds (EDC) affecting our participants. We postulate that there might be an additional environmental factor that contributed to gonadal dysfunction in aging males. Endocrine‐disruptor compounds (EDC) are ubiquitous environmental contaminants that interfere with hormonal systems, with possibly a more pronounced effect on the gonads than the hypothalamus or pituitary glands in the hypothalamus–pituitary–gonad axis.<xref rid="jdi70127-bib-0054" ref-type="bibr">
+<sup>54</sup>
+</xref> Several studies have shown that there are multiple EDCs found in the rivers and water supply in Klang Valley, with high concentrations of bisphenol A (BPA) reported in those areas. Incidentally, our institution is in the same locality which served most of our study participants who hailed from this very same area.<xref rid="jdi70127-bib-0055" ref-type="bibr">
+<sup>55</sup>
+</xref> Bisphenol A, used in plastic manufacturing, has been shown to exhibit detrimental effects on the male reproductive system, including reducing the serum T levels and/or increasing LH levels.<xref rid="jdi70127-bib-0056" ref-type="bibr">
+<sup>56</sup>
+</xref> In addition, high levels of triclosan, an antimicrobial agent, were also detected in the tap water supply in Klang Valley. Triclosan impairs the Leydig cells, resulting in reduced serum T levels and increased LH levels.<xref rid="jdi70127-bib-0057" ref-type="bibr">
+<sup>57</sup>
+</xref> Despite significant levels of bisphenol A (as high as 66.40 ng/L) and triclosan (as high as 9.74 ng/L) detected in the tap water in Klang Valley, no attempt was made to study the ill effects of these EDCs on the local population.<xref rid="jdi70127-bib-0057" ref-type="bibr">
+<sup>57</sup>
+</xref>
+</p><p>The importance of determining hyper‐H vs hypo‐H among type 2 diabetic men has not been discussed in any previous literature. Since hypo‐H in diabetic men is a result of insulin resistance and visceral adiposity, the mainstay of treatment would naturally be weight loss via therapeutic lifestyle modification or anti‐diabetic agents with weight lowering effects, such as SGLT‐2 inhibitors, GLP1‐R analogues, or even GIP‐GLP‐1 receptors dual agonists. There have been several small studies demonstrating that these anti‐diabetic agents improve testosterone levels and sexual function in diabetic men, but larger studies are necessary to further strengthen these claims.<xref rid="jdi70127-bib-0058" ref-type="bibr">
+<sup>58</sup>
+</xref>, <xref rid="jdi70127-bib-0059" ref-type="bibr">
+<sup>59</sup>
+</xref>, <xref rid="jdi70127-bib-0060" ref-type="bibr">
+<sup>60</sup>
+</xref>, <xref rid="jdi70127-bib-0061" ref-type="bibr">
+<sup>61</sup>
+</xref> On the contrary, diabetic men with hyper‐H may instead require other forms of treatment, such as testosterone replacement therapy or elimination of other environmental factors that affect their testicular function.</p><p>The strength of our study includes employing a more stringent diagnostic criteria for hypogonadism, requiring both low total testosterone (tT) and free testosterone (fT) levels along with the presence of hypogonadal symptoms for the diagnosis of hypogonadism. This ensures greater sensitivity and specificity in identifying true cases of hypogonadism. Additionally, the multiracial composition of our study population closely mirrors the country's three major ethnic distributions, enhancing the relevance of our findings to the broader population.</p><p>One limitation of our study is that it was not sufficiently powered to separately analyze predictors for hyper‐H and hypo‐H among type 2 diabetes mellitus males. Additionally, given the long duration of diabetes in our study population, the findings may not be relevant to individuals with a shorter duration of diabetes.</p></sec><sec sec-type="conclusions" id="jdi70127-sec-0012"><title>CONCLUSION</title><p>In our population, key predictors of hypogonadism include increasing age, higher BMI, and the presence of coronary artery disease, while elevated HDL‐C levels are favorably associated with a normal testosterone level. Our findings also suggest that hyper‐H and hypo‐H in males with type 2 diabetes mellitus are distinct conditions with differing underlying mechanisms. Further research is needed to validate this hypothesis and explore whether the clinical outcomes and the treatment of these two entities differ. Notably, the prevalence of hyper‐H in our cohort was double that reported elsewhere, warranting further investigation to identify the underlying cause, with endocrine disruptors being a likely contributing factor.</p></sec><sec sec-type="COI-statement" id="jdi70127-sec-0014"><title>DISCLOSURE</title><p>The authors declare no conflict of interest.</p><p>Approval of the research protocol: The protocol for this research project has been approved by a suitably constituted Ethics Committee of the institution and it conforms to the provisions of the Declaration of Helsinki. Committee of UKM Research Ethics Secretariat, Approval No. JEP 2019‐421.</p><p>Informed consent: All informed consent was obtained from the subject(s) and/or guardian(s).</p><p>Registry and the registration no. of the study/trial: N/A.</p><p>Animal studies: N/A.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="jdi70127-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table S1</bold> | A summary of on studies on serum bisphenol levels among men in Asia.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JDI-16-1881-s001.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="jdi70127-supitem-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table S2</bold> | A summary of on studies on urine bisphenol levels among men in Asia.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JDI-16-1881-s002.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="jdi70127-sec-0013"><title>ACKNOWLEDGMENTS</title><p>This study was funded by the University Tunku Abdul Rahman Research Fund (UTARRF), Universiti Kebangsaan Malaysia Fundamental Grant, and the Malaysian Endocrine and Metabolism Society (MEMS).</p></ack><sec sec-type="data-availability" id="jdi70127-sec-0016"><title>DATA AVAILABILITY STATEMENT</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list id="jdi70127-bibl-0001" content-type="cited-references"><title>REFERENCES</title><ref id="jdi70127-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jdi70127-cit-0001">
+<string-name name-style="western">
+<surname>Dhindsa</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ghanim</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Batra</surname>
+<given-names>M</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Hypogonadotropic hypogonadism in men with diabesity</article-title>. <source>Diabetes Care</source>
+<year>2018</year>; <volume>41</volume>: <fpage>1516</fpage>–<lpage>1525</lpage>.<pub-id pub-id-type="pmid">29934480</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc17-2510</pub-id><pub-id pub-id-type="pmcid">PMC6014549</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jdi70127-cit-0002">
+<string-name name-style="western">
+<surname>Zhou</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tian</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>X</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>The occurrence of hypogonadotropic hypogonadism in Chinese men with type 2 diabetes</article-title>. <source>Clin Endocrinol</source>
+<year>2022</year>; <volume>96</volume>: <fpage>837</fpage>–<lpage>846</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/cen.14680</pub-id><pub-id pub-id-type="pmid">35075664</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jdi70127-cit-0003">
+<string-name name-style="western">
+<surname>Pivonello</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Menafra</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Riccio</surname>
+<given-names>E</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Metabolic disorders and male hypogonadotropic hypogonadism</article-title>. <source>Front Endocrinol (Lausanne)</source>
+<year>2019</year>; <volume>10</volume>: <fpage>345</fpage>.<pub-id pub-id-type="pmid">31402895</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fendo.2019.00345</pub-id><pub-id pub-id-type="pmcid">PMC6669361</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jdi70127-cit-0004">
+<string-name name-style="western">
+<surname>de Lorenzo</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Noce</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Moriconi</surname>
+<given-names>E</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>MOSH syndrome (male obesity secondary hypogonadism): clinical assessment and possible therapeutic approaches</article-title>. <source>Nutrients</source>
+<year>2018</year>; <volume>10</volume>: <fpage>474</fpage>.<pub-id pub-id-type="pmid">29649106</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/nu10040474</pub-id><pub-id pub-id-type="pmcid">PMC5946259</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jdi70127-cit-0005">
+<string-name name-style="western">
+<surname>Kang</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mohamad Sithik</surname>
+<given-names>MN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Khoo</surname>
+<given-names>J</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Gaps in the management of diabetes in Asia: a need for improved awareness and strategies in men's sexual health</article-title>. <source>J Diabetes Investig</source>
+<year>2022</year>; <volume>13</volume>: <fpage>1945</fpage>–<lpage>1957</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jdi.13903</pub-id><pub-id pub-id-type="pmcid">PMC9720202</pub-id><pub-id pub-id-type="pmid">36151988</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jdi70127-cit-0006">
+<string-name name-style="western">
+<surname>Genchi</surname>
+<given-names>VA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rossi</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lauriola</surname>
+<given-names>C</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Adipose tissue dysfunction and obesity‐related male hypogonadism</article-title>. <source>Int J Mol Sci</source>
+<year>2022</year>; <volume>23</volume>: <elocation-id>8194</elocation-id>.<pub-id pub-id-type="pmid">35897769</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms23158194</pub-id><pub-id pub-id-type="pmcid">PMC9330735</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jdi70127-cit-0007">
+<string-name name-style="western">
+<surname>De Silva</surname>
+<given-names>NL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Papanikolaou</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Grossmann</surname>
+<given-names>M</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Male hypogonadism: pathogenesis, diagnosis, and management</article-title>. <source>Lancet Diabetes Endocrinol</source>
+<year>2024</year>; <volume>12</volume>: <fpage>761</fpage>–<lpage>774</lpage>.<pub-id pub-id-type="pmid">39159641</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S2213-8587(24)00199-2</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jdi70127-cit-0008">
+<string-name name-style="western">
+<surname>Chong</surname>
+<given-names>CT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lai</surname>
+<given-names>WK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mohd Sallehuddin</surname>
+<given-names>S</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Prevalence of overweight and its associated factors among Malaysian adults: findings from a nationally representative survey</article-title>. <source>PLoS One</source>
+<year>2023</year>; <volume>18</volume>: <elocation-id>e0283270</elocation-id>.<pub-id pub-id-type="pmid">37531379</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0283270</pub-id><pub-id pub-id-type="pmcid">PMC10395944</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0009"><label>9</label><mixed-citation publication-type="book" id="jdi70127-cit-0009">
+<collab collab-type="authors">Institute for Public Health (IPH)</collab>
+. <source>National Health and Morbidity Survey 2015 (NHMS 2015). Vol. II: Non‐Communicable Diseases, Risk Factors &amp; Other Health Problems</source>. <publisher-loc>Shah Alam</publisher-loc>: <publisher-name>Institute for Public Health (IPH)</publisher-name>, <year>2015</year>.</mixed-citation></ref><ref id="jdi70127-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jdi70127-cit-0010">
+<string-name name-style="western">
+<surname>Mohd‐Sidik</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lekhraj</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Foo</surname>
+<given-names>CN</given-names>
+</string-name>. <article-title>Prevalence, associated factors and psychological determinants of obesity among adults in Selangor, Malaysia</article-title>. <source>Int J Environ Res Public Health</source>
+<year>2021</year>; <volume>18</volume>: <elocation-id>868</elocation-id>.<pub-id pub-id-type="pmid">33498401</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijerph18030868</pub-id><pub-id pub-id-type="pmcid">PMC7908089</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0011"><label>11</label><mixed-citation publication-type="miscellaneous" id="jdi70127-cit-0011">
+<string-name name-style="western">
+<surname>Chandran</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Abdullah</surname>
+<given-names>MN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Abdul</surname>
+<given-names>F</given-names>
+</string-name>. <article-title>National diabetes registry report 2013–2019</article-title>. <year>2020</year>. Putrajaya.</mixed-citation></ref><ref id="jdi70127-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jdi70127-cit-0012">
+<string-name name-style="western">
+<surname>Tee</surname>
+<given-names>ES</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Voon</surname>
+<given-names>SH</given-names>
+</string-name>. <article-title>Combating obesity in Southeast Asia countries: current status and the way forward</article-title>. <source>Glob Health J</source>
+<year>2024</year>; <volume>8</volume>: <fpage>147</fpage>–<lpage>151</lpage>.</mixed-citation></ref><ref id="jdi70127-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jdi70127-cit-0013">
+<collab collab-type="authors">Association AD</collab>
+. <article-title>2. Classification and diagnosis of diabetes: standards of medical care in diabetes—2020</article-title>. <source>Diabetes Care</source>
+<year>2020</year>; <volume>43</volume>(<issue>Supplement 1</issue>): <fpage>S14</fpage>–<lpage>S31</lpage>.<pub-id pub-id-type="pmid">31862745</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc20-S002</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jdi70127-cit-0014">
+<string-name name-style="western">
+<surname>Wan Nazaimoon</surname>
+<given-names>WM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Md Isa</surname>
+<given-names>SH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wan Mohamad</surname>
+<given-names>WB</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Prevalence of diabetes in Malaysia and usefulness of HbA 1c as a diagnostic criterion</article-title>. <source>Diabet Med</source>
+<year>2013</year>; <volume>30</volume>: <fpage>825</fpage>–<lpage>828</lpage>.<pub-id pub-id-type="pmid">23413941</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dme.12161</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0015"><label>15</label><mixed-citation publication-type="book" id="jdi70127-cit-0015">
+<collab collab-type="authors">World Health Organization. Regional Office for the Western Pacific</collab>
+. <source>The Asia‐Pacific Perspective: Redefining Obesity and its Treatment</source>. <publisher-loc>Sydney, NSW</publisher-loc>: <publisher-name>Health Communications Australia</publisher-name>, <year>2000</year>.</mixed-citation></ref><ref id="jdi70127-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="jdi70127-cit-0016">
+<article-title>6. Glycemic targets: standards of medical care in diabetes—2020</article-title>. <source>Diabetes Care</source>
+<year>2020</year>; <volume>43</volume>(<issue>Supplement_1</issue>): <fpage>S66</fpage>–<lpage>S76</lpage>.<pub-id pub-id-type="pmid">31862749</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc20-S006</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jdi70127-cit-0017">
+<string-name name-style="western">
+<surname>Vermeulen</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Verdonck</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kaufman</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>A critical evaluation of simple methods for the estimation of free testosterone in serum</article-title>. <source>J Clin Endocrinol Metab</source>
+<year>1999</year>; <volume>84</volume>: <fpage>3666</fpage>–<lpage>3672</lpage>.<pub-id pub-id-type="pmid">10523012</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1210/jcem.84.10.6079</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jdi70127-cit-0018">
+<string-name name-style="western">
+<surname>Tan</surname>
+<given-names>HM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Low</surname>
+<given-names>WY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tong</surname>
+<given-names>SF</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Aging male symptoms scale (AMS) for health‐related quality of life in aging men: translation and adaptation in Malay</article-title>. <source>Malays J Public Health Med</source>
+<year>2015</year>; <volume>15</volume>: <fpage>17</fpage>–<lpage>23</lpage>.</mixed-citation></ref><ref id="jdi70127-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jdi70127-cit-0019">
+<string-name name-style="western">
+<surname>Jayasena</surname>
+<given-names>CN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>de Silva</surname>
+<given-names>NL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>O'Reilly</surname>
+<given-names>MW</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Standardising the biochemical confirmation of adult male hypogonadism: a joint position statement by the Society for Endocrinology and Association of Clinical Biochemistry and Laboratory Medicine</article-title>. <source>Clin Endocrinol</source>
+<year>2023</year>; <volume>101</volume>: <fpage>531</fpage>–<lpage>534</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/cen.14929</pub-id><pub-id pub-id-type="pmid">37393195</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jdi70127-cit-0020">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kim</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kim</surname>
+<given-names>W</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Lipid indices as simple and clinically useful surrogate markers for insulin resistance in the U.S. population</article-title>. <source>Sci Rep</source>
+<year>2021</year>; <volume>11</volume>: <fpage>2366</fpage>.<pub-id pub-id-type="pmid">33504930</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-021-82053-2</pub-id><pub-id pub-id-type="pmcid">PMC7840900</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jdi70127-cit-0021">
+<string-name name-style="western">
+<surname>Fernandez</surname>
+<given-names>CJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chacko</surname>
+<given-names>EC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pappachan</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>Male obesity‐related secondary hypogonadism – pathophysiology, clinical implications and management</article-title>. <source>Eur Endocrinol</source>
+<year>2019</year>; <volume>15</volume>: <fpage>83</fpage>–<lpage>90</lpage>.<pub-id pub-id-type="pmid">31616498</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.17925/EE.2019.15.2.83</pub-id><pub-id pub-id-type="pmcid">PMC6785957</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jdi70127-cit-0022">
+<string-name name-style="western">
+<surname>Zheng</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cao</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cao</surname>
+<given-names>W</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Risk factors for hypogonadism in male patients with type 2 diabetes</article-title>. <source>J Diabetes Res</source>
+<year>2016</year>; <volume>2016</volume>: <elocation-id>5162167</elocation-id>.<pub-id pub-id-type="pmid">27006953</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2016/5162167</pub-id><pub-id pub-id-type="pmcid">PMC4781970</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jdi70127-cit-0023">
+<string-name name-style="western">
+<surname>Ahmad</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jerampang</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tohid</surname>
+<given-names>H</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Testosterone deficiency syndrome among males with type 2 diabetes mellitus in East Malaysia</article-title>. <source>Nagoya J Med Sci</source>
+<year>2020</year>; <volume>82</volume>: <fpage>613</fpage>–<lpage>621</lpage>.<pub-id pub-id-type="pmid">33311792</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18999/nagjms.82.4.613</pub-id><pub-id pub-id-type="pmcid">PMC7719445</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="jdi70127-cit-0024">
+<string-name name-style="western">
+<surname>Anupam</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shivaprasad</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vijaya</surname>
+<given-names>S</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Prevalence of hypogonadism in patients with type 2 diabetes mellitus among the Indian population</article-title>. <source>Diabetes Metab Syndr</source>
+<year>2020</year>; <volume>14</volume>: <fpage>1299</fpage>–<lpage>1304</lpage>.<pub-id pub-id-type="pmid">32755825</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.dsx.2020.07.006</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jdi70127-cit-0025">
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liu</surname>
+<given-names>X</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Correlates and prevalence of hypogonadism in patients with early‐ and late‐onset type 2 diabetes</article-title>. <source>Andrology</source>
+<year>2017</year>; <volume>5</volume>: <fpage>739</fpage>–<lpage>743</lpage>.<pub-id pub-id-type="pmid">28470687</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/andr.12360</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jdi70127-cit-0026">
+<string-name name-style="western">
+<surname>Mohammed</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>AL‐Habori</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Abdullateef</surname>
+<given-names>A</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Impact of metabolic syndrome factors on testosterone and SHBG in type 2 diabetes mellitus and metabolic syndrome</article-title>. <source>J Diabetes Res</source>
+<year>2018</year>: <volume>2018</volume>: <fpage>4926789</fpage>.<pub-id pub-id-type="pmid">30057912</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2018/4926789</pub-id><pub-id pub-id-type="pmcid">PMC6051249</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jdi70127-cit-0027">
+<string-name name-style="western">
+<surname>Lorigo</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mariana</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Oliveira</surname>
+<given-names>N</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Vascular pathways of testosterone: clinical implications</article-title>. <source>J Cardiovasc Transl Res</source>
+<year>2020</year>; <volume>13</volume>: <fpage>55</fpage>–<lpage>72</lpage>.<pub-id pub-id-type="pmid">31820333</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12265-019-09939-5</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jdi70127-cit-0028">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>JS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chang</surname>
+<given-names>PY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>Y</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Triglyceride and HDL‐C dyslipidemia and risks of coronary heart disease and ischemic stroke by glycemic dysregulation status: the strong heart study</article-title>. <source>Diabetes Care</source>
+<year>2017</year>; <volume>40</volume>: <fpage>529</fpage>–<lpage>537</lpage>.<pub-id pub-id-type="pmid">28122840</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc16-1958</pub-id><pub-id pub-id-type="pmcid">PMC5360283</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jdi70127-cit-0029">
+<string-name name-style="western">
+<surname>Thirumalai</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rubinow</surname>
+<given-names>KB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Page</surname>
+<given-names>ST</given-names>
+</string-name>. <article-title>An update on testosterone, HDL and cardiovascular risk in men</article-title>. <source>Clin Lipidol</source>
+<year>2015</year>; <volume>10</volume>: <fpage>251</fpage>–<lpage>258</lpage>.<pub-id pub-id-type="pmid">26257830</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2217/clp.15.10</pub-id><pub-id pub-id-type="pmcid">PMC4527564</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="jdi70127-cit-0030">
+<string-name name-style="western">
+<surname>Corona</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rastrelli</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Di Pasquale</surname>
+<given-names>G</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Endogenous testosterone levels and cardiovascular risk: meta‐analysis of observational studies</article-title>. <source>J Sex Med</source>
+<year>2018</year>; <volume>15</volume>: <fpage>1260</fpage>–<lpage>1271</lpage>.<pub-id pub-id-type="pmid">30145097</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jsxm.2018.06.012</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="jdi70127-cit-0031">
+<string-name name-style="western">
+<surname>Charan</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Garg</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chander</surname>
+<given-names>R</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>To study the relationship between serum testosterone, HSCRP and carotid atherosclerosis in men from Northwest Punjab with type 2 diabetes mellitus</article-title>. <source>J Evol Med Dent Sci</source>
+<year>2017</year>; <volume>6</volume>: <fpage>1872</fpage>–<lpage>1876</lpage>.</mixed-citation></ref><ref id="jdi70127-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="jdi70127-cit-0032">
+<string-name name-style="western">
+<surname>Madhu</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aslam</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aiman</surname>
+<given-names>A</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Prevalence of hypogonadism in male type 2 diabetes mellitus patients with and without coronary artery disease</article-title>. <source>Indian J Endocrinol Metab</source>
+<year>2017</year>; <volume>21</volume>: <fpage>31</fpage>–<lpage>37</lpage>.<pub-id pub-id-type="pmid">28217495</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/2230-8210.195999</pub-id><pub-id pub-id-type="pmcid">PMC5240077</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="jdi70127-cit-0033">
+<string-name name-style="western">
+<surname>Morris</surname>
+<given-names>PD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Channer</surname>
+<given-names>KS</given-names>
+</string-name>. <article-title>Testosterone and cardiovascular disease in men</article-title>. <source>Asian J Androl</source>
+<year>2012</year>; <volume>14</volume>: <fpage>428</fpage>–<lpage>435</lpage>.<pub-id pub-id-type="pmid">22522504</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/aja.2012.21</pub-id><pub-id pub-id-type="pmcid">PMC3720171</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="jdi70127-cit-0034">
+<string-name name-style="western">
+<surname>Ruige</surname>
+<given-names>JB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mahmoud</surname>
+<given-names>AM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>De Bacquer</surname>
+<given-names>D</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Endogenous testosterone and cardiovascular disease in healthy men: a meta‐analysis</article-title>. <source>Heart</source>
+<year>2011</year>; <volume>97</volume>: <fpage>870</fpage>–<lpage>875</lpage>.<pub-id pub-id-type="pmid">21177660</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/hrt.2010.210757</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="jdi70127-cit-0035">
+<string-name name-style="western">
+<surname>Sepu</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Adeleye</surname>
+<given-names>JO</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kuti</surname>
+<given-names>MO</given-names>
+</string-name>. <article-title>Serum testosterone in Nigerian men with type 2 diabetes mellitus and its relationship with insulin sensitivity and glycemic control</article-title>. <source>J Natl Med Assoc</source>
+<year>2021</year>; <volume>113</volume>: <fpage>285</fpage>–<lpage>293</lpage>.<pub-id pub-id-type="pmid">33353658</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jnma.2020.11.014</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="jdi70127-cit-0036">
+<string-name name-style="western">
+<surname>Cao</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zheng</surname>
+<given-names>RD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Xu</surname>
+<given-names>SH</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Association between sex hormone and blood uric acid in male patients with type 2 diabetes</article-title>. <source>Int J Endocrinol</source>
+<year>2017</year>; <volume>2017</volume>: <elocation-id>4375253</elocation-id>.<pub-id pub-id-type="pmid">29109738</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2017/4375253</pub-id><pub-id pub-id-type="pmcid">PMC5646336</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="jdi70127-cit-0037">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>SH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kwon</surname>
+<given-names>HS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Park</surname>
+<given-names>YM</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Predicting the development of diabetes using the product of triglycerides and glucose: the chungju metabolic disease cohort (CMC) study</article-title>. <source>PLoS One</source>
+<year>2014</year>; <volume>9</volume>: <elocation-id>e90430</elocation-id>.<pub-id pub-id-type="pmid">24587359</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0090430</pub-id><pub-id pub-id-type="pmcid">PMC3938726</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="jdi70127-cit-0038">
+<string-name name-style="western">
+<surname>Yu</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Xu</surname>
+<given-names>L</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Combined obesity‐ and lipid‐related indices are associated with hypogonadism in Chinese male patients with type 2 diabetes: a cross‐sectional study</article-title>. <source>Front Endocrinol (Lausanne)</source>
+<year>2024</year>; <volume>14</volume>: <elocation-id>1319582</elocation-id>.<pub-id pub-id-type="pmid">38260153</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fendo.2023.1319582</pub-id><pub-id pub-id-type="pmcid">PMC10801025</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="jdi70127-cit-0039">
+<string-name name-style="western">
+<surname>Caretta</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Facondo</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mereu</surname>
+<given-names>S</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Cardiometabolic indices predict hypogonadism in male patients with type 2 diabetes</article-title>. <source>J Endocrinol Investig</source>
+<year>2022</year>; <volume>46</volume>: <fpage>599</fpage>–<lpage>608</lpage>.<pub-id pub-id-type="pmid">36282472</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40618-022-01941-0</pub-id><pub-id pub-id-type="pmcid">PMC9938038</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="jdi70127-cit-0040">
+<string-name name-style="western">
+<surname>Miller</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Madden‐Doyle</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jayasena</surname>
+<given-names>C</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Mechanisms in endocrinology: hypogonadism and metabolic health in men—novel insights into pathophysiology</article-title>. <source>Eur J Endocrinol</source>
+<year>2024</year>; <volume>191</volume>: <fpage>R1</fpage>–<lpage>R17</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ejendo/lvae128</pub-id><pub-id pub-id-type="pmid">39344641</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="jdi70127-cit-0041">
+<string-name name-style="western">
+<surname>Lapauw</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kaufman</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>Management of endocrine disease: rationale and current evidence for testosterone therapy in the management of obesity and its complications</article-title>. <source>Eur J Endocrinol</source>
+<year>2020</year>; <volume>183</volume>: <fpage>R16</fpage>–<lpage>R183</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1530/EJE-20-0394</pub-id><pub-id pub-id-type="pmid">33105105</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="jdi70127-cit-0042">
+<string-name name-style="western">
+<surname>Dhindsa</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ghanim</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Batra</surname>
+<given-names>M</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Insulin resistance and inflammation in hypogonadotropic hypogonadism and their reduction after testosterone replacement in men with type 2 diabetes</article-title>. <source>Diabetes Care</source>
+<year>2016</year>; <volume>39</volume>: <fpage>82</fpage>–<lpage>91</lpage>.<pub-id pub-id-type="pmid">26622051</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc15-1518</pub-id><pub-id pub-id-type="pmcid">PMC4686848</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="jdi70127-cit-0043">
+<string-name name-style="western">
+<surname>Ahmed</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sultana</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Greene</surname>
+<given-names>MW</given-names>
+</string-name>. <article-title>Adipose tissue and insulin resistance in obese</article-title>. <source>Biomed Pharmacother</source>
+<year>2021</year>; <volume>137</volume>: <elocation-id>111315</elocation-id>.<pub-id pub-id-type="pmid">33561645</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.biopha.2021.111315</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="jdi70127-cit-0044">
+<string-name name-style="western">
+<surname>Maresch</surname>
+<given-names>CC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stute</surname>
+<given-names>DC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Alves</surname>
+<given-names>MG</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Diabetes‐induced hyperglycemia impairs male reproductive function: a systematic review</article-title>. <source>Hum Reprod Update</source>
+<year>2018</year>; <volume>24</volume>: <fpage>86</fpage>–<lpage>105</lpage>.<pub-id pub-id-type="pmid">29136166</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/humupd/dmx033</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="jdi70127-cit-0045">
+<string-name name-style="western">
+<surname>Costanzo</surname>
+<given-names>PR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Knoblovits</surname>
+<given-names>P</given-names>
+</string-name>. <article-title>Male gonadal axis function in patients with type 2 diabetes</article-title>. <source>Horm Mol Biol Clin Investig</source>
+<year>2016</year>; <volume>26</volume>: <fpage>129</fpage>–<lpage>134</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1515/hmbci-2016-0014</pub-id><pub-id pub-id-type="pmid">27071157</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="jdi70127-cit-0046">
+<string-name name-style="western">
+<surname>Giagulli</surname>
+<given-names>VA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Castellana</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Carbone</surname>
+<given-names>MD</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Weight loss more than glycemic control may improve testosterone in obese type 2 diabetes mellitus men with hypogonadism</article-title>. <source>Andrology</source>
+<year>2020</year>; <volume>8</volume>: <fpage>654</fpage>–<lpage>662</lpage>.<pub-id pub-id-type="pmid">31919991</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/andr.12754</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="jdi70127-cit-0047">
+<string-name name-style="western">
+<surname>Hsu</surname>
+<given-names>PS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hung</surname>
+<given-names>CL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tu</surname>
+<given-names>SK</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Waist circumference is more closely associated with hypogonadism than is hyperglycemia, independent of BMI in middle‐aged men</article-title>. <source>J Diabetes Res</source>
+<year>2021</year>; <volume>2021</volume>: <fpage>1</fpage>–<lpage>7</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2021/1347588</pub-id><pub-id pub-id-type="pmcid">PMC8712173</pub-id><pub-id pub-id-type="pmid">34966822</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="jdi70127-cit-0048">
+<string-name name-style="western">
+<surname>Wu</surname>
+<given-names>FCW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tajar</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Beynon</surname>
+<given-names>JM</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Identification of late‐onset hypogonadism in middle‐aged and elderly men</article-title>. <source>N Engl J Med</source>
+<year>2010</year>; <volume>363</volume>: <fpage>123</fpage>–<lpage>135</lpage>.<pub-id pub-id-type="pmid">20554979</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa0911101</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="jdi70127-cit-0049">
+<string-name name-style="western">
+<surname>Grossmann</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ng Tang Fui</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cheung</surname>
+<given-names>AS</given-names>
+</string-name>. <article-title>Late‐onset hypogonadism: metabolic impact</article-title>. <source>Andrology</source>
+<year>2020</year>; <volume>8</volume>: <fpage>1519</fpage>–<lpage>1529</lpage>.<pub-id pub-id-type="pmid">31502758</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/andr.12705</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0050"><label>50</label><mixed-citation publication-type="journal" id="jdi70127-cit-0050">
+<string-name name-style="western">
+<surname>Khera</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Broderick</surname>
+<given-names>GA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Carson</surname>
+<given-names>CC</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Adult‐onset hypogonadism</article-title>. <source>Mayo Clin Proc</source>
+<year>2016</year>; <volume>91</volume>: <fpage>908</fpage>–<lpage>926</lpage>.<pub-id pub-id-type="pmid">27343020</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.mayocp.2016.04.022</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0051"><label>51</label><mixed-citation publication-type="journal" id="jdi70127-cit-0051">
+<string-name name-style="western">
+<surname>Araujo</surname>
+<given-names>AB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wittert</surname>
+<given-names>GA</given-names>
+</string-name>. <article-title>Endocrinology of the aging male</article-title>. <source>Best Pract Res Clin Endocrinol Metab</source>
+<year>2011</year>; <volume>25</volume>: <fpage>303</fpage>–<lpage>319</lpage>.<pub-id pub-id-type="pmid">21397200</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.beem.2010.11.004</pub-id><pub-id pub-id-type="pmcid">PMC3073592</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0052"><label>52</label><mixed-citation publication-type="journal" id="jdi70127-cit-0052">
+<string-name name-style="western">
+<surname>Dandona</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dhindsa</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Update: Hypogonadotropic hypogonadism in type 2 diabetes and obesity</article-title>. <source>J Clin Endocrinol Metab</source>
+<year>2011</year>; <volume>96</volume>: <fpage>2643</fpage>–<lpage>2651</lpage>.<pub-id pub-id-type="pmid">21896895</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1210/jc.2010-2724</pub-id><pub-id pub-id-type="pmcid">PMC3167667</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0053"><label>53</label><mixed-citation publication-type="journal" id="jdi70127-cit-0053">
+<string-name name-style="western">
+<surname>Musa</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>El‐Bashir</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sani‐Bello</surname>
+<given-names>F</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Hypergonadotropic hypogonadism in Nigerian men with type 2 diabetes mellitus</article-title>. <source>Clin Diabetol</source>
+<year>2021</year>; <volume>10</volume>: <fpage>129</fpage>–<lpage>137</lpage>.</mixed-citation></ref><ref id="jdi70127-bib-0054"><label>54</label><mixed-citation publication-type="journal" id="jdi70127-cit-0054">
+<string-name name-style="western">
+<surname>Pan</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liu</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yu</surname>
+<given-names>X</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>The adverse role of endocrine disrupting chemicals in the reproductive system</article-title>. <source>Front Endocrinol (Lausanne)</source>
+<year>2023</year>; <volume>14</volume>: <elocation-id>1324993</elocation-id>.<pub-id pub-id-type="pmid">38303976</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fendo.2023.1324993</pub-id><pub-id pub-id-type="pmcid">PMC10832042</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0055"><label>55</label><mixed-citation publication-type="journal" id="jdi70127-cit-0055">
+<string-name name-style="western">
+<surname>Nazifa</surname>
+<given-names>TH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kristanti</surname>
+<given-names>RA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ike</surname>
+<given-names>M</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Occurrence and distribution of estrogenic chemicals in river waters of Malaysia</article-title>. <source>Toxicol Environ Heal Sci</source>
+<year>2020</year>; <volume>12</volume>: <fpage>65</fpage>–<lpage>74</lpage>.</mixed-citation></ref><ref id="jdi70127-bib-0056"><label>56</label><mixed-citation publication-type="journal" id="jdi70127-cit-0056">
+<string-name name-style="western">
+<surname>Gonsioroski</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mourikes</surname>
+<given-names>VE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Flaws</surname>
+<given-names>JA</given-names>
+</string-name>. <article-title>Endocrine disruptors in water and their effects on the reproductive system</article-title>. <source>Int J Mol Sci</source>
+<year>2020</year>; <volume>21</volume>: <fpage>1929</fpage>.<pub-id pub-id-type="pmid">32178293</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms21061929</pub-id><pub-id pub-id-type="pmcid">PMC7139484</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0057"><label>57</label><mixed-citation publication-type="journal" id="jdi70127-cit-0057">
+<string-name name-style="western">
+<surname>Wee</surname>
+<given-names>SY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aris</surname>
+<given-names>AZ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yusoff</surname>
+<given-names>FM</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Occurrence of multiclass endocrine disrupting compounds in a drinking water supply system and associated risks</article-title>. <source>Sci Rep</source>
+<year>2020</year>; <volume>10</volume>: <elocation-id>17755</elocation-id>.<pub-id pub-id-type="pmid">33082440</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-74061-5</pub-id><pub-id pub-id-type="pmcid">PMC7576597</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0058"><label>58</label><mixed-citation publication-type="journal" id="jdi70127-cit-0058">
+<string-name name-style="western">
+<surname>Van Cauwenberghe</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>De Block</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vanderschueren</surname>
+<given-names>D</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Effects of treatment for diabetes mellitus on testosterone concentrations: a systematic review</article-title>. <source>Andrology</source>
+<year>2023</year>; <volume>11</volume>: <fpage>225</fpage>–<lpage>233</lpage>.<pub-id pub-id-type="pmid">36251281</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/andr.13318</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0059"><label>59</label><mixed-citation publication-type="journal" id="jdi70127-cit-0059">
+<string-name name-style="western">
+<surname>Pelusi</surname>
+<given-names>C</given-names>
+</string-name>. <article-title>The effects of the new therapeutic treatments for diabetes mellitus on the male reproductive axis</article-title>. <source>Front Endocrinol (Lausanne)</source>
+<year>2022</year>; <volume>13</volume>: <fpage>13</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fendo.2022.821113</pub-id><pub-id pub-id-type="pmcid">PMC9065269</pub-id><pub-id pub-id-type="pmid">35518937</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0060"><label>60</label><mixed-citation publication-type="journal" id="jdi70127-cit-0060">
+<string-name name-style="western">
+<surname>La Vignera</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Condorelli</surname>
+<given-names>RA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Calogero</surname>
+<given-names>AE</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Sexual and reproductive outcomes in obese fertile men with functional hypogonadism after treatment with liraglutide: preliminary results</article-title>. <source>J Clin Med</source>
+<year>2023</year>; <volume>12</volume>: <elocation-id>672</elocation-id>.<pub-id pub-id-type="pmid">36675601</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/jcm12020672</pub-id><pub-id pub-id-type="pmcid">PMC9860933</pub-id></mixed-citation></ref><ref id="jdi70127-bib-0061"><label>61</label><mixed-citation publication-type="journal" id="jdi70127-cit-0061">
+<string-name name-style="western">
+<surname>La Vignera</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cannarella</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Garofalo</surname>
+<given-names>V</given-names>
+</string-name>, <italic toggle="yes">et al</italic>. <article-title>Short‐term impact of tirzepatide on metabolic hypogonadism and body composition in patients with obesity: a controlled pilot study</article-title>. <source>Reprod Biol Endocrinol</source>
+<year>2025</year>; <volume>23</volume>: <fpage>92</fpage>.<pub-id pub-id-type="pmid">40604795</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12958-025-01425-9</pub-id><pub-id pub-id-type="pmcid">PMC12220628</pub-id></mixed-citation></ref></ref-list></back></article></pmc-articleset>

@@ -1,0 +1,882 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article xml:lang="en" article-type="systematic-review" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Front Endocrinol (Lausanne)</journal-id><journal-id journal-id-type="iso-abbrev">Front Endocrinol (Lausanne)</journal-id><journal-id journal-id-type="pmc-domain-id">1753</journal-id><journal-id journal-id-type="pmc-domain">frontendo</journal-id><journal-id journal-id-type="publisher-id">Front. Endocrinol.</journal-id><journal-title-group><journal-title>Frontiers in Endocrinology</journal-title></journal-title-group><issn pub-type="epub">1664-2392</issn><publisher><publisher-name>Frontiers Media SA</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC11246848</article-id><article-id pub-id-type="pmcid-ver">PMC11246848.1</article-id><article-id pub-id-type="pmcaid">11246848</article-id><article-id pub-id-type="pmcaiid">11246848</article-id><article-id pub-id-type="pmid">39010904</article-id><article-id pub-id-type="doi">10.3389/fendo.2024.1420540</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Endocrinology</subject><subj-group><subject>Systematic Review</subject></subj-group></subj-group></article-categories><title-group><article-title>Maternal bisphenols exposure and thyroid function in children: a systematic review and meta-analysis</article-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name name-style="western"><surname>Liu</surname><given-names initials="J">Jiani</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="fn003" ref-type="author-notes">
+<sup>†</sup>
+</xref><uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://loop.frontiersin.org/people/1175853"/><role content-type="https://credit.niso.org/contributor-roles/data-curation/"/><role content-type="https://credit.niso.org/contributor-roles/investigation/"/><role content-type="https://credit.niso.org/contributor-roles/methodology/"/><role content-type="https://credit.niso.org/contributor-roles/visualization/"/><role content-type="https://credit.niso.org/contributor-roles/writing-original-draft/"/><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author" equal-contrib="yes"><name name-style="western"><surname>Tian</surname><given-names initials="M">Min</given-names></name><xref rid="aff2" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="fn003" ref-type="author-notes">
+<sup>†</sup>
+</xref><role content-type="https://credit.niso.org/contributor-roles/data-curation/"/><role content-type="https://credit.niso.org/contributor-roles/investigation/"/><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author"><name name-style="western"><surname>Qin</surname><given-names initials="H">Haiyue</given-names></name><xref rid="aff3" ref-type="aff">
+<sup>3</sup>
+</xref><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="D">Danrong</given-names></name><xref rid="aff4" ref-type="aff">
+<sup>4</sup>
+</xref><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author"><name name-style="western"><surname>Mzava</surname><given-names initials="SM">Sabitina Mrisho</given-names></name><xref rid="aff5" ref-type="aff">
+<sup>5</sup>
+</xref><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author" corresp="yes"><name name-style="western"><surname>Wang</surname><given-names initials="X">Xu</given-names></name><xref rid="aff6" ref-type="aff">
+<sup>6</sup>
+</xref><xref rid="fn001" ref-type="author-notes">
+<sup>*</sup>
+</xref><uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://loop.frontiersin.org/people/1057828"/><role content-type="https://credit.niso.org/contributor-roles/resources/"/><role content-type="https://credit.niso.org/contributor-roles/supervision/"/><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib><contrib contrib-type="author" corresp="yes"><name name-style="western"><surname>Bigambo</surname><given-names initials="FM">Francis Manyori</given-names></name><xref rid="aff6" ref-type="aff">
+<sup>6</sup>
+</xref><xref rid="fn001" ref-type="author-notes">
+<sup>*</sup>
+</xref><role content-type="https://credit.niso.org/contributor-roles/resources/"/><role content-type="https://credit.niso.org/contributor-roles/supervision/"/><role content-type="https://credit.niso.org/contributor-roles/writing-review-editing/"/></contrib></contrib-group><aff id="aff1">
+<sup>1</sup>
+<institution>JC School of Public Health and Primary Care, Faculty of Medicine, The Chinese University of Hong Kong</institution>, <addr-line>Hong Kong</addr-line>, <country>Hong Kong SAR, China</country>
+</aff><aff id="aff2">
+<sup>2</sup>
+<institution>Department of Gastroenterology, Children’s Hospital of Nanjing Medical University</institution>, <addr-line>Nanjing</addr-line>, <country>China</country>
+</aff><aff id="aff3">
+<sup>3</sup>
+<institution>Nanjing Foreign Language School</institution>, <addr-line>Nanjing</addr-line>, <country>China</country>
+</aff><aff id="aff4">
+<sup>4</sup>
+<institution>School of Public Health, Nanjing Medical University</institution>, <addr-line>Nanjing</addr-line>, <country>China</country>
+</aff><aff id="aff5">
+<sup>5</sup>
+<institution>Department of Nephrology, Muhimbili National Hospital</institution>, <addr-line>Dar es Salaam</addr-line>, <country>Tanzania</country>
+</aff><aff id="aff6">
+<sup>6</sup>
+<institution>Clinical Medical Research Center, Children’s Hospital of Nanjing Medical University</institution>, <addr-line>Nanjing</addr-line>, <country>China</country>
+</aff><author-notes><fn fn-type="edited-by"><p>Edited by: Francesca Coperchini, University of Pavia, Italy</p></fn><fn fn-type="edited-by"><p>Reviewed by: Xiaoqing Ye, Zhejiang Chinese Medical University, China</p><p>Katherine (Katie) O’Shaughnessy, Center for Public Health and Environmental Assessment, United States</p></fn><corresp id="fn001">*Correspondence: Francis Manyori Bigambo, <email xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:francis.bigambo@yahoo.com">francis.bigambo@yahoo.com</email>; Xu Wang, <email xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:sepnine@njmu.edu.cn">sepnine@njmu.edu.cn</email>
+</corresp><fn fn-type="equal" id="fn003"><p>†These authors have contributed equally to this work and share first authorship</p></fn></author-notes><pub-date pub-type="epub"><day>01</day><month>7</month><year>2024</year></pub-date><pub-date pub-type="collection"><year>2024</year></pub-date><volume>15</volume><issue-id pub-id-type="pmc-issue-id">454534</issue-id><elocation-id>1420540</elocation-id><history><date date-type="received"><day>22</day><month>4</month><year>2024</year></date><date date-type="accepted"><day>18</day><month>6</month><year>2024</year></date></history><pub-history><event event-type="pmc-release"><date><day>01</day><month>01</month><year>2024</year></date></event><event event-type="pmc-live"><date><day>15</day><month>07</month><year>2024</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-07-16 17:25:13.433"><day>16</day><month>07</month><year>2024</year></date></event></pub-history><permissions><copyright-statement>Copyright © 2024 Liu, Tian, Qin, Chen, Mzava, Wang and Bigambo</copyright-statement><copyright-year>2024</copyright-year><copyright-holder>Liu, Tian, Qin, Chen, Mzava, Wang and Bigambo</copyright-holder><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="fendo-15-1420540.pdf"/><abstract><sec><title>Background</title><p>Evidence from animal experiments and epidemiological studies has reported controversial results about the effects of prenatal bisphenols (BPs) exposure on childhood thyroid function. This study aims to explore the associations of prenatal exposure to BPs with thyroid-related hormones (THs) in newborns and early childhood, with a particular focus on the sex-dependent and exposure level effects.</p></sec><sec><title>Methods</title><p>Correlated studies were systematically searched from PubMed, Web of Science, Medline, Cochrane, and Embase until February 21, 2024. The exposures assessed include bisphenol A (BPA), bisphenol F (BPF), bisphenol S (BPS), bisphenol AF (BPAF), and tetrachlorobisphenol A (TCBPA). THs measured were thyroid stimulating hormone (TSH), total tri-iodothyronine (TT3), total thyroxine (TT4), free tri-iothyronine (FT3), and free thyroxine (FT4). Effect estimates were quantified using coefficients from multivariable regression models. Statistical analyses were completed using Stata 16.0. The methodological quality of the included studies was evaluated using the Newcastle-Ottawa Scale (NOS).</p></sec><sec><title>Results</title><p>Eleven cohort studies comprising 5,363 children were included in our meta-analysis. Prenatal bisphenol concentrations were statistically significant related to alterations in thyroid hormones in children, exclusively in female offspring, including reduced TSH (β = -0.020, 95% CI: -0.036, -0.005) and increased TT3 levels (β = 0.011, 95% CI: 0.001, 0.021), and exposure to high concentration of bisphenols (&gt;1.5 ug/g creatinine) significantly reduced FT3 levels in children (β = -0.011, 95% CI: -0.020, -0.003).</p></sec><sec><title>Conclusion</title><p>Prenatal bisphenol exposure is linked to alterations in thyroid hormone levels in girls, necessitating enhanced measures to control bisphenol exposure levels during pregnancy for child health protection.</p></sec><sec><title>Systematic Review Registration</title><p>
+<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inplasy.com">https://inplasy.com</uri>, identifier INPLASY202450129.</p></sec></abstract><kwd-group><kwd>bisphenols</kwd><kwd>prenatal exposure</kwd><kwd>children</kwd><kwd>thyroid function</kwd><kwd>meta-analysis</kwd></kwd-group><funding-group><funding-statement>The author(s) declare that financial support was received for the research, authorship, and/or publication of this article.</funding-statement></funding-group><counts><fig-count count="6"/><table-count count="3"/><equation-count count="1"/><ref-count count="89"/><page-count count="15"/><word-count count="5650"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>section-in-acceptance</meta-name><meta-value>Thyroid Endocrinology</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec sec-type="intro" id="s1"><label>1</label><title>Introduction</title><p>Bisphenols (BPs) are integral to plasticizers in the synthesis of polycarbonate plastics and epoxy resins (<xref rid="B1" ref-type="bibr">1</xref>–<xref rid="B5" ref-type="bibr">5</xref>). They are pervasive in the manufacturing of industrial, agricultural, and personal care products (<xref rid="B6" ref-type="bibr">6</xref>), such as toys, beverage containers, the interior coating of food cans, medical tubes, dental sealants, and water supply pipes (<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B3" ref-type="bibr">3</xref>, <xref rid="B7" ref-type="bibr">7</xref>–<xref rid="B9" ref-type="bibr">9</xref>). Bisphenols are found in urine samples from nearly all individuals undergoing medical examinations (<xref rid="B10" ref-type="bibr">10</xref>–<xref rid="B12" ref-type="bibr">12</xref>), as well as in samples of placenta, amniotic fluid, breast milk, and umbilical cords from pregnant women (<xref rid="B2" ref-type="bibr">2</xref>, <xref rid="B13" ref-type="bibr">13</xref>–<xref rid="B20" ref-type="bibr">20</xref>). This suggests that BP exposure begins prenatally as it crosses the placental barrier, and continues across postnatal life (<xref rid="B21" ref-type="bibr">21</xref>). BPA is the most frequently utilized and extensively-studied contaminant. Low doses of BPA estrogenic activity and a high affinity for uterine tissue (<xref rid="B22" ref-type="bibr">22</xref>), and exposure of the fetus to BPA <italic toggle="yes">in utero</italic> might have more pronounced adverse effects, including poor sperm quality, abnormal menstrual cycle, adiposis, obvious neurobehavioral issues in children, and fluctuations in thyroid hormone levels and blood pressure. Considering the reported low metabolism rate of BPA in animal studies (<xref rid="B23" ref-type="bibr">23</xref>), the fetus might be particularly sensitive to BPA exposure (<xref rid="B24" ref-type="bibr">24</xref>), although this contaminant is present in low concentrations in the human body. Since the European Union, the United States, and China announced bans on the utilization of BPA in certain infant products in 2011, there has been a significant increase in the use of other bisphenol derivatives such as BPF, BPS, BPAF, and TCBPA as substitutes for BPA.</p><p>Thyroid hormones play complex roles in body growth and brain development both during prenatal and postnatal stages (<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B3" ref-type="bibr">3</xref>). Thyroid hormones maintain homeostasis in our bodies, help synthesize proteins, maintain cardiovascular function, facilitate the growth and development of both the central nervous system and the skeletal system, as well as regulate hematopoiesis (<xref rid="B5" ref-type="bibr">5</xref>). Since BP is structurally similar to thyroid hormones (<xref rid="B25" ref-type="bibr">25</xref>), BPs may cause thyroid hormone disturbances (<xref rid="B2" ref-type="bibr">2</xref>, <xref rid="B26" ref-type="bibr">26</xref>), which may affect thyroid-stimulating hormone (TSH), free and total triiodothyronine (FT3, TT3), or free and total thyroxine (FT4, TT4), by directly interacting with TH receptors acid. Previous researches have indicated that BPs interfere with the expression of genes related to thyroid function in both FRTL5 cells and zebrafish embryos by modulating the expression of thyroid transcription factors Foxe1, Nkx2-1, and Pax8 (<xref rid="B27" ref-type="bibr">27</xref>, <xref rid="B28" ref-type="bibr">28</xref>). In addition, BPs also inhibit sodium/iodine transporters, thereby affecting thyroid hormone signaling and action (<xref rid="B27" ref-type="bibr">27</xref>). Multiple <italic toggle="yes">in-vitro</italic> studies and animal experiments suggested that interference with thyroid hormone action by BPs may adversely affect neurobehavioral outcomes and be related to the elevated potential for cognitive decline and children’s behavioral problems (<xref rid="B29" ref-type="bibr">29</xref>–<xref rid="B32" ref-type="bibr">32</xref>). BPA has been identified as capable of targeting the thyroid, leading to interference with its functions (<xref rid="B33" ref-type="bibr">33</xref>–<xref rid="B35" ref-type="bibr">35</xref>). Several <italic toggle="yes">in vivo</italic> and <italic toggle="yes">in vitro</italic> investigations, along with animal experiments, have delineated that specific concentrations of BPS and BPF can induce thyroid dysfunction by disrupting thyroid hormone synthesis (<xref rid="B36" ref-type="bibr">36</xref>) and perturbing endocrine equilibrium through modulation of gene transcription implicated in the hypothalamic-pituitary-thyroid (HPT) axis (<xref rid="B28" ref-type="bibr">28</xref>, <xref rid="B37" ref-type="bibr">37</xref>). 7-day zebrafish embryo toxicity assays conducted by (<xref rid="B38" ref-type="bibr">38</xref>) have revealed a notable decrement in thyroid hormone receptor (TR) levels upon exposure to ≥12.5μg/L of BPAF, indicative of its potential as a TR antagonist (<xref rid="B39" ref-type="bibr">39</xref>). Furthermore, rodent studies (<xref rid="B40" ref-type="bibr">40</xref>, <xref rid="B41" ref-type="bibr">41</xref>) and research involving amphibians (<xref rid="B42" ref-type="bibr">42</xref>) have postulated that TBBPA and TCBPA may serve as thyroid hormone disruptors. These findings underscore the plausible hazards posed by these compounds on thyroid function within organisms, warranting further investigation and vigilance within the scientific community.</p><p>In animal studies, elevated serum T4 levels were presented in female and male offspring after BPA exposure in pregnant mice (<xref rid="B26" ref-type="bibr">26</xref>, <xref rid="B43" ref-type="bibr">43</xref>–<xref rid="B45" ref-type="bibr">45</xref>). In another study, FT4 levels increased only in male offspring (postnatal day 7) and then decreased after about two weeks (postnatal day 21) (<xref rid="B44" ref-type="bibr">44</xref>). There are also studies showing that prenatal exposure to BPA in pregnant rats did not affect offspring TSH and TT4 (<xref rid="B1" ref-type="bibr">1</xref>). In human studies, several prospective cohort studies have found that maternal urinary exposure to BPA is linked to lower TSH and TT4 among children, and a positive correlation with TT3 (<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B46" ref-type="bibr">46</xref>). On the contrary, a cohort study conducted in China demonstrated a positive association between prenatal exposure to BPA or BPS with neonatal TSH levels, particularly pronounced in girls, while no significant correlation was detected between BPF exposure and thyroid hormone levels (<xref rid="B47" ref-type="bibr">47</xref>). A Netherlands cohort study showed that antenatal maternal high BPA exposure was only related to lower FT4 in six-year-old children, and also suggested that higher concentrations of BPF were correlated with higher levels of FT3. However, no significant effect of BPS was observed (<xref rid="B48" ref-type="bibr">48</xref>). Also, Fen Lin et al. confirmed that there is a negative association between BPA concentrations and FT3 in neonates (<xref rid="B4" ref-type="bibr">4</xref>), but American research indicated that there is no such relationship (<xref rid="B2" ref-type="bibr">2</xref>). Megan E. Romano et al. demonstrated that prenatal exposure to BPA did not affect any type of thyroid hormones (<xref rid="B2" ref-type="bibr">2</xref>). Studies conducted <italic toggle="yes">in vivo</italic> and <italic toggle="yes">in vitro</italic> have demonstrated that BPA halogenated derivatives exhibit similar or even greater endocrine toxicity than BPA, due to their structural similarity (<xref rid="B49" ref-type="bibr">49</xref>). Human exposure to environmental pollutants often involves simultaneous exposure to multiple substances rather than a single compound. In addition to investigating the relationship between individual bisphenol compound exposures and thyroid function, numerous studies have examined the collective impact of bisphenol mixtures on THs. A cohort study conducted in China unveiled a positive trend in the cumulative impact of six bisphenol compounds, including BPA, bisphenol B (BPB), bisphenol C (BPC), BPF, BPS, and BPAF, on FT4 and FT3 levels (<xref rid="B50" ref-type="bibr">50</xref>). Another study found significant correlations between maternal urinary bisphenol mixtures (BPA, BPF, BPS, BPAF, TCBPA) and TT3 concentration in newborn cord blood, with a slight but significant correlation with FT3 concentration (<xref rid="B51" ref-type="bibr">51</xref>). However, conflicting results also exist. Research by Arash Derakhshan et al. identified a link between prenatal bisphenols mixture exposure (BPA and BPS) and reduced FT4 levels in children, but found no correlation with TSH levels (<xref rid="B48" ref-type="bibr">48</xref>). The Bayesian kernel machine regression (BKMR) and restricted cubic spline (RCS) models revealed a non-linear correlation between bisphenol mixtures and FT3 (<xref rid="B52" ref-type="bibr">52</xref>).</p><p>Due to controversies in the findings of the previous studies, a meta-analysis was performed to investigate the effect of BPs as single-exposure and mixture exposure during pregnancy on the levels of TSH, TT3, TT4, FT3, and FT4 in children, particularly in the sex-specific manners.</p></sec><sec sec-type="materials|methods" id="s2"><label>2</label><title>Materials and methods</title><p>This systematic review and meta-analysis adhered strictly to the standard protocols outlined in the Cochrane Handbook and complied with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines (<xref rid="B53" ref-type="bibr">53</xref>). This meta-analysis was registered in INPLASY as INPLASY202450129, and no major amendments were made compared to the proposal.</p><sec id="s2_1"><label>2.1</label><title>Search strategy</title><p>Comprehensive literature searches were performed in PubMed, Web of Science, Medline, Cochrane, and Embase from the earliest available dates stated in each database until February 21, 2024. We employed a broad array of search terms to encompass various aspects of prenatal exposure and thyroid function, including “gestation”, “pregnancy”, “prenatal”, “antepartum”, “maternal”, “BPA”, “BPF”, “BPS” “bisphenol”, child” “kid”, “ped”, “neonatal”, “neonate”, “baby”, “newborn”, “infant”, “boy”, “girl”, “thyroid”, “TSH”, “TT3”, “TT4”, “FT3”, “FT4”, “total triiodothyronine”, “total thyroxine”, “free triiodothyronine”, “free thyroxine”, “thyroid-stimulating hormone”, “thyroid disease”, “hyperthyroidism”, “subclinical hyperthyroidism”, “hypothyroidism”, “subclinical hypothyroidism”. The detailed search terms are shown in <xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Table 1</bold>
+</xref>. Study search, data extraction, and quality assessment were conducted independently by two researchers, and discrepancies were resolved through group discussions until reach consensus.</p></sec><sec id="s2_2"><label>2.2</label><title>Eligibility criteria</title><p>Studies were included if they (i) focused on prenatal bisphenols (BPs) exposure like (BPA, BPF, BPS, BPAF, and TCBPA and children’s thyroid function presented by thyroid hormone metric including TSH, TT3, TT4, FT3, and FT4); (ii) detected BPs from maternal blood, urine, amniotic fluid (AF), or umbilical cord blood samples; (iii) quantified measured the correlation between BP concentrations and TH levels in children. Studies were excluded if they were reviews, animal studies, conference abstracts, lectures, literature, or editorial materials, and if full texts were not available. After removing duplicates, the remaining literature was meticulously screened for relevance based on title, abstract, and full text, utilizing Endnote X20 for record management.</p></sec><sec id="s2_3"><label>2.3</label><title>Data extraction</title><p>Two researchers extracted information from eligible papers using predefined templates independently. Data extracted include first author name, publication year, country/region, research design, number of children, bisphenol types measured, thyroid hormones measured, maternal age, reported effect estimates, the concentrations of bisphenols, and covariates adjusted in the analyses.</p></sec><sec id="s2_4"><label>2.4</label><title>Quality assessment</title><p>The quality of each eligible study was assessed using the Newcastle Ottawa Scale (NOS). NOS consists of 3 categories (topic selection, comparability, and results) and 8 items. NOS scores range from 0 to 9 stars, with 4 stars allocated for selection, 2 stars for comparability, and 3 stars for results. A study is of high quality if the number of stars is greater than or equal to 6; medium quality if the number of stars is between 3 and 5; and low quality if the total number of stars is less than 3.</p></sec><sec id="s2_5"><label>2.5</label><title>Statistical analysis</title><p>In our study, we investigated the effects of prenatal exposure to BPs on THs in total children and by sex. Subgroup analyses were performed based on types of thyroid hormones with all BPs included in the model. Furthermore, since BPA was predominantly reported among several eligible studies and highly controversial effects on THs existed, subgroup analyses of BPA and thyroid hormones were also performed. The effect sizes of eligible studies were synthesized using coefficients from multivariable regression models, alongside their 95% confidence intervals (CIs). In instances where studies reported percentage changes in thyroid hormone levels, conversions were performed to align with the common effect size metric (β represents the regression coefficient) as shown in the formula (<xref rid="B2" ref-type="bibr">2</xref>):</p><disp-formula>
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M1" display="block" overflow="scroll"><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:msup><mml:mtext mathvariant="bold">e</mml:mtext><mml:mtext mathvariant="bold">β</mml:mtext></mml:msup><mml:mo>−</mml:mo><mml:mn mathvariant="bold">1</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo mathvariant="bold">∗</mml:mo><mml:mn mathvariant="bold">100</mml:mn><mml:mo>=</mml:mo><mml:mo>%</mml:mo><mml:mtext mathvariant="bold"> change of THs</mml:mtext></mml:mrow></mml:math>
+</disp-formula><p>Heterogeneity among studies was assessed using the I^2 statistic, with I<sup>2</sup>≥50% indicating considerable heterogeneity and necessitating a random-effects model. Conversely, a fixed-effects model was applied for I<sup>2</sup>&lt;50%. Forest plots were employed to visually depict the results of the meta-analysis. Results were visually represented through forest plots, and subgroup analyses were conducted to explore the sex-specific and exposure level effects. There is no clear threshold for the concentration of prenatal bisphenols exposure that may cause thyroid dysfunction. We sorted all included studies by bisphenol concentrations and used the 50th percentile as the boundary to classify the included studies into low-exposure and high-exposure groups. To ascertain the stability of the results, sensitivity analyses were performed. Egger’s linear regression tests were used to check publication bias. The data acquisition and analysis processes were conducted utilizing Stata 16.0 software. Statistically significant was at p-value&lt; 0.05.</p></sec></sec><sec sec-type="results" id="s3"><label>3</label><title>Results</title><sec id="s3_1"><label>3.1</label><title>Literature search and study selection</title><p>An initial query across five major databases (PubMed, Web of Science, Medline, Cochrane, and Embase) retrieved 591 potential articles. After removing duplicates, the remaining 450 articles were screened by title and abstract resulting in 97 articles that were assessed in full text. This meticulous evaluation led to the exclusion of 59 articles due to irrelevance to the associations of prenatal BPs exposure with THs levels in children, 16 reviews, 5 animal studies, 1 abstract, and 5 articles lacking necessary data. As a result, 11 articles (<xref rid="B1" ref-type="bibr">1</xref>–<xref rid="B5" ref-type="bibr">5</xref>, <xref rid="B20" ref-type="bibr">20</xref>, <xref rid="B48" ref-type="bibr">48</xref>, <xref rid="B51" ref-type="bibr">51</xref>, <xref rid="B54" ref-type="bibr">54</xref>–<xref rid="B56" ref-type="bibr">56</xref>) were eligible for this meta-analysis (<xref rid="f1" ref-type="fig">
+<bold>Figure 1</bold>
+</xref>).</p><fig position="float" id="f1" orientation="portrait"><label>Figure 1</label><caption><p>Flowchart of Literature Search.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g001.jpg"/></fig></sec><sec id="s3_2"><label>3.2</label><title>Studies characteristics and quality evaluation</title><p>The comprehensive meta-analysis encompassed 11 cohort studies spanning a geographical range that included the United States, China, Japan, Korea, France, Spain, and the Netherlands, with publication years extending from 2013 to 2023. The number of children in the eligible included studies ranged from 249 to 1,735, and the mean age of pregnant women across studies was between 26.4 and 32.5 years. A detailed examination of TH levels was predominantly focused on neonatal assessments in seven studies, while three studies focused on early childhood, assessing thyroid function at mean ages of 2, 4, 6, and 10 years. One study uniquely investigated both neonatal and childhood stages, around the age of six years. These studies collectively reported on maternal BPA concentrations, with a subset also exploring exposure to other bisphenols. Notably, the investigations in particular highlighted the exploration of sex-specific effects (<xref rid="T1" ref-type="table">
+<bold>Table 1</bold>
+</xref>).</p><table-wrap position="float" id="T1" orientation="portrait"><label>Table 1</label><caption><p>Characteristics of Included Studies.</p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="top" rowspan="2" align="left" colspan="1">Study Id<break/>(First author &amp; Year)</th><th valign="top" rowspan="2" align="left" colspan="1">Country</th><th valign="top" rowspan="2" align="left" colspan="1">Research Design</th><th valign="top" rowspan="2" align="left" colspan="1">Maternal Age</th><th valign="top" colspan="3" align="center" rowspan="1">Number of Children</th><th valign="top" rowspan="2" align="left" colspan="1">Children’s Age</th><th valign="top" rowspan="2" align="left" colspan="1">Type of BPs</th><th valign="top" rowspan="2" align="left" colspan="1">Type of THs</th><th valign="top" rowspan="2" align="left" colspan="1">Covariates</th></tr><tr><th valign="top" align="left" rowspan="1" colspan="1">Overall</th><th valign="top" align="left" rowspan="1" colspan="1">Female</th><th valign="top" align="left" rowspan="1" colspan="1">Male</th></tr></thead><tbody><tr><td valign="middle" align="left" rowspan="1" colspan="1">Chevrier 2013 (<xref rid="B1" ref-type="bibr">1</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">USA</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">–</td><td valign="top" align="left" rowspan="1" colspan="1">364</td><td valign="top" align="left" rowspan="1" colspan="1">176</td><td valign="top" align="left" rowspan="1" colspan="1">188</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH</td><td valign="top" align="left" rowspan="1" colspan="1">Mother’s country of birth, and Child’s age.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Romano 2015 (<xref rid="B2" ref-type="bibr">2</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">USA</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">–</td><td valign="top" align="left" rowspan="1" colspan="1">249</td><td valign="top" align="left" rowspan="1" colspan="1">135</td><td valign="top" align="left" rowspan="1" colspan="1">114</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT3, TT4, FT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Maternal age, Race, Education, Alcohol consumption, Serum cotinine at 16 weeks gestation, Parity, Prenatal vitamin use, Log -PCB 153, Delivery by Cesarean section, Gestational week at 10 delivery, and Newborn sex.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Minatoya 2017 (<xref rid="B3" ref-type="bibr">3</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">Japan</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">30.4±5.0</td><td valign="top" align="left" rowspan="1" colspan="1">283</td><td valign="top" align="left" rowspan="1" colspan="1">158</td><td valign="top" align="left" rowspan="1" colspan="1">127</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Sex, Interaction of sex and BPA, and Days of mass screening test was conducted.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Derakhshan, 2021 (<xref rid="B48" ref-type="bibr">48</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">Netherlands</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">30.5±4.8</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn: 853<break/>Children: 882</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn: 404<break/>Children: 414</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn: 449<break/>Children: 468</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn, 5.8-year-old</td><td valign="top" align="left" rowspan="1" colspan="1">BPA, BPS, BPF</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Sex, Fetal distress, Method of delivery Parity, Ethnicity, Maternal education, BMI, Smoking status, Urinary creatinine, Children’s BMI and age.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Jang, 2021 (<xref rid="B5" ref-type="bibr">5</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">Korea</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">31.4±3.6</td><td valign="top" align="left" rowspan="1" colspan="1">513</td><td valign="top" align="left" rowspan="1" colspan="1">243</td><td valign="top" align="left" rowspan="1" colspan="1">270</td><td valign="top" align="left" rowspan="1" colspan="1">6-year-old</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Age, Sex, BMI, Prenatal age, Prenatal education, Monthly household income, Secondhand smoke, and Urinary creatinine.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Wang 2020 (<xref rid="B54" ref-type="bibr">54</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">China</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">–</td><td valign="top" align="left" rowspan="1" colspan="1">398</td><td valign="top" align="left" rowspan="1" colspan="1">183</td><td valign="top" align="left" rowspan="1" colspan="1">215</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, FT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Urinary creatine concentration, Maternal age, Maternal education, GDM, Husband smoking during pregnancy, Parity, Gestational age at delivery.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Li 2020 (<xref rid="B4" ref-type="bibr">4</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">China</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">–</td><td valign="top" align="left" rowspan="1" colspan="1">348</td><td valign="top" align="left" rowspan="1" colspan="1">151</td><td valign="top" align="left" rowspan="1" colspan="1">197</td><td valign="top" align="left" rowspan="1" colspan="1">year-old,<break/>4-year-old</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT3, TT4, FT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Recruitment, Maternal education, Gravidity, Maternal passive smoking, Maternal vitamin supplementation, Child's gender.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Guo 2020 (<xref rid="B20" ref-type="bibr">20</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">China</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">26.4±5.7</td><td valign="top" align="left" rowspan="1" colspan="1">386</td><td valign="top" align="left" rowspan="1" colspan="1">180</td><td valign="top" align="left" rowspan="1" colspan="1">206</td><td valign="top" align="left" rowspan="1" colspan="1">10-year-old</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT3, TT4, FT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Maternal age, Maternal education, Pre-pregnancy BMI, Family annual income, Passive smoking during pregnancy, Sex, Creatinine concentration, Ln-transformed analyte concentration × child’s sex.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Sarzo 2022 (<xref rid="B55" ref-type="bibr">55</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">Span</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">30.1±4.4</td><td valign="top" align="left" rowspan="1" colspan="1">387</td><td valign="top" align="left" rowspan="1" colspan="1">190</td><td valign="top" align="left" rowspan="1" colspan="1">197</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH</td><td valign="top" align="left" rowspan="1" colspan="1">Sex, and Employment during pregnancy.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Xi 2023 (<xref rid="B51" ref-type="bibr">51</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">China</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">–</td><td valign="top" align="left" rowspan="1" colspan="1">258</td><td valign="top" align="left" rowspan="1" colspan="1">109</td><td valign="top" align="left" rowspan="1" colspan="1">1409</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA, BPF, BPAF, BPS, TCBPA</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT3, TT4, FT3, FT4</td><td valign="top" align="left" rowspan="1" colspan="1">Maternal age, Pre-pregnant BMI, Education level, Family income, Parous status, Maternal passive smoking, Type of delivery, Newborn sex, BDE-99 exposure.</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Coiffier 2023 (<xref rid="B56" ref-type="bibr">56</xref>)</td><td valign="top" align="left" rowspan="1" colspan="1">French</td><td valign="top" align="left" rowspan="1" colspan="1">Birth Cohort</td><td valign="top" align="left" rowspan="1" colspan="1">32.5±3.9</td><td valign="top" align="left" rowspan="1" colspan="1">442</td><td valign="top" align="left" rowspan="1" colspan="1">237</td><td valign="top" align="left" rowspan="1" colspan="1">205</td><td valign="top" align="left" rowspan="1" colspan="1">Newborn</td><td valign="top" align="left" rowspan="1" colspan="1">BPA, BPS</td><td valign="top" align="left" rowspan="1" colspan="1">TSH, TT4</td><td valign="top" align="left" rowspan="1" colspan="1">Child age, Sex, Delivery mode, Maternal age, Maternal BMI before pregnancy, Parity, Maternal education, Maternal smoking during pregnancy, Maternal urinary iodine, Serum selenium concentrations and batch.</td></tr></tbody></table><table-wrap-foot><fn><p>BPA, Bisphenols A; BPF, Bisphenols F; BPS, Bisphenols S; BPAF, Bisphenols AF; TCBPA, Tetrachlorobisphenol A; TSH, Thyroid stimulating hormone; TT3, Total tri-iodothyronine; TT4, total thyroxine; FT3, Free tri-iothyronine; FT4, Free thyroxine.</p></fn></table-wrap-foot></table-wrap><p>The NOS quality assessment results of the studies included are shown in <xref rid="T2" ref-type="table">
+<bold>Table 2</bold>
+</xref>. The NOS scores ranged from 6 to 8 stars, affirming the high quality of the included studies in our analysis, and underscoring the robustness and reliability of the synthesized evidence presented (<xref rid="T2" ref-type="table">
+<bold>Table 2</bold>
+</xref>).</p><table-wrap position="float" id="T2" orientation="portrait"><label>Table 2</label><caption><p>Study quality of cohort studies.</p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="middle" rowspan="2" align="left" colspan="1">Study</th><th valign="middle" colspan="4" align="center" rowspan="1">Selection</th><th valign="middle" rowspan="2" align="center" colspan="1">Comparability</th><th valign="middle" colspan="3" align="center" rowspan="1">Outcome</th><th valign="middle" rowspan="2" align="left" colspan="1">Total score</th></tr><tr><th valign="middle" align="left" rowspan="1" colspan="1">Representativeness of the exposed cohort</th><th valign="middle" align="left" rowspan="1" colspan="1">Selection of the non-exposed cohort</th><th valign="middle" align="left" rowspan="1" colspan="1">Ascertainment of exposure</th><th valign="middle" align="left" rowspan="1" colspan="1">Demonstration that outcome of interest was not present at start of study</th><th valign="middle" align="left" rowspan="1" colspan="1">Assessment of outcome</th><th valign="middle" align="left" rowspan="1" colspan="1">Was follow up long enough for outcomes to occur</th><th valign="middle" align="left" rowspan="1" colspan="1">Adequacy of follow up of cohorts</th></tr></thead><tbody><tr><td valign="middle" align="left" rowspan="1" colspan="1">Chevrier 2013 (<xref rid="B1" ref-type="bibr">1</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">6</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Romano 2015 (<xref rid="B2" ref-type="bibr">2</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Minatoya 2017 (<xref rid="B3" ref-type="bibr">3</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Derakhshan 2021 (<xref rid="B48" ref-type="bibr">48</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">**</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">8</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Jang 2021 (<xref rid="B5" ref-type="bibr">5</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">**</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">8</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Wang 2020 (<xref rid="B54" ref-type="bibr">54</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Li 2020 (<xref rid="B4" ref-type="bibr">4</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Guo 2020 (<xref rid="B20" ref-type="bibr">20</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">**</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">8</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Sarzo 2022 (<xref rid="B55" ref-type="bibr">55</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Xi 2023 (<xref rid="B51" ref-type="bibr">51</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1">Coiffier 2023 (<xref rid="B56" ref-type="bibr">56</xref>)</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">*</td><td valign="middle" align="center" rowspan="1" colspan="1">–</td><td valign="middle" align="center" rowspan="1" colspan="1">7</td></tr></tbody></table><table-wrap-foot><p>The number of * represents the score. </p></table-wrap-foot></table-wrap></sec><sec id="s3_3"><label>3.3</label><title>Primary outcomes: effects of prenatal bisphenols mixtured exposure on thyroid hormones in children of different sex</title><sec id="s3_3_1"><label>3.3.1</label><title>Prenatal BPs and TSH</title><p>Analysis from eleven cohort studies assessing the impact of prenatal BPs exposure on TSH levels indicated a modest, yet statistically significant reduction in TSH levels in total children (β = -0.013, 95% CI: -0.025, -0.001), a fixed-effects model was employed due to low heterogeneity (I<sup>2</sup>&lt; 50%). Notably, a sex-specific analysis revealed that this reduction was pronounced in female offspring (β = -0.020, 95% CI: -0.036, -0.005), and no significant association was observed in male (β = -0.005, 95%CI: -0.024, 0.015) (<xref rid="f2" ref-type="fig">
+<bold>Figure 2</bold>
+</xref>).</p><fig position="float" id="f2" orientation="portrait"><label>Figure 2</label><caption><p>Effect of Prenatal BPs Mixtured Exposure on TSH Levels in Children of Different Sex.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g002.jpg"/></fig></sec><sec id="s3_3_2"><label>3.3.2</label><title>Prenatal BPs and TT3</title><p>Five cohorts evaluated the impact of prenatal exposure to BPs on TT3 levels in children (<xref rid="f3" ref-type="fig">
+<bold>Figure 3</bold>
+</xref>). In subgroup analyses, a significant increase was noted in females (β = 0.011, 95% CI: 0.001, 0.021), contrary to no discernible effect in overall children (β = 0.000, 95%CI: -0.007, 0.007) or in males (β = -0.009, 95%CI: -0.020, 0.003).</p><fig position="float" id="f3" orientation="portrait"><label>Figure 3</label><caption><p>Effect of Prenatal BPs Mixtured Exposure on TT3 Levels in Children of Different Sex.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g003.jpg"/></fig></sec><sec id="s3_3_3"><label>3.3.3</label><title>Prenatal BPs and TT4</title><p>No significant associations were observed between prenatal BPs exposure and TT4 levels among children across five cohort studies (β = 0.000, 95%CI: -0.001, 0.001), irrespective of sex (Girls: β = 0.001, 95%CI: -0.001, 0.002; Boys: β = -0.000, 95%CI: -0.002, 0.001) (<xref rid="f4" ref-type="fig">
+<bold>Figure 4</bold>
+</xref>).</p><fig position="float" id="f4" orientation="portrait"><label>Figure 4</label><caption><p>Effect of Prenatal BPs Mixtured Exposure on TT4 Levels in Children of Different Sex.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g004.jpg"/></fig></sec><sec id="s3_3_4"><label>3.3.4</label><title>Prenatal BPs and FT3</title><p>In this subgroup analysis, prenatal BPs exposure was related to decreased FT3 levels in all children (β = -0.011, 95% CI: -0.019, -0.003). However, this relationship was neither found in females (β = 0.005, 95%CI: -0.012, 0.022) nor males (β = -0.018, 95%CI: -0.040, 0.004) (<xref rid="f5" ref-type="fig">
+<bold>Figure 5</bold>
+</xref>).</p><fig position="float" id="f5" orientation="portrait"><label>Figure 5</label><caption><p>Effect of Prenatal BPs Mixtured Exposure on FT3 Levels in Children of Different Sex.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g005.jpg"/></fig></sec><sec id="s3_3_5"><label>3.3.5</label><title>Prenatal BPs and FT4</title><p>In an aggregated analysis of eight cohort studies, no significant associations were observed in prenatal BPs exposure and decreased FT4 levels in children (β= -0.00001, 95%CI: -0.0001, 0.0000), irrespective of sex (Girls: β = -0.0001, 95% CI: -0.0002, 0.00001; Boys: β = 0.0000, 95%CI: -0.0001, 0.0001) (<xref rid="f6" ref-type="fig">
+<bold>Figure 6</bold>
+</xref>).</p><fig position="float" id="f6" orientation="portrait"><label>Figure 6</label><caption><p>Effect of Prenatal BPs Mixtured Exposure on FT4 Levels in Children of Different Sex.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="fendo-15-1420540-g006.jpg"/></fig></sec></sec><sec id="s3_4"><label>3.4</label><title>Additional outcomes: effects of prenatal BPA exposure on thyroid hormones in children of different sex</title><p>Subgroup analysis further elucidated that the observed relationships between prenatal BPA concentrations and alterations in thyroid hormone levels mirrored those identified in the broader bisphenol exposure analysis. Intriguingly, increased TT3 was observed in female offspring (β = 0.012, 95% CI: 0.002, 0.023), and a decrease in TT3 levels was also noted in male offspring (β = -0.013, 95% CI: -0.025, -0.001) (<xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Figures 1A–E</bold>
+</xref>).</p></sec><sec id="s3_5"><label>3.5</label><title>Subgroup analysis of the effects of prenatal bisphenols at different exposure levels on thyroid hormones in all children</title><p>We established 1.5 ug/g creatinine (Cr) as the threshold value to categorize the exposure groups into high and low levels. Subgroup analysis showed that high levels of bisphenols exposure significantly reduced FT3 levels (β = -0.011, 95% CI: -0.020, -0.003) in contrast to low exposure groups (β = -0.008, 95% CI: -0.037, -0.020), but no specific effects of exposure concentration were found in relation to other thyroid hormones (<xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Figures 2A–E</bold>
+</xref>).</p></sec><sec id="s3_6"><label>3.6</label><title>Sensitivity analysis</title><p>Sensitivity analysis was conducted to evaluate the stability of the relationship between prenatal bisphenols mixtured exposure and THs in all children, as shown in <xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Figures 3A–E</bold>
+</xref>. The pooled β and 95% CI did not show evident differences after excluding each individual article one by one, indicating the credibility of the studies included in our meta-analysis.</p></sec><sec id="s3_7"><label>3.7</label><title>Publication bias</title><p>Publication bias in the relationship between prenatal bisphenols mixtured exposure and thyroid hormones in all children was assessed with Egger’s test (<xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Table 2</bold>
+</xref>). Our statistical test showed no evidence of publication bias (Egger’s test p &gt; 0.05).</p></sec></sec><sec sec-type="discussion" id="s4"><label>4</label><title>Discussion</title><p>This meta-analysis investigated the association of maternal bisphenols (BPs) exposure with offspring’s THs levels, and sex differences and exposure levels may change the outcomes. The salient findings are multifaceted: 1) Exposure to BP mixtures notably reduced TSH levels across the pediatric spectrum, and more effects were reported in girls; 2) BPs singularly escalates TT3 levels in female offspring; 3) BPA exposure parallels these effects (reduce TSH levels and increase TT3 levels in girls) while additionally diminishing TT3 levels in boys; 4) High level of BPs mixtured exposure (&gt;1.5 ug/g Cr) could reduce FT3 levels. The detailed results were summarized in <xref rid="T3" ref-type="table">
+<bold>Table 3</bold>
+</xref>.</p><table-wrap position="float" id="T3" orientation="portrait"><label>Table 3</label><caption><p>Effects of Prenatal BPs on Children by Meta-analyses.</p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="top" rowspan="2" align="left" colspan="1">Type of BPs</th><th valign="top" colspan="2" align="left" rowspan="1">TSH</th><th valign="top" colspan="2" align="left" rowspan="1">TT3</th><th valign="top" colspan="2" align="left" rowspan="1">TT4</th><th valign="top" colspan="2" align="left" rowspan="1">FT3</th><th valign="top" colspan="2" align="left" rowspan="1">FT4</th></tr><tr><th valign="top" align="left" rowspan="1" colspan="1">β (95%CI)</th><th valign="top" align="left" rowspan="1" colspan="1">No. of Cohorts</th><th valign="top" align="left" rowspan="1" colspan="1">β (95%CI)</th><th valign="top" align="left" rowspan="1" colspan="1">No. of Cohorts</th><th valign="top" align="left" rowspan="1" colspan="1">β (95%CI)</th><th valign="top" align="left" rowspan="1" colspan="1">No. of Cohorts</th><th valign="top" align="left" rowspan="1" colspan="1">β (95%CI)</th><th valign="top" align="left" rowspan="1" colspan="1">No. of Cohorts</th><th valign="top" align="left" rowspan="1" colspan="1">β (95%CI)</th><th valign="top" align="left" rowspan="1" colspan="1">No. of Cohorts</th></tr></thead><tbody><tr><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>Bisphenols mixture</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.013 (-0.025, -0.001)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>10</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">0.000 (-0.007, 0.007)</td><td valign="top" align="left" rowspan="1" colspan="1">5</td><td valign="top" align="left" rowspan="1" colspan="1">0.000 (-0.001, 0.001)</td><td valign="top" align="left" rowspan="1" colspan="1">5</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.011 (-0.019, -0.003)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>4</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.000, 0.000)</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>7</bold>
+</td></tr><tr><th valign="top" colspan="11" align="left" rowspan="1">Subgroup Analyses</th></tr><tr><th valign="top" colspan="11" align="left" rowspan="1">i) Sex</th></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">Girls</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.020 (-0.036, -0.005)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>10</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>0.011 (0.001, 0.021)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>4</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">0.001 (-0.001, 0.002)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">0.005 (-0.012, 0.022)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.000, 0.000)</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>7</bold>
+</td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">Boys</td><td valign="top" align="left" rowspan="1" colspan="1">-0.005 (-0.024, 0.015)</td><td valign="top" align="left" rowspan="1" colspan="1">10</td><td valign="top" align="left" rowspan="1" colspan="1">-0.009 (-0.020, 0.003)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.002, 0.001)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.018 (-0.040, 0.004)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">0.000 (-0.000, 0.000)</td><td valign="top" align="left" rowspan="1" colspan="1">7</td></tr><tr><th valign="top" colspan="11" align="left" rowspan="1">ii) Exposure levels</th></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">Low</td><td valign="top" align="left" rowspan="1" colspan="1">-0.018 (-0.042, 0.006)</td><td valign="top" align="left" rowspan="1" colspan="1">2</td><td valign="top" align="left" rowspan="1" colspan="1">0.010 (-0.010, 0.030)</td><td valign="top" align="left" rowspan="1" colspan="1">1</td><td valign="top" align="left" rowspan="1" colspan="1">-2.263 (-6.364, 1.838)</td><td valign="top" align="left" rowspan="1" colspan="1">1</td><td valign="top" align="left" rowspan="1" colspan="1">-0.008 (-0.037, 0.020)</td><td valign="top" align="left" rowspan="1" colspan="1">1</td><td valign="top" align="left" rowspan="1" colspan="1">-0.170 (-0.467, 0.128)</td><td valign="top" align="left" rowspan="1" colspan="1">1</td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">High</td><td valign="top" align="left" rowspan="1" colspan="1">-0.012 (-0.026, 0.002)</td><td valign="top" align="left" rowspan="1" colspan="1">7</td><td valign="top" align="left" rowspan="1" colspan="1">-0.001 (-0.009, 0.006)</td><td valign="top" align="left" rowspan="1" colspan="1">5</td><td valign="top" align="left" rowspan="1" colspan="1">0.000 (-0.001, 0.001)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.011 (-0.020, -0.003)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>4</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">0.002 (-0.012, 0.016)</td><td valign="top" align="left" rowspan="1" colspan="1">6</td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>BPA</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.013 (-0.025, -0.002)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>10</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">-0.001 (-0.009, 0.006)</td><td valign="top" align="left" rowspan="1" colspan="1">5</td><td valign="top" align="left" rowspan="1" colspan="1">0.000 (-0.001, 0.001)</td><td valign="top" align="left" rowspan="1" colspan="1">5</td><td valign="top" align="left" rowspan="1" colspan="1">-0.023 (-0.050, 0.004)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">0.002 (-0.012, 0.016)</td><td valign="top" align="left" rowspan="1" colspan="1">7</td></tr><tr><th valign="top" colspan="11" align="left" rowspan="1">Subgroup Analyses</th></tr><tr><th valign="top" colspan="11" align="left" rowspan="1">Sex</th></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">Girls</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.018 (-0.033, -0.003)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>10</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">0.011 (-0.006, 0.027)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">0.001 (-0.001, 0.002)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.002 (-0.102, 0.097)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.000, 0.000)</td><td valign="top" align="left" rowspan="1" colspan="1">7</td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1">Boys</td><td valign="top" align="left" rowspan="1" colspan="1">-0.009 (-0.028, 0.010)</td><td valign="top" align="left" rowspan="1" colspan="1">10</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>-0.013 (-0.025, -0.001)</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">
+<bold>4</bold>
+</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.002, 0.001)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.093 (-0.203, 0.016)</td><td valign="top" align="left" rowspan="1" colspan="1">4</td><td valign="top" align="left" rowspan="1" colspan="1">-0.000 (-0.000, 0.000)</td><td valign="top" align="left" rowspan="1" colspan="1">7</td></tr></tbody></table><table-wrap-foot><fn><p>BPA, Bisphenols A; BPF, Bisphenols F; BPS, Bisphenols S; BPAF, Bisphenols AF; TCBPA, Tetrachlorobisphenol A; TSH, Thyroid stimulating hormone; TT3, Total tri-iodothyronine; TT4, total thyroxine; FT3, Free tri-iothyronine; FT4, Free thyroxine. Bold values indicate statistical significance.</p></fn></table-wrap-foot></table-wrap><p>Prenatal exposure to bisphenols may traverse the placental barrier, potentially exerting long-term effects on fetal thyroid development and function, as well as postnatal life outcomes (<xref rid="B21" ref-type="bibr">21</xref>). Therefore, comprehending these impacts is pivotal for pediatric health. Prior studies have indicated that maternal exposure to bisphenols may influence maternal thyroid hormone levels. For instance, urinary BPA has been associated with thyroid function, with elevated concentrations of BPA potentially decreasing levels of TSH (<xref rid="B54" ref-type="bibr">54</xref>, <xref rid="B57" ref-type="bibr">57</xref>), TT4 (<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B58" ref-type="bibr">58</xref>), TT3 and FT3 (<xref rid="B59" ref-type="bibr">59</xref>) in women. Conversely, exposure to BPB, BPF, and TBBPA (<xref rid="B60" ref-type="bibr">60</xref>) may elevate FT4 levels (<xref rid="B52" ref-type="bibr">52</xref>), while BPS exposure might lower TT3 levels (<xref rid="B52" ref-type="bibr">52</xref>) and elevate TT4 levels (<xref rid="B48" ref-type="bibr">48</xref>). Moreover, studies have reported a notable positive trend in serum FT3 and FT4 levels with cumulative exposure to bisphenols mixture (<xref rid="B50" ref-type="bibr">50</xref>), although some have suggested that BPA exposure, either single-exposure (<xref rid="B48" ref-type="bibr">48</xref>) or in combination with other bisphenols (<xref rid="B2" ref-type="bibr">2</xref>, <xref rid="B55" ref-type="bibr">55</xref>), may not correlate with maternal thyroid function. Despite inconsistent findings, the significance of this issue cannot be overstated. A meta-analysis focusing on childhood exposure to bisphenols and pediatric thyroid hormone levels indicated that BPA exposure lowers TSH levels (<xref rid="B61" ref-type="bibr">61</xref>). The prenatal period is a critical window for fetal organ and system development. Given the potential window of exposure and the cumulative effects over time, the impact of bisphenol exposure on fetal thyroid function may manifest postnatally. Hence, understanding how maternal exposure to bisphenols influences offspring thyroid function holds crucial implications for preventing and managing pediatric thyroid disorders in public health.</p><p>The indispensable role of thyroid hormones in supporting fetal growth, neurological maturation, metabolic regulation, and overall physiological harmony underscores the clinical significance of these findings (<xref rid="B4" ref-type="bibr">4</xref>, <xref rid="B62" ref-type="bibr">62</xref>). The contrasting outcomes documented in previous literature (conclusions of the included studies were shown in <xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Table 3</bold>
+</xref>) underscore the intricacy involved in comprehending the association between prenatal exposure to bisphenols and thyroid function. While our study accentuates significant correlations between BPs and THs, disparities with preceding inquiries warrant a meticulous exploration of plausible influencing factors. The diversity within study populations, including demographic characteristics and health status of pregnant women, may significantly influence the outcomes. The study population by Romano et al. was mainly white primiparous women aged 25 - 35 years old from the United States, with higher socioeconomic status and incomes, and usually had regular intake of vitamin pills (<xref rid="B2" ref-type="bibr">2</xref>). In contrast, studies by Xi et al. and Li et al., most of the exposed subjects were elderly Asian multipara women who basically did not consume vitamin pills (<xref rid="B4" ref-type="bibr">4</xref>, <xref rid="B51" ref-type="bibr">51</xref>). The combined superposition of these factors may be the reason for the differences that Romano et al. observed a relationship between prenatal BPA exposure and reduced TSH levels in female neonates, while the other two studies noted a negative correlation between BPA exposure and TSH levels in male infants. Furthermore, methodological differences, particularly in the sample matrix and the timing and frequency of bisphenols measurement, may contribute to inconsistent results. Minatoy et al. utilized serum samples, with BPA concentrations much lower than those reported in studies using maternal urine samples (<xref rid="B3" ref-type="bibr">3</xref>). Furthermore, Sarzo et al. only measured phenolics once in the first trimester (<xref rid="B55" ref-type="bibr">55</xref>). Other studies have taken more than one measurement and calculated average concentrations of BPA exposed throughout pregnancy. In addition, the study by Sarzo et al. used a birth cohort in Spain, which gradually restricted or banned the use of BPA as a pollutant (<xref rid="B55" ref-type="bibr">55</xref>). Rare relevant literature from Spain shows a decrease in urinary BPA concentrations in pregnant women in 2015-2016 (<xref rid="B63" ref-type="bibr">63</xref>) similar to the study by Wang and colleague (<xref rid="B54" ref-type="bibr">54</xref>). Phenolics are non-persistent pollutants, and the half-life of BPA is relatively short, and a single measurement may not adequately reflect BPA exposure throughout pregnancy. The lower levels of bisphenols exposure may have contributed to the lack of association between BPA and thyroid parameters observed in studies by Minatoya et al., Sarzo et al., and Wang et al. Another study analyzed BPA concentrations in tertiles indicated that girls in the middle tertile had lower TSH levels, whereas boys in the highest tertile had lower TSH, TT3, and FT3 in cord plasmas. However, BPA exposure did not cause an increase or decrease in TT4 or FT4 (<xref rid="B4" ref-type="bibr">4</xref>).</p><p>Our study elucidates the relationship between prenatal bisphenol exposure and offspring thyroid hormone levels, particularly highlighting significant differences based on sex, and exposure levels. We found that the mixture of BPs exposure and single exposure to BPA were related to decreased TSH and increased TT3 levels in girls, while only in the case of single BPA exposure, reduced TT3 levels were observed in boys. This observed pattern can be attributed to the structural similarity of BPA to TSH and TT3, as well as its role as an antagonist (<xref rid="B43" ref-type="bibr">43</xref>, <xref rid="B64" ref-type="bibr">64</xref>) or agonist of thyroid receptors (<xref rid="B65" ref-type="bibr">65</xref>, <xref rid="B66" ref-type="bibr">66</xref>). Specifically, BPA functions as an antagonist to thyroid hormones, disrupting TSH secretion through hormonal feedback mechanisms (<xref rid="B67" ref-type="bibr">67</xref>). The sex-specific effects observed in studies on endocrine-disrupting chemicals (EDCs) are reinforced by numerous investigations into the diverse effects of BPA (<xref rid="B68" ref-type="bibr">68</xref>, <xref rid="B69" ref-type="bibr">69</xref>). Biological factors for dimorphism include the lower expression levels of uridine diphosphate-glucuronosyltransferase 2B1 (UGT2B1), which is involved in BPA glucuronidation, in males than females (<xref rid="B70" ref-type="bibr">70</xref>). Glucuronidation is a crucial step in the metabolism and elimination of phenolic compounds in the body. It involves the conjugation of phenolics with glucuronic acid, rendering them more water-soluble and facilitating their excretion via urine or bile, thereby eliminating phenolic compounds (<xref rid="B71" ref-type="bibr">71</xref>, <xref rid="B72" ref-type="bibr">72</xref>). Additionally, the thyroid system exhibits a sexually dimorphic sensitivity to maternal exposure to BPs (<xref rid="B70" ref-type="bibr">70</xref>). Gonadal hormones, including estradiol, significantly influence the sex-specific neuroendocrine pathway, impacting the hypothalamic-pituitary-thyroid (HPT) axis, which governs the secretion of thyroid hormones (<xref rid="B73" ref-type="bibr">73</xref>). These molecular interactions and physiological responses form a complex network through which bisphenols exert their effects on thyroid hormone levels, revealing the intricacy of endocrine disruption and its varied manifestations between sexes. This meta-analysis also revealed that exposure to a mixture of bisphenols exceeding 1.5 µg/g creatinine is associated with a decrease in FT3 levels. A study found a significant correlation between high-dose bisphenol exposure and thyroid function alterations, whereas exposure at low doses may not have a significant impact (<xref rid="B74" ref-type="bibr">74</xref>). Similarly, another study noted that the effects of bisphenols on thyroid function may exhibit dose-dependent effects (<xref rid="B35" ref-type="bibr">35</xref>). Furthermore, at low concentrations, bisphenols may not adequately bind to thyroid receptors, leading to receptor saturation. In contrast, high-concentration bisphenol exposure may increase the binding affinity of bisphenols to thyroid hormone receptors, thereby intensifying interference with thyroid function. Additionally, exposure to bisphenols at lower concentrations may be more readily metabolized and excreted by the body, reducing their accumulation and duration in the body.</p><p>Further to these pathways, bisphenols may affect the transcriptional expression by altering transcription-related genes (Foxe1, Pax8, Nkx2-1) and thyroid hormone synthesis genes (Tpo, Tg, Slc5a5), with bisphenol analogs BPAF and BPS influencing transcriptional changes at doses lower than BPA (<xref rid="B75" ref-type="bibr">75</xref>, <xref rid="B76" ref-type="bibr">76</xref>). BPA has the potential to hinder iodine uptake by interacting with the sodium/iodide symporter (NIS) (<xref rid="B77" ref-type="bibr">77</xref>, <xref rid="B78" ref-type="bibr">78</xref>), a crucial mediator of iodine transport in thyroid and extrathyroidal tissues, thereby impacting thyroid function (<xref rid="B75" ref-type="bibr">75</xref>, <xref rid="B79" ref-type="bibr">79</xref>). NIS plays a crucial role in transporting iodine from the bloodstream into thyroid cells, a pivotal step in thyroid hormone synthesis (<xref rid="B80" ref-type="bibr">80</xref>, <xref rid="B81" ref-type="bibr">81</xref>). NIS is responsible for transporting iodine into thyroid cells, which is essential for the synthesis of thyroid hormones, particularly thyroxine (T4) (<xref rid="B82" ref-type="bibr">82</xref>, <xref rid="B83" ref-type="bibr">83</xref>). Additionally, since TSH stimulates the thyroid to release T4, compensatory elevation of TSH levels may occur (<xref rid="B84" ref-type="bibr">84</xref>). Another possible mechanism is that their ability to interact with estrogen and androgen receptors (<xref rid="B85" ref-type="bibr">85</xref>). Animal studies provide evidence that BPA impacts hormone synthesis in the pituitary gland, affecting TSH production through estrogen receptor signaling (<xref rid="B86" ref-type="bibr">86</xref>–<xref rid="B89" ref-type="bibr">89</xref>), independently of thyroid hormone feedback loops. These studies have reported varying results, possibly attributable to differences in the chemical structures tested, dosages used, and species studied. Further <italic toggle="yes">in vivo</italic> controlled experiments are needed to elucidate the extent and mechanisms of BP influence on NIS and thyroid hormone levels. The mechanisms of action of bisphenol compounds were shown in <xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Table 4</bold>
+</xref>.</p><p>This study is the first meta-analysis to investigate the effect of maternal BPs exposure on thyroid hormone levels in children and explore the sex-specific effect on thyroid function, and incorporated studies were high-caliber prospective cohort investigations, defined by explicit search criteria, potentially reinforcing the trustworthiness of our research. However, it has certain limitations. First, studies were interpreted in different subgroup analyses, such as types of exposure and THs, and children’s sex. These subgroup analyses demonstrated the potential directions of further public health concerns, but, unfortunately, the analyses were limited by a relatively small sample size, we were unable to analyze the single effects of other bisphenol analogs on thyroid hormones. Second, studies used different types of outcome measurements, although we conducted sensitivity analyses on individual tests, substantial heterogeneity across the included studies was not fully interpreted. Third, most of the research subjects were neonates, but there were only four studies focused on early childhood, which may lead to imprecise results. Finally, the included cohort studies were mainly from North Americans and Asians, and there is a dearth of relevant studies in other regions, potentially leading to geographic bias.</p></sec><sec sec-type="conclusions" id="s5"><label>5</label><title>Conclusion</title><p>Prenatal exposure to bisphenols reduced TSH and increased TT3 levels in female offspring. Maternal BPA exposure showed an inverse relationship with TT3 levels in male offspring. Notably, high concentrations of bisphenol exposure have also been found to decrease FT3 levels in offspring. Given these findings, it is critical to strengthen control over prenatal exposure to bisphenols to safeguard early childhood health. To validate our findings, a larger and broader prospective cohort study should be conducted to explore the effects of prenatal bisphenols exposure on thyroid hormone levels in children.</p></sec><sec sec-type="data-availability" id="s6"><title>Data availability statement</title><p>The original contributions presented in the study are included in the article/<xref rid="SM1" ref-type="supplementary-material">
+<bold>Supplementary Material</bold>
+</xref>. Further inquiries can be directed to the corresponding authors.</p></sec><sec sec-type="author-contributions" id="s7"><title>Author contributions</title><p>JL: Data curation, Investigation, Methodology, Visualization, Writing – original draft, Writing – review &amp; editing. MT: Data curation, Investigation, Writing – review &amp; editing. HQ: Writing – review &amp; editing. DC: Writing – review &amp; editing. SM: Writing – review &amp; editing. XW: Resources, Supervision, Writing – review &amp; editing. FB: Resources, Supervision, Writing – review &amp; editing.</p></sec></body><back><sec sec-type="COI-statement" id="s9"><title>Conflict of interest</title><p>The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</p></sec><sec sec-type="disclaimer" id="s10"><title>Publisher’s note</title><p>All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.</p></sec><sec sec-type="supplementary-material" id="s11"><title>Supplementary material</title><p>The Supplementary Material for this article can be found online at: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.frontiersin.org/articles/10.3389/fendo.2024.1420540/full#supplementary-material" ext-link-type="uri">https://www.frontiersin.org/articles/10.3389/fendo.2024.1420540/full#supplementary-material</ext-link>
+</p><supplementary-material id="SM1" position="float" content-type="local-data" orientation="portrait"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="DataSheet_1.docx" position="float" orientation="portrait"/></supplementary-material></sec><ref-list><title>References</title><ref id="B1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Chevrier</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Gunier</surname><given-names>RB</given-names></name>
+<name name-style="western"><surname>Bradman</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Holland</surname><given-names>NT</given-names></name>
+<name name-style="western"><surname>Calafat</surname><given-names>AM</given-names></name>
+<name name-style="western"><surname>Eskenazi</surname><given-names>B</given-names></name>
+<etal/>
+</person-group>. <article-title>Maternal urinary bisphenol a during pregnancy and maternal and neonatal thyroid function in the CHAMACOS study</article-title>. <source>Environ Health Perspect</source>. (<year>2013</year>) <volume>121</volume>:<page-range>138–44</page-range>. doi: <pub-id pub-id-type="doi">10.1289/ehp.1205092</pub-id>
+<pub-id pub-id-type="pmcid">PMC3553432</pub-id><pub-id pub-id-type="pmid">23052180</pub-id></mixed-citation></ref><ref id="B2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Romano</surname><given-names>ME</given-names></name>
+<name name-style="western"><surname>Webster</surname><given-names>GM</given-names></name>
+<name name-style="western"><surname>Vuong</surname><given-names>AM</given-names></name>
+<name name-style="western"><surname>Thomas Zoeller</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Hoofnagle</surname><given-names>AN</given-names></name>
+<etal/>
+</person-group>. <article-title>Gestational urinary bisphenol A and maternal and newborn thyroid hormone concentrations: the HOME Study</article-title>. <source>Environ Res</source>. (<year>2015</year>) <volume>138</volume>:<page-range>453–60</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.envres.2015.03.003</pub-id>
+<pub-id pub-id-type="pmcid">PMC4403004</pub-id><pub-id pub-id-type="pmid">25794847</pub-id></mixed-citation></ref><ref id="B3"><label>3</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Minatoya</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Sasaki</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Araki</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Miyashita</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Itoh</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Yamamoto</surname><given-names>J</given-names></name>
+<etal/>
+</person-group>. <article-title>Cord blood bisphenol A levels and reproductive and thyroid hormone levels of neonates: the Hokkaido study on environment and children’s health</article-title>. <source>Epidemiology</source>. (<year>2017</year>) <volume>28 Suppl 1</volume>:<fpage>S3</fpage>–<lpage>s9</lpage>. doi: <pub-id pub-id-type="doi">10.1097/EDE.0000000000000716</pub-id>
+<pub-id pub-id-type="pmid">29028670</pub-id>
+</mixed-citation></ref><ref id="B4"><label>4</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Li</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Yang</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>DK</given-names></name>
+<name name-style="western"><surname>Tian</surname><given-names>YP</given-names></name>
+<name name-style="western"><surname>Miao</surname><given-names>MH</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>Y</given-names></name>
+<etal/>
+</person-group>. <article-title>Prenatal bisphenol A exposure, fetal thyroid hormones and neurobehavioral development in children at 2 and 4 years: A prospective cohort study</article-title>. <source>Sci Total Environ</source>. (<year>2020</year>) <volume>722</volume>:<page-range>137887</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2020.137887</pub-id>
+<pub-id pub-id-type="pmid">32197165</pub-id></mixed-citation></ref><ref id="B5"><label>5</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Jang</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>Y-J</given-names></name>
+<name name-style="western"><surname>Lim</surname><given-names>Y-H</given-names></name>
+<name name-style="western"><surname>Lee</surname><given-names>K-S</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>B-N</given-names></name>
+<name name-style="western"><surname>Shin</surname><given-names>CH</given-names></name>
+<etal/>
+</person-group>. <article-title>Associations between thyroid hormone levels and urinary concentrations of bisphenol A, F, and S in 6-year-old children in Korea</article-title>. <source>J Prev Med Public Health</source>. (<year>2021</year>) <volume>54</volume>:<fpage>37</fpage>–<lpage>45</lpage>. doi: <pub-id pub-id-type="doi">10.3961/jpmph.20.310</pub-id>
+<pub-id pub-id-type="pmid">33618498</pub-id>
+<pub-id pub-id-type="pmcid">PMC7939752</pub-id></mixed-citation></ref><ref id="B6"><label>6</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>WC</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Lin</surname><given-names>CF</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>YC</given-names></name>
+<name name-style="western"><surname>Shih</surname><given-names>FC</given-names></name>
+<name name-style="western"><surname>Chuang</surname><given-names>CY</given-names></name>
+</person-group>. <article-title>Biomonitoring of bisphenol A concentrations in maternal and umbilical cord blood in regard to birth outcomes and adipokine expression: a birth cohort study in Taiwan</article-title>. <source>Environ Health</source>. (<year>2011</year>) <volume>10</volume>:<fpage>94</fpage>. doi: <pub-id pub-id-type="doi">10.1186/1476-069X-10-94</pub-id>
+<pub-id pub-id-type="pmid">22050967</pub-id>
+<pub-id pub-id-type="pmcid">PMC3225308</pub-id></mixed-citation></ref><ref id="B7"><label>7</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Liao</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Kannan</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Widespread occurrence of bisphenol A in paper and paper products: implications for human exposure</article-title>. <source>Environ Sci Technol</source>. (<year>2011</year>) <volume>45</volume>:<page-range>9372–9</page-range>. doi: <pub-id pub-id-type="doi">10.1021/es202507f</pub-id>
+<pub-id pub-id-type="pmid">21939283</pub-id></mixed-citation></ref><ref id="B8"><label>8</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Huang</surname><given-names>YQ</given-names></name>
+<name name-style="western"><surname>Wong</surname><given-names>CK</given-names></name>
+<name name-style="western"><surname>Zheng</surname><given-names>JS</given-names></name>
+<name name-style="western"><surname>Bouwman</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Barra</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Wahlström</surname><given-names>B</given-names></name>
+<etal/>
+</person-group>. <article-title>Bisphenol A (BPA) in China: a review of sources, environmental levels, and potential human health impacts</article-title>. <source>Environ Int</source>. (<year>2012</year>) <volume>42</volume>:<page-range>91–9</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2011.04.010</pub-id>
+<pub-id pub-id-type="pmid">21596439</pub-id></mixed-citation></ref><ref id="B9"><label>9</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Tong</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Yan</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>T</given-names></name>
+<etal/>
+</person-group>. <article-title>Urinary sexual steroids associated with bisphenol A (BPA) exposure in the early infant stage: Preliminary results from a Daishan birth cohort</article-title>. <source>Sci Total Environ</source>. (<year>2017</year>) <volume>601-602</volume>:<page-range>1733–42</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2017.05.257</pub-id>
+<pub-id pub-id-type="pmid">28628972</pub-id></mixed-citation></ref><ref id="B10"><label>10</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Calafat</surname><given-names>AM</given-names></name>
+<name name-style="western"><surname>Ye</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Wong</surname><given-names>LY</given-names></name>
+<name name-style="western"><surname>Reidy</surname><given-names>JA</given-names></name>
+<name name-style="western"><surname>Needham</surname><given-names>LL</given-names></name>
+</person-group>. <article-title>Exposure of the U.S. population to bisphenol A and 4-tertiary-octylphenol: 2003-2004</article-title>. <source>Environ Health Perspect</source>. (<year>2008</year>) <volume>116</volume>:<fpage>39</fpage>–<lpage>44</lpage>. doi: <pub-id pub-id-type="doi">10.1289/ehp.10753</pub-id>
+<pub-id pub-id-type="pmid">18197297</pub-id>
+<pub-id pub-id-type="pmcid">PMC2199288</pub-id></mixed-citation></ref><ref id="B11"><label>11</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Koch</surname><given-names>HM</given-names></name>
+<name name-style="western"><surname>Kolossa-Gehring</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Schröter-Kermani</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Angerer</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Brüning</surname><given-names>T</given-names></name>
+</person-group>. <article-title>Bisphenol A in 24 h urine and plasma samples of the German Environmental Specimen Bank from 1995 to 2009: a retrospective exposure evaluation</article-title>. <source>J Expo Sci Environ Epidemiol</source>. (<year>2012</year>) <volume>22</volume>:<page-range>610–6</page-range>. doi: <pub-id pub-id-type="doi">10.1038/jes.2012.39</pub-id>
+<pub-id pub-id-type="pmid">22617719</pub-id></mixed-citation></ref><ref id="B12"><label>12</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Zhang</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Sun</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Kannan</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Blood and urinary bisphenol A concentrations in children, adults, and pregnant women from China: partitioning between blood and urine and maternal and fetal cord blood</article-title>. <source>Environ Sci Technol</source>. (<year>2013</year>) <volume>47</volume>:<page-range>4686–94</page-range>. doi: <pub-id pub-id-type="doi">10.1021/es303808b</pub-id>
+<pub-id pub-id-type="pmid">23506159</pub-id></mixed-citation></ref><ref id="B13"><label>13</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lee</surname><given-names>YJ</given-names></name>
+<name name-style="western"><surname>Ryu</surname><given-names>HY</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>HK</given-names></name>
+<name name-style="western"><surname>Min</surname><given-names>CS</given-names></name>
+<name name-style="western"><surname>Lee</surname><given-names>JH</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>E</given-names></name>
+<etal/>
+</person-group>. <article-title>Maternal and fetal exposure to bisphenol A in Korea</article-title>. <source>Reprod Toxicol</source>. (<year>2008</year>) <volume>25</volume>:<page-range>413–9</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.reprotox.2008.05.058</pub-id>
+<pub-id pub-id-type="pmid">18577445</pub-id></mixed-citation></ref><ref id="B14"><label>14</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Geens</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Aerts</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Berthot</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Bourguignon</surname><given-names>JP</given-names></name>
+<name name-style="western"><surname>Goeyens</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Lecomte</surname><given-names>P</given-names></name>
+<etal/>
+</person-group>. <article-title>A review of dietary and non-dietary exposure to bisphenol-A</article-title>. <source>Food Chem Toxicol</source>. (<year>2012</year>) <volume>50</volume>:<page-range>3725–40</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.fct.2012.07.059</pub-id>
+<pub-id pub-id-type="pmid">22889897</pub-id></mixed-citation></ref><ref id="B15"><label>15</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Philippat</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Wolff</surname><given-names>MS</given-names></name>
+<name name-style="western"><surname>Calafat</surname><given-names>AM</given-names></name>
+<name name-style="western"><surname>Ye</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Bausell</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Meadows</surname><given-names>M</given-names></name>
+<etal/>
+</person-group>. <article-title>Prenatal exposure to environmental phenols: concentrations in amniotic fluid and variability in urinary concentrations during pregnancy</article-title>. <source>Environ Health Perspect</source>. (<year>2013</year>) <volume>121</volume>:<page-range>1225–31</page-range>. doi: <pub-id pub-id-type="doi">10.1289/ehp.1206335</pub-id>
+<pub-id pub-id-type="pmcid">PMC3801458</pub-id><pub-id pub-id-type="pmid">23942273</pub-id></mixed-citation></ref><ref id="B16"><label>16</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Arbuckle</surname><given-names>TE</given-names></name>
+<name name-style="western"><surname>Davis</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Marro</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Fisher</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Legrand</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>LeBlanc</surname><given-names>A</given-names></name>
+<etal/>
+</person-group>. <article-title>Phthalate and bisphenol A exposure among pregnant women in Canada–results from the MIREC study</article-title>. <source>Environ Int</source>. (<year>2014</year>) <volume>68</volume>:<fpage>55</fpage>–<lpage>65</lpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2014.02.010</pub-id>
+<pub-id pub-id-type="pmid">24709781</pub-id>
+</mixed-citation></ref><ref id="B17"><label>17</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Cantonwine</surname><given-names>DE</given-names></name>
+<name name-style="western"><surname>Ferguson</surname><given-names>KK</given-names></name>
+<name name-style="western"><surname>Mukherjee</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>McElrath</surname><given-names>TF</given-names></name>
+<name name-style="western"><surname>Meeker</surname><given-names>JD</given-names></name>
+</person-group>. <article-title>Urinary bisphenol A levels during pregnancy and risk of preterm birth</article-title>. <source>Environ Health Perspect</source>. (<year>2015</year>) <volume>123</volume>:<fpage>895</fpage>–<lpage>901</lpage>. doi: <pub-id pub-id-type="doi">10.1289/ehp.1408126</pub-id>
+<pub-id pub-id-type="pmid">25815860</pub-id>
+<pub-id pub-id-type="pmcid">PMC4559950</pub-id></mixed-citation></ref><ref id="B18"><label>18</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lee</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Park</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Moon</surname><given-names>HB</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Lee</surname><given-names>JJ</given-names></name>
+<etal/>
+</person-group>. <article-title>Bisphenol A distribution in serum, urine, placenta, breast milk, and umbilical cord serum in a birth panel of mother-neonate pairs</article-title>. <source>Sci Total Environ</source>. (<year>2018</year>) <volume>626</volume>:<page-range>1494–501</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2017.10.042</pub-id>
+<pub-id pub-id-type="pmid">29146078</pub-id></mixed-citation></ref><ref id="B19"><label>19</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Wiraagni</surname><given-names>IA</given-names></name>
+<name name-style="western"><surname>Mohd</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Bin Abd Rashid</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Haron</surname><given-names>D</given-names></name>
+</person-group>. <article-title>Validation of a simple extraction procedure for bisphenol A identification from human plasma</article-title>. <source>PloS One</source>. (<year>2019</year>) <volume>14</volume>:<elocation-id>e0221774</elocation-id>. doi: <pub-id pub-id-type="doi">10.1371/journal.pone.0221774</pub-id>
+<pub-id pub-id-type="pmid">31581189</pub-id>
+<pub-id pub-id-type="pmcid">PMC6776257</pub-id></mixed-citation></ref><ref id="B20"><label>20</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Guo</surname><given-names>JQ</given-names></name>
+<name name-style="western"><surname>Wu</surname><given-names>CH</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>JM</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>WT</given-names></name>
+<name name-style="western"><surname>Lv</surname><given-names>SL</given-names></name>
+<name name-style="western"><surname>Lu</surname><given-names>DS</given-names></name>
+<etal/>
+</person-group>. <article-title>Maternal and childhood urinary phenol concentrations, neonatal thyroid function, and behavioral problems at 10 years of age: The SMBCS study</article-title>. <source>Sci Total Environ</source>. (<year>2020</year>) <volume>743</volume>:<page-range>140678</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2020.140678</pub-id>
+<pub-id pub-id-type="pmid">32653713</pub-id></mixed-citation></ref><ref id="B21"><label>21</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Li</surname><given-names>LX</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Meng</surname><given-names>XZ</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>BH</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>SQ</given-names></name>
+<name name-style="western"><surname>Zhao</surname><given-names>Y</given-names></name>
+<etal/>
+</person-group>. <article-title>Exposure levels of environmental endocrine disruptors in mother-newborn pairs in China and their placental transfer characteristics</article-title>. <source>PloS One</source>. (<year>2013</year>) <volume>8</volume>:<elocation-id>e62526</elocation-id>. doi: <pub-id pub-id-type="doi">10.1371/journal.pone.0062526</pub-id>
+<pub-id pub-id-type="pmid">23667484</pub-id>
+<pub-id pub-id-type="pmcid">PMC3646826</pub-id></mixed-citation></ref><ref id="B22"><label>22</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Sugiura-Ogasawara</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Ozaki</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Sonta</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Makino</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Suzumori</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Exposure to bisphenol A is associated with recurrent miscarriage</article-title>. <source>Hum Reprod</source>. (<year>2005</year>) <volume>20</volume>:<page-range>2325–9</page-range>. doi: <pub-id pub-id-type="doi">10.1093/humrep/deh888</pub-id>
+<pub-id pub-id-type="pmid">15947000</pub-id></mixed-citation></ref><ref id="B23"><label>23</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Casals-Casas</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Desvergne</surname><given-names>B</given-names></name>
+</person-group>. <article-title>Endocrine disruptors: from endocrine to metabolic disruption</article-title>. <source>Annu Rev Physiol</source>. (<year>2011</year>) <volume>73</volume>:<page-range>135–62</page-range>. doi: <pub-id pub-id-type="doi">10.1146/annurev-physiol-012110-142200</pub-id>
+<pub-id pub-id-type="pmid">21054169</pub-id></mixed-citation></ref><ref id="B24"><label>24</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Salian</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Doshi</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Vanage</surname><given-names>G</given-names></name>
+</person-group>. <article-title>Perinatal exposure of rats to Bisphenol A affects fertility of male offspring–an overview</article-title>. <source>Reprod Toxicol</source>. (<year>2011</year>) <volume>31</volume>:<page-range>359–62</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.reprotox.2010.10.008</pub-id>
+<pub-id pub-id-type="pmid">20965246</pub-id></mixed-citation></ref><ref id="B25"><label>25</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lassen</surname><given-names>TH</given-names></name>
+<name name-style="western"><surname>Frederiksen</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Jensen</surname><given-names>TK</given-names></name>
+<name name-style="western"><surname>Petersen</surname><given-names>JH</given-names></name>
+<name name-style="western"><surname>Joensen</surname><given-names>UN</given-names></name>
+<name name-style="western"><surname>Main</surname><given-names>KM</given-names></name>
+<etal/>
+</person-group>. <article-title>Urinary bisphenol A levels in young men: association with reproductive hormones and semen quality</article-title>. <source>Environ Health Perspect</source>. (<year>2014</year>) <volume>122</volume>:<page-range>478–84</page-range>. doi: <pub-id pub-id-type="doi">10.1289/ehp.1307309</pub-id>
+<pub-id pub-id-type="pmcid">PMC4014766</pub-id><pub-id pub-id-type="pmid">24786630</pub-id></mixed-citation></ref><ref id="B26"><label>26</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Sheng</surname><given-names>ZG</given-names></name>
+<name name-style="western"><surname>Tang</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>YX</given-names></name>
+<name name-style="western"><surname>Yuan</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Zhao</surname><given-names>BQ</given-names></name>
+<name name-style="western"><surname>Chao</surname><given-names>XJ</given-names></name>
+<etal/>
+</person-group>. <article-title>Low concentrations of bisphenol a suppress thyroid hormone receptor transcription through a nongenomic mechanism</article-title>. <source>Toxicol Appl Pharmacol</source>. (<year>2012</year>) <volume>259</volume>:<page-range>133–42</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.taap.2011.12.018</pub-id>
+<pub-id pub-id-type="pmid">22227104</pub-id></mixed-citation></ref><ref id="B27"><label>27</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Gentilcore</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Porreca</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Rizzo</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Ganbaatar</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Carchia</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Mallardo</surname><given-names>M</given-names></name>
+<etal/>
+</person-group>. <article-title>Bisphenol A interferes with thyroid specific gene expression</article-title>. <source>Toxicology</source>. (<year>2013</year>) <volume>304</volume>:<fpage>21</fpage>–<lpage>31</lpage>. doi: <pub-id pub-id-type="doi">10.1016/j.tox.2012.12.001</pub-id>
+<pub-id pub-id-type="pmid">23238275</pub-id>
+</mixed-citation></ref><ref id="B28"><label>28</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Zhang</surname><given-names>DH</given-names></name>
+<name name-style="western"><surname>Zhou</surname><given-names>EX</given-names></name>
+<name name-style="western"><surname>Yang</surname><given-names>ZL</given-names></name>
+</person-group>. <article-title>Waterborne exposure to BPS causes thyroid endocrine disruption in zebrafish larvae</article-title>. <source>PloS One</source>. (<year>2017</year>) <volume>12</volume>:<elocation-id>e0176927</elocation-id>. doi: <pub-id pub-id-type="doi">10.1371/journal.pone.0176927</pub-id>
+<pub-id pub-id-type="pmid">28467477</pub-id>
+<pub-id pub-id-type="pmcid">PMC5415059</pub-id></mixed-citation></ref><ref id="B29"><label>29</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kundakovic</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Champagne</surname><given-names>FA</given-names></name>
+</person-group>. <article-title>Epigenetic perspective on the developmental effects of bisphenol A</article-title>. <source>Brain Behav Immun</source>. (<year>2011</year>) <volume>25</volume>:<page-range>1084–93</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.bbi.2011.02.005</pub-id>
+<pub-id pub-id-type="pmcid">PMC3703316</pub-id><pub-id pub-id-type="pmid">21333735</pub-id></mixed-citation></ref><ref id="B30"><label>30</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Boas</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Feldt-Rasmussen</surname><given-names>U</given-names></name>
+<name name-style="western"><surname>Main</surname><given-names>KM</given-names></name>
+</person-group>. <article-title>Thyroid effects of endocrine disrupting chemicals</article-title>. <source>Mol Cell Endocrinol</source>. (<year>2012</year>) <volume>355</volume>:<page-range>240–8</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.mce.2011.09.005</pub-id>
+<pub-id pub-id-type="pmid">21939731</pub-id></mixed-citation></ref><ref id="B31"><label>31</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Henrichs</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Ghassabian</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Peeters</surname><given-names>RP</given-names></name>
+<name name-style="western"><surname>Tiemeier</surname><given-names>H</given-names></name>
+</person-group>. <article-title>Maternal hypothyroxinemia and effects on cognitive functioning in childhood: how and why</article-title>? <source>Clin Endocrinol (Oxf)</source>. (<year>2013</year>) <volume>79</volume>:<page-range>152–62</page-range>. doi: <pub-id pub-id-type="doi">10.1111/cen.12227</pub-id>
+<pub-id pub-id-type="pmid">23600900</pub-id></mixed-citation></ref><ref id="B32"><label>32</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kundakovic</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Gudsnuk</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Franks</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Madrid</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Miller</surname><given-names>RL</given-names></name>
+<name name-style="western"><surname>Perera</surname><given-names>FP</given-names></name>
+<etal/>
+</person-group>. <article-title>Sex-specific epigenetic disruption and behavioral changes following low-dose in <italic toggle="yes">utero</italic> bisphenol A exposure</article-title>. <source>Proc Natl Acad Sci U.S.A</source>. (<year>2013</year>) <volume>110</volume>:<page-range>9956–61</page-range>. doi: <pub-id pub-id-type="doi">10.1073/pnas.1214056110</pub-id>
+<pub-id pub-id-type="pmcid">PMC3683772</pub-id><pub-id pub-id-type="pmid">23716699</pub-id></mixed-citation></ref><ref id="B33"><label>33</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Zoeller</surname><given-names>RT</given-names></name>
+<name name-style="western"><surname>Brown</surname><given-names>TR</given-names></name>
+<name name-style="western"><surname>Doan</surname><given-names>LL</given-names></name>
+<name name-style="western"><surname>Gore</surname><given-names>AC</given-names></name>
+<name name-style="western"><surname>Skakkebaek</surname><given-names>NE</given-names></name>
+<name name-style="western"><surname>Soto</surname><given-names>AM</given-names></name>
+<etal/>
+</person-group>. <article-title>Endocrine-disrupting chemicals and public health protection: a statement of principles from The Endocrine Society</article-title>. <source>Endocrinology</source>. (<year>2012</year>) <volume>153</volume>:<page-range>4097–110</page-range>. doi: <pub-id pub-id-type="doi">10.1210/en.2012-1422</pub-id>
+<pub-id pub-id-type="pmcid">PMC3423612</pub-id><pub-id pub-id-type="pmid">22733974</pub-id></mixed-citation></ref><ref id="B34"><label>34</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Liao</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Kannan</surname><given-names>K</given-names></name>
+</person-group>. <article-title>A survey of alkylphenols, bisphenols, and triclosan in personal care products from China and the United States</article-title>. <source>Arch Environ Contam Toxicol</source>. (<year>2014</year>) <volume>67</volume>:<page-range>50–9</page-range>. doi: <pub-id pub-id-type="doi">10.1007/s00244-014-0016-8</pub-id>
+<pub-id pub-id-type="pmid">24639116</pub-id></mixed-citation></ref><ref id="B35"><label>35</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Rochester</surname><given-names>JR</given-names></name>
+<name name-style="western"><surname>Bolden</surname><given-names>AL</given-names></name>
+</person-group>. <article-title>Bisphenol S and F: A systematic review and comparison of the hormonal activity of bisphenol A substitutes</article-title>. <source>Environ Health Perspect</source>. (<year>2015</year>) <volume>123</volume>:<page-range>643–50</page-range>. doi: <pub-id pub-id-type="doi">10.1289/ehp.1408989</pub-id>
+<pub-id pub-id-type="pmcid">PMC4492270</pub-id><pub-id pub-id-type="pmid">25775505</pub-id></mixed-citation></ref><ref id="B36"><label>36</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Hu</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Xu</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Cui</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Lu</surname><given-names>L</given-names></name>
+</person-group>. <article-title>Bisphenol analogues induce thyroid dysfunction via the disruption of the thyroid hormone synthesis pathway</article-title>. <source>Sci Total Environ</source>. (<year>2023</year>) <volume>900</volume>:<fpage>165711</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2023.165711</pub-id>
+<pub-id pub-id-type="pmid">37487893</pub-id>
+</mixed-citation></ref><ref id="B37"><label>37</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Huang</surname><given-names>GM</given-names></name>
+<name name-style="western"><surname>Tian</surname><given-names>XF</given-names></name>
+<name name-style="western"><surname>Fang</surname><given-names>XD</given-names></name>
+<name name-style="western"><surname>Ji</surname><given-names>FJ</given-names></name>
+</person-group>. <article-title>Waterborne exposure to bisphenol F causes thyroid endocrine disruption in zebrafish larvae</article-title>. <source>Chemosphere</source>. (<year>2016</year>) <volume>147</volume>:<page-range>188–94</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.chemosphere.2015.12.080</pub-id>
+<pub-id pub-id-type="pmid">26766355</pub-id></mixed-citation></ref><ref id="B38"><label>38</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Chen</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>An</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>Q</given-names></name>
+<etal/>
+</person-group>. <article-title>Thyroid endocrine disruption and hepatotoxicity induced by bisphenol AF: Integrated zebrafish embryotoxicity test and deep learning</article-title>. <source>Sci Total Environ</source>. (<year>2022</year>) <volume>822</volume>:<fpage>153639</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2022.153639</pub-id>
+<pub-id pub-id-type="pmid">35131240</pub-id>
+</mixed-citation></ref><ref id="B39"><label>39</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kwon</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Kho</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>PG</given-names></name>
+<name name-style="western"><surname>Ji</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Thyroid endocrine disruption in male zebrafish following exposure to binary mixture of bisphenol AF and sulfamethoxazole</article-title>. <source>Environ Toxicol Pharmacol</source>. (<year>2016</year>) <volume>48</volume>:<page-range>168–74</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.etap.2016.10.018</pub-id>
+<pub-id pub-id-type="pmid">27794274</pub-id></mixed-citation></ref><ref id="B40"><label>40</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kitamura</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Jinno</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Ohta</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Kuroki</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Fujimoto</surname><given-names>N</given-names></name>
+</person-group>. <article-title>Thyroid hormonal activity of the flame retardants tetrabromobisphenol A and tetrachlorobisphenol A</article-title>. <source>Biochem Biophys Res Commun</source>. (<year>2002</year>) <volume>293</volume>:<page-range>554–9</page-range>. doi: <pub-id pub-id-type="doi">10.1016/S0006-291X(02)00262-0</pub-id>
+<pub-id pub-id-type="pmid">12054637</pub-id></mixed-citation></ref><ref id="B41"><label>41</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kitamura</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Suzuki</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Sanoh</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Kohta</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Jinno</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Sugihara</surname><given-names>K</given-names></name>
+<etal/>
+</person-group>. <article-title>Comparative study of the endocrine-disrupting activity of bisphenol A and 19 related compounds</article-title>. <source>Toxicol Sci</source>. (<year>2005</year>) <volume>84</volume>:<page-range>249–59</page-range>. doi: <pub-id pub-id-type="doi">10.1093/toxsci/kfi074</pub-id>
+<pub-id pub-id-type="pmid">15635150</pub-id></mixed-citation></ref><ref id="B42"><label>42</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kitamura</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Kato</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Iida</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Jinno</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Suzuki</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Ohta</surname><given-names>S</given-names></name>
+<etal/>
+</person-group>. <article-title>Anti-thyroid hormonal activity of tetrabromobisphenol A, a flame retardant, and related compounds: Affinity to the mammalian thyroid hormone receptor, and effect on tadpole metamorphosis</article-title>. <source>Life Sci</source>. (<year>2005</year>) <volume>76</volume>:<page-range>1589–601</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.lfs.2004.08.030</pub-id>
+<pub-id pub-id-type="pmid">15680168</pub-id></mixed-citation></ref><ref id="B43"><label>43</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Zoeller</surname><given-names>RT</given-names></name>
+<name name-style="western"><surname>Bansal</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Parris</surname><given-names>C</given-names></name>
+</person-group>. <article-title>Bisphenol-A, an environmental contaminant that acts as a thyroid hormone receptor antagonist in <italic toggle="yes">vitro</italic>, increases serum thyroxine, and alters RC3/neurogranin expression in the developing rat brain</article-title>. <source>Endocrinology</source>. (<year>2005</year>) <volume>146</volume>:<page-range>607–12</page-range>. doi: <pub-id pub-id-type="doi">10.1210/en.2004-1018</pub-id>
+<pub-id pub-id-type="pmid">15498886</pub-id></mixed-citation></ref><ref id="B44"><label>44</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Xu</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Sadamatsu</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Tsutsumi</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Akaike</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Ushijima</surname><given-names>H</given-names></name>
+<etal/>
+</person-group>. <article-title>Perinatal bisphenol A affects the behavior and SRC-1 expression of male pups but does not influence on the thyroid hormone receptors and its responsive gene</article-title>. <source>Neurosci Res</source>. (<year>2007</year>) <volume>58</volume>:<page-range>149–55</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.neures.2007.02.011</pub-id>
+<pub-id pub-id-type="pmid">17412439</pub-id></mixed-citation></ref><ref id="B45"><label>45</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Fénichel</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Déchaux</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Harthe</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Gal</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Ferrari</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Pacini</surname><given-names>P</given-names></name>
+<etal/>
+</person-group>. <article-title>Unconjugated bisphenol A cord blood levels in boys with descended or undescended testes</article-title>. <source>Hum Reprod</source>. (<year>2012</year>) <volume>27</volume>:<page-range>983–90</page-range>. doi: <pub-id pub-id-type="doi">10.1093/humrep/der451</pub-id>
+<pub-id pub-id-type="pmid">22267833</pub-id></mixed-citation></ref><ref id="B46"><label>46</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Brucker-Davis</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Ferrari</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Boda-Buccino</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Wagner-Mahler</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Pacini</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Gal</surname><given-names>J</given-names></name>
+<etal/>
+</person-group>. <article-title>Cord blood thyroid tests in boys born with and without cryptorchidism: Correlations with birth parameters and in <italic toggle="yes">utero</italic> xenobiotics exposure</article-title>. <source>Thyroid</source>. (<year>2011</year>) <volume>21</volume>:<page-range>1133–41</page-range>. doi: <pub-id pub-id-type="doi">10.1089/thy.2010.0459</pub-id>
+<pub-id pub-id-type="pmid">21875366</pub-id></mixed-citation></ref><ref id="B47"><label>47</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Xiong</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Xu</surname><given-names>LL</given-names></name>
+<name name-style="western"><surname>Dong</surname><given-names>XH</given-names></name>
+<name name-style="western"><surname>Cao</surname><given-names>ZQ</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>YJ</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>K</given-names></name>
+<etal/>
+</person-group>. <article-title>Trimester-specific associations of maternal exposure to bisphenols with neonatal thyroid stimulating hormone levels: A birth cohort study</article-title>. <source>Sci Total Environ</source>. (<year>2023</year>) <volume>880</volume>:<page-range>163354</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.scitotenv.2023.163354</pub-id>
+<pub-id pub-id-type="pmid">37023811</pub-id></mixed-citation></ref><ref id="B48"><label>48</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Derakhshan</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Philips</surname><given-names>EM</given-names></name>
+<name name-style="western"><surname>Ghassabian</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Santos</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Asimakopoulos</surname><given-names>AG</given-names></name>
+<name name-style="western"><surname>Kannan</surname><given-names>K</given-names></name>
+<etal/>
+</person-group>. <article-title>Association of urinary bisphenols during pregnancy with maternal, cord blood and childhood thyroid function</article-title>. <source>Environ Int</source>. (<year>2021</year>) <volume>146</volume>:<fpage>106160</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2020.106160</pub-id>
+<pub-id pub-id-type="pmid">33068853</pub-id>
+</mixed-citation></ref><ref id="B49"><label>49</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lin</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Deng</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Sun</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Lee</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>K</given-names></name>
+<etal/>
+</person-group>. <article-title>An in <italic toggle="yes">vitro</italic> investigation of endocrine disrupting potentials of ten bisphenol analogues</article-title>. <source>Steroids</source>. (<year>2021</year>) <volume>169</volume>:<fpage>108826</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.steroids.2021.108826</pub-id>
+<pub-id pub-id-type="pmid">33753083</pub-id>
+</mixed-citation></ref><ref id="B50"><label>50</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lu</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Sun</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Qu</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Shi</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Song</surname><given-names>Q</given-names></name>
+<etal/>
+</person-group>. <article-title>The joint effects of bisphenols and iodine exposure on thyroid during pregnancy</article-title>. <source>Nutrients</source>. (<year>2023</year>) <volume>15</volume>(<issue>15</issue>):<page-range>3422</page-range>. doi: <pub-id pub-id-type="doi">10.3390/nu15153422</pub-id>
+<pub-id pub-id-type="pmcid">PMC10421451</pub-id><pub-id pub-id-type="pmid">37571359</pub-id></mixed-citation></ref><ref id="B51"><label>51</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Xi</surname><given-names>JY</given-names></name>
+<name name-style="western"><surname>Su</surname><given-names>XJ</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>ZL</given-names></name>
+<name name-style="western"><surname>Ji</surname><given-names>HL</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>XF</given-names></name>
+<etal/>
+</person-group>. <article-title>The associations between concentrations of gestational bisphenol analogues and thyroid related hormones in cord blood: A prospective cohort study</article-title>. <source>Ecotoxicology Environ Saf</source>. (<year>2023</year>) <volume>256</volume>:<page-range>114838</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.ecoenv.2023.114838</pub-id>
+<pub-id pub-id-type="pmid">36989560</pub-id></mixed-citation></ref><ref id="B52"><label>52</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Huang</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Liang</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Tang</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Yu</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Fan</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Liao</surname><given-names>Q</given-names></name>
+<etal/>
+</person-group>. <article-title>Associations of bisphenol exposure with thyroid hormones in pregnant women: a prospective birth cohort study in China</article-title>. <source>Environ Sci pollut Res Int</source>. (<year>2022</year>) <volume>29</volume>:<page-range>87170–83</page-range>. doi: <pub-id pub-id-type="doi">10.1007/s11356-022-21817-3</pub-id>
+<pub-id pub-id-type="pmid">35802331</pub-id></mixed-citation></ref><ref id="B53"><label>53</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Moher</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Liberati</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Tetzlaff</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Altman</surname><given-names>DG</given-names></name>
+<name name-style="western"><surname>Group</surname><given-names>P</given-names></name>
+</person-group>. <article-title>Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement</article-title>. <source>PloS Med</source>. (<year>2009</year>) <volume>6</volume>:<elocation-id>e1000097</elocation-id>. doi: <pub-id pub-id-type="doi">10.1371/journal.pmed.1000097</pub-id>
+<pub-id pub-id-type="pmid">19621072</pub-id>
+<pub-id pub-id-type="pmcid">PMC2707599</pub-id></mixed-citation></ref><ref id="B54"><label>54</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Tang</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Nakayama</surname><given-names>SF</given-names></name>
+<name name-style="western"><surname>Fan</surname><given-names>PP</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>ZW</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>J</given-names></name>
+<etal/>
+</person-group>. <article-title>Maternal urinary bisphenol A concentration and thyroid hormone levels of Chinese mothers and newborns by maternal body mass index</article-title>. <source>Environ Sci pollut Res</source>. (<year>2020</year>) <volume>27</volume>:<page-range>10939–49</page-range>. doi: <pub-id pub-id-type="doi">10.1007/s11356-020-07705-8</pub-id>
+<pub-id pub-id-type="pmid">31953761</pub-id></mixed-citation></ref><ref id="B55"><label>55</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Sarzo</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Abumallouh</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Marín</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Llop</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Beneito</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Lopez-Flores</surname><given-names>I</given-names></name>
+<etal/>
+</person-group>. <article-title>Association between phenols and thyroid hormones: The role of iodothyronine deiodinase genes</article-title>. <source>Environ pollut</source>. (<year>2022</year>) <volume>311</volume>:<fpage>119926</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envpol.2022.119926</pub-id>
+<pub-id pub-id-type="pmid">35964788</pub-id>
+</mixed-citation></ref><ref id="B56"><label>56</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Coiffier</surname><given-names>O</given-names></name>
+<name name-style="western"><surname>Nakiwala</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Rolland</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Malatesta</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Lyon-Caen</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Chovelon</surname><given-names>B</given-names></name>
+<etal/>
+</person-group>. <article-title>Exposure to a mixture of non-persistent environmental chemicals and neonatal thyroid function in a cohort with improved exposure assessment</article-title>. <source>Environ Int</source>. (<year>2023</year>) <volume>173</volume>:<page-range>107840</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2023.107840</pub-id>
+<pub-id pub-id-type="pmid">36857904</pub-id></mixed-citation></ref><ref id="B57"><label>57</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Aung</surname><given-names>MT</given-names></name>
+<name name-style="western"><surname>Johns</surname><given-names>LE</given-names></name>
+<name name-style="western"><surname>Ferguson</surname><given-names>KK</given-names></name>
+<name name-style="western"><surname>Mukherjee</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>McElrath</surname><given-names>TF</given-names></name>
+<name name-style="western"><surname>Meeker</surname><given-names>JD</given-names></name>
+</person-group>. <article-title>Corrigendum to “Thyroid hormone parameters during pregnancy in relation to urinary bisphenol A concentrations: A repeated measures study” [Environment International 104 (2017) 33-40]</article-title>. <source>Environ Int</source>. (<year>2019</year>) <volume>122</volume>:<fpage>417</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2018.11.063</pub-id>
+<pub-id pub-id-type="pmid">28410473</pub-id>
+<pub-id pub-id-type="pmcid">PMC5497503</pub-id></mixed-citation></ref><ref id="B58"><label>58</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Derakhshan</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Shu</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Peeters</surname><given-names>RP</given-names></name>
+<name name-style="western"><surname>Kortenkamp</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Lindh</surname><given-names>CH</given-names></name>
+<name name-style="western"><surname>Demeneix</surname><given-names>B</given-names></name>
+<etal/>
+</person-group>. <article-title>Association of urinary bisphenols and triclosan with thyroid function during early pregnancy</article-title>. <source>Environ Int</source>. (<year>2019</year>) <volume>133</volume>:<fpage>105123</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2019.105123</pub-id>
+<pub-id pub-id-type="pmid">31521814</pub-id>
+</mixed-citation></ref><ref id="B59"><label>59</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>McGee</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Génard-Walton</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Williams</surname><given-names>PL</given-names></name>
+<name name-style="western"><surname>Korevaar</surname><given-names>TIM</given-names></name>
+<name name-style="western"><surname>Chavarro</surname><given-names>JE</given-names></name>
+<name name-style="western"><surname>Meeker</surname><given-names>JD</given-names></name>
+<etal/>
+</person-group>. <article-title>Associations of maternal urinary concentrations of phenols, individually and as a mixture, with serum biomarkers of thyroid function and autoimmunity: results from the EARTH study</article-title>. <source>Toxics</source>. (<year>2023</year>) <volume>11</volume>(<issue>6</issue>):<page-range>521</page-range>. doi: <pub-id pub-id-type="doi">10.3390/toxics11060521</pub-id>
+<pub-id pub-id-type="pmcid">PMC10302981</pub-id><pub-id pub-id-type="pmid">37368621</pub-id></mixed-citation></ref><ref id="B60"><label>60</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Aker</surname><given-names>AM</given-names></name>
+<name name-style="western"><surname>Ferguson</surname><given-names>KK</given-names></name>
+<name name-style="western"><surname>Rosario</surname><given-names>ZY</given-names></name>
+<name name-style="western"><surname>Mukherjee</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Alshawabkeh</surname><given-names>AN</given-names></name>
+<name name-style="western"><surname>Calafat</surname><given-names>AM</given-names></name>
+<etal/>
+</person-group>. <article-title>A repeated measures study of phenol, paraben and Triclocarban urinary biomarkers and circulating maternal hormones during gestation in the Puerto Rico PROTECT cohort</article-title>. <source>Environ Health</source>. (<year>2019</year>) <volume>18</volume>:<fpage>28</fpage>. doi: <pub-id pub-id-type="doi">10.1186/s12940-019-0459-5</pub-id>
+<pub-id pub-id-type="pmid">30940137</pub-id>
+<pub-id pub-id-type="pmcid">PMC6444601</pub-id></mixed-citation></ref><ref id="B61"><label>61</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Koutaki</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Paltoglou</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Vourdoumpa</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Charmandari</surname><given-names>E</given-names></name>
+</person-group>. <article-title>The impact of bisphenol A on thyroid function in neonates and children: A systematic review of the literature</article-title>. <source>Nutrients</source>. (<year>2022</year>) <volume>14</volume>(<issue>1</issue>):<page-range>168</page-range>. doi: <pub-id pub-id-type="doi">10.3390/nu14010168</pub-id>
+<pub-id pub-id-type="pmcid">PMC8746969</pub-id><pub-id pub-id-type="pmid">35011041</pub-id></mixed-citation></ref><ref id="B62"><label>62</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Fukushi</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Honma</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Fujita</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Maternal thyroid deficiency during pregnancy and subsequent neuropsychological development of the child</article-title>. <source>N Engl J Med</source>. (<year>1999</year>) <volume>341</volume>:<fpage>2016</fpage>.<pub-id pub-id-type="pmid">10617395</pub-id></mixed-citation></ref><ref id="B63"><label>63</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Martínez</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>González</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Martí</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Marquès</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Rovira</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Kumar</surname><given-names>V</given-names></name>
+<etal/>
+</person-group>. <article-title>Human biomonitoring of bisphenol A along pregnancy: An exposure reconstruction of the EXHES-Spain cohort</article-title>. <source>Environ Res</source>. (<year>2021</year>) <volume>196</volume>:<fpage>110941</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envres.2021.110941</pub-id>
+<pub-id pub-id-type="pmid">33647302</pub-id>
+</mixed-citation></ref><ref id="B64"><label>64</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Moriyama</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Tagami</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Akamizu</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Usui</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Saijo</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Kanamoto</surname><given-names>N</given-names></name>
+<etal/>
+</person-group>. <article-title>Thyroid hormone action is disrupted by bisphenol A as an antagonist</article-title>. <source>J Clin Endocrinol Metab</source>. (<year>2002</year>) <volume>87</volume>:<page-range>5185–90</page-range>. doi: <pub-id pub-id-type="doi">10.1210/jc.2002-020209</pub-id>
+<pub-id pub-id-type="pmid">12414890</pub-id></mixed-citation></ref><ref id="B65"><label>65</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kudo</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Yamauchi</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Fukazawa</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Terao</surname><given-names>Y</given-names></name>
+</person-group>. <article-title>
+<italic toggle="yes">In vitro</italic> and in <italic toggle="yes">vivo</italic> analysis of the thyroid system-disrupting activities of brominated phenolic and phenol compounds in Xenopus laevis</article-title>. <source>Toxicol Sci</source>. (<year>2006</year>) <volume>92</volume>:<fpage>87</fpage>–<lpage>95</lpage>. doi: <pub-id pub-id-type="doi">10.1093/toxsci/kfj204</pub-id>
+<pub-id pub-id-type="pmid">16627555</pub-id>
+</mixed-citation></ref><ref id="B66"><label>66</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Terasaki</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Kosaka</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Kunikane</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Makino</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Shiraishi</surname><given-names>F</given-names></name>
+</person-group>. <article-title>Assessment of thyroid hormone activity of halogenated bisphenol A using a yeast two-hybrid assay</article-title>. <source>Chemosphere</source>. (<year>2011</year>) <volume>84</volume>:<page-range>1527–30</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.chemosphere.2011.04.045</pub-id>
+<pub-id pub-id-type="pmid">21550628</pub-id></mixed-citation></ref><ref id="B67"><label>67</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Rochester</surname><given-names>JR</given-names></name>
+</person-group>. <article-title>Bisphenol A and human health: A review of the literature</article-title>. <source>Reprod Toxicol</source>. (<year>2013</year>) <volume>42</volume>:<page-range>132–55</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.reprotox.2013.08.008</pub-id>
+<pub-id pub-id-type="pmid">23994667</pub-id></mixed-citation></ref><ref id="B68"><label>68</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Zhou</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Liang</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Miao</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>X</given-names></name>
+<etal/>
+</person-group>. <article-title>Prenatal exposure to bisphenol analogues and digit ratio in children at ages 4 and 6 years: A birth cohort study</article-title>. <source>Environ pollut</source>. (<year>2021</year>) <volume>278</volume>:<fpage>116820</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envpol.2021.116820</pub-id>
+<pub-id pub-id-type="pmid">33689944</pub-id>
+</mixed-citation></ref><ref id="B69"><label>69</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Yang</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Lin</surname><given-names>BG</given-names></name>
+<name name-style="western"><surname>Zhou</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Cao</surname><given-names>WC</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>PP</given-names></name>
+<name name-style="western"><surname>Deng</surname><given-names>YL</given-names></name>
+<etal/>
+</person-group>. <article-title>Sex-specific associations of prenatal exposure to bisphenol A and its alternatives with fetal growth parameters and gestational age</article-title>. <source>Environ Int</source>. (<year>2021</year>) <volume>146</volume>:<fpage>106305</fpage>. doi: <pub-id pub-id-type="doi">10.1016/j.envint.2020.106305</pub-id>
+<pub-id pub-id-type="pmid">33395947</pub-id>
+</mixed-citation></ref><ref id="B70"><label>70</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Takeuchi</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Tsutsumi</surname><given-names>O</given-names></name>
+<name name-style="western"><surname>Nakamura</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Ikezuki</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Takai</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Yano</surname><given-names>T</given-names></name>
+<etal/>
+</person-group>. <article-title>Gender difference in serum bisphenol A levels may be caused by liver UDP-glucuronosyltransferase activity in rats</article-title>. <source>Biochem Biophys Res Commun</source>. (<year>2004</year>) <volume>325</volume>:<page-range>549–54</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.bbrc.2004.10.073</pub-id>
+<pub-id pub-id-type="pmid">15530427</pub-id></mixed-citation></ref><ref id="B71"><label>71</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Court</surname><given-names>MH</given-names></name>
+</person-group>. <article-title>Isoform-selective probe substrates for in <italic toggle="yes">vitro</italic> studies of human UDP-glucuronosyltransferases</article-title>. <source>Methods Enzymol</source>. (<year>2005</year>) <volume>400</volume>:<page-range>104–16</page-range>. doi: <pub-id pub-id-type="doi">10.1016/S0076-6879(05)00007-8</pub-id>
+<pub-id pub-id-type="pmid">16399346</pub-id></mixed-citation></ref><ref id="B72"><label>72</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Rowland</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Miners</surname><given-names>JO</given-names></name>
+<name name-style="western"><surname>Mackenzie</surname><given-names>PI</given-names></name>
+</person-group>. <article-title>The UDP-glucuronosyltransferases: their role in drug metabolism and detoxification</article-title>. <source>Int J Biochem Cell Biol</source>. (<year>2013</year>) <volume>45</volume>:<page-range>1121–32</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.biocel.2013.02.019</pub-id>
+<pub-id pub-id-type="pmid">23500526</pub-id></mixed-citation></ref><ref id="B73"><label>73</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Patisaul</surname><given-names>HB</given-names></name>
+</person-group>. <article-title>Endocrine disrupting chemicals (EDCs) and the neuroendocrine system: Beyond estrogen, androgen, and thyroid</article-title>. <source>Adv Pharmacol</source>. (<year>2021</year>) <volume>92</volume>:<page-range>101–50</page-range>. doi: <pub-id pub-id-type="doi">10.1016/bs.apha.2021.03.007</pub-id>
+<pub-id pub-id-type="pmid">34452685</pub-id></mixed-citation></ref><ref id="B74"><label>74</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Guignard</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Gayrard</surname><given-names>V</given-names></name>
+<name name-style="western"><surname>Lacroix</surname><given-names>MZ</given-names></name>
+<name name-style="western"><surname>Puel</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Picard-Hagen</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Viguié</surname><given-names>C</given-names></name>
+</person-group>. <article-title>Evidence for bisphenol A-induced disruption of maternal thyroid homeostasis in the pregnant ewe at low level representative of human exposure</article-title>. <source>Chemosphere</source>. (<year>2017</year>) <volume>182</volume>:<page-range>458–67</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.chemosphere.2017.05.028</pub-id>
+<pub-id pub-id-type="pmid">28521160</pub-id></mixed-citation></ref><ref id="B75"><label>75</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Wu</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Beland</surname><given-names>FA</given-names></name>
+<name name-style="western"><surname>Fang</surname><given-names>JL</given-names></name>
+</person-group>. <article-title>Effect of triclosan, triclocarban, 2,2’,4,4’-tetrabromodiphenyl ether, and bisphenol A on the iodide uptake, thyroid peroxidase activity, and expression of genes involved in thyroid hormone synthesis</article-title>. <source>Toxicol In Vitro</source>. (<year>2016</year>) <volume>32</volume>:<page-range>310–9</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.tiv.2016.01.014</pub-id>
+<pub-id pub-id-type="pmid">26827900</pub-id></mixed-citation></ref><ref id="B76"><label>76</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Lee</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Youn</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>K</given-names></name>
+</person-group>. <article-title>Thyroid hormone disrupting potentials of bisphenol A and its analogues - in <italic toggle="yes">vitro</italic> comparison study employing rat pituitary (GH3) and thyroid follicular (FRTL-5) cells</article-title>. <source>Toxicol In Vitro</source>. (<year>2017</year>) <volume>40</volume>:<fpage>297</fpage>–<lpage>304</lpage>. doi: <pub-id pub-id-type="doi">10.1016/j.tiv.2017.02.004</pub-id>
+<pub-id pub-id-type="pmid">28167136</pub-id>
+</mixed-citation></ref><ref id="B77"><label>77</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Darrouzet</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Lindenthal</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Marcellin</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Pellequer</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Pourcher</surname><given-names>T</given-names></name>
+</person-group>. <article-title>The sodium/iodide symporter: state of the art of its molecular characterization</article-title>. <source>Biochim Biophys Acta</source>. (<year>2014</year>) <volume>1838</volume>:<page-range>244–53</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.bbamem.2013.08.013</pub-id>
+<pub-id pub-id-type="pmid">23988430</pub-id></mixed-citation></ref><ref id="B78"><label>78</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Waugh</surname><given-names>DT</given-names></name>
+</person-group>. <article-title>Fluoride exposure induces inhibition of sodium/iodide symporter (NIS) contributing to impaired iodine absorption and iodine deficiency: molecular mechanisms of inhibition and implications for public health</article-title>. <source>Int J Environ Res Public Health</source>. (<year>2019</year>) <volume>16</volume>(<issue>6</issue>):<page-range>1086</page-range>. doi: <pub-id pub-id-type="doi">10.3390/ijerph16061086</pub-id>
+<pub-id pub-id-type="pmcid">PMC6466022</pub-id><pub-id pub-id-type="pmid">30917615</pub-id></mixed-citation></ref><ref id="B79"><label>79</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Kogai</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Taki</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Brent</surname><given-names>GA</given-names></name>
+</person-group>. <article-title>Enhancement of sodium/iodide symporter expression in thyroid and breast cancer</article-title>. <source>Endocr Relat Cancer</source>. (<year>2006</year>) <volume>13</volume>:<fpage>797</fpage>–<lpage>826</lpage>. doi: <pub-id pub-id-type="doi">10.1677/erc.1.01143</pub-id>
+<pub-id pub-id-type="pmid">16954431</pub-id>
+</mixed-citation></ref><ref id="B80"><label>80</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Ferreira</surname><given-names>AC</given-names></name>
+<name name-style="western"><surname>Lima</surname><given-names>LP</given-names></name>
+<name name-style="western"><surname>Araújo</surname><given-names>RL</given-names></name>
+<name name-style="western"><surname>Müller</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Rocha</surname><given-names>RP</given-names></name>
+<name name-style="western"><surname>Rosenthal</surname><given-names>D</given-names></name>
+<etal/>
+</person-group>. <article-title>Rapid regulation of thyroid sodium-iodide symporter activity by thyrotrophin and iodine</article-title>. <source>J Endocrinol</source>. (<year>2005</year>) <volume>184</volume>:<fpage>69</fpage>–<lpage>76</lpage>. doi: <pub-id pub-id-type="doi">10.1677/joe.1.05643</pub-id>
+<pub-id pub-id-type="pmid">15642784</pub-id>
+</mixed-citation></ref><ref id="B81"><label>81</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Carvalho</surname><given-names>DP</given-names></name>
+<name name-style="western"><surname>Dupuy</surname><given-names>C</given-names></name>
+</person-group>. <article-title>Thyroid hormone biosynthesis and release</article-title>. <source>Mol Cell Endocrinol</source>. (<year>2017</year>) <volume>458</volume>:<fpage>6</fpage>–<lpage>15</lpage>. doi: <pub-id pub-id-type="doi">10.1016/j.mce.2017.01.038</pub-id>
+<pub-id pub-id-type="pmid">28153798</pub-id>
+</mixed-citation></ref><ref id="B82"><label>82</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Nilsson</surname><given-names>M</given-names></name>
+</person-group>. <article-title>Iodide handling by the thyroid epithelial cell</article-title>. <source>Exp Clin Endocrinol Diabetes</source>. (<year>2001</year>) <volume>109</volume>:<page-range>13–7</page-range>. doi: <pub-id pub-id-type="doi">10.1055/s-2001-11014</pub-id>
+<pub-id pub-id-type="pmid">11573132</pub-id></mixed-citation></ref><ref id="B83"><label>83</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Alotaibi</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Tuzlakoğlu-Öztürk</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Tazebay</surname><given-names>UH</given-names></name>
+</person-group>. <article-title>The thyroid na+/I- symporter: molecular characterization and genomic regulation</article-title>. <source>Mol Imaging Radionucl Ther</source>. (<year>2017</year>) <volume>26</volume>:<fpage>92</fpage>–<lpage>101</lpage>. doi: <pub-id pub-id-type="doi">10.4274/Mirt</pub-id>
+<pub-id pub-id-type="pmid">28117294</pub-id>
+<pub-id pub-id-type="pmcid">PMC5283716</pub-id></mixed-citation></ref><ref id="B84"><label>84</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Luongo</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Martin</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Vella</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Marsili</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Ambrosio</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Dentice</surname><given-names>M</given-names></name>
+<etal/>
+</person-group>. <article-title>The selective loss of the type 2 iodothyronine deiodinase in mouse thyrotrophs increases basal TSH but blunts the thyrotropin response to hypothyroidism</article-title>. <source>Endocrinology</source>. (<year>2015</year>) <volume>156</volume>:<page-range>745–54</page-range>. doi: <pub-id pub-id-type="doi">10.1210/en.2014-1698</pub-id>
+<pub-id pub-id-type="pmcid">PMC4298316</pub-id><pub-id pub-id-type="pmid">25456070</pub-id></mixed-citation></ref><ref id="B85"><label>85</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>MacKay</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Abizaid</surname><given-names>A</given-names></name>
+</person-group>. <article-title>A plurality of molecular targets: The receptor ecosystem for bisphenol-A (BPA)</article-title>. <source>Horm Behav</source>. (<year>2018</year>) <volume>101</volume>:<fpage>59</fpage>–<lpage>67</lpage>. doi: <pub-id pub-id-type="doi">10.1016/j.yhbeh.2017.11.001</pub-id>
+<pub-id pub-id-type="pmid">29104009</pub-id>
+</mixed-citation></ref><ref id="B86"><label>86</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Dang</surname><given-names>VH</given-names></name>
+<name name-style="western"><surname>Choi</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Jeung</surname><given-names>EB</given-names></name>
+</person-group>. <article-title>Estrogen receptors are involved in xenoestrogen induction of growth hormone in the rat pituitary gland</article-title>. <source>J Reprod Dev</source>. (<year>2009</year>) <volume>55</volume>:<page-range>206–13</page-range>. doi: <pub-id pub-id-type="doi">10.1262/jrd.20147</pub-id>
+<pub-id pub-id-type="pmid">19145065</pub-id></mixed-citation></ref><ref id="B87"><label>87</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Ahmed</surname><given-names>RG</given-names></name>
+</person-group>. <article-title>Maternal bisphenol A alters fetal endocrine system: Thyroid adipokine dysfunction</article-title>. <source>Food Chem Toxicol</source>. (<year>2016</year>) <volume>95</volume>:<page-range>168–74</page-range>. doi: <pub-id pub-id-type="doi">10.1016/j.fct.2016.06.017</pub-id>
+<pub-id pub-id-type="pmid">27326465</pub-id></mixed-citation></ref><ref id="B88"><label>88</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Ahmed</surname><given-names>RG</given-names></name>
+<name name-style="western"><surname>Walaa</surname><given-names>GH</given-names></name>
+<name name-style="western"><surname>Asmaa</surname><given-names>FS</given-names></name>
+</person-group>. <article-title>Suppressive effects of neonatal bisphenol A on the neuroendocrine system</article-title>. <source>Toxicol Ind Health</source>. (<year>2018</year>) <volume>34</volume>:<fpage>397</fpage>–<lpage>407</lpage>. doi: <pub-id pub-id-type="doi">10.1177/0748233718757082</pub-id>
+<pub-id pub-id-type="pmid">29656705</pub-id>
+</mixed-citation></ref><ref id="B89"><label>89</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<name name-style="western"><surname>Eckstrum</surname><given-names>KS</given-names></name>
+<name name-style="western"><surname>Edwards</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Banerjee</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Flaws</surname><given-names>JA</given-names></name>
+<name name-style="western"><surname>Katzenellenbogen</surname><given-names>JA</given-names></name>
+<etal/>
+</person-group>. <article-title>Effects of exposure to the endocrine-disrupting chemical bisphenol A during critical windows of murine pituitary development</article-title>. <source>Endocrinology</source>. (<year>2018</year>) <volume>159</volume>:<page-range>119–31</page-range>. doi: <pub-id pub-id-type="doi">10.1210/en.2017-00565</pub-id>
+<pub-id pub-id-type="pmcid">PMC5761589</pub-id><pub-id pub-id-type="pmid">29092056</pub-id></mixed-citation></ref></ref-list></back></article></pmc-articleset>
