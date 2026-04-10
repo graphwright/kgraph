@@ -138,21 +138,21 @@ jobs:
       - name: Build and push identity-server image
         run: |
           docker build \
-            -t $REGISTRY/identity-server:${{ github.sha }} \
-            -t $REGISTRY/identity-server:latest \
+            -t $REGISTRY/kgraph-identity-server:${{ github.sha }} \
+            -t $REGISTRY/kgraph-identity-server:latest \
             identity-server/
-          docker push $REGISTRY/identity-server:${{ github.sha }}
-          docker push $REGISTRY/identity-server:latest
+          docker push $REGISTRY/kgraph-identity-server:${{ github.sha }}
+          docker push $REGISTRY/kgraph-identity-server:latest
 
       - name: Build and push medlit-domain image
         run: |
           docker build \
             -f medlit/Dockerfile.domain-service \
-            -t $REGISTRY/medlit-domain:${{ github.sha }} \
-            -t $REGISTRY/medlit-domain:latest \
+            -t $REGISTRY/kgraph-medlit-domain:${{ github.sha }} \
+            -t $REGISTRY/kgraph-medlit-domain:latest \
             .
-          docker push $REGISTRY/medlit-domain:${{ github.sha }}
-          docker push $REGISTRY/medlit-domain:latest
+          docker push $REGISTRY/kgraph-medlit-domain:${{ github.sha }}
+          docker push $REGISTRY/kgraph-medlit-domain:latest
 
   # -------------------------------------------------------------------------
   # Deploy to staging — triggered by push to main

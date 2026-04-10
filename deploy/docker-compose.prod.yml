@@ -108,7 +108,7 @@ services:
       - gw-network
 
   identity-server:
-    image: ${REGISTRY}/identity-server:latest
+    image: ${REGISTRY}/kgraph-identity-server:latest
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       REDIS_URL: redis://redis:6379
@@ -131,7 +131,7 @@ services:
       start_period: 15s
 
   medlit-domain:
-    image: ${REGISTRY}/medlit-domain:latest
+    image: ${REGISTRY}/kgraph-medlit-domain:latest
     environment:
       UMLS_API_KEY: ${UMLS_API_KEY:-}
       CANONICAL_ID_CACHE_PATH: /data/canonical_id_cache.json
