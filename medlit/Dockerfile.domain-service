@@ -5,9 +5,9 @@ WORKDIR /app
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 # kgschema is on TestPyPI; kgbundle and kgraph are not published, so we COPY them.
-# Build context must be the graphwright/ root (one level above medlit/).
-COPY kgraph/kgbundle ./kgbundle
-COPY kgraph/kgraph ./kgraph
+# Build context is the monorepo root (kgraph/).
+COPY kgbundle ./kgbundle
+COPY kgraph ./kgraph
 
 # A file named logging.py under this tree shadows the stdlib when Python resolves
 # `import logging` (see concurrent.futures → logging). Remove it even if an old
