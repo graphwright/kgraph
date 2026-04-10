@@ -281,11 +281,7 @@ NORMALIZED_TO_BUNDLE: dict[str, str] = {k.lower().replace(" ", "").replace("_", 
 # Graph-viz entity type specs: entity_type string -> {color, label}
 # Keys match get_entity_type() return values (lowercase, no spaces).
 # Derived from class name: DiseaseEntity -> "disease". Used by graph API.
-ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {
-    cls.__name__.replace("Entity", "").lower(): {"color": cls.spec.color, "label": cls.spec.label}
-    for cls in ENTITY_CLASSES
-    if hasattr(cls, "spec")
-}
+ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {cls.__name__.replace("Entity", "").lower(): {"color": cls.spec.color, "label": cls.spec.label} for cls in ENTITY_CLASSES if hasattr(cls, "spec")}
 ENTITY_TYPE_SPECS["default"] = {"color": "#78909c", "label": "Other"}
 
 

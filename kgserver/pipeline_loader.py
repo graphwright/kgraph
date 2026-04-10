@@ -53,30 +53,19 @@ def get_pipeline() -> IngestPipeline:
 
     module_path, _, class_name = class_path.rpartition(".")
     if not module_path:
-        raise RuntimeError(
-            f"INGEST_PIPELINE_CLASS={class_path!r} must be a dotted path including "
-            "module and class, e.g. 'medlit.pipeline.MedlitPipeline'"
-        )
+        raise RuntimeError(f"INGEST_PIPELINE_CLASS={class_path!r} must be a dotted path including " "module and class, e.g. 'medlit.pipeline.MedlitPipeline'")
 
     try:
         module = importlib.import_module(module_path)
     except ImportError as exc:
-        raise RuntimeError(
-            f"Could not import module {module_path!r} from INGEST_PIPELINE_CLASS={class_path!r}. "
-            "Ensure the domain pipeline package is installed."
-        ) from exc
+        raise RuntimeError(f"Could not import module {module_path!r} from INGEST_PIPELINE_CLASS={class_path!r}. " "Ensure the domain pipeline package is installed.") from exc
 
     cls = getattr(module, class_name, None)
     if cls is None:
-        raise RuntimeError(
-            f"Module {module_path!r} has no attribute {class_name!r} "
-            f"(INGEST_PIPELINE_CLASS={class_path!r})."
-        )
+        raise RuntimeError(f"Module {module_path!r} has no attribute {class_name!r} " f"(INGEST_PIPELINE_CLASS={class_path!r}).")
 
     if not (isinstance(cls, type) and issubclass(cls, IngestPipeline)):
-        raise TypeError(
-            f"{class_path!r} is not a subclass of IngestPipeline."
-        )
+        raise TypeError(f"{class_path!r} is not a subclass of IngestPipeline.")
 
     logger.info("Loaded ingest pipeline: %s", class_path)
     _pipeline_instance = cls()
