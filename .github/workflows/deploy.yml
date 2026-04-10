@@ -196,19 +196,32 @@ jobs:
           host: 137.184.49.99
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GITHUB_TOKEN,GITHUB_ACTOR
           script: |
             set -e
             cd /opt/graphwright
 
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io \
-              --username ${{ github.actor }} \
+            echo "$GITHUB_TOKEN" | docker login ghcr.io \
+              --username "$GITHUB_ACTOR" \
               --password-stdin
 
+            cat > /tmp/deploy.env <<EOF
+            POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+            ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
+            OPENAI_API_KEY=$OPENAI_API_KEY
+            UMLS_API_KEY=$UMLS_API_KEY
+            LLM_PROVIDER=$LLM_PROVIDER
+            PASS1_LLM_BACKEND=$PASS1_LLM_BACKEND
+            INGEST_PIPELINE_CLASS=$INGEST_PIPELINE_CLASS
+            PUBLIC_MARKETING_SITE_URL=$PUBLIC_MARKETING_SITE_URL
+            EOF
+
             REGISTRY=ghcr.io/graphwright docker compose \
-              --env-file /root/.env \
+              --env-file /tmp/deploy.env \
               -f docker-compose.prod.yml \
               up -d --pull always --remove-orphans
 
+            rm -f /tmp/deploy.env
             mv /tmp/nginx-staging.conf /etc/nginx/sites-enabled/kgraph
             nginx -t && nginx -s reload
 
@@ -254,17 +267,31 @@ jobs:
           host: 104.131.171.175
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GITHUB_TOKEN,GITHUB_ACTOR
           script: |
             set -e
             cd /opt/graphwright
 
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io \
-              --username ${{ github.actor }} \
+            echo "$GITHUB_TOKEN" | docker login ghcr.io \
+              --username "$GITHUB_ACTOR" \
               --password-stdin
 
+            cat > /tmp/deploy.env <<EOF
+            POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+            ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
+            OPENAI_API_KEY=$OPENAI_API_KEY
+            UMLS_API_KEY=$UMLS_API_KEY
+            LLM_PROVIDER=$LLM_PROVIDER
+            PASS1_LLM_BACKEND=$PASS1_LLM_BACKEND
+            INGEST_PIPELINE_CLASS=$INGEST_PIPELINE_CLASS
+            PUBLIC_MARKETING_SITE_URL=$PUBLIC_MARKETING_SITE_URL
+            EOF
+
             REGISTRY=ghcr.io/graphwright docker compose \
-              --env-file /root/.env -f docker-compose.prod.yml \
+              --env-file /tmp/deploy.env \
+              -f docker-compose.prod.yml \
               up -d --pull always --remove-orphans
 
+            rm -f /tmp/deploy.env
             mv /tmp/nginx-prod.conf /etc/nginx/sites-enabled/kgraph
             nginx -t && nginx -s reload
