@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+.mypy_cache/
+.ruff_cache/
+canonical_id_cache.json

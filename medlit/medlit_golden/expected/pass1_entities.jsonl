@@ -1,0 +1,5 @@
+{"entity_id": "PMC999", "entity_type": "paper", "paper_id": "PMC999", "title": "Efficacy of Olaparib in BRCA-Mutated Breast Cancer", "abstract": "Olaparib, a PARP inhibitor, showed significant efficacy in\nBRCA1/2-mutated metastatic breast cancer patients (N=302, RCT).\nResponse rate: 59.9% (95% CI: 52-66%, p<0.001).\n", "publication_date": "2026-02-03T00:00:00", "journal": "New England Journal of Medicine", "paper_metadata": {"study_type": "rct", "sample_size": 302}}
+{"entity_id": "RxNorm:1187832", "entity_type": "drug", "name": "Olaparib", "rxnorm_id": "1187832", "drug_class": "PARP inhibitor", "source": "rxnorm"}
+{"entity_id": "UMLS:C0006142", "entity_type": "disease", "name": "Breast Cancer", "umls_id": "C0006142", "source": "umls"}
+{"entity_id": "HGNC:1100", "entity_type": "gene", "name": "BRCA1", "symbol": "BRCA1", "hgnc_id": "HGNC:1100", "source": "hgnc"}
+{"entity_id": "HGNC:1101", "entity_type": "gene", "name": "BRCA2", "symbol": "BRCA2", "hgnc_id": "HGNC:1101", "source": "hgnc"}

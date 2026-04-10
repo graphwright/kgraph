@@ -1,0 +1,4 @@
+Title: Efficacy of Olaparib in BRCA-Mutated Breast Cancer
+Abstract: Olaparib, a PARP inhibitor, showed significant efficacy in
+BRCA1/2-mutated metastatic breast cancer patients (N=302, RCT).
+Response rate: 59.9% (95% CI: 52-66%, p<0.001).

@@ -1,0 +1,270 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+env:
+  REGISTRY: ghcr.io/graphwright
+
+jobs:
+  # -------------------------------------------------------------------------
+  # Build docs site and push all Docker images
+  # -------------------------------------------------------------------------
+  build:
+    runs-on: ubuntu-latest
+    environment: BuildEnv
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download identity-book bundle
+        run: |
+          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/identity-book/releases/latest \
+            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
+          if [ -z "$ASSET_URL" ]; then
+            echo "ERROR: failed to resolve identity-book release asset URL" >&2
+            exit 1
+          fi
+          mkdir -p /tmp/identity-book
+          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/identity-book
+          mkdir -p deploy/books
+          cp /tmp/identity-book/text.pdf deploy/books/the-identity-server.pdf
+          mkdir -p docs/identity-book
+          cp -r /tmp/identity-book/docs/. docs/identity-book/
+
+      - name: Download kg-book bundle
+        run: |
+          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/kg-book/releases/latest \
+            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
+          if [ -z "$ASSET_URL" ]; then
+            echo "ERROR: failed to resolve kg-book release asset URL" >&2
+            exit 1
+          fi
+          mkdir -p /tmp/kg-book
+          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/kg-book
+          mkdir -p deploy/books
+          cp /tmp/kg-book/text.pdf deploy/books/knowledge-graphs-from-unstructured-text.pdf
+          mkdir -p docs/kg-book
+          cp -r /tmp/kg-book/docs/. docs/kg-book/
+
+      - name: Download bfs-ql-book bundle
+        run: |
+          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/bfs-ql-book/releases/latest \
+            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
+          if [ -z "$ASSET_URL" ]; then
+            echo "ERROR: failed to resolve bfs-ql-book release asset URL" >&2
+            exit 1
+          fi
+          mkdir -p /tmp/bfs-ql-book
+          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/bfs-ql-book
+          mkdir -p deploy/books
+          cp /tmp/bfs-ql-book/bfsql.pdf deploy/books/bfs-ql.pdf
+          mkdir -p docs/bfs-ql-book
+          cp -r /tmp/bfs-ql-book/docs/. docs/bfs-ql-book/
+
+      - name: Integrate books into docs site
+        run: |
+          pip install pyyaml
+          python3 deploy/scripts/inject_book_nav.py \
+            /tmp/identity-book/mkdocs.yml \
+            mkdocs.yml \
+            "The Identity Server" \
+            identity-book
+          python3 deploy/scripts/inject_book_nav.py \
+            /tmp/kg-book/mkdocs.yml \
+            mkdocs.yml \
+            "Knowledge Graphs from Unstructured Text" \
+            kg-book
+          python3 deploy/scripts/inject_book_nav.py \
+            /tmp/bfs-ql-book/mkdocs.yml \
+            mkdocs.yml \
+            "BFS-QL" \
+            bfs-ql-book
+          python3 deploy/scripts/update_books_links.py \
+            docs/books.md
+
+      - name: Build docs site
+        run: |
+          pip install mkdocs mkdocs-material
+          mkdocs build
+
+      - name: Copy docs site and books into deploy image context
+        run: |
+          cp -r site deploy/site
+          cp -r deploy/books deploy/site/books
+
+      - name: Log in to ghcr.io
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push docs image
+        run: |
+          docker build \
+            -t $REGISTRY/docs:${{ github.sha }} \
+            -t $REGISTRY/docs:latest \
+            deploy/
+          docker push $REGISTRY/docs:${{ github.sha }}
+          docker push $REGISTRY/docs:latest
+
+      - name: Build and push api+mcpserver image
+        run: |
+          docker build \
+            -f kgserver/Dockerfile \
+            -t $REGISTRY/kgserver:${{ github.sha }} \
+            -t $REGISTRY/kgserver:latest \
+            .
+          docker push $REGISTRY/kgserver:${{ github.sha }}
+          docker push $REGISTRY/kgserver:latest
+
+      - name: Build and push gwchat image
+        run: |
+          docker build \
+            --build-arg NEXT_PUBLIC_BASE_PATH=/chat \
+            -t $REGISTRY/gwchat:${{ github.sha }} \
+            -t $REGISTRY/gwchat:latest \
+            gwchat/
+          docker push $REGISTRY/gwchat:${{ github.sha }}
+          docker push $REGISTRY/gwchat:latest
+
+      - name: Build and push identity-server image
+        run: |
+          docker build \
+            -t $REGISTRY/identity-server:${{ github.sha }} \
+            -t $REGISTRY/identity-server:latest \
+            identity-server/
+          docker push $REGISTRY/identity-server:${{ github.sha }}
+          docker push $REGISTRY/identity-server:latest
+
+      - name: Build and push medlit-domain image
+        run: |
+          docker build \
+            -f medlit/Dockerfile.domain-service \
+            -t $REGISTRY/medlit-domain:${{ github.sha }} \
+            -t $REGISTRY/medlit-domain:latest \
+            .
+          docker push $REGISTRY/medlit-domain:${{ github.sha }}
+          docker push $REGISTRY/medlit-domain:latest
+
+  # -------------------------------------------------------------------------
+  # Deploy to staging — triggered by push to main
+  # -------------------------------------------------------------------------
+  deploy-staging:
+    if: github.ref_type == 'branch'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: BuildEnv
+    permissions:
+      contents: read
+      packages: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy compose file and gwchat config to staging droplet
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 137.184.49.99
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "deploy/docker-compose.prod.yml,deploy/gwchat-config"
+          target: /opt/graphwright
+          strip_components: 1
+
+      - name: Copy nginx config to staging droplet
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 137.184.49.99
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "deploy/nginx-staging.conf"
+          target: /tmp
+          strip_components: 1
+
+      - name: Deploy to staging droplet
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 137.184.49.99
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/graphwright
+
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io \
+              --username ${{ github.actor }} \
+              --password-stdin
+
+            REGISTRY=ghcr.io/graphwright docker compose \
+              --env-file /root/.env \
+              -f docker-compose.prod.yml \
+              up -d --pull always --remove-orphans
+
+            mv /tmp/nginx-staging.conf /etc/nginx/sites-enabled/kgraph
+            nginx -t && nginx -s reload
+
+  # -------------------------------------------------------------------------
+  # Deploy to prod — triggered by version tag (v*)
+  # -------------------------------------------------------------------------
+  deploy-prod:
+    if: github.ref_type == 'tag'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: BuildEnv
+    permissions:
+      contents: read
+      packages: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy compose file and gwchat config to prod droplet
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 104.131.171.175
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "deploy/docker-compose.prod.yml,deploy/gwchat-config"
+          target: /opt/graphwright
+          strip_components: 1
+
+      - name: Copy nginx config to prod droplet
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 104.131.171.175
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "deploy/nginx-prod.conf"
+          target: /tmp
+          strip_components: 1
+
+      - name: Deploy to prod droplet
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 104.131.171.175
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/graphwright
+
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io \
+              --username ${{ github.actor }} \
+              --password-stdin
+
+            REGISTRY=ghcr.io/graphwright docker compose \
+              --env-file /root/.env -f docker-compose.prod.yml \
+              up -d --pull always --remove-orphans
+
+            mv /tmp/nginx-prod.conf /etc/nginx/sites-enabled/kgraph
+            nginx -t && nginx -s reload

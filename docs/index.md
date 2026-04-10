@@ -1,42 +1,63 @@
-# KGserver
+# Knowledge Graph Framework — Documentation
 
-A **read-only server** for a loaded knowledge graph. It does not ingest raw documents; domain pipelines build a bundle (entities + relationships), and the server loads that bundle at startup.
+A framework for building knowledge graphs over complex professional or academic
+literature: medical papers, legal documents, technical specifications. Every assertion
+in the graph traces back to a source document and location. Provenance is not an
+afterthought — it is load-bearing.
 
-**Quick links:**
+For the conceptual foundation, see **[Overview](overview.md)** and
+**[Architecture](architecture.md)**. For book-length treatments of the full
+pipeline, see **[Graphwright Publications](books.md)**.
+
+## Live tools
 
 - [Medical literature chat](/chat/)
 - [OpenAPI spec](/docs/)
 - [Graph visualization](/graph-viz/) — currently focused on medical literature
 - [GraphQL GUI](/graphiql/)
 
-## What it exposes
+---
 
-| Resource | Path |
-|----------|------|
-| Health | `GET /health` |
-| REST entities | `GET /api/v1/entities` |
-| REST relationships | `GET /api/v1/relationships` |
-| GraphQL | `POST /graphql` |
-| GraphiQL (playground) | `GET /graphiql/` |
-| OpenAPI docs | `GET /docs` |
-| Chat (Chainlit, when enabled) | `GET /chat/` |
-| Graph visualization | `GET /graph-viz/` |
+## Concepts and Architecture
 
-## How to connect
+- [Overview](overview.md) — why knowledge graphs, core concepts, two-pass ingestion model
+- [Architecture](architecture.md) — component breakdown, module structure, immutability design
 
-Use the server base URL (e.g. `http://localhost:8000`). Auth is not required unless you configure it. GraphQL and REST use the same origin.
+## Identity and Entity Resolution
 
-## How to run
+- [Canonical IDs](identity/canonical-ids.md) — entity lifecycle, authority lookup, synonym caching
+- [Deduplication](identity/deduplication.md) — merging and flagging near-duplicate entities
 
-Minimal (SQLite, single bundle):
+## Trust and Provenance
 
-```bash
-BUNDLE_PATH=/path/to/bundle.zip uv run uvicorn main:app --host 0.0.0.0 --port 8000
-```
+- [Provenance](trust/provenance.md) — source attribution, confidence scores, audit trail
+- [Conflicting Claims](trust/conflicting-claims.md) — representing disagreements, not silently resolving them
 
-Run from the kgserver directory (or set `PYTHONPATH` so `kgserver` and `kgbundle` are importable). For PostgreSQL, Docker, and MCP setup, see **[Deployment and Operations](deployment-and-operations.md)** in the docs.
+## Ingestion Pipeline
 
-## Where to read more
+- [Pipeline](ingestion/pipeline.md) — stages and interfaces (parser → extractor → resolver → embedder)
+- [Chunking](ingestion/chunking.md) — document segmentation strategies
+- [Error Handling](ingestion/error-handling.md) — partial extraction, retries, fallback behavior
 
-- **Bundle format, pipeline, and operations** — Use the docs nav (Overview, Architecture, Pipeline, Storage and Export, Deployment and Operations).
-- **Building a bundle** — See the medlit and Sherlock examples and [Adapting to Your Domain](adapting-to-your-domain.md).
+## LLM Integration
+
+- [MCP Server](llm-integration/mcp-server.md) — tools exposed to LLMs via Model Context Protocol
+- [MCP Troubleshooting](llm-integration/mcp-troubleshooting.md) — connection and tool call issues
+- [Querying with LLMs](llm-integration/querying.md) — how LLMs navigate and query the graph
+- [Embeddings](llm-integration/embeddings.md) — semantic search strategy, storage and retrieval
+- [Extraction Prompts](llm-integration/extraction-prompts.md) — prompt design for entity and relationship extraction
+
+## Schema Design
+
+- [Schema Design Guide](schema/schema-design-guide.md) — defining DomainSchema, entity and relationship subclasses
+- [Adapting to Your Domain](schema/adapting-to-your-domain.md) — step-by-step: define schema, write prompts, configure pipeline, validate
+
+## Storage, Export, and Serving
+
+- [Storage and Export](storage-and-export.md) — bundle format (manifest.json + JSONL), export, query interfaces
+- [Deployment and Operations](deployment-and-operations.md) — SQLite vs PostgreSQL, Docker, Chainlit, scaling
+
+## Examples
+
+- [Medical Literature (medlit)](examples/medlit.md) — reference biomedical implementation using JATS XML and UMLS
+- [Sherlock Holmes](examples/sherlock.md) — simplified literary example, no external authorities

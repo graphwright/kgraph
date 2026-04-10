@@ -1,0 +1,40 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+
+# kgschema is on TestPyPI; kgbundle and kgraph are not published, so we COPY them.
+# Build context must be the graphwright/ root (one level above medlit/).
+COPY kgraph/kgbundle ./kgbundle
+COPY kgraph/kgraph ./kgraph
+
+# A file named logging.py under this tree shadows the stdlib when Python resolves
+# `import logging` (see concurrent.futures → logging). Remove it even if an old
+# COPY layer or checkout still had kgraph/logging.py; use kgraph.pprint_logging instead.
+RUN rm -f /app/kgraph/logging.py
+
+# Copy the medlit package source
+COPY medlit/medlit/ ./medlit/
+COPY medlit/medlit_schema/ ./medlit_schema/
+COPY medlit/domain_service/ ./domain_service/
+
+# kgraph/__init__.py eagerly imports numpy/sklearn (ingestion framework deps
+# not needed by the domain service).  Replace it with an empty stub so that
+# submodule imports like `from kgraph.canonical_id import ...` still work.
+RUN echo "# domain-service stub: suppress heavy ingestion imports" > /app/kgraph/__init__.py
+
+# Install runtime deps from PyPI, kgschema from TestPyPI.
+# All packages are importable via PYTHONPATH — no editable install needed.
+RUN uv pip install --system fastapi "uvicorn[standard]" pydantic httpx requests \
+    && uv pip install --system --index-url https://test.pypi.org/simple/ --no-deps kgschema
+
+ENV PYTHONUNBUFFERED=1 \
+    CANONICAL_ID_CACHE_PATH=/data/canonical_id_cache.json \
+    PYTHONPATH="/app:/app/kgbundle"
+
+VOLUME ["/data"]
+
+EXPOSE 8080
+
+CMD ["uvicorn", "domain_service.app:app", "--host", "0.0.0.0", "--port", "8080"]

@@ -1,0 +1,20 @@
+{
+  "paper": {
+    "pmcid": "PMC99999999",
+    "title": "Second paper with overlapping entity",
+    "authors": ["Author B"],
+    "journal": "Other Journal",
+    "year": 2025
+  },
+  "entities": [
+    {"id": "e01", "class": "Disease", "name": "male breast cancer", "synonyms": [], "source": "extracted", "canonical_id": null},
+    {"id": "e02", "class": "Disease", "name": "metastasis", "synonyms": [], "source": "extracted", "canonical_id": null}
+  ],
+  "evidence_entities": [
+    {"id": "PMC99999999:results:0:llm", "class": "Evidence", "paper_id": "PMC99999999", "text_span_id": "PMC99999999:results:0", "confidence": 0.9, "extraction_method": "llm", "source": "extracted"}
+  ],
+  "relationships": [
+    {"subject": "e01", "predicate": "SUBTYPE_OF", "object": "e02", "evidence_ids": ["PMC99999999:results:0:llm"], "source_papers": ["PMC99999999"], "confidence": 0.85, "properties": {}, "section": "results", "asserted_by": "llm"}
+  ],
+  "notes": []
+}

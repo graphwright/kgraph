@@ -1,0 +1,25 @@
+{
+  "paper": {
+    "pmcid": "PMC12756687",
+    "title": "Pleural Metastasis From Male Breast Cancer: A Case Report",
+    "authors": ["Patrizia Straccia", "Esther Diana Rossi"],
+    "journal": "Diagnostic Cytopathology",
+    "year": 2026,
+    "study_type": "case_report",
+    "eco_type": "ECO:0006016"
+  },
+  "entities": [
+    {"id": "e01", "class": "Disease", "name": "male breast cancer", "synonyms": ["MBC"], "source": "extracted", "canonical_id": null},
+    {"id": "e02", "class": "Disease", "name": "ductal carcinoma", "synonyms": [], "source": "extracted", "canonical_id": null},
+    {"id": "g01", "class": "Gene", "name": "BRCA2", "symbol": "BRCA2", "source": "extracted", "canonical_id": null},
+    {"id": "d01", "class": "Drug", "name": "eribulin", "brand_names": ["Halaven"], "source": "extracted", "canonical_id": null}
+  ],
+  "evidence_entities": [
+    {"id": "PMC12756687:abstract:0:llm", "class": "Evidence", "paper_id": "PMC12756687", "text_span_id": "PMC12756687:abstract:0", "text": "positive for ER (70%)", "confidence": 0.95, "extraction_method": "llm", "study_type": "case_report", "eco_type": "ECO:0006016", "source": "extracted"}
+  ],
+  "relationships": [
+    {"subject": "d01", "predicate": "TREATS", "object": "e02", "evidence_ids": ["PMC12756687:abstract:0:llm"], "source_papers": ["PMC12756687"], "confidence": 0.9, "properties": {}, "section": "case_report", "asserted_by": "llm"},
+    {"subject": "g01", "predicate": "INCREASES_RISK", "object": "e01", "evidence_ids": ["PMC12756687:abstract:0:llm"], "source_papers": ["PMC12756687"], "confidence": 0.55, "properties": {}, "section": "introduction", "asserted_by": "llm"}
+  ],
+  "notes": []
+}

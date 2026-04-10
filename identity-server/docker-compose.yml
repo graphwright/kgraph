@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: identity
+      POSTGRES_PASSWORD: identity
+      POSTGRES_DB: identity
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U identity"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - identity-net
+
+  redis:
+    image: redis:7-alpine
+    networks:
+      - identity-net
+
+  domain-stub:
+    build:
+      context: .
+      dockerfile: Dockerfile.stub
+    environment:
+      - PYTHONPATH=/app
+    ports:
+      - "8081:8080"
+    networks:
+      - identity-net
+
+  identity-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql://identity:identity@postgres:5432/identity
+      REDIS_URL: redis://redis:6379/0
+      DOMAIN_SERVICE_URL: http://domain-stub:8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      domain-stub:
+        condition: service_started
+    networks:
+      - identity-net
+
+networks:
+  identity-net:
+    driver: bridge

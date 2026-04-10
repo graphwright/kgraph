@@ -1,0 +1,1 @@
+{"entity_id": "PMC999:abstract:1:llm", "entity_type": "evidence", "paper_id": "PMC999", "text_span_id": "PMC999:abstract:1", "confidence": 0.9, "extraction_method": "llm", "study_type": "rct", "sample_size": 302, "eco_type": "ECO:0007673", "obi_study_design": "OBI:0000008"}

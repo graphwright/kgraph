@@ -1,0 +1,3 @@
+{"subject_id": "RxNorm:1187832", "predicate": "TREATS", "object_id": "UMLS:C0006142", "evidence_ids": ["PMC999:abstract:1:llm"], "confidence": 0.85, "response_rate": 0.599}
+{"subject_id": "HGNC:1100", "predicate": "INCREASES_RISK", "object_id": "UMLS:C0006142", "evidence_ids": ["PMC999:abstract:1:llm"], "confidence": 0.8}
+{"subject_id": "HGNC:1101", "predicate": "INCREASES_RISK", "object_id": "UMLS:C0006142", "evidence_ids": ["PMC999:abstract:1:llm"], "confidence": 0.8}

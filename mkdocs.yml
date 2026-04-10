@@ -1,0 +1,64 @@
+site_name: Domain-Agnostic Knowledge Graph Server
+site_description: Documentation for the domain-agnostic knowledge graph server
+repo_url: https://github.com/wware/kgraph
+repo_name: wware/kgraph
+
+# Served under /site/ by FastAPI; use relative URLs so nav and in-doc links work.
+site_url: http://localhost:8000/site/
+# Avoid directory-style URLs (/overview/) so links stay relative (overview.html) under /site/
+use_directory_urls: false
+# Explicit docs dir (Dockerfile copies docs/ and kgserver/index.md into it)
+docs_dir: docs
+
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  # External URLs only: Material nests this as a collapsible section (expand to see links).
+  - Live tools:
+      - Medical literature chat: /chat/
+      - OpenAPI spec: /docs/
+      - Graph visualization: /graph-viz/
+      - GraphQL GUI: /graphiql/
+  - Overview: overview.md
+  - Architecture: architecture.md
+  - Identity:
+    - Canonical IDs: identity/canonical-ids.md
+    - Deduplication: identity/deduplication.md
+  - Trust:
+    - Provenance: trust/provenance.md
+    - Conflicting Claims: trust/conflicting-claims.md
+  - Ingestion:
+    - Pipeline: ingestion/pipeline.md
+    - Chunking: ingestion/chunking.md
+    - Error Handling: ingestion/error-handling.md
+  - LLM Integration:
+    - MCP Server: llm-integration/mcp-server.md
+    - MCP Troubleshooting: llm-integration/mcp-troubleshooting.md
+    - Querying with LLMs: llm-integration/querying.md
+    - Embeddings: llm-integration/embeddings.md
+    - Extraction Prompts: llm-integration/extraction-prompts.md
+  - Schema:
+    - Schema Design Guide: schema/schema-design-guide.md
+    - Adapting to Your Domain: schema/adapting-to-your-domain.md
+  - Storage and Export: storage-and-export.md
+  - Deployment and Operations: deployment-and-operations.md
+  - Examples:
+    - Medlit: examples/medlit.md
+    - Sherlock: examples/sherlock.md
+  - Contributing: contributing.md
+  - Books: books.md
+

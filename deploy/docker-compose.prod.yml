@@ -1,83 +1,92 @@
 services:
+  docs:
+    image: ${REGISTRY}/docs:latest
+    environment:
+      CHAT_UPSTREAM: http://gwchat:3000
+    depends_on:
+      gwchat:
+        condition: service_started
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8003:8000"
+    networks:
+      - gw-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
   api:
-    build:
-      context: .
-      dockerfile: kgserver/Dockerfile
-    stdin_open: true
-    tty: true
+    image: ${REGISTRY}/kgserver:latest
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       BUNDLE_PATH: /bundle
-      MCP_SSE_URL: ${MCP_SSE_URL:-http://mcpserver:8001/sse}
+      MCP_SSE_URL: http://mcpserver:8001/sse
       LLM_PROVIDER: ${LLM_PROVIDER:-anthropic}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-6}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
-      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
-      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
       IDENTITY_SERVER_URL: http://identity-server:8080
-    volumes:
-      - ./bundle:/bundle:ro
-    #  # - /home/wware/S.zip:/bundle/S.zip:ro
+      PUBLIC_MARKETING_SITE_URL: ${PUBLIC_MARKETING_SITE_URL:-https://graphwright.io/}
+      KGSERVER_SERVE_MKDOCS_SITE: "false"
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - bundle:/bundle:ro
     depends_on:
       postgres:
         condition: service_healthy
+      bundle-init:
+        condition: service_completed_successfully
     restart: unless-stopped
     networks:
-      - kgserver-network
+      - gw-network
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 10s
-    profiles: ["api"]
+      start_period: 15s
 
-  # MCP server: can take 30–60s to start on small droplets (heavy Python imports: Strawberry, SQLAlchemy, storage)
-  # Shares bundle volume with api so get_paper_source and get_mentions can read sources/ and mentions.jsonl
   mcpserver:
-    build:
-      context: .
-      dockerfile: kgserver/Dockerfile
+    image: ${REGISTRY}/kgserver:latest
     command: ["python", "-m", "uvicorn", "mcp_main:app", "--host", "0.0.0.0", "--port", "8001"]
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       BUNDLE_PATH: /bundle
-      # Pass 1 (ingest worker) uses LLM; pass through same keys as api
       PASS1_LLM_BACKEND: ${PASS1_LLM_BACKEND:-anthropic}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       REDIS_URL: redis://redis:6379
       IDENTITY_SERVER_URL: http://identity-server:8080
-    volumes:
-      - ./bundle:/bundle:ro
-      - ingest_workspace:/app/ingest_workspace
+      INGEST_PIPELINE_CLASS: ${INGEST_PIPELINE_CLASS:-}
     ports:
-      - "8001:8001"
+      - "127.0.0.1:8001:8001"
+    volumes:
+      - bundle:/bundle:ro
+      - ingest_workspace:/app/ingest_workspace
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_started
+      bundle-init:
+        condition: service_completed_successfully
     restart: unless-stopped
     networks:
-      - kgserver-network
+      - gw-network
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')"]
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 60s
-    profiles: ["api"]
 
   gwchat:
-    build:
-      context: ./gwchat
-      args:
-        NEXT_PUBLIC_BASE_PATH: /chat
+    image: ${REGISTRY}/gwchat:latest
     environment:
       MCP_SSE_URL: http://mcpserver:8001/sse
       LLM_PROVIDER: ${LLM_PROVIDER:-anthropic}
@@ -87,22 +96,19 @@ services:
       GWCHAT_CONFIG: /app/config/medlit.yaml
       MCP_CONNECT_TIMEOUT: "25"
       LLM_MIN_REQUEST_INTERVAL_SECONDS: "3.0"
-    volumes:
-      - ./gwchat/config:/app/config:ro
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./deploy/gwchat-config:/app/config:ro
     depends_on:
       mcpserver:
         condition: service_healthy
     restart: unless-stopped
     networks:
-      - kgserver-network
-    profiles: ["api"]
+      - gw-network
 
   identity-server:
-    build:
-      context: ./identity-server
-      dockerfile: Dockerfile
+    image: ${REGISTRY}/identity-server:latest
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       REDIS_URL: redis://redis:6379
@@ -116,19 +122,16 @@ services:
         condition: service_healthy
     restart: unless-stopped
     networks:
-      - kgserver-network
+      - gw-network
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 15s
-    profiles: ["api"]
 
   medlit-domain:
-    build:
-      context: ./medlit
-      dockerfile: Dockerfile.domain-service
+    image: ${REGISTRY}/medlit-domain:latest
     environment:
       UMLS_API_KEY: ${UMLS_API_KEY:-}
       CANONICAL_ID_CACHE_PATH: /data/canonical_id_cache.json
@@ -136,47 +139,27 @@ services:
       - canonical_id_cache:/data
     restart: unless-stopped
     networks:
-      - kgserver-network
+      - gw-network
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 15s
-    profiles: ["api"]
 
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
+  bundle-init:
+    image: alpine:latest
     volumes:
-      - ~/ollama_data:/root/.ollama
-    healthcheck:
-      test: ["CMD", "/bin/ollama", "list"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 60s
-    restart: unless-stopped
-    networks:
-      - kgserver-network
-    # CPU-only configuration - no GPU required
-    # Models will be pulled on first use or manually via:
-    # docker exec -it med-lit-ollama ollama pull nomic-embed-text
-    profiles: ["ollama"]
-
-  redis:
-    image: redis:7-alpine
-    restart: unless-stopped
-    networks:
-      - kgserver-network
-    profiles: ["api"]
+      - bundle:/bundle
+    command: |
+      sh -c "[ -f /bundle/manifest.json ] && echo 'bundle already present, skipping' && exit 0; echo 'downloading bundle...'; apk add --no-cache curl && curl -fsSL https://github.com/graphwright/medlit_bundle/releases/latest/download/bundle.tar.gz | tar -xz -C /bundle"
+    restart: "no"
 
   postgres:
     image: pgvector/pgvector:pg16
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # set in .env (never commit .env)
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: kgserver
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -187,33 +170,18 @@ services:
       retries: 5
     restart: unless-stopped
     networks:
-      - kgserver-network
-    profiles: ["api", "storage"]
+      - gw-network
 
-  # postgres with host port exposed for local ingest scripts (run-ingest-new.sh).
-  # Never use this profile on a public-facing server.
-  postgres-local:
-    image: pgvector/pgvector:pg16
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # set in .env (never commit .env)
-      POSTGRES_DB: kgserver
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d kgserver"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    ports:
-      - "127.0.0.1:5432:5432"
+  redis:
+    image: redis:7-alpine
     restart: unless-stopped
     networks:
-      - kgserver-network
-    profiles: ["local"]
+      - gw-network
 
 volumes:
   pgdata:
+    driver: local
+  bundle:
     driver: local
   ingest_workspace:
     driver: local
@@ -221,5 +189,5 @@ volumes:
     driver: local
 
 networks:
-  kgserver-network:
+  gw-network:
     driver: bridge
