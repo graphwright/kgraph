@@ -192,6 +192,9 @@ jobs:
 
       - name: Deploy to staging droplet
         uses: appleboy/ssh-action@v1
+        env:
+          GHCR_PAT: ${{ secrets.GHCR_PAT }}
+          GHCR_USER: ${{ secrets.GHCR_USER }}
         with:
           host: 137.184.49.99
           username: root
@@ -260,6 +263,9 @@ jobs:
 
       - name: Deploy to prod droplet
         uses: appleboy/ssh-action@v1
+        env:
+          GHCR_PAT: ${{ secrets.GHCR_PAT }}
+          GHCR_USER: ${{ secrets.GHCR_USER }}
         with:
           host: 104.131.171.175
           username: root
