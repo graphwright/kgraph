@@ -170,39 +170,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy compose file and gwchat config to staging droplet
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: 137.184.49.99
-          username: root
-          key: ${{ secrets.DROPLET_SSH_KEY }}
-          source: "deploy/docker-compose.prod.yml,deploy/gwchat-config"
-          target: /opt/graphwright
-          strip_components: 1
-
-      - name: Copy nginx config to staging droplet
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: 137.184.49.99
-          username: root
-          key: ${{ secrets.DROPLET_SSH_KEY }}
-          source: "deploy/nginx-staging.conf"
-          target: /tmp
-          strip_components: 1
+      - name: Encode deploy files as base64
+        run: |
+          echo "_COMPOSE_B64=$(base64 -w0 deploy/docker-compose.prod.yml)" >> $GITHUB_ENV
+          echo "_GWCHAT_CONFIG_B64=$(base64 -w0 deploy/gwchat-config/medlit.yaml)" >> $GITHUB_ENV
+          echo "_NGINX_STAGING_B64=$(base64 -w0 deploy/nginx-staging.conf)" >> $GITHUB_ENV
 
       - name: Deploy to staging droplet
         uses: appleboy/ssh-action@v1
         env:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           GHCR_USER: ${{ secrets.GHCR_USER }}
+          COMPOSE_B64: ${{ env._COMPOSE_B64 }}
+          GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
+          NGINX_STAGING_B64: ${{ env._NGINX_STAGING_B64 }}
         with:
           host: 137.184.49.99
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_STAGING_B64
           script: |
             set -e
-            cd /opt/graphwright
+            mkdir -p /opt/graphwright/gwchat-config
+
+            echo "$COMPOSE_B64"       | base64 -d > /opt/graphwright/docker-compose.prod.yml
+            echo "$GWCHAT_CONFIG_B64" | base64 -d > /opt/graphwright/gwchat-config/medlit.yaml
+            echo "$NGINX_STAGING_B64" | base64 -d > /etc/nginx/sites-enabled/kgraph
+
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
@@ -219,11 +213,10 @@ jobs:
 
             docker compose \
               --env-file /tmp/deploy.env \
-              -f docker-compose.prod.yml \
+              -f /opt/graphwright/docker-compose.prod.yml \
               up -d --pull always --remove-orphans
 
             rm -f /tmp/deploy.env
-            mv /tmp/nginx-staging.conf /etc/nginx/sites-enabled/kgraph
             nginx -t && nginx -s reload
 
   # -------------------------------------------------------------------------
@@ -242,39 +235,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy compose file and gwchat config to prod droplet
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: 104.131.171.175
-          username: root
-          key: ${{ secrets.DROPLET_SSH_KEY }}
-          source: "deploy/docker-compose.prod.yml,deploy/gwchat-config"
-          target: /opt/graphwright
-          strip_components: 1
-
-      - name: Copy nginx config to prod droplet
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: 104.131.171.175
-          username: root
-          key: ${{ secrets.DROPLET_SSH_KEY }}
-          source: "deploy/nginx-prod.conf"
-          target: /tmp
-          strip_components: 1
+      - name: Encode deploy files as base64
+        run: |
+          echo "_COMPOSE_B64=$(base64 -w0 deploy/docker-compose.prod.yml)" >> $GITHUB_ENV
+          echo "_GWCHAT_CONFIG_B64=$(base64 -w0 deploy/gwchat-config/medlit.yaml)" >> $GITHUB_ENV
+          echo "_NGINX_PROD_B64=$(base64 -w0 deploy/nginx-prod.conf)" >> $GITHUB_ENV
 
       - name: Deploy to prod droplet
         uses: appleboy/ssh-action@v1
         env:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           GHCR_USER: ${{ secrets.GHCR_USER }}
+          COMPOSE_B64: ${{ env._COMPOSE_B64 }}
+          GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
+          NGINX_PROD_B64: ${{ env._NGINX_PROD_B64 }}
         with:
           host: 104.131.171.175
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_PROD_B64
           script: |
             set -e
-            cd /opt/graphwright
+            mkdir -p /opt/graphwright/gwchat-config
+
+            echo "$COMPOSE_B64"      | base64 -d > /opt/graphwright/docker-compose.prod.yml
+            echo "$GWCHAT_CONFIG_B64" | base64 -d > /opt/graphwright/gwchat-config/medlit.yaml
+            echo "$NGINX_PROD_B64"   | base64 -d > /etc/nginx/sites-enabled/kgraph
+
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
@@ -291,9 +278,8 @@ jobs:
 
             docker compose \
               --env-file /tmp/deploy.env \
-              -f docker-compose.prod.yml \
+              -f /opt/graphwright/docker-compose.prod.yml \
               up -d --pull always --remove-orphans
 
             rm -f /tmp/deploy.env
-            mv /tmp/nginx-prod.conf /etc/nginx/sites-enabled/kgraph
             nginx -t && nginx -s reload
