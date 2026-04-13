@@ -4,9 +4,9 @@ Three books covering the full pipeline from raw text to a language model that ca
 
 ---
 
-## [The Identity Server: Canonical Identity for Knowledge Graphs](../books/the-identity-server.pdf)
+## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge](../books/the-identity-server.pdf)
 
-The trustworthiness book. Full architecture of the identity server: the domain-agnostic base, the plugin contract, Docker deployment, caching, entity lifecycle, and the epistemic commons — the shared identifier infrastructure (MeSH, HGNC, RxNorm, UniProt) that makes graphs composable across sources.
+The trustworthiness book. How canonical identity, a typed schema, and structural provenance together make machine knowledge defensible. Covers the epistemic commons (MeSH, HGNC, RxNorm, UniProt), the identity server's domain-agnostic core and plugin contract, the entity lifecycle, and the typed graph's central argument: that a finite predicate ontology with declared domain and range makes certain classes of error inexpressible rather than merely discouraged.
 
 [Download PDF](../books/the-identity-server.pdf)
 
@@ -22,7 +22,7 @@ The extraction book. How to build a knowledge graph from raw documents using LLM
 
 ## [BFS-QL: A Graph Query Protocol for Language Models](../books/bfs-ql.pdf)
 
-The interface book. How to serve a knowledge graph to a language model via a minimal, LLM-friendly protocol. Five MCP tools, a flat query format, backends for SPARQL, Postgres/pgvector, and Neo4j, and a worked implementation against the medlit graph.
+The interface book. The knowledge is in the graph; the LLM can't get to it — this is a book about the missing interface. Argues that SPARQL and Cypher are the wrong abstraction for LLM-driven graph exploration, and that breadth-first traversal with topology-first, metadata-on-demand design is the right one. Covers the five-tool MCP protocol, the working-set framing for context-window efficiency, backends for SPARQL, Postgres/pgvector, and Neo4j, and cross-graph composition via shared canonical identity.
 
 [Download PDF](../books/bfs-ql.pdf)
 
