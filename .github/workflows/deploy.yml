@@ -181,6 +181,14 @@ jobs:
         env:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           GHCR_USER: ${{ secrets.GHCR_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          UMLS_API_KEY: ${{ secrets.UMLS_API_KEY }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          PASS1_LLM_BACKEND: ${{ secrets.PASS1_LLM_BACKEND }}
+          INGEST_PIPELINE_CLASS: ${{ secrets.INGEST_PIPELINE_CLASS }}
+          PUBLIC_MARKETING_SITE_URL: ${{ secrets.PUBLIC_MARKETING_SITE_URL }}
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           NGINX_STAGING_B64: ${{ env._NGINX_STAGING_B64 }}
@@ -246,6 +254,14 @@ jobs:
         env:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           GHCR_USER: ${{ secrets.GHCR_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          UMLS_API_KEY: ${{ secrets.UMLS_API_KEY }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          PASS1_LLM_BACKEND: ${{ secrets.PASS1_LLM_BACKEND }}
+          INGEST_PIPELINE_CLASS: ${{ secrets.INGEST_PIPELINE_CLASS }}
+          PUBLIC_MARKETING_SITE_URL: ${{ secrets.PUBLIC_MARKETING_SITE_URL }}
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           NGINX_PROD_B64: ${{ env._NGINX_PROD_B64 }}
