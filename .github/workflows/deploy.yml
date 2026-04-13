@@ -206,6 +206,7 @@ jobs:
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
+            REGISTRY=ghcr.io/graphwright
             POSTGRES_PASSWORD=$POSTGRES_PASSWORD
             ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
             OPENAI_API_KEY=$OPENAI_API_KEY
@@ -216,7 +217,7 @@ jobs:
             PUBLIC_MARKETING_SITE_URL=$PUBLIC_MARKETING_SITE_URL
             EOF
 
-            REGISTRY=ghcr.io/graphwright docker compose \
+            docker compose \
               --env-file /tmp/deploy.env \
               -f docker-compose.prod.yml \
               up -d --pull always --remove-orphans
@@ -277,6 +278,7 @@ jobs:
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
+            REGISTRY=ghcr.io/graphwright
             POSTGRES_PASSWORD=$POSTGRES_PASSWORD
             ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
             OPENAI_API_KEY=$OPENAI_API_KEY
@@ -287,7 +289,7 @@ jobs:
             PUBLIC_MARKETING_SITE_URL=$PUBLIC_MARKETING_SITE_URL
             EOF
 
-            REGISTRY=ghcr.io/graphwright docker compose \
+            docker compose \
               --env-file /tmp/deploy.env \
               -f docker-compose.prod.yml \
               up -d --pull always --remove-orphans
