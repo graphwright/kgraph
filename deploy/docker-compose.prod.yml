@@ -1,6 +1,6 @@
 services:
   docs:
-    image: ${REGISTRY}/docs:latest
+    image: ${REGISTRY}/kgraph-docs:latest
     environment:
       CHAT_UPSTREAM: http://gwchat:3000
     depends_on:
@@ -19,7 +19,7 @@ services:
       start_period: 5s
 
   api:
-    image: ${REGISTRY}/kgserver:latest
+    image: ${REGISTRY}/kgraph-kgserver:latest
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
       BUNDLE_PATH: /bundle
@@ -52,7 +52,7 @@ services:
       start_period: 15s
 
   mcpserver:
-    image: ${REGISTRY}/kgserver:latest
+    image: ${REGISTRY}/kgraph-kgserver:latest
     command: ["python", "-m", "uvicorn", "mcp_main:app", "--host", "0.0.0.0", "--port", "8001"]
     environment:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/kgserver
@@ -86,7 +86,7 @@ services:
       start_period: 60s
 
   gwchat:
-    image: ${REGISTRY}/gwchat:latest
+    image: ${REGISTRY}/kgraph-gwchat:latest
     environment:
       MCP_SSE_URL: http://mcpserver:8001/sse
       LLM_PROVIDER: ${LLM_PROVIDER:-anthropic}

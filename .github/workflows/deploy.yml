@@ -109,31 +109,31 @@ jobs:
       - name: Build and push docs image
         run: |
           docker build \
-            -t $REGISTRY/docs:${{ github.sha }} \
-            -t $REGISTRY/docs:latest \
+            -t $REGISTRY/kgraph-docs:${{ github.sha }} \
+            -t $REGISTRY/kgraph-docs:latest \
             deploy/
-          docker push $REGISTRY/docs:${{ github.sha }}
-          docker push $REGISTRY/docs:latest
+          docker push $REGISTRY/kgraph-docs:${{ github.sha }}
+          docker push $REGISTRY/kgraph-docs:latest
 
       - name: Build and push api+mcpserver image
         run: |
           docker build \
             -f kgserver/Dockerfile \
-            -t $REGISTRY/kgserver:${{ github.sha }} \
-            -t $REGISTRY/kgserver:latest \
+            -t $REGISTRY/kgraph-kgserver:${{ github.sha }} \
+            -t $REGISTRY/kgraph-kgserver:latest \
             .
-          docker push $REGISTRY/kgserver:${{ github.sha }}
-          docker push $REGISTRY/kgserver:latest
+          docker push $REGISTRY/kgraph-kgserver:${{ github.sha }}
+          docker push $REGISTRY/kgraph-kgserver:latest
 
       - name: Build and push gwchat image
         run: |
           docker build \
             --build-arg NEXT_PUBLIC_BASE_PATH=/chat \
-            -t $REGISTRY/gwchat:${{ github.sha }} \
-            -t $REGISTRY/gwchat:latest \
+            -t $REGISTRY/kgraph-gwchat:${{ github.sha }} \
+            -t $REGISTRY/kgraph-gwchat:latest \
             gwchat/
-          docker push $REGISTRY/gwchat:${{ github.sha }}
-          docker push $REGISTRY/gwchat:latest
+          docker push $REGISTRY/kgraph-gwchat:${{ github.sha }}
+          docker push $REGISTRY/kgraph-gwchat:latest
 
       - name: Build and push identity-server image
         run: |
