@@ -185,10 +185,11 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           UMLS_API_KEY: ${{ secrets.UMLS_API_KEY }}
-          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
-          PASS1_LLM_BACKEND: ${{ secrets.PASS1_LLM_BACKEND }}
-          INGEST_PIPELINE_CLASS: ${{ secrets.INGEST_PIPELINE_CLASS }}
-          PUBLIC_MARKETING_SITE_URL: ${{ secrets.PUBLIC_MARKETING_SITE_URL }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          PASS1_LLM_BACKEND: ${{ vars.PASS1_LLM_BACKEND }}
+          INGEST_PIPELINE_CLASS: ${{ vars.INGEST_PIPELINE_CLASS }}
+          PUBLIC_MARKETING_SITE_URL: ${{ vars.PUBLIC_MARKETING_SITE_URL }}
+          REGISTRY: ${{ vars.REGISTRY }}
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           NGINX_STAGING_B64: ${{ env._NGINX_STAGING_B64 }}
@@ -196,7 +197,7 @@ jobs:
           host: 137.184.49.99
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_STAGING_B64
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_STAGING_B64
           script: |
             set -e
             mkdir -p /opt/graphwright/gwchat-config
@@ -208,7 +209,7 @@ jobs:
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
-            REGISTRY=ghcr.io/graphwright
+            REGISTRY=$REGISTRY
             POSTGRES_PASSWORD=$POSTGRES_PASSWORD
             ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
             OPENAI_API_KEY=$OPENAI_API_KEY
@@ -258,10 +259,11 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           UMLS_API_KEY: ${{ secrets.UMLS_API_KEY }}
-          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
-          PASS1_LLM_BACKEND: ${{ secrets.PASS1_LLM_BACKEND }}
-          INGEST_PIPELINE_CLASS: ${{ secrets.INGEST_PIPELINE_CLASS }}
-          PUBLIC_MARKETING_SITE_URL: ${{ secrets.PUBLIC_MARKETING_SITE_URL }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          PASS1_LLM_BACKEND: ${{ vars.PASS1_LLM_BACKEND }}
+          INGEST_PIPELINE_CLASS: ${{ vars.INGEST_PIPELINE_CLASS }}
+          PUBLIC_MARKETING_SITE_URL: ${{ vars.PUBLIC_MARKETING_SITE_URL }}
+          REGISTRY: ${{ vars.REGISTRY }}
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           NGINX_PROD_B64: ${{ env._NGINX_PROD_B64 }}
@@ -269,7 +271,7 @@ jobs:
           host: 104.131.171.175
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_PROD_B64
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,PUBLIC_MARKETING_SITE_URL,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,NGINX_PROD_B64
           script: |
             set -e
             mkdir -p /opt/graphwright/gwchat-config
@@ -281,7 +283,7 @@ jobs:
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
             cat > /tmp/deploy.env <<EOF
-            REGISTRY=ghcr.io/graphwright
+            REGISTRY=$REGISTRY
             POSTGRES_PASSWORD=$POSTGRES_PASSWORD
             ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
             OPENAI_API_KEY=$OPENAI_API_KEY
