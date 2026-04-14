@@ -10,9 +10,9 @@ import sys
 
 REPLACEMENTS = [
     (
-        "## [The Identity Server: Canonical Identity for Knowledge Graphs]"
+        "## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge]"
         "(../books/the-identity-server.pdf)",
-        "## [The Identity Server: Canonical Identity for Knowledge Graphs]"
+        "## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge]"
         "(identity-book/)",
     ),
     (
