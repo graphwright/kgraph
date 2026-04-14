@@ -152,7 +152,7 @@ def test_is_authoritative_id():
     assert _is_authoritative_id("MeSH:D001943") is True
     assert _is_authoritative_id("RxNorm:161") is True
     assert _is_authoritative_id("P38398") is True
-    assert _is_authoritative_id("DBPedia:Breast_cancer") is True
+    assert _is_authoritative_id("Wikidata:Q12345") is True
     assert _is_authoritative_id("PMC11795198") is True
     assert _is_authoritative_id("prov-abc123") is False
     assert _is_authoritative_id("prov-960ca8acbab3") is False

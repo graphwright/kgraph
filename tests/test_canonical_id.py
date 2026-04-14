@@ -216,17 +216,17 @@ class TestCanonicalHelpers:
             canonical_ids={
                 "umls": "C0006142",
                 "mesh": "MeSH:D000570",
-                "dbpedia": "DBPedia:Breast_cancer",
+                "wikidata": "Wikidata:Q12345",
             },
         )
 
         # Should return UMLS (first in priority)
-        result = extract_canonical_id_from_entity(entity, priority_sources=["umls", "mesh", "dbpedia"])
+        result = extract_canonical_id_from_entity(entity, priority_sources=["umls", "mesh", "wikidata"])
         assert result is not None
         assert result.id == "C0006142"
 
         # Should return MeSH if UMLS not in priority
-        result = extract_canonical_id_from_entity(entity, priority_sources=["mesh", "dbpedia"])
+        result = extract_canonical_id_from_entity(entity, priority_sources=["mesh", "wikidata"])
         assert result is not None
         assert result.id == "MeSH:D000570"
 
@@ -235,7 +235,7 @@ class TestCanonicalHelpers:
         entity = make_test_entity(
             "Test",
             canonical_ids={
-                "dbpedia": "DBPedia:Breast_cancer",
+                "wikidata": "Wikidata:Q12345",
                 "umls": "C0006142",
             },
         )
@@ -243,7 +243,7 @@ class TestCanonicalHelpers:
         result = extract_canonical_id_from_entity(entity)
         assert result is not None
         # Should return first in dict (order may vary, but should return something)
-        assert result.id in ("DBPedia:Breast_cancer", "C0006142")
+        assert result.id in ("Wikidata:Q12345", "C0006142")
 
     def test_extract_canonical_id_from_entity_no_canonical_ids(self):
         """extract_canonical_id_from_entity returns None if no canonical_ids."""

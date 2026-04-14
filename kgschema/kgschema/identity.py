@@ -51,7 +51,7 @@ class IdentityServer(ABC):
     async def resolve(self, mention: str, context: dict) -> str:
         """Resolve a mention string to an entity ID.
 
-        Performs domain authority lookup (e.g. UMLS, DBPedia) and returns a
+        Performs domain authority lookup (e.g. UMLS, Wikidata) and returns a
         canonical ID if one is found. Otherwise creates and returns a new
         provisional ID. The lookup result is cached (keyed on normalised
         mention + authority source version) so that transient API failures

@@ -68,8 +68,8 @@ def _is_authoritative_id(s: str) -> bool:
         return True
     if s.startswith("UniProt:"):
         return True
-    # DBPedia
-    if s.startswith("DBPedia:"):
+    # Wikidata
+    if s.startswith("Wikidata:"):
         return True
     # PMC (PubMed Central) paper IDs
     if s.startswith("PMC") and len(s) > 3 and s[3:].isdigit():

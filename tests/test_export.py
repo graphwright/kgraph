@@ -132,7 +132,7 @@ class TestExportEntities:
             synonyms=("alias1", "alias2"),
             embedding=(0.1, 0.2, 0.3),
             canonical_ids={
-                "dbpedia": "http://dbpedia.org/resource/Test",
+                "wikidata": "Wikidata:Q12345",
                 "test_authority": "id-123",
             },
             confidence=0.95,
@@ -155,7 +155,7 @@ class TestExportEntities:
         assert exported["name"] == "Test Entity"
         assert exported["synonyms"] == ["alias1", "alias2"]
         assert exported["embedding"] == [0.1, 0.2, 0.3]
-        assert exported["canonical_ids"]["dbpedia"] == "http://dbpedia.org/resource/Test"
+        assert exported["canonical_ids"]["wikidata"] == "Wikidata:Q12345"
         assert exported["confidence"] == 0.95
         assert exported["usage_count"] == 5
         assert exported["source"] == "test_source"

@@ -1,7 +1,7 @@
 """HTTP client for the pluggable domain service.
 
 The domain service is a separate microservice that implements domain-specific
-logic: authority lookup (e.g. UMLS, DBPedia), survivor selection during merge,
+logic: authority lookup (e.g. UMLS, Wikidata), survivor selection during merge,
 and synonym similarity thresholds per entity type.
 
 The identity server calls the domain service via HTTP so that domain logic can

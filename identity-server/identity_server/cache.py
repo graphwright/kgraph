@@ -26,7 +26,7 @@ class AuthorityCache:
     """Redis cache for authority-lookup results in ``resolve``.
 
     Keys have the form ``resolve:{authority_version}:{entity_type}:{mention}``
-    so that a UMLS/DBPedia release can be invalidated by bumping
+    so that a UMLS/Wikidata release can be invalidated by bumping
     ``authority_version`` without touching unrelated entries.
 
     Values are JSON-serialised ``CanonicalId`` dicts (positive hit) or

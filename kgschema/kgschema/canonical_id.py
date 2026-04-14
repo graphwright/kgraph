@@ -13,7 +13,7 @@ class CanonicalId(BaseModel):
     """Represents a canonical identifier from an authoritative source.
 
     A canonical ID uniquely identifies an entity in an authoritative ontology
-    (e.g., UMLS, MeSH, HGNC, RxNorm, UniProt, DBPedia). This model stores
+    (e.g., UMLS, MeSH, HGNC, RxNorm, UniProt, Wikidata). This model stores
     the ID, its URL (if available), and synonyms that map to this ID.
 
     Attributes:

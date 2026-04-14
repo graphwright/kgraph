@@ -44,7 +44,7 @@ class EntityStatus(str, Enum):
     """Entity has been assigned a stable ID from an authoritative source.
 
     Canonical entities have verified identifiers from external authorities
-    (UMLS CUIs, DBPedia URIs, Wikidata QIDs, etc.) or have been promoted
+    (UMLS CUIs, Wikidata QIDs, etc.) or have been promoted
     based on sufficient usage evidence. They are included in the primary
     entity export and are considered authoritative for relationship linking.
     """
@@ -149,7 +149,7 @@ class BaseEntity(ABC, BaseModel):
     )
     canonical_ids: dict[str, str] = Field(
         default_factory=dict,
-        description="Authoritative identifiers from various sources (e.g., {'dbpedia': 'uri', 'wikidata': 'Q123'}).",
+        description="Authoritative identifiers from various sources (e.g., {'wikidata': 'Q123', 'mesh': 'D001234'}).",
     )
     confidence: float = Field(
         default=1.0,

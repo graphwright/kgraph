@@ -299,40 +299,37 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
         # Route to appropriate authority based on entity type
         canonical_id_str: Optional[str] = None
 
-        skip_dbpedia = False
+        skip_wikidata = False
         if entity_type in ("disease", "symptom", "procedure"):
             if term.isupper() and len(term) < 5:
                 # looks like an acronym
-                skip_dbpedia = True
-                # if term == "FAP":
-                #    # canonical_id_str = "MeSH:D011125"
-                #    canonical_id_str = "D011125"
+                skip_wikidata = True
             else:
                 canonical_id_str = await self._lookup_umls(term)
         elif entity_type == "gene":
             canonical_id_str = await self._lookup_hgnc(term)
-            # Do not fall back to DBPedia for genes: it returns wrong matches (e.g. "gene" → Gene
+            # Do not fall back to Wikidata for genes: it returns wrong matches (e.g. "gene" → Gene
             # Autry, "variant" → SARS-CoV-2_Omicron_variant). Viral variants would need a proper
             # source (e.g. GISAID, WHO/Pango nomenclature) if we add variant support later.
-            skip_dbpedia = True
+            skip_wikidata = True
         elif entity_type == "drug":
             canonical_id_str = await self._lookup_rxnorm(term)
         elif entity_type == "protein":
             canonical_id_str = await self._lookup_uniprot(term)
         elif entity_type == "institution":
             canonical_id_str = await self._lookup_ror(term)
-            skip_dbpedia = True
+            skip_wikidata = True
         elif entity_type == "author":
             canonical_id_str = await self._lookup_orcid(term)
-            skip_dbpedia = True
+            skip_wikidata = True
 
-        # Fallback to DBPedia for any entity type if specialized lookup failed
-        if canonical_id_str is None and not skip_dbpedia:
-            dbpedia_result = await self._lookup_dbpedia(term)
-            if dbpedia_result:
-                # Try to extract authoritative ID from DBPedia properties
-                authoritative_id = await self._extract_authoritative_id_from_dbpedia(dbpedia_result, entity_type, term)
-                canonical_id_str = authoritative_id if authoritative_id else dbpedia_result
+        # Fallback to Wikidata for any entity type if specialized lookup failed
+        if canonical_id_str is None and not skip_wikidata:
+            wikidata_result = await self._lookup_wikidata(term)
+            if wikidata_result:
+                # Try to extract authoritative ID from Wikidata properties
+                authoritative_id = await self._extract_authoritative_id_from_wikidata(wikidata_result, entity_type, term)
+                canonical_id_str = authoritative_id if authoritative_id else wikidata_result
 
         # Build CanonicalId object with URL
         if canonical_id_str:
@@ -967,15 +964,13 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
             )
             return None
 
-    def _dbpedia_label_matches(self, term: str, label: str) -> bool:
-        """Check if a DBPedia label is a good match for the search term."""
+    def _wikidata_label_matches(self, term: str, label: str) -> bool:
+        """Check if a Wikidata label is a good match for the search term."""
         import re
 
-        # Strip HTML tags from label (DBPedia returns <B>...</B> highlighting)
         label_clean = re.sub(r"<[^>]+>", "", label).lower().strip()
         term_lower = term.lower().strip()
 
-        # Extract first word (for prefix matching)
         term_first = term_lower.replace("-", " ").split()[0] if term_lower else ""
         label_first = label_clean.replace("-", " ").split()[0] if label_clean else ""
 
@@ -987,41 +982,38 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
 
         return term_lower in label_clean or label_clean in term_lower or label_clean.startswith(term_lower) or common_prefix
 
-    async def _lookup_dbpedia(self, term: str) -> Optional[str]:
-        """Look up DBPedia URI as fallback for any entity type.
+    async def _lookup_wikidata(self, term: str) -> Optional[str]:
+        """Look up Wikidata QID as fallback for any entity type.
 
-        DBPedia is a general knowledge base extracted from Wikipedia.
-        Used as a fallback when specialized medical ontologies don't find a match.
-
-        Only accepts results where the label closely matches the search term
-        to avoid garbage matches like "HER2-enriched" → "Insect".
+        Uses the Wikidata wbsearchentities API (no authentication required).
+        Only accepts results where the label closely matches the search term.
+        Returns IDs in the format "Wikidata:Q{number}".
         """
         try:
-            # DBPedia Lookup API (no authentication required!)
-            url = "https://lookup.dbpedia.org/api/search"
-            params = {"query": term.lower(), "format": "json", "maxResults": "5"}
+            url = "https://www.wikidata.org/w/api.php"
+            params = {
+                "action": "wbsearchentities",
+                "search": term,
+                "language": "en",
+                "format": "json",
+                "limit": "5",
+            }
             response = await self.client.get(url, params=params)
 
             if response.status_code == 200:
                 data = response.json()
-                docs = data.get("docs", [])
-
-                for doc in docs:
-                    # Get label (returned as list)
-                    label_list = doc.get("label", [])
-                    label = label_list[0] if label_list else ""
-
-                    if self._dbpedia_label_matches(term, label):
-                        resource = doc.get("resource", [])
-                        if resource:
-                            uri = resource[0] if isinstance(resource, list) else resource
-                            return f"DBPedia:{uri.split('/')[-1]}"
+                for item in data.get("search", []):
+                    label = item.get("label", "")
+                    if self._wikidata_label_matches(term, label):
+                        qid = item.get("id", "")
+                        if qid.startswith("Q"):
+                            return f"Wikidata:{qid}"
 
             return None
         except Exception as e:
             logger.warning(
                 {
-                    "message": f"DBPedia lookup failed for '{term}'",
+                    "message": f"Wikidata lookup failed for '{term}'",
                     "term": term,
                     "error": str(e),
                 },
@@ -1029,15 +1021,22 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
             )
             return None
 
-    async def _extract_authoritative_id_from_dbpedia(self, dbpedia_id: str, entity_type: str, original_term: str) -> Optional[str]:  # pylint: disable=too-many-statements
-        """Extract authoritative ID from DBPedia resource properties.
+    async def _extract_authoritative_id_from_wikidata(self, wikidata_id: str, entity_type: str, original_term: str) -> Optional[str]:  # pylint: disable=too-many-statements
+        """Extract authoritative ID from Wikidata item properties.
 
-        After finding a DBPedia match, query the resource to find authoritative IDs
-        (MeSH, UMLS, HGNC, RxNorm, UniProt) that may be embedded in DBPedia properties.
+        After finding a Wikidata match, query for authoritative IDs
+        (MeSH, UMLS, HGNC, RxNorm, UniProt) stored as Wikidata statements.
         If found, perform a follow-up lookup with the authoritative source.
 
+        Wikidata properties used:
+            P486  = MeSH descriptor ID
+            P2892 = UMLS CUI
+            P354  = HGNC gene ID
+            P3345 = RxNorm ID
+            P352  = UniProt protein ID
+
         Args:
-            dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
+            wikidata_id: Wikidata ID in format "Wikidata:Q{number}"
             entity_type: Type of entity (disease, gene, drug, protein, etc.)
             original_term: Original search term for caching
 
@@ -1046,18 +1045,16 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
         """
         logger = setup_logging()
 
-        # Extract resource name from DBPedia ID
-        resource_name = dbpedia_id.replace("DBPedia:", "")
-        resource_uri = f"http://dbpedia.org/resource/{resource_name}"
+        qid = wikidata_id.replace("Wikidata:", "")
+        entity_uri = f"wd:{qid}"
 
-        # Check cache first (keyed by DBPedia ID + entity_type)
-        cache_key = f"dbpedia_auth:{dbpedia_id}:{entity_type}"
+        cache_key = f"wikidata_auth:{wikidata_id}:{entity_type}"
         cached = self._cache.fetch(cache_key, entity_type)
         if cached is not None:
             logger.debug(
                 {
-                    "message": f"Cache hit for authoritative ID extraction from {dbpedia_id}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"Cache hit for authoritative ID extraction from {wikidata_id}",
+                    "wikidata_id": wikidata_id,
                     "authoritative_id": cached.id,
                 },
                 pprint=True,
@@ -1065,29 +1062,25 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
             return cached.id
 
         try:
-            # Query DBPedia SPARQL endpoint for resource properties
-            # Try alternative property names (DBPedia uses various prefixes)
             sparql_query = f"""
-            PREFIX dbo: <http://dbpedia.org/ontology/>
-            PREFIX dbp: <http://dbpedia.org/property/>
-            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX wd: <http://www.wikidata.org/entity/>
+            PREFIX wdt: <http://www.wikidata.org/prop/direct/>
             SELECT ?meshId ?umlsId ?hgncId ?rxnormId ?uniprotId
             WHERE {{
-                OPTIONAL {{ <{resource_uri}> dbo:meshId ?meshId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:umlsId ?umlsId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:umls ?umlsId . }}
-                OPTIONAL {{ <{resource_uri}> dbo:hgncId ?hgncId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:hgncId ?hgncId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:rxnormId ?rxnormId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:uniprotId ?uniprotId . }}
+                OPTIONAL {{ {entity_uri} wdt:P486  ?meshId . }}
+                OPTIONAL {{ {entity_uri} wdt:P2892 ?umlsId . }}
+                OPTIONAL {{ {entity_uri} wdt:P354  ?hgncId . }}
+                OPTIONAL {{ {entity_uri} wdt:P3345 ?rxnormId . }}
+                OPTIONAL {{ {entity_uri} wdt:P352  ?uniprotId . }}
             }}
             LIMIT 1
             """
 
-            sparql_url = "https://dbpedia.org/sparql"
+            sparql_url = "https://query.wikidata.org/sparql"
             params = {"query": sparql_query, "format": "json"}
+            headers = {"Accept": "application/sparql-results+json"}
 
-            response = await self.client.get(sparql_url, params=params)
+            response = await self.client.get(sparql_url, params=params, headers=headers)
 
             if response.status_code == 200:
                 data = response.json()
@@ -1096,13 +1089,11 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                 if bindings:
                     result = bindings[0]
 
-                    # Determine which authoritative ID to look for based on entity_type
                     authoritative_id_value: Optional[str] = None
                     authoritative_source: Optional[str] = None
 
                     entity_type_normalized = entity_type.lower()
                     if entity_type_normalized in ("disease", "symptom", "procedure"):
-                        # Prefer MeSH, then UMLS
                         if "meshId" in result and result["meshId"].get("value"):
                             authoritative_id_value = result["meshId"]["value"]
                             authoritative_source = "mesh"
@@ -1122,45 +1113,37 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                             authoritative_id_value = result["uniprotId"]["value"]
                             authoritative_source = "uniprot"
 
-                    # If we found an authoritative ID, do a follow-up lookup
                     if authoritative_id_value and authoritative_source:
                         logger.debug(
                             {
-                                "message": f"Found {authoritative_source} ID in DBPedia for {dbpedia_id}: {authoritative_id_value}",
-                                "dbpedia_id": dbpedia_id,
+                                "message": f"Found {authoritative_source} ID in Wikidata for {wikidata_id}: {authoritative_id_value}",
+                                "wikidata_id": wikidata_id,
                                 "authoritative_source": authoritative_source,
                                 "authoritative_id": authoritative_id_value,
                             },
                             pprint=True,
                         )
 
-                        # Perform follow-up lookup with authoritative source
                         follow_up_id: Optional[str] = None
                         if authoritative_source == "mesh":
-                            # MeSH ID format: D001943 (just the ID, no prefix)
                             follow_up_id = await self._lookup_mesh_by_id(authoritative_id_value)
                         elif authoritative_source == "umls":
-                            # UMLS CUI format: C0006142
                             follow_up_id = await self._lookup_umls_by_id(authoritative_id_value)
                         elif authoritative_source == "hgnc":
-                            # HGNC format: HGNC:1100
                             follow_up_id = await self._lookup_hgnc_by_id(authoritative_id_value)
                         elif authoritative_source == "rxnorm":
-                            # RxNorm format: RxNorm:1187832
                             follow_up_id = await self._lookup_rxnorm_by_id(authoritative_id_value)
                         elif authoritative_source == "uniprot":
-                            # UniProt format: UniProt:P38398
                             follow_up_id = await self._lookup_uniprot_by_id(authoritative_id_value)
 
                         if follow_up_id:
-                            # Cache the result
                             url = build_canonical_url(follow_up_id, entity_type=entity_type)
                             canonical_id = CanonicalId(id=follow_up_id, url=url, synonyms=(original_term,))
                             self._cache.store(cache_key, entity_type, canonical_id)
                             logger.info(
                                 {
-                                    "message": f"Extracted authoritative ID from DBPedia: {follow_up_id} (from {dbpedia_id})",
-                                    "dbpedia_id": dbpedia_id,
+                                    "message": f"Extracted authoritative ID from Wikidata: {follow_up_id} (from {wikidata_id})",
+                                    "wikidata_id": wikidata_id,
                                     "authoritative_id": follow_up_id,
                                     "source": authoritative_source,
                                 },
@@ -1168,44 +1151,40 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                             )
                             return follow_up_id
 
-            # No authoritative ID found in DBPedia properties
             logger.debug(
                 {
-                    "message": f"No authoritative ID found in DBPedia properties for {dbpedia_id}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"No authoritative ID found in Wikidata properties for {wikidata_id}",
+                    "wikidata_id": wikidata_id,
                     "entity_type": entity_type,
                 },
                 pprint=True,
             )
-            # Cache as "no authoritative ID found" to avoid repeated queries
             self._cache.mark_known_bad(cache_key, entity_type)
             return None
 
         except Exception as e:
-            # Log at warning level so failures are visible even without DEBUG logging
             logger.warning(
                 {
-                    "message": f"Failed to extract authoritative ID from DBPedia for {dbpedia_id}: {e}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"Failed to extract authoritative ID from Wikidata for {wikidata_id}: {e}",
+                    "wikidata_id": wikidata_id,
                     "error": str(e),
                 },
                 pprint=True,
             )
-            # Don't mark as known bad on exception - might be transient (network, timeout, etc.)
             return None
 
-    def _extract_authoritative_id_from_dbpedia_sync(  # pylint: disable=too-many-statements
+    def _extract_authoritative_id_from_wikidata_sync(  # pylint: disable=too-many-statements
         self,
         client: "httpx.Client",
-        dbpedia_id: str,
+        wikidata_id: str,
         entity_type: str,
         original_term: str,
     ) -> Optional[str]:
-        """Synchronous version of authoritative ID extraction from DBPedia.
+        """Synchronous version of authoritative ID extraction from Wikidata.
 
         Args:
             client: Synchronous HTTP client
-            dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
+            wikidata_id: Wikidata ID in format "Wikidata:Q{number}"
             entity_type: Type of entity (disease, gene, drug, protein, etc.)
             original_term: Original search term for caching
 
@@ -1214,18 +1193,16 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
         """
         logger = setup_logging()
 
-        # Extract resource name from DBPedia ID
-        resource_name = dbpedia_id.replace("DBPedia:", "")
-        resource_uri = f"http://dbpedia.org/resource/{resource_name}"
+        qid = wikidata_id.replace("Wikidata:", "")
+        entity_uri = f"wd:{qid}"
 
-        # Check cache first (keyed by DBPedia ID + entity_type)
-        cache_key = f"dbpedia_auth:{dbpedia_id}:{entity_type}"
+        cache_key = f"wikidata_auth:{wikidata_id}:{entity_type}"
         cached = self._cache.fetch(cache_key, entity_type)
         if cached is not None:
             logger.debug(
                 {
-                    "message": f"Cache hit for authoritative ID extraction from {dbpedia_id}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"Cache hit for authoritative ID extraction from {wikidata_id}",
+                    "wikidata_id": wikidata_id,
                     "authoritative_id": cached.id,
                 },
                 pprint=True,
@@ -1233,28 +1210,25 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
             return cached.id
 
         try:
-            # Query DBPedia SPARQL endpoint for resource properties
             sparql_query = f"""
-            PREFIX dbo: <http://dbpedia.org/ontology/>
-            PREFIX dbp: <http://dbpedia.org/property/>
-            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX wd: <http://www.wikidata.org/entity/>
+            PREFIX wdt: <http://www.wikidata.org/prop/direct/>
             SELECT ?meshId ?umlsId ?hgncId ?rxnormId ?uniprotId
             WHERE {{
-                OPTIONAL {{ <{resource_uri}> dbo:meshId ?meshId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:umlsId ?umlsId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:umls ?umlsId . }}
-                OPTIONAL {{ <{resource_uri}> dbo:hgncId ?hgncId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:hgncId ?hgncId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:rxnormId ?rxnormId . }}
-                OPTIONAL {{ <{resource_uri}> dbp:uniprotId ?uniprotId . }}
+                OPTIONAL {{ {entity_uri} wdt:P486  ?meshId . }}
+                OPTIONAL {{ {entity_uri} wdt:P2892 ?umlsId . }}
+                OPTIONAL {{ {entity_uri} wdt:P354  ?hgncId . }}
+                OPTIONAL {{ {entity_uri} wdt:P3345 ?rxnormId . }}
+                OPTIONAL {{ {entity_uri} wdt:P352  ?uniprotId . }}
             }}
             LIMIT 1
             """
 
-            sparql_url = "https://dbpedia.org/sparql"
+            sparql_url = "https://query.wikidata.org/sparql"
             params = {"query": sparql_query, "format": "json"}
+            headers = {"Accept": "application/sparql-results+json"}
 
-            response = client.get(sparql_url, params=params)
+            response = client.get(sparql_url, params=params, headers=headers)
 
             if response.status_code == 200:
                 data = response.json()
@@ -1263,13 +1237,11 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                 if bindings:
                     result = bindings[0]
 
-                    # Determine which authoritative ID to look for based on entity_type
                     authoritative_id_value: Optional[str] = None
                     authoritative_source: Optional[str] = None
 
                     entity_type_normalized = entity_type.lower()
                     if entity_type_normalized in ("disease", "symptom", "procedure"):
-                        # Prefer MeSH, then UMLS
                         if "meshId" in result and result["meshId"].get("value"):
                             authoritative_id_value = result["meshId"]["value"]
                             authoritative_source = "mesh"
@@ -1289,19 +1261,17 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                             authoritative_id_value = result["uniprotId"]["value"]
                             authoritative_source = "uniprot"
 
-                    # If we found an authoritative ID, do a follow-up lookup
                     if authoritative_id_value and authoritative_source:
                         logger.debug(
                             {
-                                "message": f"Found {authoritative_source} ID in DBPedia for {dbpedia_id}: {authoritative_id_value}",
-                                "dbpedia_id": dbpedia_id,
+                                "message": f"Found {authoritative_source} ID in Wikidata for {wikidata_id}: {authoritative_id_value}",
+                                "wikidata_id": wikidata_id,
                                 "authoritative_source": authoritative_source,
                                 "authoritative_id": authoritative_id_value,
                             },
                             pprint=True,
                         )
 
-                        # Perform follow-up lookup with authoritative source (sync)
                         follow_up_id: Optional[str] = None
                         if authoritative_source == "mesh":
                             follow_up_id = self._lookup_mesh_by_id_sync(authoritative_id_value)
@@ -1315,14 +1285,13 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                             follow_up_id = self._lookup_uniprot_by_id_sync(authoritative_id_value)
 
                         if follow_up_id:
-                            # Cache the result
                             url = build_canonical_url(follow_up_id, entity_type=entity_type)
                             canonical_id = CanonicalId(id=follow_up_id, url=url, synonyms=(original_term,))
                             self._cache.store(cache_key, entity_type, canonical_id)
                             logger.info(
                                 {
-                                    "message": f"Extracted authoritative ID from DBPedia: {follow_up_id} (from {dbpedia_id})",
-                                    "dbpedia_id": dbpedia_id,
+                                    "message": f"Extracted authoritative ID from Wikidata: {follow_up_id} (from {wikidata_id})",
+                                    "wikidata_id": wikidata_id,
                                     "authoritative_id": follow_up_id,
                                     "source": authoritative_source,
                                 },
@@ -1330,30 +1299,26 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                             )
                             return follow_up_id
 
-            # No authoritative ID found in DBPedia properties
             logger.debug(
                 {
-                    "message": f"No authoritative ID found in DBPedia properties for {dbpedia_id}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"No authoritative ID found in Wikidata properties for {wikidata_id}",
+                    "wikidata_id": wikidata_id,
                     "entity_type": entity_type,
                 },
                 pprint=True,
             )
-            # Don't cache as "known bad" - DBPedia properties might be added later
-            # Just return None and let the DBPedia ID be used
+            self._cache.mark_known_bad(cache_key, entity_type)
             return None
 
         except Exception as e:
-            # Log at warning level so failures are visible even without DEBUG logging
             logger.warning(
                 {
-                    "message": f"Failed to extract authoritative ID from DBPedia for {dbpedia_id}: {e}",
-                    "dbpedia_id": dbpedia_id,
+                    "message": f"Failed to extract authoritative ID from Wikidata for {wikidata_id}: {e}",
+                    "wikidata_id": wikidata_id,
                     "error": str(e),
                 },
                 pprint=True,
             )
-            # Don't mark as known bad on exception - might be transient (network, timeout, etc.)
             return None
 
     def _lookup_mesh_by_id_sync(self, mesh_id: str) -> Optional[str]:
@@ -1528,19 +1493,19 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                     canonical_id_str = self._lookup_umls_sync(sync_client, term)
                 elif entity_type_normalized == "gene":
                     canonical_id_str = self._lookup_hgnc_sync(sync_client, term)
-                    # Skip DBPedia for genes (same as async path)
+                    # Skip Wikidata fallback for genes (same as async path)
                 elif entity_type_normalized == "drug":
                     canonical_id_str = self._lookup_rxnorm_sync(sync_client, term)
                 elif entity_type_normalized == "protein":
                     canonical_id_str = self._lookup_uniprot_sync(sync_client, term)
 
-                # Fallback to DBPedia if specialized lookup failed (never for gene)
+                # Fallback to Wikidata if specialized lookup failed (never for gene)
                 if canonical_id_str is None and entity_type_normalized != "gene":
-                    dbpedia_result = self._lookup_dbpedia_sync(sync_client, term)
-                    if dbpedia_result:
-                        # Try to extract authoritative ID from DBPedia properties (sync version)
-                        authoritative_id = self._extract_authoritative_id_from_dbpedia_sync(sync_client, dbpedia_result, entity_type, term)
-                        canonical_id_str = authoritative_id if authoritative_id else dbpedia_result
+                    wikidata_result = self._lookup_wikidata_sync(sync_client, term)
+                    if wikidata_result:
+                        # Try to extract authoritative ID from Wikidata properties (sync version)
+                        authoritative_id = self._extract_authoritative_id_from_wikidata_sync(sync_client, wikidata_result, entity_type, term)
+                        canonical_id_str = authoritative_id if authoritative_id else wikidata_result
 
             # Build CanonicalId object with URL and cache it
             if canonical_id_str:
@@ -1707,26 +1672,27 @@ class CanonicalIdLookup(CanonicalIdLookupInterface):
                 return f"UniProt:{uniprot_id}" if uniprot_id else None
         return None
 
-    def _lookup_dbpedia_sync(self, client: "httpx.Client", term: str) -> Optional[str]:
-        """Synchronous DBPedia lookup as fallback with validation."""
+    def _lookup_wikidata_sync(self, client: "httpx.Client", term: str) -> Optional[str]:
+        """Synchronous Wikidata lookup as fallback with validation."""
         try:
-            url = "https://lookup.dbpedia.org/api/search"
-            params = {"query": term.lower(), "format": "json", "maxResults": "5"}
+            url = "https://www.wikidata.org/w/api.php"
+            params = {
+                "action": "wbsearchentities",
+                "search": term,
+                "language": "en",
+                "format": "json",
+                "limit": "5",
+            }
             response = client.get(url, params=params)
 
             if response.status_code == 200:
                 data = response.json()
-                docs = data.get("docs", [])
-
-                for doc in docs:
-                    label_list = doc.get("label", [])
-                    label = label_list[0] if label_list else ""
-
-                    if self._dbpedia_label_matches(term, label):
-                        resource = doc.get("resource", [])
-                        if resource:
-                            uri = resource[0] if isinstance(resource, list) else resource
-                            return f"DBPedia:{uri.split('/')[-1]}"
+                for item in data.get("search", []):
+                    label = item.get("label", "")
+                    if self._wikidata_label_matches(term, label):
+                        qid = item.get("id", "")
+                        if qid.startswith("Q"):
+                            return f"Wikidata:{qid}"
             return None
         except Exception:
             return None

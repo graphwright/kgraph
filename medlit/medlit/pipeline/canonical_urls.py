@@ -7,7 +7,7 @@ def build_canonical_url(canonical_id: str, entity_type: Optional[str] = None) ->
     """Build a canonical URL for an entity based on its canonical ID.
 
     Supports:
-    - DBPedia: https://dbpedia.org/page/{entity_name}
+    - Wikidata: https://www.wikidata.org/wiki/{QID}
     - MeSH: https://meshb.nlm.nih.gov/record/ui?ui={ID}
     - UniProt: https://www.uniprot.org/uniprotkb/{ID}
     - HGNC: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/{ID}
@@ -24,12 +24,10 @@ def build_canonical_url(canonical_id: str, entity_type: Optional[str] = None) ->
     if not canonical_id:
         return None
 
-    # Handle DBPedia IDs (format: "DBPedia:Entity_Name" or "DBPedia:Entity_Name_with_underscores")
-    if canonical_id.startswith("DBPedia:"):
-        entity_name = canonical_id.replace("DBPedia:", "")
-        # DBPedia uses underscores in URLs - ensure spaces are converted
-        url_entity_name = entity_name.replace(" ", "_")
-        return f"https://dbpedia.org/page/{url_entity_name}"
+    # Handle Wikidata IDs (format: "Wikidata:Q{number}")
+    if canonical_id.startswith("Wikidata:"):
+        qid = canonical_id.replace("Wikidata:", "")
+        return f"https://www.wikidata.org/wiki/{qid}"
 
     # Handle MeSH IDs (format: "MeSH:D000570" or "D000570")
     if canonical_id.startswith("MeSH:"):

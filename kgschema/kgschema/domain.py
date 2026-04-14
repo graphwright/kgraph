@@ -269,7 +269,7 @@ class DomainSchema(ABC):
 
         - Data quality: Noisy extraction requires higher thresholds
         - External authority availability: Domains with good authorities
-          (UMLS, DBPedia) can use higher confidence requirements
+          (UMLS, Wikidata) can use higher confidence requirements
         - Entity importance: Critical domains may require more evidence
 
         Override this property to customize thresholds for your domain.

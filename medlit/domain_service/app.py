@@ -3,7 +3,7 @@
 Implements the four HTTP endpoints that the identity server calls to delegate
 domain-specific logic:
 
-    POST /resolve-authority   — authority lookup (UMLS, HGNC, RxNorm, UniProt, DBPedia)
+    POST /resolve-authority   — authority lookup (UMLS, HGNC, RxNorm, UniProt, Wikidata)
     POST /select-survivor     — merge survivor selection
     POST /synonym-criteria    — per-entity-type cosine similarity threshold
     GET  /health              — health check
@@ -64,7 +64,7 @@ Authority chain by entity type:
 - **protein / enzyme** → UniProt
 - **institution** → ROR
 - **author** → ORCID
-- **all others** → DBPedia fallback
+- **all others** → Wikidata fallback
 
 Returns ``null`` for ``canonical_id`` if no authority match is found.
 Results are cached on disk to avoid redundant API calls.

@@ -120,7 +120,7 @@ class EntityResolverInterface(ABC):
     2. **Embedding similarity**: Use semantic vector similarity to find
        entities with similar meaning but different surface forms.
     3. **External authority lookup**: Query authoritative sources (UMLS for
-       medical terms, DBPedia for general knowledge, etc.) to obtain
+       medical terms, Wikidata for general knowledge, etc.) to obtain
        canonical identifiers.
     4. **Provisional creation**: If no match is found, create a provisional
        entity that may later be promoted to canonical status based on

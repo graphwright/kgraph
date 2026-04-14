@@ -177,8 +177,8 @@ def _determine_canonical_id_source(canonical_id: str) -> str:
         return "hgnc"
     if canonical_id.startswith("RxNorm:"):
         return "rxnorm"
-    if canonical_id.startswith("DBPedia:"):
-        return "dbpedia"
+    if canonical_id.startswith("Wikidata:"):
+        return "wikidata"
     if canonical_id.startswith("UniProt:"):
         return "uniprot"
     # Try to infer from format

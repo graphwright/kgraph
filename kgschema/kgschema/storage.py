@@ -35,7 +35,7 @@ class EntityStorageInterface(ABC):
     the entity lifecycle:
 
     - **Canonical entities**: Stable entities linked to authoritative sources
-      (UMLS CUIs, DBPedia URIs, etc.)
+      (UMLS CUIs, Wikidata QIDs, etc.)
     - **Provisional entities**: Newly discovered mentions awaiting promotion
       based on usage frequency and confidence thresholds
 
@@ -207,7 +207,7 @@ class EntityStorageInterface(ABC):
         Args:
             entity_id: Current ID of the provisional entity to promote.
             new_entity_id: New canonical ID for the entity (typically
-                derived from an authority like UMLS or DBPedia).
+                derived from an authority like UMLS or Wikidata).
             canonical_ids: Mapping of authority names to their IDs for this
                 entity (e.g., {'umls': 'C0004057', 'mesh': 'D001241'}).
 
