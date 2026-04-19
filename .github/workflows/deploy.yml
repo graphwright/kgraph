@@ -23,50 +23,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download identity-book bundle
+      - name: Download book bundles
         run: |
-          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/identity-book/releases/latest \
-            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
-          if [ -z "$ASSET_URL" ]; then
-            echo "ERROR: failed to resolve identity-book release asset URL" >&2
-            exit 1
-          fi
-          mkdir -p /tmp/identity-book
-          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/identity-book
-          mkdir -p deploy/books
-          cp /tmp/identity-book/text.pdf deploy/books/the-identity-server.pdf
-          mkdir -p docs/identity-book
-          cp -r /tmp/identity-book/docs/. docs/identity-book/
+          RELEASE=$(curl -sf https://api.github.com/repos/graphwright/books/releases/latest)
+          get_url() {
+            echo "$RELEASE" | python3 -c "
+import sys, json, re
+assets = json.load(sys.stdin)['assets']
+pat = sys.argv[1]
+matches = [a['browser_download_url'] for a in assets if re.search(pat, a['name'])]
+print(matches[0] if matches else '')
+" "$1"
+          }
 
-      - name: Download kg-book bundle
-        run: |
-          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/kg-book/releases/latest \
-            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
-          if [ -z "$ASSET_URL" ]; then
-            echo "ERROR: failed to resolve kg-book release asset URL" >&2
-            exit 1
-          fi
-          mkdir -p /tmp/kg-book
-          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/kg-book
-          mkdir -p deploy/books
-          cp /tmp/kg-book/text.pdf deploy/books/knowledge-graphs-from-unstructured-text.pdf
-          mkdir -p docs/kg-book
-          cp -r /tmp/kg-book/docs/. docs/kg-book/
+          for book in identity-book kg-book bfs-ql-book; do
+            URL=$(get_url "^${book}-")
+            if [ -z "$URL" ]; then
+              echo "ERROR: failed to resolve ${book} release asset URL" >&2
+              exit 1
+            fi
+            mkdir -p /tmp/${book}
+            curl -fsSL "$URL" | tar -xz --strip-components=1 -C /tmp/${book}
+          done
 
-      - name: Download bfs-ql-book bundle
-        run: |
-          ASSET_URL=$(curl -sf https://api.github.com/repos/graphwright/bfs-ql-book/releases/latest \
-            | python3 -c "import sys,json; r=json.load(sys.stdin); print(r['assets'][0]['browser_download_url'])")
-          if [ -z "$ASSET_URL" ]; then
-            echo "ERROR: failed to resolve bfs-ql-book release asset URL" >&2
-            exit 1
-          fi
-          mkdir -p /tmp/bfs-ql-book
-          curl -fsSL "$ASSET_URL" | tar -xz -C /tmp/bfs-ql-book
-          mkdir -p deploy/books
-          cp /tmp/bfs-ql-book/bfsql.pdf deploy/books/bfs-ql.pdf
-          mkdir -p docs/bfs-ql-book
-          cp -r /tmp/bfs-ql-book/docs/. docs/bfs-ql-book/
+          mkdir -p deploy/books docs/identity-book docs/kg-book docs/bfs-ql-book
+          cp /tmp/identity-book/text.pdf    deploy/books/the-identity-server.pdf
+          cp /tmp/kg-book/text.pdf          deploy/books/knowledge-graphs-from-unstructured-text.pdf
+          cp /tmp/bfs-ql-book/bfsql.pdf    deploy/books/bfs-ql.pdf
+          cp -r /tmp/identity-book/docs/.  docs/identity-book/
+          cp -r /tmp/kg-book/docs/.        docs/kg-book/
+          cp -r /tmp/bfs-ql-book/docs/.    docs/bfs-ql-book/
 
       - name: Integrate books into docs site
         run: |
