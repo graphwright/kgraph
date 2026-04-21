@@ -44,7 +44,7 @@ class CandidateEntity(FrozenModel):
     """A candidate entity sent by the identity server for survivor selection."""
 
     entity_id: str = Field(description="Entity ID.")
-    name: str = Field(default="", description="Primary name of the entity.")
+    name: str = Field(description="Primary name of the entity.")
     entity_type: str = Field(description="Domain-specific entity type.")
     status: str = Field(description="Entity status string ('canonical', 'provisional', 'merged').")
     usage_count: int = Field(description="Number of times this entity has been referenced.")

@@ -49,7 +49,7 @@ async def health() -> HealthResponse:
     return HealthResponse(status="ok", version=app.version)
 
 
-def _type_name_from_class(cls: type) -> str:
+def _normalize_entity_type_name(cls: type) -> str:
     return cls.__name__.replace("Entity", "").lower().replace("_", "")
 
 
@@ -60,8 +60,8 @@ async def get_schema() -> DomainSchemaResponse:
     predicates = tuple(
         PredicateContract(
             name=name,
-            domain=frozenset(_type_name_from_class(t) for t in (spec.subject_types or [])),
-            range=frozenset(_type_name_from_class(t) for t in (spec.object_types or [])),
+            domain=frozenset(_normalize_entity_type_name(t) for t in (spec.subject_types or [])),
+            range=frozenset(_normalize_entity_type_name(t) for t in (spec.object_types or [])),
             description=spec.description,
             is_functional=False,
             negation_of=None,

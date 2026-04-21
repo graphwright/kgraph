@@ -75,6 +75,7 @@ class DomainClient:
             cid_data = data.get("canonical_id")
             if cid_data is None:
                 return None
+            # Compatibility path: some domain services may return canonical_id as a raw string.
             if isinstance(cid_data, str):
                 return DomainCanonicalId(id=cid_data, url=None, synonyms=[])
             return DomainCanonicalId(**cid_data)
@@ -128,6 +129,7 @@ class DomainClient:
                 resp = await client.get(f"{self._base_url}/synonym-criteria")
             resp.raise_for_status()
             data = resp.json()
+            # Compatibility path: tolerate services that reuse legacy field shape on GET.
             if "similarity_threshold" in data:
                 return float(data["similarity_threshold"])
             overrides = (data.get("entity_type_overrides") or {}).get(entity_type, {})

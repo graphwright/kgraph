@@ -88,7 +88,8 @@ _AUTHORITY_METADATA: tuple[AuthorityInfo, ...] = (
 
 def authority_for_entity_type(entity_type: str) -> str:
     """Return the likely backing authority for an entity type."""
-    lookup_type = _AUTHORITY_TYPE_OVERRIDES.get(entity_type.lower().strip(), entity_type.lower().strip())
+    normalized_type = entity_type.lower().strip()
+    lookup_type = _AUTHORITY_TYPE_OVERRIDES.get(normalized_type, normalized_type)
     if lookup_type in {"disease", "symptom", "procedure", "biomarker"}:
         return "UMLS"
     if lookup_type == "gene":
