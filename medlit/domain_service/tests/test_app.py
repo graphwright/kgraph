@@ -117,4 +117,5 @@ def test_compute_confidence():
         },
     )
     assert resp.status_code == 200
+    # Domain service intentionally caps aggregate confidence below 1.0.
     assert 0.0 <= resp.json()["confidence"] <= 0.99

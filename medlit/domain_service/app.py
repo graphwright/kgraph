@@ -49,8 +49,8 @@ async def health() -> HealthResponse:
     return HealthResponse(status="ok", version=app.version)
 
 
-def _normalize_entity_type_name(cls: type) -> str:
-    return cls.__name__.replace("Entity", "").lower().replace("_", "")
+def _normalize_entity_type_name(entity_class: type) -> str:
+    return entity_class.__name__.replace("Entity", "").lower().replace("_", "")
 
 
 @app.get("/schema", response_model=DomainSchemaResponse, tags=["Schema"])
@@ -190,4 +190,6 @@ async def compute_confidence_endpoint(request: ComputeConfidenceRequest) -> Comp
         weight_total += weight
 
     aggregate = (weighted_sum / weight_total) if weight_total > 0 else 0.0
+    # Keep confidence strictly sub-1.0 so downstream ranking can reserve 1.0 for
+    # explicit human curation or externally verified ground truth.
     return ComputeConfidenceResponse(confidence=min(0.99, round(aggregate, 4)))
