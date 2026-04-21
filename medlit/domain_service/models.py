@@ -24,7 +24,7 @@ class CanonicalIdResponse(FrozenModel):
 
     id: str = Field(description="Canonical ID string (e.g. 'UMLS:C0006142', 'HGNC:1100').")
     url: Optional[str] = Field(default=None, description="URL to the authoritative source page.")
-    synonyms: tuple[str, ...] = Field(default_factory=tuple, description="Alternative names that map to this canonical ID.")
+    synonyms: tuple[str, ...] = Field(default=(), description="Alternative names that map to this canonical ID.")
     authority: Optional[str] = Field(default=None, description="Authority name that produced the canonical ID.")
     confidence: Optional[float] = Field(default=None, description="Authority match confidence [0.0, 1.0].")
 
@@ -54,7 +54,7 @@ class CandidateEntity(FrozenModel):
 class SelectSurvivorRequest(FrozenModel):
     """Request body for POST /select-survivor."""
 
-    candidates: tuple[CandidateEntity, ...] = Field(default_factory=tuple, description="All entities being considered for merge.")
+    candidates: tuple[CandidateEntity, ...] = Field(default=(), description="All entities being considered for merge.")
     entity_a: Optional[CandidateEntity] = Field(default=None, description="First merge candidate (pairwise mode).")
     entity_b: Optional[CandidateEntity] = Field(default=None, description="Second merge candidate (pairwise mode).")
 
@@ -93,7 +93,7 @@ class DomainSchemaResponse(FrozenModel):
 
     version: str = Field(description="Domain schema version.")
     entity_types: frozenset[str] = Field(default_factory=frozenset, description="Entity type names supported by this domain.")
-    predicates: tuple[PredicateContract, ...] = Field(default_factory=tuple, description="Predicate contract declarations.")
+    predicates: tuple[PredicateContract, ...] = Field(default=(), description="Predicate contract declarations.")
 
 
 class SynonymCriteriaConfig(FrozenModel):
@@ -116,7 +116,7 @@ class AuthorityInfo(FrozenModel):
 class AuthoritiesResponse(FrozenModel):
     """Response body for GET /authorities."""
 
-    authorities: tuple[AuthorityInfo, ...] = Field(default_factory=tuple, description="External authorities available to this domain.")
+    authorities: tuple[AuthorityInfo, ...] = Field(default=(), description="External authorities available to this domain.")
 
 
 class ProvenanceRecord(FrozenModel):
@@ -133,7 +133,7 @@ class ProvenanceRecord(FrozenModel):
 class ComputeConfidenceRequest(FrozenModel):
     """Request body for POST /compute-confidence."""
 
-    provenance_records: tuple[ProvenanceRecord, ...] = Field(default_factory=tuple, description="Provenance records to aggregate.")
+    provenance_records: tuple[ProvenanceRecord, ...] = Field(default=(), description="Provenance records to aggregate.")
 
 
 class ComputeConfidenceResponse(FrozenModel):
