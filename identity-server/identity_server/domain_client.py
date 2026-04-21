@@ -75,6 +75,8 @@ class DomainClient:
             cid_data = data.get("canonical_id")
             if cid_data is None:
                 return None
+            if isinstance(cid_data, str):
+                return DomainCanonicalId(id=cid_data, url=None, synonyms=[])
             return DomainCanonicalId(**cid_data)
         except Exception:
             logger.debug("DomainClient.resolve_authority: unexpected response; defaulting to None", exc_info=True)
@@ -120,6 +122,24 @@ class DomainClient:
             Minimum cosine similarity threshold.  Defaults to 0.90 if the
             domain service is unreachable.
         """
+        try:
+            async with httpx.AsyncClient(timeout=self._timeout) as client:
+                # Preferred v2 contract: GET /synonym-criteria returns aggregate config.
+                resp = await client.get(f"{self._base_url}/synonym-criteria")
+            resp.raise_for_status()
+            data = resp.json()
+            if "similarity_threshold" in data:
+                return float(data["similarity_threshold"])
+            overrides = (data.get("entity_type_overrides") or {}).get(entity_type, {})
+            if "embedding_threshold" in overrides:
+                return float(overrides["embedding_threshold"])
+            if "embedding_threshold" in data:
+                return float(data["embedding_threshold"])
+            if "fuzzy_threshold" in data:
+                return float(data["fuzzy_threshold"])
+        except Exception:
+            logger.debug("DomainClient.synonym_criteria: GET /synonym-criteria failed; trying backward-compatible POST", exc_info=True)
+
         payload = DomainSynonymCriteriaRequest(entity_type=entity_type)
         try:
             async with httpx.AsyncClient(timeout=self._timeout) as client:

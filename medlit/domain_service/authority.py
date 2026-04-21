@@ -19,7 +19,7 @@ from typing import Optional
 from medlit.pipeline.authority_lookup import CanonicalIdLookup, LOOKUP_BLOCKLIST
 from medlit.pipeline.canonical_urls import build_canonical_url
 
-from .models import CanonicalIdResponse
+from .models import AuthorityInfo, CanonicalIdResponse
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +32,81 @@ _AUTHORITY_TYPE_OVERRIDES: dict[str, str] = {
 }
 
 _lookup: Optional[CanonicalIdLookup] = None
+
+
+_AUTHORITY_METADATA: tuple[AuthorityInfo, ...] = (
+    AuthorityInfo(
+        name="UMLS",
+        entity_types=frozenset({"disease", "symptom", "procedure", "biomarker"}),
+        base_url="https://uts-ws.nlm.nih.gov/rest",
+        requires_api_key=True,
+    ),
+    AuthorityInfo(
+        name="MeSH",
+        entity_types=frozenset({"disease", "symptom", "procedure"}),
+        base_url="https://id.nlm.nih.gov/mesh",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="HGNC",
+        entity_types=frozenset({"gene"}),
+        base_url="https://rest.genenames.org",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="RxNorm",
+        entity_types=frozenset({"drug", "hormone"}),
+        base_url="https://rxnav.nlm.nih.gov/REST",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="UniProt",
+        entity_types=frozenset({"protein", "enzyme"}),
+        base_url="https://rest.uniprot.org",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="ROR",
+        entity_types=frozenset({"institution"}),
+        base_url="https://api.ror.org",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="ORCID",
+        entity_types=frozenset({"author"}),
+        base_url="https://pub.orcid.org",
+        requires_api_key=False,
+    ),
+    AuthorityInfo(
+        name="DBPedia",
+        entity_types=frozenset({"*"}),
+        base_url="https://lookup.dbpedia.org/api",
+        requires_api_key=False,
+    ),
+)
+
+
+def authority_for_entity_type(entity_type: str) -> str:
+    """Return the likely backing authority for an entity type."""
+    lookup_type = _AUTHORITY_TYPE_OVERRIDES.get(entity_type.lower().strip(), entity_type.lower().strip())
+    if lookup_type in {"disease", "symptom", "procedure", "biomarker"}:
+        return "UMLS"
+    if lookup_type == "gene":
+        return "HGNC"
+    if lookup_type == "drug":
+        return "RxNorm"
+    if lookup_type == "protein":
+        return "UniProt"
+    if lookup_type == "institution":
+        return "ROR"
+    if lookup_type == "author":
+        return "ORCID"
+    return "DBPedia"
+
+
+def get_authorities_info() -> tuple[AuthorityInfo, ...]:
+    """Return static authority metadata for diagnostics/observability endpoints."""
+    return _AUTHORITY_METADATA
 
 
 def get_lookup() -> CanonicalIdLookup:
@@ -86,6 +161,12 @@ async def resolve_authority(mention: str, entity_type: str) -> Optional[Canonica
     # Build URL if not already present (lookup returns CanonicalId with url set
     # by build_canonical_url, but we rebuild for safety).
     url = result.url or build_canonical_url(result.id, entity_type=lookup_type)
-    synonyms = list(result.synonyms) if result.synonyms else [mention]
+    synonyms = tuple(result.synonyms) if result.synonyms else (mention,)
 
-    return CanonicalIdResponse(id=result.id, url=url, synonyms=synonyms)
+    return CanonicalIdResponse(
+        id=result.id,
+        url=url,
+        synonyms=synonyms,
+        authority=authority_for_entity_type(entity_type),
+        confidence=1.0,
+    )

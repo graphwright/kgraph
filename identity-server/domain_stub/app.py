@@ -53,3 +53,29 @@ async def select_survivor(request: DomainSelectSurvivorRequest) -> DomainSelectS
 async def synonym_criteria(request: DomainSynonymCriteriaRequest) -> DomainSynonymCriteriaResponse:
     """Return the default similarity threshold of 0.90."""
     return DomainSynonymCriteriaResponse(similarity_threshold=0.90)
+
+
+@app.get("/synonym-criteria")
+async def synonym_criteria_config() -> dict:
+    """Return startup-time synonym criteria config."""
+    return {
+        "fuzzy_threshold": 0.90,
+        "embedding_threshold": 0.90,
+        "entity_type_overrides": {},
+    }
+
+
+@app.get("/schema")
+async def schema() -> dict:
+    """Return a minimal schema document for compatibility."""
+    return {
+        "version": "stub-v1",
+        "entity_types": [],
+        "predicates": [],
+    }
+
+
+@app.get("/authorities")
+async def authorities() -> dict:
+    """Return empty authority metadata for the stub service."""
+    return {"authorities": []}
