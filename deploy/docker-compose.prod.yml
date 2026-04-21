@@ -1,14 +1,38 @@
 services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/graphwright.conf:ro
+      - letsencrypt:/etc/letsencrypt:ro
+      - acme-challenge:/var/www/certbot:ro
+    depends_on:
+      - docs
+      - api
+      - mcpserver
+      - gwchat
+    restart: unless-stopped
+    networks:
+      - gw-network
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - letsencrypt:/etc/letsencrypt
+      - acme-challenge:/var/www/certbot
+    # Run renewal check on container start; cron or a periodic restart handles ongoing renewal.
+    # To obtain certs for the first time: docker compose run --rm certbot certonly --webroot
+    #   --webroot-path /var/www/certbot -d graphwright.io -d www.graphwright.io
+    entrypoint: ["sh", "-c", "certbot renew --quiet && echo 'renewal check done'"]
+    restart: "no"
+    networks:
+      - gw-network
+
   docs:
     image: ${REGISTRY}/kgraph-docs:latest
-    environment:
-      CHAT_UPSTREAM: http://gwchat:3000
-    depends_on:
-      gwchat:
-        condition: service_started
     restart: unless-stopped
-    ports:
-      - "127.0.0.1:8003:8000"
     networks:
       - gw-network
     healthcheck:
@@ -32,8 +56,6 @@ services:
       IDENTITY_SERVER_URL: http://identity-server:8080
       PUBLIC_MARKETING_SITE_URL: ${PUBLIC_MARKETING_SITE_URL:-https://graphwright.io/}
       KGSERVER_SERVE_MKDOCS_SITE: "false"
-    ports:
-      - "127.0.0.1:8000:8000"
     volumes:
       - bundle:/bundle:ro
     depends_on:
@@ -63,8 +85,6 @@ services:
       REDIS_URL: redis://redis:6379
       IDENTITY_SERVER_URL: http://identity-server:8080
       INGEST_PIPELINE_CLASS: ${INGEST_PIPELINE_CLASS:-}
-    ports:
-      - "127.0.0.1:8001:8001"
     volumes:
       - bundle:/bundle:ro
       - ingest_workspace:/app/ingest_workspace
@@ -96,10 +116,8 @@ services:
       GWCHAT_CONFIG: /app/config/medlit.yaml
       MCP_CONNECT_TIMEOUT: "25"
       LLM_MIN_REQUEST_INTERVAL_SECONDS: "3.0"
-    ports:
-      - "127.0.0.1:3000:3000"
     volumes:
-      - ./deploy/gwchat-config:/app/config:ro
+      - ./gwchat-config:/app/config:ro
     depends_on:
       mcpserver:
         condition: service_healthy
@@ -186,6 +204,10 @@ volumes:
   ingest_workspace:
     driver: local
   canonical_id_cache:
+    driver: local
+  letsencrypt:
+    driver: local
+  acme-challenge:
     driver: local
 
 networks:
