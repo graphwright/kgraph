@@ -131,9 +131,11 @@ if _serve_mkdocs_site and _mkdocs_site.exists():
 
 @app.get("/", include_in_schema=False)
 async def _root_redirect():
-    """Redirect to marketing URL when set; otherwise JSON pointers (no /site/ in public URLs)."""
+    """Serve docs index at /, redirect to marketing URL, or return JSON pointers."""
     if _public_marketing_site:
         return RedirectResponse(url=_public_marketing_site.rstrip("/") + "/", status_code=302)
+    if _serve_mkdocs_site and _mkdocs_site.exists():
+        return RedirectResponse(url="/site/index.html", status_code=302)
     return {
         "title": "Medical Literature Knowledge Graph API",
         "health": "/health",

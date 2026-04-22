@@ -4,7 +4,7 @@ Three books covering the full pipeline from raw text to a language model that ca
 
 ---
 
-## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge](../books/the-identity-server.pdf)
+## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge](../identity-book/index.html)
 
 The trustworthiness book. How canonical identity, a typed schema, and structural provenance together make machine knowledge defensible. Covers the epistemic commons (MeSH, HGNC, RxNorm, UniProt), the identity server's domain-agnostic core and plugin contract, the entity lifecycle, and the typed graph's central argument: that a finite predicate ontology with declared domain and range makes certain classes of error inexpressible rather than merely discouraged.
 
@@ -12,7 +12,7 @@ The trustworthiness book. How canonical identity, a typed schema, and structural
 
 ---
 
-## [Knowledge Graphs from Unstructured Text](../books/knowledge-graphs-from-unstructured-text.pdf)
+## [Knowledge Graphs from Unstructured Text](../kg-book/index.html)
 
 The extraction book. How to build a knowledge graph from raw documents using LLMs: schema design, the ingestion pipeline, identity resolution, provenance, and diagnostics. Includes the medlit biomedical reference implementation.
 
@@ -20,7 +20,7 @@ The extraction book. How to build a knowledge graph from raw documents using LLM
 
 ---
 
-## [BFS-QL: A Graph Query Protocol for Language Models](../books/bfs-ql.pdf)
+## [BFS-QL: A Graph Query Protocol for Language Models](../bfs-ql-book/index.html)
 
 The interface book. The knowledge is in the graph; the LLM can't get to it — this is a book about the missing interface. Argues that SPARQL and Cypher are the wrong abstraction for LLM-driven graph exploration, and that breadth-first traversal with topology-first, metadata-on-demand design is the right one. Covers the five-tool MCP protocol, the working-set framing for context-window efficiency, backends for SPARQL, Postgres/pgvector, and Neo4j, and cross-graph composition via shared canonical identity.
 

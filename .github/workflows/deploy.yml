@@ -82,7 +82,6 @@ print(matches[0] if matches else '')
 
       - name: Copy docs site and books into deploy image context
         run: |
-          cp -r site deploy/site
           cp -r deploy/books deploy/site/books
 
       - name: Log in to ghcr.io
