@@ -1,6 +1,7 @@
 #!/bin/sh
 # Bootstrap nginx with a self-signed cert if Let's Encrypt certs don't exist yet,
 # then obtain real certs via certbot webroot challenge and reload.
+# nginx runs in the foreground as the container's main process.
 set -e
 
 DOMAIN="graphwright.io"
@@ -9,7 +10,6 @@ OPTIONS_FILE="/etc/letsencrypt/options-ssl-nginx.conf"
 DHPARAM_FILE="/etc/letsencrypt/ssl-dhparams.pem"
 WEBROOT="/var/www/certbot"
 
-# Write certbot's options-ssl-nginx.conf if absent (certbot normally creates this).
 if [ ! -f "$OPTIONS_FILE" ]; then
     mkdir -p /etc/letsencrypt
     cat > "$OPTIONS_FILE" <<'EOF'
@@ -22,13 +22,11 @@ ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECD
 EOF
 fi
 
-# Generate DH params if absent (2048-bit is fine; 4096 is slow at first boot).
 if [ ! -f "$DHPARAM_FILE" ]; then
     echo "[entrypoint] Generating DH params (this takes a moment)..."
     openssl dhparam -out "$DHPARAM_FILE" 2048 2>/dev/null
 fi
 
-# If no real certs exist, plant a self-signed cert so nginx can start on 443.
 CERT_COUNT=0
 if [ -f "${LIVE_DIR}/fullchain.pem" ]; then
     CERT_COUNT=$(grep -c "BEGIN CERTIFICATE" "${LIVE_DIR}/fullchain.pem" 2>/dev/null || echo 0)
@@ -43,15 +41,12 @@ if [ "$CERT_COUNT" -le 1 ]; then
         -subj "/CN=${DOMAIN}" 2>/dev/null
 fi
 
-# Run nginx in the background so the ACME HTTP challenge can be served on port 80.
+# Start nginx in the background temporarily so the ACME webroot challenge can be served.
 echo "[entrypoint] Starting nginx in background for ACME challenge."
 nginx &
 NGINX_PID=$!
-
-# Give nginx a moment to bind ports before certbot tries to verify.
 sleep 2
 
-# Attempt cert issuance only when we don't already have a real cert.
 if [ "$CERT_COUNT" -le 1 ]; then
     echo "[entrypoint] Requesting Let's Encrypt certificate via webroot."
     if certbot certonly --webroot \
@@ -68,13 +63,19 @@ if [ "$CERT_COUNT" -le 1 ]; then
     fi
 fi
 
-# Periodic renewal loop — runs every 12 hours; reload nginx if certs were renewed.
-echo "[entrypoint] Entering renewal loop."
-while kill -0 "$NGINX_PID" 2>/dev/null; do
-    sleep 12h &
-    wait $!
-    echo "[entrypoint] Running certbot renewal check."
-    certbot renew --quiet --deploy-hook "nginx -s reload" || true
-done
+# Stop background nginx and hand off to foreground nginx as PID 1.
+# This makes nginx the container's main process so Docker can manage it properly.
+echo "[entrypoint] Handing off to foreground nginx."
+nginx -s quit
+wait "$NGINX_PID" 2>/dev/null || true
 
-echo "[entrypoint] nginx exited — shutting down."
+# Renewal loop runs in the background; foreground nginx is the main process.
+(
+    while true; do
+        sleep 12h
+        echo "[entrypoint] Running certbot renewal check."
+        certbot renew --quiet --deploy-hook "nginx -s reload" || true
+    done
+) &
+
+exec nginx -g 'daemon off;'
