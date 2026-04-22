@@ -22,3 +22,4 @@ notebooks/
 **/*.egg-info
 .git
 postgres-data
+site/

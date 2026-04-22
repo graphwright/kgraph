@@ -18,7 +18,7 @@ services:
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
       IDENTITY_SERVER_URL: http://identity-server:8080
       PUBLIC_MARKETING_SITE_URL: ${PUBLIC_MARKETING_SITE_URL:-}
-      KGSERVER_SERVE_MKDOCS_SITE: ${KGSERVER_SERVE_MKDOCS_SITE:-false}
+      KGSERVER_SERVE_MKDOCS_SITE: ${KGSERVER_SERVE_MKDOCS_SITE:-true}
     volumes:
       - ./bundle:/bundle:ro
     #  # - /home/wware/S.zip:/bundle/S.zip:ro
@@ -36,26 +36,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 10s
-    profiles: ["api"]
-
-  docs:
-    image: ${REGISTRY}/kgraph-docs:latest
-    environment:
-      CHAT_UPSTREAM: http://gwchat:3000
-    depends_on:
-      gwchat:
-        condition: service_started
-    restart: unless-stopped
-    ports:
-      - "127.0.0.1:8003:8000"
-    networks:
-      - kgserver-network
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 5s
     profiles: ["api"]
 
   # MCP server: can take 30–60s to start on small droplets (heavy Python imports: Strawberry, SQLAlchemy, storage)

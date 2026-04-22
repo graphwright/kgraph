@@ -23,9 +23,10 @@ RUN uv venv --python /usr/local/bin/python3 --relocatable && \
         mkdocs mkdocs-material pymdown-extensions
 
 # Docs: Track 2 set under docs/ + kgserver index as site home
-COPY kgserver/mkdocs.yml ./
+# COPY kgserver/mkdocs.yml ./
+COPY mkdocs.yml ./
 COPY docs/ ./docs/
-COPY kgserver/index.md ./docs/index.md
+# COPY kgserver/index.md ./docs/index.md
 
 # Prebuild MkDocs site so runtime does not run zensical build (avoids hang on small droplets)
 RUN uv run zensical build

@@ -1,23 +1,4 @@
 services:
-  docs:
-    image: ${REGISTRY}/kgraph-docs:latest
-    environment:
-      CHAT_UPSTREAM: http://gwchat:3000
-    depends_on:
-      gwchat:
-        condition: service_started
-    restart: unless-stopped
-    ports:
-      - "127.0.0.1:8003:8000"
-    networks:
-      - gw-network
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 5s
-
   api:
     image: ${REGISTRY}/kgraph-kgserver:latest
     environment:
@@ -30,8 +11,7 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
       IDENTITY_SERVER_URL: http://identity-server:8080
-      PUBLIC_MARKETING_SITE_URL: ${PUBLIC_MARKETING_SITE_URL:-https://graphwright.io/}
-      KGSERVER_SERVE_MKDOCS_SITE: "false"
+      KGSERVER_SERVE_MKDOCS_SITE: "true"
     ports:
       - "127.0.0.1:8000:8000"
     volumes:

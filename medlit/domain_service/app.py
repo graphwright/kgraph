@@ -1,32 +1,25 @@
-"""Medlit domain service — FastAPI application.
-
-Implements the four HTTP endpoints that the identity server calls to delegate
-domain-specific logic:
-
-    POST /resolve-authority   — authority lookup (UMLS, HGNC, RxNorm, UniProt, DBPedia)
-    POST /select-survivor     — merge survivor selection
-    POST /synonym-criteria    — per-entity-type cosine similarity threshold
-    GET  /health              — health check
-
-Set environment variables before starting:
-    UMLS_API_KEY              — UMLS API key (optional; falls back to MeSH if absent)
-    CANONICAL_ID_CACHE_PATH   — path to JSON cache file (default: ./canonical_id_cache.json)
-
-Run with:
-    uvicorn domain_service.app:app --host 0.0.0.0 --port 8080
-"""
+"""Medlit domain service — FastAPI application."""
 
 import logging
+from importlib.metadata import PackageNotFoundError, version
 
 from fastapi import FastAPI
 
-from .authority import resolve_authority
+from medlit.domain_spec import ENTITY_TYPE_SPECS, PREDICATES
+
+from .authority import get_authorities_info, resolve_authority
 from .models import (
+    AuthoritiesResponse,
+    ComputeConfidenceRequest,
+    ComputeConfidenceResponse,
+    DomainSchemaResponse,
     HealthResponse,
+    PredicateContract,
     ResolveAuthorityRequest,
     ResolveAuthorityResponse,
     SelectSurvivorRequest,
     SelectSurvivorResponse,
+    SynonymCriteriaConfig,
     SynonymCriteriaRequest,
     SynonymCriteriaResponse,
 )
@@ -36,17 +29,46 @@ from .synonym_criteria import get_threshold
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+try:
+    _APP_VERSION = version("medlit")
+except PackageNotFoundError:
+    _APP_VERSION = "0.1.0"
+
+_SCHEMA_VERSION = "medlit-domain-v1"
+
 app = FastAPI(
     title="Medlit Domain Service",
-    description="Domain-specific plugin for the graphwright identity server — biomedical authority lookup, survivor selection, and synonym criteria.",
-    version="0.1.0",
+    description="Domain-specific microservice for medlit schema, authority resolution, survivor selection, and confidence/synonym policy.",
+    version=_APP_VERSION,
 )
 
 
 @app.get("/health", response_model=HealthResponse, tags=["Health"])
 async def health() -> HealthResponse:
     """Return service health status."""
-    return HealthResponse(status="ok")
+    return HealthResponse(status="ok", version=app.version)
+
+
+def _normalize_entity_type_name(entity_class: type) -> str:
+    return entity_class.__name__.replace("Entity", "").lower().replace("_", "")
+
+
+@app.get("/schema", response_model=DomainSchemaResponse, tags=["Schema"])
+async def get_schema() -> DomainSchemaResponse:
+    """Return immutable domain schema contract."""
+    entity_types = frozenset(t for t in ENTITY_TYPE_SPECS if t != "default")
+    predicates = tuple(
+        PredicateContract(
+            name=name,
+            domain=frozenset(_normalize_entity_type_name(t) for t in (spec.subject_types or [])),
+            range=frozenset(_normalize_entity_type_name(t) for t in (spec.object_types or [])),
+            description=spec.description,
+            is_functional=False,
+            negation_of=None,
+        )
+        for name, spec in sorted(PREDICATES.items())
+    )
+    return DomainSchemaResponse(version=_SCHEMA_VERSION, entity_types=entity_types, predicates=predicates)
 
 
 @app.post(
@@ -74,7 +96,9 @@ Results are cached on disk to avoid redundant API calls.
 async def resolve_authority_endpoint(request: ResolveAuthorityRequest) -> ResolveAuthorityResponse:
     """Resolve a mention to a canonical ID from medical authorities."""
     canonical_id = await resolve_authority(mention=request.mention, entity_type=request.entity_type)
-    return ResolveAuthorityResponse(canonical_id=canonical_id)
+    if canonical_id is None:
+        return ResolveAuthorityResponse(canonical_id=None, authority=None, confidence=None)
+    return ResolveAuthorityResponse(canonical_id=canonical_id, authority=canonical_id.authority, confidence=canonical_id.confidence)
 
 
 @app.post(
@@ -95,23 +119,77 @@ Preference order:
 )
 async def select_survivor_endpoint(request: SelectSurvivorRequest) -> SelectSurvivorResponse:
     """Select the preferred merge survivor."""
-    survivor_id = select_survivor(request.candidates)
+    candidates = list(request.candidates)
+    if not candidates and request.entity_a and request.entity_b:
+        candidates = [request.entity_a, request.entity_b]
+    survivor_id = select_survivor(candidates)
     return SelectSurvivorResponse(survivor_id=survivor_id)
 
 
-@app.post(
-    "/synonym-criteria",
-    response_model=SynonymCriteriaResponse,
-    summary="Return the cosine similarity threshold for synonym detection",
-    description="""
-Return the minimum cosine similarity required for two entities of the given
-type to be considered synonyms. Thresholds are tighter for entity types where
-false-positive merges are costly (gene, drug) and looser for types with high
-surface-form variation (pathway, anatomical structure).
-""",
-    tags=["Domain"],
-)
+@app.get("/synonym-criteria", response_model=SynonymCriteriaConfig, tags=["Domain"])
+async def synonym_criteria_config_endpoint() -> SynonymCriteriaConfig:
+    """Return aggregate synonym criteria for startup-time caching."""
+    return SynonymCriteriaConfig(
+        fuzzy_threshold=0.90,
+        embedding_threshold=0.90,
+        entity_type_overrides={entity_type: {"embedding_threshold": get_threshold(entity_type)} for entity_type in ENTITY_TYPE_SPECS if entity_type != "default"},
+    )
+
+
+@app.post("/synonym-criteria", response_model=SynonymCriteriaResponse, tags=["Domain"])
 async def synonym_criteria_endpoint(request: SynonymCriteriaRequest) -> SynonymCriteriaResponse:
-    """Return the synonym similarity threshold for an entity type."""
-    threshold = get_threshold(request.entity_type)
-    return SynonymCriteriaResponse(similarity_threshold=threshold)
+    """Backward-compatible per-entity-type synonym threshold endpoint."""
+    return SynonymCriteriaResponse(similarity_threshold=get_threshold(request.entity_type))
+
+
+@app.get("/authorities", response_model=AuthoritiesResponse, tags=["Domain"])
+async def authorities_endpoint() -> AuthoritiesResponse:
+    """Return authority metadata for diagnostics."""
+    return AuthoritiesResponse(authorities=get_authorities_info())
+
+
+_STUDY_TYPE_WEIGHT = {
+    "meta_analysis": 1.0,
+    "systematic_review": 0.98,
+    "rct": 0.95,
+    "observational": 0.85,
+    "review": 0.80,
+    "case_report": 0.70,
+}
+
+_SECTION_WEIGHT = {
+    "results": 1.0,
+    "abstract": 0.95,
+    "methods": 0.92,
+    "discussion": 0.85,
+    "introduction": 0.80,
+}
+
+_EXTRACTION_METHOD_WEIGHT = {
+    "curated": 1.0,
+    "rules": 0.95,
+    "llm": 0.90,
+}
+
+
+@app.post("/compute-confidence", response_model=ComputeConfidenceResponse, tags=["Domain"])
+async def compute_confidence_endpoint(request: ComputeConfidenceRequest) -> ComputeConfidenceResponse:
+    """Aggregate confidence over provenance records with medlit domain weights."""
+    if not request.provenance_records:
+        return ComputeConfidenceResponse(confidence=0.0)
+
+    weighted_sum = 0.0
+    weight_total = 0.0
+    for record in request.provenance_records:
+        study_weight = _STUDY_TYPE_WEIGHT.get((record.study_type or "").lower().strip(), 0.80)
+        section_weight = _SECTION_WEIGHT.get(record.section_type.lower().strip(), 0.80)
+        extraction_weight = _EXTRACTION_METHOD_WEIGHT.get(record.extraction_method.lower().strip(), 0.85)
+        weight = study_weight * section_weight * extraction_weight
+        bounded_conf = min(1.0, max(0.0, record.confidence))
+        weighted_sum += bounded_conf * weight
+        weight_total += weight
+
+    aggregate = (weighted_sum / weight_total) if weight_total > 0 else 0.0
+    # Keep confidence strictly sub-1.0 so downstream ranking can reserve 1.0 for
+    # explicit human curation or externally verified ground truth.
+    return ComputeConfidenceResponse(confidence=min(0.99, round(aggregate, 4)))

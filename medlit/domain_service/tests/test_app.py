@@ -15,6 +15,7 @@ def test_health():
     resp = client.get("/health")
     assert resp.status_code == 200
     assert resp.json()["status"] == "ok"
+    assert "version" in resp.json()
 
 
 def test_resolve_authority_no_match():
@@ -60,3 +61,61 @@ def test_synonym_criteria_unknown_type():
     resp = client.post("/synonym-criteria", json={"entity_type": "widget"})
     assert resp.status_code == 200
     assert resp.json()["similarity_threshold"] == 0.90
+
+
+def test_schema_endpoint():
+    resp = client.get("/schema")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "version" in data
+    assert "entity_types" in data
+    assert "predicates" in data
+    assert "disease" in data["entity_types"]
+    assert any(p["name"] == "TREATS" for p in data["predicates"])
+
+
+def test_authorities_endpoint():
+    resp = client.get("/authorities")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "authorities" in data
+    assert any(a["name"] == "UMLS" for a in data["authorities"])
+
+
+def test_synonym_criteria_get_config():
+    resp = client.get("/synonym-criteria")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "fuzzy_threshold" in data
+    assert "embedding_threshold" in data
+    assert "entity_type_overrides" in data
+    assert "gene" in data["entity_type_overrides"]
+
+
+def test_compute_confidence():
+    resp = client.post(
+        "/compute-confidence",
+        json={
+            "provenance_records": [
+                {
+                    "paper_id": "PMC1",
+                    "section_type": "results",
+                    "paragraph_idx": 1,
+                    "extraction_method": "llm",
+                    "confidence": 0.9,
+                    "study_type": "rct",
+                },
+                {
+                    "paper_id": "PMC1",
+                    "section_type": "discussion",
+                    "paragraph_idx": 2,
+                    "extraction_method": "llm",
+                    "confidence": 0.7,
+                    "study_type": "case_report",
+                },
+            ]
+        },
+    )
+    assert resp.status_code == 200
+    # Domain service intentionally caps aggregate confidence below 1.0.
+    assert 0.0 <= resp.json()["confidence"] <= 0.99
