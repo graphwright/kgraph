@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, plod]
     tags: ['v*']
 
 env:
@@ -27,13 +27,7 @@ jobs:
         run: |
           RELEASE=$(curl -sf https://api.github.com/repos/graphwright/books/releases/latest)
           get_url() {
-            echo "$RELEASE" | python3 -c "
-import sys, json, re
-assets = json.load(sys.stdin)['assets']
-pat = sys.argv[1]
-matches = [a['browser_download_url'] for a in assets if re.search(pat, a['name'])]
-print(matches[0] if matches else '')
-" "$1"
+            echo "$RELEASE" | python3 deploy/scripts/get_release_url.py "$1"
           }
 
           for book in identity-book kg-book bfs-ql-book; do
@@ -77,11 +71,12 @@ print(matches[0] if matches else '')
 
       - name: Build docs site
         run: |
-          pip install mkdocs mkdocs-material
-          mkdocs build
+          pip install zensical
+          zensical build
 
       - name: Copy docs site and books into deploy image context
         run: |
+          cp -r site deploy/site
           cp -r deploy/books deploy/site/books
 
       - name: Log in to ghcr.io
@@ -90,15 +85,6 @@ print(matches[0] if matches else '')
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push docs image
-        run: |
-          docker build \
-            -t $REGISTRY/kgraph-docs:${{ github.sha }} \
-            -t $REGISTRY/kgraph-docs:latest \
-            deploy/
-          docker push $REGISTRY/kgraph-docs:${{ github.sha }}
-          docker push $REGISTRY/kgraph-docs:latest
 
       - name: Build and push api+mcpserver image
         run: |
@@ -212,6 +198,8 @@ print(matches[0] if matches else '')
 
             rm -f /tmp/deploy.env
             nginx -t && nginx -s reload
+            docker image prune -f
+            docker image prune -f
 
   # -------------------------------------------------------------------------
   # Deploy to prod — triggered by version tag (v*)
@@ -286,3 +274,4 @@ print(matches[0] if matches else '')
 
             rm -f /tmp/deploy.env
             nginx -t && nginx -s reload
+            docker image prune -f

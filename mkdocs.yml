@@ -4,7 +4,7 @@ repo_url: https://github.com/graphwright/kgraph
 repo_name: graphwright/kgraph
 
 # Served under /site/ by FastAPI; use relative URLs so nav and in-doc links work.
-site_url: http://localhost:8000/site/
+site_url: /
 # Avoid directory-style URLs (/overview/) so links stay relative (overview.html) under /site/
 use_directory_urls: false
 # Explicit docs dir (Dockerfile copies docs/ and kgserver/index.md into it)

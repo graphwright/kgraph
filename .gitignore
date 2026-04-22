@@ -47,5 +47,9 @@ Thumbs.db
 gwchat/node_modules/
 gwchat/.next/
 
+# zensical/mkdocs build output
+site/
+deploy/site/
+
 # gwchat/lib/ is TypeScript source — un-ignore it (root lib/ rule above catches it)
 !gwchat/lib/
