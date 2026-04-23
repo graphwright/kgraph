@@ -53,3 +53,4 @@ deploy/site/
 
 # gwchat/lib/ is TypeScript source — un-ignore it (root lib/ rule above catches it)
 !gwchat/lib/
+.claude-context.md
