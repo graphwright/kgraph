@@ -146,6 +146,7 @@ jobs:
           echo "_COMPOSE_B64=$(base64 -w0 deploy/docker-compose.staging.yml)" >> $GITHUB_ENV
           echo "_GWCHAT_CONFIG_B64=$(base64 -w0 deploy/gwchat-config/medlit.yaml)" >> $GITHUB_ENV
           echo "_VHOST_B64=$(base64 -w0 deploy/vhost.d/graphwright.io)" >> $GITHUB_ENV
+          echo "_VHOST_OVERRIDE_B64=$(base64 -w0 deploy/vhost.d/graphwright.io_location_override)" >> $GITHUB_ENV
 
       - name: Deploy to staging droplet
         uses: appleboy/ssh-action@v1
@@ -164,11 +165,12 @@ jobs:
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           VHOST_B64: ${{ env._VHOST_B64 }}
+          VHOST_OVERRIDE_B64: ${{ env._VHOST_OVERRIDE_B64 }}
         with:
           host: 137.184.49.99
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,STAGING_DOMAIN,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,VHOST_B64
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,STAGING_DOMAIN,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,VHOST_B64,VHOST_OVERRIDE_B64
           script: |
             set -e
             mkdir -p /opt/graphwright/gwchat-config /opt/graphwright/vhost.d
@@ -176,6 +178,7 @@ jobs:
             echo "$COMPOSE_B64"       | base64 -d > /opt/graphwright/docker-compose.staging.yml
             echo "$GWCHAT_CONFIG_B64" | base64 -d > /opt/graphwright/gwchat-config/medlit.yaml
             echo "$VHOST_B64"         | base64 -d > /opt/graphwright/vhost.d/graphwright.io
+            echo "$VHOST_OVERRIDE_B64" | base64 -d > /opt/graphwright/vhost.d/graphwright.io_location_override
 
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
@@ -220,6 +223,7 @@ jobs:
           echo "_COMPOSE_B64=$(base64 -w0 deploy/docker-compose.prod.yml)" >> $GITHUB_ENV
           echo "_GWCHAT_CONFIG_B64=$(base64 -w0 deploy/gwchat-config/medlit.yaml)" >> $GITHUB_ENV
           echo "_VHOST_B64=$(base64 -w0 deploy/vhost.d/graphwright.io)" >> $GITHUB_ENV
+          echo "_VHOST_OVERRIDE_B64=$(base64 -w0 deploy/vhost.d/graphwright.io_location_override)" >> $GITHUB_ENV
 
       - name: Deploy to prod droplet
         uses: appleboy/ssh-action@v1
@@ -237,11 +241,12 @@ jobs:
           COMPOSE_B64: ${{ env._COMPOSE_B64 }}
           GWCHAT_CONFIG_B64: ${{ env._GWCHAT_CONFIG_B64 }}
           VHOST_B64: ${{ env._VHOST_B64 }}
+          VHOST_OVERRIDE_B64: ${{ env._VHOST_OVERRIDE_B64 }}
         with:
           host: 104.131.171.175
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,VHOST_B64
+          envs: POSTGRES_PASSWORD,ANTHROPIC_API_KEY,OPENAI_API_KEY,UMLS_API_KEY,LLM_PROVIDER,PASS1_LLM_BACKEND,INGEST_PIPELINE_CLASS,REGISTRY,GHCR_PAT,GHCR_USER,COMPOSE_B64,GWCHAT_CONFIG_B64,VHOST_B64,VHOST_OVERRIDE_B64
           script: |
             set -e
             mkdir -p /opt/graphwright/gwchat-config /opt/graphwright/vhost.d
@@ -249,6 +254,7 @@ jobs:
             echo "$COMPOSE_B64"       | base64 -d > /opt/graphwright/docker-compose.prod.yml
             echo "$GWCHAT_CONFIG_B64" | base64 -d > /opt/graphwright/gwchat-config/medlit.yaml
             echo "$VHOST_B64"         | base64 -d > /opt/graphwright/vhost.d/graphwright.io
+            echo "$VHOST_OVERRIDE_B64" | base64 -d > /opt/graphwright/vhost.d/graphwright.io_location_override
 
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
