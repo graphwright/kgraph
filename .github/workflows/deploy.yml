@@ -25,7 +25,7 @@ jobs:
 
       - name: Download book bundles
         run: |
-          RELEASE=$(curl -sf https://api.github.com/repos/graphwright/books/releases/latest)
+          RELEASE=$(curl -sf -H "Authorization: Bearer ${{ github.token }}" https://api.github.com/repos/graphwright/books/releases/latest)
           get_url() {
             echo "$RELEASE" | python3 deploy/scripts/get_release_url.py "$1"
           }
