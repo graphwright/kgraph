@@ -40,9 +40,11 @@ services:
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
       IDENTITY_SERVER_URL: http://identity-server:8080
       KGSERVER_SERVE_MKDOCS_SITE: "true"
-      VIRTUAL_HOST: graphwright.io,www.graphwright.io
+      VIRTUAL_HOST: ${STAGING_DOMAIN}
       VIRTUAL_PORT: "8000"
-      LETSENCRYPT_HOST: graphwright.io,www.graphwright.io
+      LETSENCRYPT_HOST: ${STAGING_DOMAIN}
+      # Use Let's Encrypt staging CA to avoid rate limits during iteration
+      LETSENCRYPT_TEST: "true"
     volumes:
       - bundle:/bundle:ro
     depends_on:
