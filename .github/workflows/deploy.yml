@@ -177,8 +177,8 @@ jobs:
 
             echo "$COMPOSE_B64"       | base64 -d > /opt/graphwright/docker-compose.staging.yml
             echo "$GWCHAT_CONFIG_B64" | base64 -d > /opt/graphwright/gwchat-config/medlit.yaml
-            echo "$VHOST_B64"         | base64 -d > /opt/graphwright/vhost.d/graphwright.io
-            echo "$VHOST_OVERRIDE_B64" | base64 -d > /opt/graphwright/vhost.d/graphwright.io_location_override
+            echo "$VHOST_B64"          | base64 -d > /opt/graphwright/vhost.d/$STAGING_DOMAIN
+            echo "$VHOST_OVERRIDE_B64" | base64 -d > /opt/graphwright/vhost.d/${STAGING_DOMAIN}_location_override
 
             echo "$GHCR_PAT" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 
