@@ -7,7 +7,6 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - nginx-certs:/etc/nginx/certs
-      - nginx-vhost:/etc/nginx/vhost.d
       - nginx-html:/usr/share/nginx/html
       - ./vhost.d:/etc/nginx/vhost.d:ro
     restart: unless-stopped
@@ -195,8 +194,6 @@ volumes:
   canonical_id_cache:
     driver: local
   nginx-certs:
-    driver: local
-  nginx-vhost:
     driver: local
   nginx-html:
     driver: local
