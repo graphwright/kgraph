@@ -199,6 +199,12 @@ jobs:
               -f /opt/graphwright/docker-compose.staging.yml \
               up -d --pull always --remove-orphans
 
+            # Restart nginx-proxy so dockergen rescans all containers after deploy
+            docker compose \
+              --env-file /tmp/deploy.env \
+              -f /opt/graphwright/docker-compose.staging.yml \
+              restart nginx-proxy
+
             rm -f /tmp/deploy.env
             docker image prune -f
 
@@ -273,6 +279,12 @@ jobs:
               --env-file /tmp/deploy.env \
               -f /opt/graphwright/docker-compose.prod.yml \
               up -d --pull always --remove-orphans
+
+            # Restart nginx-proxy so dockergen rescans all containers after deploy
+            docker compose \
+              --env-file /tmp/deploy.env \
+              -f /opt/graphwright/docker-compose.prod.yml \
+              restart nginx-proxy
 
             rm -f /tmp/deploy.env
             docker image prune -f
