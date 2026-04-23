@@ -1,8 +1,6 @@
-# Custom location blocks for graphwright.io, loaded by nginx-proxy into the
-# server{} block it generates for this vhost. nginx-proxy handles SSL termination,
-# ACME challenge, and the default proxy_pass to the api container (port 8000).
-# This file adds the path-based routing for mcpserver and gwchat, plus the
-# MkDocs /site/ rewrite and SSE-specific proxy settings.
+# Server-level config included by nginx-proxy into the server{} block.
+# nginx-proxy generates its own location / block; we override it via
+# graphwright.io_location_override (same filename with that suffix).
 
 client_max_body_size 100M;
 
@@ -154,15 +152,4 @@ location = / {
 location /site/ {
     proxy_pass http://api:8000;
     proxy_set_header Host $host;
-}
-
-# Rewrite bare paths to /site/ for MkDocs assets
-location / {
-    rewrite ^/(.*)$ /site/$1 break;
-    proxy_pass http://api:8000;
-    proxy_http_version 1.1;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
 }
