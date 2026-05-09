@@ -1,11 +1,12 @@
-"""Caching interfaces for embeddings and other computed artifacts.
+"""Caching primitives for extraction-time embedding reuse.
 
 Uses asyncio.Lock in concrete caches so that concurrent get/put/save/load
 do not corrupt in-memory state. Lock is held only around critical sections
 to avoid deadlock (e.g. get_batch calling get, put calling save).
 
-This module provides abstractions for caching expensive computations, particularly
-embeddings (semantic vectors). Caching is critical for:
+This module provides abstractions for caching expensive computations, especially
+embedding vectors generated during entity extraction and resolution. Caching is
+critical for:
 
 - **Cost reduction**: Avoiding repeated API calls to embedding providers
 - **Performance**: Eliminating redundant computation for frequently-seen entities

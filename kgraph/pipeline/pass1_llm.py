@@ -1,8 +1,12 @@
-"""LLM backend factory for Pass 1 extraction (Anthropic, OpenAI, Ollama).
+"""Pass 1 LLM adapters and backend factory for extraction runs.
 
-Pass 1 requires an LLM to extract entities and relationships from papers.
-Set the backend via --llm-backend or LLM_BACKEND; provide API keys via
-environment (ANTHROPIC_API_KEY, OPENAI_API_KEY) or .env. See LLM_SETUP.md.
+Pass 1 uses an LLM to produce structured JSON from paper text (entities,
+relationships, and metadata). This module centralizes backend-specific adapter
+logic (Anthropic/OpenAI/Ollama), response parsing, and runtime backend selection
+via CLI/env configuration.
+
+Set backend via ``--llm-backend`` or ``LLM_BACKEND``; provide API keys via
+environment (``ANTHROPIC_API_KEY``, ``OPENAI_API_KEY``) or ``.env``.
 """
 
 import asyncio

@@ -1,4 +1,4 @@
-"""Embedding generation interface for the knowledge graph framework.
+"""Embedding generation contracts used by extraction and entity resolution.
 
 This module defines the interface for generating semantic vector embeddings,
 which are dense numerical representations of text that capture meaning.

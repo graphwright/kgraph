@@ -1,4 +1,4 @@
-"""Streaming pipeline interfaces for processing large documents.
+"""Streaming extraction interfaces for large-document processing.
 
 This module provides abstractions for processing documents in a streaming fashion,
 breaking them into manageable chunks (windows) that can be processed incrementally.

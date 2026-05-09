@@ -1,6 +1,8 @@
-"""LLM client abstraction for entity and relationship extraction.
+"""LLM client interfaces and Ollama implementation for extraction passes.
 
-Provides a unified interface for Ollama LLM integration with tool calling support.
+This module defines the shared async contract used by extraction components that
+need model completions (plain text, structured JSON, or tool-calling flows), and
+ships the default Ollama-backed implementation used in local/offline pipelines.
 
 Rate limiting: OllamaLLMClient enforces a minimum interval between the start of any
 two contiguous requests (default 3s, configurable via LLM_MIN_REQUEST_INTERVAL_SECONDS
