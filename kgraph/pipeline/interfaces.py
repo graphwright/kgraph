@@ -1,4 +1,4 @@
-"""Pipeline interface definitions for document processing and extraction.
+"""Core interfaces for the two-pass extraction pipeline.
 
 This module defines the abstract interfaces for the two-pass ingestion pipeline:
 

@@ -1,6 +1,9 @@
-"""Ollama embedding generator.
+"""Ollama-backed embedding generator for extraction pipeline components.
 
-Uses Ollama's /api/embed endpoint (single or batch input).
+This module provides a concrete ``EmbeddingGeneratorInterface`` implementation
+that calls Ollama's ``/api/embed`` endpoint for both single-item and batched
+embedding generation, enabling local vectorization for entity resolution and
+similarity-driven graph operations.
 """
 
 import os

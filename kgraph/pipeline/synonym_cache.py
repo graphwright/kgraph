@@ -1,7 +1,9 @@
-"""Synonym / identity cache for Pass 2: persist and reuse SAME_AS links across runs.
+"""Persistent SAME_AS cache used during Pass 2 identity reconciliation.
 
-Pass 2 loads the cache on startup and saves it at the end so that (name, type) → canonical_id
-and known SAME_AS ambiguities are reused, making Pass 2 idempotent.
+The cache stores previously observed synonym/identity decisions so repeated runs
+can reuse known ``(name, class) -> canonical_id`` matches and preserve ambiguity
+records for review. Loading at startup and saving at shutdown makes Pass 2 more
+stable, faster, and closer to idempotent across incremental ingestions.
 """
 
 import json
