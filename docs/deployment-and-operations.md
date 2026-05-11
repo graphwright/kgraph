@@ -28,7 +28,7 @@ The server does **not** ingest raw documents; it only loads a pre-built bundle. 
 
 ## Docker build
 
-The Dockerfile (multi-stage) installs dependencies, copies the docs tree and `kgserver/index.md` into the image, builds the MkDocs site, and runs the FastAPI app. Build from repo root:
+The Dockerfile (multi-stage) installs dependencies, generates build-time code-reference markdown, builds the MkDocs site, and runs the FastAPI app. Build from repo root:
 
 ```bash
 docker build -f kgserver/Dockerfile .

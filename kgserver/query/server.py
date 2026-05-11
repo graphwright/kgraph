@@ -21,7 +21,13 @@ from storage.interfaces import StorageInterface
 # Let's take this opportunity to do the zensical build
 logging.basicConfig(format="%(levelname)s:     %(asctime)s - %(message)s", level=logging.INFO, datefmt="%Y-%m-%d %H:%M:%S")
 logger = logging.getLogger()
-result = subprocess.run(["uv", "run", "zensical", "build"], check=False)
+app_root = Path(os.environ.get("KGSERVER_APP_ROOT", "/app"))
+code_reference_script = app_root / "scripts" / "build_code_reference.py"
+if code_reference_script.exists():
+    code_ref_result = subprocess.run(["uv", "run", "python", str(code_reference_script)], cwd=str(app_root), check=False)
+    if code_ref_result.returncode != 0:
+        logger.error("CODE REFERENCE BUILD FAILED")
+result = subprocess.run(["uv", "run", "zensical", "build"], cwd=str(app_root), check=False)
 if result.returncode != 0:
     logger.error("MKDOCS BUILD FAILED")
 

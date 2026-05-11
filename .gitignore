@@ -50,6 +50,7 @@ gwchat/.next/
 # zensical/mkdocs build output
 site/
 deploy/site/
+docs/code-reference/generated/
 
 # gwchat/lib/ is TypeScript source — un-ignore it (root lib/ rule above catches it)
 !gwchat/lib/

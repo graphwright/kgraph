@@ -21,3 +21,13 @@
 - Prefer **in-memory storage** and small fixtures so tests are fast and deterministic.
 - **Linters**: Run `./lint.sh` (ruff, mypy, black, flake8, pylint, then pytest). See root `CLAUDE.md` for tool order and scope.
 - Add tests for new pipeline stages and schema changes; keep coverage for promotion, export, and bundle loading.
+
+## Regenerating code reference docs
+
+From the repository root:
+
+```bash
+uv run python scripts/build_code_reference.py
+```
+
+Then build docs as usual (for example, `uv run zensical build`).

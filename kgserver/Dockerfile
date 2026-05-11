@@ -26,10 +26,16 @@ RUN uv venv --python /usr/local/bin/python3 --relocatable && \
 # COPY kgserver/mkdocs.yml ./
 COPY mkdocs.yml ./
 COPY docs/ ./docs/
+COPY proc.py ./proc.py
+COPY scripts/ ./scripts/
+COPY kgraph ./kgraph
+COPY kgschema ./kgschema
+COPY kgserver ./kgserver
 # COPY kgserver/index.md ./docs/index.md
 
 # Prebuild MkDocs site so runtime does not run zensical build (avoids hang on small droplets)
-RUN uv run zensical build
+RUN uv run python scripts/build_code_reference.py && \
+    uv run zensical build
 
 # Final stage - use same base image to keep Python paths consistent
 FROM python:3.13-slim

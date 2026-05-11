@@ -62,6 +62,6 @@ nav:
   - Examples:
     - Medlit: examples/medlit.md
     - Sherlock: examples/sherlock.md
+  - Code Reference: code-reference/index.md
   - Contributing: contributing.md
   - Books: books.md
-
