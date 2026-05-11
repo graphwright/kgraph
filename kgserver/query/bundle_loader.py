@@ -209,6 +209,18 @@ def _build_mkdocs_if_present():
     if site_index.exists():
         logger.info("Using prebuilt site, skipping MkDocs build after doc asset load")
         return
+    code_reference_script = app_root / "scripts" / "build_code_reference.py"
+    if code_reference_script.exists():
+        logger.info("Generating code-reference markdown...")
+        code_ref_result = subprocess.run(
+            ["uv", "run", "python", str(code_reference_script)],
+            cwd=str(app_root),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if code_ref_result.returncode != 0:
+            logger.warning("Code-reference generation failed: %s", code_ref_result.stderr)
     logger.info("Building MkDocs documentation...")
     result = subprocess.run(
         ["uv", "run", "zensical", "build"],
