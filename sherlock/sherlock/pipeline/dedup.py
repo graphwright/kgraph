@@ -97,9 +97,10 @@ def _resolve_same_as(bundle: PerStoryBundle) -> dict[str, str]:
     parent: dict[str, str] = {}
 
     def find(x: str) -> str:
+        # Path-halving compression: walk up and flatten
         while parent.get(x, x) != x:
-            parent[x] = parent.get(parent.get(x, x), parent.get(x, x))
-            x = parent.get(x, x)
+            parent[x] = parent.get(parent.get(x, x), parent.get(x, x))  # point to grandparent
+            x = parent[x]
         return x
 
     def union(a: str, b: str) -> None:

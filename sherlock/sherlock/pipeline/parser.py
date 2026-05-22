@@ -9,6 +9,8 @@ Evidence IDs use: {story_id}:{section}:{paragraph_idx}:llm
 
 import re
 import textwrap
+import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Optional
@@ -17,6 +19,9 @@ SCANDAL_GUTENBERG_URL = "https://www.gutenberg.org/cache/epub/1661/pg1661.txt"
 SCANDAL_STORY_ID = "scandal_in_bohemia"
 SCANDAL_TITLE = "A Scandal in Bohemia"
 SCANDAL_YEAR = 1891
+
+# Allowed hosts for story text fetching (SSRF guard)
+_ALLOWED_FETCH_HOSTS = {"www.gutenberg.org", "gutenberg.org"}
 
 # The full Adventures collection; extract just the first story.
 SCANDAL_START_MARKER = "A SCANDAL IN BOHEMIA"
@@ -71,8 +76,14 @@ To Sherlock Holmes she is always THE woman.
 
 
 def _fetch_gutenberg_text(url: str, timeout: int = 30) -> str:
-    """Fetch plain text from Project Gutenberg."""
-    with urllib.request.urlopen(url, timeout=timeout) as resp:  # nosec
+    """Fetch plain text from an allowed domain (Project Gutenberg only).
+
+    Raises ValueError for disallowed hosts to prevent SSRF.
+    """
+    parsed = urllib.parse.urlparse(url)
+    if parsed.hostname not in _ALLOWED_FETCH_HOSTS:
+        raise ValueError(f"URL host {parsed.hostname!r} is not in the allowed fetch list: {_ALLOWED_FETCH_HOSTS}")
+    with urllib.request.urlopen(url, timeout=timeout) as resp:  # nosec B310
         raw = resp.read()
     # Gutenberg may serve UTF-8 or Latin-1
     for enc in ("utf-8", "latin-1"):

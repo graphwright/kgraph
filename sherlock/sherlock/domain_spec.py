@@ -412,6 +412,11 @@ PREDICATES: dict[str, PredicateSpec] = {
 ALL_PREDICATES: set[str] = set(PREDICATES.keys())
 
 
+def _entity_class_matches_type(cls: type, entity_type: str) -> bool:
+    """Return True if an entity class's type string matches entity_type."""
+    return issubclass(cls, BaseEntity) and cls.__name__.replace("Entity", "").lower() == entity_type
+
+
 def get_valid_predicates(subject_type: str, object_type: str) -> list[str]:
     """Return predicates valid between two entity types.
 
@@ -420,8 +425,8 @@ def get_valid_predicates(subject_type: str, object_type: str) -> list[str]:
     """
     result = []
     for pred, spec in PREDICATES.items():
-        sub_ok = spec.subject_types is None or any(issubclass(_cls, BaseEntity) and _cls.__name__.replace("Entity", "").lower() == subject_type for _cls in spec.subject_types)
-        obj_ok = spec.object_types is None or any(issubclass(_cls, BaseEntity) and _cls.__name__.replace("Entity", "").lower() == object_type for _cls in spec.object_types)
+        sub_ok = spec.subject_types is None or any(_entity_class_matches_type(c, subject_type) for c in spec.subject_types)
+        obj_ok = spec.object_types is None or any(_entity_class_matches_type(c, object_type) for c in spec.object_types)
         if sub_ok and obj_ok:
             result.append(pred)
     return result

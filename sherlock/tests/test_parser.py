@@ -15,11 +15,19 @@ from sherlock.pipeline.parser import (
 
 
 def test_get_story_text_embedded_fallback():
-    """get_story_text() must return content even if network is unavailable."""
-    # Force use of a fake URL that will fail — should fall back to embedded excerpt
+    """get_story_text() must return content even if network is unavailable or URL is invalid."""
+    # A disallowed host triggers ValueError → falls back to embedded excerpt
     text = get_story_text(story_url="http://localhost:0/notfound")
     assert len(text) > 100
     assert "Holmes" in text or "Watson" in text or "Adler" in text
+
+
+def test_fetch_rejects_disallowed_host():
+    """_fetch_gutenberg_text must raise ValueError for non-Gutenberg URLs."""
+    from sherlock.pipeline.parser import _fetch_gutenberg_text
+    import pytest
+    with pytest.raises(ValueError, match="not in the allowed fetch list"):
+        _fetch_gutenberg_text("http://evil.example.com/story.txt")
 
 
 def test_clean_text_removes_pg_footer():
