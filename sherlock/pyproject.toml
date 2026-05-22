@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sherlock"
+version = "0.1.0"
+description = "Sherlock Holmes knowledge graph pipeline — dense typed extraction from 'A Scandal in Bohemia'"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "pydantic>=2.0",
+    "httpx>=0.27.0",
+    "anthropic>=0.83.0",
+    "ollama>=0.6.1",
+    "scikit-learn>=1.6.0",
+    "requests>=2.32.0",
+    "json-repair>=0.30.0",
+    "kgschema",
+    "kgraph",
+    "kgbundle",
+]
+
+[tool.uv.sources]
+kgschema = { path = "../kgschema", editable = true }
+kgraph = { path = "../", editable = true }
+kgbundle = { path = "../kgbundle", editable = true }
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5.5",
+    "mypy>=1.0",
+    "black>=24.0",
+    "flake8>=7.1.0",
+]
+
+[project.scripts]
+sherlock-extract = "sherlock.scripts.extract:main"
+sherlock-ingest = "sherlock.scripts.ingest:main"
+sherlock-build-bundle = "sherlock.scripts.build_bundle:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["sherlock"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 200
+
+[tool.ruff]
+line-length = 200
+
+[tool.ruff.lint]
+ignore = ["E402"]
+
+[tool.flake8]
+line-length = 200
+ignore = ["E203", "E266", "E501", "W503", "E402"]
+
+[tool.mypy]
+ignore_missing_imports = true
+disable_error_code = ["call-arg", "import-untyped", "attr-defined"]
