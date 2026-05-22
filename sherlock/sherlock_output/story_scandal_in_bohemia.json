@@ -1,0 +1,15 @@
+{
+  "story": {
+    "story_id": "scandal_in_bohemia",
+    "title": "A Scandal in Bohemia",
+    "collection": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "year": 1891,
+    "source_uri": "https://www.gutenberg.org/cache/epub/1661/pg1661.txt",
+    "document_id": "scandal_in_bohemia"
+  },
+  "entities": [],
+  "evidence_entities": [],
+  "relationships": [],
+  "notes": []
+}
