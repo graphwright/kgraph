@@ -1,0 +1,65 @@
+name: Sherlock Ingestion Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      window_size:
+        description: "Paragraphs per LLM window (default: 3)"
+        required: false
+        default: "3"
+      limit_chunks:
+        description: "Limit number of chunks (leave empty to run all)"
+        required: false
+        default: ""
+
+jobs:
+  sherlock-ingest:
+    runs-on: ubuntu-latest
+    environment: BuildEnv
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Extract — LLM extraction from A Scandal in Bohemia
+        working-directory: sherlock
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          LIMIT_ARG=""
+          if [ -n "${{ github.event.inputs.limit_chunks }}" ]; then
+            LIMIT_ARG="--limit-chunks ${{ github.event.inputs.limit_chunks }}"
+          fi
+          uv run sherlock-extract \
+            --output-dir sherlock_output \
+            --llm-backend anthropic \
+            --window-size ${{ github.event.inputs.window_size }} \
+            $LIMIT_ARG \
+            --overwrite
+
+      - name: Ingest — dedup and alias resolution
+        working-directory: sherlock
+        run: |
+          uv run sherlock-ingest \
+            --input sherlock_output/story_scandal_in_bohemia.json \
+            --output-dir sherlock_output/deduped
+
+      - name: Build bundle — assemble kgbundle
+        working-directory: sherlock
+        run: |
+          uv run sherlock-build-bundle \
+            --input sherlock_output/deduped/deduped_story_scandal_in_bohemia.json \
+            --output-dir sherlock_bundle
+
+      - name: Upload bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sherlock-bundle
+          path: sherlock/sherlock_bundle/
+          retention-days: 30
