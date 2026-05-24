@@ -16,6 +16,8 @@ jobs:
   sherlock-ingest:
     runs-on: ubuntu-latest
     environment: BuildEnv
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
