@@ -4,8 +4,6 @@ import pytest
 
 from sherlock.pipeline.parser import (
     SCANDAL_EMBEDDED_EXCERPT,
-    SCANDAL_STORY_ID,
-    SCANDAL_TITLE,
     _clean_text,
     _extract_story,
     chunk_story,
@@ -25,7 +23,7 @@ def test_get_story_text_embedded_fallback():
 def test_fetch_rejects_disallowed_host():
     """_fetch_gutenberg_text must raise ValueError for non-Gutenberg URLs."""
     from sherlock.pipeline.parser import _fetch_gutenberg_text
-    import pytest
+
     with pytest.raises(ValueError, match="not in the allowed fetch list"):
         _fetch_gutenberg_text("http://evil.example.com/story.txt")
 

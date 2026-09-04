@@ -1,7 +1,5 @@
 """Tests for the dedup pipeline."""
 
-import pytest
-
 from sherlock.bundle_models import ExtractedEntityRow, PerStoryBundle, RelationshipRow, StoryInfo
 from sherlock.pipeline.dedup import _normalize_name, run_dedup
 
@@ -22,7 +20,7 @@ def test_same_as_resolution(minimal_bundle: PerStoryBundle):
     entities = list(minimal_bundle.entities) + [
         ExtractedEntityRow(
             id="the_woman",
-            **{"class": "Character"},
+            entity_class="Character",
             name="The Woman",
         )
     ]
@@ -30,7 +28,7 @@ def test_same_as_resolution(minimal_bundle: PerStoryBundle):
         RelationshipRow(
             subject="irene",
             predicate="SAME_AS",
-            **{"object": "the_woman"},
+            object_id="the_woman",
             confidence=1.0,
         )
     ]
@@ -46,8 +44,7 @@ def test_same_as_resolution(minimal_bundle: PerStoryBundle):
     # After dedup, 'the_woman' should be merged into 'irene' (or vice versa)
     entity_ids = {e.id for e in deduped.entities}
     # Both IDs should not be present — one of them merged
-    assert not ("irene" in entity_ids and "the_woman" in entity_ids), \
-        "SAME_AS entities should have been merged"
+    assert not ("irene" in entity_ids and "the_woman" in entity_ids), "SAME_AS entities should have been merged"
 
 
 def test_same_as_edges_removed(minimal_bundle: PerStoryBundle):
@@ -57,7 +54,7 @@ def test_same_as_edges_removed(minimal_bundle: PerStoryBundle):
         RelationshipRow(
             subject="holmes",
             predicate="SAME_AS",
-            **{"object": "watson"},
+            object_id="watson",
             confidence=1.0,
         )
     ]
@@ -85,7 +82,7 @@ def test_entity_synonyms_merged(minimal_bundle: PerStoryBundle):
     entities = list(minimal_bundle.entities) + [
         ExtractedEntityRow(
             id="baker_street_alt",
-            **{"class": "Location"},
+            entity_class="Location",
             name="221B Baker Street",
             synonyms=["Holmes's lodgings"],
         )
@@ -94,7 +91,7 @@ def test_entity_synonyms_merged(minimal_bundle: PerStoryBundle):
         RelationshipRow(
             subject="baker_street",
             predicate="SAME_AS",
-            **{"object": "baker_street_alt"},
+            object_id="baker_street_alt",
             confidence=1.0,
         )
     ]
@@ -116,12 +113,12 @@ def test_entity_synonyms_merged(minimal_bundle: PerStoryBundle):
 def test_run_dedup_reduces_duplicate_relationships(story_info: StoryInfo):
     """Duplicate (subject, predicate, object) triples must be deduplicated."""
     entities = [
-        ExtractedEntityRow(id="a", **{"class": "Character"}, name="Alice"),
-        ExtractedEntityRow(id="b", **{"class": "Character"}, name="Bob"),
+        ExtractedEntityRow(id="a", entity_class="Character", name="Alice"),
+        ExtractedEntityRow(id="b", entity_class="Character", name="Bob"),
     ]
     rels = [
-        RelationshipRow(subject="a", predicate="ALLY_OF", **{"object": "b"}, confidence=0.8),
-        RelationshipRow(subject="a", predicate="ALLY_OF", **{"object": "b"}, confidence=0.9),
+        RelationshipRow(subject="a", predicate="ALLY_OF", object_id="b", confidence=0.8),
+        RelationshipRow(subject="a", predicate="ALLY_OF", object_id="b", confidence=0.9),
     ]
     bundle = PerStoryBundle(story=story_info, entities=entities, relationships=rels)
     deduped = run_dedup(bundle)

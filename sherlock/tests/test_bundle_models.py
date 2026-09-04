@@ -1,7 +1,5 @@
 """Tests for bundle_models — serialization, Pydantic validation, etc."""
 
-import pytest
-
 from sherlock.bundle_models import (
     EvidenceEntityRow,
     ExtractedEntityRow,

@@ -19,10 +19,12 @@ A **simpler, literary contrast case** that shows the framework’s generality. I
 
 ## Code layout
 
-- `examples/sherlock/domain.py` — Domain schema and entity/relationship types.
-- `examples/sherlock/pipeline/` — Parser, extractors, resolver (and optional embeddings).
-- `examples/sherlock/sources/gutenberg.py` — Fetching Gutenberg content.
-- `examples/sherlock/data.py` — Data helpers if needed.
+- `sherlock/sherlock/domain.py` — Domain schema and entity/relationship types.
+- `sherlock/sherlock/domain_spec.py` — Entity and predicate specs (single source of truth).
+- `sherlock/sherlock/bundle_models.py` — Row models for the per-story bundle.
+- `sherlock/sherlock/pipeline/` — `parser.py` (Gutenberg fetch and section splitting),
+  `extractor.py` (LLM extraction), `dedup.py`, `bundle_builder.py`.
+- `sherlock/sherlock/scripts/` — CLI entry points: `extract.py`, `ingest.py`, `build_bundle.py`.
 
 ## Why it’s useful
 

@@ -127,7 +127,7 @@ tmp_path.rename(bundles_dir / f"paper_{pmcid}.json")
 nothing. This fix is orthogonal to the Redis vs. Postgres choice and should be
 implemented regardless.
 
-The relevant write is in `examples/medlit/scripts/pass1_extract.py` around the
+The relevant write is in `medlit/medlit/scripts/extract.py` around the
 line that writes `output_dir / f"paper_{paper_id}.json"`.
 
 ---

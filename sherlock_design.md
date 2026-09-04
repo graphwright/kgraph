@@ -159,7 +159,7 @@ This is a strong set piece for Ch. 13 ("What Your Graph Can Do") and Ch. 14
 
 ## Implementation Plan
 
-1. Create `examples/sherlock/domain_spec.py` following the medlit pattern:
+1. Create `sherlock/sherlock/domain_spec.py` following the medlit pattern:
    - `EntitySpec` for each entity type with descriptions and prompt guidance
    - `PredicateSpec` for each predicate with subject/object type constraints
    - `PROMPT_INSTRUCTIONS` covering narrator trust classification

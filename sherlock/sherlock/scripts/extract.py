@@ -32,7 +32,6 @@ from ..pipeline.parser import (
 )
 from ..pipeline.extractor import extract_story
 
-
 SCANDAL_STORY_METADATA = StoryInfo(
     story_id=SCANDAL_STORY_ID,
     title=SCANDAL_TITLE,
@@ -65,7 +64,7 @@ async def run_extract(
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Fetch story text
-    print(f"  Fetching story text...", file=sys.stderr)
+    print("  Fetching story text...", file=sys.stderr)
     story_text = get_story_text(local_path=story_file)
     if not story_text:
         print("ERROR: Could not get story text", file=sys.stderr)

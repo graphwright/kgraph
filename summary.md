@@ -4,86 +4,58 @@
 
 - [CLAUDE.md](#user-content-claudemd)
 - [CONCURRENCY.md](#user-content-concurrencymd)
-- [PLAN.md](#user-content-planmd)
-- [PLAN2.md](#user-content-plan2md)
-- [PLAN3.md](#user-content-plan3md)
-- [PLAN4.md](#user-content-plan4md)
-- [PLAN5.md](#user-content-plan5md)
-- [PLAN6.md](#user-content-plan6md)
-- [PLAN7.md](#user-content-plan7md)
+- [OPERATIONS.md](#user-content-operationsmd)
 - [README.md](#user-content-readmemd)
 - [TODO.md](#user-content-todomd)
 - [bfsql.md](#user-content-bfsqlmd)
 - [docs/adapting-to-your-domain.md](#user-content-docsadapting-to-your-domainmd)
 - [docs/architecture.md](#user-content-docsarchitecturemd)
+- [docs/books.md](#user-content-docsbooksmd)
 - [docs/canonical-ids-and-entity-resolution.md](#user-content-docscanonical-ids-and-entity-resolutionmd)
 - [docs/contributing.md](#user-content-docscontributingmd)
 - [docs/deployment-and-operations.md](#user-content-docsdeployment-and-operationsmd)
 - [docs/examples/medlit.md](#user-content-docsexamplesmedlitmd)
 - [docs/examples/sherlock.md](#user-content-docsexamplessherlockmd)
+- [docs/identity/canonical-ids.md](#user-content-docsidentitycanonical-idsmd)
+- [docs/identity/deduplication.md](#user-content-docsidentitydeduplicationmd)
 - [docs/index.md](#user-content-docsindexmd)
+- [docs/ingestion/chunking.md](#user-content-docsingestionchunkingmd)
+- [docs/ingestion/error-handling.md](#user-content-docsingestionerror-handlingmd)
+- [docs/ingestion/pipeline.md](#user-content-docsingestionpipelinemd)
+- [docs/llm-integration/embeddings.md](#user-content-docsllm-integrationembeddingsmd)
+- [docs/llm-integration/extraction-prompts.md](#user-content-docsllm-integrationextraction-promptsmd)
+- [docs/llm-integration/mcp-server.md](#user-content-docsllm-integrationmcp-servermd)
+- [docs/llm-integration/mcp-troubleshooting.md](#user-content-docsllm-integrationmcp-troubleshootingmd)
+- [docs/llm-integration/querying.md](#user-content-docsllm-integrationqueryingmd)
+- [docs/manifesto.md](#user-content-docsmanifestomd)
+- [docs/microservices-runtime.md](#user-content-docsmicroservices-runtimemd)
 - [docs/overview.md](#user-content-docsoverviewmd)
 - [docs/pipeline.md](#user-content-docspipelinemd)
 - [docs/schema-design-guide.md](#user-content-docsschema-design-guidemd)
+- [docs/schema/adapting-to-your-domain.md](#user-content-docsschemaadapting-to-your-domainmd)
+- [docs/schema/schema-design-guide.md](#user-content-docsschemaschema-design-guidemd)
 - [docs/storage-and-export.md](#user-content-docsstorage-and-exportmd)
-- [examples/medlit/DIAGNOSTICS.md](#user-content-examplesmedlitdiagnosticsmd)
-- [examples/medlit/__init__.py](#user-content-examplesmedlitinitpy)
-- [examples/medlit/bundle_models.py](#user-content-examplesmedlitbundlemodelspy)
-- [examples/medlit/config/README.md](#user-content-examplesmedlitconfigreadmemd)
-- [examples/medlit/documents.py](#user-content-examplesmedlitdocumentspy)
-- [examples/medlit/domain.py](#user-content-examplesmedlitdomainpy)
-- [examples/medlit/domain_spec.py](#user-content-examplesmedlitdomainspecpy)
-- [examples/medlit/entities.py](#user-content-examplesmedlitentitiespy)
-- [examples/medlit/pipeline/__init__.py](#user-content-examplesmedlitpipelineinitpy)
-- [examples/medlit/pipeline/authority_lookup.py](#user-content-examplesmedlitpipelineauthoritylookuppy)
-- [examples/medlit/pipeline/bundle_builder.py](#user-content-examplesmedlitpipelinebundlebuilderpy)
-- [examples/medlit/pipeline/canonical_urls.py](#user-content-examplesmedlitpipelinecanonicalurlspy)
-- [examples/medlit/pipeline/config.py](#user-content-examplesmedlitpipelineconfigpy)
-- [examples/medlit/pipeline/dedup.py](#user-content-examplesmedlitpipelinededuppy)
-- [examples/medlit/pipeline/mentions.py](#user-content-examplesmedlitpipelinementionspy)
-- [examples/medlit/pipeline/ner_extractor.py](#user-content-examplesmedlitpipelinenerextractorpy)
-- [examples/medlit/pipeline/parser.py](#user-content-examplesmedlitpipelineparserpy)
-- [examples/medlit/pipeline/pmc_chunker.py](#user-content-examplesmedlitpipelinepmcchunkerpy)
-- [examples/medlit/pipeline/pmc_streaming.py](#user-content-examplesmedlitpipelinepmcstreamingpy)
-- [examples/medlit/pipeline/provenance_expansion.py](#user-content-examplesmedlitpipelineprovenanceexpansionpy)
-- [examples/medlit/pipeline/relationships.py](#user-content-examplesmedlitpipelinerelationshipspy)
-- [examples/medlit/pipeline/resolve.py](#user-content-examplesmedlitpipelineresolvepy)
-- [examples/medlit/pipeline/utils.py](#user-content-examplesmedlitpipelineutilspy)
-- [examples/medlit/promotion.py](#user-content-examplesmedlitpromotionpy)
-- [examples/medlit/relationships.py](#user-content-examplesmedlitrelationshipspy)
-- [examples/medlit/scripts/__init__.py](#user-content-examplesmedlitscriptsinitpy)
-- [examples/medlit/scripts/parse_pmc_xml.py](#user-content-examplesmedlitscriptsparsepmcxmlpy)
-- [examples/medlit/scripts/pass1_extract.py](#user-content-examplesmedlitscriptspass1extractpy)
-- [examples/medlit/scripts/pass1a_vocab.py](#user-content-examplesmedlitscriptspass1avocabpy)
-- [examples/medlit/scripts/pass2_dedup.py](#user-content-examplesmedlitscriptspass2deduppy)
-- [examples/medlit/scripts/pass3_build_bundle.py](#user-content-examplesmedlitscriptspass3buildbundlepy)
-- [examples/medlit/tests/__init__.py](#user-content-examplesmedlittestsinitpy)
-- [examples/medlit/tests/conftest.py](#user-content-examplesmedlittestsconftestpy)
-- [examples/medlit/tests/test_authority_lookup.py](#user-content-examplesmedlitteststestauthoritylookuppy)
-- [examples/medlit/tests/test_dedup.py](#user-content-examplesmedlitteststestdeduppy)
-- [examples/medlit/tests/test_entity_normalization.py](#user-content-examplesmedlitteststestentitynormalizationpy)
-- [examples/medlit/tests/test_ner_extractor.py](#user-content-examplesmedlitteststestnerextractorpy)
-- [examples/medlit/tests/test_pass1_extract.py](#user-content-examplesmedlitteststestpass1extractpy)
-- [examples/medlit/tests/test_pass3_bundle_builder.py](#user-content-examplesmedlitteststestpass3bundlebuilderpy)
-- [examples/medlit/tests/test_promotion_lookup.py](#user-content-examplesmedlitteststestpromotionlookuppy)
-- [examples/medlit/tests/test_provenance_expansion.py](#user-content-examplesmedlitteststestprovenanceexpansionpy)
-- [examples/medlit/tests/test_two_pass_ingestion.py](#user-content-examplesmedlitteststesttwopassingestionpy)
-- [examples/medlit/vocab.py](#user-content-examplesmedlitvocabpy)
-- [examples/medlit_schema/__init__.py](#user-content-examplesmedlitschemainitpy)
-- [examples/medlit_schema/base.py](#user-content-examplesmedlitschemabasepy)
-- [examples/medlit_schema/document.py](#user-content-examplesmedlitschemadocumentpy)
-- [examples/medlit_schema/domain.py](#user-content-examplesmedlitschemadomainpy)
-- [examples/medlit_schema/entity.py](#user-content-examplesmedlitschemaentitypy)
-- [examples/medlit_schema/relationship.py](#user-content-examplesmedlitschemarelationshippy)
-- [examples/sherlock/data.py](#user-content-examplessherlockdatapy)
-- [examples/sherlock/domain.py](#user-content-examplessherlockdomainpy)
-- [examples/sherlock/pipeline/embeddings.py](#user-content-examplessherlockpipelineembeddingspy)
-- [examples/sherlock/pipeline/mentions.py](#user-content-examplessherlockpipelinementionspy)
-- [examples/sherlock/pipeline/parser.py](#user-content-examplessherlockpipelineparserpy)
-- [examples/sherlock/pipeline/relationships.py](#user-content-examplessherlockpipelinerelationshipspy)
-- [examples/sherlock/pipeline/resolve.py](#user-content-examplessherlockpipelineresolvepy)
-- [examples/sherlock/promotion.py](#user-content-examplessherlockpromotionpy)
-- [examples/sherlock/sources/gutenberg.py](#user-content-examplessherlocksourcesgutenbergpy)
+- [docs/trust/conflicting-claims.md](#user-content-docstrustconflicting-claimsmd)
+- [docs/trust/provenance.md](#user-content-docstrustprovenancemd)
+- [identity-server/domain_stub/__init__.py](#user-content-identity-serverdomainstubinitpy)
+- [identity-server/domain_stub/app.py](#user-content-identity-serverdomainstubapppy)
+- [identity-server/identity_server/__init__.py](#user-content-identity-serveridentityserverinitpy)
+- [identity-server/identity_server/app.py](#user-content-identity-serveridentityserverapppy)
+- [identity-server/identity_server/cache.py](#user-content-identity-serveridentityservercachepy)
+- [identity-server/identity_server/core.py](#user-content-identity-serveridentityservercorepy)
+- [identity-server/identity_server/database.py](#user-content-identity-serveridentityserverdatabasepy)
+- [identity-server/identity_server/db_models.py](#user-content-identity-serveridentityserverdbmodelspy)
+- [identity-server/identity_server/domain_client.py](#user-content-identity-serveridentityserverdomainclientpy)
+- [identity-server/identity_server/models.py](#user-content-identity-serveridentityservermodelspy)
+- [identity-server/identity_server/routers/__init__.py](#user-content-identity-serveridentityserverroutersinitpy)
+- [identity-server/identity_server/routers/dump.py](#user-content-identity-serveridentityserverroutersdumppy)
+- [identity-server/identity_server/routers/identity.py](#user-content-identity-serveridentityserverroutersidentitypy)
+- [identity-server/tests/__init__.py](#user-content-identity-servertestsinitpy)
+- [identity-server/tests/conftest.py](#user-content-identity-servertestsconftestpy)
+- [identity-server/tests/test_cache.py](#user-content-identity-serverteststestcachepy)
+- [identity-server/tests/test_core.py](#user-content-identity-serverteststestcorepy)
+- [identity-server/tests/test_domain_client.py](#user-content-identity-serverteststestdomainclientpy)
+- [identity-server/tests/test_dump.py](#user-content-identity-serverteststestdumppy)
 - [kgbundle/kgbundle/__init__.py](#user-content-kgbundlekgbundleinitpy)
 - [kgbundle/kgbundle/models.py](#user-content-kgbundlekgbundlemodelspy)
 - [kgbundle/tests/test_models.py](#user-content-kgbundleteststestmodelspy)
@@ -98,7 +70,6 @@
 - [kgraph/context.py](#user-content-kgraphcontextpy)
 - [kgraph/export.py](#user-content-kgraphexportpy)
 - [kgraph/ingest.py](#user-content-kgraphingestpy)
-- [kgraph/logging.py](#user-content-kgraphloggingpy)
 - [kgraph/pipeline/__init__.py](#user-content-kgraphpipelineinitpy)
 - [kgraph/pipeline/caching.py](#user-content-kgraphpipelinecachingpy)
 - [kgraph/pipeline/embedding.py](#user-content-kgraphpipelineembeddingpy)
@@ -108,6 +79,7 @@
 - [kgraph/pipeline/pass1_llm.py](#user-content-kgraphpipelinepass1llmpy)
 - [kgraph/pipeline/streaming.py](#user-content-kgraphpipelinestreamingpy)
 - [kgraph/pipeline/synonym_cache.py](#user-content-kgraphpipelinesynonymcachepy)
+- [kgraph/pprint_logging.py](#user-content-kgraphpprintloggingpy)
 - [kgraph/progress.py](#user-content-kgraphprogresspy)
 - [kgraph/promotion.py](#user-content-kgraphpromotionpy)
 - [kgraph/provenance.py](#user-content-kgraphprovenancepy)
@@ -117,22 +89,24 @@
 - [kgraph/storage/memory.py](#user-content-kgraphstoragememorypy)
 - [kgraph/templates/__init__.py](#user-content-kgraphtemplatesinitpy)
 - [kgraph/templates/render.py](#user-content-kgraphtemplatesrenderpy)
-- [kgschema/__init__.py](#user-content-kgschemainitpy)
-- [kgschema/canonical_id.py](#user-content-kgschemacanonicalidpy)
-- [kgschema/document.py](#user-content-kgschemadocumentpy)
-- [kgschema/domain.py](#user-content-kgschemadomainpy)
-- [kgschema/entity.py](#user-content-kgschemaentitypy)
-- [kgschema/identity.py](#user-content-kgschemaidentitypy)
-- [kgschema/promotion.py](#user-content-kgschemapromotionpy)
-- [kgschema/relationship.py](#user-content-kgschemarelationshippy)
-- [kgschema/spec.py](#user-content-kgschemaspecpy)
-- [kgschema/storage.py](#user-content-kgschemastoragepy)
-- [kgserver/chainlit/app.py](#user-content-kgserverchainlitapppy)
+- [kgschema/kgschema/__init__.py](#user-content-kgschemakgschemainitpy)
+- [kgschema/kgschema/canonical_id.py](#user-content-kgschemakgschemacanonicalidpy)
+- [kgschema/kgschema/document.py](#user-content-kgschemakgschemadocumentpy)
+- [kgschema/kgschema/domain.py](#user-content-kgschemakgschemadomainpy)
+- [kgschema/kgschema/entity.py](#user-content-kgschemakgschemaentitypy)
+- [kgschema/kgschema/identity.py](#user-content-kgschemakgschemaidentitypy)
+- [kgschema/kgschema/promotion.py](#user-content-kgschemakgschemapromotionpy)
+- [kgschema/kgschema/relationship.py](#user-content-kgschemakgschemarelationshippy)
+- [kgschema/kgschema/spec.py](#user-content-kgschemakgschemaspecpy)
+- [kgschema/kgschema/storage.py](#user-content-kgschemakgschemastoragepy)
+- [kgserver/domain_spec.py](#user-content-kgserverdomainspecpy)
 - [kgserver/index.md](#user-content-kgserverindexmd)
 - [kgserver/mcp_main.py](#user-content-kgservermcpmainpy)
 - [kgserver/mcp_server/__init__.py](#user-content-kgservermcpserverinitpy)
 - [kgserver/mcp_server/ingest_worker.py](#user-content-kgservermcpserveringestworkerpy)
 - [kgserver/mcp_server/server.py](#user-content-kgservermcpserverserverpy)
+- [kgserver/pipeline_interface.py](#user-content-kgserverpipelineinterfacepy)
+- [kgserver/pipeline_loader.py](#user-content-kgserverpipelineloaderpy)
 - [kgserver/query/__init__.py](#user-content-kgserverqueryinitpy)
 - [kgserver/query/bundle_loader.py](#user-content-kgserverquerybundleloaderpy)
 - [kgserver/query/graph_traversal.py](#user-content-kgserverquerygraphtraversalpy)
@@ -160,47 +134,115 @@
 - [kgserver/storage/models/relationship.py](#user-content-kgserverstoragemodelsrelationshippy)
 - [kgserver/tests/conftest.py](#user-content-kgservertestsconftestpy)
 - [kgserver/tests/test_bfs_subgraph.py](#user-content-kgserverteststestbfssubgraphpy)
-- [kgserver/tests/test_bfs_subgraph_mcp.py](#user-content-kgserverteststestbfssubgraphmcppy)
 - [kgserver/tests/test_bundle_loader.py](#user-content-kgserverteststestbundleloaderpy)
-- [kgserver/tests/test_find_entities_within_hops.py](#user-content-kgserverteststestfindentitieswithinhopspy)
 - [kgserver/tests/test_graph_api.py](#user-content-kgserverteststestgraphapipy)
 - [kgserver/tests/test_graph_viz_theme.py](#user-content-kgserverteststestgraphvizthemepy)
 - [kgserver/tests/test_graphql_schema.py](#user-content-kgserverteststestgraphqlschemapy)
-- [kgserver/tests/test_ingest_worker.py](#user-content-kgserverteststestingestworkerpy)
 - [kgserver/tests/test_mcp_graphql_tool.py](#user-content-kgserverteststestmcpgraphqltoolpy)
 - [kgserver/tests/test_rest_api.py](#user-content-kgserverteststestrestapipy)
 - [kgserver/tests/test_storage_backends.py](#user-content-kgserverteststeststoragebackendspy)
 - [kgserver/tests/test_storage_factory.py](#user-content-kgserverteststeststoragefactorypy)
 - [kgserver/tests/test_storage_provenance.py](#user-content-kgserverteststeststorageprovenancepy)
 - [kgserver/tests/test_subgraph_api.py](#user-content-kgserverteststestsubgraphapipy)
-- [medlit_bundle/docs/README.md](#user-content-medlitbundledocsreadmemd)
+- [medlit/domain_service/app.py](#user-content-medlitdomainserviceapppy)
+- [medlit/domain_service/authority.py](#user-content-medlitdomainserviceauthoritypy)
+- [medlit/domain_service/models.py](#user-content-medlitdomainservicemodelspy)
+- [medlit/domain_service/survivor.py](#user-content-medlitdomainservicesurvivorpy)
+- [medlit/domain_service/synonym_criteria.py](#user-content-medlitdomainservicesynonymcriteriapy)
+- [medlit/domain_service/tests/test_app.py](#user-content-medlitdomainserviceteststestapppy)
+- [medlit/domain_service/tests/test_survivor.py](#user-content-medlitdomainserviceteststestsurvivorpy)
+- [medlit/domain_service/tests/test_synonym_criteria.py](#user-content-medlitdomainserviceteststestsynonymcriteriapy)
+- [medlit/medlit/__init__.py](#user-content-medlitmedlitinitpy)
+- [medlit/medlit/bundle_models.py](#user-content-medlitmedlitbundlemodelspy)
+- [medlit/medlit/documents.py](#user-content-medlitmedlitdocumentspy)
+- [medlit/medlit/domain.py](#user-content-medlitmedlitdomainpy)
+- [medlit/medlit/domain_spec.py](#user-content-medlitmedlitdomainspecpy)
+- [medlit/medlit/entities.py](#user-content-medlitmedlitentitiespy)
+- [medlit/medlit/pipeline/__init__.py](#user-content-medlitmedlitpipelineinitpy)
+- [medlit/medlit/pipeline/authority_lookup.py](#user-content-medlitmedlitpipelineauthoritylookuppy)
+- [medlit/medlit/pipeline/bundle_builder.py](#user-content-medlitmedlitpipelinebundlebuilderpy)
+- [medlit/medlit/pipeline/canonical_urls.py](#user-content-medlitmedlitpipelinecanonicalurlspy)
+- [medlit/medlit/pipeline/config.py](#user-content-medlitmedlitpipelineconfigpy)
+- [medlit/medlit/pipeline/dedup.py](#user-content-medlitmedlitpipelinededuppy)
+- [medlit/medlit/pipeline/mentions.py](#user-content-medlitmedlitpipelinementionspy)
+- [medlit/medlit/pipeline/ner_extractor.py](#user-content-medlitmedlitpipelinenerextractorpy)
+- [medlit/medlit/pipeline/parser.py](#user-content-medlitmedlitpipelineparserpy)
+- [medlit/medlit/pipeline/pmc_chunker.py](#user-content-medlitmedlitpipelinepmcchunkerpy)
+- [medlit/medlit/pipeline/pmc_streaming.py](#user-content-medlitmedlitpipelinepmcstreamingpy)
+- [medlit/medlit/pipeline/provenance_expansion.py](#user-content-medlitmedlitpipelineprovenanceexpansionpy)
+- [medlit/medlit/pipeline/relationships.py](#user-content-medlitmedlitpipelinerelationshipspy)
+- [medlit/medlit/pipeline/resolve.py](#user-content-medlitmedlitpipelineresolvepy)
+- [medlit/medlit/pipeline/utils.py](#user-content-medlitmedlitpipelineutilspy)
+- [medlit/medlit/promotion.py](#user-content-medlitmedlitpromotionpy)
+- [medlit/medlit/relationships.py](#user-content-medlitmedlitrelationshipspy)
+- [medlit/medlit/scripts/__init__.py](#user-content-medlitmedlitscriptsinitpy)
+- [medlit/medlit/scripts/build_bundle.py](#user-content-medlitmedlitscriptsbuildbundlepy)
+- [medlit/medlit/scripts/extract.py](#user-content-medlitmedlitscriptsextractpy)
+- [medlit/medlit/scripts/fetch_vocab.py](#user-content-medlitmedlitscriptsfetchvocabpy)
+- [medlit/medlit/scripts/ingest.py](#user-content-medlitmedlitscriptsingestpy)
+- [medlit/medlit/scripts/parse_pmc_xml.py](#user-content-medlitmedlitscriptsparsepmcxmlpy)
+- [medlit/medlit/vocab.py](#user-content-medlitmedlitvocabpy)
+- [medlit/medlit_schema/__init__.py](#user-content-medlitmedlitschemainitpy)
+- [medlit/medlit_schema/base.py](#user-content-medlitmedlitschemabasepy)
+- [medlit/medlit_schema/document.py](#user-content-medlitmedlitschemadocumentpy)
+- [medlit/medlit_schema/domain.py](#user-content-medlitmedlitschemadomainpy)
+- [medlit/medlit_schema/entity.py](#user-content-medlitmedlitschemaentitypy)
+- [medlit/medlit_schema/relationship.py](#user-content-medlitmedlitschemarelationshippy)
+- [medlit/pipeline.py](#user-content-medlitpipelinepy)
+- [medlit/tests/__init__.py](#user-content-medlittestsinitpy)
+- [medlit/tests/conftest.py](#user-content-medlittestsconftestpy)
+- [medlit/tests/test_authority_lookup.py](#user-content-medlitteststestauthoritylookuppy)
+- [medlit/tests/test_build_bundle.py](#user-content-medlitteststestbuildbundlepy)
+- [medlit/tests/test_dedup.py](#user-content-medlitteststestdeduppy)
+- [medlit/tests/test_entity_normalization.py](#user-content-medlitteststestentitynormalizationpy)
+- [medlit/tests/test_extract.py](#user-content-medlitteststestextractpy)
+- [medlit/tests/test_ner_extractor.py](#user-content-medlitteststestnerextractorpy)
+- [medlit/tests/test_promotion_lookup.py](#user-content-medlitteststestpromotionlookuppy)
+- [medlit/tests/test_provenance_expansion.py](#user-content-medlitteststestprovenanceexpansionpy)
+- [medlit/tests/test_two_pass_ingestion.py](#user-content-medlitteststesttwopassingestionpy)
+- [proc.py](#user-content-procpy)
+- [scripts/build_code_reference.py](#user-content-scriptsbuildcodereferencepy)
+- [sherlock/README.md](#user-content-sherlockreadmemd)
+- [sherlock/sherlock/__init__.py](#user-content-sherlocksherlockinitpy)
+- [sherlock/sherlock/bundle_models.py](#user-content-sherlocksherlockbundlemodelspy)
+- [sherlock/sherlock/documents.py](#user-content-sherlocksherlockdocumentspy)
+- [sherlock/sherlock/domain.py](#user-content-sherlocksherlockdomainpy)
+- [sherlock/sherlock/domain_spec.py](#user-content-sherlocksherlockdomainspecpy)
+- [sherlock/sherlock/entities.py](#user-content-sherlocksherlockentitiespy)
+- [sherlock/sherlock/pipeline/__init__.py](#user-content-sherlocksherlockpipelineinitpy)
+- [sherlock/sherlock/pipeline/bundle_builder.py](#user-content-sherlocksherlockpipelinebundlebuilderpy)
+- [sherlock/sherlock/pipeline/dedup.py](#user-content-sherlocksherlockpipelinededuppy)
+- [sherlock/sherlock/pipeline/extractor.py](#user-content-sherlocksherlockpipelineextractorpy)
+- [sherlock/sherlock/pipeline/parser.py](#user-content-sherlocksherlockpipelineparserpy)
+- [sherlock/sherlock/promotion.py](#user-content-sherlocksherlockpromotionpy)
+- [sherlock/sherlock/relationships.py](#user-content-sherlocksherlockrelationshipspy)
+- [sherlock/sherlock/scripts/__init__.py](#user-content-sherlocksherlockscriptsinitpy)
+- [sherlock/sherlock/scripts/build_bundle.py](#user-content-sherlocksherlockscriptsbuildbundlepy)
+- [sherlock/sherlock/scripts/extract.py](#user-content-sherlocksherlockscriptsextractpy)
+- [sherlock/sherlock/scripts/ingest.py](#user-content-sherlocksherlockscriptsingestpy)
+- [sherlock/tests/conftest.py](#user-content-sherlocktestsconftestpy)
+- [sherlock/tests/test_bundle.py](#user-content-sherlockteststestbundlepy)
+- [sherlock/tests/test_bundle_models.py](#user-content-sherlockteststestbundlemodelspy)
+- [sherlock/tests/test_dedup.py](#user-content-sherlockteststestdeduppy)
+- [sherlock/tests/test_domain_spec.py](#user-content-sherlockteststestdomainspecpy)
+- [sherlock/tests/test_parser.py](#user-content-sherlockteststestparserpy)
 - [sherlock_design.md](#user-content-sherlockdesignmd)
 - [summarize_codebase.py](#user-content-summarizecodebasepy)
-- [summary.md](#user-content-summarymd)
 - [tests/__init__.py](#user-content-testsinitpy)
 - [tests/conftest.py](#user-content-testsconftestpy)
+- [tests/test_build_code_reference.py](#user-content-teststestbuildcodereferencepy)
 - [tests/test_caching.py](#user-content-teststestcachingpy)
 - [tests/test_canonical_id.py](#user-content-teststestcanonicalidpy)
 - [tests/test_entities.py](#user-content-teststestentitiespy)
-- [tests/test_evidence_semantic.py](#user-content-teststestevidencesemanticpy)
-- [tests/test_evidence_traceability.py](#user-content-teststestevidencetraceabilitypy)
 - [tests/test_export.py](#user-content-teststestexportpy)
 - [tests/test_git_hash.py](#user-content-teststestgithashpy)
 - [tests/test_ingestion.py](#user-content-teststestingestionpy)
 - [tests/test_logging.py](#user-content-teststestloggingpy)
-- [tests/test_medlit_domain.py](#user-content-teststestmedlitdomainpy)
-- [tests/test_medlit_entities.py](#user-content-teststestmedlitentitiespy)
-- [tests/test_medlit_relationships.py](#user-content-teststestmedlitrelationshipspy)
-- [tests/test_paper_model.py](#user-content-teststestpapermodelpy)
 - [tests/test_pass1_llm.py](#user-content-teststestpass1llmpy)
 - [tests/test_pipeline_integration.py](#user-content-teststestpipelineintegrationpy)
-- [tests/test_pmc_chunker.py](#user-content-teststestpmcchunkerpy)
-- [tests/test_pmc_streaming.py](#user-content-teststestpmcstreamingpy)
 - [tests/test_progress_tracker.py](#user-content-teststestprogresstrackerpy)
-- [tests/test_promotion.py](#user-content-teststestpromotionpy)
 - [tests/test_promotion_merge.py](#user-content-teststestpromotionmergepy)
 - [tests/test_provenance.py](#user-content-teststestprovenancepy)
-- [tests/test_relationship_swap.py](#user-content-teststestrelationshipswappy)
 - [tests/test_relationships.py](#user-content-teststestrelationshipspy)
 - [tests/test_streaming.py](#user-content-teststeststreamingpy)
 
@@ -240,116 +282,20 @@ The `ingest_paper` MCP tool (implemented in `kgserver/mcp_server/ingest_worker.p
 
     ...
 
-<span id="user-content-planmd"></span>
+<span id="user-content-operationsmd"></span>
 
-# PLAN.md
+# OPERATIONS.md
 
-# Mention Inspection Diagnostic — Implementation Plan
+# Operations Guide
 
-## Goal
+## Full redeploy on the droplet
 
-Add a lightweight diagnostic capability to debug cases where an unrelated paper appears in query results. Supports inspecting raw mentions and their source XML via MCP commands. Root cause may be: bad mention (Pass 1 hallucination), false-positive entity merge (Pass 2), or bundling artifact (Pass 3).
+Tears down the running stack, prunes old images, pulls latest code, rebuilds, and
+starts fresh. Use this after any code or bundle change.
 
----
-
-## Pipeline Context
-
-    ...
-
-<span id="user-content-plan2md"></span>
-
-# PLAN2.md
-
-# Ingestion Pipeline Redesign — Implementation Plan
-
-## Goal
-
-Replace the current medlit ingestion pipeline with the architecture described in `ingestion_redesign.md`. Key outcomes:
-
-- **Single source of truth** for entity types and predicates in YAML config files
-- **Collaborative iteration** — domain experts edit config files, not Python
-- **Richer trust/provenance** — linguistic trust enum, study design signal, citation linkage
-- **Better deduplication** — authority lookup before fuzzy synonym merging
-
-    ...
-
-<span id="user-content-plan3md"></span>
-
-# PLAN3.md
-
-# Config as Single Source of Truth — Future Project
-
-## Goal
-
-Consolidate all domain-specific configuration into a single Python module, `domain_spec.py`, that drives predicates, entity types, mentions, and evidence across the stack. Eliminate duplication and drift between schema and front-end.
-
-**Status:** Project for another day. No implementation yet.
-
-**Core insight:** YAML can't contain Python class definitions, which is why you always end up with YAML *plus* Python subclasses. A Python SSOT eliminates that split entirely — the spec *is* the schema.
-
-    ...
-
-<span id="user-content-plan4md"></span>
-
-# PLAN4.md
-
-# Refined Plan: Complete config_loader → domain_spec Migration
-
-**Status:** Approved. Execute in order with `uv run pytest` after each step.
-
-**Principle:** After each step, run `uv run pytest` and fix any breakage before proceeding.
-
----
-
-## Step 1: `pass1_extract.py` + `render_extraction_prompt` hardening
-
-    ...
-
-<span id="user-content-plan5md"></span>
-
-# PLAN5.md
-
-# PLAN5: REST Subgraph API
-
-**Status:** Implemented. Run `./lint.sh` to verify.
-
-**Goal:** Add `GET /api/v1/subgraph` returning `{entities, relationships, query}` with entity selection (ID, name glob) and filters (hops, min_confidence, predicates).
-
----
-
-## Design Decisions (Locked)
-
-    ...
-
-<span id="user-content-plan6md"></span>
-
-# PLAN6.md
-
-# PLAN6: Author and Institution Relationships
-
-**Status:** Implemented (Phase 0–2 complete).
-
-**Goal:** Connect authors and institutions to the knowledge graph via first-class entities and relationships. Enable queries like "who has written about disease X?" and "which institutions study drug Y?"
-
----
-
-## Design Decisions (Locked)
-
-    ...
-
-<span id="user-content-plan7md"></span>
-
-# PLAN7.md
-
-# PLAN7: Unified BFS Subgraph with JSON API and MCP Tool
-
-**Status:** Implemented.
-
-**Goal:** Unify the BFS subgraph implementation with orthogonal topology and presentation filters, add an LLM-friendly JSON POST endpoint, and expose a `bfs_subgraph` MCP tool. Support both "pruned" (topology-filtered) and "stubbed" (presentation-filtered) behavior in a single code path.
-
----
-
-## Terminology
+```bash
+docker compose --profile api down -v && \
+docker image prune -a && \
 
     ...
 
@@ -376,13 +322,13 @@ keep this file).
 
 # Ingestion Pipeline — Remaining Work
 
-Items left from PLAN2.md after the initial implementation. See PLAN2.md and ingestion_redesign.md for full details.
+Remaining work on the ingestion pipeline, plus known data-quality defects.
 
 ---
 
-## Phase D (remaining)
+## Phase E: Chunking and per-chunk extraction (higher risk)
 
-### D2: Study design trust signal (per-paper) ✅ **DONE**
+### E1: Add chunking module
 
     ...
 
@@ -433,6 +379,22 @@ The framework processes documents in two passes:
 ┌─────────────┐     ┌─────────────┐     ┌─────────────────┐
 │  Raw Docs   │────▶│   Parser    │────▶│  BaseDocument   │
 └─────────────┘     └─────────────┘     └────────┬────────┘
+
+    ...
+
+<span id="user-content-docsbooksmd"></span>
+
+# docs/books.md
+
+# Graphwright Publications
+
+Three books covering the full pipeline from raw text to a language model that can reason over what that text contained.
+
+---
+
+## [The Typed Graph: Naming, Knowing, and Trusting Machine Knowledge](../identity-book/index.html)
+
+The trustworthiness book. How canonical identity, a typed schema, and structural provenance together make machine knowledge defensible. Covers the epistemic commons (MeSH, HGNC, RxNorm, UniProt), the identity server's domain-agnostic core and plugin contract, the entity lifecycle, and the typed graph's central argument: that a finite predicate ontology with declared domain and range makes certain classes of error inexpressible rather than merely discouraged.
 
     ...
 
@@ -519,20 +481,220 @@ A **simpler, literary contrast case** that shows the framework’s generality. I
 
     ...
 
+<span id="user-content-docsidentitycanonical-idsmd"></span>
+
+# docs/identity/canonical-ids.md
+
+# Canonical IDs and Entity Resolution
+
+> **Placeholder** — content to be migrated and expanded from
+> [`../canonical-ids-and-entity-resolution.md`](../canonical-ids-and-entity-resolution.md).
+
+## The importance of canonical IDs
+
+Canonical IDs are stable identifiers drawn from accepted ontologies — UMLS, MeSH, HGNC,
+RxNorm, UniProt, DBPedia, and others. They are the mechanism by which entities become
+part of the edifice of human knowledge rather than isolated, document-local names.
+
+    ...
+
+<span id="user-content-docsidentitydeduplicationmd"></span>
+
+# docs/identity/deduplication.md
+
+# Deduplication
+
+> **Placeholder** — this page needs to be written.
+
+Deduplication handles the case where two entity records refer to the same real-world
+thing but have not yet been linked by canonical ID — either because both are provisional,
+or because authority lookup returned different IDs that are actually synonymous.
+
+## When dedup runs
+
+    ...
+
 <span id="user-content-docsindexmd"></span>
 
 # docs/index.md
 
-# KGserver
+# Knowledge Graph Framework -- Documentation
 
-A **read-only server** for a loaded knowledge graph. It does not ingest raw documents; domain pipelines build a bundle (entities + relationships), and the server loads that bundle at startup.
+This is a framework for building knowledge graphs over complex professional or academic
+literature: medical papers, legal documents, technical specifications. Every assertion
+in the graph traces back to a source document and location. Provenance is not an
+afterthought -- it is load-bearing.
 
-**Quick links:**
+For the conceptual foundation, see **[Manifesto](manifesto.md)**, **[Overview](overview.md)** and
+**[Architecture](architecture.md)**. For book-length treatments of the full
+pipeline, see **[Graphwright Publications](books.md)**.
 
-- [Medical literature chat](/chat/)
-- [OpenAPI spec](/docs/)
-- [Graph visualization](/graph-viz/) — currently focused on medical literature
-- [GraphQL GUI](/graphiql/)
+    ...
+
+<span id="user-content-docsingestionchunkingmd"></span>
+
+# docs/ingestion/chunking.md
+
+# Chunking Strategies
+
+> **Placeholder** — this page needs to be written.
+
+Before an LLM can extract entities and relationships, a document must be segmented into
+chunks that fit within a context window and preserve enough surrounding context to make
+extraction meaningful.
+
+## Goals of chunking
+
+    ...
+
+<span id="user-content-docsingestionerror-handlingmd"></span>
+
+# docs/ingestion/error-handling.md
+
+# Error Handling
+
+> **Placeholder** — this page needs to be written.
+
+Ingestion pipelines fail in predictable ways: LLMs return malformed JSON, authority
+lookups time out, documents are corrupt. This page covers how the framework handles
+partial failures without losing work.
+
+## Failure modes
+
+    ...
+
+<span id="user-content-docsingestionpipelinemd"></span>
+
+# docs/ingestion/pipeline.md
+
+# The Ingestion Pipeline
+
+> **Placeholder** — content to be migrated and expanded from
+> [`../pipeline.md`](../pipeline.md).
+
+## Two-pass architecture
+
+The pipeline uses a two-pass architecture:
+
+1. **Pass 1 — Entity extraction**: parse documents, extract entity mentions, resolve
+
+    ...
+
+<span id="user-content-docsllm-integrationembeddingsmd"></span>
+
+# docs/llm-integration/embeddings.md
+
+# Embeddings
+
+> **Placeholder** — this page needs to be written.
+
+Embeddings enable semantic search over the knowledge graph — finding entities by
+meaning rather than exact string match.
+
+## Where embeddings are generated
+
+Embeddings are generated at the end of the ingestion pipeline, after entities are
+
+    ...
+
+<span id="user-content-docsllm-integrationextraction-promptsmd"></span>
+
+# docs/llm-integration/extraction-prompts.md
+
+# Prompt Design for Extraction
+
+> **Placeholder** — this page needs to be written. See also
+> [`../schema/adapting-to-your-domain.md`](../schema/adapting-to-your-domain.md)
+> for the step-by-step workflow.
+
+Extraction quality depends heavily on prompt design. This page covers principles and
+patterns for writing prompts that produce reliable, schema-conformant output.
+
+## General principles
+
+    ...
+
+<span id="user-content-docsllm-integrationmcp-servermd"></span>
+
+# docs/llm-integration/mcp-server.md
+
+# MCP Server
+
+> **Placeholder** — content to be expanded from
+> [`../deployment-and-operations.md`](../deployment-and-operations.md).
+
+You want to expose a Model Context Protocol (MCP) endpoint that allows LLMs and
+agents to query the knowledge graph as a tool. When working in Python, the
+FastMCP library is good for this.
+
+## What MCP provides
+
+    ...
+
+<span id="user-content-docsllm-integrationmcp-troubleshootingmd"></span>
+
+# docs/llm-integration/mcp-troubleshooting.md
+
+# MCP Troubleshooting
+
+> **Placeholder** — this page needs to be written.
+
+Things that go wrong with MCP connections, and how to fix them.
+
+## Connection issues
+
+**The client says "server not found" or times out.**
+
+    ...
+
+<span id="user-content-docsllm-integrationqueryingmd"></span>
+
+# docs/llm-integration/querying.md
+
+# Querying the Graph with LLMs
+
+> **Placeholder** — this page needs to be written.
+
+This page covers how LLMs navigate and query the knowledge graph in practice — what
+patterns work, what to avoid, and how to structure agent prompts for effective graph use.
+
+## The basic interaction pattern
+
+1. The LLM receives a user question.
+
+    ...
+
+<span id="user-content-docsmanifestomd"></span>
+
+# docs/manifesto.md
+
+# A Manifesto for Machine Knowledge
+
+We are now in an age of machine reasoning, and some of this reasoning is done
+in high-stakes domains: medicine, law, engineering, spaceflight. Lives and
+livelihoods can be affected by incorrect conclusions or decisions. The cost of
+error is real and significant. LLMs are here, they are staying, and there is no
+turning back the clock.
+
+As we all know, LLMs have weaknesses. Their mastery of language syntax is
+astonishing, but they don't understand "this refers to that," or "these two
+
+    ...
+
+<span id="user-content-docsmicroservices-runtimemd"></span>
+
+# docs/microservices-runtime.md
+
+# Microservices: Runtime Architecture and Interactions
+
+> This document is derived from the source code and deployment configuration.
+> Where the existing Markdown docs disagree with the code, the code wins.
+
+---
+
+## 1. Deployed Services
+
+### 1.1 Edge and Ingress
 
     ...
 
@@ -587,6 +749,39 @@ Implement `DomainSchema` from `kgschema.domain` to declare entity types, relatio
 
     ...
 
+<span id="user-content-docsschemaadapting-to-your-domainmd"></span>
+
+# docs/schema/adapting-to-your-domain.md
+
+# Adapting to Your Domain
+
+> **Placeholder** — content to be migrated and expanded from
+> [`../adapting-to-your-domain.md`](../adapting-to-your-domain.md).
+
+Step-by-step guide to implementing the framework for a new domain.
+
+## Step 1: Define your schema
+
+Implement `DomainSchema` with your entity types, relationship types, and document type.
+
+    ...
+
+<span id="user-content-docsschemaschema-design-guidemd"></span>
+
+# docs/schema/schema-design-guide.md
+
+# Schema Design Guide
+
+> **Placeholder** — content to be migrated and expanded from
+> [`../schema-design-guide.md`](../schema-design-guide.md).
+
+This guide describes how to define your domain's entities, relationships, and documents
+using **kgschema**.
+
+## Domain schema
+
+    ...
+
 <span id="user-content-docsstorage-and-exportmd"></span>
 
 # docs/storage-and-export.md
@@ -603,4732 +798,1257 @@ The **bundle** is the exchange format between producer (kgraph/pipeline) and con
 
     ...
 
-<span id="user-content-examplesmedlitdiagnosticsmd"></span>
+<span id="user-content-docstrustconflicting-claimsmd"></span>
 
-# examples/medlit/DIAGNOSTICS.md
+# docs/trust/conflicting-claims.md
 
-# Mention Inspection Diagnostics
+# Conflicting Claims
 
-When an unrelated paper appears in query results, use these MCP tools to debug. Root cause may be: bad mention (Pass 1 hallucination), false-positive entity merge (Pass 2), or bundling artifact (Pass 3).
+> **Placeholder** — this page needs to be written.
 
-## MCP Tools
+Scientific and legal literature routinely contains contradictory claims. A graph that
+silently resolves conflicts by picking a winner destroys information. This framework
+represents disagreements explicitly.
 
-- **`get_paper_source(paper_id, max_chars=None)`** — Raw JATS-XML of a paper from `bundle/sources/`.
-- **`get_mentions(paper_id=None)`** — Entity mentions from `mentions.jsonl`, optionally filtered by `document_id`.
-
-Both require `BUNDLE_PATH` and read from the bundle directory or ZIP. The bundle must include `sources/` (populated by Pass 3 with `--pmc-xmls-dir`).
+## What counts as a conflict
 
     ...
 
-<span id="user-content-examplesmedlitinitpy"></span>
+<span id="user-content-docstrustprovenancemd"></span>
 
-# examples/medlit/__init__.py
+# docs/trust/provenance.md
 
-Medical literature domain extension for kgraph.
+# Trust and Provenance
 
-This package provides domain-specific types and pipeline components for
-extracting knowledge from biomedical journal articles.
+> **Placeholder** — this page needs to be written. Content currently lives in
+> fragments across the pipeline and storage docs.
 
-> Medical literature domain extension for kgraph.
+Provenance is the philosophical core of this project. Every assertion in the graph
+must be traceable to a source document, a location within that document, and the
+extraction step that produced it. Transparency is not an afterthought — it is
+load-bearing.
 
-This package provides domain-specific types and pipeline components for
-extracting knowledge from biomedical journal articles.
+    ...
 
+<span id="user-content-identity-serverdomainstubinitpy"></span>
 
+# identity-server/domain_stub/__init__.py
 
-<span id="user-content-examplesmedlitbundlemodelspy"></span>
-
-# examples/medlit/bundle_models.py
-
-Pydantic models for the per-paper bundle JSON (Pass 1 output / Pass 2 input).
-
-Matches the structure in INGESTION_REFACTOR.md. Entity type is stored with
-Field(alias="class") because "class" is a Python reserved word; use
-model_dump(by_alias=True) for JSON and populate_by_name=True for parsing.
-
-> Pydantic models for the per-paper bundle JSON (Pass 1 output / Pass 2 input).
-
-Matches the structure in INGESTION_REFACTOR.md. Entity type is stored with
-Field(alias="class") because "class" is a Python reserved word; use
-model_dump(by_alias=True) for JSON and populate_by_name=True for parsing.
+Domain stub package — minimal FastAPI domain service for development and testing.
 
 
-## `class StudyDesignMetadata(BaseModel)`
+<span id="user-content-identity-serverdomainstubapppy"></span>
 
-Study design trust signal extracted from Methods/abstract (second LLM call per paper).
+# identity-server/domain_stub/app.py
+
+Stub domain service for development and testing.
+
+Implements the domain service HTTP contract with neutral defaults:
+  - ``POST /resolve-authority`` — always returns no canonical ID (entity stays provisional)
+  - ``POST /select-survivor``   — returns the candidate with the highest usage_count
+  - ``POST /synonym-criteria``  — returns similarity_threshold = 0.90
+  - ``GET  /health``            — returns {"status": "ok"}
+
+This stub lets the identity server run without a real domain service.
+
+> Stub domain service for development and testing.
+
+Implements the domain service HTTP contract with neutral defaults:
+  - ``POST /resolve-authority`` — always returns no canonical ID (entity stays provisional)
+  - ``POST /select-survivor``   — returns the candidate with the highest usage_count
+  - ``POST /synonym-criteria``  — returns similarity_threshold = 0.90
+  - ``GET  /health``            — returns {"status": "ok"}
+
+This stub lets the identity server run without a real domain service.
+
+
+### `async def health() -> HealthResponse`
+
+Return service health status.
+
+### `async def resolve_authority(request: DomainResolveAuthorityRequest) -> DomainResolveAuthorityResponse`
+
+Always return no canonical ID — the entity will remain provisional.
+
+### `async def select_survivor(request: DomainSelectSurvivorRequest) -> DomainSelectSurvivorResponse`
+
+Return the candidate with the highest usage_count (first if tied).
+
+### `async def synonym_criteria(request: DomainSynonymCriteriaRequest) -> DomainSynonymCriteriaResponse`
+
+Return the default similarity threshold of 0.90.
+
+### `async def synonym_criteria_config() -> dict`
+
+Return startup-time synonym criteria config.
+
+### `async def schema() -> dict`
+
+Return a minimal schema document for compatibility.
+
+### `async def authorities() -> dict`
+
+Return empty authority metadata for the stub service.
+
+
+<span id="user-content-identity-serveridentityserverinitpy"></span>
+
+# identity-server/identity_server/__init__.py
+
+Identity server package — domain-agnostic entity identity microservice.
+
+
+<span id="user-content-identity-serveridentityserverapppy"></span>
+
+# identity-server/identity_server/app.py
+
+FastAPI application entry point for the identity server.
+
+The identity server is a domain-agnostic microservice that handles entity
+identity for knowledge graphs: resolving mentions to canonical IDs, detecting
+synonyms, merging duplicate entities, and managing the
+provisional → canonical → merged lifecycle.
+
+API documentation is available at ``/docs`` (Swagger UI) and ``/redoc``.
+
+> FastAPI application entry point for the identity server.
+
+The identity server is a domain-agnostic microservice that handles entity
+identity for knowledge graphs: resolving mentions to canonical IDs, detecting
+synonyms, merging duplicate entities, and managing the
+provisional → canonical → merged lifecycle.
+
+API documentation is available at ``/docs`` (Swagger UI) and ``/redoc``.
+
+
+### `async def lifespan(app: FastAPI)`
+
+Create database tables on startup.
+
+### `async def health() -> HealthResponse`
+
+Return service health status.
+
+
+<span id="user-content-identity-serveridentityservercachepy"></span>
+
+# identity-server/identity_server/cache.py
+
+Authority-lookup cache backed by Redis.
+
+Copied verbatim from kgraph/kgserver/storage/backends/identity.py and made
+self-contained (no kgschema dependency).
+
+> Authority-lookup cache backed by Redis.
+
+Copied verbatim from kgraph/kgserver/storage/backends/identity.py and made
+self-contained (no kgschema dependency).
+
+
+## `class AuthorityCache`
+
+Redis cache for authority-lookup results in ``resolve``.
+
+Keys have the form ``resolve:{authority_version}:{entity_type}:{mention}``
+so that a UMLS/DBPedia release can be invalidated by bumping
+``authority_version`` without touching unrelated entries.
+
+Values are JSON-serialised ``CanonicalId`` dicts (positive hit) or
+``_NEGATIVE_SENTINEL`` (confirmed miss).
+
+Designed for graceful degradation: every public method catches Redis
+errors and logs at DEBUG level so a Redis outage never breaks ingestion.
+
+Parameters
+----------
+redis_client:
+    A ``redis.Redis`` (sync) client.  Pass ``None`` to disable caching.
+authority_version:
+    Opaque version string for the authority source, e.g. ``"umls-2026AA"``.
+    Bump this to invalidate all cached lookups for that source.
+positive_ttl:
+    Seconds before a positive cache entry expires.
+negative_ttl:
+    Seconds before a negative cache entry expires.
+
+### `def AuthorityCache.get(self, entity_type: str, mention: str) -> Optional[Any]`
+
+Return cached ``CanonicalId``-like dict, ``None`` (miss), or
+``_NEGATIVE_SENTINEL`` (confirmed negative).
+
+Returns ``None`` on any Redis error so the caller falls through to the
+live authority lookup.
+
+### `def AuthorityCache.put_positive(self, entity_type: str, mention: str, canonical_id: object) -> None`
+
+Cache a positive authority result.  ``canonical_id`` must be
+JSON-serialisable (plain dict or object with ``__dict__``).
+
+### `def AuthorityCache.put_negative(self, entity_type: str, mention: str) -> None`
+
+Cache a confirmed negative (no canonical ID found).
+
+### `def AuthorityCache.from_env(cls, authority_version: str = 'v1') -> 'AuthorityCache'`
+
+Build an ``AuthorityCache`` from the ``REDIS_URL`` environment variable.
+
+Returns a no-op cache (``redis_client=None``) if ``REDIS_URL`` is unset
+or if the ``redis`` package is not installed, so the server starts
+cleanly in environments without Redis.
+
+
+<span id="user-content-identity-serveridentityservercorepy"></span>
+
+# identity-server/identity_server/core.py
+
+Postgres-backed implementation of the identity server.
+
+This module provides ``PostgresIdentityServer``, the reference implementation
+of the identity server interface.  It uses SQLModel ``Session`` and the
+``Entity`` ORM model in ``db_models``, and delegates all domain-specific
+logic to a ``DomainClient`` HTTP client.
+
+Locking strategy (mirrors CONCURRENCY.md):
+  - resolve:  ``INSERT ... ON CONFLICT DO NOTHING`` — Postgres serialises
+              concurrent inserts on the same entity_id naturally.
+  - promote:  ``SELECT ... FOR UPDATE`` on the entity row, then conditional
+              update inside the same transaction.
+  - merge:    Postgres advisory lock keyed on the sorted frozenset of entity
+              IDs prevents two workers merging the same pair in opposite orders.
+  - on_entity_added: called synchronously inside the same session as the
+              triggering entity write; synonym detection is read-only and fires
+              only after the row is durable.
+
+Synonym detection uses the ``embedding`` JSON column on the ``Entity`` table
+via in-process cosine similarity for now.  Once pgvector is activated on the
+column the ``find_synonyms`` implementation can be swapped to a native vector
+query with no interface change.
+
+Authority-lookup caching uses Redis when a client is provided.  If Redis is
+unavailable the server degrades gracefully to uncached lookups.  See
+``AuthorityCache`` in ``cache.py``.
+
+> Postgres-backed implementation of the identity server.
+
+This module provides ``PostgresIdentityServer``, the reference implementation
+of the identity server interface.  It uses SQLModel ``Session`` and the
+``Entity`` ORM model in ``db_models``, and delegates all domain-specific
+logic to a ``DomainClient`` HTTP client.
+
+Locking strategy (mirrors CONCURRENCY.md):
+  - resolve:  ``INSERT ... ON CONFLICT DO NOTHING`` — Postgres serialises
+              concurrent inserts on the same entity_id naturally.
+  - promote:  ``SELECT ... FOR UPDATE`` on the entity row, then conditional
+              update inside the same transaction.
+  - merge:    Postgres advisory lock keyed on the sorted frozenset of entity
+              IDs prevents two workers merging the same pair in opposite orders.
+  - on_entity_added: called synchronously inside the same session as the
+              triggering entity write; synonym detection is read-only and fires
+              only after the row is durable.
+
+Synonym detection uses the ``embedding`` JSON column on the ``Entity`` table
+via in-process cosine similarity for now.  Once pgvector is activated on the
+column the ``find_synonyms`` implementation can be swapped to a native vector
+query with no interface change.
+
+Authority-lookup caching uses Redis when a client is provided.  If Redis is
+unavailable the server degrades gracefully to uncached lookups.  See
+``AuthorityCache`` in ``cache.py``.
+
+
+## `class EntityStatus(str, Enum)`
+
+Lifecycle status of an entity in the knowledge graph.
+
+Entities progress through a lifecycle from provisional (newly discovered)
+to canonical (stable, authoritative). This status determines how the
+entity is treated in queries, exports, and merge operations.
+
+### `def _cosine_similarity(a: list[float], b: list[float]) -> float`
+
+Compute cosine similarity between two equal-length vectors.
+
+### `def _advisory_lock_key(entity_ids: list[str]) -> int`
+
+Derive a stable 64-bit advisory lock key from a sorted set of entity IDs.
+
+Sorting ensures two workers locking the same pair always produce the same
+key regardless of argument order, preventing deadlocks.
+
+## `class _CachedCanonicalId`
+
+Minimal canonical-ID-like object reconstructed from a Redis-cached dict.
+
+### `def _dict_to_canonical_id(data: dict) -> _CachedCanonicalId`
+
+Reconstruct a minimal canonical-ID-like object from a cached dict.
+
+### `def _row_to_candidate(row: Entity) -> DomainCandidateEntity`
+
+Convert an ``Entity`` ORM row to a ``DomainCandidateEntity`` for domain calls.
+
+## `class PostgresIdentityServer`
+
+Postgres-backed identity server.
+
+Parameters
+----------
+session:
+    An open SQLModel ``Session`` bound to the Postgres engine.  The caller
+    is responsible for the session lifecycle (commit / rollback / close).
+domain_client:
+    HTTP client used to call the pluggable domain service for authority
+    lookup, survivor selection, and synonym thresholds.
+authority_cache:
+    Optional ``AuthorityCache`` instance backed by Redis.  If omitted,
+    authority lookups are performed on every ``resolve`` call with no
+    caching.  Construct one via ``AuthorityCache.from_env()`` or pass a
+    pre-built instance.
+embedding_dim:
+    Expected embedding dimension.  Reserved for future validation use.
+
+### `async def PostgresIdentityServer.resolve(self, mention: str, entity_type: str, document_id: str, embedding: Optional[list[float]] = None) -> str`
+
+Resolve a mention to an entity ID, creating a provisional one if needed.
+
+Performs domain authority lookup via the domain service and returns a
+canonical ID if one is found.  Otherwise creates and returns a new
+provisional ID.  The lookup result is cached (keyed on normalised
+mention + authority source version) so that transient API failures
+do not produce inconsistent IDs on retry.
+
+Uses ``INSERT ... ON CONFLICT DO NOTHING`` so concurrent workers
+resolving the same mention produce the same entity without races.
+
+Parameters
+----------
+mention:
+    Surface form of the entity mention.
+entity_type:
+    Domain-specific entity type hint.
+document_id:
+    Source document identifier for provenance.
+embedding:
+    Pre-computed embedding vector for the mention.
+
+Returns
+-------
+str
+    A canonical or provisional entity ID.
+
+### `async def PostgresIdentityServer.promote(self, provisional_id: str) -> str`
+
+Attempt to promote a provisional entity to canonical status.
+
+Uses ``SELECT FOR UPDATE`` to lock the row, then checks and updates
+inside the same implicit transaction.  Behaviour by status:
+  - provisional: attempts canonical ID assignment via domain service;
+    upgrades if a canonical ID is returned.
+  - canonical: no-op; returns existing ID.
+  - merged: logs warning; returns survivor ID.
+
+This operation must be idempotent.
+
+Parameters
+----------
+provisional_id:
+    The ID of the entity to promote.  May be provisional, canonical,
+    or merged.
+
+Returns
+-------
+str
+    The canonical ID (new or pre-existing), or the survivor ID if
+    the entity was merged.
+
+### `async def PostgresIdentityServer.find_synonyms(self, entity_id: str) -> list[str]`
+
+Return IDs of entities with cosine similarity above the per-type threshold.
+
+Synonym criteria are fetched from the domain service
+(``GET /synonym-criteria``).  Falls back to 0.90 if the service is
+unreachable.
+
+Currently uses in-process comparison of the ``embedding`` JSON column.
+This is correct but O(n) — a pgvector index query can be substituted
+here with no interface change once the column type is migrated.
+
+Parameters
+----------
+entity_id:
+    The entity to find synonyms for.
+
+Returns
+-------
+list[str]
+    IDs of synonym candidates, not including ``entity_id`` itself.
+    Returns an empty list if no synonyms are found.
+
+### `async def PostgresIdentityServer.merge(self, entity_ids: list[str], survivor_id: str) -> str`
+
+Merge entities into survivor, redirecting all relationship references.
+
+Acquires a Postgres advisory lock keyed on the sorted set of IDs to
+prevent concurrent merges of the same pair in opposite directions.
+
+Status rules:
+  - all provisional → survivor stays provisional
+  - any canonical → survivor becomes canonical
+
+This operation must be idempotent: merging already-merged entities
+is a no-op that returns the survivor ID.
+
+Parameters
+----------
+entity_ids:
+    The full set of IDs to unify, including the survivor.
+survivor_id:
+    The ID that will remain after the merge.  Must be a member of
+    ``entity_ids``.
+
+Returns
+-------
+str
+    The survivor ID.
+
+### `async def PostgresIdentityServer.on_entity_added(self, entity_id: str, context: dict) -> None`
+
+Trigger synonym detection and merge for a newly added entity.
+
+Must be called inside the same session/transaction as the entity insert
+so that the row is visible.  Synonym detection is read-only; ``merge``
+acquires its own advisory lock.
+
+Typical implementation:
+1. Call ``find_synonyms`` to identify candidates.
+2. If candidates are found, call the domain service ``select_survivor``
+   to determine the survivor.
+3. Call ``merge`` for the confirmed synonym group.
+
+Parameters
+----------
+entity_id:
+    The ID of the entity that was just added or updated.
+context:
+    Domain-defined context forwarded from the triggering operation.
+
+### `def PostgresIdentityServer._update_relationship_refs(self, old_id: str, new_id: str) -> None`
+
+Redirect all relationship subject/object references from old_id to new_id.
+
+### `def PostgresIdentityServer._store_embedding(self, entity_id: str, embedding: list[float]) -> None`
+
+Persist an embedding vector to the entity row (JSON column).
+
+
+<span id="user-content-identity-serveridentityserverdatabasepy"></span>
+
+# identity-server/identity_server/database.py
+
+Database setup for the identity server using SQLModel.
+
+### `def create_db_and_tables() -> None`
+
+Create all database tables defined in SQLModel metadata.
+
+### `def get_session()`
+
+FastAPI dependency that yields an open SQLModel session.
+
+
+<span id="user-content-identity-serveridentityserverdbmodelspy"></span>
+
+# identity-server/identity_server/db_models.py
+
+Generic Entity ORM model for the identity server.
+
+Adapted from kgraph/kgserver/storage/models/entity.py.
+
+> 
+Generic Entity ORM model for the identity server.
+
+Adapted from kgraph/kgserver/storage/models/entity.py.
+
+
+## `class Entity(SQLModel)`
+
+A generic entity in the knowledge graph.
+
+
+<span id="user-content-identity-serveridentityserverdomainclientpy"></span>
+
+# identity-server/identity_server/domain_client.py
+
+HTTP client for the pluggable domain service.
+
+The domain service is a separate microservice that implements domain-specific
+logic: authority lookup (e.g. UMLS, DBPedia), survivor selection during merge,
+and synonym similarity thresholds per entity type.
+
+The identity server calls the domain service via HTTP so that domain logic can
+change without redeploying the identity server. If the domain service is
+unreachable, all methods degrade gracefully to sensible defaults:
+  - ``resolve_authority`` → None (entity stays provisional)
+  - ``select_survivor`` → candidate with highest usage_count (first if tied)
+  - ``synonym_criteria`` → 0.90
+
+> HTTP client for the pluggable domain service.
+
+The domain service is a separate microservice that implements domain-specific
+logic: authority lookup (e.g. UMLS, DBPedia), survivor selection during merge,
+and synonym similarity thresholds per entity type.
+
+The identity server calls the domain service via HTTP so that domain logic can
+change without redeploying the identity server. If the domain service is
+unreachable, all methods degrade gracefully to sensible defaults:
+  - ``resolve_authority`` → None (entity stays provisional)
+  - ``select_survivor`` → candidate with highest usage_count (first if tied)
+  - ``synonym_criteria`` → 0.90
+
+
+## `class DomainClient`
+
+HTTP client that calls the domain service.
+
+Parameters
+----------
+base_url:
+    Base URL of the domain service.  Reads ``DOMAIN_SERVICE_URL`` from the
+    environment; defaults to ``http://domain-stub:8080``.
+timeout:
+    HTTP request timeout in seconds.
+
+### `async def DomainClient.resolve_authority(self, mention: str, entity_type: str, document_id: str) -> Optional[DomainCanonicalId]`
+
+Ask the domain service whether this mention has a canonical ID.
+
+Parameters
+----------
+mention:
+    Surface form of the entity mention.
+entity_type:
+    Domain-specific entity type hint.
+document_id:
+    Source document identifier.
+
+Returns
+-------
+Optional[DomainCanonicalId]
+    The canonical ID from the authority source, or ``None`` if no match
+    was found or the domain service is unreachable.
+
+### `async def DomainClient.select_survivor(self, candidates: list[DomainCandidateEntity]) -> str`
+
+Ask the domain service which candidate should survive a merge.
+
+Parameters
+----------
+candidates:
+    All entities being considered for merge.
+
+Returns
+-------
+str
+    The entity ID of the chosen survivor.  Falls back to the candidate
+    with the highest ``usage_count`` (first if tied) if the domain
+    service is unreachable.
+
+### `async def DomainClient.synonym_criteria(self, entity_type: str) -> float`
+
+Fetch the cosine similarity threshold for synonym detection.
+
+Parameters
+----------
+entity_type:
+    Domain-specific entity type.
+
+Returns
+-------
+float
+    Minimum cosine similarity threshold.  Defaults to 0.90 if the
+    domain service is unreachable.
+
+
+<span id="user-content-identity-serveridentityservermodelspy"></span>
+
+# identity-server/identity_server/models.py
+
+HTTP request/response schemas for the identity server and domain service contract.
+
+This module defines two groups of Pydantic models:
+
+1. **Identity server schemas** — what callers (kgserver, ingestion pipeline) send
+   to and receive from the identity server endpoints.
+
+2. **Domain service schemas** — what the identity server sends to and receives from
+   the pluggable domain service (authority lookup, survivor selection, synonym criteria).
+
+> HTTP request/response schemas for the identity server and domain service contract.
+
+This module defines two groups of Pydantic models:
+
+1. **Identity server schemas** — what callers (kgserver, ingestion pipeline) send
+   to and receive from the identity server endpoints.
+
+2. **Domain service schemas** — what the identity server sends to and receives from
+   the pluggable domain service (authority lookup, survivor selection, synonym criteria).
+
+
+## `class ResolveRequest(BaseModel)`
+
+Request body for POST /resolve.
 **Fields:**
 
 ```python
-study_type: Optional[str]
-sample_size: Optional[int]
-multicenter: bool
-held_out_validation: bool
-```
-
-## `class AuthorInfo(BaseModel)`
-
-Author with optional affiliations.
-**Fields:**
-
-```python
-name: str
-affiliations: list[str]
-affiliation_rors: list[str]
-```
-
-## `class PaperInfo(BaseModel)`
-
-Paper metadata in the per-paper bundle.
-**Fields:**
-
-```python
-doi: Optional[str]
-pmcid: Optional[str]
-title: str
-authors: list[str]
-author_details: Optional[list[AuthorInfo]]
+mention: str
+entity_type: str
 document_id: str
-journal: Optional[str]
-year: Optional[int]
-study_type: Optional[str]
-eco_type: Optional[str]
-study_design: Optional[StudyDesignMetadata]
+embedding: Optional[list[float]]
 ```
 
-## `class ExtractedEntityRow(BaseModel)`
+## `class ResolveResponse(BaseModel)`
 
-Minimal entity record in the bundle. JSON key "class" via alias.
+Response body for POST /resolve.
+**Fields:**
+
+```python
+entity_id: str
+```
+
+## `class PromoteRequest(BaseModel)`
+
+Request body for POST /promote.
+**Fields:**
+
+```python
+entity_id: str
+```
+
+## `class PromoteResponse(BaseModel)`
+
+Response body for POST /promote.
+**Fields:**
+
+```python
+entity_id: str
+```
+
+## `class FindSynonymsRequest(BaseModel)`
+
+Request body for POST /find-synonyms.
+**Fields:**
+
+```python
+entity_id: str
+```
+
+## `class FindSynonymsResponse(BaseModel)`
+
+Response body for POST /find-synonyms.
+**Fields:**
+
+```python
+synonym_ids: list[str]
+```
+
+## `class MergeRequest(BaseModel)`
+
+Request body for POST /merge.
+**Fields:**
+
+```python
+entity_ids: list[str]
+survivor_id: str
+```
+
+## `class MergeResponse(BaseModel)`
+
+Response body for POST /merge.
+**Fields:**
+
+```python
+survivor_id: str
+```
+
+## `class OnEntityAddedRequest(BaseModel)`
+
+Request body for POST /on-entity-added.
+**Fields:**
+
+```python
+entity_id: str
+context: dict
+```
+
+## `class HealthResponse(BaseModel)`
+
+Response body for GET /health.
+**Fields:**
+
+```python
+status: str
+```
+
+## `class DomainCanonicalId(BaseModel)`
+
+Canonical ID as returned by the domain service resolve-authority endpoint.
 **Fields:**
 
 ```python
 id: str
-entity_class: str
-name: str
+url: Optional[str]
 synonyms: list[str]
-symbol: Optional[str]
-brand_names: list[str]
-source: Literal['extracted', 'umls', 'hgnc', 'rxnorm', 'loinc', 'uniprot']
-canonical_id: Optional[str]
-umls_id: Optional[str]
-hgnc_id: Optional[str]
-rxnorm_id: Optional[str]
-loinc_code: Optional[str]
-uniprot_id: Optional[str]
 ```
 
-## `class EvidenceEntityRow(BaseModel)`
+## `class DomainResolveAuthorityRequest(BaseModel)`
 
-Evidence entity in the bundle. id format: {paper_id}:{section}:{paragraph_idx}:{method}.
+Request body sent by the identity server to POST /resolve-authority on the domain service.
 **Fields:**
 
 ```python
-id: str
-entity_class: Literal['Evidence']
-entity_id: Optional[str]
-paper_id: str
-text_span_id: Optional[str]
-text: Optional[str]
+mention: str
+entity_type: str
+document_id: str
+```
+
+## `class DomainResolveAuthorityResponse(BaseModel)`
+
+Response body from POST /resolve-authority on the domain service.
+**Fields:**
+
+```python
+canonical_id: Optional[DomainCanonicalId]
+```
+
+## `class DomainCandidateEntity(BaseModel)`
+
+A candidate entity sent to the domain service for survivor selection.
+**Fields:**
+
+```python
+entity_id: str
+name: str
+entity_type: str
+status: str
+usage_count: int
 confidence: float
-extraction_method: str
-study_type: Optional[str]
-eco_type: Optional[str]
-source: Literal['extracted']
 ```
 
-## `class ProvenanceEntry(BaseModel)`
+## `class DomainSelectSurvivorRequest(BaseModel)`
 
-One provenance record for a relationship (section, sentence, optional citation markers).
+Request body sent by the identity server to POST /select-survivor on the domain service.
 **Fields:**
 
 ```python
-section: Optional[str]
-sentence: Optional[str]
-citation_markers: list[str]
+candidates: list[DomainCandidateEntity]
 ```
 
-## `class RelationshipRow(BaseModel)`
+## `class DomainSelectSurvivorResponse(BaseModel)`
 
-One relationship in the bundle. evidence_ids optional for SAME_AS.
+Response body from POST /select-survivor on the domain service.
 **Fields:**
 
 ```python
-subject: str
-predicate: str
-object_id: str
-evidence_ids: list[str]
-provenance: list[ProvenanceEntry]
-source_papers: list[str]
-confidence: float
-linguistic_trust: Optional[LinguisticTrust]
-properties: dict[str, Any]
-section: Optional[str]
-asserted_by: str
-resolution: Optional[Literal['merged', 'distinct']]
-note: Optional[str]
+survivor_id: str
 ```
 
-## `class PerPaperBundle(BaseModel)`
+## `class DomainSynonymCriteriaRequest(BaseModel)`
 
-Per-paper bundle: Pass 1 output and Pass 2 input. Immutable after Pass 1.
+Request body sent by the identity server to POST /synonym-criteria on the domain service.
 **Fields:**
 
 ```python
-paper: PaperInfo
-extraction_provenance: Optional[ExtractionProvenance]
-entities: list[ExtractedEntityRow]
-evidence_entities: list[EvidenceEntityRow]
-relationships: list[RelationshipRow]
-notes: list[str]
+entity_type: str
 ```
 
-### `def PerPaperBundle.to_bundle_dict(self) -> dict`
+## `class DomainSynonymCriteriaResponse(BaseModel)`
 
-Serialize for JSON with alias 'class' used for entity type.
-
-### `def PerPaperBundle.from_bundle_dict(cls, data: dict) -> 'PerPaperBundle'`
-
-Load from dict/JSON (accepts key 'class' for entity type).
-
-
-<span id="user-content-examplesmedlitconfigreadmemd"></span>
-
-# examples/medlit/config/README.md
-
-# Medlit Domain Configuration
-
-Domain configuration for the medlit ingestion pipeline lives in **`domain_spec.py`** (one level up, at `examples/medlit/domain_spec.py`), not in this directory.
-
-That module is the single source of truth for entity types, predicates, prompt instructions, and evidence/mentions specs. The extraction prompt, validation logic, and dedup rules all consume it. Edit `domain_spec.py` to change the schema; no separate YAML or markdown files.
-
-This `config/` directory is retained for any future config that does not belong in the domain spec (e.g. paths, feature flags). For schema changes, edit `domain_spec.py`.
-
-    ...
-
-<span id="user-content-examplesmedlitdocumentspy"></span>
-
-# examples/medlit/documents.py
-
-Journal article document representation for medical literature domain.
-
-## `class JournalArticle(BaseDocument)`
-
-A journal article (research paper) as a source document for extraction.
-
-Maps from med-lit-schema's Paper model to kgraph's BaseDocument.
-Papers are NOT the same as doc_assets.jsonl (which is for documentation assets).
-Papers are the source of information for building the knowledge graph, taken
-from sources like PubMed, PLOS ONE, or medical journals if available.
-
-Key mappings:
-- Paper.paper_id → BaseDocument.document_id (prefer doi:, else pmid:, else stable hash)
-- Paper.title → BaseDocument.title
-- Paper.abstract + (optional full text) → BaseDocument.content
-- PaperMetadata → BaseDocument.metadata (study type, sample size, journal, etc.)
-- Paper.extraction_provenance → BaseDocument.metadata["extraction"]
-
-### `def JournalArticle.get_document_type(self) -> str`
-
-Return domain-specific document type.
-
-### `def JournalArticle.get_sections(self) -> list[tuple[str, str]]`
-
-Return document sections as (section_name, content) tuples.
-
-For journal articles, we typically have:
-- title: The paper title
-- abstract: The abstract text
-- body: The full text content (if available)
-
-### `def JournalArticle.study_type(self) -> str | None`
-
-Convenience property for accessing study_type from metadata.
-
-### `def JournalArticle.sample_size(self) -> int | None`
-
-Convenience property for accessing sample_size from metadata.
-
-### `def JournalArticle.mesh_terms(self) -> list[str]`
-
-Convenience property for accessing mesh_terms from metadata.
-
-
-<span id="user-content-examplesmedlitdomainpy"></span>
-
-# examples/medlit/domain.py
-
-Domain schema for medical literature knowledge graph.
-
-## `class MedLitDomainSchema(DomainSchema)`
-
-Domain schema for medical literature extraction.
-
-Defines the vocabulary and validation rules for extracting medical knowledge
-from journal articles. Uses canonical IDs (UMLS, HGNC, RxNorm, UniProt) for
-entity identification and supports rich relationship metadata with evidence
-and provenance tracking.
-
-### `def MedLitDomainSchema.promotion_config(self) -> PromotionConfig`
-
-Medical domain promotion configuration.
-
-Lowered thresholds to match LLM extraction characteristics:
-- min_usage_count=1: Entities appear once per paper
-- min_confidence=0.4: LLM typically returns ~0.47 confidence
-- require_embedding=False: Don't block promotion if embeddings not ready
-
-### `def MedLitDomainSchema.validate_entity(self, entity: BaseEntity) -> list[ValidationIssue]`
-
-Validate an entity against medical domain rules.
-
-Rules:
-- Entity type must be registered
-- Canonical entities should have canonical IDs in entity_id or canonical_ids
-- Provisional entities are allowed (they'll be promoted later)
-
-### `async def MedLitDomainSchema.validate_relationship(self, relationship: BaseRelationship, entity_storage: EntityStorageInterface | None = None) -> bool`
-
-Validate a relationship against medical domain rules.
-
-Rules:
-- Predicate must be registered
-- Subject and object entity types must be compatible with predicate
-- Confidence must be in valid range (enforced by BaseRelationship)
-
-### `def MedLitDomainSchema.get_valid_predicates(self, subject_type: str, object_type: str) -> list[str]`
-
-Return predicates valid between two entity types.
-
-Uses the vocabulary validation function to enforce domain-specific
-constraints on which relationships are semantically valid.
-
-### `def MedLitDomainSchema.preferred_entity(self, candidates: list[BaseEntity]) -> BaseEntity`
-
-Select the merge survivor from a set of synonym candidates.
-
-Preference order (highest wins):
-1. Canonical status over provisional
-2. Presence of an authoritative ``canonical_ids`` entry (UMLS, HGNC, etc.)
-3. Higher ``usage_count`` (more evidence)
-4. Earlier ``created_at`` (stable, long-lived entity)
-
-### `def MedLitDomainSchema.get_promotion_policy(self, lookup: CanonicalIdLookup | None = None) -> PromotionPolicy`
-
-Return the promotion policy for medical literature domain.
-
-Uses MedLitPromotionPolicy which assigns canonical IDs based on
-authoritative medical ontologies (UMLS, HGNC, RxNorm, UniProt).
-
-Args:
-    lookup: Optional canonical ID lookup service. If None, a new
-            instance will be created (without UMLS API key unless
-            set in environment).
-
-
-<span id="user-content-examplesmedlitdomainspecpy"></span>
-
-# examples/medlit/domain_spec.py
-
-Domain spec for medical literature extraction.
-
-Single source of truth for entity types, predicates, evidence, and mentions.
-Consumers import from this module instead of loading YAML config.
-
-> Domain spec for medical literature extraction.
-
-Single source of truth for entity types, predicates, evidence, and mentions.
-Consumers import from this module instead of loading YAML config.
-
-
-## `class DiseaseEntity(BaseEntity)`
-
-
+Response body from POST /synonym-criteria on the domain service.
 **Fields:**
 
 ```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class GeneEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class DrugEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class ProteinEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class HormoneEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class EnzymeEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class BiomarkerEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class SymptomEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class ProcedureEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class MutationEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class PathwayEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class BiologicalProcessEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class AnatomicalStructureEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class AuthorEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class InstitutionEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class PaperEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class HypothesisEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class EvidenceEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class LocationEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-## `class EthnicityEntity(BaseEntity)`
-
-
-**Fields:**
-
-```python
-spec: ClassVar[EntitySpec]
-```
-
-
-<span id="user-content-examplesmedlitentitiespy"></span>
-
-# examples/medlit/entities.py
-
-Medical entity types for the knowledge graph.
-
-## `class DiseaseEntity(BaseEntity)`
-
-Represents medical conditions, disorders, and syndromes.
-
-Uses UMLS as the primary identifier system with additional mappings to
-MeSH and ICD-10 for interoperability with clinical systems.
-
-Mapping from med-lit-schema:
-- Disease.entity_id (UMLS ID) → BaseEntity.entity_id
-- Disease.umls_id → BaseEntity.canonical_ids["umls"]
-- Disease.mesh_id → BaseEntity.canonical_ids["mesh"]
-- Disease.icd10_codes → BaseEntity.metadata["icd10_codes"]
-- Disease.category → BaseEntity.metadata["category"]
-
-## `class GeneEntity(BaseEntity)`
-
-Represents genes and their genomic information.
-
-Uses HGNC (HUGO Gene Nomenclature Committee) as the primary identifier
-with additional mappings to NCBI Entrez Gene.
-
-Mapping from med-lit-schema:
-- Gene.entity_id (HGNC ID) → BaseEntity.entity_id
-- Gene.hgnc_id → BaseEntity.canonical_ids["hgnc"]
-- Gene.entrez_id → BaseEntity.canonical_ids["entrez"]
-- Gene.symbol → BaseEntity.metadata["symbol"]
-- Gene.chromosome → BaseEntity.metadata["chromosome"]
-
-## `class DrugEntity(BaseEntity)`
-
-Represents medications and therapeutic substances.
-
-Uses RxNorm as the primary identifier for standardized medication naming.
-
-Mapping from med-lit-schema:
-- Drug.entity_id (RxNorm ID) → BaseEntity.entity_id
-- Drug.rxnorm_id → BaseEntity.canonical_ids["rxnorm"]
-- Drug.brand_names → BaseEntity.metadata["brand_names"]
-- Drug.drug_class → BaseEntity.metadata["drug_class"]
-- Drug.mechanism → BaseEntity.metadata["mechanism"]
-
-## `class ProteinEntity(BaseEntity)`
-
-Represents proteins and their biological functions.
-
-Uses UniProt as the primary identifier for protein sequences and annotations.
-
-Mapping from med-lit-schema:
-- Protein.entity_id (UniProt ID) → BaseEntity.entity_id
-- Protein.uniprot_id → BaseEntity.canonical_ids["uniprot"]
-- Protein.gene_id → BaseEntity.metadata["gene_id"]
-- Protein.function → BaseEntity.metadata["function"]
-- Protein.pathways → BaseEntity.metadata["pathways"]
-
-## `class SymptomEntity(BaseEntity)`
-
-Represents clinical signs and symptoms.
-
-## `class ProcedureEntity(BaseEntity)`
-
-Represents medical tests, diagnostics, treatments.
-
-## `class BiomarkerEntity(BaseEntity)`
-
-Represents measurable indicators.
-
-## `class PathwayEntity(BaseEntity)`
-
-Represents biological pathways.
-
-## `class LocationEntity(BaseEntity)`
-
-Represents geographic locations relevant to epidemiological analysis.
-
-Used for tracking disease prevalence by region, endemic diseases, and
-geographic health disparities. Uses provisional IDs initially; canonical
-IDs could come from GeoNames or ISO country codes in the future.
-
-## `class EthnicityEntity(BaseEntity)`
-
-Represents ethnic or population groups for epidemiological analysis.
-
-Used for tracking genetic predispositions, health disparities, and
-population-specific disease risk factors. Uses provisional IDs initially;
-canonical IDs could come from standardized ethnicity codes in the future.
-
-
-<span id="user-content-examplesmedlitpipelineinitpy"></span>
-
-# examples/medlit/pipeline/__init__.py
-
-Pipeline components for medical literature extraction.
-
-
-<span id="user-content-examplesmedlitpipelineauthoritylookuppy"></span>
-
-# examples/medlit/pipeline/authority_lookup.py
-
-Canonical ID lookup from medical ontology authorities.
-
-Provides lookup functionality for canonical IDs from various medical ontology
-sources: UMLS, HGNC, RxNorm, and UniProt.
-
-Features persistent caching to avoid repeated API calls across runs.
-
-> Canonical ID lookup from medical ontology authorities.
-
-Provides lookup functionality for canonical IDs from various medical ontology
-sources: UMLS, HGNC, RxNorm, and UniProt.
-
-Features persistent caching to avoid repeated API calls across runs.
-
-
-### `def validate_umls_type(umls_id: str, assigned_type: str, _cache: dict[tuple[str, str], tuple[bool, str | None]] | None = None, _semantic_types_override: dict[str, list[str]] | None = None) -> tuple[bool, str | None]`
-
-Return (ok, correct_type_if_known).
-
-Looks up the UMLS semantic type(s) for the CUI and checks whether assigned_type
-is compatible. Returns (False, expected_type) when assigned_type is incompatible
-and the mapping is unambiguous; (True, None) when compatible; (False, None) when
-ambiguous (multiple allowed types). Uses in-memory cache keyed by (umls_id,
-assigned_type) so each CUI is looked up at most once per run when cache is passed.
-For tests, pass _semantic_types_override mapping CUI -> list of semantic type names
-to avoid live API calls.
-
-## `class CanonicalIdLookup(CanonicalIdLookupInterface)`
-
-Look up canonical IDs from various medical ontology authorities.
-
-Supports lookup from:
-- UMLS (diseases, symptoms, procedures)
-- HGNC (genes)
-- RxNorm (drugs)
-- UniProt (proteins)
-
-Features persistent caching to disk to avoid repeated API calls across runs.
-
-### `def CanonicalIdLookup.__init__(self, umls_api_key: Optional[str] = None, cache_file: Optional[Path] = None, embedding_generator: Any = None, similarity_threshold: float = 0.5)`
-
-Initialize the canonical ID lookup service.
-
-Args:
-    umls_api_key: Optional UMLS API key. If not provided, will try to
-                 read from UMLS_API_KEY environment variable.
-    cache_file: Optional path to cache file. If not provided, defaults
-               to "canonical_id_cache.json" in current directory.
-    embedding_generator: Optional; if set, used to rerank multiple candidates
-                        (UMLS/MeSH) by cosine similarity to the search term.
-                        Must have async generate(text: str) -> tuple[float, ...].
-    similarity_threshold: Min cosine similarity when using embedding rerank (0-1).
-
-### `def CanonicalIdLookup._save_cache(self, force: bool = False) -> None`
-
-Save cache to disk.
-
-Args:
-    force: If True, save even if cache is not marked dirty (for emergency saves).
-
-### `async def CanonicalIdLookup.lookup(self, term: str, entity_type: str) -> Optional[CanonicalId]`
-
-Look up canonical ID for a medical term (interface method).
-
-Args:
-    term: The entity name/mention text
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-
-Returns:
-    CanonicalId if found, None otherwise
-
-### `async def CanonicalIdLookup.lookup_canonical_id(self, term: str, entity_type: str) -> Optional[str]`
-
-Look up canonical ID for a medical term.
-
-Args:
-    term: The entity name/mention text
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-
-Returns:
-    Canonical ID string if found, None otherwise
-
-### `async def CanonicalIdLookup._rerank_by_similarity(self, term: str, candidates: list[tuple[str, str]]) -> Optional[str]`
-
-Pick the candidate whose label is most similar to the search term.
-
-candidates: list of (id, label) e.g. (cui, name) or (mesh_id, label).
-Returns the id of the best candidate above threshold, or None.
-
-### `async def CanonicalIdLookup._lookup_umls(self, term: str) -> Optional[str]`
-
-Look up UMLS CUI for a disease/symptom term.
-
-Tries exact match first, then words match for broader candidates.
-When multiple results and embedding_generator is set, reranks by cosine similarity.
-Falls back to MeSH if UMLS API key is not available.
-
-### `def CanonicalIdLookup._normalize_mesh_search_terms(self, term: str) -> list[str]`
-
-Generate normalized search terms for MeSH lookup.
-
-MeSH uses formal terminology, so we normalize common informal terms.
-Returns a list of search terms to try, in order of preference.
-
-Args:
-    term: Original search term
-
-Returns:
-    List of normalized search terms (original first, then normalized variants)
-
-### `async def CanonicalIdLookup._lookup_mesh(self, term: str) -> Optional[str]`
-
-Look up MeSH descriptor ID for a disease/symptom term.
-
-MeSH (Medical Subject Headings) is freely accessible without API key.
-Returns MeSH descriptor IDs like "MeSH:D001943" (breast neoplasms).
-
-Strategy:
-1. Try descriptor lookup with original term and normalized variants
-2. Collect all results and score them together
-3. Return the best match across all search terms
-
-### `def CanonicalIdLookup._extract_mesh_id_from_results(self, data: list, search_terms: str | list[str]) -> Optional[str]`
-
-Extract MeSH descriptor ID from API results, preferring best matches.
-
-Scores results based on how well they match any of the provided search terms.
-This allows normalized terms (e.g., "breast neoplasms") to score well even
-when the original search was "breast cancer".
-
-Scoring strategy:
-1. Exact match (case-insensitive) gets highest score
-2. Exact word match (all words present) gets high score
-3. Prefer shorter labels (more general terms) over longer ones (complications)
-4. Prefer matches where term is at the start of the label
-5. Penalize matches that are much longer than the search term (likely complications)
-6. Prefer matches to earlier search terms (original > normalized)
-
-Args:
-    data: List of result dictionaries from MeSH API
-    search_terms: Single search term (str) or list of search terms tried
-                 (original first, then normalized variants). If a single string
-                 is provided, it's treated as the only search term.
-
-### `async def CanonicalIdLookup._try_mesh_descriptor_lookup_all(self, term: str) -> list[dict]`
-
-Try to find MeSH descriptors for a term, returning all results.
-
-Args:
-    term: Search term
-
-Returns:
-    List of result dictionaries from MeSH API
-
-### `async def CanonicalIdLookup._lookup_hgnc(self, term: str) -> Optional[str]`
-
-Look up HGNC ID for a gene.
-
-Tries official symbol first, then falls back to alias search.
-This handles cases like "p53" which is an alias for "TP53".
-
-### `async def CanonicalIdLookup._lookup_rxnorm(self, term: str) -> Optional[str]`
-
-Look up RxNorm ID for a drug.
-
-### `async def CanonicalIdLookup._lookup_mesh_by_id(self, mesh_id: str) -> Optional[str]`
-
-Look up MeSH ID by known ID (no search needed).
-
-Args:
-    mesh_id: MeSH descriptor ID (e.g., "D001943" or "MeSH:D001943")
-
-Returns:
-    Formatted MeSH ID (e.g., "MeSH:D001943")
-
-### `async def CanonicalIdLookup._lookup_umls_by_id(self, umls_id: str) -> Optional[str]`
-
-Look up UMLS CUI by known ID (no search needed).
-
-Args:
-    umls_id: UMLS CUI (e.g., "C0006142")
-
-Returns:
-    UMLS CUI string (e.g., "C0006142")
-
-### `async def CanonicalIdLookup._lookup_hgnc_by_id(self, hgnc_id: str) -> Optional[str]`
-
-Look up HGNC ID by known ID (no search needed).
-
-Args:
-    hgnc_id: HGNC ID (e.g., "1100" or "HGNC:1100")
-
-Returns:
-    Formatted HGNC ID (e.g., "HGNC:1100")
-
-### `async def CanonicalIdLookup._lookup_rxnorm_by_id(self, rxnorm_id: str) -> Optional[str]`
-
-Look up RxNorm ID by known ID (no search needed).
-
-Args:
-    rxnorm_id: RxNorm ID (e.g., "1187832" or "RxNorm:1187832")
-
-Returns:
-    Formatted RxNorm ID (e.g., "RxNorm:1187832")
-
-### `async def CanonicalIdLookup._lookup_uniprot_by_id(self, uniprot_id: str) -> Optional[str]`
-
-Look up UniProt ID by known ID (no search needed).
-
-Args:
-    uniprot_id: UniProt accession (e.g., "P38398" or "UniProt:P38398")
-
-Returns:
-    Formatted UniProt ID (e.g., "UniProt:P38398")
-
-### `async def CanonicalIdLookup._lookup_uniprot(self, term: str) -> Optional[str]`
-
-Look up UniProt ID for a protein.
-
-### `async def CanonicalIdLookup._lookup_ror(self, term: str) -> Optional[str]`
-
-Look up ROR ID for a research institution using the affiliation endpoint.
-
-Uses the ROR affiliation-matching endpoint which is designed for messy
-affiliation strings (e.g. department names, abbreviations, addresses).
-Returns a ROR ID (format "ROR:{id}") for confident matches only.
-No authentication required.
-
-### `async def CanonicalIdLookup._lookup_orcid(self, term: str) -> Optional[str]`
-
-Look up ORCID iD for a researcher by name using the ORCID public API.
-
-Uses the ORCID public search API (no authentication required for search).
-Returns an ORCID iD (format "ORCID:0000-0001-2345-6789") when a single
-unambiguous result is found for the name.
-
-### `def CanonicalIdLookup._dbpedia_label_matches(self, term: str, label: str) -> bool`
-
-Check if a DBPedia label is a good match for the search term.
-
-### `async def CanonicalIdLookup._lookup_dbpedia(self, term: str) -> Optional[str]`
-
-Look up DBPedia URI as fallback for any entity type.
-
-DBPedia is a general knowledge base extracted from Wikipedia.
-Used as a fallback when specialized medical ontologies don't find a match.
-
-Only accepts results where the label closely matches the search term
-to avoid garbage matches like "HER2-enriched" → "Insect".
-
-### `async def CanonicalIdLookup._extract_authoritative_id_from_dbpedia(self, dbpedia_id: str, entity_type: str, original_term: str) -> Optional[str]`
-
-Extract authoritative ID from DBPedia resource properties.
-
-After finding a DBPedia match, query the resource to find authoritative IDs
-(MeSH, UMLS, HGNC, RxNorm, UniProt) that may be embedded in DBPedia properties.
-If found, perform a follow-up lookup with the authoritative source.
-
-Args:
-    dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-    original_term: Original search term for caching
-
-Returns:
-    Authoritative canonical ID if found, None otherwise
-
-### `def CanonicalIdLookup._extract_authoritative_id_from_dbpedia_sync(self, client: 'httpx.Client', dbpedia_id: str, entity_type: str, original_term: str) -> Optional[str]`
-
-Synchronous version of authoritative ID extraction from DBPedia.
-
-Args:
-    client: Synchronous HTTP client
-    dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-    original_term: Original search term for caching
-
-Returns:
-    Authoritative canonical ID if found, None otherwise
-
-### `def CanonicalIdLookup._lookup_mesh_by_id_sync(self, mesh_id: str) -> Optional[str]`
-
-Sync version: Look up MeSH ID by known ID.
-
-### `def CanonicalIdLookup._lookup_umls_by_id_sync(self, umls_id: str) -> Optional[str]`
-
-Sync version: Look up UMLS CUI by known ID.
-
-### `def CanonicalIdLookup._lookup_hgnc_by_id_sync(self, hgnc_id: str) -> Optional[str]`
-
-Sync version: Look up HGNC ID by known ID.
-
-### `def CanonicalIdLookup.lookup_hgnc_by_cui_sync(self, cui: str) -> Optional[str]`
-
-Resolve UMLS CUI to HGNC ID for gene concepts.
-
-Uses UMLS REST API to fetch preferred atom name, then HGNC lookup.
-Results are cached under key 'cui:{cui}' with entity_type 'gene'.
-Required for cross-paper gene dedup when one paper has UMLS-only, another has HGNC.
-
-Args:
-    cui: UMLS CUI (e.g., C0079419 for TP53)
-
-Returns:
-    HGNC ID string (e.g., HGNC:11998) or None if resolution fails
-
-### `def CanonicalIdLookup._lookup_rxnorm_by_id_sync(self, rxnorm_id: str) -> Optional[str]`
-
-Sync version: Look up RxNorm ID by known ID.
-
-### `def CanonicalIdLookup._lookup_uniprot_by_id_sync(self, uniprot_id: str) -> Optional[str]`
-
-Sync version: Look up UniProt ID by known ID.
-
-### `def CanonicalIdLookup.lookup_sync(self, term: str, entity_type: str) -> Optional[CanonicalId]`
-
-Synchronous lookup (interface method).
-
-Args:
-    term: The entity name/mention text
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-
-Returns:
-    CanonicalId if found, None otherwise
-
-### `def CanonicalIdLookup.lookup_canonical_id_sync(self, term: str, entity_type: str) -> Optional[str]`
-
-Synchronous wrapper for use as Ollama tool.
-
-This is needed because Ollama tool functions must be synchronous.
-Uses the cache first, then makes synchronous HTTP calls if needed.
-
-Args:
-    term: The entity name/mention text
-    entity_type: Type of entity (disease, gene, drug, protein, etc.)
-
-Returns:
-    Canonical ID string if found, None otherwise
-
-### `def CanonicalIdLookup._lookup_umls_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous UMLS lookup with MeSH fallback.
-
-### `def CanonicalIdLookup._lookup_mesh_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous MeSH lookup with term normalization.
-
-Uses the same multi-term approach as async version.
-
-### `def CanonicalIdLookup._lookup_hgnc_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous HGNC lookup with alias fallback.
-
-### `def CanonicalIdLookup._lookup_rxnorm_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous RxNorm lookup.
-
-### `def CanonicalIdLookup._lookup_uniprot_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous UniProt lookup.
-
-### `def CanonicalIdLookup._lookup_dbpedia_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
-
-Synchronous DBPedia lookup as fallback with validation.
-
-### `async def CanonicalIdLookup.close(self) -> None`
-
-Close the HTTP client and save cache.
-
-### `async def CanonicalIdLookup.__aenter__(self)`
-
-Async context manager entry.
-
-### `async def CanonicalIdLookup.__aexit__(self, exc_type, exc_val, exc_tb)`
-
-Async context manager exit - saves cache and closes client.
-
-
-<span id="user-content-examplesmedlitpipelinebundlebuilderpy"></span>
-
-# examples/medlit/pipeline/bundle_builder.py
-
-Pass 3: Build kgbundle from medlit_merged and pass1_bundles.
-
-Reads merged output (entities.json, relationships.json, id_map.json, synonym_cache.json)
-and Pass 1 paper_*.json bundles; writes a kgbundle directory loadable by kgserver.
-
-> 
-Pass 3: Build kgbundle from medlit_merged and pass1_bundles.
-
-Reads merged output (entities.json, relationships.json, id_map.json, synonym_cache.json)
-and Pass 1 paper_*.json bundles; writes a kgbundle directory loadable by kgserver.
-
-
-### `def load_merged_output(merged_dir: Path) -> tuple[list[dict], list[dict], dict, dict]`
-
-Load merged Pass 2 output and id_map.
-
-Returns (entities, relationships, id_map, synonym_cache).
-Raises FileNotFoundError if id_map.json is missing.
-
-### `def load_pass1_bundles(bundles_dir: Path) -> list[tuple[str, PerPaperBundle]]`
-
-Load all paper_*.json bundles from bundles_dir. Returns list of (paper_id, bundle).
-
-### `def _section_from_evidence_id(evidence_id: str) -> str | None`
-
-Extract section from evidence_id. Format: {paper_id}:{section}:{paragraph_idx}:{method}.
-
-### `def _entity_usage_from_bundles(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]]) -> dict[str, dict[str, Any]]`
-
-Compute usage_count, total_mentions, supporting_documents, first_seen_* per merge_key.
-
-Semantics:
-- usage_count: number of unique papers in supporting_documents (each paper counted once per entity).
-- total_mentions: sum of evidence_ids across all relationships where the entity appears (subject or object).
-Large gaps (e.g. usage_count=7, total_mentions=65) are expected when an entity appears many times within a few papers.
-
-### `def _credit_entity(merge_key: str | None, evidence_id: str | None) -> None`
-
-Credit merge_key with one mention from paper_id.
-
-### `def _merged_entity_to_entity_row(ent: dict, usage: dict[str, Any], created_at: str) -> EntityRow`
-
-Convert merged entity dict to EntityRow.
-
-### `def _relationship_evidence_stats(merged_rels: list[dict], bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]]) -> dict[tuple[str, str, str], dict[str, Any]]`
-
-For each (sub, pred, obj) merge key, compute evidence_count, strongest_evidence_quote, evidence_confidence_avg.
-
-### `def _merged_rel_to_relationship_row(rel: dict, stats: dict[tuple[str, str, str], dict[str, Any]], created_at: str) -> RelationshipRow`
-
-Convert merged relationship dict to RelationshipRow.
-
-### `def _build_evidence_rows(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]], merged_relationships: list[dict]) -> list[EvidenceRow]`
-
-Build EvidenceRow list from bundles; relationship_key uses merge keys. Offsets stubbed (0, len(text)).
-
-### `def _build_mention_rows(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]], created_at: str) -> list[MentionRow]`
-
-Build MentionRow list from bundles; entity_id is merge_key. Offsets stubbed (0, len(text_span)).
-
-### `def run_pass3(merged_dir: Path, bundles_dir: Path, output_dir: Path, pmc_xmls_dir: Path | None = None) -> dict[str, Any]`
-
-Build kgbundle from merged Pass 2 output and Pass 1 bundles. Writes all bundle files.
-
-If pmc_xmls_dir is provided, copies JATS-XML source files for each paper into
-output_dir/sources/ (for get_paper_source diagnostic tool).
-
-
-<span id="user-content-examplesmedlitpipelinecanonicalurlspy"></span>
-
-# examples/medlit/pipeline/canonical_urls.py
-
-Utility functions for constructing canonical URLs from entity canonical IDs.
-
-### `def build_canonical_url(canonical_id: str, entity_type: Optional[str] = None) -> Optional[str]`
-
-Build a canonical URL for an entity based on its canonical ID.
-
-Supports:
-- DBPedia: https://dbpedia.org/page/{entity_name}
-- MeSH: https://meshb.nlm.nih.gov/record/ui?ui={ID}
-- UniProt: https://www.uniprot.org/uniprotkb/{ID}
-- HGNC: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/{ID}
-- UMLS: https://uts.nlm.nih.gov/uts/umls/concept/{ID}
-- RxNorm: https://www.nlm.nih.gov/research/umls/rxnorm/overview.html (no direct link, returns None)
-
-Args:
-    canonical_id: The canonical ID (e.g., "MeSH:D000570", "UniProt:P38398", "HGNC:1100")
-    entity_type: Optional entity type hint (e.g., "disease", "gene", "protein")
-
-Returns:
-    URL string if a link can be constructed, None otherwise.
-
-### `def build_canonical_urls_from_dict(canonical_ids: dict[str, str], entity_type: Optional[str] = None) -> dict[str, str]`
-
-Build canonical URLs for all canonical IDs in a dictionary.
-
-Args:
-    canonical_ids: Dictionary mapping source names to canonical IDs
-        (e.g., {"umls": "C0006142", "mesh": "MeSH:D000570"})
-    entity_type: Optional entity type hint
-
-Returns:
-    Dictionary mapping source names to URLs (e.g., {"umls": "https://...", "mesh": "https://..."})
-
-
-<span id="user-content-examplesmedlitpipelineconfigpy"></span>
-
-# examples/medlit/pipeline/config.py
-
-Load medlit pipeline config from TOML (e.g. medlit.toml).
-
-Config file is looked up in order:
-  1. Path in MEDLIT_CONFIG env var (if set)
-  2. medlit.toml in the examples/medlit package directory
-  3. medlit.toml in the current working directory
-
-If no file is found, built-in defaults are used (window_size=1536, overlap=400).
-
-> Load medlit pipeline config from TOML (e.g. medlit.toml).
-
-Config file is looked up in order:
-  1. Path in MEDLIT_CONFIG env var (if set)
-  2. medlit.toml in the examples/medlit package directory
-  3. medlit.toml in the current working directory
-
-If no file is found, built-in defaults are used (window_size=1536, overlap=400).
-
-
-### `def _default_config_paths() -> list[Path]`
-
-Return paths to check for medlit.toml (first existing wins).
-
-### `def load_medlit_config() -> dict[str, Any]`
-
-Load medlit config from TOML file.
-
-Returns:
-    Config dict with at least "chunker" key containing window_size and overlap.
-    Uses DEFAULT_WINDOW_SIZE and DEFAULT_OVERLAP if no file or [chunker] section.
-
-
-<span id="user-content-examplesmedlitpipelinededuppy"></span>
-
-# examples/medlit/pipeline/dedup.py
-
-Pass 2: Deduplication and promotion over per-paper bundles.
-
-Reads all PerPaperBundle JSONs from a directory, builds name/type index (with
-synonym cache), resolves high-confidence SAME_AS, assigns canonical IDs,
-updates relationship refs, accumulates triples, and saves the synonym cache.
-Original bundle files are never modified; output is written to a separate
-directory (overlay or merged graph).
-
-> Pass 2: Deduplication and promotion over per-paper bundles.
-
-Reads all PerPaperBundle JSONs from a directory, builds name/type index (with
-synonym cache), resolves high-confidence SAME_AS, assigns canonical IDs,
-updates relationship refs, accumulates triples, and saves the synonym cache.
-Original bundle files are never modified; output is written to a separate
-directory (overlay or merged graph).
-
-
-### `def _normalize_for_dedup(name: str) -> str`
-
-Lowercase, strip, and apply British→American spelling map for dedup lookups.
-
-### `def _is_authoritative_id(s: str) -> bool`
-
-Return True if s looks like an authoritative ontology ID, not a synthetic slug.
-
-### `def _format_hgnc_id(val: str) -> str`
-
-Ensure HGNC ID has HGNC: prefix if numeric.
-
-### `def _preferred_authoritative_id(e: ExtractedEntityRow, lookup: Any) -> Optional[str]`
-
-Return the best authoritative ID for merge key, preferring HGNC for genes.
-
-For Gene: if both umls_id and hgnc_id present, prefer hgnc_id. If only umls_id,
-resolve via UMLS→HGNC cross-lookup when lookup is available.
-For other classes: first match in canonical_id, umls_id, hgnc_id, rxnorm_id, uniprot_id.
-
-### `def _entity_class_to_lookup_type(entity_class: str, entity_class_to_lookup: dict[str, str]) -> Optional[str]`
-
-Map bundle entity_class to CanonicalIdLookup entity_type (lowercase).
-
-### `def _build_entity_class_to_lookup_type() -> dict[str, str]`
-
-Derive bundle_class -> lookup_type from domain_spec.NORMALIZED_TO_BUNDLE.
-
-### `def _build_entity_class_to_predicate_type() -> dict[str, str]`
-
-Bundle_class -> entity type for predicate constraint checks (no authority overrides).
-
-Authority overrides (e.g. Hormone->drug) are for UMLS/RxNorm lookup, not for
-predicate semantics. CAUSES(hormone, symptom) requires Hormone->hormone.
-
-### `def _should_swap_relationship(predicate: str, subject_class: str, object_class: str, predicate_constraints: dict[str, Any], entity_class_to_lookup: dict[str, str], entity_class_to_predicate_type: dict[str, str]) -> bool`
-
-Return True if subject and object should be swapped to satisfy predicate constraints.
-
-Fixes backwards relationships from Pass 1 LLM (e.g. disease treats drug -> drug treats disease).
-Uses entity_class_to_predicate_type (no authority overrides) for semantic type checks.
-
-### `def _canonical_id_slug() -> str`
-
-Generate a short synthetic merge key for entities without authoritative ID.
-
-### `def run_pass2(bundle_dir: Path, output_dir: Path, synonym_cache_path: Optional[Path] = None, canonical_id_cache_path: Optional[Path] = None, embedding_generator: Any = None, similarity_threshold: float = 0.88, cross_type_threshold: float = 0.9) -> dict[str, Any]`
-
-Run Pass 2: dedup and promotion. Reads bundles from bundle_dir, writes to output_dir.
-
-Original bundle files in bundle_dir are never modified.
-Returns summary dict (entities_count, relationships_count, etc.).
-
-Args:
-    embedding_generator: Optional; if set, used for embedding-based dedup of provisional
-        entities and cross-type candidate detection. Must have generate(text) -> vector.
-    similarity_threshold: Min cosine similarity for same-class provisional merge (default 0.88).
-    cross_type_threshold: Min similarity for cross-type candidate flagging (default 0.90).
-
-### `def _run_pass2_impl(bundle_dir: Path, output_dir: Path, synonym_cache_path: Path, cache: dict, lookup: Any, embedding_generator: Any = None, similarity_threshold: float = 0.88, cross_type_threshold: float = 0.9, entity_class_to_lookup: Optional[dict[str, str]] = None, entity_class_to_predicate_type: Optional[dict[str, str]] = None) -> dict[str, Any]`
-
-Inner Pass 2 implementation (lookup created and saved by caller).
-
-### `def _populate_name_index(cid: str, n: str, ec: str) -> None`
-
-Add (normalized_name, entity_class) -> cid for name, synonyms, and spelling-normalized forms.
-
-### `def _resolve_by_name(name: str) -> Optional[str]`
-
-Fuzzy fallback: resolve a free-form name string to a canonical ID.
-
-When the LLM writes a relationship subject/object as a plain name (e.g.
-"FOLFIRINOX") rather than the entity ID it assigned ("mfolfirinox"),
-local_to_canonical misses. This searches name_type_to_canonical across
-all entity classes using exact, normalized, and synonym matches.
-
-
-<span id="user-content-examplesmedlitpipelinementionspy"></span>
-
-# examples/medlit/pipeline/mentions.py
-
-Entity mention extraction from journal articles.
-
-Extracts entity mentions from Paper JSON format (from med-lit-schema).
-Since the papers already have extracted entities, we convert those to EntityMention objects.
-Can also use Ollama LLM for NER extraction from text.
-
-> Entity mention extraction from journal articles.
-
-Extracts entity mentions from Paper JSON format (from med-lit-schema).
-Since the papers already have extracted entities, we convert those to EntityMention objects.
-Can also use Ollama LLM for NER extraction from text.
-
-
-### `def _normalize_mention_key(name: str, entity_type: str) -> tuple[str, str]`
-
-Normalized key for deduping mentions: (alphanumeric lower name, type).
-
-### `def _is_type_masquerading_as_name(name: str, entity_type: str) -> bool`
-
-Return True if the name is just the entity type (or a type label), not a real entity name.
-
-When the LLM (or pre-extracted data) puts the type in the 'entity'/'name' field,
-we get e.g. name='disease', type='disease'. Reject these so we never create
-entities whose name is the type.
-
-## `class MedLitEntityExtractor(EntityExtractorInterface)`
-
-Extract entity mentions from journal articles.
-
-This extractor works with Paper JSON format from med-lit-schema, which
-already contains extracted entities. We convert those to EntityMention objects.
-
-Can also use Ollama LLM to extract entities directly from text if llm_client is provided.
-Note: Canonical ID lookup is handled during the promotion phase, not during extraction.
-
-### `def MedLitEntityExtractor.__init__(self, llm_client: LLMClientInterface | None = None, domain: DomainSchema | None = None)`
-
-Initialize entity extractor.
-
-Args:
-    llm_client: Optional LLM client for extracting entities from text.
-                If None, only uses pre-extracted entities from Paper JSON.
-    domain: Domain schema for entity type validation (needed for normalization).
-
-### `def MedLitEntityExtractor._normalize_entity_type(self, entity_type_raw: str) -> str | None`
-
-Normalize LLM entity types to schema types.
-
-Handles:
-- Multi-type format (drug|protein) → takes first valid type
-- Common mistakes (test → procedure)
-- Invalid types → returns None (skip entity)
-
-Args:
-    entity_type_raw: Raw entity type string from LLM
-
-Returns:
-    Normalized type string if valid, None if invalid/non-medical
-
-### `async def MedLitEntityExtractor.extract(self, document: BaseDocument) -> list[EntityMention]`
-
-Extract entity mentions from a journal article (single chunk).
-
-If the document metadata contains pre-extracted entities (from med-lit-schema),
-we convert those to EntityMention objects. Otherwise, if llm_client is provided,
-extracts entities from document text using LLM (one prompt per document/chunk).
-
-When used behind BatchingEntityExtractor, this is called once per chunk;
-the orchestrator handles streaming and deduplication across chunks.
-
-Args:
-    document: The journal article document (or a chunk document).
-
-Returns:
-    List of EntityMention objects for this document/chunk.
-
-
-<span id="user-content-examplesmedlitpipelinenerextractorpy"></span>
-
-# examples/medlit/pipeline/ner_extractor.py
-
-NER-based entity extraction for medical literature (PLAN3).
-
-Uses a HuggingFace token-classification (NER) model for fast, local entity
-extraction instead of an LLM. Default model: tner/roberta-base-bc5cdr (BC5CDR
-chemical and disease entities). Install with: pip install -e ".[ner]"
-
-Label mapping (BC5CDR-style): Chemical -> drug, Disease -> disease.
-Gene/protein entities are not covered by this model; use a second model or
-hybrid with LLM for full coverage.
-
-> 
-NER-based entity extraction for medical literature (PLAN3).
-
-Uses a HuggingFace token-classification (NER) model for fast, local entity
-extraction instead of an LLM. Default model: tner/roberta-base-bc5cdr (BC5CDR
-chemical and disease entities). Install with: pip install -e ".[ner]"
-
-Label mapping (BC5CDR-style): Chemical -> drug, Disease -> disease.
-Gene/protein entities are not covered by this model; use a second model or
-hybrid with LLM for full coverage.
-
-
-### `def _normalize_entity_group(label: str) -> str`
-
-Normalize pipeline entity_group to lowercase, strip B-/I- prefix if present.
-
-### `def _get_document_text(document: BaseDocument) -> str`
-
-Get text to run NER on: content or abstract.
-
-### `def _run_ner_sync(pipeline: Any, text: str) -> list[dict]`
-
-Run NER pipeline on text; returns list of dicts with start, end, entity_group, score.
-
-### `def _chunk_text(text: str, chunk_size: int = CHUNK_CHARS, overlap: int = CHUNK_OVERLAP) -> list[tuple[int, str]]`
-
-Split text into overlapping chunks; returns [(start_offset, chunk_text), ...].
-
-### `def _merge_and_dedupe(chunk_results: list[tuple[int, list[dict]]]) -> list[dict]`
-
-Merge NER results from chunks: adjust offsets and dedupe by span (keep higher score).
-
-## `class MedLitNEREntityExtractor(EntityExtractorInterface)`
-
-Extract entity mentions using a local NER model (e.g. BC5CDR).
-
-Much faster than LLM-based extraction. Supports disease and chemical (drug)
-out of the box with the default model; other types can be added via
-label mapping or a different model.
-
-### `def MedLitNEREntityExtractor.__init__(self, model_name_or_path: str = 'tner/roberta-base-bc5cdr', domain: DomainSchema | None = None, device: str | None = None, max_length: int = 512, label_to_type: dict[str, str] | None = None, pipeline: Any = None)`
-
-Initialize the NER extractor.
-
-Args:
-    model_name_or_path: HuggingFace model id or local path.
-    domain: Medlit domain for type filtering; if None, all mapped types kept.
-    device: "cuda", "cpu", or None for auto.
-    max_length: Tokenizer max length.
-    label_to_type: Override label -> medlit type map; default LABEL_TO_MEDLIT_TYPE.
-    pipeline: Optional pre-built NER pipeline (for testing); if set, model is not loaded.
-
-Raises:
-    ImportError: If transformers/torch are not installed (install with pip install -e ".[ner]").
-
-### `async def MedLitNEREntityExtractor.extract(self, document: BaseDocument) -> list[EntityMention]`
-
-Extract entity mentions from document text using the NER model.
-
-
-<span id="user-content-examplesmedlitpipelineparserpy"></span>
-
-# examples/medlit/pipeline/parser.py
-
-Document parser for journal articles.
-
-Converts raw paper input (PMC XML, JSON, etc.) into JournalArticle documents.
-
-> Document parser for journal articles.
-
-Converts raw paper input (PMC XML, JSON, etc.) into JournalArticle documents.
-
-
-## `class JournalArticleParser(DocumentParserInterface)`
-
-Parse raw journal article content into JournalArticle documents.
-
-This parser handles various input formats (PMC XML, JSON from med-lit-schema,
-etc.) and converts them to kgraph's JournalArticle format.
-
-For now, this is a minimal implementation. A full implementation would:
-1. Parse PMC XML (using existing med-lit-schema parser logic)
-2. Parse JSON from med-lit-schema's Paper format
-3. Extract metadata and map to JournalArticle fields
-
-### `async def JournalArticleParser.parse(self, raw_content: bytes, content_type: str, source_uri: str | None = None) -> JournalArticle`
-
-Parses raw document content into a structured `JournalArticle`.
-
-This method acts as a dispatcher, routing the raw content to the
-appropriate parsing logic based on its `content_type`. It supports
-JSON (conforming to `med-lit-schema`) and PMC XML formats.
-
-Args:
-    raw_content: The raw byte content of the document.
-    content_type: The MIME type of the document, used to select the
-                  correct parser (e.g., "application/json", "application/xml").
-    source_uri: An optional URI for the document's origin, which can be
-                used to infer a document ID.
-
-Returns:
-    A `JournalArticle` instance populated with the parsed data.
-
-Raises:
-    ValueError: If the `content_type` is not supported or if the
-                content is malformed and cannot be parsed.
-
-### `def JournalArticleParser._parse_xml_to_dict(self, root: Any, source_uri: str | None) -> dict[str, Any]`
-
-Converts a PMC XML structure into a dictionary.
-
-This method traverses the XML element tree of a PubMed Central article
-and extracts key information, mapping it to a dictionary that loosely
-conforms to the `med-lit-schema` Paper format. This intermediate
-dictionary is then passed to `_parse_from_dict`.
-
-Args:
-    root: The root element of the parsed XML tree.
-    source_uri: An optional source URI, used as a fallback to derive
-                the paper's ID from its filename.
-
-Returns:
-    A dictionary containing the extracted title, abstract, authors,
-    and other metadata.
-
-### `def JournalArticleParser._parse_from_dict(self, data: dict[str, Any], source_uri: str | None) -> JournalArticle`
-
-Constructs a `JournalArticle` from a dictionary.
-
-This method takes a dictionary (conforming to `med-lit-schema`'s Paper
-format or the output of `_parse_xml_to_dict`) and maps its fields to
-the `JournalArticle` document model.
-
-Key mapping logic:
--   `document_id` is chosen in order of preference: DOI, then PMID,
-    then the original `paper_id`.
--   `content` is created by combining the abstract and full text.
--   Pre-existing `entities` and `relationships` from the input data
-    are moved into the `metadata` dictionary, so that downstream
-    extractors in the kgraph pipeline can find them.
--   Other fields like authors, publication date, and journal are
-    mapped directly.
-
-Args:
-    data: A dictionary containing the paper's data.
-    source_uri: The original source URI of the document.
-
-Returns:
-    A fully populated `JournalArticle` object.
-
-Raises:
-    ValueError: If no valid identifier (paper_id, doi, or pmid)
-                can be found in the input data.
-
-
-<span id="user-content-examplesmedlitpipelinepmcchunkerpy"></span>
-
-# examples/medlit/pipeline/pmc_chunker.py
-
-PMC-specific document chunker using iter_pmc_windows for memory-efficient streaming.
-
-Produces DocumentChunks from raw PMC/JATS XML bytes without loading the full
-document into memory. Implements DocumentChunkerInterface with chunk_from_raw()
-for the streaming path and chunk(document) as a fallback for parsed documents.
-
-> PMC-specific document chunker using iter_pmc_windows for memory-efficient streaming.
-
-Produces DocumentChunks from raw PMC/JATS XML bytes without loading the full
-document into memory. Implements DocumentChunkerInterface with chunk_from_raw()
-for the streaming path and chunk(document) as a fallback for parsed documents.
-
-
-### `def _content_type_is_xml(content_type: str) -> bool`
-
-Return True if content_type is XML (strip parameters like ; charset=utf-8).
-
-## `class PMCStreamingChunker(DocumentChunkerInterface)`
-
-Chunker for PMC/JATS XML that uses iter_pmc_windows for memory-efficient chunking.
-
-When chunk_from_raw() is used with XML content type, yields overlapping
-windows from raw bytes without parsing the full document. For chunk(document)
-(e.g. already-parsed document or non-XML), delegates to a windowed chunker
-over document.content.
-
-### `def PMCStreamingChunker.__init__(self, window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP, include_abstract_separately: bool = True, document_chunk_config: ChunkingConfig | None = None)`
-
-Initialize the PMC streaming chunker.
-
-Args:
-    window_size: Target characters per window (used for chunk_from_raw).
-    overlap: Overlap between consecutive windows.
-    include_abstract_separately: If True, first window is abstract alone.
-    document_chunk_config: Config for chunk(document) fallback. If None,
-        uses window_size and overlap for the windowed chunker.
-
-### `async def PMCStreamingChunker.chunk(self, document: BaseDocument) -> list[DocumentChunk]`
-
-Split a parsed document into chunks (fallback when no raw bytes).
-
-Delegates to WindowedDocumentChunker over document.content.
-
-### `async def PMCStreamingChunker.chunk_from_raw(self, raw_content: bytes, content_type: str, document_id: str, source_uri: str | None = None) -> list[DocumentChunk]`
-
-Chunk from raw PMC XML bytes without loading the full document.
-
-Uses iter_pmc_windows for memory-efficient streaming. If content_type
-is not XML, returns a single chunk with decoded text (for non-PMC use).
-
-### `def document_id_from_source_uri(source_uri: str | None) -> str`
-
-Derive a document ID from source_uri (e.g. file stem). Used when parsing is deferred.
-
-
-<span id="user-content-examplesmedlitpipelinepmcstreamingpy"></span>
-
-# examples/medlit/pipeline/pmc_streaming.py
-
-Streaming PMC XML chunker for full-paper extraction.
-
-Yields overlapping text windows from a PMC/JATS XML document without loading
-the entire body into a single string. Uses iterparse so the parser does not
-hold the full tree in memory; sections are yielded and then cleared.
-
-Use for:
-- Entity extraction: run NER on each window, then merge/dedupe mentions.
-- Relationship extraction: run relationship extraction on each window with
-  the full entity list, then merge relationships.
-
-> Streaming PMC XML chunker for full-paper extraction.
-
-Yields overlapping text windows from a PMC/JATS XML document without loading
-the entire body into a single string. Uses iterparse so the parser does not
-hold the full tree in memory; sections are yielded and then cleared.
-
-Use for:
-- Entity extraction: run NER on each window, then merge/dedupe mentions.
-- Relationship extraction: run relationship extraction on each window with
-  the full entity list, then merge relationships.
-
-
-### `def _local_tag(tag: str) -> str`
-
-Strip XML namespace from tag for comparison.
-
-### `def iter_pmc_sections(raw_content: bytes) -> Iterator[tuple[str, str]]`
-
-Yield (section_id, text) for abstract and each body section.
-
-Uses iterparse so we do not build a full DOM for the body. After
-yielding each element's text we clear it to free memory. Yields:
-- ("abstract", abstract_text) first if present
-- ("sec_<id>", section_text) for each <sec> (full text of that section,
-  including nested secs and paragraphs)
-
-Namespaces in JATS are stripped so we match "abstract", "body", "sec".
-
-### `def iter_overlapping_windows(sections: Iterator[tuple[str, str]], window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP) -> Iterator[tuple[int, str]]`
-
-Turn a stream of (section_id, text) into overlapping windows.
-
-Concatenates section texts. When accumulated length reaches window_size,
-yields (window_index, text). Then slides by (window_size - overlap) so
-consecutive windows overlap by `overlap` characters. This helps the LLM
-see context across boundaries and avoids splitting entities.
-
-If include_abstract_separately is True, the first yielded window is
-always the abstract alone (if any section has section_id == "abstract").
-Subsequent windows are from body content only. Only one window-sized
-buffer is kept in memory.
-
-Args:
-    sections: Iterator of (section_id, text).
-    window_size: Target size of each window in characters.
-    overlap: Number of characters to overlap between consecutive windows.
-    include_abstract_separately: If True, yield abstract as window 0.
-
-Yields:
-    (window_index, text) for each window.
-
-### `def iter_pmc_windows(raw_content: bytes, window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP, include_abstract_separately: bool = True) -> Iterator[tuple[int, str]]`
-
-Yield overlapping text windows from PMC XML for full-paper extraction.
-
-Convenience generator: iter_pmc_sections(raw_content) -> iter_overlapping_windows(...).
-Use when you have raw PMC/XML bytes and want a sequence of prompts (e.g. for
-entity or relationship extraction) without loading the whole paper into one string.
-
-Args:
-    raw_content: Raw bytes of the PMC/JATS XML document.
-    window_size: Target characters per window.
-    overlap: Overlap between consecutive windows.
-    include_abstract_separately: If True, first window is the abstract alone.
-
-Yields:
-    (window_index, text) for each window.
-
-
-<span id="user-content-examplesmedlitpipelineprovenanceexpansionpy"></span>
-
-# examples/medlit/pipeline/provenance_expansion.py
-
-Provenance expansion: derive Author, Institution, Paper entities and relationships from metadata.
-
-### `def normalize_author_id(name: str, paper_id: str) -> str`
-
-Return Author:{normalized} where normalized = last word + first initial, lowercased, alphanumeric only.
-
-### `def normalize_institution_id(affiliation: str) -> str`
-
-Return Institution:{normalized} where normalized = first 50 chars, lowercased, non-alphanumeric -> underscore.
-
-### `def expand_provenance(bundle: PerPaperBundle) -> tuple[list[ExtractedEntityRow], list[RelationshipRow]]`
-
-Derive Author, Institution, Paper entities and AUTHORED, AFFILIATED_WITH, DESCRIBED from metadata.
-
-DESCRIBED is limited to the top 2 domain entities by relationship count (central to the paper).
-COAUTHORED_WITH is omitted; derive via AUTHORED hops (Author -> Paper <- Author).
-
-
-<span id="user-content-examplesmedlitpipelinerelationshipspy"></span>
-
-# examples/medlit/pipeline/relationships.py
-
-Relationship extraction from journal articles.
-
-Extracts relationships from Paper JSON format (from med-lit-schema).
-Since the papers already have extracted relationships, we convert those to BaseRelationship objects.
-Can also use Ollama LLM for relationship extraction from text.
-
-> Relationship extraction from journal articles.
-
-Extracts relationships from Paper JSON format (from med-lit-schema).
-Since the papers already have extracted relationships, we convert those to BaseRelationship objects.
-Can also use Ollama LLM for relationship extraction from text.
-
-
-### `def _deduplicate_relationships_by_predicate_specificity(relationships: list[BaseRelationship]) -> list[BaseRelationship]`
-
-For each (subject_id, object_id), keep only the relationship with highest predicate specificity.
-
-### `def _normalize_evidence_for_match(text: str) -> str`
-
-Normalize evidence text for substring matching: lowercase, strip, collapse whitespace.
-
-### `def _evidence_has_disease_context(evidence: str) -> bool`
-
-Return True if evidence text suggests disease/marker context (IHC, tumor, etc.).
-
-### `def _evidence_contains_both_entities(evidence: str, subject_name: str, object_name: str, subject_entity: BaseEntity | None, object_entity: BaseEntity | None) -> tuple[bool, str | None, dict[str, Any]]`
-
-Check that both subject and object (or synonyms) appear in the evidence text.
-
-Returns:
-    (ok, drop_reason, detail): ok is True only if both entities appear;
-    drop_reason is set when ok is False; detail has subject_in_evidence, object_in_evidence.
-
-### `async def _evidence_contains_both_entities_semantic(evidence: str, subject_entity: BaseEntity, object_entity: BaseEntity, embedding_generator: Any, threshold: float, evidence_cache: dict[str, tuple[float, ...]], entity_name_cache: dict[str, tuple[float, ...]]) -> tuple[bool, str | None, dict[str, Any]]`
-
-Check that evidence semantically contains both entities via embedding similarity.
-
-Uses evidence_cache and entity_name_cache to avoid duplicate embedding API calls
-within a document. Returns same shape as _evidence_contains_both_entities.
-
-## `class MedLitRelationshipExtractor(RelationshipExtractorInterface)`
-
-Extract relationships from journal articles.
-
-This extractor works with Paper JSON format from med-lit-schema, which
-already contains extracted relationships. We convert those to BaseRelationship objects.
-
-Can also use Ollama LLM to extract relationships directly from text if llm_client is provided.
-
-### `def MedLitRelationshipExtractor.__init__(self, llm_client: Optional[LLMClientInterface] = None, domain: Optional['MedLitDomainSchema'] = None, trace_dir: Optional[Path] = None, embedding_generator: Any = None, evidence_similarity_threshold: float = 0.5)`
-
-Initialize relationship extractor.
-
-Args:
-    llm_client: Optional LLM client for extracting relationships from text.
-                If None, only uses pre-extracted relationships from Paper JSON.
-    domain: Optional domain schema for type validation and predicate constraints.
-            If provided, will attempt to swap subject/object on type mismatches.
-    trace_dir: Optional directory for writing trace files. If None, uses default.
-    embedding_generator: Optional embedding generator for semantic evidence validation.
-                        When set, failed string evidence check is retried with cosine similarity.
-    evidence_similarity_threshold: Minimum cosine similarity (0-1) for semantic evidence pass. Default 0.5.
-
-### `def MedLitRelationshipExtractor.trace_dir(self) -> Path`
-
-Get the trace directory.
-
-### `def MedLitRelationshipExtractor.trace_dir(self, value: Path) -> None`
-
-Set the trace directory.
-
-### `def MedLitRelationshipExtractor._should_swap_subject_object(self, predicate: str, subject_entity: BaseEntity, object_entity: BaseEntity) -> bool`
-
-Check if subject and object should be swapped based on type constraints.
-
-Args:
-    predicate: The relationship predicate
-    subject_entity: The subject entity
-    object_entity: The object entity
-
-Returns:
-    True if swapping subject and object would satisfy type constraints, False otherwise.
-
-### `def MedLitRelationshipExtractor._validate_predicate_semantics(self, predicate: str, evidence: str) -> bool`
-
-Validate that predicate semantics match the evidence text.
-
-Checks for semantic mismatches like:
-- "increases_risk" with positive therapeutic language
-- "treats" with negative/harmful language
-
-Args:
-    predicate: The relationship predicate (e.g., "treats", "increases_risk")
-    evidence: The evidence text supporting the relationship
-
-Returns:
-    True if predicate matches evidence semantics, False if there's a mismatch.
-
-### `async def MedLitRelationshipExtractor.extract(self, document: BaseDocument, entities: Sequence[BaseEntity]) -> list[BaseRelationship]`
-
-Extract relationships from a journal article.
-
-If the document metadata contains pre-extracted relationships (from med-lit-schema),
-we convert those to BaseRelationship objects. Otherwise, if llm_client is provided,
-extracts relationships from document text using LLM.
-
-Args:
-    document: The journal article document.
-    entities: The resolved entities from this document.
-
-Returns:
-    List of BaseRelationship objects representing relationships in the paper.
-
-### `def MedLitRelationshipExtractor._build_llm_prompt(self, text_sample: str, entity_list: str) -> str`
-
-Build the prompt for the LLM.
-
-Notes:
-- This prompt is driven by the domain schema:
-  - self._domain.relationship_types (vocabulary)
-  - self._domain.predicate_constraints (allowed subject/object types)
-- Predicates must be returned in *lowercase* (e.g. "treats"), because downstream
-  code currently normalizes and stores predicates as lowercase. :contentReference[oaicite:3]{index=3}
-
-### `async def MedLitRelationshipExtractor._extract_with_llm(self, document: BaseDocument, entities: Sequence[BaseEntity]) -> list[BaseRelationship]`
-
-Extract relationships using LLM.
-
-Also writes a trace file to /tmp/kgraph-relationship-traces/ for debugging.
-The trace captures: prompt, raw LLM output, parsed JSON, and per-item decisions.
-
-### `async def MedLitRelationshipExtractor._process_llm_item(self, item: Any, entity_index: dict[str, list[BaseEntity]], document: BaseDocument) -> tuple[BaseRelationship | None, dict[str, Any]]`
-
-Process a single item from the LLM response.
-
-### `def MedLitRelationshipExtractor.write_skip_trace(self, document_id: str, reason: str, entity_count: int) -> None`
-
-Write a minimal trace file when a window is skipped (e.g. fewer than 2 entities).
-
-Uses the same path convention as _write_trace so skip and full traces
-appear in the same directory. Call from WindowedRelationshipExtractor
-when a chunk is skipped so --trace-all still produces a trace per window.
-
-### `def MedLitRelationshipExtractor._write_trace(self, document_id: str, trace: dict[str, Any]) -> None`
-
-Write trace file for debugging relationship extraction.
-
-When document_id is from a windowed run (e.g. PMC12770061_window_5),
-the filename includes the window index so each window gets its own file
-(e.g. PMC12770061.5.relationships.trace.json) and earlier windows are
-not overwritten.
-
-
-<span id="user-content-examplesmedlitpipelineresolvepy"></span>
-
-# examples/medlit/pipeline/resolve.py
-
-Entity resolution for medical literature domain.
-
-Resolves entity mentions to canonical entities using UMLS, HGNC, RxNorm, UniProt IDs.
-
-> Entity resolution for medical literature domain.
-
-Resolves entity mentions to canonical entities using UMLS, HGNC, RxNorm, UniProt IDs.
-
-
-## `class MedLitEntityResolver(BaseModel, EntityResolverInterface)`
-
-Resolve medical entity mentions to canonical or provisional entities.
-
-Resolution strategy (hybrid approach):
-1. If mention has canonical_id_hint (from pre-extracted entities), use that
-2. Check if entity with that ID already exists in storage
-3. If not, create new canonical entity (since we have authoritative IDs)
-4. For mentions without canonical IDs:
-   a. Try embedding-based semantic matching against existing entities (if embedding_generator provided)
-   b. If no match found, create provisional entities
-
-The embedding-based matching acts as a semantic cache, catching variations like:
-- "BRCA-1" vs "BRCA1"
-- "breast cancer 1 gene" vs "BRCA1"
-- "TP53" vs "p53"
-**Fields:**
-
-```python
-domain: DomainSchema
-embedding_generator: EmbeddingGeneratorInterface | None
 similarity_threshold: float
 ```
 
-### `async def MedLitEntityResolver.resolve(self, mention: EntityMention, existing_storage: EntityStorageInterface) -> tuple[BaseEntity, float]`
 
-Resolves a single entity mention to a canonical or provisional entity.
+<span id="user-content-identity-serveridentityserverroutersinitpy"></span>
 
-This method implements the core resolution logic, applying a hybrid
-strategy. It prioritizes explicit canonical IDs, falls back to
-embedding-based similarity matching, and finally creates a new
-provisional entity if no match is found.
+# identity-server/identity_server/routers/__init__.py
 
-Args:
-    mention: The `EntityMention` to resolve.
-    existing_storage: The entity storage backend to query for existing
-                      entities.
+Routers sub-package for the identity server.
 
-Returns:
-    A tuple containing the resolved `BaseEntity` (which may be new or
-    existing, canonical or provisional) and a confidence score for the
-    resolution.
 
-Raises:
-    ValueError: If the mention's entity type is not defined in the
-                domain schema.
+<span id="user-content-identity-serveridentityserverroutersdumppy"></span>
 
-### `async def MedLitEntityResolver.resolve_batch(self, mentions: Sequence[EntityMention], existing_storage: EntityStorageInterface) -> list[tuple[BaseEntity, float]]`
+# identity-server/identity_server/routers/dump.py
 
-Resolves a sequence of entity mentions.
+Export and import endpoints for identity server state serialization.
 
-This method currently resolves mentions sequentially by calling `resolve`
-for each one. It is designed to be a placeholder for a future, more
-optimized implementation that could batch database lookups or API calls.
+Provides a simple dump/load mechanism for development and deployment workflows,
+equivalent to ``pg_dump``/``pg_restore`` but scoped to just the entity table
+and expressed as line-delimited JSON (NDJSON) for portability and diffability.
 
-Args:
-    mentions: A sequence of `EntityMention` objects to resolve.
-    existing_storage: The entity storage backend, passed to `resolve`.
+Endpoints
+---------
+GET  /dump         Stream all entity rows as NDJSON.
+POST /load         Load NDJSON entity rows, skipping rows that already exist.
+DELETE /wipe       Delete all entity rows (dev only; requires confirmation header).
 
-Returns:
-    A list of (entity, confidence) tuples, with each tuple
-    corresponding to an input mention in the same order.
+> Export and import endpoints for identity server state serialization.
 
-### `def MedLitEntityResolver._parse_canonical_id(self, entity_id: str, entity_type: str) -> dict[str, str]`
+Provides a simple dump/load mechanism for development and deployment workflows,
+equivalent to ``pg_dump``/``pg_restore`` but scoped to just the entity table
+and expressed as line-delimited JSON (NDJSON) for portability and diffability.
 
-Parses a canonical ID string into a structured dictionary.
+Endpoints
+---------
+GET  /dump         Stream all entity rows as NDJSON.
+POST /load         Load NDJSON entity rows, skipping rows that already exist.
+DELETE /wipe       Delete all entity rows (dev only; requires confirmation header).
 
-This utility function takes a raw ID string (e.g., "HGNC:1100") and
-converts it into a `canonical_ids` dictionary (e.g.,
-`{"hgnc": "HGNC:1100"}`). It handles both prefixed IDs and attempts to
-infer the authority for non-prefixed IDs based on the entity type.
 
-Args:
-    entity_id: The canonical ID string to parse.
-    entity_type: The entity's type, used to infer the authority for
-                 non-prefixed IDs.
+### `def _entities_to_ndjson(session: Session) -> bytes`
 
-Returns:
-    A dictionary mapping the authority name (e.g., "hgnc") to the
-    full canonical ID.
+Return all entity rows serialised as NDJSON bytes, ordered by entity_id.
 
+### `def dump(session: Session = Depends(get_session)) -> StreamingResponse`
 
-<span id="user-content-examplesmedlitpipelineutilspy"></span>
+Export all entity rows as NDJSON.
 
-# examples/medlit/pipeline/utils.py
+### `async def load(request: Request, session: Session = Depends(get_session)) -> dict`
 
-Shared utilities for medlit pipeline.
+Load NDJSON entity rows, skipping existing entity_ids.
 
-### `def canonicalize_symmetric(subject_id: str, object_id: str) -> tuple[str, str]`
+### `def wipe(session: Session = Depends(get_session), x_confirm_wipe: str = Header(default='')) -> dict`
 
-Return (min, max) of subject and object for deterministic symmetric edge storage.
+Delete all entity rows. Requires X-Confirm-Wipe: yes header.
 
-Used by dedup so symmetric predicates (e.g. ASSOCIATED_WITH) produce
-identical (subject, object_id) regardless of order.
 
+<span id="user-content-identity-serveridentityserverroutersidentitypy"></span>
 
-<span id="user-content-examplesmedlitpromotionpy"></span>
+# identity-server/identity_server/routers/identity.py
 
-# examples/medlit/promotion.py
+FastAPI router implementing the identity server HTTP endpoints.
 
-Promotion policy for medical literature domain.
+Each endpoint creates a ``PostgresIdentityServer`` instance with the
+injected session and domain client, calls the appropriate method, and
+returns the result.
 
-Promotes provisional entities to canonical status when they have authoritative
-identifiers (UMLS, HGNC, RxNorm, UniProt) or meet usage/confidence thresholds.
+Endpoints
+---------
+POST /resolve          Resolve a mention to a canonical or provisional entity ID.
+POST /promote          Attempt to promote a provisional entity to canonical status.
+POST /find-synonyms    Detect entities synonymous with the given entity.
+POST /merge            Merge a set of entities into a single survivor.
+POST /on-entity-added  Event hook: trigger synonym detection after an entity insert.
 
-> Promotion policy for medical literature domain.
+> FastAPI router implementing the identity server HTTP endpoints.
 
-Promotes provisional entities to canonical status when they have authoritative
-identifiers (UMLS, HGNC, RxNorm, UniProt) or meet usage/confidence thresholds.
+Each endpoint creates a ``PostgresIdentityServer`` instance with the
+injected session and domain client, calls the appropriate method, and
+returns the result.
 
+Endpoints
+---------
+POST /resolve          Resolve a mention to a canonical or provisional entity ID.
+POST /promote          Attempt to promote a provisional entity to canonical status.
+POST /find-synonyms    Detect entities synonymous with the given entity.
+POST /merge            Merge a set of entities into a single survivor.
+POST /on-entity-added  Event hook: trigger synonym detection after an entity insert.
 
-## `class MedLitPromotionPolicy(PromotionPolicy)`
 
-Promotion policy for medical literature domain.
+### `def get_domain_client() -> DomainClient`
 
-Assigns canonical IDs based on authoritative medical ontologies:
-- Diseases: UMLS IDs (e.g., "C0006142")
-- Genes: HGNC IDs (e.g., "HGNC:1100")
-- Drugs: RxNorm IDs (e.g., "RxNorm:1187832")
-- Proteins: UniProt IDs (e.g., "UniProt:P38398")
+FastAPI dependency that provides a ``DomainClient`` instance.
 
-Promotion strategy:
-1. If entity already has canonical_id in canonical_ids dict, use that
-2. If entity_id is already a canonical ID format, use it directly
-3. Otherwise, look up canonical ID from authority APIs (UMLS, HGNC, RxNorm, UniProt)
+### `def get_authority_cache() -> AuthorityCache`
 
-### `def MedLitPromotionPolicy.__init__(self, config, lookup: Optional[CanonicalIdLookupInterface] = None)`
+FastAPI dependency that provides a Redis-backed ``AuthorityCache``.
 
-Initialize promotion policy.
+### `def get_identity_server(session: Session = Depends(get_session), domain_client: DomainClient = Depends(get_domain_client), authority_cache: AuthorityCache = Depends(get_authority_cache)) -> PostgresIdentityServer`
 
-Args:
-    config: Promotion configuration with thresholds.
-    lookup: Optional canonical ID lookup service. If None, will create
-            a new CanonicalIdLookup instance (without UMLS API key unless set in env).
+FastAPI dependency that assembles a ``PostgresIdentityServer``.
 
-### `def MedLitPromotionPolicy.should_promote(self, entity: BaseEntity) -> bool`
+### `async def resolve(request: ResolveRequest, identity_server: PostgresIdentityServer = Depends(get_identity_server)) -> ResolveResponse`
 
-Check if entity meets promotion thresholds.
+Resolve a mention string to a canonical or provisional entity ID.
 
-Force-promote rules (bypass standard thresholds):
-- If confidence >= 0.7, ignore usage count requirement
-- If canonical ID is found (checked in run_promotion), promote regardless
+Creates a new provisional entity if no existing entity or authority match
+is found.  Idempotent: resolving the same mention twice returns the same ID.
 
-Standard thresholds:
-- usage_count >= min_usage_count (default: 1)
-- confidence >= min_confidence (default: 0.4)
-- embedding required only if require_embedding=True (default: False)
+### `async def promote(request: PromoteRequest, identity_server: PostgresIdentityServer = Depends(get_identity_server)) -> PromoteResponse`
 
-### `async def MedLitPromotionPolicy.assign_canonical_id(self, entity: BaseEntity) -> Optional[CanonicalId]`
+Attempt to promote a provisional entity to canonical status.
 
-Assign canonical ID for a provisional entity.
+Returns the canonical ID (new or pre-existing), or the survivor ID if
+the entity was already merged.  Idempotent.
 
-Args:
-    entity: The provisional entity to promote.
+### `async def find_synonyms(request: FindSynonymsRequest, identity_server: PostgresIdentityServer = Depends(get_identity_server)) -> FindSynonymsResponse`
 
-Returns:
-    CanonicalId if available, None otherwise.
+Return the IDs of entities considered synonymous with the given entity.
 
+Read-only — reports candidates without merging.  Call ``/merge`` to act
+on the results.
 
-<span id="user-content-examplesmedlitrelationshipspy"></span>
+### `async def merge(request: MergeRequest, identity_server: PostgresIdentityServer = Depends(get_identity_server)) -> MergeResponse`
 
-# examples/medlit/relationships.py
+Merge a set of entities into a single survivor.
 
-Medical relationship types for the knowledge graph.
+All references from absorbed entities are redirected to the survivor.
+Absorbed entities are marked ``status=MERGED`` with ``merged_into`` set.
+Idempotent: already-merged entities are skipped.
 
-Following Pattern A (simple, scalable): many predicates → one relationship class.
-This allows fast implementation without class explosion, while the predicate
-still stays in the `predicate` field for clear queries.
+### `async def on_entity_added(request: OnEntityAddedRequest, identity_server: PostgresIdentityServer = Depends(get_identity_server)) -> dict`
 
-> Medical relationship types for the knowledge graph.
+Event hook called after an entity is inserted or updated.
 
-Following Pattern A (simple, scalable): many predicates → one relationship class.
-This allows fast implementation without class explosion, while the predicate
-still stays in the `predicate` field for clear queries.
+Triggers synonym detection and, if synonyms are found, calls the domain
+service to select a survivor and performs the merge automatically.
 
 
-## `class MedicalClaimRelationship(BaseRelationship)`
+<span id="user-content-identity-servertestsinitpy"></span>
 
-Base class for all medical claim relationships.
+# identity-server/tests/__init__.py
 
-This single class handles all medical predicates (treats, causes,
-increases_risk, etc.). The predicate field distinguishes the relationship
-type, and domain-specific metadata can be stored in the metadata dict.
+Identity server test suite.
 
-Mapping from med-lit-schema:
-- AssertedRelationship.subject_id → BaseRelationship.subject_id
-- AssertedRelationship.predicate → BaseRelationship.predicate
-- AssertedRelationship.object_id → BaseRelationship.object_id
-- AssertedRelationship.confidence → BaseRelationship.confidence
-- AssertedRelationship.evidence → BaseRelationship.metadata["evidence"]
-- AssertedRelationship.section → BaseRelationship.metadata["section"]
-- AssertedRelationship.metadata → BaseRelationship.metadata (merged)
 
-For multi-paper aggregation:
-- source_documents includes all paper IDs that assert this relationship
-- metadata["assertions"][paper_id] = {"evidence": "...", "section": "...", ...}
+<span id="user-content-identity-servertestsconftestpy"></span>
 
-### `def MedicalClaimRelationship.get_edge_type(self) -> str`
+# identity-server/tests/conftest.py
 
-Return edge type category.
+Shared pytest fixtures for the identity server test suite.
 
-For Pattern A, we return a generic "medical_claim" since all
-predicates use the same class. If we later split into typed classes,
-each would return its specific type.
+Fixtures provided
+-----------------
+engine
+    SQLite in-memory engine with all tables created.
+session
+    Open SQLModel Session bound to the in-memory engine.  Rolled back after
+    each test to keep tests independent.
+mock_domain_client
+    A ``DomainClient`` instance whose HTTP methods are replaced with
+    ``unittest.mock.AsyncMock`` so tests can control domain service responses
+    without a real network connection.
 
+> Shared pytest fixtures for the identity server test suite.
 
-<span id="user-content-examplesmedlitscriptsinitpy"></span>
+Fixtures provided
+-----------------
+engine
+    SQLite in-memory engine with all tables created.
+session
+    Open SQLModel Session bound to the in-memory engine.  Rolled back after
+    each test to keep tests independent.
+mock_domain_client
+    A ``DomainClient`` instance whose HTTP methods are replaced with
+    ``unittest.mock.AsyncMock`` so tests can control domain service responses
+    without a real network connection.
 
-# examples/medlit/scripts/__init__.py
 
-Scripts for medical literature ingestion.
+### `def engine_fixture()`
 
+SQLite in-memory engine with all identity server tables created.
 
-<span id="user-content-examplesmedlitscriptsparsepmcxmlpy"></span>
+StaticPool ensures all connections (including those made inside FastAPI's
+thread-pool for sync endpoints) share the same in-memory database, so
+tables created here are visible to every connection throughout the test.
 
-# examples/medlit/scripts/parse_pmc_xml.py
+### `def session_fixture(engine)`
 
-Parse PMC JATS-XML files directly to Paper schema JSON format.
+Open SQLModel Session.  Each test gets a fresh, isolated session.
 
-This script combines XML parsing and schema conversion into a single step,
-converting JATS-XML files directly to the format expected by JournalArticleParser.
+### `def mock_domain_client_fixture()`
 
-> Parse PMC JATS-XML files directly to Paper schema JSON format.
+DomainClient with all async methods replaced by AsyncMock.
 
-This script combines XML parsing and schema conversion into a single step,
-converting JATS-XML files directly to the format expected by JournalArticleParser.
+Default behaviour (can be overridden per-test):
+  - resolve_authority → None  (no canonical ID found)
+  - select_survivor   → first candidate's entity_id
+  - synonym_criteria  → 0.90
 
 
-### `def parse_pmc_xml_to_paper_schema(xml_path: Path) -> dict`
+<span id="user-content-identity-serverteststestcachepy"></span>
 
-Parse PMC XML file directly into Paper schema JSON format.
+# identity-server/tests/test_cache.py
 
-Args:
-    xml_path: Path to the PMC XML file
+Tests for AuthorityCache (identity_server/cache.py).
 
-Returns:
-    Dictionary in Paper schema format with:
-    - paper_id: PMC ID (from filename)
-    - title: Article title
-    - abstract: Dict with "text" key containing abstract
-    - full_text: Full body text (if available)
-    - authors: List of author names
-    - metadata: Dict with keywords (if available)
+Uses a mock Redis client (unittest.mock.MagicMock) so no real Redis is needed.
+Tests cover:
+  - cache miss (key not in Redis)
+  - positive hit (canonical ID dict returned)
+  - negative hit (_NEGATIVE_SENTINEL returned)
+  - put_positive stores correct JSON
+  - put_negative stores sentinel value
+  - Redis errors degrade gracefully (no exception raised)
+  - no-op when redis_client is None
 
+> Tests for AuthorityCache (identity_server/cache.py).
 
-<span id="user-content-examplesmedlitscriptspass1extractpy"></span>
+Uses a mock Redis client (unittest.mock.MagicMock) so no real Redis is needed.
+Tests cover:
+  - cache miss (key not in Redis)
+  - positive hit (canonical ID dict returned)
+  - negative hit (_NEGATIVE_SENTINEL returned)
+  - put_positive stores correct JSON
+  - put_negative stores sentinel value
+  - Redis errors degrade gracefully (no exception raised)
+  - no-op when redis_client is None
 
-# examples/medlit/scripts/pass1_extract.py
 
-Pass 1: Extract entities and relationships from papers via LLM → per-paper bundle JSON.
+### `def mock_redis()`
 
-Reads papers from --input-dir (JATS XML or JSON), calls the configured LLM once per paper,
-and writes one JSON file per paper to --output-dir. These bundles are immutable;
-Pass 2 (dedup) reads them and writes overlays or a merged graph elsewhere.
+Return a MagicMock simulating a redis.Redis sync client.
 
-Requires an LLM backend: --llm-backend anthropic | openai | ollama.
-Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or run Ollama locally. See LLM_SETUP.md.
+### `def cache(mock_redis)`
 
-Usage:
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend anthropic
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend ollama --limit 1
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --papers "PMC127*.xml,PMC128*.json"
+AuthorityCache wired to the mock Redis client.
 
-> Pass 1: Extract entities and relationships from papers via LLM → per-paper bundle JSON.
+### `def test_get_miss_returns_none(cache, mock_redis)`
 
-Reads papers from --input-dir (JATS XML or JSON), calls the configured LLM once per paper,
-and writes one JSON file per paper to --output-dir. These bundles are immutable;
-Pass 2 (dedup) reads them and writes overlays or a merged graph elsewhere.
+When Redis has no entry for the key, get() must return None.
 
-Requires an LLM backend: --llm-backend anthropic | openai | ollama.
-Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or run Ollama locally. See LLM_SETUP.md.
+### `def test_get_positive_hit_returns_dict(cache, mock_redis)`
 
-Usage:
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend anthropic
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend ollama --limit 1
-  python -m examples.medlit.scripts.pass1_extract --input-dir pmc_xmls/ --output-dir bundles/ --papers "PMC127*.xml,PMC128*.json"
+When Redis has a cached canonical ID, get() returns the parsed dict.
 
+### `def test_get_negative_hit_returns_sentinel(cache, mock_redis)`
 
-### `def _fix_evidence_paper_id(evidence_id: str, paper_id: str) -> str`
+When Redis has the negative sentinel, get() returns _NEGATIVE_SENTINEL.
 
-Replace placeholder or hallucinated paper_id in evidence ID with actual.
+### `def test_put_positive_stores_json(cache, mock_redis)`
 
-When processing paper X, the only valid paper_id in evidence is X. Replace:
-- Placeholders (PMC_UNKNOWN, paper_id, PMC11000000, etc.)
-- PMC IDs that are not the current paper (hallucinated citations)
+put_positive() serialises the canonical ID and calls Redis setex.
 
-### `def _replace_current_paper_in_bundle(obj: Any, paper_id: str) -> None`
+### `def test_put_positive_with_plain_dict(cache, mock_redis)`
 
-Recursively replace ==CURRENT_PAPER== with paper_id in dict/list/str (mutates in place).
+put_positive() works when given a plain dict (no __dict__ attribute).
 
-### `def _git_info() -> dict`
+### `def test_put_negative_stores_sentinel(cache, mock_redis)`
 
-Return git_commit, git_commit_short, git_branch, git_dirty, repo_url.
+put_negative() writes _NEGATIVE_SENTINEL to Redis.
 
-### `def build_provenance(llm_name: str, llm_version: str, prompt_version: str = 'v1', prompt_template: str = 'medlit_extraction_v1', prompt_checksum: Optional[str] = None, duration_seconds: Optional[float] = None, schema_version: Optional[str] = None) -> ExtractionProvenance`
+### `def test_get_redis_error_returns_none(cache, mock_redis)`
 
-Build extraction_provenance for Pass 1 output.
+If Redis raises an exception, get() returns None (no crash).
 
-### `def normalize_entity_type(raw_type: str, normalized_to_bundle: dict[str, str]) -> str`
+### `def test_put_positive_redis_error_silent(cache, mock_redis)`
 
-Map raw LLM type string to bundle entity_class (PascalCase). Unknown types -> 'Other'.
+If Redis raises during put_positive, no exception is propagated.
 
-### `def _default_system_prompt(vocab_entries: Optional[list[dict]] = None, domain_spec: Optional[Any] = None) -> str`
+### `def test_put_negative_redis_error_silent(cache, mock_redis)`
 
-Build system prompt from domain_spec via Jinja2 template.
+If Redis raises during put_negative, no exception is propagated.
 
-### `async def _paper_content_from_parser(raw_content: bytes, content_type: str, source_uri: str) -> tuple[str, Optional[PaperInfo]]`
+### `def test_noop_cache_get_returns_none()`
 
-Extract text and minimal PaperInfo from raw content using existing parser.
+AuthorityCache with redis_client=None always returns None from get().
 
-### `async def _extract_study_design(llm: Any, content: str) -> Optional[StudyDesignMetadata]`
+### `def test_noop_cache_put_does_not_raise()`
 
-Second LLM call: extract study design from Methods/abstract. Returns None on failure.
+AuthorityCache with redis_client=None accepts put_positive and put_negative silently.
 
-### `def _paper_content_fallback(raw_content: bytes, source_uri: str) -> tuple[str, PaperInfo]`
 
-Fallback: use raw text and filename for paper id.
+<span id="user-content-identity-serverteststestcorepy"></span>
 
-### `async def run_pass1(input_dir: Path, output_dir: Path, llm_backend: str, limit: Optional[int] = None, papers: Optional[list[str]] = None, system_prompt: Optional[str] = None, vocab_file: Optional[Path] = None) -> None`
+# identity-server/tests/test_core.py
 
-Run Pass 1: for each paper in input_dir, call LLM and write bundle JSON to output_dir.
+Tests for PostgresIdentityServer (identity_server/core.py).
 
+Uses SQLite in-memory (via the session fixture from conftest.py) for
+portability — SQLModel works with SQLite for all non-Postgres-specific
+operations.  Advisory locks and ON CONFLICT are skipped/adapted in SQLite:
+  - pg_advisory_xact_lock is not available; merge tests that need it are
+    tested at the logic level with a pre-existing DB state.
+  - ON CONFLICT DO NOTHING falls back gracefully in SQLite (different syntax;
+    we test the resolve semantics instead).
 
-<span id="user-content-examplesmedlitscriptspass1avocabpy"></span>
+Tests cover:
+  - resolve creates a provisional entity when no authority match is found
+  - resolve returns the existing entity_id for a repeated mention
+  - resolve returns canonical entity_id when domain client finds a match
+  - resolve redirects through merged entities
+  - promote is a no-op on a canonical entity
+  - promote handles merged entity (returns survivor)
+  - merge marks absorbed entities as MERGED and sets merged_into
+  - merge raises ValueError when survivor_id is not in entity_ids
+  - find_synonyms returns empty list when entity has no embedding
+  - find_synonyms returns matching entities above similarity threshold
+  - on_entity_added triggers merge when synonyms are detected
 
-# examples/medlit/scripts/pass1a_vocab.py
+> Tests for PostgresIdentityServer (identity_server/core.py).
 
-Pass 1a: Fast vocabulary extraction across papers → vocab.json + seeded synonym cache.
+Uses SQLite in-memory (via the session fixture from conftest.py) for
+portability — SQLModel works with SQLite for all non-Postgres-specific
+operations.  Advisory locks and ON CONFLICT are skipped/adapted in SQLite:
+  - pg_advisory_xact_lock is not available; merge tests that need it are
+    tested at the logic level with a pre-existing DB state.
+  - ON CONFLICT DO NOTHING falls back gracefully in SQLite (different syntax;
+    we test the resolve semantics instead).
 
-Runs a cheap LLM prompt per paper (entities only, no relationships), merges results
-into a shared vocabulary, runs UMLS type validation on entities with umls_id, and
-writes vocab.json plus a Pass 2–compatible seeded_synonym_cache.json. Pass 1b and
-Pass 2 consume these for consistent names/types and dedup seeding.
+Tests cover:
+  - resolve creates a provisional entity when no authority match is found
+  - resolve returns the existing entity_id for a repeated mention
+  - resolve returns canonical entity_id when domain client finds a match
+  - resolve redirects through merged entities
+  - promote is a no-op on a canonical entity
+  - promote handles merged entity (returns survivor)
+  - merge marks absorbed entities as MERGED and sets merged_into
+  - merge raises ValueError when survivor_id is not in entity_ids
+  - find_synonyms returns empty list when entity has no embedding
+  - find_synonyms returns matching entities above similarity threshold
+  - on_entity_added triggers merge when synonyms are detected
 
-Usage:
-  python -m examples.medlit.scripts.pass1a_vocab --input-dir pmc_xmls/ --output-dir pass1_vocab --llm-backend anthropic
-  python -m examples.medlit.scripts.pass1a_vocab --input-dir pmc_xmls/ --output-dir pass1_vocab --llm-backend ollama --papers "PMC115*.xml"
 
-> Pass 1a: Fast vocabulary extraction across papers → vocab.json + seeded synonym cache.
+### `def test_cosine_similarity_identical()`
 
-Runs a cheap LLM prompt per paper (entities only, no relationships), merges results
-into a shared vocabulary, runs UMLS type validation on entities with umls_id, and
-writes vocab.json plus a Pass 2–compatible seeded_synonym_cache.json. Pass 1b and
-Pass 2 consume these for consistent names/types and dedup seeding.
+Cosine similarity of a vector with itself is 1.0.
 
-Usage:
-  python -m examples.medlit.scripts.pass1a_vocab --input-dir pmc_xmls/ --output-dir pass1_vocab --llm-backend anthropic
-  python -m examples.medlit.scripts.pass1a_vocab --input-dir pmc_xmls/ --output-dir pass1_vocab --llm-backend ollama --papers "PMC115*.xml"
+### `def test_cosine_similarity_orthogonal()`
 
+Orthogonal vectors have cosine similarity of 0.0.
 
-### `def _pass1a_system_prompt() -> str`
+### `def test_cosine_similarity_zero_vector()`
 
-Build Pass 1a system prompt from domain_spec.
+Zero vector produces 0.0 (no division by zero).
 
-### `def _vocab_key(entry: dict[str, Any]) -> tuple[str, str]`
+### `async def test_resolve_creates_provisional_entity(session, mock_domain_client)`
 
-Key for merging: (normalized name, type).
+Resolve creates a new provisional entity when no authority match is found.
 
-### `async def _paper_content(path: Path, input_dir: Path) -> tuple[str, str]`
+### `async def test_resolve_returns_existing_entity(session, mock_domain_client)`
 
-Return (content_text, paper_id) for a paper file.
+Resolving the same mention twice returns the same entity ID.
 
-### `def _merge_vocab_into(existing: list[dict[str, Any]], new_entries: list[dict[str, Any]], source_paper: str) -> None`
+### `async def test_resolve_returns_canonical_when_authority_found(session, mock_domain_client)`
 
-Merge new_entries into existing in place; same (name, type) adds source_paper to source_papers.
+When the domain client returns a canonical ID, the entity is inserted as canonical.
 
-### `def _run_umls_validation(vocab_entries: list[dict[str, Any]]) -> None`
+### `async def test_resolve_redirects_merged_entity(session, mock_domain_client)`
 
-Run UMLS type validation on entries with umls_id; update type and set umls_type_validated/umls_type_conflict.
+When the existing row is merged, resolve returns the survivor ID.
 
-### `def _vocab_to_seeded_cache(vocab_entries: list[dict[str, Any]], normalized_to_bundle: dict[str, str]) -> dict[str, list[dict[str, Any]]]`
+### `async def test_promote_noop_on_canonical(session, mock_domain_client)`
 
-Build Pass 2 synonym cache format from vocab list so lookup_entity returns canonical_id.
+Promoting a canonical entity is a no-op that returns the same ID.
 
-### `def _atomic_write_json(path: Path, data: Any) -> None`
+### `async def test_promote_merged_entity_returns_survivor(session, mock_domain_client)`
 
-Write JSON to path via temp file then rename.
+Promoting a merged entity logs a warning and returns the survivor ID.
 
-### `async def run_pass1a(input_dir: Path, output_dir: Path, llm_backend: str, papers: Optional[list[str]] = None, limit: Optional[int] = None) -> None`
+### `async def test_promote_provisional_no_authority_stays_provisional(session, mock_domain_client)`
 
-Run Pass 1a: extract vocabulary from papers, merge, validate UMLS types, write vocab + seeded cache.
+Promoting a provisional entity stays provisional when no canonical ID is returned.
 
+### `async def test_merge_marks_absorbed_entities(session, mock_domain_client)`
 
-<span id="user-content-examplesmedlitscriptspass2deduppy"></span>
+Merge marks the absorbed entity as MERGED with merged_into set to survivor.
 
-# examples/medlit/scripts/pass2_dedup.py
+### `async def test_merge_raises_when_survivor_not_in_entity_ids(session, mock_domain_client)`
 
-Pass 2: Deduplication and promotion over per-paper bundles.
+merge() raises ValueError if survivor_id is not a member of entity_ids.
 
-Reads all paper_*.json bundles from --bundle-dir (output of Pass 1), builds
-name/type index and synonym cache, resolves SAME_AS, assigns canonical IDs,
-and writes merged entities and relationships to --output-dir. Original
-bundle files are never modified.
+### `async def test_merge_single_entity_is_noop(session, mock_domain_client)`
 
-Usage:
-  python -m examples.medlit.scripts.pass2_dedup --bundle-dir pass1_bundles/ --output-dir merged/
+Merging a single entity into itself returns survivor_id immediately.
 
-> Pass 2: Deduplication and promotion over per-paper bundles.
+### `async def test_find_synonyms_empty_without_embedding(session, mock_domain_client)`
 
-Reads all paper_*.json bundles from --bundle-dir (output of Pass 1), builds
-name/type index and synonym cache, resolves SAME_AS, assigns canonical IDs,
-and writes merged entities and relationships to --output-dir. Original
-bundle files are never modified.
+find_synonyms returns an empty list when the entity has no embedding.
 
-Usage:
-  python -m examples.medlit.scripts.pass2_dedup --bundle-dir pass1_bundles/ --output-dir merged/
+### `async def test_find_synonyms_returns_similar_entities(session, mock_domain_client)`
 
+find_synonyms returns entities whose cosine similarity exceeds the threshold.
 
+### `async def test_on_entity_added_merges_synonyms(session, mock_domain_client)`
 
-<span id="user-content-examplesmedlitscriptspass3buildbundlepy"></span>
+on_entity_added triggers merge when synonym candidates are found.
 
-# examples/medlit/scripts/pass3_build_bundle.py
 
-Pass 3: Build kgbundle from medlit_merged and pass1_bundles.
+<span id="user-content-identity-serverteststestdomainclientpy"></span>
 
-Reads merged_dir (entities.json, relationships.json, id_map.json, synonym_cache.json)
-and bundles_dir (paper_*.json), writes output_dir in kgbundle format for kgserver.
+# identity-server/tests/test_domain_client.py
 
-> Pass 3: Build kgbundle from medlit_merged and pass1_bundles.
+Tests for DomainClient (identity_server/domain_client.py).
 
-Reads merged_dir (entities.json, relationships.json, id_map.json, synonym_cache.json)
-and bundles_dir (paper_*.json), writes output_dir in kgbundle format for kgserver.
+Uses httpx.MockTransport to intercept HTTP calls without a real server.
+Tests cover:
+  - successful resolve-authority with a canonical ID
+  - resolve-authority returning null canonical_id
+  - connection error degrades to None / default values
+  - successful select-survivor
+  - select-survivor connection error falls back to highest usage_count
+  - successful synonym-criteria
+  - synonym-criteria connection error falls back to 0.90
 
+> Tests for DomainClient (identity_server/domain_client.py).
 
+Uses httpx.MockTransport to intercept HTTP calls without a real server.
+Tests cover:
+  - successful resolve-authority with a canonical ID
+  - resolve-authority returning null canonical_id
+  - connection error degrades to None / default values
+  - successful select-survivor
+  - select-survivor connection error falls back to highest usage_count
+  - successful synonym-criteria
+  - synonym-criteria connection error falls back to 0.90
 
-<span id="user-content-examplesmedlittestsinitpy"></span>
 
-# examples/medlit/tests/__init__.py
+### `def _make_transport(routes: dict)`
 
-Tests for the medlit example application.
+Build an httpx.MockTransport from a dict of {url_suffix: response_body}.
 
+### `def _error_transport()`
 
-<span id="user-content-examplesmedlittestsconftestpy"></span>
+A transport that always raises a connection error.
 
-# examples/medlit/tests/conftest.py
+### `def _client_with_transport(transport) -> DomainClient`
 
-Conftest for medlit tests - imports fixtures from main conftest.
+DomainClient pre-wired with a custom transport (bypasses real HTTP).
 
+### `async def test_resolve_authority_returns_canonical_id()`
 
-<span id="user-content-examplesmedlitteststestauthoritylookuppy"></span>
+Successful resolve-authority response with a canonical ID is parsed correctly.
 
-# examples/medlit/tests/test_authority_lookup.py
+### `async def test_resolve_authority_null_canonical_id()`
 
-Tests for canonical ID authority lookup.
+When the domain service returns canonical_id=null, resolve_authority returns None.
 
-Tests the matching logic for DBPedia and other ontology lookups,
-and UMLS type validation (validate_umls_type).
+### `async def test_resolve_authority_connection_error_returns_none()`
 
-> Tests for canonical ID authority lookup.
+When the domain service is unreachable, resolve_authority degrades to None.
 
-Tests the matching logic for DBPedia and other ontology lookups,
-and UMLS type validation (validate_umls_type).
+### `async def test_select_survivor_success()`
 
+Successful select-survivor response is returned correctly.
 
-## `class TestDBPediaLabelMatching`
+### `async def test_select_survivor_connection_error_falls_back_to_highest_usage()`
 
-Test the DBPedia label matching logic.
+When domain service is unreachable, select_survivor returns highest usage_count candidate.
 
-### `def TestDBPediaLabelMatching.lookup(self)`
+### `async def test_synonym_criteria_success()`
 
-Create a CanonicalIdLookup instance for testing.
+Successful synonym-criteria response is parsed and returned.
 
-### `def TestDBPediaLabelMatching.test_exact_match(self, lookup)`
+### `async def test_synonym_criteria_connection_error_returns_default()`
 
-Exact match should succeed.
+When domain service is unreachable, synonym_criteria falls back to default threshold.
 
-### `def TestDBPediaLabelMatching.test_term_contained_in_label(self, lookup)`
 
-Term contained in label should succeed.
+<span id="user-content-identity-serverteststestdumppy"></span>
 
-### `def TestDBPediaLabelMatching.test_label_contained_in_term(self, lookup)`
+# identity-server/tests/test_dump.py
 
-Label contained in term should succeed.
+Tests for the /admin/dump, /admin/load, and /admin/wipe endpoints.
 
-### `def TestDBPediaLabelMatching.test_label_starts_with_term(self, lookup)`
+### `def client(session: Session, engine)`
 
-Label starting with term should succeed.
+TestClient with the session dependency overridden and lifespan bypassed.
 
-### `def TestDBPediaLabelMatching.test_common_prefix_singular_plural(self, lookup)`
+### `def test_dump_load_roundtrip(client, session)`
 
-Common 6-char prefix should succeed (handles singular/plural).
-
-### `def TestDBPediaLabelMatching.test_html_tags_stripped(self, lookup)`
-
-HTML bold tags should be stripped from labels.
-
-### `def TestDBPediaLabelMatching.test_case_insensitive(self, lookup)`
-
-Matching should be case-insensitive.
-
-### `def TestDBPediaLabelMatching.test_garbage_match_insect(self, lookup)`
-
-Garbage match 'HER2-enriched' → 'Insect' should fail.
-
-### `def TestDBPediaLabelMatching.test_garbage_match_animal(self, lookup)`
-
-Garbage match 'basal-like' → 'Animal' should fail.
-
-### `def TestDBPediaLabelMatching.test_unrelated_terms(self, lookup)`
-
-Completely unrelated terms should fail.
-
-### `def TestDBPediaLabelMatching.test_substring_match_allowed(self, lookup)`
-
-Substring matching is allowed (term in label).
-
-### `def TestDBPediaLabelMatching.test_no_overlap_fails(self, lookup)`
-
-Terms with no overlap should fail.
-
-## `class TestMeSHTermNormalization`
-
-Test MeSH term normalization (cancer → neoplasms).
-
-### `def TestMeSHTermNormalization.lookup(self)`
-
-Create a CanonicalIdLookup instance for testing.
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction(self, lookup)`
-
-Test extracting MeSH ID from API results.
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction_word_order(self, lookup)`
-
-Test MeSH extraction handles word order differences.
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction_no_match(self, lookup)`
-
-Test MeSH extraction returns None for no match.
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction_empty_data(self, lookup)`
-
-Test MeSH extraction handles empty data.
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction_prefers_general_over_complication(self, lookup)`
-
-Test that general terms are preferred over complications.
-
-"breast cancer" should match "Breast Neoplasms" (D001943)
-rather than "Breast Cancer Lymphedema" (D000072656).
-
-### `def TestMeSHTermNormalization.test_mesh_id_extraction_exact_match_priority(self, lookup)`
-
-Test that exact matches get highest priority.
-
-## `class TestValidateUmlsType`
-
-Test validate_umls_type with injected semantic type mapping (no live API).
-
-### `def TestValidateUmlsType.test_cortisol_gene_misclassified_returns_correction(self)`
-
-Cortisol (C0020268) as hormone/drug; assigned type 'gene' should return (False, correct_type).
-
-### `def TestValidateUmlsType.test_pasireotide_drug_compatible_returns_ok(self)`
-
-Pasireotide (or any CUI) mapped to Pharmacologic Substance with type drug returns (True, None).
-
-### `def TestValidateUmlsType.test_unknown_cui_returns_ok_no_correction(self)`
-
-Unknown CUI (not in override, or empty override) returns (True, None).
-
-### `def TestValidateUmlsType.test_cache_reused(self)`
-
-Results are cached when _cache dict is passed; second call does not recompute.
-
-### `def TestValidateUmlsType.test_ambiguous_multiple_allowed_returns_false_none(self)`
-
-When UMLS maps to multiple allowed types (e.g. drug or biomarker), return (False, None).
-
-
-<span id="user-content-examplesmedlitteststestdeduppy"></span>
-
-# examples/medlit/tests/test_dedup.py
-
-Tests for Pass 2 dedup: synonym indexing, namespace normalization, reconciliation.
-
-### `def test_synonym_indexing_merges_name_to_synonym(tmp_path)`
-
-Entity A has synonym X; entity B has name X (same class) -> merge to one canonical.
-
-### `def test_synonym_indexing_does_not_merge_different_classes(tmp_path)`
-
-Same name/synonym but different entity_class -> do not merge.
-
-### `def test_spelling_normalization_merges_hyperglycaemia_hyperglycemia(tmp_path)`
-
-British/American spelling variants (hyperglycaemia/hyperglycemia) merge to one canonical.
-
-### `def test_preferred_authoritative_id_prefers_hgnc_for_gene()`
-
-When Gene has both umls_id and hgnc_id, prefer hgnc_id.
-
-### `def test_preferred_authoritative_id_returns_umls_when_only_umls()`
-
-When Gene has only umls_id, return umls_id (no lookup without lookup object).
-
-### `def test_is_authoritative_id()`
-
-_is_authoritative_id correctly identifies authoritative vs prov- slugs.
-
-### `def test_canonical_id_slug_format()`
-
-_canonical_id_slug produces prov- prefixed hex.
-
-
-<span id="user-content-examplesmedlitteststestentitynormalizationpy"></span>
-
-# examples/medlit/tests/test_entity_normalization.py
-
-Tests for entity type normalization in MedLitEntityExtractor.
-
-Tests the _normalize_entity_type() method which handles:
-- Pipe-separated types from LLM output
-- Common LLM mistakes (test → procedure)
-- Invalid type filtering
-
-> Tests for entity type normalization in MedLitEntityExtractor.
-
-Tests the _normalize_entity_type() method which handles:
-- Pipe-separated types from LLM output
-- Common LLM mistakes (test → procedure)
-- Invalid type filtering
-
-
-## `class TestTypeNormalizationWithDomain`
-
-Test entity type normalization with domain schema validation.
-
-### `def TestTypeNormalizationWithDomain.extractor(self)`
-
-Create extractor with domain for full validation.
-
-### `def TestTypeNormalizationWithDomain.test_valid_type_passes_through(self, extractor)`
-
-Valid entity types should pass through unchanged.
-
-### `def TestTypeNormalizationWithDomain.test_case_normalization(self, extractor)`
-
-Types should be normalized to lowercase.
-
-### `def TestTypeNormalizationWithDomain.test_whitespace_stripped(self, extractor)`
-
-Whitespace should be stripped from types.
-
-### `def TestTypeNormalizationWithDomain.test_pipe_separated_takes_first_valid(self, extractor)`
-
-Pipe-separated types should return first valid type.
-
-### `def TestTypeNormalizationWithDomain.test_pipe_separated_skips_invalid(self, extractor)`
-
-Pipe-separated types should skip invalid types.
-
-### `def TestTypeNormalizationWithDomain.test_pipe_separated_all_invalid_returns_none(self, extractor)`
-
-Pipe-separated with all invalid types should return None.
-
-### `def TestTypeNormalizationWithDomain.test_common_mistake_test_to_procedure(self, extractor)`
-
-'test' should be normalized to 'procedure'.
-
-### `def TestTypeNormalizationWithDomain.test_common_mistake_diagnostic_to_procedure(self, extractor)`
-
-'diagnostic' should be normalized to 'procedure'.
-
-### `def TestTypeNormalizationWithDomain.test_common_mistake_imaging_to_procedure(self, extractor)`
-
-'imaging' should be normalized to 'procedure'.
-
-### `def TestTypeNormalizationWithDomain.test_common_mistake_assay_to_biomarker(self, extractor)`
-
-'assay' should be normalized to 'biomarker'.
-
-### `def TestTypeNormalizationWithDomain.test_common_mistake_marker_to_biomarker(self, extractor)`
-
-'marker' should be normalized to 'biomarker'.
-
-### `def TestTypeNormalizationWithDomain.test_skip_system_type(self, extractor)`
-
-'system' should be skipped (returns None).
-
-### `def TestTypeNormalizationWithDomain.test_skip_organization_type(self, extractor)`
-
-'organization' should be skipped (returns None).
-
-### `def TestTypeNormalizationWithDomain.test_invalid_type_returns_none(self, extractor)`
-
-Unknown types should return None.
-
-## `class TestTypeNormalizationWithoutDomain`
-
-Test entity type normalization without domain (basic mode).
-
-### `def TestTypeNormalizationWithoutDomain.extractor(self)`
-
-Create extractor without domain for basic normalization.
-
-### `def TestTypeNormalizationWithoutDomain.test_basic_type_passes_through(self, extractor)`
-
-Types pass through in basic mode (no validation).
-
-### `def TestTypeNormalizationWithoutDomain.test_basic_pipe_takes_first(self, extractor)`
-
-Pipe-separated takes first part in basic mode.
-
-### `def TestTypeNormalizationWithoutDomain.test_basic_mapping_applied(self, extractor)`
-
-TYPE_MAPPING is still applied in basic mode.
-
-## `class TestTypeMappingConstants`
-
-Test the TYPE_MAPPING constant has expected entries.
-
-### `def TestTypeMappingConstants.test_procedure_mappings_exist(self)`
-
-Procedure mappings should exist.
-
-### `def TestTypeMappingConstants.test_biomarker_mappings_exist(self)`
-
-Biomarker mappings should exist.
-
-### `def TestTypeMappingConstants.test_skip_mappings_exist(self)`
-
-Skip mappings (None values) should exist.
-
-## `class TestTypeMasqueradingAsName`
-
-Reject entity names that are actually type labels (e.g. LLM returns entity='disease', type='disease').
-
-### `def TestTypeMasqueradingAsName.test_name_equals_type_rejected(self)`
-
-When name equals type, treat as type masquerading as name.
-
-### `def TestTypeMasqueradingAsName.test_known_type_labels_rejected_as_name(self)`
-
-Known type labels must not be used as entity names.
-
-### `def TestTypeMasqueradingAsName.test_real_entity_names_allowed(self)`
-
-Real entity names should not be rejected.
-
-### `def TestTypeMasqueradingAsName.test_empty_name_rejected(self)`
-
-Empty or whitespace-only name is rejected.
-
-### `async def TestTypeMasqueradingAsName.test_pre_extracted_type_as_name_dropped(self)`
-
-Pre-extracted entities with name=type (e.g. name='disease', type='disease') produce no mention.
-
-
-<span id="user-content-examplesmedlitteststestnerextractorpy"></span>
-
-# examples/medlit/tests/test_ner_extractor.py
-
-Tests for NER-based entity extraction (PLAN3).
-
-## `class TestNormalizeEntityGroup`
-
-Test label normalization for NER pipeline output.
-
-## `class TestLabelMapping`
-
-Test default label -> medlit type mapping.
-
-## `class TestChunkText`
-
-Test long-document chunking.
-
-## `class TestGetDocumentText`
-
-Test document text extraction.
-
-## `class TestMedLitNEREntityExtractorWithMock`
-
-Test NER extractor with a mock pipeline (no real model load).
-
-### `def TestMedLitNEREntityExtractorWithMock.mock_pipeline(self)`
-
-Pipeline that returns fixed entities for testing.
-
-### `async def TestMedLitNEREntityExtractorWithMock.test_type_as_name_filtered_out(self, mock_pipeline)`
-
-When mock returns entity with word 'disease' (type label), it should be filtered out.
-
-## `class TestMedLitNEREntityExtractorImportError`
-
-Test that NER extractor raises clear ImportError when transformers not installed.
-
-### `def TestMedLitNEREntityExtractorImportError.test_instantiation_without_pipeline_raises_import_error_when_no_transformers(self)`
-
-When transformers is not installed, constructing without pipeline= raises ImportError.
-
-
-<span id="user-content-examplesmedlitteststestpass1extractpy"></span>
-
-# examples/medlit/tests/test_pass1_extract.py
-
-Unit tests for Pass 1 extract helpers: vocab-in-prompt and type normalization.
-
-## `class TestNormalizeEntityType`
-
-Test raw LLM type string -> bundle class (PascalCase).
-
-### `def TestNormalizeEntityType.test_biological_process_to_biological_process(self)`
-
-'biological process' (with space) normalizes to BiologicalProcess.
-
-### `def TestNormalizeEntityType.test_gene_to_gene(self)`
-
-'gene' -> Gene.
-
-### `def TestNormalizeEntityType.test_disease_lowercase(self)`
-
-'disease' -> Disease.
-
-### `def TestNormalizeEntityType.test_hormone_and_enzyme(self)`
-
-PLAN3: hormone -> Hormone, enzyme -> Enzyme.
-
-### `def TestNormalizeEntityType.test_biological_process_underscore(self)`
-
-'biological_process' -> BiologicalProcess.
-
-### `def TestNormalizeEntityType.test_unknown_maps_to_other(self)`
-
-Unknown type maps to Other.
-
-### `def TestNormalizeEntityType.test_whitespace_stripped(self)`
-
-Whitespace is stripped before mapping.
-
-## `class TestBuildSystemPromptWithVocab`
-
-Test that vocab section is appended when vocab_entries provided.
-
-### `def TestBuildSystemPromptWithVocab.test_empty_vocab_returns_base(self)`
-
-None or empty vocab returns base prompt without vocab section.
-
-### `def TestBuildSystemPromptWithVocab.test_vocab_entries_included_in_prompt(self)`
-
-Short vocab list is included in the prompt with names and types.
-
-## `class TestFixEvidencePaperId`
-
-Replace LLM placeholder paper IDs in evidence with actual paper_id.
-
-### `def TestFixEvidencePaperId.test_pmc_unknown_replaced(self)`
-
-PMC_UNKNOWN in evidence ID is replaced with actual paper_id.
-
-### `def TestFixEvidencePaperId.test_paper_id_literal_replaced(self)`
-
-'paper_id' literal is replaced.
-
-### `def TestFixEvidencePaperId.test_real_paper_id_unchanged(self)`
-
-Real paper IDs are left as-is.
-
-### `def TestFixEvidencePaperId.test_no_colon_unchanged(self)`
-
-Evidence IDs without colon are returned unchanged.
-
-### `def TestFixEvidencePaperId.test_pmc11000000_replaced(self)`
-
-PMC11000000 placeholder is replaced.
-
-### `def TestFixEvidencePaperId.test_current_paper_replaced(self)`
-
-==CURRENT_PAPER== placeholder is replaced.
-
-### `def TestFixEvidencePaperId.test_hallucinated_pmc_replaced(self)`
-
-PMC ID from citation/hallucination (not current paper) is replaced.
-
-### `def TestFixEvidencePaperId.test_current_paper_unchanged(self)`
-
-Evidence with correct current paper_id is left as-is.
-
-## `class TestReplaceCurrentPaperInBundle`
-
-Global replace of ==CURRENT_PAPER== in raw bundle before parsing.
-
-### `def TestReplaceCurrentPaperInBundle.test_replaces_in_evidence_ids(self)`
-
-==CURRENT_PAPER== in evidence_entities and relationships is replaced.
-
-### `def TestReplaceCurrentPaperInBundle.test_leaves_other_strings_unchanged(self)`
-
-Strings without ==CURRENT_PAPER== are unchanged.
-
-
-<span id="user-content-examplesmedlitteststestpass3bundlebuilderpy"></span>
-
-# examples/medlit/tests/test_pass3_bundle_builder.py
-
-Tests for Pass 3 bundle builder (medlit_merged + pass1_bundles -> kgbundle).
-
-### `def minimal_merged_dir(tmp_path)`
-
-Minimal merged dir: entities.json, relationships.json, id_map.json, synonym_cache.json.
-
-### `def minimal_bundles_dir(tmp_path)`
-
-Minimal bundles dir: one paper_*.json with one relationship and matching evidence_entity.
-
-### `def test_run_pass3_produces_bundle_files(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
-
-run_pass3 writes entities.jsonl, relationships.jsonl, evidence.jsonl, mentions.jsonl, manifest.json.
-
-### `def test_entity_row_has_usage_and_status(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
-
-EntityRow in entities.jsonl has entity_id, status, usage_count/total_mentions from bundle scan.
-
-### `def test_first_seen_section_populated_from_evidence_id(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
-
-first_seen_section is parsed from evidence_id (format paper_id:section:paragraph_idx:method).
-
-### `def test_relationship_row_includes_provenance_in_properties(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
-
-When merged relationships have provenance, Pass 3 emits it in properties.
-
-### `def test_evidence_row_relationship_key_uses_merge_keys(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
-
-EvidenceRow relationship_key uses merge keys (from id_map), not local ids.
-
-### `def test_run_pass3_raises_when_id_map_missing(tmp_path, minimal_bundles_dir)`
-
-If id_map.json is missing in merged_dir, run_pass3 raises FileNotFoundError.
-
-### `def test_load_merged_output_requires_id_map(tmp_path)`
-
-load_merged_output raises FileNotFoundError when id_map.json is missing.
-
-### `def test_load_pass1_bundles(minimal_bundles_dir)`
-
-load_pass1_bundles returns list of (paper_id, PerPaperBundle).
-
-### `def test_provenance_denylist_excludes_pmc_placeholder(tmp_path)`
-
-Entities with only PMC_PLACEHOLDER in relationships get usage_count 0, first_seen_document None.
-
-### `def test_provenance_denylist_excludes_pmc_id_not_provided(tmp_path)`
-
-Entities with only PMC_ID_NOT_PROVIDED in relationships get usage_count 0, first_seen_document None.
-
-### `def test_provenance_denylist_excludes_pmc_unknown(tmp_path)`
-
-Entities with only PMC_UNKNOWN in supporting_documents get usage_count 0.
-
-### `def test_zero_mention_orphan_dropped(tmp_path)`
-
-Entity in relationship but with no evidence_ids gets usage_count 0 and is dropped.
-
-### `def test_provenance_derived_entities_retained(tmp_path)`
-
-Paper, Author, Institution from provenance_expansion (no evidence_ids) get usage_count and are retained.
-
-### `def test_run_pass3_copies_sources_when_pmc_xmls_dir_provided(tmp_path)`
-
-When --pmc-xmls-dir is provided, copy XML files into output_dir/sources/.
-
-
-<span id="user-content-examplesmedlitteststestpromotionlookuppy"></span>
-
-# examples/medlit/tests/test_promotion_lookup.py
-
-Tests for promotion with canonical ID lookup service integration.
-
-Tests that verify the lookup parameter is correctly passed through the promotion chain:
-- run_promotion(lookup=...) → get_promotion_policy(lookup=...) → MedLitPromotionPolicy(lookup=...)
-
-> Tests for promotion with canonical ID lookup service integration.
-
-Tests that verify the lookup parameter is correctly passed through the promotion chain:
-- run_promotion(lookup=...) → get_promotion_policy(lookup=...) → MedLitPromotionPolicy(lookup=...)
-
-
-### `async def medlit_orchestrator(entity_storage: InMemoryEntityStorage, relationship_storage: InMemoryRelationshipStorage, document_storage: InMemoryDocumentStorage)`
-
-Create orchestrator with MedLit domain for promotion testing.
-
-### `def mock_lookup()`
-
-Create a mock CanonicalIdLookupInterface for testing.
-
-## `class TestPromotionLookupIntegration`
-
-Test that lookup service is passed through the promotion chain.
-
-### `async def TestPromotionLookupIntegration.test_get_promotion_policy_accepts_lookup_parameter(self, medlit_orchestrator: IngestionOrchestrator, mock_lookup: MagicMock)`
-
-get_promotion_policy accepts lookup parameter and passes it to policy.
-
-### `async def TestPromotionLookupIntegration.test_get_promotion_policy_works_without_lookup(self, medlit_orchestrator: IngestionOrchestrator)`
-
-get_promotion_policy works when lookup is None (creates new instance).
-
-### `async def TestPromotionLookupIntegration.test_run_promotion_passes_lookup_to_policy(self, medlit_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage, mock_lookup: MagicMock)`
-
-run_promotion passes lookup parameter through to get_promotion_policy.
-
-### `async def TestPromotionLookupIntegration.test_promotion_uses_provided_lookup_service(self, medlit_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage, mock_lookup: MagicMock)`
-
-Promotion uses the provided lookup service when assigning canonical IDs.
-
-
-<span id="user-content-examplesmedlitteststestprovenanceexpansionpy"></span>
-
-# examples/medlit/tests/test_provenance_expansion.py
-
-Tests for provenance expansion (Author, Institution, Paper, derived relationships).
-
-### `def test_canonicalize_symmetric() -> None`
-
-canonicalize_symmetric returns (min, max) for deterministic storage.
-
-### `def test_expand_provenance_creates_author_institution_paper() -> None`
-
-expand_provenance produces Author, Institution, Paper entities and derived relationships.
-
-### `def test_expand_provenance_described_top_two_by_relationship_count() -> None`
-
-DESCRIBED is limited to top 2 domain entities by relationship count.
-
-### `def test_expand_provenance_skips_author_institution_evidence() -> None`
-
-DESCRIBED excludes Author, Institution, Evidence; only domain entities considered.
-
-
-<span id="user-content-examplesmedlitteststesttwopassingestionpy"></span>
-
-# examples/medlit/tests/test_two_pass_ingestion.py
-
-Integration test for Pass 2 (dedup) using pre-baked fixture bundles.
-
-Uses fixture JSONs only; no live LLM calls. Pass 1 is tested separately
-(manual run or --dry-run / mocked LLM).
-
-> Integration test for Pass 2 (dedup) using pre-baked fixture bundles.
-
-Uses fixture JSONs only; no live LLM calls. Pass 1 is tested separately
-(manual run or --dry-run / mocked LLM).
-
-
-### `def fixture_bundle_dir(tmp_path)`
-
-Copy fixture bundles to a temp dir so Pass 2 can read them.
-
-### `def test_pass2_merges_same_name_class(fixture_bundle_dir, tmp_path)`
-
-Entities with same (name, class) across papers get the same canonical_id.
-
-### `def test_pass2_writes_synonym_cache(fixture_bundle_dir, tmp_path)`
-
-Pass 2 writes synonym_cache.json.
-
-### `def test_pass2_does_not_modify_input_bundles(fixture_bundle_dir, tmp_path)`
-
-Original bundle files are not modified (read-only).
-
-### `def test_pass2_writes_id_map(fixture_bundle_dir, tmp_path)`
-
-Pass 2 writes id_map.json so Pass 3 can resolve (paper_id, local_id) -> merge_key.
-
-### `def test_pass2_accumulates_relationship_sources(fixture_bundle_dir, tmp_path)`
-
-Merged relationships aggregate source_papers and evidence_ids.
-
-### `def test_pass2_accumulates_provenance_from_evidence(fixture_bundle_dir, tmp_path)`
-
-Merged relationships have provenance built from evidence_entities (section, sentence).
-
-### `def test_fixture_bundles_load(fixture_bundle_dir)`
-
-Fixture bundles are valid PerPaperBundle.
-
-### `def test_is_authoritative_id()`
-
-_is_authoritative_id returns True for ontology IDs, False for synthetic slugs.
-
-### `def test_pass2_output_has_entity_id_and_canonical_id_null_when_synthetic(fixture_bundle_dir, tmp_path)`
-
-Pass 2 output entities have entity_id (merge key) and canonical_id null when synthetic.
-
-### `def test_pass2_swaps_backwards_treats_relationship(tmp_path)`
-
-Backwards (disease, treats, drug) from Pass 1 LLM is corrected to (drug, treats, disease).
-
-### `def test_pass2_authoritative_id_from_bundle_preserved(tmp_path)`
-
-When a bundle entity has umls_id (or other authoritative ID), Pass 2 uses it as entity_id and canonical_id.
-
-
-<span id="user-content-examplesmedlitvocabpy"></span>
-
-# examples/medlit/vocab.py
-
-Vocabulary and validation for medical literature domain.
-
-Defines valid predicates and their constraints (which entity types
-can participate in which relationships).
-
-> Vocabulary and validation for medical literature domain.
-
-Defines valid predicates and their constraints (which entity types
-can participate in which relationships).
-
-
-### `def get_valid_predicates(subject_type: str, object_type: str) -> list[str]`
-
-Return predicates valid between two entity types.
-
-This implements domain-specific constraints. For example:
-- Drug → Disease: treats, prevents, contraindicated_for, side_effect
-- Gene → Disease: increases_risk, decreases_risk, associated_with
-- Gene → Protein: encodes
-- Drug → Drug: interacts_with
-- Disease → Symptom: causes
-- Disease → Procedure: diagnosed_by
-
-Args:
-    subject_type: The entity type of the relationship subject.
-    object_type: The entity type of the relationship object.
-
-Returns:
-    List of predicate names that are valid for this entity type pair.
-
-
-<span id="user-content-examplesmedlitschemainitpy"></span>
-
-# examples/medlit_schema/__init__.py
-
-Medical Literature Domain Schema for kgraph.
-
-This package provides production-ready schema definitions for medical
-literature knowledge graphs, with full provenance tracking, ontology
-integration, and evidence-based relationships.
-
-Schema version: 1.0.0
-Compatible with: kgschema >=0.2.0
-Ontologies: UMLS, HGNC, RxNorm, UniProt, ECO, OBI, STATO, SEPIO
-
-> 
-Medical Literature Domain Schema for kgraph.
-
-This package provides production-ready schema definitions for medical
-literature knowledge graphs, with full provenance tracking, ontology
-integration, and evidence-based relationships.
-
-Schema version: 1.0.0
-Compatible with: kgschema >=0.2.0
-Ontologies: UMLS, HGNC, RxNorm, UniProt, ECO, OBI, STATO, SEPIO
-
-
-
-<span id="user-content-examplesmedlitschemabasepy"></span>
-
-# examples/medlit_schema/base.py
-
-Base models for the medlit schema.
-
-## `class ModelInfo(BaseModel)`
-
-Information about the model used for extraction.
-**Fields:**
-
-```python
-name: str
-version: str
-```
-
-## `class ExtractionProvenance(BaseModel)`
-
-Complete provenance metadata for an extraction.
-
-This is the complete audit trail of how extraction was performed.
-Enables:
-- Reproducing exact extraction with same code/models/prompts
-- Comparing outputs from different pipeline versions
-- Debugging quality issues
-- Tracking pipeline evolution over time
-- Meeting reproducibility requirements for research
-
-Example queries enabled by provenance:
-- "Find all papers extracted with prompt v1 so I can re-extract with v2"
-- "Which papers were extracted with uncommitted code changes?"
-- "Compare entity extraction quality between llama3.1:70b and claude-4"
-
-Attributes:
-    extraction_pipeline: Pipeline version info
-    models: Models used, keyed by role (e.g., 'llm', 'embeddings')
-    prompt: Prompt version info
-    execution: Execution environment info
-    entity_resolution: Entity resolution details if applicable
-**Fields:**
-
-```python
-extraction_pipeline: Optional['ExtractionPipelineInfo']
-models: dict[str, ModelInfo]
-prompt: Optional['PromptInfo']
-execution: Optional['ExecutionInfo']
-entity_resolution: Optional['EntityResolutionInfo']
-model_info: Optional[ModelInfo]
-```
-
-## `class SectionType(str, Enum)`
-
-Type of section in a paper.
-
-## `class TextSpanRef(BaseModel)`
-
-A structural locator for text within a parsed document.
-
-This is a parser/segmentation address that uses structural coordinates
-(section type, paragraph index, sentence index) to locate text. It is
-distinct from TextSpan (entity.py), which is a graph entity anchor with
-precise character offsets.
-
-Use this for:
-- Intermediate parsing stages before final offsets are computed
-- Structural navigation within documents
-- Creating TextSpan entities once offsets are finalized
-
-Attributes:
-    paper_id: The ID of the paper this span belongs to.
-    section_type: The type of section (abstract, introduction, etc.).
-    paragraph_idx: Zero-based paragraph index within the section.
-    sentence_idx: Optional sentence index within the paragraph.
-    text_span: Optional text snippet for reference.
-    start_offset: Optional character offset (for when computed).
-    end_offset: Optional character offset (for when computed).
-**Fields:**
-
-```python
-paper_id: str
-section_type: SectionType
-paragraph_idx: int
-sentence_idx: Optional[int]
-text_span: Optional[str]
-start_offset: Optional[int]
-end_offset: Optional[int]
-```
-
-## `class ExtractionMethod(str, Enum)`
-
-Method used for extraction.
-
-## `class StudyType(str, Enum)`
-
-Type of study.
-
-## `class PredicateType(str, Enum)`
-
-All possible predicates (relationship types) in the medical literature knowledge graph.
-
-This enum provides type safety for relationship categorization and enables
-validation of entity-relationship compatibility.
-
-## `class EntityType(str, Enum)`
-
-All possible entity types in the knowledge graph.
-
-This enum provides type safety for entity categorization and enables
-validation of entity-relationship compatibility.
-
-## `class ClaimPredicate(BaseModel)`
-
-Describes the nature of a claim made in a paper.
-
-Examples:
-    - "Olaparib significantly improved progression-free survival" (TREATS)
-    - "BRCA1 mutations increase breast cancer risk by 5-fold" (INCREASES_RISK)
-    - "Warfarin and aspirin interact synergistically" (INTERACTS_WITH)
-
-Attributes:
-    predicate_type: The type of relationship asserted in the claim
-    description: A natural language description of the predicate as it appears in the text
-**Fields:**
-
-```python
-predicate_type: PredicateType
-description: str
-```
-
-## `class Provenance(BaseModel)`
-
-Information about the origin of a piece of data.
-
-Attributes:
-    source_type: The type of source (e.g., 'paper', 'database', 'model_extraction')
-    source_id: An identifier for the source (e.g., DOI, database record ID)
-    source_version: The version of the source, if applicable
-    notes: Additional notes about the provenance
-**Fields:**
-
-```python
-source_type: str
-source_id: str
-source_version: Optional[str]
-notes: Optional[str]
-```
-
-## `class EvidenceType(BaseModel)`
-
-The type of evidence supporting a relationship, linked to evidence ontologies.
-
-Examples:
-    - RCT: ontology_id="ECO:0007673", ontology_label="randomized controlled trial evidence"
-    - Observational: ontology_id="ECO:0000203", ontology_label="observational study evidence"
-    - Case report: ontology_id="ECO:0006016", ontology_label="case study evidence"
-
-Attributes:
-    ontology_id: Identifier from an evidence ontology (ECO, SEPIO)
-    ontology_label: Human-readable label for the ontology term
-    description: A fuller description of the evidence type
-**Fields:**
-
-```python
-ontology_id: str
-ontology_label: str
-description: Optional[str]
-```
-
-## `class EntityReference(BaseModel)`
-
-Reference to an entity in the knowledge graph.
-
-Lightweight pointer to a canonical entity (Disease, Drug, Gene, etc.)
-with the name as it appeared in this specific paper.
-
-Attributes:
-    id: Canonical entity ID
-    name: Entity name as mentioned in paper
-    type: Entity type (drug, disease, gene, protein, etc.)
-**Fields:**
-
-```python
-id: str
-name: str
-type: EntityType
-```
-
-## `class Polarity(str, Enum)`
-
-Polarity of evidence relative to a claim.
-
-## `class Edge(BaseModel)`
-
-Base edge in the knowledge graph.
-**Fields:**
-
-```python
-id: EdgeId
-subject: EntityReference
-object: EntityReference
-provenance: Provenance
-```
-
-## `class ExtractionEdge(Edge)`
-
-Edge from automated extraction.
-
-## `class ClaimEdge(Edge)`
-
-Edge representing a claim from a paper.
-
-## `class EvidenceEdge(Edge)`
-
-Edge representing evidence for a claim.
-
-## `class ExtractionPipelineInfo(BaseModel)`
-
-Information about the extraction pipeline version.
-
-Tracks the exact code version that performed entity/relationship extraction.
-Essential for reproducibility and debugging extraction quality issues.
-
-Attributes:
-    name: Pipeline name (e.g., 'ollama_langchain_ingest')
-    version: Semantic version of the pipeline
-    git_commit: Full git commit hash
-    git_commit_short: Short git commit hash (7 chars)
-    git_branch: Git branch name
-    git_dirty: Whether working directory had uncommitted changes
-    repo_url: Repository URL
-**Fields:**
-
-```python
-name: str
-version: str
-git_commit: str
-git_commit_short: str
-git_branch: str
-git_dirty: bool
-repo_url: str
-```
-
-## `class PromptInfo(BaseModel)`
-
-Information about the prompt used.
-
-Tracks prompt evolution. Critical for understanding extraction behavior changes.
-
-Attributes:
-    version: Prompt version identifier
-    template: Prompt template name
-    checksum: SHA256 of actual prompt text for exact reproduction
-    schema_version: 8-char hex hash of config (entity_types, predicates, domain_instructions)
-**Fields:**
-
-```python
-version: str
-template: str
-checksum: Optional[str]
-schema_version: Optional[str]
-```
-
-## `class ExecutionInfo(BaseModel)`
-
-Information about when and where extraction was performed.
-
-Useful for debugging issues related to specific machines or time periods.
-
-Attributes:
-    timestamp: ISO 8601 UTC timestamp
-    hostname: Hostname of machine that ran extraction
-    python_version: Python version
-    duration_seconds: Extraction duration in seconds
-**Fields:**
-
-```python
-timestamp: str
-hostname: str
-python_version: str
-duration_seconds: Optional[float]
-```
-
-## `class EntityResolutionInfo(BaseModel)`
-
-Information about entity resolution process.
-
-Tracks how entities were matched to canonical IDs. Helps identify when
-entity deduplication is working poorly.
-
-Attributes:
-    canonical_entities_matched: Number of entities matched to existing canonical IDs
-    new_entities_created: Number of new canonical entities created
-    similarity_threshold: Similarity threshold used for matching
-    embedding_model: Embedding model used for similarity
-**Fields:**
-
-```python
-canonical_entities_matched: int
-new_entities_created: int
-similarity_threshold: float
-embedding_model: str
-```
-
-## `class Measurement(BaseModel)`
-
-Quantitative measurements associated with relationships.
-
-Stores numerical data with appropriate metadata for statistical
-analysis and evidence quality assessment.
-
-Attributes:
-    value: The numerical value
-    unit: Unit of measurement (if applicable)
-    value_type: Type of measurement (effect_size, p_value, etc.)
-    p_value: Statistical significance
-    confidence_interval: 95% confidence interval
-    study_population: Description of study population
-    measurement_context: Additional context about the measurement
-
-Example:
-    >>> measurement = Measurement(
-    ...     value=0.59,
-    ...     value_type="response_rate",
-    ...     p_value=0.001,
-    ...     confidence_interval=(0.52, 0.66),
-    ...     study_population="BRCA-mutated breast cancer patients"
-    ... )
-**Fields:**
-
-```python
-value: float
-unit: Optional[str]
-value_type: str
-p_value: Optional[float]
-confidence_interval: Optional[tuple[float, float]]
-study_population: Optional[str]
-measurement_context: Optional[str]
-```
-
-
-<span id="user-content-examplesmedlitschemadocumentpy"></span>
-
-# examples/medlit_schema/document.py
-
-Medlit document definitions.
-
-
-<span id="user-content-examplesmedlitschemadomainpy"></span>
-
-# examples/medlit_schema/domain.py
-
-Domain schema for the Medical Literature domain.
-
-## `class MedlitDomain(DomainSchema)`
-
-Domain schema for medical literature.
-
-
-<span id="user-content-examplesmedlitschemaentitypy"></span>
-
-# examples/medlit_schema/entity.py
-
-Medlit entity definitions.
-
-## `class BaseMedicalEntity(BaseEntity)`
-
-Base for all medical entities.
-**Fields:**
-
-```python
-name: str
-synonyms: tuple[str, ...]
-abbreviations: List[str]
-embedding: Optional[tuple[float, ...]]
-source: Literal['umls', 'mesh', 'rxnorm', 'hgnc', 'uniprot', 'extracted']
-```
-
-## `class Disease(BaseMedicalEntity)`
-
-Represents medical conditions, disorders, and syndromes.
-
-Uses UMLS as the primary identifier system with additional mappings to
-MeSH and ICD-10 for interoperability with clinical systems.
-
-Attributes:
-    umls_id: UMLS Concept ID (e.g., "C0006142" for Breast Cancer)
-    mesh_id: Medical Subject Heading ID for literature indexing
-    icd10_codes: List of ICD-10 diagnostic codes
-    category: Disease classification (genetic, infectious, autoimmune, etc.)
-
-Example:
-    >>> breast_cancer = Disease(
-    ...     entity_id="C0006142",
-    ...     name="Breast Cancer",
-    ...     synonyms=("Breast Carcinoma", "Mammary Cancer"),
-    ...     umls_id="C0006142",
-    ...     mesh_id="D001943",
-    ...     icd10_codes=["C50.9"],
-    ...     category="genetic",
-    ...     source="umls"
-    ... )
-**Fields:**
-
-```python
-umls_id: Optional[str]
-mesh_id: Optional[str]
-icd10_codes: List[str]
-category: Optional[str]
-```
-
-## `class Gene(BaseMedicalEntity)`
-
-Represents human genes.
-
-Uses HGNC (HUGO Gene Nomenclature Committee) as the primary identifier
-with additional mappings to Entrez Gene for cross-reference.
-
-Attributes:
-    symbol: Official gene symbol (e.g., "BRCA1")
-    hgnc_id: HGNC identifier (e.g., "HGNC:1100")
-    chromosome: Chromosomal location (e.g., "17q21.31")
-    entrez_id: NCBI Entrez Gene ID
-
-Example:
-    >>> brca1 = Gene(
-    ...     entity_id="HGNC:1100",
-    ...     name="BRCA1",
-    ...     symbol="BRCA1",
-    ...     hgnc_id="HGNC:1100",
-    ...     chromosome="17q21.31",
-    ...     entrez_id="672",
-    ...     source="hgnc"
-    ... )
-**Fields:**
-
-```python
-symbol: Optional[str]
-hgnc_id: Optional[str]
-chromosome: Optional[str]
-entrez_id: Optional[str]
-```
-
-## `class Drug(BaseMedicalEntity)`
-
-Represents pharmaceutical drugs and medications.
-
-Uses RxNorm as the primary identifier system for standardized drug names.
-
-Attributes:
-    rxnorm_id: RxNorm concept identifier (e.g., "1187832" for Olaparib)
-    brand_names: Commercial brand names (e.g., ["Lynparza"])
-    drug_class: Pharmacological class (e.g., "PARP inhibitor")
-    mechanism: Mechanism of action description
-
-Example:
-    >>> olaparib = Drug(
-    ...     entity_id="RxNorm:1187832",
-    ...     name="Olaparib",
-    ...     rxnorm_id="1187832",
-    ...     brand_names=["Lynparza"],
-    ...     drug_class="PARP inhibitor",
-    ...     mechanism="Inhibits PARP enzymes",
-    ...     source="rxnorm"
-    ... )
-**Fields:**
-
-```python
-rxnorm_id: Optional[str]
-brand_names: List[str]
-drug_class: Optional[str]
-mechanism: Optional[str]
-```
-
-## `class Protein(BaseMedicalEntity)`
-
-Represents proteins and protein complexes.
-
-Uses UniProt as the primary identifier system.
-
-Attributes:
-    uniprot_id: UniProt accession (e.g., "P38398" for BRCA1 protein)
-    gene_id: Associated gene identifier
-    function: Protein function description
-    pathways: List of pathway IDs this protein participates in
-
-Example:
-    >>> brca1_protein = Protein(
-    ...     entity_id="UniProt:P38398",
-    ...     name="BRCA1",
-    ...     uniprot_id="P38398",
-    ...     gene_id="HGNC:1100",
-    ...     function="DNA repair",
-    ...     pathways=["R-HSA-5685942"],
-    ...     source="uniprot"
-    ... )
-**Fields:**
-
-```python
-uniprot_id: Optional[str]
-gene_id: Optional[str]
-function: Optional[str]
-pathways: List[str]
-```
-
-## `class Mutation(BaseMedicalEntity)`
-
-Represents genetic mutations and variants.
-
-Attributes:
-    variant_notation: HGVS notation (e.g., "c.68_69delAG")
-    consequence: Effect of mutation (e.g., "frameshift", "missense")
-    clinical_significance: ClinVar significance (pathogenic, benign, etc.)
-
-Example:
-    >>> brca1_mutation = Mutation(
-    ...     entity_id="BRCA1_c.68_69delAG",
-    ...     name="BRCA1 c.68_69delAG",
-    ...     variant_notation="c.68_69delAG",
-    ...     consequence="frameshift",
-    ...     clinical_significance="pathogenic",
-    ...     source="extracted"
-    ... )
-**Fields:**
-
-```python
-variant_notation: Optional[str]
-consequence: Optional[str]
-clinical_significance: Optional[str]
-```
-
-## `class Symptom(BaseMedicalEntity)`
-
-Represents clinical signs and symptoms.
-
-Attributes:
-    severity_scale: Measurement scale if applicable (e.g., "0-10", "mild/moderate/severe")
-    onset_pattern: Typical onset (acute, chronic, intermittent)
-
-Example:
-    >>> pain = Symptom(
-    ...     entity_id="C0030193",
-    ...     name="Pain",
-    ...     umls_id="C0030193",
-    ...     severity_scale="0-10",
-    ...     onset_pattern="varies",
-    ...     source="umls"
-    ... )
-**Fields:**
-
-```python
-severity_scale: Optional[str]
-onset_pattern: Optional[str]
-```
-
-## `class Biomarker(BaseMedicalEntity)`
-
-Represents biological markers used for diagnosis or prognosis.
-
-Attributes:
-    loinc_code: LOINC code for lab tests
-    measurement_type: Type of measurement (protein, metabolite, imaging, etc.)
-    clinical_use: Primary clinical application
-
-Example:
-    >>> ca125 = Biomarker(
-    ...     entity_id="LOINC:10334-1",
-    ...     name="CA-125",
-    ...     loinc_code="10334-1",
-    ...     measurement_type="protein",
-    ...     clinical_use="ovarian cancer screening",
-    ...     source="extracted"
-    ... )
-**Fields:**
-
-```python
-loinc_code: Optional[str]
-measurement_type: Optional[str]
-clinical_use: Optional[str]
-```
-
-## `class Pathway(BaseMedicalEntity)`
-
-Represents biological pathways.
-
-Attributes:
-    kegg_id: KEGG pathway identifier
-    reactome_id: Reactome pathway identifier
-    pathway_type: Type of pathway (signaling, metabolic, etc.)
-
-Example:
-    >>> dna_repair = Pathway(
-    ...     entity_id="R-HSA-5685942",
-    ...     name="HDR through Homologous Recombination",
-    ...     reactome_id="R-HSA-5685942",
-    ...     pathway_type="DNA repair",
-    ...     source="extracted"
-    ... )
-**Fields:**
-
-```python
-kegg_id: Optional[str]
-reactome_id: Optional[str]
-pathway_type: Optional[str]
-```
-
-## `class Procedure(BaseMedicalEntity)`
-
-Represents medical tests, diagnostics, treatments.
-
-Attributes:
-    type: Procedure category (diagnostic, therapeutic, preventive)
-    invasiveness: Invasiveness level (non-invasive, minimally invasive, invasive)
-**Fields:**
-
-```python
-type: Optional[str]
-invasiveness: Optional[str]
-```
-
-## `class PaperMetadata(BaseModel)`
-
-Extended metadata about the research paper.
-
-Combines study characteristics (for evidence quality assessment) with
-bibliographic information (for citations and filtering).
-
-This is MORE than just storage - these fields enable critical queries:
-- "Show me only RCT evidence for this drug-disease relationship"
-- "What's the sample size distribution for studies on this topic?"
-- "Find papers from high-impact journals on this mutation"
-
-Attributes:
-    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
-    sample_size: Study sample size - larger = more reliable
-    study_population: Description of study population
-    primary_outcome: Primary outcome measured
-    clinical_phase: Clinical trial phase if applicable
-    mesh_terms: Medical Subject Headings - NLM's controlled vocabulary for indexing
-
-Example:
-    >>> metadata = PaperMetadata(
-    ...     study_type="rct",
-    ...     sample_size=302,
-    ...     study_population="Women with BRCA1/2-mutated metastatic breast cancer",
-    ...     primary_outcome="Progression-free survival",
-    ...     clinical_phase="III",
-    ...     mesh_terms=["Breast Neoplasms", "BRCA1 Protein", "PARP Inhibitors"]
-    ... )
-**Fields:**
-
-```python
-study_type: Optional[str]
-sample_size: Optional[int]
-study_population: Optional[str]
-primary_outcome: Optional[str]
-clinical_phase: Optional[str]
-mesh_terms: List[str]
-```
-
-## `class TextSpan(BaseEntity)`
-
-Represents a specific span of text within a document, acting as an anchor for evidence.
-
-This entity provides fine-grained provenance for assertions by linking them
-to exact locations within a source paper. It serves as a first-class entity
-that can be referenced by Evidence.
-
-TextSpan is canonical-only (not promotable) because:
-- Character offsets are stable only relative to a specific text representation
-- The combination of paper_id + section + offsets provides a natural canonical ID
-- There is no meaningful "provisional" state for a text location
-
-Note: This is distinct from TextSpanRef (base.py), which is a structural locator
-using paragraph/sentence indices for parsing stages before final offsets are computed.
-
-Attributes:
-    paper_id: The ID of the paper this text span belongs to.
-    section: The section of the paper (e.g., "abstract", "introduction", "results").
-    start_offset: The character offset where the span starts in the section content (required).
-    end_offset: The character offset where the span ends in the section content (required).
-    text_content: The actual text content of the span (optional, for convenience and caching).
-**Fields:**
-
-```python
-promotable: bool
-status: EntityStatus
-paper_id: str
-section: str
-start_offset: int
-end_offset: int
-text_content: Optional[str]
-```
-
-### `def TextSpan.end_must_be_greater_than_start(cls, v, info)`
-
-Validate that end_offset > start_offset.
-
-## `class Paper(BaseEntity)`
-
-A research paper with extracted entities, relationships, and full provenance.
-
-This is the COMPLETE representation of a paper in the knowledge graph, combining:
-
-1. Bibliographic metadata (authors, journal, identifiers)
-2. Text content (title, abstract)
-3. Study metadata (study type, sample size, etc.)
-4. Extraction provenance (how extraction was performed)
-
-Design philosophy:
-
-- Top-level fields are FREQUENTLY QUERIED (paper_id, title, authors, publication_date)
-- Nested objects group related data (paper_metadata for study info, extraction_provenance for pipeline info)
-
-Why certain fields are top-level:
-
-- paper_id: Primary key, referenced everywhere
-- title, abstract: Core content, always displayed
-- authors: Essential for citations, frequently filtered
-- publication_date: Frequently used for filtering by recency
-- journal: Frequently used for quality filtering
-
-Why other fields are nested:
-
-- paper_metadata: Study details, accessed together for evidence assessment
-- extraction_provenance: Technical details, only for debugging/reproducibility
-
-Attributes:
-    paper_id: Unique identifier - PMC ID preferred, but can be DOI or PMID
-    pmid: PubMed ID - different from PMC ID
-    doi: Digital Object Identifier
-    title: Full paper title
-    abstract: Complete abstract text
-    authors: List of author names in citation order
-    publication_date: Publication date in ISO format (YYYY-MM-DD)
-    journal: Journal name
-    paper_metadata: Extended metadata including study type, sample size, MeSH terms
-    extraction_provenance: Complete provenance of how extraction was performed
-
-Example:
-    >>> paper = Paper(
-    ...     entity_id="PMC8437152",
-    ...     paper_id="PMC8437152",
-    ...     pmid="34567890",
-    ...     doi="10.1234/nejm.2023.001",
-    ...     title="Efficacy of Olaparib in BRCA-Mutated Breast Cancer",
-    ...     abstract="Background: PARP inhibitors have shown promise...",
-    ...     authors=["Smith J", "Johnson A", "Williams K"],
-    ...     publication_date=datetime(2023, 6, 15),
-    ...     journal="New England Journal of Medicine",
-    ...     paper_metadata=PaperMetadata(
-    ...         study_type="rct",
-    ...         sample_size=302,
-    ...         mesh_terms=["Breast Neoplasms", "PARP Inhibitors"]
-    ...     )
-    ... )
-**Fields:**
-
-```python
-paper_id: str
-pmid: Optional[str]
-doi: Optional[str]
-title: Optional[str]
-abstract: Optional[str]
-authors: List[str]
-publication_date: Optional[datetime]
-journal: Optional[str]
-paper_metadata: PaperMetadata
-extraction_provenance: Optional[ExtractionProvenance]
-```
-
-## `class Author(BaseEntity)`
-
-Represents a researcher or author of scientific publications.
-
-Attributes:
-    orcid: ORCID identifier (unique researcher ID)
-    affiliations: List of institutional affiliations
-    h_index: Citation metric indicating research impact
-
-Example:
-    >>> author = Author(
-    ...     entity_id="0000-0001-2345-6789",
-    ...     name="Jane Smith",
-    ...     orcid="0000-0001-2345-6789",
-    ...     affiliations=["Harvard Medical School", "Massachusetts General Hospital"],
-    ...     h_index=45,
-    ...     source="orcid",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-orcid: Optional[str]
-affiliations: List[str]
-h_index: Optional[int]
-```
-
-## `class ClinicalTrial(BaseEntity)`
-
-Represents a clinical trial registered on ClinicalTrials.gov.
-
-Attributes:
-    nct_id: ClinicalTrials.gov identifier (e.g., "NCT01234567")
-    title: Official trial title
-    phase: Trial phase (I, II, III, IV)
-    trial_status: Current status (recruiting, completed, terminated, etc.)
-    intervention: Description of treatment being tested
-
-Example:
-    >>> trial = ClinicalTrial(
-    ...     entity_id="NCT01234567",
-    ...     name="Study of Drug X in Patients with Disease Y",
-    ...     nct_id="NCT01234567",
-    ...     title="Study of Drug X in Patients with Disease Y",
-    ...     phase="III",
-    ...     trial_status="completed",
-    ...     intervention="Drug X 100mg daily",
-    ...     source="clinicaltrials.gov",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-nct_id: Optional[str]
-title: Optional[str]
-phase: Optional[str]
-trial_status: Optional[str]
-intervention: Optional[str]
-```
-
-## `class Institution(BaseEntity)`
-
-Represents research institutions and affiliations.
-
-Attributes:
-    country: Country location
-    department: Department or division
-
-Example:
-    >>> institution = Institution(
-    ...     entity_id="INST:harvard_med",
-    ...     name="Harvard Medical School",
-    ...     country="USA",
-    ...     department="Oncology",
-    ...     source="extracted",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-country: Optional[str]
-department: Optional[str]
-```
-
-## `class Hypothesis(BaseEntity)`
-
-Represents a scientific hypothesis tracked across the literature.
-
-Uses IAO (Information Artifact Ontology) for standardized representation
-of hypotheses as information content entities. Enables tracking of
-hypothesis evolution: from proposal through testing to acceptance/refutation.
-
-Attributes:
-    iao_id: IAO identifier (typically IAO:0000018 for hypothesis)
-    sepio_id: SEPIO identifier for assertions (SEPIO:0000001)
-    proposed_by: Paper ID where hypothesis was first proposed
-    proposed_date: Date when hypothesis was first proposed
-    hypothesis_status: Current status (proposed, supported, controversial, refuted)
-    description: Natural language description of the hypothesis
-    predicts: List of entity IDs that this hypothesis predicts outcomes for
-
-Example:
-    >>> hypothesis = Hypothesis(
-    ...     entity_id="HYPOTHESIS:amyloid_cascade_alzheimers",
-    ...     name="Amyloid Cascade Hypothesis",
-    ...     iao_id="IAO:0000018",
-    ...     sepio_id="SEPIO:0000001",
-    ...     proposed_by="PMC123456",
-    ...     proposed_date="1992",
-    ...     hypothesis_status="controversial",
-    ...     description="Beta-amyloid accumulation drives Alzheimer's disease pathology",
-    ...     predicts=["C0002395"],
-    ...     source="extracted",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-iao_id: Optional[str]
-sepio_id: Optional[str]
-proposed_by: Optional[str]
-proposed_date: Optional[str]
-hypothesis_status: Optional[str]
-description: Optional[str]
-predicts: List[str]
-```
-
-## `class StudyDesign(BaseEntity)`
-
-Represents a study design or experimental protocol.
-
-Uses OBI (Ontology for Biomedical Investigations) to standardize
-study design classifications. Enables filtering by evidence quality
-based on study design.
-
-Attributes:
-    obi_id: OBI identifier for study design type
-    stato_id: STATO identifier for study design (if applicable)
-    design_type: Human-readable design type
-    description: Description of the study design
-    evidence_level: Quality level (1-5, where 1 is highest quality)
-
-Example:
-    >>> rct = StudyDesign(
-    ...     entity_id="OBI:0000008",
-    ...     name="Randomized Controlled Trial",
-    ...     obi_id="OBI:0000008",
-    ...     stato_id="STATO:0000402",
-    ...     design_type="interventional",
-    ...     evidence_level=1,
-    ...     source="obi",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-obi_id: Optional[str]
-stato_id: Optional[str]
-design_type: Optional[str]
-description: Optional[str]
-evidence_level: Optional[int]
-```
-
-## `class StatisticalMethod(BaseEntity)`
-
-Represents a statistical method or test used in analysis.
-
-Uses STATO (Statistics Ontology) to standardize statistical method
-classifications. Enables tracking of analytical approaches across studies.
-
-Attributes:
-    stato_id: STATO identifier for the statistical method
-    method_type: Category of method (hypothesis_test, regression, etc.)
-    description: Description of the method
-    assumptions: Key assumptions of the method
-
-Example:
-    >>> ttest = StatisticalMethod(
-    ...     entity_id="STATO:0000288",
-    ...     name="Student's t-test",
-    ...     stato_id="STATO:0000288",
-    ...     method_type="hypothesis_test",
-    ...     description="Parametric test comparing means of two groups",
-    ...     source="stato",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-stato_id: Optional[str]
-method_type: Optional[str]
-description: Optional[str]
-assumptions: List[str]
-```
-
-## `class EvidenceLine(BaseEntity)`
-
-Represents a line of evidence using SEPIO framework.
-
-Uses SEPIO (Scientific Evidence and Provenance Information Ontology)
-to represent structured evidence chains. Links evidence items to
-assertions they support or refute.
-
-Attributes:
-    sepio_type: SEPIO evidence line type ID
-    eco_type: ECO evidence type ID
-    assertion_id: ID of the assertion this evidence supports
-    supports_ids: List of hypothesis IDs this evidence supports
-    refutes_ids: List of hypothesis IDs this evidence refutes
-    evidence_items: List of paper IDs providing evidence
-    strength: Evidence strength classification
-    provenance_info: Provenance information
-
-Example:
-    >>> evidence = EvidenceLine(
-    ...     entity_id="EVIDENCE_LINE:olaparib_brca_001",
-    ...     name="Clinical evidence for Olaparib in BRCA-mutated breast cancer",
-    ...     sepio_type="SEPIO:0000084",
-    ...     eco_type="ECO:0007673",
-    ...     assertion_id="ASSERTION:olaparib_brca",
-    ...     supports_ids=["HYPOTHESIS:parp_inhibitor_synthetic_lethality"],
-    ...     evidence_items=["PMC999888", "PMC888777"],
-    ...     strength="strong",
-    ...     source="extracted",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-sepio_type: Optional[str]
-eco_type: Optional[str]
-assertion_id: Optional[str]
-supports_ids: List[str]
-refutes_ids: List[str]
-evidence_items: List[str]
-strength: Optional[str]
-provenance_info: Optional[str]
-```
-
-## `class Evidence(BaseEntity)`
-
-Evidence for a relationship, treated as a first-class entity.
-
-Evidence entities have immediate canonical ID promotion using format:
-{paper_id}:{section}:{paragraph}:{method}
-
-Example canonical ID: "PMC8437152:results:5:llm"
-
-This format enables:
-- Immediate promotion (no provisional state needed)
-- Efficient lookups by paper/section
-- Deduplication across extraction runs
-- Database indexing for queries like "all evidence from Section 2"
-
-Attributes:
-    entity_id: Canonical ID in format {paper_id}:{section}:{paragraph}:{method}
-    paper_id: PMC ID of source paper
-    text_span_id: Reference to TextSpan entity (for exact location)
-    confidence: Confidence score 0.0-1.0
-    extraction_method: Method used (scispacy_ner, llm, table_parser, pattern_match, manual)
-    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
-    sample_size: Number of subjects in the study
-    eco_type: ECO evidence type ID (e.g., "ECO:0007673" for RCT)
-    obi_study_design: OBI study design ID (e.g., "OBI:0000008" for RCT)
-    stato_methods: List of STATO statistical method IDs used
-
-Schema Rules:
-- entity_id MUST follow canonical ID format
-- paper_id and text_span_id MUST be non-empty
-- Evidence entities are immediately promotable (no usage threshold)
-
-Example:
-    >>> evidence = Evidence(
-    ...     entity_id="PMC999888:results:3:llm",
-    ...     name="Evidence from Olaparib RCT results",
-    ...     paper_id="PMC999888",
-    ...     text_span_id="PMC999888:results:3",
-    ...     confidence=0.92,
-    ...     extraction_method=ExtractionMethod.LLM,
-    ...     study_type=StudyType.RCT,
-    ...     sample_size=302,
-    ...     eco_type="ECO:0007673",
-    ...     obi_study_design="OBI:0000008",
-    ...     stato_methods=["STATO:0000288"],
-    ...     source="extracted",
-    ...     created_at=datetime.now()
-    ... )
-**Fields:**
-
-```python
-promotable: bool
-status: EntityStatus
-paper_id: str
-text_span_id: str
-confidence: float
-extraction_method: 'ExtractionMethod'
-study_type: 'StudyType'
-sample_size: Optional[int]
-eco_type: Optional[str]
-obi_study_design: Optional[str]
-stato_methods: List[str]
-```
-
-
-<span id="user-content-examplesmedlitschemarelationshippy"></span>
-
-# examples/medlit_schema/relationship.py
-
-Medlit relationship definitions.
-
-## `class EvidenceItem(BaseModel)`
-
-Lightweight evidence reference for relationships.
-
-Attributes:
-    paper_id: PMC ID of source paper
-    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
-    sample_size: Number of subjects in the study
-    confidence: Confidence score (0.0-1.0)
-**Fields:**
-
-```python
-paper_id: str
-study_type: str
-sample_size: Optional[int]
-confidence: float
-```
-
-## `class BaseMedicalRelationship(BaseRelationship)`
-
-Base class for all medical relationships with comprehensive provenance tracking.
-
-All medical relationships inherit from this class and include evidence-based
-provenance fields to support confidence scoring, contradiction detection,
-and temporal tracking of medical knowledge.
-
-Combines lightweight tracking (just paper IDs) with optional rich provenance
-(detailed Evidence objects) and quantitative measurements.
-
-Schema Rules:
-- Medical assertion relationships MUST have non-empty evidence_ids
-- Bibliographic relationships (AuthoredBy, Cites) do NOT require evidence
-
-Attributes:
-    subject_id: Entity ID of the subject (source node)
-    predicate: Relationship type
-    object_id: Entity ID of the object (target node)
-    evidence_ids: REQUIRED list of Evidence entity IDs (for medical assertions)
-    confidence: Confidence score (0.0-1.0) based on evidence strength
-    source_papers: List of PMC IDs supporting this relationship (lightweight)
-    evidence_count: Number of papers providing supporting evidence
-    contradicted_by: List of PMC IDs with contradicting findings
-    first_reported: Date when this relationship was first observed
-    last_updated: Date of most recent supporting evidence
-    evidence: List of detailed EvidenceItem objects (optional, for rich provenance)
-    measurements: List of quantitative measurements (optional)
-    properties: Flexible dict for relationship-specific properties
-
-Example (lightweight):
-    >>> relationship = Treats(
-    ...     subject_id="RxNorm:1187832",
-    ...     predicate="TREATS",
-    ...     object_id="C0006142",
-    ...     evidence_ids=["PMC123:results:5:llm", "PMC456:abstract:2:llm"],
-    ...     source_papers=["PMC123", "PMC456"],
-    ...     confidence=0.85,
-    ...     evidence_count=2,
-    ...     response_rate=0.59
-    ... )
-
-Example (rich provenance):
-    >>> relationship = Treats(
-    ...     subject_id="RxNorm:1187832",
-    ...     predicate="TREATS",
-    ...     object_id="C0006142",
-    ...     evidence_ids=["PMC123:results:5:rct"],
-    ...     confidence=0.85,
-    ...     evidence=[EvidenceItem(paper_id="PMC123", study_type="rct", sample_size=302)],
-    ...     measurements=[Measurement(value=0.59, value_type="response_rate")],
-    ...     response_rate=0.59
-    ... )
-
-### `def BaseMedicalRelationship.evidence_required_for_medical_assertions(cls, v)`
-
-Medical assertion relationships must include evidence.
-
-This validator is overridden in non-medical relationship classes
-(like ResearchRelationship) that don't require evidence.
-
-## `class Treats(BaseMedicalRelationship)`
-
-Represents a therapeutic relationship between a drug and a disease.
-
-Direction: Drug → Disease
-
-Attributes:
-    efficacy: Effectiveness measure or description
-    response_rate: Percentage of patients responding (0.0-1.0)
-    line_of_therapy: Treatment sequence (first-line, second-line, etc.)
-    indication: Specific approved use or condition
-
-Example:
-    >>> treats = Treats(
-    ...     subject_id="RxNorm:1187832",  # Olaparib
-    ...     object_id="C0006142",  # Breast Cancer
-    ...     predicate="TREATS",
-    ...     evidence_ids=["PMC999:results:5:rct", "PMC888:abstract:2:rct"],
-    ...     efficacy="significant improvement in PFS",
-    ...     response_rate=0.59,
-    ...     line_of_therapy="second-line",
-    ...     indication="BRCA-mutated breast cancer",
-    ...     source_papers=["PMC999", "PMC888"],
-    ...     confidence=0.85
-    ... )
-
-## `class Causes(BaseMedicalRelationship)`
-
-Represents a causal relationship between a disease and a symptom.
-
-Direction: Disease → Symptom (or Gene/Mutation → Disease)
-
-Attributes:
-    frequency: How often the symptom occurs (always, often, sometimes, rarely)
-    onset: When the symptom typically appears (early, late)
-    severity: Typical severity of the symptom (mild, moderate, severe)
-
-Example:
-    >>> causes = Causes(
-    ...     subject_id="C0006142",  # Breast Cancer
-    ...     object_id="C0030193",  # Pain
-    ...     predicate="CAUSES",
-    ...     evidence_ids=["PMC123:results:3:llm"],
-    ...     frequency="often",
-    ...     onset="late",
-    ...     severity="moderate",
-    ...     source_papers=["PMC123"],
-    ...     confidence=0.75
-    ... )
-
-## `class Prevents(BaseMedicalRelationship)`
-
-Drug prevents disease relationship.
-
-Direction: Drug → Disease
-
-Attributes:
-    efficacy: Effectiveness measure or description
-    risk_reduction: Risk reduction percentage (0.0-1.0)
-
-## `class IncreasesRisk(BaseMedicalRelationship)`
-
-Represents genetic risk factors for diseases.
-
-Direction: Gene/Mutation → Disease
-
-Attributes:
-    risk_ratio: Numeric risk increase (e.g., 2.5 means 2.5x higher risk)
-    penetrance: Percentage who develop condition (0.0-1.0)
-    age_of_onset: Typical age when disease manifests
-    population: Studied population or ethnic group
-
-Example:
-    >>> risk = IncreasesRisk(
-    ...     subject_id="HGNC:1100",  # BRCA1
-    ...     object_id="C0006142",  # Breast Cancer
-    ...     predicate="INCREASES_RISK",
-    ...     evidence_ids=["PMC123:results:7:llm", "PMC456:discussion:2:llm"],
-    ...     risk_ratio=5.0,
-    ...     penetrance=0.72,
-    ...     age_of_onset="40-50 years",
-    ...     population="Ashkenazi Jewish",
-    ...     source_papers=["PMC123", "PMC456"],
-    ...     confidence=0.92
-    ... )
-
-## `class SideEffect(BaseMedicalRelationship)`
-
-Represents adverse effects of medications.
-
-Direction: Drug → Symptom
-
-Attributes:
-    frequency: How often it occurs (common, uncommon, rare)
-    severity: Severity level (mild, moderate, severe)
-    reversible: Whether the side effect resolves after stopping the drug
-
-Example:
-    >>> side_effect = SideEffect(
-    ...     subject_id="RxNorm:1187832",  # Olaparib
-    ...     object_id="C0027497",  # Nausea
-    ...     predicate="SIDE_EFFECT",
-    ...     evidence_ids=["PMC999:results:8:llm"],
-    ...     frequency="common",
-    ...     severity="mild",
-    ...     reversible=True,
-    ...     source_papers=["PMC999"],
-    ...     confidence=0.75
-    ... )
-
-## `class AssociatedWith(BaseMedicalRelationship)`
-
-Represents a general association between entities.
-
-This is used for relationships where causality is not established but
-statistical association exists.
-
-Valid directions:
-    - Disease → Disease (comorbidities)
-    - Gene → Disease
-    - Biomarker → Disease
-
-Attributes:
-    association_type: Nature of association (positive, negative, neutral)
-    strength: Association strength (strong, moderate, weak)
-    statistical_significance: p-value from statistical tests
-
-Example:
-    >>> assoc = AssociatedWith(
-    ...     subject_id="C0011849",  # Diabetes
-    ...     object_id="C0020538",  # Hypertension
-    ...     predicate="ASSOCIATED_WITH",
-    ...     evidence_ids=["PMC111:results:4:llm"],
-    ...     association_type="positive",
-    ...     strength="strong",
-    ...     statistical_significance=0.001,
-    ...     source_papers=["PMC111"],
-    ...     confidence=0.80
-    ... )
-
-## `class InteractsWith(BaseMedicalRelationship)`
-
-Represents drug-drug interactions.
-
-Direction: Drug ↔ Drug (bidirectional)
-
-Attributes:
-    interaction_type: Nature of interaction (synergistic, antagonistic, additive)
-    severity: Clinical severity (major, moderate, minor)
-    mechanism: Pharmacological mechanism of interaction
-    clinical_significance: Description of clinical implications
-
-Example:
-    >>> interaction = InteractsWith(
-    ...     subject_id="RxNorm:123",  # Warfarin
-    ...     object_id="RxNorm:456",  # Aspirin
-    ...     predicate="INTERACTS_WITH",
-    ...     evidence_ids=["PMC789:discussion:3:llm"],
-    ...     interaction_type="synergistic",
-    ...     severity="major",
-    ...     mechanism="Additive anticoagulant effect",
-    ...     clinical_significance="Increased bleeding risk",
-    ...     source_papers=["PMC789"],
-    ...     confidence=0.90
-    ... )
-
-## `class ContraindicatedFor(BaseMedicalRelationship)`
-
-Drug -[CONTRAINDICATED_FOR]-> Disease/Condition
-
-Attributes:
-    severity: Contraindication severity (absolute, relative)
-    reason: Why contraindicated
-
-## `class DiagnosedBy(BaseMedicalRelationship)`
-
-Represents diagnostic tests or biomarkers used to diagnose a disease.
-
-Direction: Disease → Procedure/Biomarker
-
-Attributes:
-    sensitivity: True positive rate (0.0-1.0)
-    specificity: True negative rate (0.0-1.0)
-    standard_of_care: Whether this is standard clinical practice
-
-Example:
-    >>> diagnosis = DiagnosedBy(
-    ...     subject_id="C0006142",  # Breast Cancer
-    ...     object_id="LOINC:123",  # Mammography
-    ...     predicate="DIAGNOSED_BY",
-    ...     evidence_ids=["PMC555:methods:2:llm"],
-    ...     sensitivity=0.87,
-    ...     specificity=0.91,
-    ...     standard_of_care=True,
-    ...     source_papers=["PMC555"],
-    ...     confidence=0.88
-    ... )
-
-## `class ParticipatesIn(BaseMedicalRelationship)`
-
-Gene/Protein -[PARTICIPATES_IN]-> Pathway
-
-Attributes:
-    role: Function in pathway
-    regulatory_effect: Type of regulation (activates, inhibits, modulates)
-
-## `class SubtypeOf(BaseMedicalRelationship)`
-
-When one disease is a subtype of another disease
-
-## `class ResearchRelationship(BaseRelationship)`
-
-Base class for research metadata relationships.
-
-These relationships connect papers, authors, and clinical trials.
-Unlike medical relationships, they don't require provenance tracking
-since they represent bibliographic metadata rather than medical claims.
-
-Attributes:
-    subject_id: ID of the subject entity
-    predicate: Relationship type
-    object_id: ID of the object entity
-    properties: Flexible dict for relationship-specific properties
-
-## `class Cites(ResearchRelationship)`
-
-Represents a citation from one paper to another.
-
-Direction: Paper → Paper (citing → cited)
-
-Attributes:
-    context: Section where citation appears
-    sentiment: How the citation is used (supports, contradicts, mentions)
-
-## `class StudiedIn(ResearchRelationship)`
-
-Links medical entities to papers that study them.
-
-Direction: Any medical entity → Paper
-
-Attributes:
-    role: Importance in the paper (primary_focus, secondary_finding, mentioned)
-    section: Where discussed (results, methods, discussion, introduction)
-
-## `class AuthoredBy(ResearchRelationship)`
-
-Paper -[AUTHORED_BY]-> Author
-
-Attributes:
-    position: Author position (first, last, corresponding, middle)
-
-## `class PartOf(ResearchRelationship)`
-
-Paper -[PART_OF]-> ClinicalTrial
-
-Attributes:
-    publication_type: Type of publication (protocol, results, analysis)
-
-## `class SameAs(ResearchRelationship)`
-
-Provisional identity link between two entities.
-
-Not a BaseMedicalRelationship — no evidence_ids required.
-Direction: conventionally lower bundle ID → higher bundle ID.
-
-Attributes:
-    confidence: Strength of identity claim (0.0-1.0)
-    resolution: Outcome after review ("merged", "distinct", null = unreviewed)
-    note: Free text explaining the ambiguity
-
-## `class Indicates(BaseMedicalRelationship)`
-
-Biomarker or test result indicates disease or condition.
-
-Direction: Biomarker / Evidence → Disease
-
-## `class Predicts(BaseMedicalRelationship)`
-
-Represents a hypothesis predicting an observable outcome.
-
-Direction: Hypothesis → Entity (Disease, Outcome, etc.)
-
-Attributes:
-    prediction_type: Nature of prediction (positive, negative, conditional)
-    conditions: Conditions under which prediction holds
-    testable: Whether the prediction is empirically testable
-
-## `class Refutes(BaseMedicalRelationship)`
-
-Represents evidence that refutes a hypothesis.
-
-Direction: Evidence/Paper → Hypothesis
-
-Attributes:
-    refutation_strength: Strength of refutation (strong, moderate, weak)
-    alternative_explanation: Alternative explanation for observations
-    limitations: Limitations of the refuting evidence
-
-## `class TestedBy(BaseMedicalRelationship)`
-
-Represents a hypothesis being tested by a study or clinical trial.
-
-Direction: Hypothesis → Paper/ClinicalTrial
-
-Attributes:
-    test_outcome: Result of the test (supported, refuted, inconclusive)
-    methodology: Study methodology used
-    study_design_id: OBI study design ID
-
-## `class Supports(BaseMedicalRelationship)`
-
-Evidence supports a hypothesis or claim.
-
-Direction: Evidence → Hypothesis
-
-Attributes:
-    support_strength: Strength of support (strong, moderate, weak)
-
-## `class Generates(BaseMedicalRelationship)`
-
-Represents a study generating evidence for analysis.
-
-Direction: ClinicalTrial/Paper → Evidence
-
-Attributes:
-    evidence_type: Type of evidence generated (experimental, observational, etc.)
-    eco_type: ECO evidence type ID
-    quality_score: Quality assessment score
-
-### `def create_relationship(predicate: str, subject_id: str, object_id: str, **kwargs) -> BaseRelationship`
-
-Factory function for creating typed relationship instances.
-
-Provides type-safe relationship creation with predicate validation.
-Returns the appropriate relationship subclass based on predicate.
-
-Args:
-    predicate: Relationship type (must match RELATIONSHIP_TYPE_MAP keys)
-    subject_id: Entity ID of the subject
-    object_id: Entity ID of the object
-    **kwargs: Relationship-specific fields (evidence_ids, confidence, etc.)
-
-Returns:
-    Typed relationship instance (Treats, Causes, Cites, etc.)
-
-Raises:
-    ValueError: If predicate is not recognized
-
-Example:
-    >>> rel = create_relationship(
-    ...     predicate="TREATS",
-    ...     subject_id="RxNorm:1187832",
-    ...     object_id="C0006142",
-    ...     evidence_ids=["PMC123:results:5:rct"],
-    ...     response_rate=0.59,
-    ...     confidence=0.85
-    ... )
-    >>> isinstance(rel, Treats)
-    True
-
-
-<span id="user-content-examplessherlockdatapy"></span>
-
-# examples/sherlock/data.py
-
-Curated list of Sherlock Holmes characters, locations, and story metadata.
-
-This module is intentionally “dumb data”:
-- It provides canonical IDs and alias lists for pattern matching.
-- Extractors use these lists to emit mentions with canonical_id_hint.
-- Resolver uses hints to create canonical entities (or provisional ones).
-
-Canonical ID scheme:
-- Characters: holmes:char:<Name>
-- Locations:  holmes:loc:<Name>
-- Stories:    holmes:story:<Name>
-
-> 
-Curated list of Sherlock Holmes characters, locations, and story metadata.
-
-This module is intentionally “dumb data”:
-- It provides canonical IDs and alias lists for pattern matching.
-- Extractors use these lists to emit mentions with canonical_id_hint.
-- Resolver uses hints to create canonical entities (or provisional ones).
-
-Canonical ID scheme:
-- Characters: holmes:char:<Name>
-- Locations:  holmes:loc:<Name>
-- Stories:    holmes:story:<Name>
-
-
-
-<span id="user-content-examplessherlockdomainpy"></span>
-
-# examples/sherlock/domain.py
-
-## `class SherlockCharacter(BaseEntity)`
-
-A character in the Sherlock Holmes stories.
-**Fields:**
-
-```python
-role: Optional[str]
-```
-
-## `class SherlockLocation(BaseEntity)`
-
-A location mentioned in the stories.
-**Fields:**
-
-```python
-location_type: Optional[str]
-```
-
-## `class SherlockStory(BaseEntity)`
-
-A story or novel in the Holmes canon.
-**Fields:**
-
-```python
-collection: Optional[str]
-publication_year: Optional[int]
-```
-
-## `class AppearsInRelationship(BaseRelationship)`
-
-Character appears in a story.
-
-## `class CoOccursWithRelationship(BaseRelationship)`
-
-Two characters co-occur within the same textual context.
-
-## `class LivesAtRelationship(BaseRelationship)`
-
-Character lives at a location.
-
-## `class AntagonistOfRelationship(BaseRelationship)`
-
-Character is an antagonist of another character.
-
-## `class AllyOfRelationship(BaseRelationship)`
-
-Character is an ally of another character.
-
-## `class SherlockDocument(BaseDocument)`
-
-A Sherlock Holmes story document.
-
-### `def SherlockDomainSchema.predicate_constraints(self) -> dict[str, PredicateConstraint]`
-
-Define predicate constraints for the Sherlock domain.
-
-### `def SherlockDomainSchema.preferred_entity(self, candidates: list[BaseEntity]) -> BaseEntity`
-
-Select the merge survivor from a set of synonym candidates.
-
-Preference order (highest wins):
-1. Canonical status over provisional
-2. Higher ``usage_count`` (more evidence)
-3. Earlier ``created_at`` (stable, long-lived entity)
-
-
-<span id="user-content-examplessherlockpipelineembeddingspy"></span>
-
-# examples/sherlock/pipeline/embeddings.py
-
-## `class SimpleEmbeddingGenerator(EmbeddingGeneratorInterface)`
-
-Deterministic hash-based embedding generator (demo only).
-
-
-<span id="user-content-examplessherlockpipelinementionspy"></span>
-
-# examples/sherlock/pipeline/mentions.py
-
-## `class SherlockEntityExtractor(EntityExtractorInterface)`
-
-Extract character, location, and story mentions using curated alias lists.
-
-
-<span id="user-content-examplessherlockpipelineparserpy"></span>
-
-# examples/sherlock/pipeline/parser.py
-
-## `class SherlockDocumentParser(DocumentParserInterface)`
-
-Parse plain text Sherlock Holmes stories into SherlockDocument objects.
-
-
-<span id="user-content-examplessherlockpipelinerelationshipspy"></span>
-
-# examples/sherlock/pipeline/relationships.py
-
-## `class SherlockRelationshipExtractor(RelationshipExtractorInterface)`
-
-Extract relationships from resolved entities + document text.
-
-Strategies:
-- appears_in: character -> story for each character seen in doc
-- co_occurs_with: character pairs co-mentioned within same paragraph
-
-
-<span id="user-content-examplessherlockpipelineresolvepy"></span>
-
-# examples/sherlock/pipeline/resolve.py
-
-## `class SherlockEntityResolver(BaseModel, EntityResolverInterface)`
-
-Resolve Sherlock entity mentions to canonical or provisional entities.
-**Fields:**
-
-```python
-domain: DomainSchema
-```
-
-
-<span id="user-content-examplessherlockpromotionpy"></span>
-
-# examples/sherlock/promotion.py
-
-Promotion policy for Sherlock Holmes domain.
-
-Promotes provisional entities to canonical status using curated DBPedia URI mappings.
-Uses the shared canonical ID helper functions for consistency with other domains.
-
-> Promotion policy for Sherlock Holmes domain.
-
-Promotes provisional entities to canonical status using curated DBPedia URI mappings.
-Uses the shared canonical ID helper functions for consistency with other domains.
-
-
-## `class SherlockPromotionPolicy(PromotionPolicy)`
-
-Promotion policy for Sherlock Holmes domain using curated DBPedia mappings.
-
-Promotion strategy:
-1. If entity already has canonical_ids dict, use that
-2. If entity_id is already a DBPedia URI, use it directly
-3. Otherwise, look up from curated mapping
-
-### `async def SherlockPromotionPolicy.assign_canonical_id(self, entity: BaseEntity) -> Optional[CanonicalId]`
-
-Assign canonical ID for a provisional entity.
-
-Args:
-    entity: The provisional entity to promote.
-
-Returns:
-    CanonicalId if available, None otherwise.
-
-
-<span id="user-content-examplessherlocksourcesgutenbergpy"></span>
-
-# examples/sherlock/sources/gutenberg.py
-
-Download Sherlock Holmes stories from Project Gutenberg.
-
-Fetches "The Adventures of Sherlock Holmes" (Gutenberg #1661) and splits
-the collection into the 12 individual stories for ingestion.
-
-Public API:
-    download_adventures(force_download: bool = False) -> list[tuple[str, str]]
-
-Returns:
-    List of (story_title, story_content) tuples.
-
-> Download Sherlock Holmes stories from Project Gutenberg.
-
-Fetches "The Adventures of Sherlock Holmes" (Gutenberg #1661) and splits
-the collection into the 12 individual stories for ingestion.
-
-Public API:
-    download_adventures(force_download: bool = False) -> list[tuple[str, str]]
-
-Returns:
-    List of (story_title, story_content) tuples.
-
-
-### `def download_adventures(force_download: bool = False) -> list[tuple[str, str]]`
-
-Download and split The Adventures of Sherlock Holmes into stories.
-
-### `def _strip_gutenberg_boilerplate(text: str) -> str`
-
-Remove Gutenberg license/header/footer so story splits are cleaner.
+Dump → wipe → load should restore the same rows.
 
 
 <span id="user-content-kgbundlekgbundleinitpy"></span>
@@ -6562,74 +3282,49 @@ Returns:
     including the number of entities and documents exported.
 
 
-<span id="user-content-kgraphloggingpy"></span>
-
-# kgraph/logging.py
-
-## `class PprintLogger`
-
-A logger wrapper that adds pprint support to standard logging methods.
-
-### `def PprintLogger._format_message(self, msg: Any, pprint: bool = True) -> str`
-
-Format a message, optionally using pprint.
-
-If the message is a Pydantic model and pprint=True, uses model_dump_json()
-to show the model's internals. Otherwise uses pformat for complex objects
-or str() for simple conversion.
-
-### `def PprintLogger.debug(self, msg: Any, *args, **kwargs) -> None`
-
-Log a debug message with optional pprint formatting.
-
-### `def PprintLogger.info(self, msg: Any, *args, **kwargs) -> None`
-
-Log an info message with optional pprint formatting.
-
-### `def PprintLogger.warning(self, msg: Any, *args, **kwargs) -> None`
-
-Log a warning message with optional pprint formatting.
-
-### `def PprintLogger.error(self, msg: Any, *args, **kwargs) -> None`
-
-Log an error message with optional pprint formatting.
-
-### `def PprintLogger.critical(self, msg: Any, *args, **kwargs) -> None`
-
-Log a critical message with optional pprint formatting.
-
-### `def PprintLogger.exception(self, msg: Any, *args, **kwargs) -> None`
-
-Log an exception message with optional pprint formatting.
-
-### `def PprintLogger.__getattr__(self, name: str) -> Any`
-
-Delegate any other attributes to the underlying logger.
-
-### `def setup_logging(level: int = logging.INFO) -> PprintLogger`
-
-Set up logging and return a PprintLogger instance.
-
-
 <span id="user-content-kgraphpipelineinitpy"></span>
 
 # kgraph/pipeline/__init__.py
 
-Pipeline interfaces for document processing and extraction.
+Public exports for extraction pipeline building blocks.
+
+This package-level module re-exports the core interfaces and commonly used
+implementations needed to assemble ingestion/extraction flows:
+
+- Base parser/extractor/resolver interfaces from ``kgraph.pipeline.interfaces``
+- Embedding interfaces and cache adapters used by resolution/promotions
+- Streaming chunking/extraction utilities for large-document processing
+
+Import from ``kgraph.pipeline`` when composing pipelines so downstream code can
+depend on a stable, centralized surface area instead of deep module paths.
+
+> Public exports for extraction pipeline building blocks.
+
+This package-level module re-exports the core interfaces and commonly used
+implementations needed to assemble ingestion/extraction flows:
+
+- Base parser/extractor/resolver interfaces from ``kgraph.pipeline.interfaces``
+- Embedding interfaces and cache adapters used by resolution/promotions
+- Streaming chunking/extraction utilities for large-document processing
+
+Import from ``kgraph.pipeline`` when composing pipelines so downstream code can
+depend on a stable, centralized surface area instead of deep module paths.
+
 
 
 <span id="user-content-kgraphpipelinecachingpy"></span>
 
 # kgraph/pipeline/caching.py
 
-Caching interfaces for embeddings and other computed artifacts.
+Caching primitives for extraction-time embedding reuse.
 
 Uses asyncio.Lock in concrete caches so that concurrent get/put/save/load
 do not corrupt in-memory state. Lock is held only around critical sections
 to avoid deadlock (e.g. get_batch calling get, put calling save).
 
-This module provides abstractions for caching expensive computations, particularly
-embeddings (semantic vectors). Caching is critical for:
+This module provides abstractions for caching expensive computations, especially
+embedding vectors generated during entity extraction and resolution. Caching is
+critical for:
 
 - **Cost reduction**: Avoiding repeated API calls to embedding providers
 - **Performance**: Eliminating redundant computation for frequently-seen entities
@@ -6658,14 +3353,15 @@ Typical usage:
     emb2 = await generator.generate("aspirin")  # Cached, no API call
     ```
 
-> Caching interfaces for embeddings and other computed artifacts.
+> Caching primitives for extraction-time embedding reuse.
 
 Uses asyncio.Lock in concrete caches so that concurrent get/put/save/load
 do not corrupt in-memory state. Lock is held only around critical sections
 to avoid deadlock (e.g. get_batch calling get, put calling save).
 
-This module provides abstractions for caching expensive computations, particularly
-embeddings (semantic vectors). Caching is critical for:
+This module provides abstractions for caching expensive computations, especially
+embedding vectors generated during entity extraction and resolution. Caching is
+critical for:
 
 - **Cost reduction**: Avoiding repeated API calls to embedding providers
 - **Performance**: Eliminating redundant computation for frequently-seen entities
@@ -7101,7 +3797,7 @@ Returns:
 
 # kgraph/pipeline/embedding.py
 
-Embedding generation interface for the knowledge graph framework.
+Embedding generation contracts used by extraction and entity resolution.
 
 This module defines the interface for generating semantic vector embeddings,
 which are dense numerical representations of text that capture meaning.
@@ -7123,7 +3819,7 @@ Implementations typically wrap embedding APIs such as:
     - Sentence Transformers (local models)
     - Domain-specific embeddings (BioBERT, LegalBERT, etc.)
 
-> Embedding generation interface for the knowledge graph framework.
+> Embedding generation contracts used by extraction and entity resolution.
 
 This module defines the interface for generating semantic vector embeddings,
 which are dense numerical representations of text that capture meaning.
@@ -7239,7 +3935,7 @@ Raises:
 
 # kgraph/pipeline/interfaces.py
 
-Pipeline interface definitions for document processing and extraction.
+Core interfaces for the two-pass extraction pipeline.
 
 This module defines the abstract interfaces for the two-pass ingestion pipeline:
 
@@ -7259,7 +3955,7 @@ Typical flow:
     3. EntityResolverInterface maps mentions to BaseEntity instances
     4. RelationshipExtractorInterface finds relationships between entities
 
-> Pipeline interface definitions for document processing and extraction.
+> Core interfaces for the two-pass extraction pipeline.
 
 This module defines the abstract interfaces for the two-pass ingestion pipeline:
 
@@ -7462,9 +4158,11 @@ Returns:
 
 # kgraph/pipeline/llm_client.py
 
-LLM client abstraction for entity and relationship extraction.
+LLM client interfaces and Ollama implementation for extraction passes.
 
-Provides a unified interface for Ollama LLM integration with tool calling support.
+This module defines the shared async contract used by extraction components that
+need model completions (plain text, structured JSON, or tool-calling flows), and
+ships the default Ollama-backed implementation used in local/offline pipelines.
 
 Rate limiting: OllamaLLMClient enforces a minimum interval between the start of any
 two contiguous requests (default 3s, configurable via LLM_MIN_REQUEST_INTERVAL_SECONDS
@@ -7472,9 +4170,11 @@ or the min_request_interval_seconds constructor arg). The throttle is process-gl
 (shared across all threads and all OllamaLLMClient instances) so the server-side rate
 limit is respected regardless of which code path or worker issues the request.
 
-> LLM client abstraction for entity and relationship extraction.
+> LLM client interfaces and Ollama implementation for extraction passes.
 
-Provides a unified interface for Ollama LLM integration with tool calling support.
+This module defines the shared async contract used by extraction components that
+need model completions (plain text, structured JSON, or tool-calling flows), and
+ships the default Ollama-backed implementation used in local/offline pipelines.
 
 Rate limiting: OllamaLLMClient enforces a minimum interval between the start of any
 two contiguous requests (default 3s, configurable via LLM_MIN_REQUEST_INTERVAL_SECONDS
@@ -7567,13 +4267,19 @@ Generate JSON with Ollama tool calling support.
 
 # kgraph/pipeline/ollama_embedding.py
 
-Ollama embedding generator.
+Ollama-backed embedding generator for extraction pipeline components.
 
-Uses Ollama's /api/embed endpoint (single or batch input).
+This module provides a concrete ``EmbeddingGeneratorInterface`` implementation
+that calls Ollama's ``/api/embed`` endpoint for both single-item and batched
+embedding generation, enabling local vectorization for entity resolution and
+similarity-driven graph operations.
 
-> Ollama embedding generator.
+> Ollama-backed embedding generator for extraction pipeline components.
 
-Uses Ollama's /api/embed endpoint (single or batch input).
+This module provides a concrete ``EmbeddingGeneratorInterface`` implementation
+that calls Ollama's ``/api/embed`` endpoint for both single-item and batched
+embedding generation, enabling local vectorization for entity resolution and
+similarity-driven graph operations.
 
 
 ## `class OllamaEmbeddingGenerator(EmbeddingGeneratorInterface)`
@@ -7610,17 +4316,25 @@ Generate embeddings for multiple texts in one request when possible.
 
 # kgraph/pipeline/pass1_llm.py
 
-LLM backend factory for Pass 1 extraction (Anthropic, OpenAI, Ollama).
+Pass 1 LLM adapters and backend factory for extraction runs.
 
-Pass 1 requires an LLM to extract entities and relationships from papers.
-Set the backend via --llm-backend or LLM_BACKEND; provide API keys via
-environment (ANTHROPIC_API_KEY, OPENAI_API_KEY) or .env. See LLM_SETUP.md.
+Pass 1 uses an LLM to produce structured JSON from paper text (entities,
+relationships, and metadata). This module centralizes backend-specific adapter
+logic (Anthropic/OpenAI/Ollama), response parsing, and runtime backend selection
+via CLI/env configuration.
 
-> LLM backend factory for Pass 1 extraction (Anthropic, OpenAI, Ollama).
+Set backend via ``--llm-backend`` or ``LLM_BACKEND``; provide API keys via
+environment (``ANTHROPIC_API_KEY``, ``OPENAI_API_KEY``) or ``.env``.
 
-Pass 1 requires an LLM to extract entities and relationships from papers.
-Set the backend via --llm-backend or LLM_BACKEND; provide API keys via
-environment (ANTHROPIC_API_KEY, OPENAI_API_KEY) or .env. See LLM_SETUP.md.
+> Pass 1 LLM adapters and backend factory for extraction runs.
+
+Pass 1 uses an LLM to produce structured JSON from paper text (entities,
+relationships, and metadata). This module centralizes backend-specific adapter
+logic (Anthropic/OpenAI/Ollama), response parsing, and runtime backend selection
+via CLI/env configuration.
+
+Set backend via ``--llm-backend`` or ``LLM_BACKEND``; provide API keys via
+environment (``ANTHROPIC_API_KEY``, ``OPENAI_API_KEY``) or ``.env``.
 
 
 ## `class Pass1LLMInterface(ABC)`
@@ -7637,6 +4351,7 @@ Extract and parse a JSON object from response text.
 
 Brace counting skips { and } inside JSON string literals so that text spans
 containing braces (e.g. "The {gene} increases risk") do not break parsing.
+Falls back to json-repair if the strict parse fails.
 
 ## `class AnthropicPass1LLM(Pass1LLMInterface)`
 
@@ -7668,7 +4383,7 @@ ollama_client: For backend "ollama", an OllamaLLMClient instance.
 
 # kgraph/pipeline/streaming.py
 
-Streaming pipeline interfaces for processing large documents.
+Streaming extraction interfaces for large-document processing.
 
 This module provides abstractions for processing documents in a streaming fashion,
 breaking them into manageable chunks (windows) that can be processed incrementally.
@@ -7700,10 +4415,10 @@ Typical usage:
     ```
 
 Based on the streaming extraction patterns from:
-    - examples/medlit/pipeline/pmc_streaming.py (plod branch)
-    - examples/medlit/pipeline/mentions.py (windowed entity extraction)
+    - medlit/medlit/pipeline/pmc_streaming.py (plod branch)
+    - medlit/medlit/pipeline/mentions.py (windowed entity extraction)
 
-> Streaming pipeline interfaces for processing large documents.
+> Streaming extraction interfaces for large-document processing.
 
 This module provides abstractions for processing documents in a streaming fashion,
 breaking them into manageable chunks (windows) that can be processed incrementally.
@@ -7735,8 +4450,8 @@ Typical usage:
     ```
 
 Based on the streaming extraction patterns from:
-    - examples/medlit/pipeline/pmc_streaming.py (plod branch)
-    - examples/medlit/pipeline/mentions.py (windowed entity extraction)
+    - medlit/medlit/pipeline/pmc_streaming.py (plod branch)
+    - medlit/medlit/pipeline/mentions.py (windowed entity extraction)
 
 
 ## `class DocumentChunk(BaseModel)`
@@ -8057,15 +4772,19 @@ Yields:
 
 # kgraph/pipeline/synonym_cache.py
 
-Synonym / identity cache for Pass 2: persist and reuse SAME_AS links across runs.
+Persistent SAME_AS cache used during Pass 2 identity reconciliation.
 
-Pass 2 loads the cache on startup and saves it at the end so that (name, type) → canonical_id
-and known SAME_AS ambiguities are reused, making Pass 2 idempotent.
+The cache stores previously observed synonym/identity decisions so repeated runs
+can reuse known ``(name, class) -> canonical_id`` matches and preserve ambiguity
+records for review. Loading at startup and saving at shutdown makes Pass 2 more
+stable, faster, and closer to idempotent across incremental ingestions.
 
-> Synonym / identity cache for Pass 2: persist and reuse SAME_AS links across runs.
+> Persistent SAME_AS cache used during Pass 2 identity reconciliation.
 
-Pass 2 loads the cache on startup and saves it at the end so that (name, type) → canonical_id
-and known SAME_AS ambiguities are reused, making Pass 2 idempotent.
+The cache stores previously observed synonym/identity decisions so repeated runs
+can reuse known ``(name, class) -> canonical_id`` matches and preserve ambiguity
+records for review. Loading at startup and saving at shutdown makes Pass 2 more
+stable, faster, and closer to idempotent across incremental ingestions.
 
 
 ### `def load_synonym_cache(path: Path) -> dict[str, list[dict[str, Any]]]`
@@ -8088,6 +4807,55 @@ Returns:
 ### `def add_same_as_to_cache(cache: dict[str, list[dict[str, Any]]], entity_a: dict[str, Any], entity_b: dict[str, Any], confidence: float, asserted_by: str, resolution: Optional[str], source_papers: list[str]) -> None`
 
 Append a SAME_AS link to the in-memory cache (indexed by normalized names).
+
+
+<span id="user-content-kgraphpprintloggingpy"></span>
+
+# kgraph/pprint_logging.py
+
+## `class PprintLogger`
+
+A logger wrapper that adds pprint support to standard logging methods.
+
+### `def PprintLogger._format_message(self, msg: Any, pprint: bool = True) -> str`
+
+Format a message, optionally using pprint.
+
+If the message is a Pydantic model and pprint=True, uses model_dump_json()
+to show the model's internals. Otherwise uses pformat for complex objects
+or str() for simple conversion.
+
+### `def PprintLogger.debug(self, msg: Any, *args, **kwargs) -> None`
+
+Log a debug message with optional pprint formatting.
+
+### `def PprintLogger.info(self, msg: Any, *args, **kwargs) -> None`
+
+Log an info message with optional pprint formatting.
+
+### `def PprintLogger.warning(self, msg: Any, *args, **kwargs) -> None`
+
+Log a warning message with optional pprint formatting.
+
+### `def PprintLogger.error(self, msg: Any, *args, **kwargs) -> None`
+
+Log an error message with optional pprint formatting.
+
+### `def PprintLogger.critical(self, msg: Any, *args, **kwargs) -> None`
+
+Log a critical message with optional pprint formatting.
+
+### `def PprintLogger.exception(self, msg: Any, *args, **kwargs) -> None`
+
+Log an exception message with optional pprint formatting.
+
+### `def PprintLogger.__getattr__(self, name: str) -> Any`
+
+Delegate any other attributes to the underlying logger.
+
+### `def setup_logging(level: int = logging.INFO) -> PprintLogger`
+
+Set up logging and return a PprintLogger instance.
 
 
 <span id="user-content-kgraphprogresspy"></span>
@@ -8962,9 +5730,9 @@ Returns:
     Full prompt string for LLM.
 
 
-<span id="user-content-kgschemainitpy"></span>
+<span id="user-content-kgschemakgschemainitpy"></span>
 
-# kgschema/__init__.py
+# kgschema/kgschema/__init__.py
 
 Knowledge Graph Schema - Base Models and Interfaces
 
@@ -8997,9 +5765,9 @@ domain implementations.
 
 
 
-<span id="user-content-kgschemacanonicalidpy"></span>
+<span id="user-content-kgschemakgschemacanonicalidpy"></span>
 
-# kgschema/canonical_id.py
+# kgschema/kgschema/canonical_id.py
 
 Canonical ID model for knowledge graph entities.
 
@@ -9037,9 +5805,9 @@ synonyms: tuple[str, ...]
 String representation of the canonical ID.
 
 
-<span id="user-content-kgschemadocumentpy"></span>
+<span id="user-content-kgschemakgschemadocumentpy"></span>
 
-# kgschema/document.py
+# kgschema/kgschema/document.py
 
 Document representation for the knowledge graph framework.
 
@@ -9141,9 +5909,9 @@ Allows domain-specific document structure. For unstructured documents,
 return a single section like [('body', self.content)].
 
 
-<span id="user-content-kgschemadomainpy"></span>
+<span id="user-content-kgschemakgschemadomainpy"></span>
 
-# kgschema/domain.py
+# kgschema/kgschema/domain.py
 
 Domain schema definition for the knowledge graph framework.
 
@@ -9540,6 +6308,27 @@ Example:
         return []  # No other combinations allowed
     ```
 
+### `def DomainSchema.normalize_mention(self, mention: str) -> str`
+
+Normalize a mention string before identity resolution.
+
+Called by the identity server before ``resolve()`` to apply
+domain-specific string normalization (e.g. spelling variants,
+case folding, abbreviation expansion).
+
+The default implementation returns the mention unchanged.
+Override in domain subclasses to apply domain-specific rules.
+
+Parameters
+----------
+mention:
+    Raw surface form of the entity mention.
+
+Returns
+-------
+str
+    Normalized mention string.
+
 ### `def DomainSchema.get_promotion_policy(self, lookup = None) -> PromotionPolicy`
 
 Return the promotion policy for this domain.
@@ -9601,9 +6390,9 @@ Returns:
     A type that is, or is a subclass of, the Provenance type
 
 
-<span id="user-content-kgschemaentitypy"></span>
+<span id="user-content-kgschemakgschemaentitypy"></span>
 
-# kgschema/entity.py
+# kgschema/kgschema/entity.py
 
 Entity system for the knowledge graph framework.
 
@@ -9792,9 +6581,9 @@ metadata: dict
 ```
 
 
-<span id="user-content-kgschemaidentitypy"></span>
+<span id="user-content-kgschemakgschemaidentitypy"></span>
 
-# kgschema/identity.py
+# kgschema/kgschema/identity.py
 
 Identity server interface for the knowledge graph framework.
 
@@ -10003,9 +6792,9 @@ context:
     Domain-defined context forwarded from the triggering operation.
 
 
-<span id="user-content-kgschemapromotionpy"></span>
+<span id="user-content-kgschemakgschemapromotionpy"></span>
 
-# kgschema/promotion.py
+# kgschema/kgschema/promotion.py
 
 Promotion policy interface for entity canonical ID assignment.
 
@@ -10036,9 +6825,9 @@ This method is async to support external API lookups.
 Returns a CanonicalId object which includes the ID, URL, and synonyms.
 
 
-<span id="user-content-kgschemarelationshippy"></span>
+<span id="user-content-kgschemakgschemarelationshippy"></span>
 
-# kgschema/relationship.py
+# kgschema/kgschema/relationship.py
 
 Relationship system for the knowledge graph framework.
 
@@ -10146,9 +6935,9 @@ Examples: 'treats', 'causes', 'interacts_with' for medical domain;
 'cites', 'overrules', 'interprets' for legal domain.
 
 
-<span id="user-content-kgschemaspecpy"></span>
+<span id="user-content-kgschemakgschemaspecpy"></span>
 
-# kgschema/spec.py
+# kgschema/kgschema/spec.py
 
 Domain spec models for entity types, predicates, evidence, and mentions.
 
@@ -10213,9 +7002,9 @@ skip_name_equals_type: bool
 ```
 
 
-<span id="user-content-kgschemastoragepy"></span>
+<span id="user-content-kgschemakgschemastoragepy"></span>
 
-# kgschema/storage.py
+# kgschema/kgschema/storage.py
 
 Storage interface definitions for the knowledge graph framework.
 
@@ -10741,135 +7530,200 @@ Returns:
     Integer count of all stored documents.
 
 
-<span id="user-content-kgserverchainlitapppy"></span>
+<span id="user-content-kgserverdomainspecpy"></span>
 
-# kgserver/chainlit/app.py
+# kgserver/domain_spec.py
 
-Medical Literature Knowledge Graph — Chainlit Chat UI
+Domain spec for medical literature extraction.
 
-Can run standalone (chainlit run app.py --host 0.0.0.0 --port 8002) or mounted
-at /chat inside the kgserver API (same port as the API, no separate port).
+Single source of truth for entity types, predicates, evidence, and mentions.
+Consumers import from this module instead of loading YAML config.
 
-Note: Excluded from mypy and pylint in lint.sh — Chainlit's dynamic decorators
-and lack of type stubs make static analysis unreliable here.
+> Domain spec for medical literature extraction.
 
-Environment variables:
-  MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
-  LLM_PROVIDER      anthropic | openai | ollama  (default: anthropic)
-  ANTHROPIC_MODEL   (default: claude-sonnet-4-6) — legacy single-tier
-  ANTHROPIC_API_KEY, ANTHROPIC_API_KEY_1, ANTHROPIC_API_KEY_2, …  (multi-key load balancing)
-  ORCHESTRATOR_MODEL  (default: claude-haiku-4-5 for anthropic, gpt-4o-mini for openai)
-  SYNTHESIS_MODEL     (default: claude-sonnet-4-6 for anthropic, gpt-4o for openai)
-  OPENAI_MODEL      (default: gpt-4o) — legacy single-tier
-  OPENAI_API_KEY, OPENAI_API_KEY_1, …
-  OLLAMA_MODEL      (default: llama3.2)
-  OLLAMA_BASE_URL   (default: http://ollama:11434)
-  EXAMPLES_FILE     path to YAML file of example prompts (default: examples.yaml)
-  MCP_CONNECT_TIMEOUT  seconds to wait for MCP connection (default: 25)
-  LLM_MIN_REQUEST_INTERVAL_SECONDS  minimum seconds between the *start* of any two LLM requests (default: 3.0)
-  LLM_REQUEST_DELAY_SECONDS  extra delay after each LLM response (default: 0)
-  LLM_RATE_LIMIT_RETRY_DELAY_SECONDS  seconds to wait before retry after rate limit (default: 20)
-  LLM_SYNTHESIS_HISTORY_TURNS  last N turns to pass to synthesis for multi-turn context (default: 4)
-
-> 
-Medical Literature Knowledge Graph — Chainlit Chat UI
-
-Can run standalone (chainlit run app.py --host 0.0.0.0 --port 8002) or mounted
-at /chat inside the kgserver API (same port as the API, no separate port).
-
-Note: Excluded from mypy and pylint in lint.sh — Chainlit's dynamic decorators
-and lack of type stubs make static analysis unreliable here.
-
-Environment variables:
-  MCP_SSE_URL       URL of the MCP SSE server (default: http://localhost/mcp/sse)
-  LLM_PROVIDER      anthropic | openai | ollama  (default: anthropic)
-  ANTHROPIC_MODEL   (default: claude-sonnet-4-6) — legacy single-tier
-  ANTHROPIC_API_KEY, ANTHROPIC_API_KEY_1, ANTHROPIC_API_KEY_2, …  (multi-key load balancing)
-  ORCHESTRATOR_MODEL  (default: claude-haiku-4-5 for anthropic, gpt-4o-mini for openai)
-  SYNTHESIS_MODEL     (default: claude-sonnet-4-6 for anthropic, gpt-4o for openai)
-  OPENAI_MODEL      (default: gpt-4o) — legacy single-tier
-  OPENAI_API_KEY, OPENAI_API_KEY_1, …
-  OLLAMA_MODEL      (default: llama3.2)
-  OLLAMA_BASE_URL   (default: http://ollama:11434)
-  EXAMPLES_FILE     path to YAML file of example prompts (default: examples.yaml)
-  MCP_CONNECT_TIMEOUT  seconds to wait for MCP connection (default: 25)
-  LLM_MIN_REQUEST_INTERVAL_SECONDS  minimum seconds between the *start* of any two LLM requests (default: 3.0)
-  LLM_REQUEST_DELAY_SECONDS  extra delay after each LLM response (default: 0)
-  LLM_RATE_LIMIT_RETRY_DELAY_SECONDS  seconds to wait before retry after rate limit (default: 20)
-  LLM_SYNTHESIS_HISTORY_TURNS  last N turns to pass to synthesis for multi-turn context (default: 4)
+Single source of truth for entity types, predicates, evidence, and mentions.
+Consumers import from this module instead of loading YAML config.
 
 
-### `async def _throttle_llm_request() -> None`
+## `class DiseaseEntity(BaseEntity)`
 
-Wait if needed so the next LLM request start is at least LLM_MIN_REQUEST_INTERVAL_SECONDS after the last.
 
-### `def _collect_api_keys(prefix: str) -> list[str]`
+**Fields:**
 
-Collect API keys from env: PREFIX, PREFIX_1, PREFIX_2, …
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def _build_model_list(model_name: str, model_str: str, keys: list[str], extra: dict[str, Any] | None = None) -> list[dict[str, Any]]`
+## `class GeneEntity(BaseEntity)`
 
-Build model_list for Router: one deployment per key.
 
-### `def _get_orchestrator_model() -> str`
+**Fields:**
 
-Return orchestrator model string for current provider.
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def _get_synthesis_model() -> str`
+## `class DrugEntity(BaseEntity)`
 
-Return synthesis model string for current provider.
 
-### `def _create_router(model_name: str, model_str: str, routing_strategy: str = 'simple-shuffle') -> Router | None`
+**Fields:**
 
-Create a Router for the given model. Returns None for Ollama (no multi-key).
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def _get_orchestrator_router() -> Router | None`
+## `class ProteinEntity(BaseEntity)`
 
-Return cached orchestrator Router, or None for Ollama. Lazy init at first call.
 
-### `def _get_synthesis_router() -> Router | None`
+**Fields:**
 
-Return cached synthesis Router, or None for Ollama. Lazy init at first call.
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def get_litellm_model() -> dict[str, Any]`
+## `class HormoneEntity(BaseEntity)`
 
-Return the model string and any extra kwargs for litellm.completion (legacy fallback).
 
-### `def load_examples() -> dict[str, str]`
+**Fields:**
 
-Load examples from YAML: {label: prompt_text}
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def mcp_tools_to_litellm(tools) -> list[dict]`
+## `class EnzymeEntity(BaseEntity)`
 
-Convert MCP tool descriptors to OpenAI-style tool dicts for litellm.
 
-### `async def on_example_action(action: cl.Action)`
+**Fields:**
 
-When user clicks an example button, send that prompt and run the chat.
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def _looks_like_billing_or_rate_limit(text: str) -> bool`
+## `class BiomarkerEntity(BaseEntity)`
 
-True if the response suggests an API billing, credit, or rate-limit issue.
 
-### `async def _run_spinner(msg: cl.Message, stop_event: asyncio.Event) -> None`
+**Fields:**
 
-Update msg with rotating spinner + 'Working…' until stop_event is set.
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `def _truncated_history(history: list[dict], n_turns: int) -> list[dict]`
+## `class SymptomEntity(BaseEntity)`
 
-Return last n_turns user+assistant pairs (excluding system).
 
-### `def _anthropic_cache_kwargs() -> dict[str, Any]`
+**Fields:**
 
-Extra kwargs for Anthropic prompt caching. Empty for other providers.
+```python
+spec: ClassVar[EntitySpec]
+```
 
-### `async def _llm_completion(router_model_name: str, messages: list[dict], tools: list[dict] | None = None) -> Any`
+## `class ProcedureEntity(BaseEntity)`
 
-Call LLM via Router (if available) or litellm.completion. Handles retries.
 
-### `async def execute_tool_calls(tool_calls, mcp_session: ClientSession | None) -> list[dict]`
+**Fields:**
 
-Run each tool call against the MCP server.
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class MutationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class PathwayEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class BiologicalProcessEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class AnatomicalStructureEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class AuthorEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class InstitutionEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class PaperEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class HypothesisEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EvidenceEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class LocationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EthnicityEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
 
 
 <span id="user-content-kgserverindexmd"></span>
@@ -10909,7 +7763,8 @@ SSE endpoint: http://localhost:8001/sse (mount at root so path stays /sse).
 
 ### `async def lifespan(app: FastAPI)`
 
-Create ingest_jobs table and start/stop the background ingest worker.
+Create all kgserver tables (entity, relationship, bundle, ingest_jobs, etc.)
+before the bfsql lifespan runs, so the entity table always exists at startup.
 
 ### `async def health()`
 
@@ -10920,24 +7775,18 @@ Health check for container/orchestration.
 
 # kgserver/mcp_server/__init__.py
 
-MCP (Model Context Protocol) server for Knowledge Graph GraphQL API.
+MCP (Model Context Protocol) server for Knowledge Graph.
 
-This module provides an MCP server that wraps the GraphQL API, making it
-accessible to AI agents like Claude or Cursor IDE.
-
-The server can run in two modes:
-1. HTTP/SSE mode: Mounted as FastAPI routes for remote access
-2. STDIO mode: Standalone server for local subprocess communication
+Uses bfsql (BFS-QL) as the core graph query engine, exposing four standard
+tools (describe_schema, search_entities, bfs_query, describe_entity) plus
+kgserver-specific tools for ingestion and bundle inspection.
 
 > 
-MCP (Model Context Protocol) server for Knowledge Graph GraphQL API.
+MCP (Model Context Protocol) server for Knowledge Graph.
 
-This module provides an MCP server that wraps the GraphQL API, making it
-accessible to AI agents like Claude or Cursor IDE.
-
-The server can run in two modes:
-1. HTTP/SSE mode: Mounted as FastAPI routes for remote access
-2. STDIO mode: Standalone server for local subprocess communication
+Uses bfsql (BFS-QL) as the core graph query engine, exposing four standard
+tools (describe_schema, search_entities, bfs_query, describe_entity) plus
+kgserver-specific tools for ingestion and bundle inspection.
 
 
 
@@ -10947,12 +7796,12 @@ The server can run in two modes:
 
 Background worker for paper ingestion jobs.
 
-Processes jobs from a queue: fetch URL, run Pass 1/2/3 pipeline, load bundle incrementally.
+Processes jobs from a queue: fetch URL, run fetch_vocab/extract/ingest/build_bundle pipeline, load bundle incrementally.
 
 > 
 Background worker for paper ingestion jobs.
 
-Processes jobs from a queue: fetch URL, run Pass 1/2/3 pipeline, load bundle incrementally.
+Processes jobs from a queue: fetch URL, run fetch_vocab/extract/ingest/build_bundle pipeline, load bundle incrementally.
 
 
 ### `def _storage_for_worker() -> tuple[StorageInterface, Callable[[], None]]`
@@ -10967,16 +7816,16 @@ Persistent workspace root from env, defaulting to ./ingest_workspace.
 
 Create and return (bundles_dir, merged_dir, output_dir, vocab_dir). These persist across jobs.
 
-Note: output_dir (medlit_bundle/) is always fully rebuilt by Pass 3.
+Note: output_dir (bundle/) is always fully rebuilt by build_bundle.
 The true incremental state is bundles_dir + merged_dir + vocab_dir (especially synonym_cache.json).
 
 ### `def _workspace_lock(workspace_root: Path)`
 
-File lock serializing Pass 2 → Pass 3 → load_bundle_incremental across workers.
+File lock serializing ingest → build_bundle → load_bundle_incremental across workers.
 
 ### `def _run_pass2_pass3_load(workspace_root: Path, bundles_dir: Path, merged_dir: Path, output_dir: Path) -> None`
 
-Run Pass 2, Pass 3, and load_bundle_incremental under workspace lock. Raises on failure.
+Run ingest, build_bundle, and load_bundle_incremental under workspace lock. Raises on failure.
 
 ### `async def start_worker(max_workers: int = 1) -> None`
 
@@ -11007,139 +7856,31 @@ Core implementation: fetch URL, run pipeline, load bundle.
 
 # kgserver/mcp_server/server.py
 
-MCP Server implementation using FastMCP.
+MCP Server implementation using bfsql (BFS-QL) as the core graph query engine.
 
-Provides tools for querying the knowledge graph via the Model Context Protocol.
+Provides the five standard BFS-QL tools (describe_schema, search_entities,
+bfs_query, intersect_subgraphs, describe_entity) via PostgresBackend, plus kgserver-specific tools
+for ingestion, bundle inspection, and paper source retrieval.
 
 > 
-MCP Server implementation using FastMCP.
+MCP Server implementation using bfsql (BFS-QL) as the core graph query engine.
 
-Provides tools for querying the knowledge graph via the Model Context Protocol.
+Provides the five standard BFS-QL tools (describe_schema, search_entities,
+bfs_query, intersect_subgraphs, describe_entity) via PostgresBackend, plus kgserver-specific tools
+for ingestion, bundle inspection, and paper source retrieval.
 
 
 ### `def _get_storage()`
 
-Context manager for getting a storage instance with proper lifecycle management.
+Context manager yielding a storage instance. Extracted for testability.
 
-### `def get_entity(entity_id: str) -> dict | None`
+### `def _get_bundle_path() -> Path`
 
-Retrieve a specific entity by its ID.
+Resolve BUNDLE_PATH; raise ValueError if unset or invalid.
 
-Returns the full entity data including all metadata, identifiers, and properties.
+### `def _read_from_bundle(relative_path: str) -> str`
 
-Args:
-    entity_id: The unique identifier of the entity
-
-Returns:
-    Entity dictionary with fields: entityId, entityType, name, status,
-    confidence, usageCount, source, canonicalUrl, synonyms, properties.
-    Returns None if entity not found.
-
-### `def list_entities(limit: int = 100, offset: int = 0, entity_type: Optional[str] = None, name: Optional[str] = None, name_contains: Optional[str] = None, source: Optional[str] = None, status: Optional[str] = None) -> dict`
-
-List entities with pagination and optional filtering.
-
-This tool provides flexible querying of entities in the knowledge graph.
-You can filter by type, name (exact or partial), source, and status.
-
-Args:
-    limit: Maximum number of entities to return (default: 100, max: 100)
-    offset: Number of entities to skip for pagination (default: 0)
-    entity_type: Filter by entity type (e.g., "Disease", "Gene", "Drug")
-    name: Exact name match filter
-    name_contains: Partial name match filter (case-insensitive)
-    source: Filter by source (e.g., "UMLS", "HGNC", "RxNorm")
-    status: Filter by status (e.g., "canonical", "provisional")
-
-Returns:
-    Dictionary with keys: items (list of entities), total (total count),
-    limit, offset. Each entity has the same structure as get_entity.
-
-### `def search_entities(query: str, entity_type: Optional[str] = None, limit: int = 10) -> list[dict]`
-
-Search for entities by name (convenience wrapper around list_entities).
-
-This performs a simple name-based search using the name_contains filter.
-For more advanced filtering, use list_entities directly.
-
-Args:
-    query: Search query text (searches in entity names)
-    entity_type: Optional entity type filter
-    limit: Maximum number of results to return (default: 10, max: 100)
-
-Returns:
-    List of matching entity dictionaries
-
-### `def get_relationship(subject_id: str, predicate: str, object_id: str) -> dict | None`
-
-Retrieve a specific relationship by its triple (subject, predicate, object).
-
-Returns the full relationship data including confidence, source documents, and properties.
-
-Args:
-    subject_id: The subject entity ID
-    predicate: The relationship predicate/type
-    object_id: The object entity ID
-
-Returns:
-    Relationship dictionary with fields: subjectId, predicate, objectId,
-    confidence, sourceDocuments, properties. Returns None if relationship not found.
-
-### `def find_relationships(subject_id: Optional[str] = None, predicate: Optional[str] = None, object_id: Optional[str] = None, limit: int = 100, offset: int = 0) -> dict`
-
-Find relationships with pagination and optional filtering.
-
-This tool provides flexible querying of relationships in the knowledge graph.
-You can filter by subject, predicate, object, or any combination.
-
-Args:
-    limit: Maximum number of relationships to return (default: 100, max: 100)
-    offset: Number of relationships to skip for pagination (default: 0)
-    subject_id: Filter by subject entity ID
-    predicate: Filter by relationship predicate/type
-    object_id: Filter by object entity ID
-
-Returns:
-    Dictionary with keys: items (list of relationships), total (total count),
-    limit, offset. Each relationship has the same structure as get_relationship.
-
-### `def find_entities_within_hops(start_id: str, max_hops: int = 3, entity_type: Optional[str] = None) -> dict`
-
-Find all entities within N hops of a starting entity using BFS traversal.
-
-Traverses the graph bidirectionally (follows both incoming and outgoing edges).
-Returns entities grouped by their hop distance from the start entity.
-Optionally filters results to a specific entity type.
-
-Args:
-    start_id: The entity ID to start from (e.g. 'C0006142' for breast cancer)
-    max_hops: Maximum number of hops to traverse (default 3, max 5)
-    entity_type: Optional entity type filter (e.g. 'gene', 'drug', 'disease')
-
-Returns:
-    Dictionary with start_id, max_hops, entity_type_filter, total_entities_found,
-    and results_by_hop (hop distance -> list of entity dicts with entity_id,
-    entity_type, name, status, hop_distance).
-
-### `def bfs_subgraph(seeds: list[str], max_hops: int = 2, topology_filter: Optional[dict] = None, node_filter: Optional[dict] = None, edge_filter: Optional[dict] = None) -> dict`
-
-Extract a subgraph via BFS from one or more seed entities.
-
-Returns nodes and edges. Use node_filter.entity_types to request full metadata
-for specific node types (others appear as stubs). Use edge_filter.predicates
-to request full provenance for specific edge types (others appear as stubs).
-Omitting a filter returns full data for all nodes or edges respectively.
-
-If you do not yet have a canonical entity ID, call search_entities first.
-
-Args:
-    seeds: Entity IDs to start BFS from (e.g. ['C0006142', 'C0085084'])
-    max_hops: Max graph distance from seeds (default 2, 1-3 typical)
-    node_filter: Optional dict with entity_types list for full node data
-    edge_filter: Optional dict with predicates list for full edge provenance
-
-Returns:
-    Dict with seeds, max_hops, node_count, edge_count, truncated, nodes, edges.
+Read file from bundle (directory or ZIP). Returns file contents as string.
 
 ### `async def ingest_paper(url: str) -> dict`
 
@@ -11161,14 +7902,6 @@ Returns:
     relationships_added, error, created_at, started_at, completed_at.
 Status values: queued | running | complete | failed | not_found
 
-### `def _get_bundle_path() -> Path`
-
-Resolve BUNDLE_PATH; raise ValueError if unset or invalid.
-
-### `def _read_from_bundle(relative_path: str) -> str`
-
-Read file from bundle (directory or ZIP). Returns file contents as string.
-
 ### `def get_paper_source(paper_id: str, max_chars: Optional[int] = None) -> str`
 
 Retrieve the raw JATS-XML source of a paper for mention-inspection diagnostics.
@@ -11178,10 +7911,7 @@ get_mentions to verify that extracted mentions match the source text.
 
 Args:
     paper_id: Paper identifier (e.g. PMC12345). Accepts with or without .xml suffix.
-    max_chars: If set, truncate the returned string to this length. Note: blind
-        truncation may cut mid-sentence for full JATS papers.
-        # TODO: consider lxml/ElementTree snippet to extract just <abstract> and <body>
-        instead of blind truncation.
+    max_chars: If set, truncate the returned string to this length.
 
 Returns:
     Raw XML string. Raises ValueError if BUNDLE_PATH unset or paper not found.
@@ -11193,9 +7923,6 @@ Retrieve entity mentions from the bundle for mention-inspection diagnostics.
 Reads mentions.jsonl (MentionRow schema). Filter by document_id when paper_id
 is provided. Use with get_paper_source to verify extracted mentions against
 the source text.
-
-Note: When filtering by paper_id, reads and parses the entire file then
-filters in memory. Fine for a diagnostic tool; not efficient for large corpora.
 
 Args:
     paper_id: If provided, filter to mentions where document_id matches.
@@ -11232,8 +7959,179 @@ Args:
 
 Returns:
     Dictionary with "data" (result payload, or None if errors) and "errors"
-    (list of error dicts, or None if successful). Same shape as standard
-    GraphQL JSON responses.
+    (list of error dicts, or None if successful).
+
+
+<span id="user-content-kgserverpipelineinterfacepy"></span>
+
+# kgserver/pipeline_interface.py
+
+Abstract base class for domain-specific ingest pipelines.
+
+kgserver is domain-agnostic: it does not import any domain package directly.
+Instead, a concrete implementation of IngestPipeline is loaded at startup from
+the class path specified in the INGEST_PIPELINE_CLASS environment variable.
+
+Domain packages (e.g. medlit_bundle) implement this interface and register
+themselves via that env var.
+
+Example::
+
+    INGEST_PIPELINE_CLASS=medlit.pipeline.MedlitPipeline
+
+> 
+Abstract base class for domain-specific ingest pipelines.
+
+kgserver is domain-agnostic: it does not import any domain package directly.
+Instead, a concrete implementation of IngestPipeline is loaded at startup from
+the class path specified in the INGEST_PIPELINE_CLASS environment variable.
+
+Domain packages (e.g. medlit_bundle) implement this interface and register
+themselves via that env var.
+
+Example::
+
+    INGEST_PIPELINE_CLASS=medlit.pipeline.MedlitPipeline
+
+
+## `class IngestPipeline(ABC)`
+
+Domain-specific ingest pipeline contract.
+
+Implementations provide the four pipeline stages used by ingest_worker,
+plus entity-type metadata for graph visualization.
+
+All Path arguments are absolute paths to existing directories.
+Implementations may assume the directories already exist.
+
+### `async def IngestPipeline.fetch_vocab(self, input_dir: Path, vocab_dir: Path, llm_backend: str, papers: object, limit: int) -> None`
+
+Pass 0: build/merge vocabulary from documents in input_dir into vocab_dir.
+
+Parameters
+----------
+input_dir:
+    Directory containing raw input documents (e.g. PubMed XML files).
+vocab_dir:
+    Persistent workspace directory for accumulated vocabulary files.
+llm_backend:
+    LLM backend identifier (e.g. "anthropic", "openai").
+papers:
+    Optional paper filter; pass None to process all documents in input_dir.
+limit:
+    Maximum number of documents to process in this call.
+
+### `async def IngestPipeline.extract(self, input_dir: Path, bundles_dir: Path, llm_backend: str, limit: int, vocab_file: Path) -> None`
+
+Pass 1 + 2: extract entities and relationships from documents, writing
+per-document bundle JSON files into bundles_dir.
+
+Parameters
+----------
+input_dir:
+    Directory containing raw input documents.
+bundles_dir:
+    Output directory for per-document bundle JSON files (paper_*.json).
+llm_backend:
+    LLM backend identifier.
+limit:
+    Maximum number of documents to process.
+vocab_file:
+    Path to the accumulated vocabulary file produced by fetch_vocab.
+
+### `def IngestPipeline.run_ingest(self, bundle_dir: Path, output_dir: Path, synonym_cache_path: Path, canonical_id_cache_path: object) -> None`
+
+Pass 2 post-processing: merge bundle files, resolve synonyms and canonical IDs.
+
+Parameters
+----------
+bundle_dir:
+    Directory containing per-document bundle JSON files.
+output_dir:
+    Directory for merged output (synonym_cache.json, etc.).
+synonym_cache_path:
+    Path to the seeded or accumulated synonym cache file.
+canonical_id_cache_path:
+    Optional path to a canonical ID cache file; pass None to skip.
+
+### `def IngestPipeline.build_bundle(self, merged_dir: Path, bundles_dir: Path, output_dir: Path) -> None`
+
+Pass 3: assemble the final loadable bundle (manifest.json + NDJSON files).
+
+Parameters
+----------
+merged_dir:
+    Directory containing merged/deduped data from run_ingest.
+bundles_dir:
+    Directory containing per-document bundle JSON files.
+output_dir:
+    Output directory; must contain manifest.json on success.
+
+### `def IngestPipeline.get_entity_type_specs(self) -> dict[str, dict[str, str]]`
+
+Return entity-type metadata for graph visualization.
+
+Returns a mapping of entity_type string to a dict with keys:
+    - ``"color"``: hex color string (e.g. ``"#e57373"``)
+    - ``"label"``: human-readable display label
+
+A ``"default"`` key must be included as a fallback for unknown types.
+
+The base implementation returns only the default entry.  Override in
+domain subclasses to add domain-specific entity types.
+
+
+<span id="user-content-kgserverpipelineloaderpy"></span>
+
+# kgserver/pipeline_loader.py
+
+Runtime loader for the domain-specific IngestPipeline implementation.
+
+The pipeline class is specified via the INGEST_PIPELINE_CLASS environment
+variable as a dotted import path, e.g.::
+
+    INGEST_PIPELINE_CLASS=medlit.pipeline.MedlitPipeline
+
+The class must be a concrete subclass of
+:class:`kgserver.pipeline_interface.IngestPipeline`.
+
+If the variable is unset or the import fails, callers receive a clear
+error at the point of use rather than at server startup.
+
+> 
+Runtime loader for the domain-specific IngestPipeline implementation.
+
+The pipeline class is specified via the INGEST_PIPELINE_CLASS environment
+variable as a dotted import path, e.g.::
+
+    INGEST_PIPELINE_CLASS=medlit.pipeline.MedlitPipeline
+
+The class must be a concrete subclass of
+:class:`kgserver.pipeline_interface.IngestPipeline`.
+
+If the variable is unset or the import fails, callers receive a clear
+error at the point of use rather than at server startup.
+
+
+### `def get_pipeline() -> IngestPipeline`
+
+Return the singleton IngestPipeline instance.
+
+The implementation class is loaded from the INGEST_PIPELINE_CLASS
+environment variable on first call and cached for subsequent calls.
+
+Raises
+------
+RuntimeError
+    If INGEST_PIPELINE_CLASS is not set or the class cannot be loaded.
+TypeError
+    If the loaded class is not a subclass of IngestPipeline.
+
+### `def reset_pipeline() -> None`
+
+Clear the cached pipeline instance.
+
+Intended for use in tests that need to swap implementations between cases.
 
 
 <span id="user-content-kgserverqueryinitpy"></span>
@@ -11818,7 +8716,7 @@ Health check endpoint to verify that the server is running.
 
 ### `async def _root_redirect()`
 
-Send root to the docs site so / still lands somewhere useful.
+Serve docs index at /, redirect to marketing URL, or return JSON pointers.
 
 
 <span id="user-content-kgserverquerystoragefactorypy"></span>
@@ -12322,6 +9220,10 @@ Get an entity by its ID.
 
 List entities with optional filtering.
 
+name_contains is a substring match, deliberately not a regex or glob: a wildcard
+search like "cushing*" is expressed as name_contains="cushing". Synonym matching is
+not applied here — only the entity name is searched.
+
 ### `def PostgresStorage.count_entities(self, entity_type: Optional[str] = None, name: Optional[str] = None, name_contains: Optional[str] = None, source: Optional[str] = None, status: Optional[str] = None) -> int`
 
 Count entities matching filter criteria.
@@ -12743,41 +9645,6 @@ Multi-seed returns union of neighborhoods.
 When max_nodes hit, truncated is True.
 
 
-<span id="user-content-kgserverteststestbfssubgraphmcppy"></span>
-
-# kgserver/tests/test_bfs_subgraph_mcp.py
-
-Tests for the MCP bfs_subgraph tool.
-
-Uses populated_storage fixture. Verifies response structure and stub vs full.
-
-> 
-Tests for the MCP bfs_subgraph tool.
-
-Uses populated_storage fixture. Verifies response structure and stub vs full.
-
-
-### `def mock_storage(populated_storage)`
-
-Provide populated storage to the MCP tool via _get_storage.
-
-### `def _call_tool(seeds, max_hops = 2, node_filter = None, edge_filter = None)`
-
-Call the underlying MCP tool function.
-
-### `def test_bfs_subgraph_structure(mock_storage, populated_storage)`
-
-Result has seeds, max_hops, node_count, edge_count, truncated, nodes, edges.
-
-### `def test_bfs_subgraph_unknown_seed_raises(mock_storage, populated_storage)`
-
-Unknown seed ID raises ValueError.
-
-### `def test_bfs_subgraph_node_filter_stub(mock_storage, populated_storage)`
-
-node_filter: non-matching nodes are stubs.
-
-
 <span id="user-content-kgserverteststestbundleloaderpy"></span>
 
 # kgserver/tests/test_bundle_loader.py
@@ -12855,45 +9722,6 @@ should replace the built-in defaults after loading.
 
 When a bundle does NOT contain graphql_examples.yml, the built-in
 defaults should remain unchanged.
-
-
-<span id="user-content-kgserverteststestfindentitieswithinhopspy"></span>
-
-# kgserver/tests/test_find_entities_within_hops.py
-
-Tests for the MCP find_entities_within_hops tool.
-
-Uses the same populated_storage fixture as other MCP tests (entities 1,2,3
-and relationships 1->2, 1->3, 2->3). Verifies BFS result structure and
-hop_distance consistency.
-
-> 
-Tests for the MCP find_entities_within_hops tool.
-
-Uses the same populated_storage fixture as other MCP tests (entities 1,2,3
-and relationships 1->2, 1->3, 2->3). Verifies BFS result structure and
-hop_distance consistency.
-
-
-### `def mock_storage(populated_storage)`
-
-Provide populated storage to the MCP tool via _get_storage.
-
-### `def _call_tool(start_id: str, max_hops: int = 3, entity_type = None)`
-
-Call the underlying MCP tool function.
-
-### `def test_find_entities_within_hops_structure(mock_storage)`
-
-Result has start_id, results_by_hop dict, and hop_distance matches key.
-
-### `def test_find_entities_within_hops_from_entity_1(mock_storage)`
-
-From test:entity:1, one hop gives entity 2 and 3 (via edges 1->2, 1->3).
-
-### `def test_find_entities_within_hops_entity_type_filter(mock_storage)`
-
-Filter by entity_type returns only matching entities.
 
 
 <span id="user-content-kgserverteststestgraphapipy"></span>
@@ -13337,50 +10165,6 @@ Test that pagination metadata is correct.
 Test that relationship pagination metadata is correct.
 
 
-<span id="user-content-kgserverteststestingestworkerpy"></span>
-
-# kgserver/tests/test_ingest_worker.py
-
-Tests for mcp_server/ingest_worker persistent workspace and no-op guard.
-
-## `class TestWorkspaceHelpers`
-
-Unit tests for workspace root and dirs.
-
-### `def TestWorkspaceHelpers.test_workspace_root_default(self, monkeypatch, tmp_path)`
-
-_workspace_root returns resolve()d path; default includes ingest_workspace.
-
-### `def TestWorkspaceHelpers.test_workspace_root_from_env(self, monkeypatch, tmp_path)`
-
-_workspace_root uses INGEST_WORKSPACE_ROOT when set.
-
-### `def TestWorkspaceHelpers.test_ensure_workspace_dirs(self, tmp_path)`
-
-_ensure_workspace_dirs creates pass1_bundles, medlit_merged, medlit_bundle, pass1_vocab.
-
-## `class TestWorkspaceLock`
-
-Unit tests for workspace file lock.
-
-### `def TestWorkspaceLock.test_workspace_lock_acquires_and_releases(self, tmp_path)`
-
-_workspace_lock acquires and releases; second acquisition in same process succeeds.
-
-### `def _minimal_paper_bundle(pmcid: str, title: str = 'Test') -> dict`
-
-Minimal per-paper bundle dict for pass2/pass3.
-
-## `class TestPersistentWorkspaceIntegration`
-
-Integration test: run Pass 2+3+load twice; second run has more entities.
-
-### `def TestPersistentWorkspaceIntegration.test_pass2_pass3_load_incremental_entity_count(self, monkeypatch, tmp_path)`
-
-With 2 papers then 3 papers in workspace, entity count increases after second run.
-Requires examples.medlit (PYTHONPATH including repo root when run from kgserver).
-
-
 <span id="user-content-kgserverteststestmcpgraphqltoolpy"></span>
 
 # kgserver/tests/test_mcp_graphql_tool.py
@@ -13790,13 +10574,5975 @@ Test GET /api/v1/subgraph (legacy query params).
 GET without JSON returns legacy format (entities, relationships, query).
 
 
-<span id="user-content-medlitbundledocsreadmemd"></span>
+<span id="user-content-medlitdomainserviceapppy"></span>
 
-# medlit_bundle/docs/README.md
+# medlit/domain_service/app.py
 
-Medlit bundle built from Pass 1 + Pass 2 output.
+Medlit domain service — FastAPI application.
+
+### `async def health() -> HealthResponse`
+
+Return service health status.
+
+### `async def get_schema() -> DomainSchemaResponse`
+
+Return immutable domain schema contract.
+
+### `async def resolve_authority_endpoint(request: ResolveAuthorityRequest) -> ResolveAuthorityResponse`
+
+Resolve a mention to a canonical ID from medical authorities.
+
+### `async def select_survivor_endpoint(request: SelectSurvivorRequest) -> SelectSurvivorResponse`
+
+Select the preferred merge survivor.
+
+### `async def synonym_criteria_config_endpoint() -> SynonymCriteriaConfig`
+
+Return aggregate synonym criteria for startup-time caching.
+
+### `async def synonym_criteria_endpoint(request: SynonymCriteriaRequest) -> SynonymCriteriaResponse`
+
+Backward-compatible per-entity-type synonym threshold endpoint.
+
+### `async def authorities_endpoint() -> AuthoritiesResponse`
+
+Return authority metadata for diagnostics.
+
+### `async def compute_confidence_endpoint(request: ComputeConfidenceRequest) -> ComputeConfidenceResponse`
+
+Aggregate confidence over provenance records with medlit domain weights.
+
+
+<span id="user-content-medlitdomainserviceauthoritypy"></span>
+
+# medlit/domain_service/authority.py
+
+Authority lookup wrapper for the medlit domain service.
+
+Wraps ``medlit.pipeline.authority_lookup.CanonicalIdLookup`` with:
+- The ``_AUTHORITY_TYPE_OVERRIDES`` remapping from ``MedLitPromotionPolicy``
+  (hormone→drug, enzyme→protein, biomarker→disease) so the right ontology
+  is used for each entity type.
+- The LOOKUP_BLOCKLIST check (generic/type-like terms never sent to APIs).
+- Persistent on-disk JSON cache via ``JsonFileCanonicalIdCache``.
+
+The lookup instance is a module-level singleton so the cache is shared across
+all requests in a single process.
+
+> Authority lookup wrapper for the medlit domain service.
+
+Wraps ``medlit.pipeline.authority_lookup.CanonicalIdLookup`` with:
+- The ``_AUTHORITY_TYPE_OVERRIDES`` remapping from ``MedLitPromotionPolicy``
+  (hormone→drug, enzyme→protein, biomarker→disease) so the right ontology
+  is used for each entity type.
+- The LOOKUP_BLOCKLIST check (generic/type-like terms never sent to APIs).
+- Persistent on-disk JSON cache via ``JsonFileCanonicalIdCache``.
+
+The lookup instance is a module-level singleton so the cache is shared across
+all requests in a single process.
+
+
+### `def authority_for_entity_type(entity_type: str) -> str`
+
+Return the likely backing authority for an entity type.
+
+### `def get_authorities_info() -> tuple[AuthorityInfo, ...]`
+
+Return static authority metadata for diagnostics/observability endpoints.
+
+### `def get_lookup() -> CanonicalIdLookup`
+
+Return the module-level CanonicalIdLookup singleton, creating it on first call.
+
+### `async def resolve_authority(mention: str, entity_type: str) -> Optional[CanonicalIdResponse]`
+
+Look up a canonical ID for a mention from medical ontology authorities.
+
+Parameters
+----------
+mention:
+    Surface form of the entity mention (already normalised by the identity server).
+entity_type:
+    Domain entity type (e.g. 'disease', 'gene', 'drug').
+
+Returns
+-------
+Optional[CanonicalIdResponse]
+    Canonical ID if found, ``None`` if the mention has no authority match.
+
+
+<span id="user-content-medlitdomainservicemodelspy"></span>
+
+# medlit/domain_service/models.py
+
+Pydantic schemas for the medlit domain service API.
+
+## `class FrozenModel(BaseModel)`
+
+Shared frozen base model.
+
+## `class ResolveAuthorityRequest(FrozenModel)`
+
+Request body for POST /resolve-authority.
+
+## `class CanonicalIdResponse(FrozenModel)`
+
+Canonical ID payload for authority resolution.
+
+## `class ResolveAuthorityResponse(FrozenModel)`
+
+Response body for POST /resolve-authority.
+
+## `class CandidateEntity(FrozenModel)`
+
+A candidate entity sent by the identity server for survivor selection.
+
+## `class SelectSurvivorRequest(FrozenModel)`
+
+Request body for POST /select-survivor.
+
+## `class SelectSurvivorResponse(FrozenModel)`
+
+Response body for POST /select-survivor.
+
+## `class SynonymCriteriaRequest(FrozenModel)`
+
+Backward-compatible request body for POST /synonym-criteria.
+
+## `class SynonymCriteriaResponse(FrozenModel)`
+
+Backward-compatible response body for POST /synonym-criteria.
+
+## `class PredicateContract(FrozenModel)`
+
+Predicate schema declaration.
+
+## `class DomainSchemaResponse(FrozenModel)`
+
+Response body for GET /schema.
+
+## `class SynonymCriteriaConfig(FrozenModel)`
+
+Response body for GET /synonym-criteria.
+
+## `class AuthorityInfo(FrozenModel)`
+
+Authority metadata entry.
+
+## `class AuthoritiesResponse(FrozenModel)`
+
+Response body for GET /authorities.
+
+## `class ProvenanceRecord(FrozenModel)`
+
+Provenance input record used for confidence aggregation.
+
+## `class ComputeConfidenceRequest(FrozenModel)`
+
+Request body for POST /compute-confidence.
+
+## `class ComputeConfidenceResponse(FrozenModel)`
+
+Response body for POST /compute-confidence.
+
+## `class HealthResponse(FrozenModel)`
+
+Response body for GET /health.
+
+
+<span id="user-content-medlitdomainservicesurvivorpy"></span>
+
+# medlit/domain_service/survivor.py
+
+Survivor selection logic for the medlit domain service.
+
+Implements the ``preferred_entity`` preference order from ``MedLitDomainSchema``:
+
+1. Canonical status over provisional
+2. Presence of any canonical_ids (non-empty ``entity_id`` that isn't a provisional UUID)
+3. Higher ``usage_count`` (more evidence)
+4. Lower (earlier) creation order — approximated here by entity_id lexical order
+   since we don't have ``created_at`` in the HTTP contract.
+
+The identity server sends a flat list of ``CandidateEntity`` dicts; this module
+selects and returns the survivor's ``entity_id``.
+
+> Survivor selection logic for the medlit domain service.
+
+Implements the ``preferred_entity`` preference order from ``MedLitDomainSchema``:
+
+1. Canonical status over provisional
+2. Presence of any canonical_ids (non-empty ``entity_id`` that isn't a provisional UUID)
+3. Higher ``usage_count`` (more evidence)
+4. Lower (earlier) creation order — approximated here by entity_id lexical order
+   since we don't have ``created_at`` in the HTTP contract.
+
+The identity server sends a flat list of ``CandidateEntity`` dicts; this module
+selects and returns the survivor's ``entity_id``.
+
+
+### `def _has_authority_id(entity_id: str) -> bool`
+
+Return True if entity_id looks like an authoritative ID (not a provisional UUID).
+
+### `def select_survivor(candidates: list[CandidateEntity]) -> str`
+
+Return the entity_id of the preferred merge survivor.
+
+Preference order (highest priority first):
+1. Canonical status ('canonical' > 'provisional' > 'merged')
+2. Has an authoritative ID (entity_id does not start with 'prov:')
+3. Higher usage_count
+4. Lexically smallest entity_id (stable tie-breaker)
+
+Parameters
+----------
+candidates:
+    All entities being considered for merge (must be non-empty).
+
+Returns
+-------
+str
+    The ``entity_id`` of the selected survivor.
+
+
+<span id="user-content-medlitdomainservicesynonymcriteriapy"></span>
+
+# medlit/domain_service/synonym_criteria.py
+
+Per-entity-type similarity thresholds for synonym detection.
+
+The identity server calls POST /synonym-criteria before running cosine similarity
+to get the right threshold for each entity type. Tighter thresholds for entity
+types where false positives are costly (gene, drug); looser for types where
+surface-form variation is high (anatomicalstructure, biologicalprocess).
+
+> Per-entity-type similarity thresholds for synonym detection.
+
+The identity server calls POST /synonym-criteria before running cosine similarity
+to get the right threshold for each entity type. Tighter thresholds for entity
+types where false positives are costly (gene, drug); looser for types where
+surface-form variation is high (anatomicalstructure, biologicalprocess).
+
+
+### `def get_threshold(entity_type: str) -> float`
+
+Return the cosine similarity threshold for synonym detection for this entity type.
+
+
+<span id="user-content-medlitdomainserviceteststestapppy"></span>
+
+# medlit/domain_service/tests/test_app.py
+
+Integration tests for the domain service FastAPI endpoints.
+
+### `def test_resolve_authority_no_match()`
+
+When authority lookup returns None, response has canonical_id=null.
+
+### `def test_resolve_authority_match()`
+
+When authority lookup returns a canonical ID, it is included in the response.
+
+
+<span id="user-content-medlitdomainserviceteststestsurvivorpy"></span>
+
+# medlit/domain_service/tests/test_survivor.py
+
+Tests for survivor selection logic.
+
+
+<span id="user-content-medlitdomainserviceteststestsynonymcriteriapy"></span>
+
+# medlit/domain_service/tests/test_synonym_criteria.py
+
+Tests for per-entity-type synonym thresholds.
+
+
+<span id="user-content-medlitmedlitinitpy"></span>
+
+# medlit/medlit/__init__.py
+
+Medical literature domain extension for kgraph.
+
+This package provides domain-specific types and pipeline components for
+extracting knowledge from biomedical journal articles.
+
+> Medical literature domain extension for kgraph.
+
+This package provides domain-specific types and pipeline components for
+extracting knowledge from biomedical journal articles.
+
+
+
+<span id="user-content-medlitmedlitbundlemodelspy"></span>
+
+# medlit/medlit/bundle_models.py
+
+Pydantic models for the per-paper bundle JSON (Pass 1 output / Pass 2 input).
+
+Matches the structure in INGESTION_REFACTOR.md. Entity type is stored with
+Field(alias="class") because "class" is a Python reserved word; use
+model_dump(by_alias=True) for JSON and populate_by_name=True for parsing.
+
+> Pydantic models for the per-paper bundle JSON (Pass 1 output / Pass 2 input).
+
+Matches the structure in INGESTION_REFACTOR.md. Entity type is stored with
+Field(alias="class") because "class" is a Python reserved word; use
+model_dump(by_alias=True) for JSON and populate_by_name=True for parsing.
+
+
+## `class StudyDesignMetadata(BaseModel)`
+
+Study design trust signal extracted from Methods/abstract (second LLM call per paper).
+**Fields:**
+
+```python
+study_type: Optional[str]
+sample_size: Optional[int]
+multicenter: bool
+held_out_validation: bool
+```
+
+## `class AuthorInfo(BaseModel)`
+
+Author with optional affiliations.
+**Fields:**
+
+```python
+name: str
+affiliations: list[str]
+affiliation_rors: list[str]
+```
+
+## `class PaperInfo(BaseModel)`
+
+Paper metadata in the per-paper bundle.
+**Fields:**
+
+```python
+doi: Optional[str]
+pmcid: Optional[str]
+title: str
+authors: list[str]
+author_details: Optional[list[AuthorInfo]]
+document_id: str
+journal: Optional[str]
+year: Optional[int]
+study_type: Optional[str]
+eco_type: Optional[str]
+study_design: Optional[StudyDesignMetadata]
+cited_pmc_ids: list[str]
+```
+
+## `class ExtractedEntityRow(BaseModel)`
+
+Minimal entity record in the bundle. JSON key "class" via alias.
+**Fields:**
+
+```python
+id: str
+entity_class: str
+name: str
+synonyms: list[str]
+symbol: Optional[str]
+brand_names: list[str]
+source: Literal['extracted', 'umls', 'hgnc', 'rxnorm', 'loinc', 'uniprot']
+canonical_id: Optional[str]
+umls_id: Optional[str]
+hgnc_id: Optional[str]
+rxnorm_id: Optional[str]
+loinc_code: Optional[str]
+uniprot_id: Optional[str]
+```
+
+## `class EvidenceEntityRow(BaseModel)`
+
+Evidence entity in the bundle. id format: {paper_id}:{section}:{paragraph_idx}:{method}.
+**Fields:**
+
+```python
+id: str
+entity_class: Literal['Evidence']
+entity_id: Optional[str]
+paper_id: str
+text_span_id: Optional[str]
+text: Optional[str]
+confidence: float
+extraction_method: str
+study_type: Optional[str]
+eco_type: Optional[str]
+source: Literal['extracted']
+```
+
+## `class ProvenanceEntry(BaseModel)`
+
+One provenance record for a relationship (section, sentence, optional citation markers).
+**Fields:**
+
+```python
+section: Optional[str]
+sentence: Optional[str]
+citation_markers: list[str]
+```
+
+## `class RelationshipRow(BaseModel)`
+
+One relationship in the bundle. evidence_ids optional for SAME_AS.
+**Fields:**
+
+```python
+subject: str
+predicate: str
+object_id: str
+evidence_ids: list[str]
+provenance: list[ProvenanceEntry]
+source_papers: list[str]
+confidence: float
+linguistic_trust: Optional[LinguisticTrust]
+properties: dict[str, Any]
+section: Optional[str]
+asserted_by: str
+resolution: Optional[Literal['merged', 'distinct']]
+note: Optional[str]
+```
+
+## `class PerPaperBundle(BaseModel)`
+
+Per-paper bundle: Pass 1 output and Pass 2 input. Immutable after Pass 1.
+**Fields:**
+
+```python
+paper: PaperInfo
+extraction_provenance: Optional[ExtractionProvenance]
+entities: list[ExtractedEntityRow]
+evidence_entities: list[EvidenceEntityRow]
+relationships: list[RelationshipRow]
+notes: list[str]
+```
+
+### `def PerPaperBundle.to_bundle_dict(self) -> dict`
+
+Serialize for JSON with alias 'class' used for entity type.
+
+### `def PerPaperBundle.from_bundle_dict(cls, data: dict) -> 'PerPaperBundle'`
+
+Load from dict/JSON (accepts key 'class' for entity type).
+
+
+<span id="user-content-medlitmedlitdocumentspy"></span>
+
+# medlit/medlit/documents.py
+
+Journal article document representation for medical literature domain.
+
+## `class JournalArticle(BaseDocument)`
+
+A journal article (research paper) as a source document for extraction.
+
+Maps from med-lit-schema's Paper model to kgraph's BaseDocument.
+Papers are NOT the same as doc_assets.jsonl (which is for documentation assets).
+Papers are the source of information for building the knowledge graph, taken
+from sources like PubMed, PLOS ONE, or medical journals if available.
+
+Key mappings:
+- Paper.paper_id → BaseDocument.document_id (prefer doi:, else pmid:, else stable hash)
+- Paper.title → BaseDocument.title
+- Paper.abstract + (optional full text) → BaseDocument.content
+- PaperMetadata → BaseDocument.metadata (study type, sample size, journal, etc.)
+- Paper.extraction_provenance → BaseDocument.metadata["extraction"]
+
+### `def JournalArticle.get_document_type(self) -> str`
+
+Return domain-specific document type.
+
+### `def JournalArticle.get_sections(self) -> list[tuple[str, str]]`
+
+Return document sections as (section_name, content) tuples.
+
+For journal articles, we typically have:
+- title: The paper title
+- abstract: The abstract text
+- body: The full text content (if available)
+
+### `def JournalArticle.study_type(self) -> str | None`
+
+Convenience property for accessing study_type from metadata.
+
+### `def JournalArticle.sample_size(self) -> int | None`
+
+Convenience property for accessing sample_size from metadata.
+
+### `def JournalArticle.mesh_terms(self) -> list[str]`
+
+Convenience property for accessing mesh_terms from metadata.
+
+
+<span id="user-content-medlitmedlitdomainpy"></span>
+
+# medlit/medlit/domain.py
+
+Domain schema for medical literature knowledge graph.
+
+## `class MedLitDomainSchema(DomainSchema)`
+
+Domain schema for medical literature extraction.
+
+Defines the vocabulary and validation rules for extracting medical knowledge
+from journal articles. Uses canonical IDs (UMLS, HGNC, RxNorm, UniProt) for
+entity identification and supports rich relationship metadata with evidence
+and provenance tracking.
+
+### `def MedLitDomainSchema.promotion_config(self) -> PromotionConfig`
+
+Medical domain promotion configuration.
+
+Lowered thresholds to match LLM extraction characteristics:
+- min_usage_count=1: Entities appear once per paper
+- min_confidence=0.4: LLM typically returns ~0.47 confidence
+- require_embedding=False: Don't block promotion if embeddings not ready
+
+### `def MedLitDomainSchema.normalize_mention(self, mention: str) -> str`
+
+Lowercase, strip, and apply British→American spelling normalization.
+
+### `def MedLitDomainSchema.validate_entity(self, entity: BaseEntity) -> list[ValidationIssue]`
+
+Validate an entity against medical domain rules.
+
+Rules:
+- Entity type must be registered
+- Canonical entities should have canonical IDs in entity_id or canonical_ids
+- Provisional entities are allowed (they'll be promoted later)
+
+### `async def MedLitDomainSchema.validate_relationship(self, relationship: BaseRelationship, entity_storage: EntityStorageInterface | None = None) -> bool`
+
+Validate a relationship against medical domain rules.
+
+Rules:
+- Predicate must be registered
+- Subject and object entity types must be compatible with predicate
+- Confidence must be in valid range (enforced by BaseRelationship)
+
+### `def MedLitDomainSchema.get_valid_predicates(self, subject_type: str, object_type: str) -> list[str]`
+
+Return predicates valid between two entity types.
+
+Uses the vocabulary validation function to enforce domain-specific
+constraints on which relationships are semantically valid.
+
+### `def MedLitDomainSchema.preferred_entity(self, candidates: list[BaseEntity]) -> BaseEntity`
+
+Select the merge survivor from a set of synonym candidates.
+
+Preference order (highest wins):
+1. Canonical status over provisional
+2. Presence of an authoritative ``canonical_ids`` entry (UMLS, HGNC, etc.)
+3. Higher ``usage_count`` (more evidence)
+4. Earlier ``created_at`` (stable, long-lived entity)
+
+### `def MedLitDomainSchema.get_promotion_policy(self, lookup: CanonicalIdLookup | None = None) -> PromotionPolicy`
+
+Return the promotion policy for medical literature domain.
+
+Uses MedLitPromotionPolicy which assigns canonical IDs based on
+authoritative medical ontologies (UMLS, HGNC, RxNorm, UniProt).
+
+Args:
+    lookup: Optional canonical ID lookup service. If None, a new
+            instance will be created (without UMLS API key unless
+            set in environment).
+
+
+<span id="user-content-medlitmedlitdomainspecpy"></span>
+
+# medlit/medlit/domain_spec.py
+
+Domain spec for medical literature extraction.
+
+Single source of truth for entity types, predicates, evidence, and mentions.
+Consumers import from this module instead of loading YAML config.
+
+> Domain spec for medical literature extraction.
+
+Single source of truth for entity types, predicates, evidence, and mentions.
+Consumers import from this module instead of loading YAML config.
+
+
+## `class DiseaseEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class GeneEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class DrugEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class ProteinEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class HormoneEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EnzymeEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class BiomarkerEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class SymptomEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class ProcedureEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class MutationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class PathwayEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class BiologicalProcessEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class AnatomicalStructureEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class AuthorEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class InstitutionEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class PaperEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class HypothesisEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EvidenceEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class LocationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EthnicityEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+
+<span id="user-content-medlitmedlitentitiespy"></span>
+
+# medlit/medlit/entities.py
+
+Medical entity types for the knowledge graph.
+
+## `class DiseaseEntity(BaseEntity)`
+
+Represents medical conditions, disorders, and syndromes.
+
+Uses UMLS as the primary identifier system with additional mappings to
+MeSH and ICD-10 for interoperability with clinical systems.
+
+Mapping from med-lit-schema:
+- Disease.entity_id (UMLS ID) → BaseEntity.entity_id
+- Disease.umls_id → BaseEntity.canonical_ids["umls"]
+- Disease.mesh_id → BaseEntity.canonical_ids["mesh"]
+- Disease.icd10_codes → BaseEntity.metadata["icd10_codes"]
+- Disease.category → BaseEntity.metadata["category"]
+
+## `class GeneEntity(BaseEntity)`
+
+Represents genes and their genomic information.
+
+Uses HGNC (HUGO Gene Nomenclature Committee) as the primary identifier
+with additional mappings to NCBI Entrez Gene.
+
+Mapping from med-lit-schema:
+- Gene.entity_id (HGNC ID) → BaseEntity.entity_id
+- Gene.hgnc_id → BaseEntity.canonical_ids["hgnc"]
+- Gene.entrez_id → BaseEntity.canonical_ids["entrez"]
+- Gene.symbol → BaseEntity.metadata["symbol"]
+- Gene.chromosome → BaseEntity.metadata["chromosome"]
+
+## `class DrugEntity(BaseEntity)`
+
+Represents medications and therapeutic substances.
+
+Uses RxNorm as the primary identifier for standardized medication naming.
+
+Mapping from med-lit-schema:
+- Drug.entity_id (RxNorm ID) → BaseEntity.entity_id
+- Drug.rxnorm_id → BaseEntity.canonical_ids["rxnorm"]
+- Drug.brand_names → BaseEntity.metadata["brand_names"]
+- Drug.drug_class → BaseEntity.metadata["drug_class"]
+- Drug.mechanism → BaseEntity.metadata["mechanism"]
+
+## `class ProteinEntity(BaseEntity)`
+
+Represents proteins and their biological functions.
+
+Uses UniProt as the primary identifier for protein sequences and annotations.
+
+Mapping from med-lit-schema:
+- Protein.entity_id (UniProt ID) → BaseEntity.entity_id
+- Protein.uniprot_id → BaseEntity.canonical_ids["uniprot"]
+- Protein.gene_id → BaseEntity.metadata["gene_id"]
+- Protein.function → BaseEntity.metadata["function"]
+- Protein.pathways → BaseEntity.metadata["pathways"]
+
+## `class SymptomEntity(BaseEntity)`
+
+Represents clinical signs and symptoms.
+
+## `class ProcedureEntity(BaseEntity)`
+
+Represents medical tests, diagnostics, treatments.
+
+## `class BiomarkerEntity(BaseEntity)`
+
+Represents measurable indicators.
+
+## `class PathwayEntity(BaseEntity)`
+
+Represents biological pathways.
+
+## `class LocationEntity(BaseEntity)`
+
+Represents geographic locations relevant to epidemiological analysis.
+
+Used for tracking disease prevalence by region, endemic diseases, and
+geographic health disparities. Uses provisional IDs initially; canonical
+IDs could come from GeoNames or ISO country codes in the future.
+
+## `class EthnicityEntity(BaseEntity)`
+
+Represents ethnic or population groups for epidemiological analysis.
+
+Used for tracking genetic predispositions, health disparities, and
+population-specific disease risk factors. Uses provisional IDs initially;
+canonical IDs could come from standardized ethnicity codes in the future.
+
+
+<span id="user-content-medlitmedlitpipelineinitpy"></span>
+
+# medlit/medlit/pipeline/__init__.py
+
+Pipeline components for medical literature extraction.
+
+
+<span id="user-content-medlitmedlitpipelineauthoritylookuppy"></span>
+
+# medlit/medlit/pipeline/authority_lookup.py
+
+Canonical ID lookup from medical ontology authorities.
+
+Provides lookup functionality for canonical IDs from various medical ontology
+sources: UMLS, HGNC, RxNorm, and UniProt.
+
+Features persistent caching to avoid repeated API calls across runs.
+
+> Canonical ID lookup from medical ontology authorities.
+
+Provides lookup functionality for canonical IDs from various medical ontology
+sources: UMLS, HGNC, RxNorm, and UniProt.
+
+Features persistent caching to avoid repeated API calls across runs.
+
+
+### `def validate_umls_type(umls_id: str, assigned_type: str, _cache: dict[tuple[str, str], tuple[bool, str | None]] | None = None, _semantic_types_override: dict[str, list[str]] | None = None) -> tuple[bool, str | None]`
+
+Return (ok, correct_type_if_known).
+
+Looks up the UMLS semantic type(s) for the CUI and checks whether assigned_type
+is compatible. Returns (False, expected_type) when assigned_type is incompatible
+and the mapping is unambiguous; (True, None) when compatible; (False, None) when
+ambiguous (multiple allowed types). Uses in-memory cache keyed by (umls_id,
+assigned_type) so each CUI is looked up at most once per run when cache is passed.
+For tests, pass _semantic_types_override mapping CUI -> list of semantic type names
+to avoid live API calls.
+
+## `class CanonicalIdLookup(CanonicalIdLookupInterface)`
+
+Look up canonical IDs from various medical ontology authorities.
+
+Supports lookup from:
+- UMLS (diseases, symptoms, procedures)
+- HGNC (genes)
+- RxNorm (drugs)
+- UniProt (proteins)
+
+Features persistent caching to disk to avoid repeated API calls across runs.
+
+### `def CanonicalIdLookup.__init__(self, umls_api_key: Optional[str] = None, cache_file: Optional[Path] = None, embedding_generator: Any = None, similarity_threshold: float = 0.5)`
+
+Initialize the canonical ID lookup service.
+
+Args:
+    umls_api_key: Optional UMLS API key. If not provided, will try to
+                 read from UMLS_API_KEY environment variable.
+    cache_file: Optional path to cache file. If not provided, defaults
+               to "canonical_id_cache.json" in current directory.
+    embedding_generator: Optional; if set, used to rerank multiple candidates
+                        (UMLS/MeSH) by cosine similarity to the search term.
+                        Must have async generate(text: str) -> tuple[float, ...].
+    similarity_threshold: Min cosine similarity when using embedding rerank (0-1).
+
+### `def CanonicalIdLookup._save_cache(self, force: bool = False) -> None`
+
+Save cache to disk.
+
+Args:
+    force: If True, save even if cache is not marked dirty (for emergency saves).
+
+### `async def CanonicalIdLookup.lookup(self, term: str, entity_type: str) -> Optional[CanonicalId]`
+
+Look up canonical ID for a medical term (interface method).
+
+Args:
+    term: The entity name/mention text
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+
+Returns:
+    CanonicalId if found, None otherwise
+
+### `async def CanonicalIdLookup.lookup_canonical_id(self, term: str, entity_type: str) -> Optional[str]`
+
+Look up canonical ID for a medical term.
+
+Args:
+    term: The entity name/mention text
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+
+Returns:
+    Canonical ID string if found, None otherwise
+
+### `async def CanonicalIdLookup._rerank_by_similarity(self, term: str, candidates: list[tuple[str, str]]) -> Optional[str]`
+
+Pick the candidate whose label is most similar to the search term.
+
+candidates: list of (id, label) e.g. (cui, name) or (mesh_id, label).
+Returns the id of the best candidate above threshold, or None.
+
+### `async def CanonicalIdLookup._lookup_umls(self, term: str) -> Optional[str]`
+
+Look up UMLS CUI for a disease/symptom term.
+
+Tries exact match first, then words match for broader candidates.
+When multiple results and embedding_generator is set, reranks by cosine similarity.
+Falls back to MeSH if UMLS API key is not available.
+
+### `def CanonicalIdLookup._normalize_mesh_search_terms(self, term: str) -> list[str]`
+
+Generate normalized search terms for MeSH lookup.
+
+MeSH uses formal terminology, so we normalize common informal terms.
+Returns a list of search terms to try, in order of preference.
+
+Args:
+    term: Original search term
+
+Returns:
+    List of normalized search terms (original first, then normalized variants)
+
+### `async def CanonicalIdLookup._lookup_mesh(self, term: str) -> Optional[str]`
+
+Look up MeSH descriptor ID for a disease/symptom term.
+
+MeSH (Medical Subject Headings) is freely accessible without API key.
+Returns MeSH descriptor IDs like "MeSH:D001943" (breast neoplasms).
+
+Strategy:
+1. Try descriptor lookup with original term and normalized variants
+2. Collect all results and score them together
+3. Return the best match across all search terms
+
+### `def CanonicalIdLookup._extract_mesh_id_from_results(self, data: list, search_terms: str | list[str]) -> Optional[str]`
+
+Extract MeSH descriptor ID from API results, preferring best matches.
+
+Scores results based on how well they match any of the provided search terms.
+This allows normalized terms (e.g., "breast neoplasms") to score well even
+when the original search was "breast cancer".
+
+Scoring strategy:
+1. Exact match (case-insensitive) gets highest score
+2. Exact word match (all words present) gets high score
+3. Prefer shorter labels (more general terms) over longer ones (complications)
+4. Prefer matches where term is at the start of the label
+5. Penalize matches that are much longer than the search term (likely complications)
+6. Prefer matches to earlier search terms (original > normalized)
+
+Args:
+    data: List of result dictionaries from MeSH API
+    search_terms: Single search term (str) or list of search terms tried
+                 (original first, then normalized variants). If a single string
+                 is provided, it's treated as the only search term.
+
+### `async def CanonicalIdLookup._try_mesh_descriptor_lookup_all(self, term: str) -> list[dict]`
+
+Try to find MeSH descriptors for a term, returning all results.
+
+Args:
+    term: Search term
+
+Returns:
+    List of result dictionaries from MeSH API
+
+### `async def CanonicalIdLookup._lookup_hgnc(self, term: str) -> Optional[str]`
+
+Look up HGNC ID for a gene.
+
+Tries official symbol first, then falls back to alias search.
+This handles cases like "p53" which is an alias for "TP53".
+
+### `async def CanonicalIdLookup._lookup_rxnorm(self, term: str) -> Optional[str]`
+
+Look up RxNorm ID for a drug.
+
+### `async def CanonicalIdLookup._lookup_mesh_by_id(self, mesh_id: str) -> Optional[str]`
+
+Look up MeSH ID by known ID (no search needed).
+
+Args:
+    mesh_id: MeSH descriptor ID (e.g., "D001943" or "MeSH:D001943")
+
+Returns:
+    Formatted MeSH ID (e.g., "MeSH:D001943")
+
+### `async def CanonicalIdLookup._lookup_umls_by_id(self, umls_id: str) -> Optional[str]`
+
+Look up UMLS CUI by known ID (no search needed).
+
+Args:
+    umls_id: UMLS CUI (e.g., "C0006142")
+
+Returns:
+    UMLS CUI string (e.g., "C0006142")
+
+### `async def CanonicalIdLookup._lookup_hgnc_by_id(self, hgnc_id: str) -> Optional[str]`
+
+Look up HGNC ID by known ID (no search needed).
+
+Args:
+    hgnc_id: HGNC ID (e.g., "1100" or "HGNC:1100")
+
+Returns:
+    Formatted HGNC ID (e.g., "HGNC:1100")
+
+### `async def CanonicalIdLookup._lookup_rxnorm_by_id(self, rxnorm_id: str) -> Optional[str]`
+
+Look up RxNorm ID by known ID (no search needed).
+
+Args:
+    rxnorm_id: RxNorm ID (e.g., "1187832" or "RxNorm:1187832")
+
+Returns:
+    Formatted RxNorm ID (e.g., "RxNorm:1187832")
+
+### `async def CanonicalIdLookup._lookup_uniprot_by_id(self, uniprot_id: str) -> Optional[str]`
+
+Look up UniProt ID by known ID (no search needed).
+
+Args:
+    uniprot_id: UniProt accession (e.g., "P38398" or "UniProt:P38398")
+
+Returns:
+    Formatted UniProt ID (e.g., "UniProt:P38398")
+
+### `async def CanonicalIdLookup._lookup_uniprot(self, term: str) -> Optional[str]`
+
+Look up UniProt ID for a protein.
+
+### `async def CanonicalIdLookup._lookup_ror(self, term: str) -> Optional[str]`
+
+Look up ROR ID for a research institution using the affiliation endpoint.
+
+Uses the ROR affiliation-matching endpoint which is designed for messy
+affiliation strings (e.g. department names, abbreviations, addresses).
+Returns a ROR ID (format "ROR:{id}") for confident matches only.
+No authentication required.
+
+### `async def CanonicalIdLookup._lookup_orcid(self, term: str) -> Optional[str]`
+
+Look up ORCID iD for a researcher by name using the ORCID public API.
+
+Uses the ORCID public search API (no authentication required for search).
+Returns an ORCID iD (format "ORCID:0000-0001-2345-6789") when a single
+unambiguous result is found for the name.
+
+### `def CanonicalIdLookup._dbpedia_label_matches(self, term: str, label: str) -> bool`
+
+Check if a DBPedia label is a good match for the search term.
+
+### `async def CanonicalIdLookup._lookup_dbpedia(self, term: str) -> Optional[str]`
+
+Look up DBPedia URI as fallback for any entity type.
+
+DBPedia is a general knowledge base extracted from Wikipedia.
+Used as a fallback when specialized medical ontologies don't find a match.
+
+Only accepts results where the label closely matches the search term
+to avoid garbage matches like "HER2-enriched" → "Insect".
+
+### `async def CanonicalIdLookup._extract_authoritative_id_from_dbpedia(self, dbpedia_id: str, entity_type: str, original_term: str) -> Optional[str]`
+
+Extract authoritative ID from DBPedia resource properties.
+
+After finding a DBPedia match, query the resource to find authoritative IDs
+(MeSH, UMLS, HGNC, RxNorm, UniProt) that may be embedded in DBPedia properties.
+If found, perform a follow-up lookup with the authoritative source.
+
+Args:
+    dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+    original_term: Original search term for caching
+
+Returns:
+    Authoritative canonical ID if found, None otherwise
+
+### `def CanonicalIdLookup._extract_authoritative_id_from_dbpedia_sync(self, client: 'httpx.Client', dbpedia_id: str, entity_type: str, original_term: str) -> Optional[str]`
+
+Synchronous version of authoritative ID extraction from DBPedia.
+
+Args:
+    client: Synchronous HTTP client
+    dbpedia_id: DBPedia ID in format "DBPedia:ResourceName"
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+    original_term: Original search term for caching
+
+Returns:
+    Authoritative canonical ID if found, None otherwise
+
+### `def CanonicalIdLookup._lookup_mesh_by_id_sync(self, mesh_id: str) -> Optional[str]`
+
+Sync version: Look up MeSH ID by known ID.
+
+### `def CanonicalIdLookup._lookup_umls_by_id_sync(self, umls_id: str) -> Optional[str]`
+
+Sync version: Look up UMLS CUI by known ID.
+
+### `def CanonicalIdLookup._lookup_hgnc_by_id_sync(self, hgnc_id: str) -> Optional[str]`
+
+Sync version: Look up HGNC ID by known ID.
+
+### `def CanonicalIdLookup.lookup_hgnc_by_cui_sync(self, cui: str) -> Optional[str]`
+
+Resolve UMLS CUI to HGNC ID for gene concepts.
+
+Uses UMLS REST API to fetch preferred atom name, then HGNC lookup.
+Results are cached under key 'cui:{cui}' with entity_type 'gene'.
+Required for cross-paper gene dedup when one paper has UMLS-only, another has HGNC.
+
+Args:
+    cui: UMLS CUI (e.g., C0079419 for TP53)
+
+Returns:
+    HGNC ID string (e.g., HGNC:11998) or None if resolution fails
+
+### `def CanonicalIdLookup._lookup_rxnorm_by_id_sync(self, rxnorm_id: str) -> Optional[str]`
+
+Sync version: Look up RxNorm ID by known ID.
+
+### `def CanonicalIdLookup._lookup_uniprot_by_id_sync(self, uniprot_id: str) -> Optional[str]`
+
+Sync version: Look up UniProt ID by known ID.
+
+### `def CanonicalIdLookup.lookup_sync(self, term: str, entity_type: str) -> Optional[CanonicalId]`
+
+Synchronous lookup (interface method).
+
+Args:
+    term: The entity name/mention text
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+
+Returns:
+    CanonicalId if found, None otherwise
+
+### `def CanonicalIdLookup.lookup_canonical_id_sync(self, term: str, entity_type: str) -> Optional[str]`
+
+Synchronous wrapper for use as Ollama tool.
+
+This is needed because Ollama tool functions must be synchronous.
+Uses the cache first, then makes synchronous HTTP calls if needed.
+
+Args:
+    term: The entity name/mention text
+    entity_type: Type of entity (disease, gene, drug, protein, etc.)
+
+Returns:
+    Canonical ID string if found, None otherwise
+
+### `def CanonicalIdLookup._lookup_umls_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous UMLS lookup with MeSH fallback.
+
+### `def CanonicalIdLookup._lookup_mesh_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous MeSH lookup with term normalization.
+
+Uses the same multi-term approach as async version.
+
+### `def CanonicalIdLookup._lookup_hgnc_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous HGNC lookup with alias fallback.
+
+### `def CanonicalIdLookup._lookup_rxnorm_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous RxNorm lookup.
+
+### `def CanonicalIdLookup._lookup_uniprot_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous UniProt lookup.
+
+### `def CanonicalIdLookup._lookup_dbpedia_sync(self, client: 'httpx.Client', term: str) -> Optional[str]`
+
+Synchronous DBPedia lookup as fallback with validation.
+
+### `async def CanonicalIdLookup.close(self) -> None`
+
+Close the HTTP client and save cache.
+
+### `async def CanonicalIdLookup.__aenter__(self)`
+
+Async context manager entry.
+
+### `async def CanonicalIdLookup.__aexit__(self, exc_type, exc_val, exc_tb)`
+
+Async context manager exit - saves cache and closes client.
+
+
+<span id="user-content-medlitmedlitpipelinebundlebuilderpy"></span>
+
+# medlit/medlit/pipeline/bundle_builder.py
+
+build_bundle: Build kgbundle from merged and extracted.
+
+Reads merged output (entities.json, relationships.json, id_map.json, synonym_cache.json)
+and extracted paper_*.json bundles; writes a kgbundle directory loadable by kgserver.
+
+> 
+build_bundle: Build kgbundle from merged and extracted.
+
+Reads merged output (entities.json, relationships.json, id_map.json, synonym_cache.json)
+and extracted paper_*.json bundles; writes a kgbundle directory loadable by kgserver.
+
+
+### `def load_merged_output(merged_dir: Path) -> tuple[list[dict], list[dict], dict, dict]`
+
+Load merged ingest output and id_map.
+
+Returns (entities, relationships, id_map, synonym_cache).
+Raises FileNotFoundError if id_map.json is missing.
+
+### `def load_extracted_bundles(bundles_dir: Path) -> list[tuple[str, PerPaperBundle]]`
+
+Load all paper_*.json bundles from bundles_dir. Returns list of (paper_id, bundle).
+
+### `def _section_from_evidence_id(evidence_id: str) -> str | None`
+
+Extract section from evidence_id. Format: {paper_id}:{section}:{paragraph_idx}:{method}.
+
+### `def _entity_usage_from_bundles(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]]) -> dict[str, dict[str, Any]]`
+
+Compute usage_count, total_mentions, supporting_documents, first_seen_* per merge_key.
+
+Semantics:
+- usage_count: number of unique papers in supporting_documents (each paper counted once per entity).
+- total_mentions: sum of evidence_ids across all relationships where the entity appears (subject or object).
+Large gaps (e.g. usage_count=7, total_mentions=65) are expected when an entity appears many times within a few papers.
+
+### `def _credit_entity(merge_key: str | None, evidence_id: str | None) -> None`
+
+Credit merge_key with one mention from paper_id.
+
+### `def _merged_entity_to_entity_row(ent: dict, usage: dict[str, Any], created_at: str) -> EntityRow`
+
+Convert merged entity dict to EntityRow.
+
+### `def _relationship_evidence_stats(merged_rels: list[dict], bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]]) -> dict[tuple[str, str, str], dict[str, Any]]`
+
+For each (sub, pred, obj) merge key, compute evidence_count, strongest_evidence_quote, evidence_confidence_avg.
+
+### `def _merged_rel_to_relationship_row(rel: dict, stats: dict[tuple[str, str, str], dict[str, Any]], created_at: str) -> RelationshipRow`
+
+Convert merged relationship dict to RelationshipRow.
+
+### `def _build_evidence_rows(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]], merged_relationships: list[dict]) -> list[EvidenceRow]`
+
+Build EvidenceRow list from bundles; relationship_key uses merge keys. Offsets stubbed (0, len(text)).
+
+### `def _build_mention_rows(bundles: list[tuple[str, PerPaperBundle]], id_map: dict[str, dict[str, str]], created_at: str) -> list[MentionRow]`
+
+Build MentionRow list from bundles; entity_id is merge_key. Offsets stubbed (0, len(text_span)).
+
+### `def _fetch_pmc_titles(pmc_ids: list[str], batch_size: int = 200) -> dict[str, str]`
+
+Batch-fetch paper titles from NCBI esummary for a list of PMC IDs.
+
+Returns a dict mapping PMC ID (e.g. 'PMC12345') -> title string.
+IDs not found in the response are omitted. Rate-limited to NCBI guidelines
+(max 3 req/s without API key; we use 0.34s delay between batches).
+
+### `def run_build_bundle(merged_dir: Path, bundles_dir: Path, output_dir: Path, pmc_xmls_dir: Path | None = None) -> dict[str, Any]`
+
+Build kgbundle from merged ingest output and extracted bundles. Writes all bundle files.
+
+If pmc_xmls_dir is provided, copies JATS-XML source files for each paper into
+output_dir/sources/ (for get_paper_source diagnostic tool).
+
+
+<span id="user-content-medlitmedlitpipelinecanonicalurlspy"></span>
+
+# medlit/medlit/pipeline/canonical_urls.py
+
+Utility functions for constructing canonical URLs from entity canonical IDs.
+
+### `def build_canonical_url(canonical_id: str, entity_type: Optional[str] = None) -> Optional[str]`
+
+Build a canonical URL for an entity based on its canonical ID.
+
+Supports:
+- DBPedia: https://dbpedia.org/page/{entity_name}
+- MeSH: https://meshb.nlm.nih.gov/record/ui?ui={ID}
+- UniProt: https://www.uniprot.org/uniprotkb/{ID}
+- HGNC: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/{ID}
+- UMLS: https://uts.nlm.nih.gov/uts/umls/concept/{ID}
+- RxNorm: https://www.nlm.nih.gov/research/umls/rxnorm/overview.html (no direct link, returns None)
+
+Args:
+    canonical_id: The canonical ID (e.g., "MeSH:D000570", "UniProt:P38398", "HGNC:1100")
+    entity_type: Optional entity type hint (e.g., "disease", "gene", "protein")
+
+Returns:
+    URL string if a link can be constructed, None otherwise.
+
+### `def build_canonical_urls_from_dict(canonical_ids: dict[str, str], entity_type: Optional[str] = None) -> dict[str, str]`
+
+Build canonical URLs for all canonical IDs in a dictionary.
+
+Args:
+    canonical_ids: Dictionary mapping source names to canonical IDs
+        (e.g., {"umls": "C0006142", "mesh": "MeSH:D000570"})
+    entity_type: Optional entity type hint
+
+Returns:
+    Dictionary mapping source names to URLs (e.g., {"umls": "https://...", "mesh": "https://..."})
+
+
+<span id="user-content-medlitmedlitpipelineconfigpy"></span>
+
+# medlit/medlit/pipeline/config.py
+
+Load medlit pipeline config from TOML (e.g. medlit.toml).
+
+Config file is looked up in order:
+  1. Path in MEDLIT_CONFIG env var (if set)
+  2. medlit.toml in the medlit package directory
+  3. medlit.toml in the current working directory
+
+If no file is found, built-in defaults are used (window_size=1536, overlap=400).
+
+> Load medlit pipeline config from TOML (e.g. medlit.toml).
+
+Config file is looked up in order:
+  1. Path in MEDLIT_CONFIG env var (if set)
+  2. medlit.toml in the medlit package directory
+  3. medlit.toml in the current working directory
+
+If no file is found, built-in defaults are used (window_size=1536, overlap=400).
+
+
+### `def _default_config_paths() -> list[Path]`
+
+Return paths to check for medlit.toml (first existing wins).
+
+### `def load_medlit_config() -> dict[str, Any]`
+
+Load medlit config from TOML file.
+
+Returns:
+    Config dict with at least "chunker" key containing window_size and overlap.
+    Uses DEFAULT_WINDOW_SIZE and DEFAULT_OVERLAP if no file or [chunker] section.
+
+
+<span id="user-content-medlitmedlitpipelinededuppy"></span>
+
+# medlit/medlit/pipeline/dedup.py
+
+ingest: Deduplication and promotion over per-paper bundles.
+
+Reads all PerPaperBundle JSONs from a directory, builds name/type index (with
+synonym cache), resolves high-confidence SAME_AS, assigns canonical IDs,
+updates relationship refs, accumulates triples, and saves the synonym cache.
+Original bundle files are never modified; output is written to a separate
+directory (overlay or merged graph).
+
+> ingest: Deduplication and promotion over per-paper bundles.
+
+Reads all PerPaperBundle JSONs from a directory, builds name/type index (with
+synonym cache), resolves high-confidence SAME_AS, assigns canonical IDs,
+updates relationship refs, accumulates triples, and saves the synonym cache.
+Original bundle files are never modified; output is written to a separate
+directory (overlay or merged graph).
+
+
+### `def _normalize_for_dedup(name: str) -> str`
+
+Lowercase, strip, and apply British→American spelling map for dedup lookups.
+
+### `def _is_authoritative_id(s: str) -> bool`
+
+Return True if s looks like an authoritative ontology ID, not a synthetic slug.
+
+### `def _format_hgnc_id(val: str) -> str`
+
+Ensure HGNC ID has HGNC: prefix if numeric.
+
+### `def _preferred_authoritative_id(e: ExtractedEntityRow, lookup: Any) -> Optional[str]`
+
+Return the best authoritative ID for merge key, preferring HGNC for genes.
+
+For Gene: if both umls_id and hgnc_id present, prefer hgnc_id. If only umls_id,
+resolve via UMLS→HGNC cross-lookup when lookup is available.
+For other classes: first match in canonical_id, umls_id, hgnc_id, rxnorm_id, uniprot_id.
+
+### `def _entity_class_to_lookup_type(entity_class: str, entity_class_to_lookup: dict[str, str]) -> Optional[str]`
+
+Map bundle entity_class to CanonicalIdLookup entity_type (lowercase).
+
+Deprecated: will be removed when the resolution loop in run_ingest is
+replaced by PostgresIdentityServer.resolve() in Piece 3.
+
+### `def _build_entity_class_to_lookup_type() -> dict[str, str]`
+
+Derive bundle_class -> lookup_type from domain_spec.NORMALIZED_TO_BUNDLE.
+
+### `def _build_entity_class_to_predicate_type() -> dict[str, str]`
+
+Bundle_class -> entity type for predicate constraint checks (no authority overrides).
+
+Authority overrides (e.g. Hormone->drug) are for UMLS/RxNorm lookup, not for
+predicate semantics. CAUSES(hormone, symptom) requires Hormone->hormone.
+
+### `def _should_swap_relationship(predicate: str, subject_class: str, object_class: str, predicate_constraints: dict[str, Any], entity_class_to_lookup: dict[str, str], entity_class_to_predicate_type: dict[str, str]) -> bool`
+
+Return True if subject and object should be swapped to satisfy predicate constraints.
+
+Fixes backwards relationships from Pass 1 LLM (e.g. disease treats drug -> drug treats disease).
+Uses entity_class_to_predicate_type (no authority overrides) for semantic type checks.
+
+### `def _canonical_id_slug() -> str`
+
+Generate a short synthetic merge key for entities without authoritative ID.
+
+### `def run_ingest(bundle_dir: Path, output_dir: Path, synonym_cache_path: Optional[Path] = None, canonical_id_cache_path: Optional[Path] = None, embedding_generator: Any = None, similarity_threshold: float = 0.88, cross_type_threshold: float = 0.9) -> dict[str, Any]`
+
+Run ingest: dedup and promotion. Reads bundles from bundle_dir, writes to output_dir.
+
+Original bundle files in bundle_dir are never modified.
+Returns summary dict (entities_count, relationships_count, etc.).
+
+Args:
+    embedding_generator: Optional; if set, used for embedding-based dedup of provisional
+        entities and cross-type candidate detection. Must have generate(text) -> vector.
+    similarity_threshold: Min cosine similarity for same-class provisional merge (default 0.88).
+    cross_type_threshold: Min similarity for cross-type candidate flagging (default 0.90).
+
+### `def _run_ingest_impl(bundle_dir: Path, output_dir: Path, synonym_cache_path: Path, cache: dict, lookup: Any, embedding_generator: Any = None, similarity_threshold: float = 0.88, cross_type_threshold: float = 0.9, entity_class_to_lookup: Optional[dict[str, str]] = None, entity_class_to_predicate_type: Optional[dict[str, str]] = None) -> dict[str, Any]`
+
+Inner ingest implementation (lookup created and saved by caller).
+
+### `def _populate_name_index(cid: str, n: str, ec: str) -> None`
+
+Add (normalized_name, entity_class) -> cid for name, synonyms, and spelling-normalized forms.
+
+### `def _resolve_by_name(name: str) -> Optional[str]`
+
+Fuzzy fallback: resolve a free-form name string to a canonical ID.
+
+When the LLM writes a relationship subject/object as a plain name (e.g.
+"FOLFIRINOX") rather than the entity ID it assigned ("mfolfirinox"),
+local_to_canonical misses. This searches name_type_to_canonical across
+all entity classes using exact, normalized, and synonym matches.
+
+### `async def run_ingest_with_identity_server(bundle_dir: Path, output_dir: Path, identity_server: Any) -> dict[str, Any]`
+
+Run ingest using PostgresIdentityServer for entity resolution.
+
+Replaces the hand-built name/type index, synonym cache, authority lookup
+chain, SAME_AS resolution, and embedding-based dedup with calls to the
+identity server's ``resolve()`` and ``on_entity_added()`` methods.
+
+The identity server handles:
+- Spelling normalization (via DomainSchema.normalize_mention)
+- Authority lookup with type overrides (via MedLitPromotionPolicy)
+- Concurrent-safe entity creation (INSERT ... ON CONFLICT)
+- Synonym detection and auto-merge (via on_entity_added)
+- Provisional→canonical promotion
+
+The pipeline retains responsibility for:
+- Relationship predicate swap correction (_should_swap_relationship)
+- Evidence and provenance accumulation per triple
+- Output file writing (id_map.json, entities.json, relationships.json)
+
+Args:
+    bundle_dir: Directory containing paper_*.json bundle files (Pass 1 output).
+    output_dir: Directory to write merged output files.
+    identity_server: A PostgresIdentityServer (or any IdentityServer) instance.
+
+Returns:
+    Summary dict with entities_count, relationships_count, etc.
+
+
+<span id="user-content-medlitmedlitpipelinementionspy"></span>
+
+# medlit/medlit/pipeline/mentions.py
+
+Entity mention extraction from journal articles.
+
+Extracts entity mentions from Paper JSON format (from med-lit-schema).
+Since the papers already have extracted entities, we convert those to EntityMention objects.
+Can also use Ollama LLM for NER extraction from text.
+
+> Entity mention extraction from journal articles.
+
+Extracts entity mentions from Paper JSON format (from med-lit-schema).
+Since the papers already have extracted entities, we convert those to EntityMention objects.
+Can also use Ollama LLM for NER extraction from text.
+
+
+### `def _normalize_mention_key(name: str, entity_type: str) -> tuple[str, str]`
+
+Normalized key for deduping mentions: (alphanumeric lower name, type).
+
+### `def _is_type_masquerading_as_name(name: str, entity_type: str) -> bool`
+
+Return True if the name is just the entity type (or a type label), not a real entity name.
+
+When the LLM (or pre-extracted data) puts the type in the 'entity'/'name' field,
+we get e.g. name='disease', type='disease'. Reject these so we never create
+entities whose name is the type.
+
+## `class MedLitEntityExtractor(EntityExtractorInterface)`
+
+Extract entity mentions from journal articles.
+
+This extractor works with Paper JSON format from med-lit-schema, which
+already contains extracted entities. We convert those to EntityMention objects.
+
+Can also use Ollama LLM to extract entities directly from text if llm_client is provided.
+Note: Canonical ID lookup is handled during the promotion phase, not during extraction.
+
+### `def MedLitEntityExtractor.__init__(self, llm_client: LLMClientInterface | None = None, domain: DomainSchema | None = None)`
+
+Initialize entity extractor.
+
+Args:
+    llm_client: Optional LLM client for extracting entities from text.
+                If None, only uses pre-extracted entities from Paper JSON.
+    domain: Domain schema for entity type validation (needed for normalization).
+
+### `def MedLitEntityExtractor._normalize_entity_type(self, entity_type_raw: str) -> str | None`
+
+Normalize LLM entity types to schema types.
+
+Handles:
+- Multi-type format (drug|protein) → takes first valid type
+- Common mistakes (test → procedure)
+- Invalid types → returns None (skip entity)
+
+Args:
+    entity_type_raw: Raw entity type string from LLM
+
+Returns:
+    Normalized type string if valid, None if invalid/non-medical
+
+### `async def MedLitEntityExtractor.extract(self, document: BaseDocument) -> list[EntityMention]`
+
+Extract entity mentions from a journal article (single chunk).
+
+If the document metadata contains pre-extracted entities (from med-lit-schema),
+we convert those to EntityMention objects. Otherwise, if llm_client is provided,
+extracts entities from document text using LLM (one prompt per document/chunk).
+
+When used behind BatchingEntityExtractor, this is called once per chunk;
+the orchestrator handles streaming and deduplication across chunks.
+
+Args:
+    document: The journal article document (or a chunk document).
+
+Returns:
+    List of EntityMention objects for this document/chunk.
+
+
+<span id="user-content-medlitmedlitpipelinenerextractorpy"></span>
+
+# medlit/medlit/pipeline/ner_extractor.py
+
+NER-based entity extraction for medical literature (PLAN3).
+
+Uses a HuggingFace token-classification (NER) model for fast, local entity
+extraction instead of an LLM. Default model: tner/roberta-base-bc5cdr (BC5CDR
+chemical and disease entities). Install with: pip install -e ".[ner]"
+
+Label mapping (BC5CDR-style): Chemical -> drug, Disease -> disease.
+Gene/protein entities are not covered by this model; use a second model or
+hybrid with LLM for full coverage.
+
+> 
+NER-based entity extraction for medical literature (PLAN3).
+
+Uses a HuggingFace token-classification (NER) model for fast, local entity
+extraction instead of an LLM. Default model: tner/roberta-base-bc5cdr (BC5CDR
+chemical and disease entities). Install with: pip install -e ".[ner]"
+
+Label mapping (BC5CDR-style): Chemical -> drug, Disease -> disease.
+Gene/protein entities are not covered by this model; use a second model or
+hybrid with LLM for full coverage.
+
+
+### `def _normalize_entity_group(label: str) -> str`
+
+Normalize pipeline entity_group to lowercase, strip B-/I- prefix if present.
+
+### `def _get_document_text(document: BaseDocument) -> str`
+
+Get text to run NER on: content or abstract.
+
+### `def _run_ner_sync(pipeline: Any, text: str) -> list[dict]`
+
+Run NER pipeline on text; returns list of dicts with start, end, entity_group, score.
+
+### `def _chunk_text(text: str, chunk_size: int = CHUNK_CHARS, overlap: int = CHUNK_OVERLAP) -> list[tuple[int, str]]`
+
+Split text into overlapping chunks; returns [(start_offset, chunk_text), ...].
+
+### `def _merge_and_dedupe(chunk_results: list[tuple[int, list[dict]]]) -> list[dict]`
+
+Merge NER results from chunks: adjust offsets and dedupe by span (keep higher score).
+
+## `class MedLitNEREntityExtractor(EntityExtractorInterface)`
+
+Extract entity mentions using a local NER model (e.g. BC5CDR).
+
+Much faster than LLM-based extraction. Supports disease and chemical (drug)
+out of the box with the default model; other types can be added via
+label mapping or a different model.
+
+### `def MedLitNEREntityExtractor.__init__(self, model_name_or_path: str = 'tner/roberta-base-bc5cdr', domain: DomainSchema | None = None, device: str | None = None, max_length: int = 512, label_to_type: dict[str, str] | None = None, pipeline: Any = None)`
+
+Initialize the NER extractor.
+
+Args:
+    model_name_or_path: HuggingFace model id or local path.
+    domain: Medlit domain for type filtering; if None, all mapped types kept.
+    device: "cuda", "cpu", or None for auto.
+    max_length: Tokenizer max length.
+    label_to_type: Override label -> medlit type map; default LABEL_TO_MEDLIT_TYPE.
+    pipeline: Optional pre-built NER pipeline (for testing); if set, model is not loaded.
+
+Raises:
+    ImportError: If transformers/torch are not installed (install with pip install -e ".[ner]").
+
+### `async def MedLitNEREntityExtractor.extract(self, document: BaseDocument) -> list[EntityMention]`
+
+Extract entity mentions from document text using the NER model.
+
+
+<span id="user-content-medlitmedlitpipelineparserpy"></span>
+
+# medlit/medlit/pipeline/parser.py
+
+Document parser for journal articles.
+
+Converts raw paper input (PMC XML, JSON, etc.) into JournalArticle documents.
+
+> Document parser for journal articles.
+
+Converts raw paper input (PMC XML, JSON, etc.) into JournalArticle documents.
+
+
+## `class JournalArticleParser(DocumentParserInterface)`
+
+Parse raw journal article content into JournalArticle documents.
+
+This parser handles various input formats (PMC XML, JSON from med-lit-schema,
+etc.) and converts them to kgraph's JournalArticle format.
+
+For now, this is a minimal implementation. A full implementation would:
+1. Parse PMC XML (using existing med-lit-schema parser logic)
+2. Parse JSON from med-lit-schema's Paper format
+3. Extract metadata and map to JournalArticle fields
+
+### `async def JournalArticleParser.parse(self, raw_content: bytes, content_type: str, source_uri: str | None = None) -> JournalArticle`
+
+Parses raw document content into a structured `JournalArticle`.
+
+This method acts as a dispatcher, routing the raw content to the
+appropriate parsing logic based on its `content_type`. It supports
+JSON (conforming to `med-lit-schema`) and PMC XML formats.
+
+Args:
+    raw_content: The raw byte content of the document.
+    content_type: The MIME type of the document, used to select the
+                  correct parser (e.g., "application/json", "application/xml").
+    source_uri: An optional URI for the document's origin, which can be
+                used to infer a document ID.
+
+Returns:
+    A `JournalArticle` instance populated with the parsed data.
+
+Raises:
+    ValueError: If the `content_type` is not supported or if the
+                content is malformed and cannot be parsed.
+
+### `def JournalArticleParser._parse_xml_to_dict(self, root: Any, source_uri: str | None) -> dict[str, Any]`
+
+Converts a PMC XML structure into a dictionary.
+
+This method traverses the XML element tree of a PubMed Central article
+and extracts key information, mapping it to a dictionary that loosely
+conforms to the `med-lit-schema` Paper format. This intermediate
+dictionary is then passed to `_parse_from_dict`.
+
+Args:
+    root: The root element of the parsed XML tree.
+    source_uri: An optional source URI, used as a fallback to derive
+                the paper's ID from its filename.
+
+Returns:
+    A dictionary containing the extracted title, abstract, authors,
+    and other metadata.
+
+### `def JournalArticleParser._parse_from_dict(self, data: dict[str, Any], source_uri: str | None) -> JournalArticle`
+
+Constructs a `JournalArticle` from a dictionary.
+
+This method takes a dictionary (conforming to `med-lit-schema`'s Paper
+format or the output of `_parse_xml_to_dict`) and maps its fields to
+the `JournalArticle` document model.
+
+Key mapping logic:
+-   `document_id` is chosen in order of preference: DOI, then PMID,
+    then the original `paper_id`.
+-   `content` is created by combining the abstract and full text.
+-   Pre-existing `entities` and `relationships` from the input data
+    are moved into the `metadata` dictionary, so that downstream
+    extractors in the kgraph pipeline can find them.
+-   Other fields like authors, publication date, and journal are
+    mapped directly.
+
+Args:
+    data: A dictionary containing the paper's data.
+    source_uri: The original source URI of the document.
+
+Returns:
+    A fully populated `JournalArticle` object.
+
+Raises:
+    ValueError: If no valid identifier (paper_id, doi, or pmid)
+                can be found in the input data.
+
+
+<span id="user-content-medlitmedlitpipelinepmcchunkerpy"></span>
+
+# medlit/medlit/pipeline/pmc_chunker.py
+
+PMC-specific document chunker using iter_pmc_windows for memory-efficient streaming.
+
+Produces DocumentChunks from raw PMC/JATS XML bytes without loading the full
+document into memory. Implements DocumentChunkerInterface with chunk_from_raw()
+for the streaming path and chunk(document) as a fallback for parsed documents.
+
+> PMC-specific document chunker using iter_pmc_windows for memory-efficient streaming.
+
+Produces DocumentChunks from raw PMC/JATS XML bytes without loading the full
+document into memory. Implements DocumentChunkerInterface with chunk_from_raw()
+for the streaming path and chunk(document) as a fallback for parsed documents.
+
+
+### `def _content_type_is_xml(content_type: str) -> bool`
+
+Return True if content_type is XML (strip parameters like ; charset=utf-8).
+
+## `class PMCStreamingChunker(DocumentChunkerInterface)`
+
+Chunker for PMC/JATS XML that uses iter_pmc_windows for memory-efficient chunking.
+
+When chunk_from_raw() is used with XML content type, yields overlapping
+windows from raw bytes without parsing the full document. For chunk(document)
+(e.g. already-parsed document or non-XML), delegates to a windowed chunker
+over document.content.
+
+### `def PMCStreamingChunker.__init__(self, window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP, include_abstract_separately: bool = True, document_chunk_config: ChunkingConfig | None = None)`
+
+Initialize the PMC streaming chunker.
+
+Args:
+    window_size: Target characters per window (used for chunk_from_raw).
+    overlap: Overlap between consecutive windows.
+    include_abstract_separately: If True, first window is abstract alone.
+    document_chunk_config: Config for chunk(document) fallback. If None,
+        uses window_size and overlap for the windowed chunker.
+
+### `async def PMCStreamingChunker.chunk(self, document: BaseDocument) -> list[DocumentChunk]`
+
+Split a parsed document into chunks (fallback when no raw bytes).
+
+Delegates to WindowedDocumentChunker over document.content.
+
+### `async def PMCStreamingChunker.chunk_from_raw(self, raw_content: bytes, content_type: str, document_id: str, source_uri: str | None = None) -> list[DocumentChunk]`
+
+Chunk from raw PMC XML bytes without loading the full document.
+
+Uses iter_pmc_windows for memory-efficient streaming. If content_type
+is not XML, returns a single chunk with decoded text (for non-PMC use).
+
+### `def document_id_from_source_uri(source_uri: str | None) -> str`
+
+Derive a document ID from source_uri (e.g. file stem). Used when parsing is deferred.
+
+
+<span id="user-content-medlitmedlitpipelinepmcstreamingpy"></span>
+
+# medlit/medlit/pipeline/pmc_streaming.py
+
+Streaming PMC XML chunker for full-paper extraction.
+
+Yields overlapping text windows from a PMC/JATS XML document without loading
+the entire body into a single string. Uses iterparse so the parser does not
+hold the full tree in memory; sections are yielded and then cleared.
+
+Use for:
+- Entity extraction: run NER on each window, then merge/dedupe mentions.
+- Relationship extraction: run relationship extraction on each window with
+  the full entity list, then merge relationships.
+
+> Streaming PMC XML chunker for full-paper extraction.
+
+Yields overlapping text windows from a PMC/JATS XML document without loading
+the entire body into a single string. Uses iterparse so the parser does not
+hold the full tree in memory; sections are yielded and then cleared.
+
+Use for:
+- Entity extraction: run NER on each window, then merge/dedupe mentions.
+- Relationship extraction: run relationship extraction on each window with
+  the full entity list, then merge relationships.
+
+
+### `def _local_tag(tag: str) -> str`
+
+Strip XML namespace from tag for comparison.
+
+### `def iter_pmc_sections(raw_content: bytes) -> Iterator[tuple[str, str]]`
+
+Yield (section_id, text) for abstract and each body section.
+
+Uses iterparse so we do not build a full DOM for the body. After
+yielding each element's text we clear it to free memory. Yields:
+- ("abstract", abstract_text) first if present
+- ("sec_<id>", section_text) for each <sec> (full text of that section,
+  including nested secs and paragraphs)
+
+Namespaces in JATS are stripped so we match "abstract", "body", "sec".
+
+### `def iter_overlapping_windows(sections: Iterator[tuple[str, str]], window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP) -> Iterator[tuple[int, str]]`
+
+Turn a stream of (section_id, text) into overlapping windows.
+
+Concatenates section texts. When accumulated length reaches window_size,
+yields (window_index, text). Then slides by (window_size - overlap) so
+consecutive windows overlap by `overlap` characters. This helps the LLM
+see context across boundaries and avoids splitting entities.
+
+If include_abstract_separately is True, the first yielded window is
+always the abstract alone (if any section has section_id == "abstract").
+Subsequent windows are from body content only. Only one window-sized
+buffer is kept in memory.
+
+Args:
+    sections: Iterator of (section_id, text).
+    window_size: Target size of each window in characters.
+    overlap: Number of characters to overlap between consecutive windows.
+    include_abstract_separately: If True, yield abstract as window 0.
+
+Yields:
+    (window_index, text) for each window.
+
+### `def iter_pmc_windows(raw_content: bytes, window_size: int = DEFAULT_WINDOW_SIZE, overlap: int = DEFAULT_OVERLAP, include_abstract_separately: bool = True) -> Iterator[tuple[int, str]]`
+
+Yield overlapping text windows from PMC XML for full-paper extraction.
+
+Convenience generator: iter_pmc_sections(raw_content) -> iter_overlapping_windows(...).
+Use when you have raw PMC/XML bytes and want a sequence of prompts (e.g. for
+entity or relationship extraction) without loading the whole paper into one string.
+
+Args:
+    raw_content: Raw bytes of the PMC/JATS XML document.
+    window_size: Target characters per window.
+    overlap: Overlap between consecutive windows.
+    include_abstract_separately: If True, first window is the abstract alone.
+
+Yields:
+    (window_index, text) for each window.
+
+
+<span id="user-content-medlitmedlitpipelineprovenanceexpansionpy"></span>
+
+# medlit/medlit/pipeline/provenance_expansion.py
+
+Provenance expansion: derive Author, Institution, Paper entities and relationships from metadata.
+
+### `def normalize_author_id(name: str, paper_id: str) -> str`
+
+Return Author:{normalized} where normalized = last word + first initial, lowercased, alphanumeric only.
+
+### `def normalize_institution_id(affiliation: str) -> str`
+
+Return Institution:{normalized} where normalized = first 50 chars, lowercased, non-alphanumeric -> underscore.
+
+### `def expand_provenance(bundle: PerPaperBundle) -> tuple[list[ExtractedEntityRow], list[RelationshipRow]]`
+
+Derive Author, Institution, Paper entities and AUTHORED, AFFILIATED_WITH, DESCRIBED from metadata.
+
+DESCRIBED is limited to the top 2 domain entities by relationship count (central to the paper).
+COAUTHORED_WITH is omitted; derive via AUTHORED hops (Author -> Paper <- Author).
+
+
+<span id="user-content-medlitmedlitpipelinerelationshipspy"></span>
+
+# medlit/medlit/pipeline/relationships.py
+
+Relationship extraction from journal articles.
+
+Extracts relationships from Paper JSON format (from med-lit-schema).
+Since the papers already have extracted relationships, we convert those to BaseRelationship objects.
+Can also use Ollama LLM for relationship extraction from text.
+
+> Relationship extraction from journal articles.
+
+Extracts relationships from Paper JSON format (from med-lit-schema).
+Since the papers already have extracted relationships, we convert those to BaseRelationship objects.
+Can also use Ollama LLM for relationship extraction from text.
+
+
+### `def _deduplicate_relationships_by_predicate_specificity(relationships: list[BaseRelationship]) -> list[BaseRelationship]`
+
+For each (subject_id, object_id), keep only the relationship with highest predicate specificity.
+
+### `def _normalize_evidence_for_match(text: str) -> str`
+
+Normalize evidence text for substring matching: lowercase, strip, collapse whitespace.
+
+### `def _evidence_has_disease_context(evidence: str) -> bool`
+
+Return True if evidence text suggests disease/marker context (IHC, tumor, etc.).
+
+### `def _evidence_contains_both_entities(evidence: str, subject_name: str, object_name: str, subject_entity: BaseEntity | None, object_entity: BaseEntity | None) -> tuple[bool, str | None, dict[str, Any]]`
+
+Check that both subject and object (or synonyms) appear in the evidence text.
+
+Returns:
+    (ok, drop_reason, detail): ok is True only if both entities appear;
+    drop_reason is set when ok is False; detail has subject_in_evidence, object_in_evidence.
+
+### `async def _evidence_contains_both_entities_semantic(evidence: str, subject_entity: BaseEntity, object_entity: BaseEntity, embedding_generator: Any, threshold: float, evidence_cache: dict[str, tuple[float, ...]], entity_name_cache: dict[str, tuple[float, ...]]) -> tuple[bool, str | None, dict[str, Any]]`
+
+Check that evidence semantically contains both entities via embedding similarity.
+
+Uses evidence_cache and entity_name_cache to avoid duplicate embedding API calls
+within a document. Returns same shape as _evidence_contains_both_entities.
+
+## `class MedLitRelationshipExtractor(RelationshipExtractorInterface)`
+
+Extract relationships from journal articles.
+
+This extractor works with Paper JSON format from med-lit-schema, which
+already contains extracted relationships. We convert those to BaseRelationship objects.
+
+Can also use Ollama LLM to extract relationships directly from text if llm_client is provided.
+
+### `def MedLitRelationshipExtractor.__init__(self, llm_client: Optional[LLMClientInterface] = None, domain: Optional['MedLitDomainSchema'] = None, trace_dir: Optional[Path] = None, embedding_generator: Any = None, evidence_similarity_threshold: float = 0.5)`
+
+Initialize relationship extractor.
+
+Args:
+    llm_client: Optional LLM client for extracting relationships from text.
+                If None, only uses pre-extracted relationships from Paper JSON.
+    domain: Optional domain schema for type validation and predicate constraints.
+            If provided, will attempt to swap subject/object on type mismatches.
+    trace_dir: Optional directory for writing trace files. If None, uses default.
+    embedding_generator: Optional embedding generator for semantic evidence validation.
+                        When set, failed string evidence check is retried with cosine similarity.
+    evidence_similarity_threshold: Minimum cosine similarity (0-1) for semantic evidence pass. Default 0.5.
+
+### `def MedLitRelationshipExtractor.trace_dir(self) -> Path`
+
+Get the trace directory.
+
+### `def MedLitRelationshipExtractor.trace_dir(self, value: Path) -> None`
+
+Set the trace directory.
+
+### `def MedLitRelationshipExtractor._should_swap_subject_object(self, predicate: str, subject_entity: BaseEntity, object_entity: BaseEntity) -> bool`
+
+Check if subject and object should be swapped based on type constraints.
+
+Args:
+    predicate: The relationship predicate
+    subject_entity: The subject entity
+    object_entity: The object entity
+
+Returns:
+    True if swapping subject and object would satisfy type constraints, False otherwise.
+
+### `def MedLitRelationshipExtractor._validate_predicate_semantics(self, predicate: str, evidence: str) -> bool`
+
+Validate that predicate semantics match the evidence text.
+
+Checks for semantic mismatches like:
+- "increases_risk" with positive therapeutic language
+- "treats" with negative/harmful language
+
+Args:
+    predicate: The relationship predicate (e.g., "treats", "increases_risk")
+    evidence: The evidence text supporting the relationship
+
+Returns:
+    True if predicate matches evidence semantics, False if there's a mismatch.
+
+### `async def MedLitRelationshipExtractor.extract(self, document: BaseDocument, entities: Sequence[BaseEntity]) -> list[BaseRelationship]`
+
+Extract relationships from a journal article.
+
+If the document metadata contains pre-extracted relationships (from med-lit-schema),
+we convert those to BaseRelationship objects. Otherwise, if llm_client is provided,
+extracts relationships from document text using LLM.
+
+Args:
+    document: The journal article document.
+    entities: The resolved entities from this document.
+
+Returns:
+    List of BaseRelationship objects representing relationships in the paper.
+
+### `def MedLitRelationshipExtractor._build_llm_prompt(self, text_sample: str, entity_list: str) -> str`
+
+Build the prompt for the LLM.
+
+Notes:
+- This prompt is driven by the domain schema:
+  - self._domain.relationship_types (vocabulary)
+  - self._domain.predicate_constraints (allowed subject/object types)
+- Predicates must be returned in *lowercase* (e.g. "treats"), because downstream
+  code currently normalizes and stores predicates as lowercase. :contentReference[oaicite:3]{index=3}
+
+### `async def MedLitRelationshipExtractor._extract_with_llm(self, document: BaseDocument, entities: Sequence[BaseEntity]) -> list[BaseRelationship]`
+
+Extract relationships using LLM.
+
+Also writes a trace file to /tmp/kgraph-relationship-traces/ for debugging.
+The trace captures: prompt, raw LLM output, parsed JSON, and per-item decisions.
+
+### `async def MedLitRelationshipExtractor._process_llm_item(self, item: Any, entity_index: dict[str, list[BaseEntity]], document: BaseDocument) -> tuple[BaseRelationship | None, dict[str, Any]]`
+
+Process a single item from the LLM response.
+
+### `def MedLitRelationshipExtractor.write_skip_trace(self, document_id: str, reason: str, entity_count: int) -> None`
+
+Write a minimal trace file when a window is skipped (e.g. fewer than 2 entities).
+
+Uses the same path convention as _write_trace so skip and full traces
+appear in the same directory. Call from WindowedRelationshipExtractor
+when a chunk is skipped so --trace-all still produces a trace per window.
+
+### `def MedLitRelationshipExtractor._write_trace(self, document_id: str, trace: dict[str, Any]) -> None`
+
+Write trace file for debugging relationship extraction.
+
+When document_id is from a windowed run (e.g. PMC12770061_window_5),
+the filename includes the window index so each window gets its own file
+(e.g. PMC12770061.5.relationships.trace.json) and earlier windows are
+not overwritten.
+
+
+<span id="user-content-medlitmedlitpipelineresolvepy"></span>
+
+# medlit/medlit/pipeline/resolve.py
+
+Entity resolution for medical literature domain.
+
+Resolves entity mentions to canonical entities using UMLS, HGNC, RxNorm, UniProt IDs.
+
+> Entity resolution for medical literature domain.
+
+Resolves entity mentions to canonical entities using UMLS, HGNC, RxNorm, UniProt IDs.
+
+
+## `class MedLitEntityResolver(BaseModel, EntityResolverInterface)`
+
+Resolve medical entity mentions to canonical or provisional entities.
+
+Resolution strategy (hybrid approach):
+1. If mention has canonical_id_hint (from pre-extracted entities), use that
+2. Check if entity with that ID already exists in storage
+3. If not, create new canonical entity (since we have authoritative IDs)
+4. For mentions without canonical IDs:
+   a. Try embedding-based semantic matching against existing entities (if embedding_generator provided)
+   b. If no match found, create provisional entities
+
+The embedding-based matching acts as a semantic cache, catching variations like:
+- "BRCA-1" vs "BRCA1"
+- "breast cancer 1 gene" vs "BRCA1"
+- "TP53" vs "p53"
+**Fields:**
+
+```python
+domain: DomainSchema
+embedding_generator: EmbeddingGeneratorInterface | None
+similarity_threshold: float
+```
+
+### `async def MedLitEntityResolver.resolve(self, mention: EntityMention, existing_storage: EntityStorageInterface) -> tuple[BaseEntity, float]`
+
+Resolves a single entity mention to a canonical or provisional entity.
+
+This method implements the core resolution logic, applying a hybrid
+strategy. It prioritizes explicit canonical IDs, falls back to
+embedding-based similarity matching, and finally creates a new
+provisional entity if no match is found.
+
+Args:
+    mention: The `EntityMention` to resolve.
+    existing_storage: The entity storage backend to query for existing
+                      entities.
+
+Returns:
+    A tuple containing the resolved `BaseEntity` (which may be new or
+    existing, canonical or provisional) and a confidence score for the
+    resolution.
+
+Raises:
+    ValueError: If the mention's entity type is not defined in the
+                domain schema.
+
+### `async def MedLitEntityResolver.resolve_batch(self, mentions: Sequence[EntityMention], existing_storage: EntityStorageInterface) -> list[tuple[BaseEntity, float]]`
+
+Resolves a sequence of entity mentions.
+
+This method currently resolves mentions sequentially by calling `resolve`
+for each one. It is designed to be a placeholder for a future, more
+optimized implementation that could batch database lookups or API calls.
+
+Args:
+    mentions: A sequence of `EntityMention` objects to resolve.
+    existing_storage: The entity storage backend, passed to `resolve`.
+
+Returns:
+    A list of (entity, confidence) tuples, with each tuple
+    corresponding to an input mention in the same order.
+
+### `def MedLitEntityResolver._parse_canonical_id(self, entity_id: str, entity_type: str) -> dict[str, str]`
+
+Parses a canonical ID string into a structured dictionary.
+
+This utility function takes a raw ID string (e.g., "HGNC:1100") and
+converts it into a `canonical_ids` dictionary (e.g.,
+`{"hgnc": "HGNC:1100"}`). It handles both prefixed IDs and attempts to
+infer the authority for non-prefixed IDs based on the entity type.
+
+Args:
+    entity_id: The canonical ID string to parse.
+    entity_type: The entity's type, used to infer the authority for
+                 non-prefixed IDs.
+
+Returns:
+    A dictionary mapping the authority name (e.g., "hgnc") to the
+    full canonical ID.
+
+
+<span id="user-content-medlitmedlitpipelineutilspy"></span>
+
+# medlit/medlit/pipeline/utils.py
+
+Shared utilities for medlit pipeline.
+
+### `def canonicalize_symmetric(subject_id: str, object_id: str) -> tuple[str, str]`
+
+Return (min, max) of subject and object for deterministic symmetric edge storage.
+
+Used by dedup so symmetric predicates (e.g. ASSOCIATED_WITH) produce
+identical (subject, object_id) regardless of order.
+
+
+<span id="user-content-medlitmedlitpromotionpy"></span>
+
+# medlit/medlit/promotion.py
+
+Promotion policy for medical literature domain.
+
+Promotes provisional entities to canonical status when they have authoritative
+identifiers (UMLS, HGNC, RxNorm, UniProt) or meet usage/confidence thresholds.
+
+> Promotion policy for medical literature domain.
+
+Promotes provisional entities to canonical status when they have authoritative
+identifiers (UMLS, HGNC, RxNorm, UniProt) or meet usage/confidence thresholds.
+
+
+## `class MedLitPromotionPolicy(PromotionPolicy)`
+
+Promotion policy for medical literature domain.
+
+Assigns canonical IDs based on authoritative medical ontologies:
+- Diseases: UMLS IDs (e.g., "C0006142")
+- Genes: HGNC IDs (e.g., "HGNC:1100")
+- Drugs: RxNorm IDs (e.g., "RxNorm:1187832")
+- Proteins: UniProt IDs (e.g., "UniProt:P38398")
+
+Promotion strategy:
+1. If entity already has canonical_id in canonical_ids dict, use that
+2. If entity_id is already a canonical ID format, use it directly
+3. Otherwise, look up canonical ID from authority APIs (UMLS, HGNC, RxNorm, UniProt)
+
+Some entity types do not have their own authority but map naturally to one
+that does.  ``_AUTHORITY_TYPE_OVERRIDES`` redirects those types so the
+lookup uses the right ontology.
+
+### `def MedLitPromotionPolicy.__init__(self, config, lookup: Optional[CanonicalIdLookupInterface] = None)`
+
+Initialize promotion policy.
+
+Args:
+    config: Promotion configuration with thresholds.
+    lookup: Optional canonical ID lookup service. If None, will create
+            a new CanonicalIdLookup instance (without UMLS API key unless set in env).
+
+### `def MedLitPromotionPolicy.should_promote(self, entity: BaseEntity) -> bool`
+
+Check if entity meets promotion thresholds.
+
+Force-promote rules (bypass standard thresholds):
+- If confidence >= 0.7, ignore usage count requirement
+- If canonical ID is found (checked in run_promotion), promote regardless
+
+Standard thresholds:
+- usage_count >= min_usage_count (default: 1)
+- confidence >= min_confidence (default: 0.4)
+- embedding required only if require_embedding=True (default: False)
+
+### `async def MedLitPromotionPolicy.assign_canonical_id(self, entity: BaseEntity) -> Optional[CanonicalId]`
+
+Assign canonical ID for a provisional entity.
+
+Args:
+    entity: The provisional entity to promote.
+
+Returns:
+    CanonicalId if available, None otherwise.
+
+
+<span id="user-content-medlitmedlitrelationshipspy"></span>
+
+# medlit/medlit/relationships.py
+
+Medical relationship types for the knowledge graph.
+
+Following Pattern A (simple, scalable): many predicates → one relationship class.
+This allows fast implementation without class explosion, while the predicate
+still stays in the `predicate` field for clear queries.
+
+> Medical relationship types for the knowledge graph.
+
+Following Pattern A (simple, scalable): many predicates → one relationship class.
+This allows fast implementation without class explosion, while the predicate
+still stays in the `predicate` field for clear queries.
+
+
+## `class MedicalClaimRelationship(BaseRelationship)`
+
+Base class for all medical claim relationships.
+
+This single class handles all medical predicates (treats, causes,
+increases_risk, etc.). The predicate field distinguishes the relationship
+type, and domain-specific metadata can be stored in the metadata dict.
+
+Mapping from med-lit-schema:
+- AssertedRelationship.subject_id → BaseRelationship.subject_id
+- AssertedRelationship.predicate → BaseRelationship.predicate
+- AssertedRelationship.object_id → BaseRelationship.object_id
+- AssertedRelationship.confidence → BaseRelationship.confidence
+- AssertedRelationship.evidence → BaseRelationship.metadata["evidence"]
+- AssertedRelationship.section → BaseRelationship.metadata["section"]
+- AssertedRelationship.metadata → BaseRelationship.metadata (merged)
+
+For multi-paper aggregation:
+- source_documents includes all paper IDs that assert this relationship
+- metadata["assertions"][paper_id] = {"evidence": "...", "section": "...", ...}
+
+### `def MedicalClaimRelationship.get_edge_type(self) -> str`
+
+Return edge type category.
+
+For Pattern A, we return a generic "medical_claim" since all
+predicates use the same class. If we later split into typed classes,
+each would return its specific type.
+
+
+<span id="user-content-medlitmedlitscriptsinitpy"></span>
+
+# medlit/medlit/scripts/__init__.py
+
+Scripts for medical literature ingestion.
+
+
+<span id="user-content-medlitmedlitscriptsbuildbundlepy"></span>
+
+# medlit/medlit/scripts/build_bundle.py
+
+build_bundle: Build kgbundle from merged and extracted.
+
+Reads merged_dir (entities.json, relationships.json, id_map.json, synonym_cache.json)
+and bundles_dir (paper_*.json), writes output_dir in kgbundle format for kgserver.
+
+> build_bundle: Build kgbundle from merged and extracted.
+
+Reads merged_dir (entities.json, relationships.json, id_map.json, synonym_cache.json)
+and bundles_dir (paper_*.json), writes output_dir in kgbundle format for kgserver.
+
+
+
+<span id="user-content-medlitmedlitscriptsextractpy"></span>
+
+# medlit/medlit/scripts/extract.py
+
+extract: Extract entities and relationships from papers via LLM → per-paper bundle JSON.
+
+Reads papers from --input-dir (JATS XML or JSON), calls the configured LLM once per paper,
+and writes one JSON file per paper to --output-dir. These bundles are immutable;
+ingest reads them and writes overlays or a merged graph elsewhere.
+
+Requires an LLM backend: --llm-backend anthropic | openai | ollama.
+Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or run Ollama locally. See LLM_SETUP.md.
+
+Usage:
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend anthropic
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend ollama --limit 1
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --papers "PMC127*.xml,PMC128*.json"
+
+> extract: Extract entities and relationships from papers via LLM → per-paper bundle JSON.
+
+Reads papers from --input-dir (JATS XML or JSON), calls the configured LLM once per paper,
+and writes one JSON file per paper to --output-dir. These bundles are immutable;
+ingest reads them and writes overlays or a merged graph elsewhere.
+
+Requires an LLM backend: --llm-backend anthropic | openai | ollama.
+Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or run Ollama locally. See LLM_SETUP.md.
+
+Usage:
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend anthropic
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --llm-backend ollama --limit 1
+  python -m medlit.scripts.extract --input-dir pmc_xmls/ --output-dir bundles/ --papers "PMC127*.xml,PMC128*.json"
+
+
+### `def _fix_evidence_paper_id(evidence_id: str, paper_id: str) -> str`
+
+Replace placeholder or hallucinated paper_id in evidence ID with actual.
+
+When processing paper X, the only valid paper_id in evidence is X. Replace:
+- Placeholders (PMC_UNKNOWN, paper_id, PMC11000000, etc.)
+- PMC IDs that are not the current paper (hallucinated citations)
+
+### `def _replace_current_paper_in_bundle(obj: Any, paper_id: str) -> None`
+
+Recursively replace ==CURRENT_PAPER== with paper_id in dict/list/str (mutates in place).
+
+### `def _git_info() -> dict`
+
+Return git_commit, git_commit_short, git_branch, git_dirty, repo_url.
+
+### `def build_provenance(llm_name: str, llm_version: str, prompt_version: str = 'v1', prompt_template: str = 'medlit_extraction_v1', prompt_checksum: Optional[str] = None, duration_seconds: Optional[float] = None, schema_version: Optional[str] = None) -> ExtractionProvenance`
+
+Build extraction_provenance for extract output.
+
+### `def normalize_entity_type(raw_type: str, normalized_to_bundle: dict[str, str]) -> str`
+
+Map raw LLM type string to bundle entity_class (PascalCase). Unknown types -> 'Other'.
+
+### `def _default_system_prompt(vocab_entries: Optional[list[dict]] = None, domain_spec: Optional[Any] = None) -> str`
+
+Build system prompt from domain_spec via Jinja2 template.
+
+### `async def _paper_content_from_parser(raw_content: bytes, content_type: str, source_uri: str) -> tuple[str, Optional[PaperInfo]]`
+
+Extract text and minimal PaperInfo from raw content using existing parser.
+
+### `async def _extract_study_design(llm: Any, content: str) -> Optional[StudyDesignMetadata]`
+
+Second LLM call: extract study design from Methods/abstract. Returns None on failure.
+
+### `def _paper_content_fallback(raw_content: bytes, source_uri: str) -> tuple[str, PaperInfo]`
+
+Fallback: use raw text and filename for paper id.
+
+### `async def run_extract(input_dir: Path, output_dir: Path, llm_backend: str, limit: Optional[int] = None, papers: Optional[list[str]] = None, system_prompt: Optional[str] = None, vocab_file: Optional[Path] = None) -> None`
+
+Run extract: for each paper in input_dir, call LLM and write bundle JSON to output_dir.
+
+
+<span id="user-content-medlitmedlitscriptsfetchvocabpy"></span>
+
+# medlit/medlit/scripts/fetch_vocab.py
+
+fetch_vocab: Fast vocabulary extraction across papers → vocab.json + seeded synonym cache.
+
+Runs a cheap LLM prompt per paper (entities only, no relationships), merges results
+into a shared vocabulary, runs UMLS type validation on entities with umls_id, and
+writes vocab.json plus an ingest-compatible seeded_synonym_cache.json. extract and
+ingest consume these for consistent names/types and dedup seeding.
+
+Usage:
+  python -m medlit.scripts.fetch_vocab --input-dir pmc_xmls/ --output-dir vocab --llm-backend anthropic
+  python -m medlit.scripts.fetch_vocab --input-dir pmc_xmls/ --output-dir vocab --llm-backend ollama --papers "PMC115*.xml"
+
+> fetch_vocab: Fast vocabulary extraction across papers → vocab.json + seeded synonym cache.
+
+Runs a cheap LLM prompt per paper (entities only, no relationships), merges results
+into a shared vocabulary, runs UMLS type validation on entities with umls_id, and
+writes vocab.json plus an ingest-compatible seeded_synonym_cache.json. extract and
+ingest consume these for consistent names/types and dedup seeding.
+
+Usage:
+  python -m medlit.scripts.fetch_vocab --input-dir pmc_xmls/ --output-dir vocab --llm-backend anthropic
+  python -m medlit.scripts.fetch_vocab --input-dir pmc_xmls/ --output-dir vocab --llm-backend ollama --papers "PMC115*.xml"
+
+
+### `def _pass1a_system_prompt() -> str`
+
+Build fetch_vocab system prompt from domain_spec.
+
+### `def _vocab_key(entry: dict[str, Any]) -> tuple[str, str]`
+
+Key for merging: (normalized name, type).
+
+### `async def _paper_content(path: Path, input_dir: Path) -> tuple[str, str]`
+
+Return (content_text, paper_id) for a paper file.
+
+### `def _merge_vocab_into(existing: list[dict[str, Any]], new_entries: list[dict[str, Any]], source_paper: str) -> None`
+
+Merge new_entries into existing in place; same (name, type) adds source_paper to source_papers.
+
+### `def _run_umls_validation(vocab_entries: list[dict[str, Any]]) -> None`
+
+Run UMLS type validation on entries with umls_id; update type and set umls_type_validated/umls_type_conflict.
+
+### `def _vocab_to_seeded_cache(vocab_entries: list[dict[str, Any]], normalized_to_bundle: dict[str, str]) -> dict[str, list[dict[str, Any]]]`
+
+Build ingest synonym cache format from vocab list so lookup_entity returns canonical_id.
+
+### `def _atomic_write_json(path: Path, data: Any) -> None`
+
+Write JSON to path via temp file then rename.
+
+### `async def run_fetch_vocab(input_dir: Path, output_dir: Path, llm_backend: str, papers: Optional[list[str]] = None, limit: Optional[int] = None) -> None`
+
+Run fetch_vocab: extract vocabulary from papers, merge, validate UMLS types, write vocab + seeded cache.
+
+
+<span id="user-content-medlitmedlitscriptsingestpy"></span>
+
+# medlit/medlit/scripts/ingest.py
+
+ingest: Deduplication and promotion over per-paper bundles.
+
+Reads all paper_*.json bundles from --bundle-dir (output of extract), builds
+name/type index and synonym cache, resolves SAME_AS, assigns canonical IDs,
+and writes merged entities and relationships to --output-dir. Original
+bundle files are never modified.
+
+Usage (legacy file-based pipeline):
+  python -m medlit.scripts.ingest --bundle-dir extracted/ --output-dir merged/
+
+Usage (identity server):
+  python -m medlit.scripts.ingest --bundle-dir extracted/ --output-dir merged/ \
+      --use-identity-server
+  Requires DATABASE_URL env var pointing to a running Postgres instance with
+  the kgserver schema already created.
+
+> ingest: Deduplication and promotion over per-paper bundles.
+
+Reads all paper_*.json bundles from --bundle-dir (output of extract), builds
+name/type index and synonym cache, resolves SAME_AS, assigns canonical IDs,
+and writes merged entities and relationships to --output-dir. Original
+bundle files are never modified.
+
+Usage (legacy file-based pipeline):
+  python -m medlit.scripts.ingest --bundle-dir extracted/ --output-dir merged/
+
+Usage (identity server):
+  python -m medlit.scripts.ingest --bundle-dir extracted/ --output-dir merged/ \
+      --use-identity-server
+  Requires DATABASE_URL env var pointing to a running Postgres instance with
+  the kgserver schema already created.
+
+
+
+<span id="user-content-medlitmedlitscriptsparsepmcxmlpy"></span>
+
+# medlit/medlit/scripts/parse_pmc_xml.py
+
+Parse PMC JATS-XML files directly to Paper schema JSON format.
+
+This script combines XML parsing and schema conversion into a single step,
+converting JATS-XML files directly to the format expected by JournalArticleParser.
+
+> Parse PMC JATS-XML files directly to Paper schema JSON format.
+
+This script combines XML parsing and schema conversion into a single step,
+converting JATS-XML files directly to the format expected by JournalArticleParser.
+
+
+### `def parse_pmc_xml_to_paper_schema(xml_path: Path) -> dict`
+
+Parse PMC XML file directly into Paper schema JSON format.
+
+Args:
+    xml_path: Path to the PMC XML file
+
+Returns:
+    Dictionary in Paper schema format with:
+    - paper_id: PMC ID (from filename)
+    - title: Article title
+    - abstract: Dict with "text" key containing abstract
+    - full_text: Full body text (if available)
+    - authors: List of author names
+    - metadata: Dict with keywords (if available)
+
+
+<span id="user-content-medlitmedlitvocabpy"></span>
+
+# medlit/medlit/vocab.py
+
+Vocabulary and validation for medical literature domain.
+
+Defines valid predicates and their constraints (which entity types
+can participate in which relationships).
+
+> Vocabulary and validation for medical literature domain.
+
+Defines valid predicates and their constraints (which entity types
+can participate in which relationships).
+
+
+### `def get_valid_predicates(subject_type: str, object_type: str) -> list[str]`
+
+Return predicates valid between two entity types.
+
+This implements domain-specific constraints. For example:
+- Drug → Disease: treats, prevents, contraindicated_for, side_effect
+- Gene → Disease: increases_risk, decreases_risk, associated_with
+- Gene → Protein: encodes
+- Drug → Drug: interacts_with
+- Disease → Symptom: causes
+- Disease → Procedure: diagnosed_by
+
+Args:
+    subject_type: The entity type of the relationship subject.
+    object_type: The entity type of the relationship object.
+
+Returns:
+    List of predicate names that are valid for this entity type pair.
+
+
+<span id="user-content-medlitmedlitschemainitpy"></span>
+
+# medlit/medlit_schema/__init__.py
+
+Medical Literature Domain Schema for kgraph.
+
+This package provides production-ready schema definitions for medical
+literature knowledge graphs, with full provenance tracking, ontology
+integration, and evidence-based relationships.
+
+Schema version: 1.0.0
+Compatible with: kgschema >=0.2.0
+Ontologies: UMLS, HGNC, RxNorm, UniProt, ECO, OBI, STATO, SEPIO
+
+> 
+Medical Literature Domain Schema for kgraph.
+
+This package provides production-ready schema definitions for medical
+literature knowledge graphs, with full provenance tracking, ontology
+integration, and evidence-based relationships.
+
+Schema version: 1.0.0
+Compatible with: kgschema >=0.2.0
+Ontologies: UMLS, HGNC, RxNorm, UniProt, ECO, OBI, STATO, SEPIO
+
+
+
+<span id="user-content-medlitmedlitschemabasepy"></span>
+
+# medlit/medlit_schema/base.py
+
+Base models for the medlit schema.
+
+## `class ModelInfo(BaseModel)`
+
+Information about the model used for extraction.
+**Fields:**
+
+```python
+name: str
+version: str
+```
+
+## `class ExtractionProvenance(BaseModel)`
+
+Complete provenance metadata for an extraction.
+
+This is the complete audit trail of how extraction was performed.
+Enables:
+- Reproducing exact extraction with same code/models/prompts
+- Comparing outputs from different pipeline versions
+- Debugging quality issues
+- Tracking pipeline evolution over time
+- Meeting reproducibility requirements for research
+
+Example queries enabled by provenance:
+- "Find all papers extracted with prompt v1 so I can re-extract with v2"
+- "Which papers were extracted with uncommitted code changes?"
+- "Compare entity extraction quality between llama3.1:70b and claude-4"
+
+Attributes:
+    extraction_pipeline: Pipeline version info
+    models: Models used, keyed by role (e.g., 'llm', 'embeddings')
+    prompt: Prompt version info
+    execution: Execution environment info
+    entity_resolution: Entity resolution details if applicable
+**Fields:**
+
+```python
+extraction_pipeline: Optional['ExtractionPipelineInfo']
+models: dict[str, ModelInfo]
+prompt: Optional['PromptInfo']
+execution: Optional['ExecutionInfo']
+entity_resolution: Optional['EntityResolutionInfo']
+model_info: Optional[ModelInfo]
+```
+
+## `class SectionType(str, Enum)`
+
+Type of section in a paper.
+
+## `class TextSpanRef(BaseModel)`
+
+A structural locator for text within a parsed document.
+
+This is a parser/segmentation address that uses structural coordinates
+(section type, paragraph index, sentence index) to locate text. It is
+distinct from TextSpan (entity.py), which is a graph entity anchor with
+precise character offsets.
+
+Use this for:
+- Intermediate parsing stages before final offsets are computed
+- Structural navigation within documents
+- Creating TextSpan entities once offsets are finalized
+
+Attributes:
+    paper_id: The ID of the paper this span belongs to.
+    section_type: The type of section (abstract, introduction, etc.).
+    paragraph_idx: Zero-based paragraph index within the section.
+    sentence_idx: Optional sentence index within the paragraph.
+    text_span: Optional text snippet for reference.
+    start_offset: Optional character offset (for when computed).
+    end_offset: Optional character offset (for when computed).
+**Fields:**
+
+```python
+paper_id: str
+section_type: SectionType
+paragraph_idx: int
+sentence_idx: Optional[int]
+text_span: Optional[str]
+start_offset: Optional[int]
+end_offset: Optional[int]
+```
+
+## `class ExtractionMethod(str, Enum)`
+
+Method used for extraction.
+
+## `class StudyType(str, Enum)`
+
+Type of study.
+
+## `class PredicateType(str, Enum)`
+
+All possible predicates (relationship types) in the medical literature knowledge graph.
+
+This enum provides type safety for relationship categorization and enables
+validation of entity-relationship compatibility.
+
+## `class EntityType(str, Enum)`
+
+All possible entity types in the knowledge graph.
+
+This enum provides type safety for entity categorization and enables
+validation of entity-relationship compatibility.
+
+## `class ClaimPredicate(BaseModel)`
+
+Describes the nature of a claim made in a paper.
+
+Examples:
+    - "Olaparib significantly improved progression-free survival" (TREATS)
+    - "BRCA1 mutations increase breast cancer risk by 5-fold" (INCREASES_RISK)
+    - "Warfarin and aspirin interact synergistically" (INTERACTS_WITH)
+
+Attributes:
+    predicate_type: The type of relationship asserted in the claim
+    description: A natural language description of the predicate as it appears in the text
+**Fields:**
+
+```python
+predicate_type: PredicateType
+description: str
+```
+
+## `class Provenance(BaseModel)`
+
+Information about the origin of a piece of data.
+
+Attributes:
+    source_type: The type of source (e.g., 'paper', 'database', 'model_extraction')
+    source_id: An identifier for the source (e.g., DOI, database record ID)
+    source_version: The version of the source, if applicable
+    notes: Additional notes about the provenance
+**Fields:**
+
+```python
+source_type: str
+source_id: str
+source_version: Optional[str]
+notes: Optional[str]
+```
+
+## `class EvidenceType(BaseModel)`
+
+The type of evidence supporting a relationship, linked to evidence ontologies.
+
+Examples:
+    - RCT: ontology_id="ECO:0007673", ontology_label="randomized controlled trial evidence"
+    - Observational: ontology_id="ECO:0000203", ontology_label="observational study evidence"
+    - Case report: ontology_id="ECO:0006016", ontology_label="case study evidence"
+
+Attributes:
+    ontology_id: Identifier from an evidence ontology (ECO, SEPIO)
+    ontology_label: Human-readable label for the ontology term
+    description: A fuller description of the evidence type
+**Fields:**
+
+```python
+ontology_id: str
+ontology_label: str
+description: Optional[str]
+```
+
+## `class EntityReference(BaseModel)`
+
+Reference to an entity in the knowledge graph.
+
+Lightweight pointer to a canonical entity (Disease, Drug, Gene, etc.)
+with the name as it appeared in this specific paper.
+
+Attributes:
+    id: Canonical entity ID
+    name: Entity name as mentioned in paper
+    type: Entity type (drug, disease, gene, protein, etc.)
+**Fields:**
+
+```python
+id: str
+name: str
+type: EntityType
+```
+
+## `class Polarity(str, Enum)`
+
+Polarity of evidence relative to a claim.
+
+## `class Edge(BaseModel)`
+
+Base edge in the knowledge graph.
+**Fields:**
+
+```python
+id: EdgeId
+subject: EntityReference
+object: EntityReference
+provenance: Provenance
+```
+
+## `class ExtractionEdge(Edge)`
+
+Edge from automated extraction.
+
+## `class ClaimEdge(Edge)`
+
+Edge representing a claim from a paper.
+
+## `class EvidenceEdge(Edge)`
+
+Edge representing evidence for a claim.
+
+## `class ExtractionPipelineInfo(BaseModel)`
+
+Information about the extraction pipeline version.
+
+Tracks the exact code version that performed entity/relationship extraction.
+Essential for reproducibility and debugging extraction quality issues.
+
+Attributes:
+    name: Pipeline name (e.g., 'ollama_langchain_ingest')
+    version: Semantic version of the pipeline
+    git_commit: Full git commit hash
+    git_commit_short: Short git commit hash (7 chars)
+    git_branch: Git branch name
+    git_dirty: Whether working directory had uncommitted changes
+    repo_url: Repository URL
+**Fields:**
+
+```python
+name: str
+version: str
+git_commit: str
+git_commit_short: str
+git_branch: str
+git_dirty: bool
+repo_url: str
+```
+
+## `class PromptInfo(BaseModel)`
+
+Information about the prompt used.
+
+Tracks prompt evolution. Critical for understanding extraction behavior changes.
+
+Attributes:
+    version: Prompt version identifier
+    template: Prompt template name
+    checksum: SHA256 of actual prompt text for exact reproduction
+    schema_version: 8-char hex hash of config (entity_types, predicates, domain_instructions)
+**Fields:**
+
+```python
+version: str
+template: str
+checksum: Optional[str]
+schema_version: Optional[str]
+```
+
+## `class ExecutionInfo(BaseModel)`
+
+Information about when and where extraction was performed.
+
+Useful for debugging issues related to specific machines or time periods.
+
+Attributes:
+    timestamp: ISO 8601 UTC timestamp
+    hostname: Hostname of machine that ran extraction
+    python_version: Python version
+    duration_seconds: Extraction duration in seconds
+**Fields:**
+
+```python
+timestamp: str
+hostname: str
+python_version: str
+duration_seconds: Optional[float]
+```
+
+## `class EntityResolutionInfo(BaseModel)`
+
+Information about entity resolution process.
+
+Tracks how entities were matched to canonical IDs. Helps identify when
+entity deduplication is working poorly.
+
+Attributes:
+    canonical_entities_matched: Number of entities matched to existing canonical IDs
+    new_entities_created: Number of new canonical entities created
+    similarity_threshold: Similarity threshold used for matching
+    embedding_model: Embedding model used for similarity
+**Fields:**
+
+```python
+canonical_entities_matched: int
+new_entities_created: int
+similarity_threshold: float
+embedding_model: str
+```
+
+## `class Measurement(BaseModel)`
+
+Quantitative measurements associated with relationships.
+
+Stores numerical data with appropriate metadata for statistical
+analysis and evidence quality assessment.
+
+Attributes:
+    value: The numerical value
+    unit: Unit of measurement (if applicable)
+    value_type: Type of measurement (effect_size, p_value, etc.)
+    p_value: Statistical significance
+    confidence_interval: 95% confidence interval
+    study_population: Description of study population
+    measurement_context: Additional context about the measurement
+
+Example:
+    >>> measurement = Measurement(
+    ...     value=0.59,
+    ...     value_type="response_rate",
+    ...     p_value=0.001,
+    ...     confidence_interval=(0.52, 0.66),
+    ...     study_population="BRCA-mutated breast cancer patients"
+    ... )
+**Fields:**
+
+```python
+value: float
+unit: Optional[str]
+value_type: str
+p_value: Optional[float]
+confidence_interval: Optional[tuple[float, float]]
+study_population: Optional[str]
+measurement_context: Optional[str]
+```
+
+
+<span id="user-content-medlitmedlitschemadocumentpy"></span>
+
+# medlit/medlit_schema/document.py
+
+Medlit document definitions.
+
+
+<span id="user-content-medlitmedlitschemadomainpy"></span>
+
+# medlit/medlit_schema/domain.py
+
+Domain schema for the Medical Literature domain.
+
+## `class MedlitDomain(DomainSchema)`
+
+Domain schema for medical literature.
+
+
+<span id="user-content-medlitmedlitschemaentitypy"></span>
+
+# medlit/medlit_schema/entity.py
+
+Medlit entity definitions.
+
+## `class BaseMedicalEntity(BaseEntity)`
+
+Base for all medical entities.
+**Fields:**
+
+```python
+name: str
+synonyms: tuple[str, ...]
+abbreviations: List[str]
+embedding: Optional[tuple[float, ...]]
+source: Literal['umls', 'mesh', 'rxnorm', 'hgnc', 'uniprot', 'extracted']
+```
+
+## `class Disease(BaseMedicalEntity)`
+
+Represents medical conditions, disorders, and syndromes.
+
+Uses UMLS as the primary identifier system with additional mappings to
+MeSH and ICD-10 for interoperability with clinical systems.
+
+Attributes:
+    umls_id: UMLS Concept ID (e.g., "C0006142" for Breast Cancer)
+    mesh_id: Medical Subject Heading ID for literature indexing
+    icd10_codes: List of ICD-10 diagnostic codes
+    category: Disease classification (genetic, infectious, autoimmune, etc.)
+
+Example:
+    >>> breast_cancer = Disease(
+    ...     entity_id="C0006142",
+    ...     name="Breast Cancer",
+    ...     synonyms=("Breast Carcinoma", "Mammary Cancer"),
+    ...     umls_id="C0006142",
+    ...     mesh_id="D001943",
+    ...     icd10_codes=["C50.9"],
+    ...     category="genetic",
+    ...     source="umls"
+    ... )
+**Fields:**
+
+```python
+umls_id: Optional[str]
+mesh_id: Optional[str]
+icd10_codes: List[str]
+category: Optional[str]
+```
+
+## `class Gene(BaseMedicalEntity)`
+
+Represents human genes.
+
+Uses HGNC (HUGO Gene Nomenclature Committee) as the primary identifier
+with additional mappings to Entrez Gene for cross-reference.
+
+Attributes:
+    symbol: Official gene symbol (e.g., "BRCA1")
+    hgnc_id: HGNC identifier (e.g., "HGNC:1100")
+    chromosome: Chromosomal location (e.g., "17q21.31")
+    entrez_id: NCBI Entrez Gene ID
+
+Example:
+    >>> brca1 = Gene(
+    ...     entity_id="HGNC:1100",
+    ...     name="BRCA1",
+    ...     symbol="BRCA1",
+    ...     hgnc_id="HGNC:1100",
+    ...     chromosome="17q21.31",
+    ...     entrez_id="672",
+    ...     source="hgnc"
+    ... )
+**Fields:**
+
+```python
+symbol: Optional[str]
+hgnc_id: Optional[str]
+chromosome: Optional[str]
+entrez_id: Optional[str]
+```
+
+## `class Drug(BaseMedicalEntity)`
+
+Represents pharmaceutical drugs and medications.
+
+Uses RxNorm as the primary identifier system for standardized drug names.
+
+Attributes:
+    rxnorm_id: RxNorm concept identifier (e.g., "1187832" for Olaparib)
+    brand_names: Commercial brand names (e.g., ["Lynparza"])
+    drug_class: Pharmacological class (e.g., "PARP inhibitor")
+    mechanism: Mechanism of action description
+
+Example:
+    >>> olaparib = Drug(
+    ...     entity_id="RxNorm:1187832",
+    ...     name="Olaparib",
+    ...     rxnorm_id="1187832",
+    ...     brand_names=["Lynparza"],
+    ...     drug_class="PARP inhibitor",
+    ...     mechanism="Inhibits PARP enzymes",
+    ...     source="rxnorm"
+    ... )
+**Fields:**
+
+```python
+rxnorm_id: Optional[str]
+brand_names: List[str]
+drug_class: Optional[str]
+mechanism: Optional[str]
+```
+
+## `class Protein(BaseMedicalEntity)`
+
+Represents proteins and protein complexes.
+
+Uses UniProt as the primary identifier system.
+
+Attributes:
+    uniprot_id: UniProt accession (e.g., "P38398" for BRCA1 protein)
+    gene_id: Associated gene identifier
+    function: Protein function description
+    pathways: List of pathway IDs this protein participates in
+
+Example:
+    >>> brca1_protein = Protein(
+    ...     entity_id="UniProt:P38398",
+    ...     name="BRCA1",
+    ...     uniprot_id="P38398",
+    ...     gene_id="HGNC:1100",
+    ...     function="DNA repair",
+    ...     pathways=["R-HSA-5685942"],
+    ...     source="uniprot"
+    ... )
+**Fields:**
+
+```python
+uniprot_id: Optional[str]
+gene_id: Optional[str]
+function: Optional[str]
+pathways: List[str]
+```
+
+## `class Mutation(BaseMedicalEntity)`
+
+Represents genetic mutations and variants.
+
+Attributes:
+    variant_notation: HGVS notation (e.g., "c.68_69delAG")
+    consequence: Effect of mutation (e.g., "frameshift", "missense")
+    clinical_significance: ClinVar significance (pathogenic, benign, etc.)
+
+Example:
+    >>> brca1_mutation = Mutation(
+    ...     entity_id="BRCA1_c.68_69delAG",
+    ...     name="BRCA1 c.68_69delAG",
+    ...     variant_notation="c.68_69delAG",
+    ...     consequence="frameshift",
+    ...     clinical_significance="pathogenic",
+    ...     source="extracted"
+    ... )
+**Fields:**
+
+```python
+variant_notation: Optional[str]
+consequence: Optional[str]
+clinical_significance: Optional[str]
+```
+
+## `class Symptom(BaseMedicalEntity)`
+
+Represents clinical signs and symptoms.
+
+Attributes:
+    severity_scale: Measurement scale if applicable (e.g., "0-10", "mild/moderate/severe")
+    onset_pattern: Typical onset (acute, chronic, intermittent)
+
+Example:
+    >>> pain = Symptom(
+    ...     entity_id="C0030193",
+    ...     name="Pain",
+    ...     umls_id="C0030193",
+    ...     severity_scale="0-10",
+    ...     onset_pattern="varies",
+    ...     source="umls"
+    ... )
+**Fields:**
+
+```python
+severity_scale: Optional[str]
+onset_pattern: Optional[str]
+```
+
+## `class Biomarker(BaseMedicalEntity)`
+
+Represents biological markers used for diagnosis or prognosis.
+
+Attributes:
+    loinc_code: LOINC code for lab tests
+    measurement_type: Type of measurement (protein, metabolite, imaging, etc.)
+    clinical_use: Primary clinical application
+
+Example:
+    >>> ca125 = Biomarker(
+    ...     entity_id="LOINC:10334-1",
+    ...     name="CA-125",
+    ...     loinc_code="10334-1",
+    ...     measurement_type="protein",
+    ...     clinical_use="ovarian cancer screening",
+    ...     source="extracted"
+    ... )
+**Fields:**
+
+```python
+loinc_code: Optional[str]
+measurement_type: Optional[str]
+clinical_use: Optional[str]
+```
+
+## `class Pathway(BaseMedicalEntity)`
+
+Represents biological pathways.
+
+Attributes:
+    kegg_id: KEGG pathway identifier
+    reactome_id: Reactome pathway identifier
+    pathway_type: Type of pathway (signaling, metabolic, etc.)
+
+Example:
+    >>> dna_repair = Pathway(
+    ...     entity_id="R-HSA-5685942",
+    ...     name="HDR through Homologous Recombination",
+    ...     reactome_id="R-HSA-5685942",
+    ...     pathway_type="DNA repair",
+    ...     source="extracted"
+    ... )
+**Fields:**
+
+```python
+kegg_id: Optional[str]
+reactome_id: Optional[str]
+pathway_type: Optional[str]
+```
+
+## `class Procedure(BaseMedicalEntity)`
+
+Represents medical tests, diagnostics, treatments.
+
+Attributes:
+    type: Procedure category (diagnostic, therapeutic, preventive)
+    invasiveness: Invasiveness level (non-invasive, minimally invasive, invasive)
+**Fields:**
+
+```python
+type: Optional[str]
+invasiveness: Optional[str]
+```
+
+## `class PaperMetadata(BaseModel)`
+
+Extended metadata about the research paper.
+
+Combines study characteristics (for evidence quality assessment) with
+bibliographic information (for citations and filtering).
+
+This is MORE than just storage - these fields enable critical queries:
+- "Show me only RCT evidence for this drug-disease relationship"
+- "What's the sample size distribution for studies on this topic?"
+- "Find papers from high-impact journals on this mutation"
+
+Attributes:
+    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
+    sample_size: Study sample size - larger = more reliable
+    study_population: Description of study population
+    primary_outcome: Primary outcome measured
+    clinical_phase: Clinical trial phase if applicable
+    mesh_terms: Medical Subject Headings - NLM's controlled vocabulary for indexing
+
+Example:
+    >>> metadata = PaperMetadata(
+    ...     study_type="rct",
+    ...     sample_size=302,
+    ...     study_population="Women with BRCA1/2-mutated metastatic breast cancer",
+    ...     primary_outcome="Progression-free survival",
+    ...     clinical_phase="III",
+    ...     mesh_terms=["Breast Neoplasms", "BRCA1 Protein", "PARP Inhibitors"]
+    ... )
+**Fields:**
+
+```python
+study_type: Optional[str]
+sample_size: Optional[int]
+study_population: Optional[str]
+primary_outcome: Optional[str]
+clinical_phase: Optional[str]
+mesh_terms: List[str]
+```
+
+## `class TextSpan(BaseEntity)`
+
+Represents a specific span of text within a document, acting as an anchor for evidence.
+
+This entity provides fine-grained provenance for assertions by linking them
+to exact locations within a source paper. It serves as a first-class entity
+that can be referenced by Evidence.
+
+TextSpan is canonical-only (not promotable) because:
+- Character offsets are stable only relative to a specific text representation
+- The combination of paper_id + section + offsets provides a natural canonical ID
+- There is no meaningful "provisional" state for a text location
+
+Note: This is distinct from TextSpanRef (base.py), which is a structural locator
+using paragraph/sentence indices for parsing stages before final offsets are computed.
+
+Attributes:
+    paper_id: The ID of the paper this text span belongs to.
+    section: The section of the paper (e.g., "abstract", "introduction", "results").
+    start_offset: The character offset where the span starts in the section content (required).
+    end_offset: The character offset where the span ends in the section content (required).
+    text_content: The actual text content of the span (optional, for convenience and caching).
+**Fields:**
+
+```python
+promotable: bool
+status: EntityStatus
+paper_id: str
+section: str
+start_offset: int
+end_offset: int
+text_content: Optional[str]
+```
+
+### `def TextSpan.end_must_be_greater_than_start(cls, v, info)`
+
+Validate that end_offset > start_offset.
+
+## `class Paper(BaseEntity)`
+
+A research paper with extracted entities, relationships, and full provenance.
+
+This is the COMPLETE representation of a paper in the knowledge graph, combining:
+
+1. Bibliographic metadata (authors, journal, identifiers)
+2. Text content (title, abstract)
+3. Study metadata (study type, sample size, etc.)
+4. Extraction provenance (how extraction was performed)
+
+Design philosophy:
+
+- Top-level fields are FREQUENTLY QUERIED (paper_id, title, authors, publication_date)
+- Nested objects group related data (paper_metadata for study info, extraction_provenance for pipeline info)
+
+Why certain fields are top-level:
+
+- paper_id: Primary key, referenced everywhere
+- title, abstract: Core content, always displayed
+- authors: Essential for citations, frequently filtered
+- publication_date: Frequently used for filtering by recency
+- journal: Frequently used for quality filtering
+
+Why other fields are nested:
+
+- paper_metadata: Study details, accessed together for evidence assessment
+- extraction_provenance: Technical details, only for debugging/reproducibility
+
+Attributes:
+    paper_id: Unique identifier - PMC ID preferred, but can be DOI or PMID
+    pmid: PubMed ID - different from PMC ID
+    doi: Digital Object Identifier
+    title: Full paper title
+    abstract: Complete abstract text
+    authors: List of author names in citation order
+    publication_date: Publication date in ISO format (YYYY-MM-DD)
+    journal: Journal name
+    paper_metadata: Extended metadata including study type, sample size, MeSH terms
+    extraction_provenance: Complete provenance of how extraction was performed
+
+Example:
+    >>> paper = Paper(
+    ...     entity_id="PMC8437152",
+    ...     paper_id="PMC8437152",
+    ...     pmid="34567890",
+    ...     doi="10.1234/nejm.2023.001",
+    ...     title="Efficacy of Olaparib in BRCA-Mutated Breast Cancer",
+    ...     abstract="Background: PARP inhibitors have shown promise...",
+    ...     authors=["Smith J", "Johnson A", "Williams K"],
+    ...     publication_date=datetime(2023, 6, 15),
+    ...     journal="New England Journal of Medicine",
+    ...     paper_metadata=PaperMetadata(
+    ...         study_type="rct",
+    ...         sample_size=302,
+    ...         mesh_terms=["Breast Neoplasms", "PARP Inhibitors"]
+    ...     )
+    ... )
+**Fields:**
+
+```python
+paper_id: str
+pmid: Optional[str]
+doi: Optional[str]
+title: Optional[str]
+abstract: Optional[str]
+authors: List[str]
+publication_date: Optional[datetime]
+journal: Optional[str]
+paper_metadata: PaperMetadata
+extraction_provenance: Optional[ExtractionProvenance]
+```
+
+## `class Author(BaseEntity)`
+
+Represents a researcher or author of scientific publications.
+
+Attributes:
+    orcid: ORCID identifier (unique researcher ID)
+    affiliations: List of institutional affiliations
+    h_index: Citation metric indicating research impact
+
+Example:
+    >>> author = Author(
+    ...     entity_id="0000-0001-2345-6789",
+    ...     name="Jane Smith",
+    ...     orcid="0000-0001-2345-6789",
+    ...     affiliations=["Harvard Medical School", "Massachusetts General Hospital"],
+    ...     h_index=45,
+    ...     source="orcid",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+orcid: Optional[str]
+affiliations: List[str]
+h_index: Optional[int]
+```
+
+## `class ClinicalTrial(BaseEntity)`
+
+Represents a clinical trial registered on ClinicalTrials.gov.
+
+Attributes:
+    nct_id: ClinicalTrials.gov identifier (e.g., "NCT01234567")
+    title: Official trial title
+    phase: Trial phase (I, II, III, IV)
+    trial_status: Current status (recruiting, completed, terminated, etc.)
+    intervention: Description of treatment being tested
+
+Example:
+    >>> trial = ClinicalTrial(
+    ...     entity_id="NCT01234567",
+    ...     name="Study of Drug X in Patients with Disease Y",
+    ...     nct_id="NCT01234567",
+    ...     title="Study of Drug X in Patients with Disease Y",
+    ...     phase="III",
+    ...     trial_status="completed",
+    ...     intervention="Drug X 100mg daily",
+    ...     source="clinicaltrials.gov",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+nct_id: Optional[str]
+title: Optional[str]
+phase: Optional[str]
+trial_status: Optional[str]
+intervention: Optional[str]
+```
+
+## `class Institution(BaseEntity)`
+
+Represents research institutions and affiliations.
+
+Attributes:
+    country: Country location
+    department: Department or division
+
+Example:
+    >>> institution = Institution(
+    ...     entity_id="INST:harvard_med",
+    ...     name="Harvard Medical School",
+    ...     country="USA",
+    ...     department="Oncology",
+    ...     source="extracted",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+country: Optional[str]
+department: Optional[str]
+```
+
+## `class Hypothesis(BaseEntity)`
+
+Represents a scientific hypothesis tracked across the literature.
+
+Uses IAO (Information Artifact Ontology) for standardized representation
+of hypotheses as information content entities. Enables tracking of
+hypothesis evolution: from proposal through testing to acceptance/refutation.
+
+Attributes:
+    iao_id: IAO identifier (typically IAO:0000018 for hypothesis)
+    sepio_id: SEPIO identifier for assertions (SEPIO:0000001)
+    proposed_by: Paper ID where hypothesis was first proposed
+    proposed_date: Date when hypothesis was first proposed
+    hypothesis_status: Current status (proposed, supported, controversial, refuted)
+    description: Natural language description of the hypothesis
+    predicts: List of entity IDs that this hypothesis predicts outcomes for
+
+Example:
+    >>> hypothesis = Hypothesis(
+    ...     entity_id="HYPOTHESIS:amyloid_cascade_alzheimers",
+    ...     name="Amyloid Cascade Hypothesis",
+    ...     iao_id="IAO:0000018",
+    ...     sepio_id="SEPIO:0000001",
+    ...     proposed_by="PMC123456",
+    ...     proposed_date="1992",
+    ...     hypothesis_status="controversial",
+    ...     description="Beta-amyloid accumulation drives Alzheimer's disease pathology",
+    ...     predicts=["C0002395"],
+    ...     source="extracted",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+iao_id: Optional[str]
+sepio_id: Optional[str]
+proposed_by: Optional[str]
+proposed_date: Optional[str]
+hypothesis_status: Optional[str]
+description: Optional[str]
+predicts: List[str]
+```
+
+## `class StudyDesign(BaseEntity)`
+
+Represents a study design or experimental protocol.
+
+Uses OBI (Ontology for Biomedical Investigations) to standardize
+study design classifications. Enables filtering by evidence quality
+based on study design.
+
+Attributes:
+    obi_id: OBI identifier for study design type
+    stato_id: STATO identifier for study design (if applicable)
+    design_type: Human-readable design type
+    description: Description of the study design
+    evidence_level: Quality level (1-5, where 1 is highest quality)
+
+Example:
+    >>> rct = StudyDesign(
+    ...     entity_id="OBI:0000008",
+    ...     name="Randomized Controlled Trial",
+    ...     obi_id="OBI:0000008",
+    ...     stato_id="STATO:0000402",
+    ...     design_type="interventional",
+    ...     evidence_level=1,
+    ...     source="obi",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+obi_id: Optional[str]
+stato_id: Optional[str]
+design_type: Optional[str]
+description: Optional[str]
+evidence_level: Optional[int]
+```
+
+## `class StatisticalMethod(BaseEntity)`
+
+Represents a statistical method or test used in analysis.
+
+Uses STATO (Statistics Ontology) to standardize statistical method
+classifications. Enables tracking of analytical approaches across studies.
+
+Attributes:
+    stato_id: STATO identifier for the statistical method
+    method_type: Category of method (hypothesis_test, regression, etc.)
+    description: Description of the method
+    assumptions: Key assumptions of the method
+
+Example:
+    >>> ttest = StatisticalMethod(
+    ...     entity_id="STATO:0000288",
+    ...     name="Student's t-test",
+    ...     stato_id="STATO:0000288",
+    ...     method_type="hypothesis_test",
+    ...     description="Parametric test comparing means of two groups",
+    ...     source="stato",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+stato_id: Optional[str]
+method_type: Optional[str]
+description: Optional[str]
+assumptions: List[str]
+```
+
+## `class EvidenceLine(BaseEntity)`
+
+Represents a line of evidence using SEPIO framework.
+
+Uses SEPIO (Scientific Evidence and Provenance Information Ontology)
+to represent structured evidence chains. Links evidence items to
+assertions they support or refute.
+
+Attributes:
+    sepio_type: SEPIO evidence line type ID
+    eco_type: ECO evidence type ID
+    assertion_id: ID of the assertion this evidence supports
+    supports_ids: List of hypothesis IDs this evidence supports
+    refutes_ids: List of hypothesis IDs this evidence refutes
+    evidence_items: List of paper IDs providing evidence
+    strength: Evidence strength classification
+    provenance_info: Provenance information
+
+Example:
+    >>> evidence = EvidenceLine(
+    ...     entity_id="EVIDENCE_LINE:olaparib_brca_001",
+    ...     name="Clinical evidence for Olaparib in BRCA-mutated breast cancer",
+    ...     sepio_type="SEPIO:0000084",
+    ...     eco_type="ECO:0007673",
+    ...     assertion_id="ASSERTION:olaparib_brca",
+    ...     supports_ids=["HYPOTHESIS:parp_inhibitor_synthetic_lethality"],
+    ...     evidence_items=["PMC999888", "PMC888777"],
+    ...     strength="strong",
+    ...     source="extracted",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+sepio_type: Optional[str]
+eco_type: Optional[str]
+assertion_id: Optional[str]
+supports_ids: List[str]
+refutes_ids: List[str]
+evidence_items: List[str]
+strength: Optional[str]
+provenance_info: Optional[str]
+```
+
+## `class Evidence(BaseEntity)`
+
+Evidence for a relationship, treated as a first-class entity.
+
+Evidence entities have immediate canonical ID promotion using format:
+{paper_id}:{section}:{paragraph}:{method}
+
+Example canonical ID: "PMC8437152:results:5:llm"
+
+This format enables:
+- Immediate promotion (no provisional state needed)
+- Efficient lookups by paper/section
+- Deduplication across extraction runs
+- Database indexing for queries like "all evidence from Section 2"
+
+Attributes:
+    entity_id: Canonical ID in format {paper_id}:{section}:{paragraph}:{method}
+    paper_id: PMC ID of source paper
+    text_span_id: Reference to TextSpan entity (for exact location)
+    confidence: Confidence score 0.0-1.0
+    extraction_method: Method used (scispacy_ner, llm, table_parser, pattern_match, manual)
+    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
+    sample_size: Number of subjects in the study
+    eco_type: ECO evidence type ID (e.g., "ECO:0007673" for RCT)
+    obi_study_design: OBI study design ID (e.g., "OBI:0000008" for RCT)
+    stato_methods: List of STATO statistical method IDs used
+
+Schema Rules:
+- entity_id MUST follow canonical ID format
+- paper_id and text_span_id MUST be non-empty
+- Evidence entities are immediately promotable (no usage threshold)
+
+Example:
+    >>> evidence = Evidence(
+    ...     entity_id="PMC999888:results:3:llm",
+    ...     name="Evidence from Olaparib RCT results",
+    ...     paper_id="PMC999888",
+    ...     text_span_id="PMC999888:results:3",
+    ...     confidence=0.92,
+    ...     extraction_method=ExtractionMethod.LLM,
+    ...     study_type=StudyType.RCT,
+    ...     sample_size=302,
+    ...     eco_type="ECO:0007673",
+    ...     obi_study_design="OBI:0000008",
+    ...     stato_methods=["STATO:0000288"],
+    ...     source="extracted",
+    ...     created_at=datetime.now()
+    ... )
+**Fields:**
+
+```python
+promotable: bool
+status: EntityStatus
+paper_id: str
+text_span_id: str
+confidence: float
+extraction_method: 'ExtractionMethod'
+study_type: 'StudyType'
+sample_size: Optional[int]
+eco_type: Optional[str]
+obi_study_design: Optional[str]
+stato_methods: List[str]
+```
+
+
+<span id="user-content-medlitmedlitschemarelationshippy"></span>
+
+# medlit/medlit_schema/relationship.py
+
+Medlit relationship definitions.
+
+## `class EvidenceItem(BaseModel)`
+
+Lightweight evidence reference for relationships.
+
+Attributes:
+    paper_id: PMC ID of source paper
+    study_type: Type of study (observational, rct, meta_analysis, case_report, review)
+    sample_size: Number of subjects in the study
+    confidence: Confidence score (0.0-1.0)
+**Fields:**
+
+```python
+paper_id: str
+study_type: str
+sample_size: Optional[int]
+confidence: float
+```
+
+## `class BaseMedicalRelationship(BaseRelationship)`
+
+Base class for all medical relationships with comprehensive provenance tracking.
+
+All medical relationships inherit from this class and include evidence-based
+provenance fields to support confidence scoring, contradiction detection,
+and temporal tracking of medical knowledge.
+
+Combines lightweight tracking (just paper IDs) with optional rich provenance
+(detailed Evidence objects) and quantitative measurements.
+
+Schema Rules:
+- Medical assertion relationships MUST have non-empty evidence_ids
+- Bibliographic relationships (AuthoredBy, Cites) do NOT require evidence
+
+Attributes:
+    subject_id: Entity ID of the subject (source node)
+    predicate: Relationship type
+    object_id: Entity ID of the object (target node)
+    evidence_ids: REQUIRED list of Evidence entity IDs (for medical assertions)
+    confidence: Confidence score (0.0-1.0) based on evidence strength
+    source_papers: List of PMC IDs supporting this relationship (lightweight)
+    evidence_count: Number of papers providing supporting evidence
+    contradicted_by: List of PMC IDs with contradicting findings
+    first_reported: Date when this relationship was first observed
+    last_updated: Date of most recent supporting evidence
+    evidence: List of detailed EvidenceItem objects (optional, for rich provenance)
+    measurements: List of quantitative measurements (optional)
+    properties: Flexible dict for relationship-specific properties
+
+Example (lightweight):
+    >>> relationship = Treats(
+    ...     subject_id="RxNorm:1187832",
+    ...     predicate="TREATS",
+    ...     object_id="C0006142",
+    ...     evidence_ids=["PMC123:results:5:llm", "PMC456:abstract:2:llm"],
+    ...     source_papers=["PMC123", "PMC456"],
+    ...     confidence=0.85,
+    ...     evidence_count=2,
+    ...     response_rate=0.59
+    ... )
+
+Example (rich provenance):
+    >>> relationship = Treats(
+    ...     subject_id="RxNorm:1187832",
+    ...     predicate="TREATS",
+    ...     object_id="C0006142",
+    ...     evidence_ids=["PMC123:results:5:rct"],
+    ...     confidence=0.85,
+    ...     evidence=[EvidenceItem(paper_id="PMC123", study_type="rct", sample_size=302)],
+    ...     measurements=[Measurement(value=0.59, value_type="response_rate")],
+    ...     response_rate=0.59
+    ... )
+
+### `def BaseMedicalRelationship.evidence_required_for_medical_assertions(cls, v)`
+
+Medical assertion relationships must include evidence.
+
+This validator is overridden in non-medical relationship classes
+(like ResearchRelationship) that don't require evidence.
+
+## `class Treats(BaseMedicalRelationship)`
+
+Represents a therapeutic relationship between a drug and a disease.
+
+Direction: Drug → Disease
+
+Attributes:
+    efficacy: Effectiveness measure or description
+    response_rate: Percentage of patients responding (0.0-1.0)
+    line_of_therapy: Treatment sequence (first-line, second-line, etc.)
+    indication: Specific approved use or condition
+
+Example:
+    >>> treats = Treats(
+    ...     subject_id="RxNorm:1187832",  # Olaparib
+    ...     object_id="C0006142",  # Breast Cancer
+    ...     predicate="TREATS",
+    ...     evidence_ids=["PMC999:results:5:rct", "PMC888:abstract:2:rct"],
+    ...     efficacy="significant improvement in PFS",
+    ...     response_rate=0.59,
+    ...     line_of_therapy="second-line",
+    ...     indication="BRCA-mutated breast cancer",
+    ...     source_papers=["PMC999", "PMC888"],
+    ...     confidence=0.85
+    ... )
+
+## `class Causes(BaseMedicalRelationship)`
+
+Represents a causal relationship between a disease and a symptom.
+
+Direction: Disease → Symptom (or Gene/Mutation → Disease)
+
+Attributes:
+    frequency: How often the symptom occurs (always, often, sometimes, rarely)
+    onset: When the symptom typically appears (early, late)
+    severity: Typical severity of the symptom (mild, moderate, severe)
+
+Example:
+    >>> causes = Causes(
+    ...     subject_id="C0006142",  # Breast Cancer
+    ...     object_id="C0030193",  # Pain
+    ...     predicate="CAUSES",
+    ...     evidence_ids=["PMC123:results:3:llm"],
+    ...     frequency="often",
+    ...     onset="late",
+    ...     severity="moderate",
+    ...     source_papers=["PMC123"],
+    ...     confidence=0.75
+    ... )
+
+## `class Prevents(BaseMedicalRelationship)`
+
+Drug prevents disease relationship.
+
+Direction: Drug → Disease
+
+Attributes:
+    efficacy: Effectiveness measure or description
+    risk_reduction: Risk reduction percentage (0.0-1.0)
+
+## `class IncreasesRisk(BaseMedicalRelationship)`
+
+Represents genetic risk factors for diseases.
+
+Direction: Gene/Mutation → Disease
+
+Attributes:
+    risk_ratio: Numeric risk increase (e.g., 2.5 means 2.5x higher risk)
+    penetrance: Percentage who develop condition (0.0-1.0)
+    age_of_onset: Typical age when disease manifests
+    population: Studied population or ethnic group
+
+Example:
+    >>> risk = IncreasesRisk(
+    ...     subject_id="HGNC:1100",  # BRCA1
+    ...     object_id="C0006142",  # Breast Cancer
+    ...     predicate="INCREASES_RISK",
+    ...     evidence_ids=["PMC123:results:7:llm", "PMC456:discussion:2:llm"],
+    ...     risk_ratio=5.0,
+    ...     penetrance=0.72,
+    ...     age_of_onset="40-50 years",
+    ...     population="Ashkenazi Jewish",
+    ...     source_papers=["PMC123", "PMC456"],
+    ...     confidence=0.92
+    ... )
+
+## `class SideEffect(BaseMedicalRelationship)`
+
+Represents adverse effects of medications.
+
+Direction: Drug → Symptom
+
+Attributes:
+    frequency: How often it occurs (common, uncommon, rare)
+    severity: Severity level (mild, moderate, severe)
+    reversible: Whether the side effect resolves after stopping the drug
+
+Example:
+    >>> side_effect = SideEffect(
+    ...     subject_id="RxNorm:1187832",  # Olaparib
+    ...     object_id="C0027497",  # Nausea
+    ...     predicate="SIDE_EFFECT",
+    ...     evidence_ids=["PMC999:results:8:llm"],
+    ...     frequency="common",
+    ...     severity="mild",
+    ...     reversible=True,
+    ...     source_papers=["PMC999"],
+    ...     confidence=0.75
+    ... )
+
+## `class AssociatedWith(BaseMedicalRelationship)`
+
+Represents a general association between entities.
+
+This is used for relationships where causality is not established but
+statistical association exists.
+
+Valid directions:
+    - Disease → Disease (comorbidities)
+    - Gene → Disease
+    - Biomarker → Disease
+
+Attributes:
+    association_type: Nature of association (positive, negative, neutral)
+    strength: Association strength (strong, moderate, weak)
+    statistical_significance: p-value from statistical tests
+
+Example:
+    >>> assoc = AssociatedWith(
+    ...     subject_id="C0011849",  # Diabetes
+    ...     object_id="C0020538",  # Hypertension
+    ...     predicate="ASSOCIATED_WITH",
+    ...     evidence_ids=["PMC111:results:4:llm"],
+    ...     association_type="positive",
+    ...     strength="strong",
+    ...     statistical_significance=0.001,
+    ...     source_papers=["PMC111"],
+    ...     confidence=0.80
+    ... )
+
+## `class InteractsWith(BaseMedicalRelationship)`
+
+Represents drug-drug interactions.
+
+Direction: Drug ↔ Drug (bidirectional)
+
+Attributes:
+    interaction_type: Nature of interaction (synergistic, antagonistic, additive)
+    severity: Clinical severity (major, moderate, minor)
+    mechanism: Pharmacological mechanism of interaction
+    clinical_significance: Description of clinical implications
+
+Example:
+    >>> interaction = InteractsWith(
+    ...     subject_id="RxNorm:123",  # Warfarin
+    ...     object_id="RxNorm:456",  # Aspirin
+    ...     predicate="INTERACTS_WITH",
+    ...     evidence_ids=["PMC789:discussion:3:llm"],
+    ...     interaction_type="synergistic",
+    ...     severity="major",
+    ...     mechanism="Additive anticoagulant effect",
+    ...     clinical_significance="Increased bleeding risk",
+    ...     source_papers=["PMC789"],
+    ...     confidence=0.90
+    ... )
+
+## `class ContraindicatedFor(BaseMedicalRelationship)`
+
+Drug -[CONTRAINDICATED_FOR]-> Disease/Condition
+
+Attributes:
+    severity: Contraindication severity (absolute, relative)
+    reason: Why contraindicated
+
+## `class DiagnosedBy(BaseMedicalRelationship)`
+
+Represents diagnostic tests or biomarkers used to diagnose a disease.
+
+Direction: Disease → Procedure/Biomarker
+
+Attributes:
+    sensitivity: True positive rate (0.0-1.0)
+    specificity: True negative rate (0.0-1.0)
+    standard_of_care: Whether this is standard clinical practice
+
+Example:
+    >>> diagnosis = DiagnosedBy(
+    ...     subject_id="C0006142",  # Breast Cancer
+    ...     object_id="LOINC:123",  # Mammography
+    ...     predicate="DIAGNOSED_BY",
+    ...     evidence_ids=["PMC555:methods:2:llm"],
+    ...     sensitivity=0.87,
+    ...     specificity=0.91,
+    ...     standard_of_care=True,
+    ...     source_papers=["PMC555"],
+    ...     confidence=0.88
+    ... )
+
+## `class ParticipatesIn(BaseMedicalRelationship)`
+
+Gene/Protein -[PARTICIPATES_IN]-> Pathway
+
+Attributes:
+    role: Function in pathway
+    regulatory_effect: Type of regulation (activates, inhibits, modulates)
+
+## `class SubtypeOf(BaseMedicalRelationship)`
+
+When one disease is a subtype of another disease
+
+## `class ResearchRelationship(BaseRelationship)`
+
+Base class for research metadata relationships.
+
+These relationships connect papers, authors, and clinical trials.
+Unlike medical relationships, they don't require provenance tracking
+since they represent bibliographic metadata rather than medical claims.
+
+Attributes:
+    subject_id: ID of the subject entity
+    predicate: Relationship type
+    object_id: ID of the object entity
+    properties: Flexible dict for relationship-specific properties
+
+## `class Cites(ResearchRelationship)`
+
+Represents a citation from one paper to another.
+
+Direction: Paper → Paper (citing → cited)
+
+Attributes:
+    context: Section where citation appears
+    sentiment: How the citation is used (supports, contradicts, mentions)
+
+## `class StudiedIn(ResearchRelationship)`
+
+Links medical entities to papers that study them.
+
+Direction: Any medical entity → Paper
+
+Attributes:
+    role: Importance in the paper (primary_focus, secondary_finding, mentioned)
+    section: Where discussed (results, methods, discussion, introduction)
+
+## `class AuthoredBy(ResearchRelationship)`
+
+Paper -[AUTHORED_BY]-> Author
+
+Attributes:
+    position: Author position (first, last, corresponding, middle)
+
+## `class PartOf(ResearchRelationship)`
+
+Paper -[PART_OF]-> ClinicalTrial
+
+Attributes:
+    publication_type: Type of publication (protocol, results, analysis)
+
+## `class SameAs(ResearchRelationship)`
+
+Provisional identity link between two entities.
+
+Not a BaseMedicalRelationship — no evidence_ids required.
+Direction: conventionally lower bundle ID → higher bundle ID.
+
+Attributes:
+    confidence: Strength of identity claim (0.0-1.0)
+    resolution: Outcome after review ("merged", "distinct", null = unreviewed)
+    note: Free text explaining the ambiguity
+
+## `class Indicates(BaseMedicalRelationship)`
+
+Biomarker or test result indicates disease or condition.
+
+Direction: Biomarker / Evidence → Disease
+
+## `class Predicts(BaseMedicalRelationship)`
+
+Represents a hypothesis predicting an observable outcome.
+
+Direction: Hypothesis → Entity (Disease, Outcome, etc.)
+
+Attributes:
+    prediction_type: Nature of prediction (positive, negative, conditional)
+    conditions: Conditions under which prediction holds
+    testable: Whether the prediction is empirically testable
+
+## `class Refutes(BaseMedicalRelationship)`
+
+Represents evidence that refutes a hypothesis.
+
+Direction: Evidence/Paper → Hypothesis
+
+Attributes:
+    refutation_strength: Strength of refutation (strong, moderate, weak)
+    alternative_explanation: Alternative explanation for observations
+    limitations: Limitations of the refuting evidence
+
+## `class TestedBy(BaseMedicalRelationship)`
+
+Represents a hypothesis being tested by a study or clinical trial.
+
+Direction: Hypothesis → Paper/ClinicalTrial
+
+Attributes:
+    test_outcome: Result of the test (supported, refuted, inconclusive)
+    methodology: Study methodology used
+    study_design_id: OBI study design ID
+
+## `class Supports(BaseMedicalRelationship)`
+
+Evidence supports a hypothesis or claim.
+
+Direction: Evidence → Hypothesis
+
+Attributes:
+    support_strength: Strength of support (strong, moderate, weak)
+
+## `class Generates(BaseMedicalRelationship)`
+
+Represents a study generating evidence for analysis.
+
+Direction: ClinicalTrial/Paper → Evidence
+
+Attributes:
+    evidence_type: Type of evidence generated (experimental, observational, etc.)
+    eco_type: ECO evidence type ID
+    quality_score: Quality assessment score
+
+### `def create_relationship(predicate: str, subject_id: str, object_id: str, **kwargs) -> BaseRelationship`
+
+Factory function for creating typed relationship instances.
+
+Provides type-safe relationship creation with predicate validation.
+Returns the appropriate relationship subclass based on predicate.
+
+Args:
+    predicate: Relationship type (must match RELATIONSHIP_TYPE_MAP keys)
+    subject_id: Entity ID of the subject
+    object_id: Entity ID of the object
+    **kwargs: Relationship-specific fields (evidence_ids, confidence, etc.)
+
+Returns:
+    Typed relationship instance (Treats, Causes, Cites, etc.)
+
+Raises:
+    ValueError: If predicate is not recognized
+
+Example:
+    >>> rel = create_relationship(
+    ...     predicate="TREATS",
+    ...     subject_id="RxNorm:1187832",
+    ...     object_id="C0006142",
+    ...     evidence_ids=["PMC123:results:5:rct"],
+    ...     response_rate=0.59,
+    ...     confidence=0.85
+    ... )
+    >>> isinstance(rel, Treats)
+    True
+
+
+<span id="user-content-medlitpipelinepy"></span>
+
+# medlit/pipeline.py
+
+MedlitPipeline: top-level IngestPipeline implementation for medlit.
+
+Implements the IngestPipeline ABC (or ducks as one if the interface package
+is not installed) by delegating to the medlit pipeline scripts.
+
+> MedlitPipeline: top-level IngestPipeline implementation for medlit.
+
+Implements the IngestPipeline ABC (or ducks as one if the interface package
+is not installed) by delegating to the medlit pipeline scripts.
+
+
+## `class MedlitPipeline(IngestPipeline)`
+
+End-to-end medlit knowledge-graph ingestion pipeline.
+
+Orchestrates fetch_vocab → extract → ingest → build_bundle stages
+for medical-literature papers in JATS-XML or pre-parsed JSON format.
+
+### `def MedlitPipeline.get_entity_type_specs(self) -> dict[str, Any]`
+
+Return entity type specifications from the medlit domain spec.
+
+### `def MedlitPipeline.fetch_vocab(self, input_dir: Path, output_dir: Path, llm_backend: str = 'anthropic', papers: Optional[list[str]] = None, limit: Optional[int] = None) -> None`
+
+Extract vocabulary from papers and write vocab.json + seeded_synonym_cache.json.
+
+Args:
+    input_dir: Directory containing paper XML/JSON files.
+    output_dir: Output directory for vocab.json and seeded_synonym_cache.json.
+    llm_backend: LLM backend to use ("anthropic", "openai", or "ollama").
+    papers: Optional list of glob patterns to filter input files.
+    limit: Optional maximum number of papers to process.
+
+### `def MedlitPipeline.extract(self, input_dir: Path, output_dir: Path, llm_backend: str = 'anthropic', papers: Optional[list[str]] = None, limit: Optional[int] = None, vocab_dir: Optional[Path] = None) -> None`
+
+Run Pass 1 + Pass 2 extraction and write per-paper bundle JSON files.
+
+Args:
+    input_dir: Directory containing paper XML/JSON files.
+    output_dir: Output directory for paper_*.json bundle files.
+    llm_backend: LLM backend to use.
+    papers: Optional list of glob patterns to filter input files.
+    limit: Optional maximum number of papers to process.
+    vocab_dir: Optional path to vocab.json / seeded_synonym_cache.json.
+
+### `def MedlitPipeline.run_ingest(self, bundle_dir: Path, output_dir: Path, synonym_cache_path: Optional[Path] = None, canonical_id_cache_path: Optional[Path] = None, similarity_threshold: float = 0.88) -> dict[str, Any]`
+
+Deduplicate and promote entities/relationships from per-paper bundles.
+
+Args:
+    bundle_dir: Directory containing paper_*.json bundle files.
+    output_dir: Output directory for merged entities.json and relationships.json.
+    synonym_cache_path: Optional path to synonym cache file.
+    canonical_id_cache_path: Optional path to canonical ID lookup cache.
+    similarity_threshold: Min cosine similarity for embedding-based merge.
+
+Returns:
+    Result dict with entities_count, relationships_count, and output paths.
+
+### `def MedlitPipeline.build_bundle(self, merged_dir: Path, bundles_dir: Path, output_dir: Path, pmc_xmls_dir: Optional[Path] = None) -> dict[str, Any]`
+
+Build kgbundle from merged ingest output and per-paper bundles.
+
+Args:
+    merged_dir: ingest output directory (entities.json, relationships.json, id_map.json).
+    bundles_dir: Directory containing paper_*.json bundle files.
+    output_dir: Output directory in kgbundle format.
+    pmc_xmls_dir: Optional directory of JATS-XML sources to copy into output.
+
+Returns:
+    Summary dict with entity_count, relationship_count, evidence_count, manifest_path.
+
+
+<span id="user-content-medlittestsinitpy"></span>
+
+# medlit/tests/__init__.py
+
+Tests for the medlit example application.
+
+
+<span id="user-content-medlittestsconftestpy"></span>
+
+# medlit/tests/conftest.py
+
+Conftest for medlit tests — provides shared fixtures.
+
+### `def entity_storage() -> InMemoryEntityStorage`
+
+Provide a fresh in-memory entity storage instance.
+
+### `def relationship_storage() -> InMemoryRelationshipStorage`
+
+Provide a fresh in-memory relationship storage instance.
+
+### `def document_storage() -> InMemoryDocumentStorage`
+
+Provide a fresh in-memory document storage instance.
+
+
+<span id="user-content-medlitteststestauthoritylookuppy"></span>
+
+# medlit/tests/test_authority_lookup.py
+
+Tests for canonical ID authority lookup.
+
+Tests the matching logic for DBPedia and other ontology lookups,
+and UMLS type validation (validate_umls_type).
+
+> Tests for canonical ID authority lookup.
+
+Tests the matching logic for DBPedia and other ontology lookups,
+and UMLS type validation (validate_umls_type).
+
+
+## `class TestDBPediaLabelMatching`
+
+Test the DBPedia label matching logic.
+
+### `def TestDBPediaLabelMatching.lookup(self)`
+
+Create a CanonicalIdLookup instance for testing.
+
+### `def TestDBPediaLabelMatching.test_exact_match(self, lookup)`
+
+Exact match should succeed.
+
+### `def TestDBPediaLabelMatching.test_term_contained_in_label(self, lookup)`
+
+Term contained in label should succeed.
+
+### `def TestDBPediaLabelMatching.test_label_contained_in_term(self, lookup)`
+
+Label contained in term should succeed.
+
+### `def TestDBPediaLabelMatching.test_label_starts_with_term(self, lookup)`
+
+Label starting with term should succeed.
+
+### `def TestDBPediaLabelMatching.test_common_prefix_singular_plural(self, lookup)`
+
+Common 6-char prefix should succeed (handles singular/plural).
+
+### `def TestDBPediaLabelMatching.test_html_tags_stripped(self, lookup)`
+
+HTML bold tags should be stripped from labels.
+
+### `def TestDBPediaLabelMatching.test_case_insensitive(self, lookup)`
+
+Matching should be case-insensitive.
+
+### `def TestDBPediaLabelMatching.test_garbage_match_insect(self, lookup)`
+
+Garbage match 'HER2-enriched' → 'Insect' should fail.
+
+### `def TestDBPediaLabelMatching.test_garbage_match_animal(self, lookup)`
+
+Garbage match 'basal-like' → 'Animal' should fail.
+
+### `def TestDBPediaLabelMatching.test_unrelated_terms(self, lookup)`
+
+Completely unrelated terms should fail.
+
+### `def TestDBPediaLabelMatching.test_substring_match_allowed(self, lookup)`
+
+Substring matching is allowed (term in label).
+
+### `def TestDBPediaLabelMatching.test_no_overlap_fails(self, lookup)`
+
+Terms with no overlap should fail.
+
+## `class TestMeSHTermNormalization`
+
+Test MeSH term normalization (cancer → neoplasms).
+
+### `def TestMeSHTermNormalization.lookup(self)`
+
+Create a CanonicalIdLookup instance for testing.
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction(self, lookup)`
+
+Test extracting MeSH ID from API results.
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction_word_order(self, lookup)`
+
+Test MeSH extraction handles word order differences.
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction_no_match(self, lookup)`
+
+Test MeSH extraction returns None for no match.
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction_empty_data(self, lookup)`
+
+Test MeSH extraction handles empty data.
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction_prefers_general_over_complication(self, lookup)`
+
+Test that general terms are preferred over complications.
+
+"breast cancer" should match "Breast Neoplasms" (D001943)
+rather than "Breast Cancer Lymphedema" (D000072656).
+
+### `def TestMeSHTermNormalization.test_mesh_id_extraction_exact_match_priority(self, lookup)`
+
+Test that exact matches get highest priority.
+
+## `class TestValidateUmlsType`
+
+Test validate_umls_type with injected semantic type mapping (no live API).
+
+### `def TestValidateUmlsType.test_cortisol_gene_misclassified_returns_correction(self)`
+
+Cortisol (C0020268) as hormone/drug; assigned type 'gene' should return (False, correct_type).
+
+### `def TestValidateUmlsType.test_pasireotide_drug_compatible_returns_ok(self)`
+
+Pasireotide (or any CUI) mapped to Pharmacologic Substance with type drug returns (True, None).
+
+### `def TestValidateUmlsType.test_unknown_cui_returns_ok_no_correction(self)`
+
+Unknown CUI (not in override, or empty override) returns (True, None).
+
+### `def TestValidateUmlsType.test_cache_reused(self)`
+
+Results are cached when _cache dict is passed; second call does not recompute.
+
+### `def TestValidateUmlsType.test_ambiguous_multiple_allowed_returns_false_none(self)`
+
+When UMLS maps to multiple allowed types (e.g. drug or biomarker), return (False, None).
+
+
+<span id="user-content-medlitteststestbuildbundlepy"></span>
+
+# medlit/tests/test_build_bundle.py
+
+Tests for build_bundle (merged + extracted -> kgbundle).
+
+### `def minimal_merged_dir(tmp_path)`
+
+Minimal merged dir: entities.json, relationships.json, id_map.json, synonym_cache.json.
+
+### `def minimal_bundles_dir(tmp_path)`
+
+Minimal bundles dir: one paper_*.json with one relationship and matching evidence_entity.
+
+### `def test_run_build_bundle_produces_bundle_files(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
+
+run_build_bundle writes entities.jsonl, relationships.jsonl, evidence.jsonl, mentions.jsonl, manifest.json.
+
+### `def test_entity_row_has_usage_and_status(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
+
+EntityRow in entities.jsonl has entity_id, status, usage_count/total_mentions from bundle scan.
+
+### `def test_first_seen_section_populated_from_evidence_id(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
+
+first_seen_section is parsed from evidence_id (format paper_id:section:paragraph_idx:method).
+
+### `def test_relationship_row_includes_provenance_in_properties(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
+
+When merged relationships have provenance, Pass 3 emits it in properties.
+
+### `def test_evidence_row_relationship_key_uses_merge_keys(minimal_merged_dir, minimal_bundles_dir, tmp_path)`
+
+EvidenceRow relationship_key uses merge keys (from id_map), not local ids.
+
+### `def test_run_build_bundle_raises_when_id_map_missing(tmp_path, minimal_bundles_dir)`
+
+If id_map.json is missing in merged_dir, run_build_bundle raises FileNotFoundError.
+
+### `def test_load_merged_output_requires_id_map(tmp_path)`
+
+load_merged_output raises FileNotFoundError when id_map.json is missing.
+
+### `def test_load_extracted_bundles(minimal_bundles_dir)`
+
+load_extracted_bundles returns list of (paper_id, PerPaperBundle).
+
+### `def test_provenance_denylist_excludes_pmc_placeholder(tmp_path)`
+
+Entities with only PMC_PLACEHOLDER in relationships get usage_count 0, first_seen_document None.
+
+### `def test_provenance_denylist_excludes_pmc_id_not_provided(tmp_path)`
+
+Entities with only PMC_ID_NOT_PROVIDED in relationships get usage_count 0, first_seen_document None.
+
+### `def test_provenance_denylist_excludes_pmc_unknown(tmp_path)`
+
+Entities with only PMC_UNKNOWN in supporting_documents get usage_count 0.
+
+### `def test_zero_mention_orphan_dropped(tmp_path)`
+
+Entity in relationship but with no evidence_ids gets usage_count 0 and is dropped.
+
+### `def test_provenance_derived_entities_retained(tmp_path)`
+
+Paper, Author, Institution from provenance_expansion (no evidence_ids) get usage_count and are retained.
+
+### `def test_run_build_bundle_copies_sources_when_pmc_xmls_dir_provided(tmp_path)`
+
+When --pmc-xmls-dir is provided, copy XML files into output_dir/sources/.
+
+
+<span id="user-content-medlitteststestdeduppy"></span>
+
+# medlit/tests/test_dedup.py
+
+Tests for ingest dedup: synonym indexing, namespace normalization, reconciliation.
+
+### `def test_synonym_indexing_merges_name_to_synonym(tmp_path)`
+
+Entity A has synonym X; entity B has name X (same class) -> merge to one canonical.
+
+### `def test_synonym_indexing_does_not_merge_different_classes(tmp_path)`
+
+Same name/synonym but different entity_class -> do not merge.
+
+### `def test_spelling_normalization_merges_hyperglycaemia_hyperglycemia(tmp_path)`
+
+British/American spelling variants (hyperglycaemia/hyperglycemia) merge to one canonical.
+
+### `def test_preferred_authoritative_id_prefers_hgnc_for_gene()`
+
+When Gene has both umls_id and hgnc_id, prefer hgnc_id.
+
+### `def test_preferred_authoritative_id_returns_umls_when_only_umls()`
+
+When Gene has only umls_id, return umls_id (no lookup without lookup object).
+
+### `def test_is_authoritative_id()`
+
+_is_authoritative_id correctly identifies authoritative vs prov- slugs.
+
+### `def test_canonical_id_slug_format()`
+
+_canonical_id_slug produces prov- prefixed hex.
+
+
+<span id="user-content-medlitteststestentitynormalizationpy"></span>
+
+# medlit/tests/test_entity_normalization.py
+
+Tests for entity type normalization in MedLitEntityExtractor.
+
+Tests the _normalize_entity_type() method which handles:
+- Pipe-separated types from LLM output
+- Common LLM mistakes (test → procedure)
+- Invalid type filtering
+
+> Tests for entity type normalization in MedLitEntityExtractor.
+
+Tests the _normalize_entity_type() method which handles:
+- Pipe-separated types from LLM output
+- Common LLM mistakes (test → procedure)
+- Invalid type filtering
+
+
+## `class TestTypeNormalizationWithDomain`
+
+Test entity type normalization with domain schema validation.
+
+### `def TestTypeNormalizationWithDomain.extractor(self)`
+
+Create extractor with domain for full validation.
+
+### `def TestTypeNormalizationWithDomain.test_valid_type_passes_through(self, extractor)`
+
+Valid entity types should pass through unchanged.
+
+### `def TestTypeNormalizationWithDomain.test_case_normalization(self, extractor)`
+
+Types should be normalized to lowercase.
+
+### `def TestTypeNormalizationWithDomain.test_whitespace_stripped(self, extractor)`
+
+Whitespace should be stripped from types.
+
+### `def TestTypeNormalizationWithDomain.test_pipe_separated_takes_first_valid(self, extractor)`
+
+Pipe-separated types should return first valid type.
+
+### `def TestTypeNormalizationWithDomain.test_pipe_separated_skips_invalid(self, extractor)`
+
+Pipe-separated types should skip invalid types.
+
+### `def TestTypeNormalizationWithDomain.test_pipe_separated_all_invalid_returns_none(self, extractor)`
+
+Pipe-separated with all invalid types should return None.
+
+### `def TestTypeNormalizationWithDomain.test_common_mistake_test_to_procedure(self, extractor)`
+
+'test' should be normalized to 'procedure'.
+
+### `def TestTypeNormalizationWithDomain.test_common_mistake_diagnostic_to_procedure(self, extractor)`
+
+'diagnostic' should be normalized to 'procedure'.
+
+### `def TestTypeNormalizationWithDomain.test_common_mistake_imaging_to_procedure(self, extractor)`
+
+'imaging' should be normalized to 'procedure'.
+
+### `def TestTypeNormalizationWithDomain.test_common_mistake_assay_to_biomarker(self, extractor)`
+
+'assay' should be normalized to 'biomarker'.
+
+### `def TestTypeNormalizationWithDomain.test_common_mistake_marker_to_biomarker(self, extractor)`
+
+'marker' should be normalized to 'biomarker'.
+
+### `def TestTypeNormalizationWithDomain.test_skip_system_type(self, extractor)`
+
+'system' should be skipped (returns None).
+
+### `def TestTypeNormalizationWithDomain.test_skip_organization_type(self, extractor)`
+
+'organization' should be skipped (returns None).
+
+### `def TestTypeNormalizationWithDomain.test_invalid_type_returns_none(self, extractor)`
+
+Unknown types should return None.
+
+## `class TestTypeNormalizationWithoutDomain`
+
+Test entity type normalization without domain (basic mode).
+
+### `def TestTypeNormalizationWithoutDomain.extractor(self)`
+
+Create extractor without domain for basic normalization.
+
+### `def TestTypeNormalizationWithoutDomain.test_basic_type_passes_through(self, extractor)`
+
+Types pass through in basic mode (no validation).
+
+### `def TestTypeNormalizationWithoutDomain.test_basic_pipe_takes_first(self, extractor)`
+
+Pipe-separated takes first part in basic mode.
+
+### `def TestTypeNormalizationWithoutDomain.test_basic_mapping_applied(self, extractor)`
+
+TYPE_MAPPING is still applied in basic mode.
+
+## `class TestTypeMappingConstants`
+
+Test the TYPE_MAPPING constant has expected entries.
+
+### `def TestTypeMappingConstants.test_procedure_mappings_exist(self)`
+
+Procedure mappings should exist.
+
+### `def TestTypeMappingConstants.test_biomarker_mappings_exist(self)`
+
+Biomarker mappings should exist.
+
+### `def TestTypeMappingConstants.test_skip_mappings_exist(self)`
+
+Skip mappings (None values) should exist.
+
+## `class TestTypeMasqueradingAsName`
+
+Reject entity names that are actually type labels (e.g. LLM returns entity='disease', type='disease').
+
+### `def TestTypeMasqueradingAsName.test_name_equals_type_rejected(self)`
+
+When name equals type, treat as type masquerading as name.
+
+### `def TestTypeMasqueradingAsName.test_known_type_labels_rejected_as_name(self)`
+
+Known type labels must not be used as entity names.
+
+### `def TestTypeMasqueradingAsName.test_real_entity_names_allowed(self)`
+
+Real entity names should not be rejected.
+
+### `def TestTypeMasqueradingAsName.test_empty_name_rejected(self)`
+
+Empty or whitespace-only name is rejected.
+
+### `async def TestTypeMasqueradingAsName.test_pre_extracted_type_as_name_dropped(self)`
+
+Pre-extracted entities with name=type (e.g. name='disease', type='disease') produce no mention.
+
+
+<span id="user-content-medlitteststestextractpy"></span>
+
+# medlit/tests/test_extract.py
+
+Unit tests for extract helpers: vocab-in-prompt and type normalization.
+
+## `class TestNormalizeEntityType`
+
+Test raw LLM type string -> bundle class (PascalCase).
+
+### `def TestNormalizeEntityType.test_biological_process_to_biological_process(self)`
+
+'biological process' (with space) normalizes to BiologicalProcess.
+
+### `def TestNormalizeEntityType.test_gene_to_gene(self)`
+
+'gene' -> Gene.
+
+### `def TestNormalizeEntityType.test_disease_lowercase(self)`
+
+'disease' -> Disease.
+
+### `def TestNormalizeEntityType.test_hormone_and_enzyme(self)`
+
+PLAN3: hormone -> Hormone, enzyme -> Enzyme.
+
+### `def TestNormalizeEntityType.test_biological_process_underscore(self)`
+
+'biological_process' -> BiologicalProcess.
+
+### `def TestNormalizeEntityType.test_unknown_maps_to_other(self)`
+
+Unknown type maps to Other.
+
+### `def TestNormalizeEntityType.test_whitespace_stripped(self)`
+
+Whitespace is stripped before mapping.
+
+## `class TestBuildSystemPromptWithVocab`
+
+Test that vocab section is appended when vocab_entries provided.
+
+### `def TestBuildSystemPromptWithVocab.test_empty_vocab_returns_base(self)`
+
+None or empty vocab returns base prompt without vocab section.
+
+### `def TestBuildSystemPromptWithVocab.test_vocab_entries_included_in_prompt(self)`
+
+Short vocab list is included in the prompt with names and types.
+
+## `class TestFixEvidencePaperId`
+
+Replace LLM placeholder paper IDs in evidence with actual paper_id.
+
+### `def TestFixEvidencePaperId.test_pmc_unknown_replaced(self)`
+
+PMC_UNKNOWN in evidence ID is replaced with actual paper_id.
+
+### `def TestFixEvidencePaperId.test_paper_id_literal_replaced(self)`
+
+'paper_id' literal is replaced.
+
+### `def TestFixEvidencePaperId.test_real_paper_id_unchanged(self)`
+
+Real paper IDs are left as-is.
+
+### `def TestFixEvidencePaperId.test_no_colon_unchanged(self)`
+
+Evidence IDs without colon are returned unchanged.
+
+### `def TestFixEvidencePaperId.test_pmc11000000_replaced(self)`
+
+PMC11000000 placeholder is replaced.
+
+### `def TestFixEvidencePaperId.test_current_paper_replaced(self)`
+
+==CURRENT_PAPER== placeholder is replaced.
+
+### `def TestFixEvidencePaperId.test_hallucinated_pmc_replaced(self)`
+
+PMC ID from citation/hallucination (not current paper) is replaced.
+
+### `def TestFixEvidencePaperId.test_current_paper_unchanged(self)`
+
+Evidence with correct current paper_id is left as-is.
+
+## `class TestReplaceCurrentPaperInBundle`
+
+Global replace of ==CURRENT_PAPER== in raw bundle before parsing.
+
+### `def TestReplaceCurrentPaperInBundle.test_replaces_in_evidence_ids(self)`
+
+==CURRENT_PAPER== in evidence_entities and relationships is replaced.
+
+### `def TestReplaceCurrentPaperInBundle.test_leaves_other_strings_unchanged(self)`
+
+Strings without ==CURRENT_PAPER== are unchanged.
+
+
+<span id="user-content-medlitteststestnerextractorpy"></span>
+
+# medlit/tests/test_ner_extractor.py
+
+Tests for NER-based entity extraction (PLAN3).
+
+## `class TestNormalizeEntityGroup`
+
+Test label normalization for NER pipeline output.
+
+## `class TestLabelMapping`
+
+Test default label -> medlit type mapping.
+
+## `class TestChunkText`
+
+Test long-document chunking.
+
+## `class TestGetDocumentText`
+
+Test document text extraction.
+
+## `class TestMedLitNEREntityExtractorWithMock`
+
+Test NER extractor with a mock pipeline (no real model load).
+
+### `def TestMedLitNEREntityExtractorWithMock.mock_pipeline(self)`
+
+Pipeline that returns fixed entities for testing.
+
+### `async def TestMedLitNEREntityExtractorWithMock.test_type_as_name_filtered_out(self, mock_pipeline)`
+
+When mock returns entity with word 'disease' (type label), it should be filtered out.
+
+## `class TestMedLitNEREntityExtractorImportError`
+
+Test that NER extractor raises clear ImportError when transformers not installed.
+
+### `def TestMedLitNEREntityExtractorImportError.test_instantiation_without_pipeline_raises_import_error_when_no_transformers(self)`
+
+When transformers is not installed, constructing without pipeline= raises ImportError.
+
+
+<span id="user-content-medlitteststestpromotionlookuppy"></span>
+
+# medlit/tests/test_promotion_lookup.py
+
+Tests for promotion with canonical ID lookup service integration.
+
+Tests that verify the lookup parameter is correctly passed through the promotion chain:
+- run_promotion(lookup=...) → get_promotion_policy(lookup=...) → MedLitPromotionPolicy(lookup=...)
+
+> Tests for promotion with canonical ID lookup service integration.
+
+Tests that verify the lookup parameter is correctly passed through the promotion chain:
+- run_promotion(lookup=...) → get_promotion_policy(lookup=...) → MedLitPromotionPolicy(lookup=...)
+
+
+### `async def medlit_orchestrator(entity_storage: InMemoryEntityStorage, relationship_storage: InMemoryRelationshipStorage, document_storage: InMemoryDocumentStorage)`
+
+Create orchestrator with MedLit domain for promotion testing.
+
+### `def mock_lookup()`
+
+Create a mock CanonicalIdLookupInterface for testing.
+
+## `class TestPromotionLookupIntegration`
+
+Test that lookup service is passed through the promotion chain.
+
+### `async def TestPromotionLookupIntegration.test_get_promotion_policy_accepts_lookup_parameter(self, medlit_orchestrator: IngestionOrchestrator, mock_lookup: MagicMock)`
+
+get_promotion_policy accepts lookup parameter and passes it to policy.
+
+### `async def TestPromotionLookupIntegration.test_get_promotion_policy_works_without_lookup(self, medlit_orchestrator: IngestionOrchestrator)`
+
+get_promotion_policy works when lookup is None (creates new instance).
+
+### `async def TestPromotionLookupIntegration.test_run_promotion_passes_lookup_to_policy(self, medlit_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage, mock_lookup: MagicMock)`
+
+run_promotion passes lookup parameter through to get_promotion_policy.
+
+### `async def TestPromotionLookupIntegration.test_promotion_uses_provided_lookup_service(self, medlit_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage, mock_lookup: MagicMock)`
+
+Promotion uses the provided lookup service when assigning canonical IDs.
+
+
+<span id="user-content-medlitteststestprovenanceexpansionpy"></span>
+
+# medlit/tests/test_provenance_expansion.py
+
+Tests for provenance expansion (Author, Institution, Paper, derived relationships).
+
+### `def test_canonicalize_symmetric() -> None`
+
+canonicalize_symmetric returns (min, max) for deterministic storage.
+
+### `def test_expand_provenance_creates_author_institution_paper() -> None`
+
+expand_provenance produces Author, Institution, Paper entities and derived relationships.
+
+### `def test_expand_provenance_described_top_two_by_relationship_count() -> None`
+
+DESCRIBED is limited to top 2 domain entities by relationship count.
+
+### `def test_expand_provenance_skips_author_institution_evidence() -> None`
+
+DESCRIBED excludes Author, Institution, Evidence; only domain entities considered.
+
+
+<span id="user-content-medlitteststesttwopassingestionpy"></span>
+
+# medlit/tests/test_two_pass_ingestion.py
+
+Integration test for ingest (dedup) using pre-baked fixture bundles.
+
+Uses fixture JSONs only; no live LLM calls. extract is tested separately
+(manual run or --dry-run / mocked LLM).
+
+> Integration test for ingest (dedup) using pre-baked fixture bundles.
+
+Uses fixture JSONs only; no live LLM calls. extract is tested separately
+(manual run or --dry-run / mocked LLM).
+
+
+### `def fixture_bundle_dir(tmp_path)`
+
+Copy fixture bundles to a temp dir so ingest can read them.
+
+### `def test_pass2_merges_same_name_class(fixture_bundle_dir, tmp_path)`
+
+Entities with same (name, class) across papers get the same canonical_id.
+
+### `def test_pass2_writes_synonym_cache(fixture_bundle_dir, tmp_path)`
+
+Pass 2 writes synonym_cache.json.
+
+### `def test_pass2_does_not_modify_input_bundles(fixture_bundle_dir, tmp_path)`
+
+Original bundle files are not modified (read-only).
+
+### `def test_pass2_writes_id_map(fixture_bundle_dir, tmp_path)`
+
+Pass 2 writes id_map.json so Pass 3 can resolve (paper_id, local_id) -> merge_key.
+
+### `def test_pass2_accumulates_relationship_sources(fixture_bundle_dir, tmp_path)`
+
+Merged relationships aggregate source_papers and evidence_ids.
+
+### `def test_pass2_accumulates_provenance_from_evidence(fixture_bundle_dir, tmp_path)`
+
+Merged relationships have provenance built from evidence_entities (section, sentence).
+
+### `def test_fixture_bundles_load(fixture_bundle_dir)`
+
+Fixture bundles are valid PerPaperBundle.
+
+### `def test_is_authoritative_id()`
+
+_is_authoritative_id returns True for ontology IDs, False for synthetic slugs.
+
+### `def test_pass2_output_has_entity_id_and_canonical_id_null_when_synthetic(fixture_bundle_dir, tmp_path)`
+
+Pass 2 output entities have entity_id (merge key) and canonical_id null when synthetic.
+
+### `def test_pass2_swaps_backwards_treats_relationship(tmp_path)`
+
+Backwards (disease, treats, drug) from Pass 1 LLM is corrected to (drug, treats, disease).
+
+### `def test_pass2_authoritative_id_from_bundle_preserved(tmp_path)`
+
+When a bundle entity has umls_id (or other authoritative ID), Pass 2 uses it as entity_id and canonical_id.
+
+
+<span id="user-content-procpy"></span>
+
+# proc.py
+
+Poor man's literate programming preprocessor.
+
+Processes a Python file in source order, emitting:
+  - Top-level string literals verbatim as markdown
+  - Markdown summaries (signature + docstring) for top-level functions and classes
+
+Example usage:
+$ docker run -it --rm -v "$(pwd):/work" python:3.13-bookworm     python3 /work/proc.py /work/example.py > example.md
+
+> 
+Poor man's literate programming preprocessor.
+
+Processes a Python file in source order, emitting:
+  - Top-level string literals verbatim as markdown
+  - Markdown summaries (signature + docstring) for top-level functions and classes
+
+Example usage:
+$ docker run -it --rm -v "$(pwd):/work" python:3.13-bookworm     python3 /work/proc.py /work/example.py > example.md
+
+
+
+<span id="user-content-scriptsbuildcodereferencepy"></span>
+
+# scripts/build_code_reference.py
+
+Build MkDocs-ready code-reference markdown from Python source files.
+
+
+<span id="user-content-sherlockreadmemd"></span>
+
+# sherlock/README.md
+
+# Sherlock Holmes Knowledge Graph Pipeline
+
+Dense typed knowledge graph extraction from "A Scandal in Bohemia" (Arthur Conan Doyle, 1891).
+
+## Overview
+
+This package builds a rich, entity-typed knowledge graph from the Sherlock Holmes story
+"A Scandal in Bohemia" using LLM-driven extraction — the same approach that made the
+`medlit` pipeline produce dense graphs (many entity types, semantically specific predicates)
+rather than sparse co-occurrence graphs.
 
     ...
+
+<span id="user-content-sherlocksherlockinitpy"></span>
+
+# sherlock/sherlock/__init__.py
+
+Sherlock Holmes knowledge graph pipeline.
+
+Dense typed extraction from "A Scandal in Bohemia" and other Holmes stories.
+Follows the medlit pattern: domain_spec.py as single source of truth,
+LLM-based extraction, dedup/merge, kgbundle output.
+
+> Sherlock Holmes knowledge graph pipeline.
+
+Dense typed extraction from "A Scandal in Bohemia" and other Holmes stories.
+Follows the medlit pattern: domain_spec.py as single source of truth,
+LLM-based extraction, dedup/merge, kgbundle output.
+
+
+
+<span id="user-content-sherlocksherlockbundlemodelspy"></span>
+
+# sherlock/sherlock/bundle_models.py
+
+Pydantic models for the per-story bundle JSON (Pass 1 output / Pass 2 input).
+
+Mirrors medlit's bundle_models.py but adapted for fiction:
+- StoryInfo instead of PaperInfo
+- NarratorTrust and story_time fields on RelationshipRow (Sherlock-specific epistemic metadata)
+- Evidence IDs use {story_id}:{section}:{paragraph_idx}:{method}
+
+> Pydantic models for the per-story bundle JSON (Pass 1 output / Pass 2 input).
+
+Mirrors medlit's bundle_models.py but adapted for fiction:
+- StoryInfo instead of PaperInfo
+- NarratorTrust and story_time fields on RelationshipRow (Sherlock-specific epistemic metadata)
+- Evidence IDs use {story_id}:{section}:{paragraph_idx}:{method}
+
+
+## `class StoryInfo(BaseModel)`
+
+Metadata for a Sherlock Holmes story.
+**Fields:**
+
+```python
+story_id: str
+title: str
+collection: Optional[str]
+author: str
+year: Optional[int]
+source_uri: Optional[str]
+document_id: str
+```
+
+## `class ExtractedEntityRow(BaseModel)`
+
+Minimal entity record in the story bundle. JSON key 'class' via alias.
+**Fields:**
+
+```python
+id: str
+entity_class: str
+name: str
+synonyms: list[str]
+canonical_id: Optional[str]
+source: Literal['extracted', 'curated']
+description: Optional[str]
+```
+
+## `class EvidenceEntityRow(BaseModel)`
+
+Evidence entity in the story bundle.
+
+id format: {story_id}:{section}:{paragraph_idx}:{method}
+**Fields:**
+
+```python
+id: str
+entity_class: Literal['Evidence']
+entity_id: Optional[str]
+story_id: str
+section: Optional[str]
+paragraph_idx: Optional[int]
+text: Optional[str]
+confidence: float
+extraction_method: str
+source: Literal['extracted']
+```
+
+## `class ProvenanceEntry(BaseModel)`
+
+One provenance record for a relationship.
+**Fields:**
+
+```python
+section: Optional[str]
+sentence: Optional[str]
+paragraph_idx: Optional[int]
+```
+
+## `class RelationshipRow(BaseModel)`
+
+One relationship in the story bundle.
+**Fields:**
+
+```python
+subject: str
+predicate: str
+object_id: str
+evidence_ids: list[str]
+provenance: list[ProvenanceEntry]
+source_stories: list[str]
+confidence: float
+narrator_trust: Optional[NarratorTrustLiteral]
+story_time: Optional[StoryTimeLiteral]
+narrative_position: Optional[int]
+known_by: Optional[list[str]]
+properties: dict[str, Any]
+section: Optional[str]
+asserted_by: str
+resolution: Optional[Literal['merged', 'distinct']]
+note: Optional[str]
+```
+
+## `class PerStoryBundle(BaseModel)`
+
+Per-story bundle: Pass 1 output and Pass 2 input.
+**Fields:**
+
+```python
+story: StoryInfo
+entities: list[ExtractedEntityRow]
+evidence_entities: list[EvidenceEntityRow]
+relationships: list[RelationshipRow]
+notes: list[str]
+```
+
+### `def PerStoryBundle.to_bundle_dict(self) -> dict`
+
+Serialize for JSON with alias 'class' used for entity type.
+
+### `def PerStoryBundle.from_bundle_dict(cls, data: dict) -> 'PerStoryBundle'`
+
+Load from dict/JSON (accepts key 'class' for entity type).
+
+
+<span id="user-content-sherlocksherlockdocumentspy"></span>
+
+# sherlock/sherlock/documents.py
+
+Sherlock Holmes story document representation.
+
+## `class SherlockStory(BaseDocument)`
+
+A Sherlock Holmes short story or novel as a source document for extraction.
+
+The story is split into paragraphs by the parser; each paragraph becomes
+an evidence entity with a stable index.
+
+Fields:
+    collection: The collection title (e.g. 'Adventures of Sherlock Holmes').
+    story_slug: Short identifier used in evidence IDs (e.g. 'scandal_in_bohemia').
+    author: Typically 'Arthur Conan Doyle'.
+    year: Publication year.
+
+### `def SherlockStory.get_sections(self) -> list[tuple[str, str]]`
+
+Return story as a single 'body' section.
+
+
+<span id="user-content-sherlocksherlockdomainpy"></span>
+
+# sherlock/sherlock/domain.py
+
+Domain schema for Sherlock Holmes knowledge graph.
+
+## `class SherlockDomainSchema(DomainSchema)`
+
+Domain schema for Sherlock Holmes fiction extraction.
+
+Defines entity types, predicates, and validation rules for extracting
+a dense typed knowledge graph from Holmes stories.
+
+Key design choices:
+- No external authority APIs: canonical IDs from curated DBPedia map + synthetic scheme
+- All entities promoted immediately (fiction = no provisional/canonical gap)
+- Rich predicate vocabulary (28 predicates vs. 3 generic ones in old approach)
+- NarratorTrust and story_time metadata on every relationship
+
+### `def SherlockDomainSchema.normalize_mention(self, mention: str) -> str`
+
+Normalize character mention for dedup (lowercase, strip, common alias expansion).
+
+### `def SherlockDomainSchema.preferred_entity(self, candidates: list[BaseEntity]) -> BaseEntity`
+
+Select merge survivor: prefer canonical, then curated, then higher usage.
+
+
+<span id="user-content-sherlocksherlockdomainspecpy"></span>
+
+# sherlock/sherlock/domain_spec.py
+
+Domain spec for Sherlock Holmes knowledge graph extraction.
+
+Single source of truth for entity types, predicates, evidence, and mentions.
+Follows the medlit pattern: consumers import from this module.
+
+Design goals:
+- Rich typed schema (not just generic co_occurs_with) → dense graph
+- Epistemic metadata: narrator trust, narrative position, story time
+- Strong predicate constraints → semantically specific edges
+- Alias/coreference handling via SAME_AS → merged canonical nodes
+
+> Domain spec for Sherlock Holmes knowledge graph extraction.
+
+Single source of truth for entity types, predicates, evidence, and mentions.
+Follows the medlit pattern: consumers import from this module.
+
+Design goals:
+- Rich typed schema (not just generic co_occurs_with) → dense graph
+- Epistemic metadata: narrator trust, narrative position, story time
+- Strong predicate constraints → semantically specific edges
+- Alias/coreference handling via SAME_AS → merged canonical nodes
+
+
+## `class NarratorTrust(str, Enum)`
+
+Epistemic source/reliability of an assertion in the narrative.
+
+In fiction, all assertions have an epistemic source. Watson narrates
+retrospectively, Holmes deduces, characters speak and act. This enum
+captures *who* asserts a fact and *how reliably*, so the graph can be
+filtered to e.g. only Holmes-inference edges for "solve the case" queries.
+
+## `class CharacterEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class LocationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class StoryEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class PhysicalObjectEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class EventEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class OccupationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+## `class OrganizationEntity(BaseEntity)`
+
+
+**Fields:**
+
+```python
+spec: ClassVar[EntitySpec]
+```
+
+### `def _entity_class_matches_type(cls: type, entity_type: str) -> bool`
+
+Return True if an entity class's type string matches entity_type.
+
+### `def get_valid_predicates(subject_type: str, object_type: str) -> list[str]`
+
+Return predicates valid between two entity types.
+
+Checks each predicate's subject_types/object_types constraints.
+When a predicate has None constraints it accepts any type.
+
+### `def make_canonical_id(entity_type: str, safe_name: str, story_slug: Optional[str] = None) -> str`
+
+Build a stable canonical ID for a Sherlock entity.
+
+Args:
+    entity_type: One of the entity type strings from domain_spec.
+    safe_name: Name with spaces/special chars removed (PascalCase recommended).
+    story_slug: Short story identifier, e.g. 'scandal'. Required for per-story types.
+
+
+<span id="user-content-sherlocksherlockentitiespy"></span>
+
+# sherlock/sherlock/entities.py
+
+Sherlock Holmes entity types.
+
+All entity classes import their spec from domain_spec.py (single source of truth).
+They are re-exported here for convenience.
+
+> Sherlock Holmes entity types.
+
+All entity classes import their spec from domain_spec.py (single source of truth).
+They are re-exported here for convenience.
+
+
+
+<span id="user-content-sherlocksherlockpipelineinitpy"></span>
+
+# sherlock/sherlock/pipeline/__init__.py
+
+Sherlock Holmes pipeline package.
+
+
+<span id="user-content-sherlocksherlockpipelinebundlebuilderpy"></span>
+
+# sherlock/sherlock/pipeline/bundle_builder.py
+
+Bundle builder for Sherlock Holmes knowledge graph.
+
+Reads a deduplicated PerStoryBundle JSON and produces a kgbundle directory
+(entities.jsonl, relationships.jsonl, evidence.jsonl, manifest.json) that
+kgserver can load directly.
+
+Also adds story-level provenance: the Story entity is automatically connected
+to all Character/Location/Object entities via DESCRIBED_IN relationships.
+
+> Bundle builder for Sherlock Holmes knowledge graph.
+
+Reads a deduplicated PerStoryBundle JSON and produces a kgbundle directory
+(entities.jsonl, relationships.jsonl, evidence.jsonl, manifest.json) that
+kgserver can load directly.
+
+Also adds story-level provenance: the Story entity is automatically connected
+to all Character/Location/Object entities via DESCRIBED_IN relationships.
+
+
+### `def _build_entity_rows(bundle: PerStoryBundle) -> list[EntityRow]`
+
+Convert extracted entity rows to kgbundle EntityRow objects.
+
+### `def _build_canonical_id_map(bundle: PerStoryBundle) -> dict[str, str]`
+
+Build local_id -> canonical_id map from entity rows.
+
+### `def _build_relationship_rows(bundle: PerStoryBundle, cid_map: dict[str, str]) -> list[BundleRelationshipRow]`
+
+Convert bundle RelationshipRows to kgbundle format.
+
+### `def _build_evidence_rows(bundle: PerStoryBundle, cid_map: dict[str, str]) -> list[EvidenceRow]`
+
+Build evidence rows from evidence_entities + relationships.
+
+### `def _add_story_provenance_relationships(bundle: PerStoryBundle, entity_rows: list[EntityRow], rel_rows: list[BundleRelationshipRow], cid_map: dict[str, str]) -> None`
+
+Add DESCRIBED_IN edges from all non-Story entities to the Story entity.
+
+This provenance expansion is crucial for graph density: every entity
+extracted from a story is explicitly connected to the story node.
+
+### `def build_bundle(bundle: PerStoryBundle, output_dir: Path) -> Path`
+
+Build kgbundle from a deduplicated PerStoryBundle.
+
+Writes:
+    {output_dir}/entities.jsonl
+    {output_dir}/relationships.jsonl
+    {output_dir}/evidence.jsonl
+    {output_dir}/manifest.json
+
+Returns output_dir.
+
+### `def build_bundle_from_files(bundle_json_path: Path, output_dir: Path) -> dict[str, int]`
+
+Load deduplicated bundle JSON, build kgbundle, return summary stats.
+
+
+<span id="user-content-sherlocksherlockpipelinededuppy"></span>
+
+# sherlock/sherlock/pipeline/dedup.py
+
+Deduplication and alias resolution for Sherlock Holmes entities.
+
+Reads PerStoryBundle JSON(s), resolves SAME_AS relationships (alias merges),
+builds a canonical ID index, collapses entity fragments, and writes the
+merged output as a unified bundle JSON.
+
+Key differences vs medlit dedup:
+- No external authority API lookup (fiction entities use synthetic IDs)
+- Character alias handling is critical: "the King", "His Majesty",
+  "Wilhelm Gottsreich Sigismond von Ormstein" → single canonical node
+- SAME_AS edges extracted from LLM output drive merges
+- Synonym-normalisation is also important: "Dr. Watson", "Watson",
+  "Dr. John H. Watson", "the doctor" → Dr. Watson
+
+> Deduplication and alias resolution for Sherlock Holmes entities.
+
+Reads PerStoryBundle JSON(s), resolves SAME_AS relationships (alias merges),
+builds a canonical ID index, collapses entity fragments, and writes the
+merged output as a unified bundle JSON.
+
+Key differences vs medlit dedup:
+- No external authority API lookup (fiction entities use synthetic IDs)
+- Character alias handling is critical: "the King", "His Majesty",
+  "Wilhelm Gottsreich Sigismond von Ormstein" → single canonical node
+- SAME_AS edges extracted from LLM output drive merges
+- Synonym-normalisation is also important: "Dr. Watson", "Watson",
+  "Dr. John H. Watson", "the doctor" → Dr. Watson
+
+
+### `def _normalize_name(name: str) -> str`
+
+Lowercase, strip, and apply alias normalisation.
+
+### `def _slug() -> str`
+
+Synthetic merge key for entities without authoritative ID.
+
+### `def _build_name_type_index(bundle: PerStoryBundle) -> dict[tuple[str, str], str]`
+
+Map (normalized_name, entity_class) -> canonical_id (first-pass index).
+
+### `def _resolve_same_as(bundle: PerStoryBundle) -> dict[str, str]`
+
+Build entity_id -> canonical_id map by following SAME_AS edges.
+
+Also applies _ALIAS_NORMALIZATIONS to collapse well-known aliases.
+
+### `def _collapse_entities(bundle: PerStoryBundle, merge_map: dict[str, str]) -> list[ExtractedEntityRow]`
+
+Merge entity rows according to merge_map; accumulate synonyms and descriptions.
+
+### `def _remap_relationships(bundle: PerStoryBundle, merge_map: dict[str, str]) -> list[RelationshipRow]`
+
+Remap subject/object IDs in relationships through merge_map.
+
+Drop SAME_AS edges (they've been consumed). Drop self-loops.
+Deduplicate (subject, predicate, object) triples.
+
+### `def run_dedup(bundle: PerStoryBundle) -> PerStoryBundle`
+
+Run full dedup pipeline on a single PerStoryBundle.
+
+Steps:
+1. Resolve SAME_AS edges → merge_map
+2. Apply alias normalizations to find additional merges
+3. Collapse entity rows
+4. Remap relationship IDs
+5. Return clean merged bundle
+
+Returns:
+    New PerStoryBundle with deduplicated entities and remapped relationships.
+
+### `def run_dedup_from_file(input_path: Path, output_path: Path) -> dict[str, int]`
+
+Load a bundle JSON, run dedup, write to output_path. Returns summary stats.
+
+
+<span id="user-content-sherlocksherlockpipelineextractorpy"></span>
+
+# sherlock/sherlock/pipeline/extractor.py
+
+LLM extraction pipeline for Sherlock Holmes stories.
+
+For each story chunk (paragraph window), calls the LLM with the Sherlock domain
+prompt and collects entities + relationships into a PerStoryBundle.
+
+Follows the medlit pass1_llm pattern: generate_json() → normalize → validate → store.
+
+> LLM extraction pipeline for Sherlock Holmes stories.
+
+For each story chunk (paragraph window), calls the LLM with the Sherlock domain
+prompt and collects entities + relationships into a PerStoryBundle.
+
+Follows the medlit pass1_llm pattern: generate_json() → normalize → validate → store.
+
+
+### `def _fix_evidence_story_id(evidence_id: str, story_id: str) -> str`
+
+Replace placeholder story_id in evidence ID with actual.
+
+### `def _replace_placeholder_in_obj(obj: Any, story_id: str) -> None`
+
+Recursively replace ==CURRENT_STORY== with story_id (in place).
+
+### `def normalize_entity_type(raw_type: str) -> str`
+
+Map raw LLM entity type string to bundle entity_class (PascalCase).
+
+### `def _build_extraction_prompt(chunk_text: str, section: str, paragraph_idx: int, story_id: str) -> str`
+
+Build the user message for a single story chunk.
+
+The system prompt is PROMPT_INSTRUCTIONS (domain spec). The user message
+provides the text chunk with context metadata.
+
+### `async def extract_chunk(llm: Any, chunk: dict, story_id: str) -> dict`
+
+Call LLM on a single chunk, return raw JSON bundle dict.
+
+### `def _parse_entities(raw_entities: list, story_id: str) -> list[ExtractedEntityRow]`
+
+Parse and normalize entity rows from LLM output.
+
+### `def _parse_evidence(raw_evidence: list, story_id: str) -> list[EvidenceEntityRow]`
+
+Parse evidence entity rows.
+
+### `def _parse_relationships(raw_rels: list, story_id: str) -> list[RelationshipRow]`
+
+Parse relationship rows.
+
+### `def merge_bundles(bundles: list[PerStoryBundle]) -> PerStoryBundle`
+
+Merge multiple per-chunk bundles into one for the whole story.
+
+Entities with the same (id, class) are deduplicated by keeping the first
+occurrence and accumulating synonyms.
+
+### `async def extract_story(story_info: StoryInfo, chunks: list[dict], llm: Any) -> PerStoryBundle`
+
+Run extraction over all chunks of a story, return merged PerStoryBundle.
+
+Args:
+    story_info: Story metadata.
+    chunks: List of chunk dicts (from parser.chunk_story_windowed).
+    llm: LLM instance with generate_json(system_prompt, user_message, ...) method.
+    temperature: LLM sampling temperature.
+    max_tokens: Max tokens per LLM call.
+    verbose: Print progress to stderr.
+
+
+<span id="user-content-sherlocksherlockpipelineparserpy"></span>
+
+# sherlock/sherlock/pipeline/parser.py
+
+Story parser and paragraph chunker for Sherlock Holmes stories.
+
+Fetches "A Scandal in Bohemia" from Project Gutenberg (or accepts a local file),
+strips the Gutenberg header/footer, and produces a SherlockStory document with
+paragraph-level chunking for extraction.
+
+Evidence IDs use: {story_id}:{section}:{paragraph_idx}:llm
+
+> Story parser and paragraph chunker for Sherlock Holmes stories.
+
+Fetches "A Scandal in Bohemia" from Project Gutenberg (or accepts a local file),
+strips the Gutenberg header/footer, and produces a SherlockStory document with
+paragraph-level chunking for extraction.
+
+Evidence IDs use: {story_id}:{section}:{paragraph_idx}:llm
+
+
+### `def _fetch_gutenberg_text(url: str, timeout: int = 30) -> str`
+
+Fetch plain text from an allowed domain (Project Gutenberg only).
+
+Raises ValueError for disallowed hosts to prevent SSRF.
+
+### `def _extract_story(full_text: str, start_marker: str, end_marker: str) -> str`
+
+Extract a story section from a multi-story collection.
+
+### `def _clean_text(text: str) -> str`
+
+Remove Gutenberg header/footer boilerplate and normalize whitespace.
+
+### `def get_story_text(local_path: Optional[Path] = None, story_url: str = SCANDAL_GUTENBERG_URL) -> str`
+
+Fetch and return the clean text of 'A Scandal in Bohemia'.
+
+Priority:
+1. local_path (override for offline / test use)
+2. Project Gutenberg fetch
+3. Embedded excerpt fallback
+
+### `def chunk_story(story_text: str, min_words: int = 40) -> list[dict]`
+
+Split story text into paragraph chunks with stable indices.
+
+Returns a list of dicts:
+    {
+        "section": str,          # "opening" | "body"
+        "paragraph_idx": int,    # 0-based index across entire story
+        "text": str,             # paragraph text
+    }
+
+### `def chunk_story_windowed(story_text: str, window_size: int = 3, min_words: int = 40) -> list[dict]`
+
+Return overlapping windows of paragraphs for richer context in LLM extraction.
+
+Each chunk contains `window_size` consecutive paragraphs. The `paragraph_idx`
+is the index of the FIRST paragraph in the window.
+
+
+<span id="user-content-sherlocksherlockpromotionpy"></span>
+
+# sherlock/sherlock/promotion.py
+
+Promotion policy for Sherlock Holmes domain.
+
+Fiction entities don't have external authority APIs like UMLS or HGNC.
+Instead we use a curated DBPedia URI map for well-known characters/locations,
+and generate synthetic canonical IDs (holmes:<story_slug>:<type>:<SafeName>)
+for all others.
+
+Entities are promoted immediately (all fiction entities are inherently real
+within the story universe) — there's no provisional/canonical distinction
+for fictional entities. The main purpose of this policy is to assign
+stable canonical IDs.
+
+> Promotion policy for Sherlock Holmes domain.
+
+Fiction entities don't have external authority APIs like UMLS or HGNC.
+Instead we use a curated DBPedia URI map for well-known characters/locations,
+and generate synthetic canonical IDs (holmes:<story_slug>:<type>:<SafeName>)
+for all others.
+
+Entities are promoted immediately (all fiction entities are inherently real
+within the story universe) — there's no provisional/canonical distinction
+for fictional entities. The main purpose of this policy is to assign
+stable canonical IDs.
+
+
+## `class SherlockPromotionPolicy(PromotionPolicy)`
+
+Promotion policy for Sherlock Holmes fiction domain.
+
+All fiction entities are promoted (there is no external validation step).
+Canonical IDs are assigned from:
+1. Curated DBPedia map (for well-known entities).
+2. Synthetic holmes:<story_slug>:<type>:<SafeName> IDs for all others.
+
+### `def SherlockPromotionPolicy.should_promote(self, entity: BaseEntity) -> bool`
+
+All provisional fiction entities are promoted.
+
+### `async def SherlockPromotionPolicy.assign_canonical_id(self, entity: BaseEntity) -> Optional[object]`
+
+Assign a canonical ID for a Sherlock entity.
+
+Priority:
+1. Already has a canonical ID in canonical_ids → use it.
+2. Curated DBPedia map lookup.
+3. Synthetic holmes: URI from name + type.
+
+
+<span id="user-content-sherlocksherlockrelationshipspy"></span>
+
+# sherlock/sherlock/relationships.py
+
+Sherlock Holmes relationship class.
+
+Single relationship class with a `predicate` field, following the medlit pattern.
+Sherlock-specific metadata (narrator_trust, narrative_position, story_time, known_by)
+is stored in the `metadata` dict.
+
+> Sherlock Holmes relationship class.
+
+Single relationship class with a `predicate` field, following the medlit pattern.
+Sherlock-specific metadata (narrator_trust, narrative_position, story_time, known_by)
+is stored in the `metadata` dict.
+
+
+## `class SherlockRelationship(BaseRelationship)`
+
+A typed relationship in the Sherlock Holmes knowledge graph.
+
+Uses Pattern A (single class, many predicates) for simplicity.
+Sherlock-specific epistemic metadata is stored in metadata dict:
+    narrator_trust: One of NarratorTrust enum values
+    story_time: One of STORY_TIME_VALUES
+    narrative_position: Optional int paragraph index
+    known_by: Optional comma-separated character list (who knew this at story time)
+
+
+<span id="user-content-sherlocksherlockscriptsinitpy"></span>
+
+# sherlock/sherlock/scripts/__init__.py
+
+Sherlock scripts package.
+
+
+<span id="user-content-sherlocksherlockscriptsbuildbundlepy"></span>
+
+# sherlock/sherlock/scripts/build_bundle.py
+
+build_bundle: Assemble kgbundle from deduped Sherlock story bundle.
+
+Reads the deduplicated story bundle JSON (from sherlock-ingest) and writes a
+kgbundle directory (entities.jsonl, relationships.jsonl, evidence.jsonl, manifest.json)
+that can be loaded directly by kgserver.
+
+Usage:
+  sherlock-build-bundle --input deduped/deduped_story_scandal_in_bohemia.json --output-dir bundle/
+  sherlock-build-bundle --input sherlock_output/deduped/deduped_story_scandal_in_bohemia.json
+
+> build_bundle: Assemble kgbundle from deduped Sherlock story bundle.
+
+Reads the deduplicated story bundle JSON (from sherlock-ingest) and writes a
+kgbundle directory (entities.jsonl, relationships.jsonl, evidence.jsonl, manifest.json)
+that can be loaded directly by kgserver.
+
+Usage:
+  sherlock-build-bundle --input deduped/deduped_story_scandal_in_bohemia.json --output-dir bundle/
+  sherlock-build-bundle --input sherlock_output/deduped/deduped_story_scandal_in_bohemia.json
+
+
+
+<span id="user-content-sherlocksherlockscriptsextractpy"></span>
+
+# sherlock/sherlock/scripts/extract.py
+
+extract: LLM extraction from 'A Scandal in Bohemia' → per-story bundle JSON.
+
+Fetches the story text (from Project Gutenberg or a local file), chunks it into
+paragraph windows, calls the configured LLM once per window, and writes a single
+bundle JSON file.
+
+Usage:
+  sherlock-extract --output-dir output/ --llm-backend anthropic
+  sherlock-extract --output-dir output/ --llm-backend ollama
+  sherlock-extract --output-dir output/ --story-file scandal.txt --llm-backend anthropic
+  sherlock-extract --output-dir output/ --llm-backend anthropic --window-size 5 --limit-chunks 10
+
+Set ANTHROPIC_API_KEY for Anthropic, or run Ollama locally.
+
+> extract: LLM extraction from 'A Scandal in Bohemia' → per-story bundle JSON.
+
+Fetches the story text (from Project Gutenberg or a local file), chunks it into
+paragraph windows, calls the configured LLM once per window, and writes a single
+bundle JSON file.
+
+Usage:
+  sherlock-extract --output-dir output/ --llm-backend anthropic
+  sherlock-extract --output-dir output/ --llm-backend ollama
+  sherlock-extract --output-dir output/ --story-file scandal.txt --llm-backend anthropic
+  sherlock-extract --output-dir output/ --llm-backend anthropic --window-size 5 --limit-chunks 10
+
+Set ANTHROPIC_API_KEY for Anthropic, or run Ollama locally.
+
+
+### `async def run_extract(output_dir: Path, llm_backend: str, story_file: Optional[Path] = None, window_size: int = 3, limit_chunks: Optional[int] = None, skip_if_exists: bool = True) -> None`
+
+Run full extraction pipeline for A Scandal in Bohemia.
+
+
+<span id="user-content-sherlocksherlockscriptsingestpy"></span>
+
+# sherlock/sherlock/scripts/ingest.py
+
+ingest: Deduplication and alias resolution for Sherlock story bundle.
+
+Reads a story bundle JSON (from sherlock-extract), runs the dedup pipeline
+(SAME_AS resolution, alias normalisation, entity merging), and writes the
+deduplicated bundle JSON.
+
+Usage:
+  sherlock-ingest --input story_scandal_in_bohemia.json --output deduped/
+  sherlock-ingest --input sherlock_output/story_scandal_in_bohemia.json
+
+> ingest: Deduplication and alias resolution for Sherlock story bundle.
+
+Reads a story bundle JSON (from sherlock-extract), runs the dedup pipeline
+(SAME_AS resolution, alias normalisation, entity merging), and writes the
+deduplicated bundle JSON.
+
+Usage:
+  sherlock-ingest --input story_scandal_in_bohemia.json --output deduped/
+  sherlock-ingest --input sherlock_output/story_scandal_in_bohemia.json
+
+
+
+<span id="user-content-sherlocktestsconftestpy"></span>
+
+# sherlock/tests/conftest.py
+
+Test fixtures for Sherlock Holmes pipeline tests.
+
+### `def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle`
+
+A minimal bundle for testing dedup and builder.
+
+
+<span id="user-content-sherlockteststestbundlepy"></span>
+
+# sherlock/tests/test_bundle.py
+
+Tests for the bundle builder.
+
+### `def test_build_bundle_creates_files(minimal_bundle: PerStoryBundle)`
+
+build_bundle must create all expected output files.
+
+### `def test_manifest_content(minimal_bundle: PerStoryBundle)`
+
+manifest.json must have expected fields and correct domain.
+
+### `def test_entities_jsonl_valid(minimal_bundle: PerStoryBundle)`
+
+entities.jsonl must be valid JSONL with expected fields.
+
+### `def test_relationships_jsonl_valid(minimal_bundle: PerStoryBundle)`
+
+relationships.jsonl must be valid JSONL with expected fields.
+
+### `def test_story_provenance_added(minimal_bundle: PerStoryBundle)`
+
+DESCRIBED_IN edges must be added for all non-Story entities.
+
+### `def test_no_self_loops_in_bundle(minimal_bundle: PerStoryBundle)`
+
+Bundle relationships must not contain self-loops.
+
+### `def test_narrator_trust_in_properties(minimal_bundle: PerStoryBundle)`
+
+narrator_trust should appear in relationship properties.
+
+### `def test_bundle_roundtrip(minimal_bundle: PerStoryBundle)`
+
+Bundle serialization round-trip must be lossless.
+
+
+<span id="user-content-sherlockteststestbundlemodelspy"></span>
+
+# sherlock/tests/test_bundle_models.py
+
+Tests for bundle_models — serialization, Pydantic validation, etc.
+
+### `def test_extracted_entity_row_alias()`
+
+entity_class must be serialized as 'class' via alias.
+
+### `def test_extracted_entity_row_roundtrip()`
+
+ExtractedEntityRow must survive serialization round-trip.
+
+### `def test_relationship_row_alias()`
+
+object_id must serialize as 'object' via alias.
+
+### `def test_relationship_narrator_trust_valid()`
+
+narrator_trust must accept valid enum values.
+
+### `def test_relationship_story_time_valid()`
+
+story_time must accept valid values.
+
+### `def test_evidence_entity_row_class_literal()`
+
+Evidence entity_class must be 'Evidence'.
+
+### `def test_per_story_bundle_roundtrip(story_info: StoryInfo, minimal_bundle: PerStoryBundle)`
+
+PerStoryBundle must survive to_bundle_dict/from_bundle_dict round-trip.
+
+### `def test_per_story_bundle_empty()`
+
+PerStoryBundle with no entities/rels must serialize without error.
+
+
+<span id="user-content-sherlockteststestdeduppy"></span>
+
+# sherlock/tests/test_dedup.py
+
+Tests for the dedup pipeline.
+
+### `def test_normalize_name_aliases()`
+
+Key character aliases must normalize correctly.
+
+### `def test_same_as_resolution(minimal_bundle: PerStoryBundle)`
+
+SAME_AS edges must cause entity merges.
+
+### `def test_same_as_edges_removed(minimal_bundle: PerStoryBundle)`
+
+SAME_AS edges must not appear in deduped relationships.
+
+### `def test_no_self_loops(minimal_bundle: PerStoryBundle)`
+
+Dedup must not produce self-loop relationships.
+
+### `def test_entity_synonyms_merged(minimal_bundle: PerStoryBundle)`
+
+When two entity rows share a canonical ID (via SAME_AS), synonyms should be merged.
+
+### `def test_run_dedup_reduces_duplicate_relationships(story_info: StoryInfo)`
+
+Duplicate (subject, predicate, object) triples must be deduplicated.
+
+
+<span id="user-content-sherlockteststestdomainspecpy"></span>
+
+# sherlock/tests/test_domain_spec.py
+
+Tests for domain_spec.py — entity types, predicates, and prompt instructions.
+
+### `def test_entity_classes_registered()`
+
+All entity classes must be in ENTITY_CLASSES.
+
+### `def test_normalized_to_bundle()`
+
+NORMALIZED_TO_BUNDLE must map lowercase class names to PascalCase.
+
+### `def test_all_predicates_defined()`
+
+ALL_PREDICATES must include core Sherlock predicates.
+
+### `def test_predicate_specs_have_descriptions()`
+
+All predicates must have non-empty descriptions.
+
+### `def test_same_as_is_merge_signal()`
+
+SAME_AS must be flagged as a merge signal.
+
+### `def test_ally_of_is_symmetric()`
+
+ALLY_OF should be symmetric.
+
+### `def test_get_valid_predicates_character_location()`
+
+get_valid_predicates(character, location) must include spatial predicates.
+
+### `def test_get_valid_predicates_character_character()`
+
+get_valid_predicates(character, character) must include social predicates.
+
+### `def test_get_valid_predicates_character_story()`
+
+get_valid_predicates(character, story) must include APPEARS_IN.
+
+### `def test_narrator_trust_enum_values()`
+
+NarratorTrust must have all 8 required values.
+
+### `def test_prompt_instructions_non_empty()`
+
+PROMPT_INSTRUCTIONS must be a non-trivial string.
+
+### `def test_entity_spec_has_colors()`
+
+All entity classes with specs must have hex color.
+
+### `def test_entity_get_entity_type()`
+
+Entity classes must return correct type strings.
+
+
+<span id="user-content-sherlockteststestparserpy"></span>
+
+# sherlock/tests/test_parser.py
+
+Tests for story parser and chunker.
+
+### `def test_get_story_text_embedded_fallback()`
+
+get_story_text() must return content even if network is unavailable or URL is invalid.
+
+### `def test_fetch_rejects_disallowed_host()`
+
+_fetch_gutenberg_text must raise ValueError for non-Gutenberg URLs.
+
+### `def test_clean_text_removes_pg_footer()`
+
+_clean_text must strip Gutenberg boilerplate.
+
+### `def test_extract_story_finds_section()`
+
+_extract_story must find the story section by marker.
+
+### `def test_chunk_story_returns_paragraphs()`
+
+chunk_story must return a list of chunks with expected keys.
+
+### `def test_chunk_story_unique_indices()`
+
+Chunk paragraph_idx values must be unique.
+
+### `def test_chunk_story_windowed_overlap()`
+
+Windowed chunking must produce overlapping windows.
+
+### `def test_sections_assigned()`
+
+Early chunks get 'opening' section; later get 'body'.
+
 
 <span id="user-content-sherlockdesignmd"></span>
 
@@ -13845,14 +16591,6 @@ $ git ls-files | uv run python summarize_codebase.py > summary.md
 
 Extract module-level docstring and top-level standalone strings.
 
-
-<span id="user-content-summarymd"></span>
-
-# summary.md
-
-
-
-    ...
 
 <span id="user-content-testsinitpy"></span>
 
@@ -14203,6 +16941,21 @@ Args:
 
 Returns:
     Configured SimpleRelationship instance with current timestamp.
+
+
+<span id="user-content-teststestbuildcodereferencepy"></span>
+
+# tests/test_build_code_reference.py
+
+Tests for scripts/build_code_reference.py.
+
+### `def test_build_code_reference_generates_expected_structure(tmp_path: Path) -> None`
+
+Generator writes package/module pages and excludes tests/cache paths.
+
+### `def test_build_code_reference_module_title_uses_package_name_for_init(tmp_path: Path) -> None`
+
+`__init__.py` pages use package module names without __init__ suffix.
 
 
 <span id="user-content-teststestcachingpy"></span>
@@ -14611,84 +17364,6 @@ Delete removes an entity from storage so subsequent get returns None.
 ### `async def TestEntityStorage.test_count(self, entity_storage: InMemoryEntityStorage) -> None`
 
 Count returns the total number of entities in storage.
-
-
-<span id="user-content-teststestevidencesemanticpy"></span>
-
-# tests/test_evidence_semantic.py
-
-Tests for semantic evidence validation (_evidence_contains_both_entities_semantic).
-
-## `class _MockEntity(BaseEntity)`
-
-Minimal entity for testing.
-
-### `def mock_embedding_generator()`
-
-Mock embedding generator: same text -> same vector; different texts -> orthogonal.
-
-### `def entity_with_embedding()`
-
-Entity with pre-set embedding (so we don't need to generate).
-
-### `def entity_without_embedding()`
-
-Entity without embedding (will be generated via cache).
-
-### `async def test_evidence_empty_rejected(mock_embedding_generator, entity_with_embedding, entity_without_embedding)`
-
-Empty evidence is rejected without calling embedding generator.
-
-### `async def test_evidence_semantic_returns_detail_shape(mock_embedding_generator, entity_with_embedding, entity_without_embedding)`
-
-Semantic helper returns (ok, reason, detail) with expected keys.
-
-### `async def test_evidence_embedding_cached(mock_embedding_generator, entity_with_embedding, entity_without_embedding)`
-
-Evidence string is cached so same evidence does not call generate twice.
-
-
-<span id="user-content-teststestevidencetraceabilitypy"></span>
-
-# tests/test_evidence_traceability.py
-
-Tests for evidence traceability.
-
-### `def test_evidence_with_ids_validates()`
-
-Test that an Evidence entity with paper_id and text_span_id validates.
-
-### `def test_evidence_without_paper_id_fails()`
-
-Test that an Evidence entity without a paper_id fails.
-
-### `def test_evidence_canonical_id_format()`
-
-Test that an Evidence entity with a canonical ID format validates.
-
-### `def test_conceptual_navigation()`
-
-Test the conceptual navigation from Relationship to Paper.
-
-### `def test_textspan_is_canonical_only()`
-
-Test that TextSpan entities are always canonical (not promotable).
-
-### `def test_textspan_cannot_be_provisional()`
-
-Test that TextSpan cannot be created with provisional status.
-
-### `def test_textspan_requires_offsets()`
-
-Test that TextSpan requires start_offset and end_offset.
-
-### `def test_textspan_validates_offset_order()`
-
-Test that end_offset must be greater than start_offset.
-
-### `def test_textspan_valid_creation()`
-
-Test that a valid TextSpan can be created.
 
 
 <span id="user-content-teststestexportpy"></span>
@@ -15114,114 +17789,6 @@ Test that setup_logging uses the calling function's name as logger name.
 Test that setup_logging doesn't add duplicate handlers on multiple calls.
 
 
-<span id="user-content-teststestmedlitdomainpy"></span>
-
-# tests/test_medlit_domain.py
-
-Tests for the MedlitDomain.
-
-### `def test_medlit_domain_instantiates()`
-
-Test that MedlitDomain can be instantiated.
-
-### `def test_medlit_domain_entity_types()`
-
-Test that all entity types are registered.
-
-### `def test_medlit_domain_relationship_types()`
-
-Test that all relationship types are registered.
-
-
-<span id="user-content-teststestmedlitentitiespy"></span>
-
-# tests/test_medlit_entities.py
-
-Tests for medlit entity validation.
-
-### `def test_disease_with_umls_id_validates()`
-
-Test that a Disease entity with a UMLS ID validates.
-
-### `def test_gene_with_hgnc_id_validates()`
-
-Test that a Gene entity with an HGNC ID validates.
-
-### `def test_drug_with_rxnorm_id_validates()`
-
-Test that a Drug entity with an RxNorm ID validates.
-
-### `def test_protein_with_uniprot_id_validates()`
-
-Test that a Protein entity with a UniProt ID validates.
-
-### `def test_procedure_validates()`
-
-Test that a Procedure entity validates.
-
-### `def test_institution_validates()`
-
-Test that an Institution entity validates.
-
-### `def test_provisional_entity_validates()`
-
-Test that a provisional entity (no ontology ID) validates.
-
-### `def test_canonical_entity_without_ontology_id_fails()`
-
-Test that a canonical entity without an ontology ID fails.
-
-### `def test_evidence_cannot_be_provisional()`
-
-Test that Evidence entities cannot be created with PROVISIONAL status.
-
-
-<span id="user-content-teststestmedlitrelationshipspy"></span>
-
-# tests/test_medlit_relationships.py
-
-Tests for medlit relationship validation.
-
-### `def test_treats_with_evidence_validates()`
-
-Test that a Treats relationship with evidence validates.
-
-### `def test_treats_without_evidence_fails()`
-
-Test that a Treats relationship without evidence fails.
-
-### `def test_bibliographic_relationship_without_evidence_validates()`
-
-Test that a bibliographic relationship without evidence validates.
-
-### `def test_associated_with_with_evidence_validates()`
-
-Test that an AssociatedWith relationship with evidence validates.
-
-### `def test_part_of_without_evidence_validates()`
-
-Test that a PartOf relationship without evidence validates.
-
-
-<span id="user-content-teststestpapermodelpy"></span>
-
-# tests/test_paper_model.py
-
-Tests for the Paper model.
-
-### `def test_paper_with_full_metadata_validates()`
-
-Test that a Paper with full metadata validates.
-
-### `def test_papermetadata_with_study_type_validates()`
-
-Test that PaperMetadata with a study_type validates.
-
-### `def test_extractionprovenance_serializes_correctly()`
-
-Test that ExtractionProvenance serializes correctly.
-
-
 <span id="user-content-teststestpass1llmpy"></span>
 
 # tests/test_pass1_llm.py
@@ -15324,56 +17891,6 @@ This test exercises the full workflow a user would follow:
 4. Detect merge candidates among canonicals
 
 
-<span id="user-content-teststestpmcchunkerpy"></span>
-
-# tests/test_pmc_chunker.py
-
-Tests for PMCStreamingChunker.
-
-### `def chunker() -> PMCStreamingChunker`
-
-PMC chunker with small window for tests.
-
-### `async def test_chunk_from_raw_xml_returns_document_chunks(chunker: PMCStreamingChunker) -> None`
-
-chunk_from_raw with XML returns list of DocumentChunk.
-
-### `async def test_chunk_from_raw_xml_content_type_with_charset(chunker: PMCStreamingChunker) -> None`
-
-content_type with charset (e.g. application/xml; charset=utf-8) is treated as XML.
-
-### `async def test_chunk_from_raw_non_xml_returns_single_chunk(chunker: PMCStreamingChunker) -> None`
-
-Non-XML content_type returns a single chunk with decoded text.
-
-### `def test_document_id_from_source_uri() -> None`
-
-document_id_from_source_uri returns stem of path.
-
-
-<span id="user-content-teststestpmcstreamingpy"></span>
-
-# tests/test_pmc_streaming.py
-
-Tests for streaming PMC XML chunker.
-
-### `def test_iter_pmc_sections_yields_abstract_and_secs()`
-
-iter_pmc_sections yields abstract first then body secs.
-
-### `def test_iter_overlapping_windows_abstract_separately()`
-
-Abstract is yielded as first window when include_abstract_separately True.
-
-### `def test_iter_overlapping_windows_has_overlap()`
-
-Consecutive windows overlap by roughly overlap chars.
-
-### `def test_iter_pmc_windows_returns_iterator()`
-
-iter_pmc_windows returns an iterator of (index, text).
-
-
 <span id="user-content-teststestprogresstrackerpy"></span>
 
 # tests/test_progress_tracker.py
@@ -15454,108 +17971,6 @@ Should respect custom report interval.
 ### `def TestProgressTrackerEdgeCases.test_completed_equals_total(self)`
 
 Should handle 100% completion.
-
-
-<span id="user-content-teststestpromotionpy"></span>
-
-# tests/test_promotion.py
-
-Tests for entity promotion policy and workflow.
-
-This test module covers:
-1. PromotionPolicy base class behavior
-2. Domain-specific promotion policies (Sherlock example)
-3. Full promotion workflow with relationship updates
-4. Entities starting as provisional with canonical_id_hint
-
-> Tests for entity promotion policy and workflow.
-
-This test module covers:
-1. PromotionPolicy base class behavior
-2. Domain-specific promotion policies (Sherlock example)
-3. Full promotion workflow with relationship updates
-4. Entities starting as provisional with canonical_id_hint
-
-
-## `class SimplePromotionPolicy(PromotionPolicy)`
-
-Test implementation with hardcoded mappings.
-
-## `class TestPromotionPolicyBase`
-
-Test the base PromotionPolicy class behavior.
-
-### `def TestPromotionPolicyBase.test_should_promote_rejects_already_canonical(self)`
-
-should_promote returns False for entities already canonical.
-
-### `def TestPromotionPolicyBase.test_should_promote_requires_min_usage(self)`
-
-should_promote checks minimum usage count threshold.
-
-### `def TestPromotionPolicyBase.test_should_promote_requires_min_confidence(self)`
-
-should_promote checks minimum confidence threshold.
-
-### `def TestPromotionPolicyBase.test_should_promote_checks_embedding_requirement(self)`
-
-should_promote respects require_embedding config.
-
-### `async def TestPromotionPolicyBase.test_assign_canonical_id_returns_mapping(self)`
-
-assign_canonical_id returns mapped ID or None.
-
-## `class TestSherlockPromotion`
-
-Test Sherlock-specific promotion policy with DBPedia mappings.
-
-### `async def TestSherlockPromotion.test_sherlock_policy_has_dbpedia_mappings(self)`
-
-SherlockPromotionPolicy contains DBPedia URI mappings.
-
-### `def TestSherlockPromotion.test_sherlock_promotion_config_has_low_thresholds(self)`
-
-Sherlock domain uses lower thresholds for small corpus.
-
-### `def TestSherlockPromotion.test_get_promotion_policy_accepts_lookup_parameter(self)`
-
-get_promotion_policy accepts lookup parameter for signature compliance.
-
-### `async def orchestrator(test_domain: DomainSchema, entity_storage: InMemoryEntityStorage, relationship_storage: InMemoryRelationshipStorage, document_storage: InMemoryDocumentStorage, document_parser: DocumentParserInterface, entity_extractor: EntityExtractorInterface, entity_resolver: EntityResolverInterface, relationship_extractor: RelationshipExtractorInterface, embedding_generator: EmbeddingGeneratorInterface)`
-
-Create a generic orchestrator for testing.
-
-### `async def sherlock_orchestrator(entity_storage: InMemoryEntityStorage, relationship_storage: InMemoryRelationshipStorage, document_storage: InMemoryDocumentStorage)`
-
-Create orchestrator with Sherlock domain for promotion testing.
-
-## `class TestPromotionWorkflow`
-
-Test complete promotion workflow with relationship updates.
-
-### `async def TestPromotionWorkflow.test_entities_start_as_provisional_with_canonical_hint(self, orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage)`
-
-Entities created with canonical_id_hint still start as PROVISIONAL.
-
-### `async def TestPromotionWorkflow.test_promotion_changes_id_and_status(self, sherlock_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage)`
-
-Promotion updates entity_id to DBPedia URI and status to CANONICAL.
-
-### `async def TestPromotionWorkflow.test_promotion_updates_relationship_references(self, sherlock_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage, relationship_storage: InMemoryRelationshipStorage)`
-
-Promotion updates relationships to point to new canonical ID.
-
-### `async def TestPromotionWorkflow.test_entities_without_mapping_remain_provisional(self, sherlock_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage)`
-
-Entities without canonical ID mapping stay provisional even if eligible.
-
-### `async def TestPromotionWorkflow.test_low_usage_entities_not_promoted(self, sherlock_orchestrator: IngestionOrchestrator, entity_storage: InMemoryEntityStorage)`
-
-Entities below usage threshold aren't promoted even with mapping.
-
-## `class TestPromotionIntegration`
-
-Test promotion in complete ingestion pipeline.
 
 
 <span id="user-content-teststestpromotionmergepy"></span>
@@ -15685,85 +18100,6 @@ Mention and evidence lists are independent; adding one does not affect the other
 ### `def TestProvenanceAccumulator.test_mentions_exposed_for_export(self) -> None`
 
 Accumulator exposes mentions list for exporter to iterate.
-
-
-<span id="user-content-teststestrelationshipswappy"></span>
-
-# tests/test_relationship_swap.py
-
-Tests for automatic subject/object swapping when LLM gets the order wrong.
-
-## `class DrugEntity(BaseEntity)`
-
-Drug entity for testing.
-
-## `class DiseaseEntity(BaseEntity)`
-
-Disease entity for testing.
-
-## `class TreatsRelationship(BaseRelationship)`
-
-Treats relationship for testing.
-
-## `class TestDomainSchema(DomainSchema)`
-
-Test domain schema with predicate constraints.
-
-### `def TestDomainSchema.validate_entity(self, entity: BaseEntity) -> list[ValidationIssue]`
-
-Validate entity is of a registered type.
-
-### `def TestDomainSchema.preferred_entity(self, candidates: list[BaseEntity]) -> BaseEntity`
-
-Not needed for these tests; return first candidate.
-
-### `def TestDomainSchema.get_promotion_policy(self, lookup = None)`
-
-Not needed for these tests.
-
-### `def domain()`
-
-Create test domain schema.
-
-### `def drug_entity()`
-
-Create a drug entity.
-
-### `def disease_entity()`
-
-Create a disease entity.
-
-### `async def test_validate_correct_order(domain, drug_entity, disease_entity)`
-
-Test that correctly ordered relationship passes validation.
-
-### `async def test_validate_reversed_order_detected(domain, drug_entity, disease_entity)`
-
-Test that reversed relationship is detected and rejected with helpful message.
-
-### `def test_should_swap_detection()`
-
-Test the swap detection logic in the medlit extractor.
-
-### `async def test_process_llm_item_reversed_treats_swap_accepted()`
-
-Reversed (disease, treats, drug) is fixed by swap and relationship is accepted.
-
-### `def test_evidence_contains_both_entities_both_present()`
-
-Evidence containing both subject and object is accepted.
-
-### `def test_evidence_contains_both_entities_missing_subject()`
-
-Evidence missing subject is rejected with evidence_missing_subject.
-
-### `def test_evidence_contains_both_entities_empty_evidence()`
-
-Empty evidence is rejected with evidence_empty.
-
-### `def test_evidence_contains_both_entities_synonym_match()`
-
-Entity synonym appearing in evidence counts as match.
 
 
 <span id="user-content-teststestrelationshipspy"></span>

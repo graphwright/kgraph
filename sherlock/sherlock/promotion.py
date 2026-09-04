@@ -18,7 +18,6 @@ from kgschema.entity import BaseEntity, EntityStatus, PromotionConfig
 
 from .domain_spec import make_canonical_id
 
-
 # Curated DBPedia URIs for well-known Sherlock Holmes entities.
 # Used as canonical_ids["dbpedia"] when present.
 DBPEDIA_CANONICAL: dict[tuple[str, str], str] = {

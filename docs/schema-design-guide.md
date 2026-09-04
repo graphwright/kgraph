@@ -12,6 +12,20 @@ Implement `DomainSchema` from `kgschema.domain` to declare entity types, relatio
 
 Your domain also defines promotion config (thresholds for provisional → canonical) and any domain-specific validation.
 
+### Why Python, not YAML
+
+The domain spec is a Python module (`domain_spec.py`), not a config file. This was a
+deliberate choice over a YAML schema:
+
+- Entity class and its metadata sit next to each other, so they cannot drift apart.
+- `subject_types`/`object_types` reference the classes themselves, not strings that have to
+  be resolved and validated later.
+- There is no parsing layer to maintain — the spec *is* the schema.
+- Pydantic validates it at import time, so a malformed spec fails immediately.
+
+Consumers that cannot import Python (e.g. the graph-viz frontend) are served by exporting the
+relevant slice to JSON as a build step, rather than by making the source format weaker.
+
 ## Entities
 
 - Subclass `BaseEntity` from `kgschema.entity`.

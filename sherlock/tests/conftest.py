@@ -10,7 +10,6 @@ from sherlock.bundle_models import (
     StoryInfo,
 )
 
-
 STORY_ID = "scandal_in_bohemia"
 
 
@@ -32,35 +31,35 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
     entities = [
         ExtractedEntityRow(
             id="holmes",
-            **{"class": "Character"},
+            entity_class="Character",
             name="Sherlock Holmes",
             synonyms=["Holmes", "the detective"],
         ),
         ExtractedEntityRow(
             id="watson",
-            **{"class": "Character"},
+            entity_class="Character",
             name="Dr. Watson",
             synonyms=["Watson"],
         ),
         ExtractedEntityRow(
             id="irene",
-            **{"class": "Character"},
+            entity_class="Character",
             name="Irene Adler",
             synonyms=["the woman", "Miss Adler"],
         ),
         ExtractedEntityRow(
             id="scandal_story",
-            **{"class": "Story"},
+            entity_class="Story",
             name="A Scandal in Bohemia",
         ),
         ExtractedEntityRow(
             id="baker_street",
-            **{"class": "Location"},
+            entity_class="Location",
             name="221B Baker Street",
         ),
         ExtractedEntityRow(
             id="photograph",
-            **{"class": "PhysicalObject"},
+            entity_class="PhysicalObject",
             name="The Photograph",
             synonyms=["the compromising photograph"],
         ),
@@ -69,7 +68,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
     evidence = [
         EvidenceEntityRow(
             id=f"{STORY_ID}:opening:0:llm",
-            **{"class": "Evidence"},
+            entity_class="Evidence",
             story_id=STORY_ID,
             section="opening",
             paragraph_idx=0,
@@ -82,7 +81,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
         RelationshipRow(
             subject="holmes",
             predicate="LIVES_AT",
-            **{"object": "baker_street"},
+            object_id="baker_street",
             evidence_ids=[f"{STORY_ID}:opening:0:llm"],
             confidence=0.9,
             narrator_trust="watson_direct",
@@ -91,7 +90,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
         RelationshipRow(
             subject="watson",
             predicate="ALLY_OF",
-            **{"object": "holmes"},
+            object_id="holmes",
             evidence_ids=[f"{STORY_ID}:opening:0:llm"],
             confidence=0.9,
             narrator_trust="watson_direct",
@@ -100,7 +99,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
         RelationshipRow(
             subject="holmes",
             predicate="ANTAGONIST_OF",
-            **{"object": "irene"},
+            object_id="irene",
             evidence_ids=[f"{STORY_ID}:opening:0:llm"],
             confidence=0.7,
             narrator_trust="watson_retrospective",
@@ -109,7 +108,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
         RelationshipRow(
             subject="irene",
             predicate="OWNS",
-            **{"object": "photograph"},
+            object_id="photograph",
             evidence_ids=[f"{STORY_ID}:opening:0:llm"],
             confidence=0.9,
             narrator_trust="holmes_assertion",
@@ -118,7 +117,7 @@ def minimal_bundle(story_info: StoryInfo) -> PerStoryBundle:
         RelationshipRow(
             subject="holmes",
             predicate="APPEARS_IN",
-            **{"object": "scandal_story"},
+            object_id="scandal_story",
             evidence_ids=[],
             confidence=1.0,
             narrator_trust="narrator",

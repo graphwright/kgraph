@@ -3,8 +3,8 @@
 fixes_needed() {
     echo "Something needs fixing, trying to fix it"
     set -x
-    uv run black kgraph kgbundle kgserver
-    uv run ruff check --fix kgraph kgbundle kgserver
+    uv run black kgraph kgbundle kgschema kgserver
+    uv run ruff check --fix kgraph kgbundle kgschema kgserver
     exit 1
 }
 
@@ -57,14 +57,6 @@ echo "Running flake8..."
 echo "=========================================="
 # Use -j 1 to avoid multiprocessing (avoids PermissionError in sandbox/CI)
 uv run flake8 ${PYTHONFILES} --count --show-source --statistics -j 1 || fixes_needed
-
-# echo ""
-# echo "=========================================="
-# echo "Running pylint..."
-# echo "=========================================="
-# # Exclude chainlit app: Chainlit uses dynamic decorators and has no static introspection
-# PYLINT_FILES=$(echo "${PYTHONFILES}" | tr ' ' '\n' | grep -v 'kgserver/chainlit/app\.py' | tr '\n' ' ')
-# uv run pylint ${PYLINT_FILES}
 
 echo ""
 echo "=========================================="
