@@ -281,11 +281,7 @@ NORMALIZED_TO_BUNDLE: dict[str, str] = {k.lower().replace(" ", "").replace("_", 
 # Graph-viz entity type specs: entity_type string -> {color, label}
 # Keys match get_entity_type() return values (lowercase, no spaces).
 # Derived from class name: DiseaseEntity -> "disease". Used by graph API.
-ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {
-    cls.__name__.replace("Entity", "").lower(): {"color": cls.spec.color, "label": cls.spec.label}
-    for cls in ENTITY_CLASSES
-    if hasattr(cls, "spec")
-}
+ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {cls.__name__.replace("Entity", "").lower(): {"color": cls.spec.color, "label": cls.spec.label} for cls in ENTITY_CLASSES if hasattr(cls, "spec")}
 ENTITY_TYPE_SPECS["default"] = {"color": "#78909c", "label": "Other"}
 
 
@@ -388,7 +384,11 @@ PREDICATES: dict[str, PredicateSpec] = {
         specificity=1,
     ),
     "IS_COLLEAGUE": PredicateSpec(
-        description="Authors are colleagues (e.g. same institution) from a source other than co-authorship.",
+        description=(
+            "Authors are colleagues (e.g. same institution) from a source other than co-authorship. "
+            "Reserved, not currently emitted: do not create IS_COLLEAGUE edges where COAUTHORED_WITH "
+            "would already exist. Intended for future sources such as shared-lab data with no shared paper."
+        ),
         subject_types=[AuthorEntity],
         object_types=[AuthorEntity],
         specificity=2,

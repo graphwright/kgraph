@@ -32,6 +32,11 @@ class BfsSubgraphRequest(BaseModel):
     seeds: list[str]
     max_hops: int = Field(ge=1, le=5)
     max_nodes: int = Field(default=500, ge=1, le=MAX_NODES_LIMIT)
+    # topology_filter is for programmatic callers only. It is intentionally omitted
+    # from the MCP tool description and all LLM-facing prompt documentation, which
+    # present a clean two-filter model (node_filter, edge_filter, both presentation-
+    # only). This is a deliberate simplification, not an oversight -- do not add it
+    # to the LLM-facing docs.
     topology_filter: Optional[dict] = None
     node_filter: Optional[dict] = None
     edge_filter: Optional[dict] = None

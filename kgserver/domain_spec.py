@@ -384,7 +384,11 @@ PREDICATES: dict[str, PredicateSpec] = {
         specificity=1,
     ),
     "IS_COLLEAGUE": PredicateSpec(
-        description="Authors are colleagues (e.g. same institution) from a source other than co-authorship.",
+        description=(
+            "Authors are colleagues (e.g. same institution) from a source other than co-authorship. "
+            "Reserved, not currently emitted: do not create IS_COLLEAGUE edges where COAUTHORED_WITH "
+            "would already exist. Intended for future sources such as shared-lab data with no shared paper."
+        ),
         subject_types=[AuthorEntity],
         object_types=[AuthorEntity],
         specificity=2,

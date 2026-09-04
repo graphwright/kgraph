@@ -40,7 +40,9 @@ uv run pytest tests/test_entities.py::test_canonical_promotion -v
 
 ## Linters
 
-Preferred linter tools and **order** are defined in **`lint.sh`**. Run that script to lint and test. Order: **ruff** (check, with auto-fix on failure) → **mypy** → **black** (check) → **flake8** → **pylint**, then **pytest**. Scope is `kgraph`, `kgbundle`, `kgschema`, `kgserver`, and `examples`; `kgserver/chainlit/app.py` is excluded from mypy and pylint. If a step fails, `fixes_needed` runs `black` and `ruff check --fix` and exits so you can re-run.
+Preferred linter tools and **order** are defined in **`lint.sh`**. Run that script to lint and test. Order: **ruff** (check) → **mypy** → **black** (check) → **flake8**, then **pytest**. Scope is `kgraph`, `kgbundle`, `kgschema`, and `kgserver`; `kgserver/chainlit/app.py` is excluded from mypy. Tests run: root `tests/`, `kgbundle/tests/`, and `kgserver/tests/` (from `kgserver/`, Playwright excluded). If a step fails, `fixes_needed` runs `black` and `ruff check --fix` and exits so you can re-run.
+
+Domain and service packages carry their own scripts, which the root script does **not** invoke: `medlit/lint.sh`, `sherlock/lint.sh`, `identity-server/lint.sh`, `kgserver/lint.sh`. Run each from its own directory. CI (`.github/workflows/test.yml`) runs the root `lint.sh` plus the `medlit`, `sherlock`, and `identity-server` test suites.
 
 ## Python Tooling — Mandatory Rules
 

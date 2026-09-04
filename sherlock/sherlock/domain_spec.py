@@ -16,7 +16,6 @@ from typing import ClassVar, Optional
 from kgschema.entity import BaseEntity
 from kgschema.spec import EntitySpec, EvidenceSpec, MentionsSpec, PredicateSpec
 
-
 # ---------------------------------------------------------------------------
 # Narrator trust — epistemic metadata attached to every relationship
 # ---------------------------------------------------------------------------
@@ -126,8 +125,7 @@ class PhysicalObjectEntity(BaseEntity):
     spec: ClassVar[EntitySpec] = EntitySpec(
         description="A tangible object that plays a role in the plot: clues, weapons, documents, disguises.",
         prompt_guidance=(
-            "Extract objects that are plot-relevant: photographs, letters, disguises, walking sticks, "
-            "telegrams, rings, carriages, revolvers, etc. Do NOT extract objects mentioned only in passing."
+            "Extract objects that are plot-relevant: photographs, letters, disguises, walking sticks, " "telegrams, rings, carriages, revolvers, etc. Do NOT extract objects mentioned only in passing."
         ),
         color="#ffb300",
         label="Object",
@@ -156,10 +154,7 @@ class EventEntity(BaseEntity):
 class OccupationEntity(BaseEntity):
     spec: ClassVar[EntitySpec] = EntitySpec(
         description="A social role, occupation, or title that characterises how Holmes reasons about a character.",
-        prompt_guidance=(
-            "Extract occupations and social roles: detective, king, governess, adventuress, "
-            "retired sergeant-major, groom, etc. Holmes's reasoning often depends on these."
-        ),
+        prompt_guidance=("Extract occupations and social roles: detective, king, governess, adventuress, " "retired sergeant-major, groom, etc. Holmes's reasoning often depends on these."),
         color="#ce93d8",
         label="Occupation",
     )
@@ -171,10 +166,7 @@ class OccupationEntity(BaseEntity):
 class OrganizationEntity(BaseEntity):
     spec: ClassVar[EntitySpec] = EntitySpec(
         description="An organization, institution, royal house, or named group.",
-        prompt_guidance=(
-            "Extract kingdoms, secret services, clubs, households, etc. "
-            "E.g. 'The Royal House of Bohemia', 'Scotland Yard'."
-        ),
+        prompt_guidance=("Extract kingdoms, secret services, clubs, households, etc. " "E.g. 'The Royal House of Bohemia', 'Scotland Yard'."),
         color="#80cbc4",
         label="Organization",
     )
@@ -202,15 +194,9 @@ for _cls in ENTITY_CLASSES:
     _name = _cls.__name__.replace("Entity", "")
     BUNDLE_CLASS_TO_ENTITY[_name] = _cls  # type: ignore[type-abstract]
 
-NORMALIZED_TO_BUNDLE: dict[str, str] = {
-    k.lower().replace(" ", "").replace("_", ""): k for k in BUNDLE_CLASS_TO_ENTITY
-}
+NORMALIZED_TO_BUNDLE: dict[str, str] = {k.lower().replace(" ", "").replace("_", ""): k for k in BUNDLE_CLASS_TO_ENTITY}
 
-ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {
-    _cls.__name__.replace("Entity", "").lower(): {"color": _cls.spec.color, "label": _cls.spec.label}
-    for _cls in ENTITY_CLASSES
-    if hasattr(_cls, "spec")
-}
+ENTITY_TYPE_SPECS: dict[str, dict[str, str]] = {_cls.__name__.replace("Entity", "").lower(): {"color": _cls.spec.color, "label": _cls.spec.label} for _cls in ENTITY_CLASSES if hasattr(_cls, "spec")}
 ENTITY_TYPE_SPECS["default"] = {"color": "#78909c", "label": "Other"}
 
 

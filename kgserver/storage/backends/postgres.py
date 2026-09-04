@@ -556,6 +556,10 @@ class PostgresStorage(StorageInterface):
     ) -> Sequence[Entity]:
         """
         List entities with optional filtering.
+
+        name_contains is a substring match, deliberately not a regex or glob: a wildcard
+        search like "cushing*" is expressed as name_contains="cushing". Synonym matching is
+        not applied here — only the entity name is searched.
         """
         statement = select(Entity)
         if entity_type:

@@ -129,7 +129,10 @@ def expand_provenance(bundle: PerPaperBundle) -> tuple[list[ExtractedEntityRow],
             )
         )
 
-    # DESCRIBED(Paper, entity) for top 2 domain entities by relationship count (Option A)
+    # DESCRIBED(Paper, entity), capped at the top 2 domain entities by relationship count.
+    # The cap is deliberate: one edge per (paper, entity) caused link explosion on papers
+    # with many extracted entities. Paper (not Author/Institution) is the subject for the
+    # same reason -- N authors x M entities would multiply the edge count.
     entity_rel_count: dict[str, int] = {}
     for rel in bundle.relationships:
         for eid in (rel.subject, rel.object_id):

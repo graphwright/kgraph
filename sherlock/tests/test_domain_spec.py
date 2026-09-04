@@ -1,7 +1,5 @@
 """Tests for domain_spec.py — entity types, predicates, and prompt instructions."""
 
-import pytest
-
 from sherlock.domain_spec import (
     ALL_PREDICATES,
     ENTITY_CLASSES,
@@ -41,9 +39,20 @@ def test_normalized_to_bundle():
 def test_all_predicates_defined():
     """ALL_PREDICATES must include core Sherlock predicates."""
     expected = {
-        "LIVES_AT", "VISITS", "OWNS", "ALLY_OF", "ANTAGONIST_OF", "HIRED",
-        "APPEARS_IN", "SAME_AS", "HAS_OCCUPATION", "DISGUISED_AS",
-        "IMPLICATES", "EXONERATES", "DECEIVES", "TRUSTS",
+        "LIVES_AT",
+        "VISITS",
+        "OWNS",
+        "ALLY_OF",
+        "ANTAGONIST_OF",
+        "HIRED",
+        "APPEARS_IN",
+        "SAME_AS",
+        "HAS_OCCUPATION",
+        "DISGUISED_AS",
+        "IMPLICATES",
+        "EXONERATES",
+        "DECEIVES",
+        "TRUSTS",
     }
     for pred in expected:
         assert pred in ALL_PREDICATES, f"Expected predicate {pred!r} missing"
@@ -127,13 +136,9 @@ def test_entity_spec_has_colors():
 def test_entity_get_entity_type():
     """Entity classes must return correct type strings."""
     from sherlock.domain_spec import (
-        CharacterEntity,
         EventEntity,
-        LocationEntity,
         OccupationEntity,
         OrganizationEntity,
-        PhysicalObjectEntity,
-        StoryEntity,
     )
     from datetime import datetime, timezone
 

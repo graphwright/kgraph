@@ -1,6 +1,6 @@
 # Ingestion Pipeline — Remaining Work
 
-Items left from PLAN2.md after the initial implementation. See PLAN2.md and ingestion_redesign.md for full details.
+Remaining work on the ingestion pipeline, plus known data-quality defects.
 
 ---
 
@@ -8,7 +8,7 @@ Items left from PLAN2.md after the initial implementation. See PLAN2.md and inge
 
 ### E1: Add chunking module
 
-- Create `kgraph/pipeline/chunker.py` or extend `examples/medlit/pipeline/pmc_chunker.py`
+- Create `kgraph/pipeline/chunker.py` or extend `medlit/medlit/pipeline/pmc_chunker.py`
 - Input: document text, section boundaries
 - Output: list of chunks with overlap (e.g. 512 tokens, 64 overlap)
 - Each chunk: `{chunk_id, text, section, start_offset, end_offset}`
@@ -44,6 +44,27 @@ Items left from PLAN2.md after the initial implementation. See PLAN2.md and inge
 ## Schema Gaps
 
 - **Missing `organism`/`species` entity type**: Non-human organisms (e.g. chimpanzees, *H. pylori*) appearing in comparative genomics or evolutionary medicine papers get misclassified into the nearest available biomedical category (typically `anatomicalstructure`). Add an `organism` or `species` type to `domain_spec.py` and the extraction prompts. The DBPedia canonical URL resolver also goes rogue on these (e.g. "Chimpanzees" → `DBPedia:Chimpanzees'_tea_party`), so the authority lookup blocklist or DBPedia matching may also need tuning for organism names.
+
+## Known Defects
+
+Verified against `bundle/` output regenerated 2026-03-27. Both were identified during the
+graph data-quality review; the other two items from that review (CITES extraction from
+`<ref-list>`, and ROR/grid identifiers corrupting institution names) are fixed.
+
+### Mentions have no positional metadata
+
+Every mention record in `mentions.jsonl` has `section: null` and `start_offset: 0` (6,249 of
+6,249). Section name and character offset are dropped somewhere between extraction and bundle
+assembly — likely in `medlit/medlit/scripts/extract.py` or the mention construction in
+`bundle_builder.py`. This defeats traceability back to source text, and undercuts the
+`get_mentions` MCP diagnostic tool, which exists so mentions can be checked against the
+original passage.
+
+### Self-loop relationships
+
+`relationships.jsonl` contains 9 relationships where `subject_id == object_id`. These are
+nonsensical and should be dropped at write time in `bundle_builder.py`, with a test asserting
+no self-loops in bundle output. (An earlier count found 2, so this is growing.)
 
 ## Known Limitations
 

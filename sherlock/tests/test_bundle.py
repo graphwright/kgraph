@@ -4,7 +4,6 @@ import json
 import tempfile
 from pathlib import Path
 
-import pytest
 
 from sherlock.bundle_models import PerStoryBundle
 from sherlock.pipeline.bundle_builder import build_bundle
@@ -74,7 +73,7 @@ def test_story_provenance_added(minimal_bundle: PerStoryBundle):
         build_bundle(minimal_bundle, output_dir, add_story_provenance=True)
 
         lines = (output_dir / "relationships.jsonl").read_text().strip().splitlines()
-        rels = [json.loads(l) for l in lines]
+        rels = [json.loads(line) for line in lines]
         described_in = [r for r in rels if r["predicate"] == "DESCRIBED_IN"]
         assert described_in, "DESCRIBED_IN provenance edges must be added"
 
@@ -98,7 +97,7 @@ def test_narrator_trust_in_properties(minimal_bundle: PerStoryBundle):
         build_bundle(minimal_bundle, output_dir)
 
         lines = (output_dir / "relationships.jsonl").read_text().strip().splitlines()
-        rels = [json.loads(l) for l in lines]
+        rels = [json.loads(line) for line in lines]
         rels_with_trust = [r for r in rels if r.get("properties", {}).get("narrator_trust")]
         # At least some relationships should have narrator_trust
         assert rels_with_trust, "Some relationships must have narrator_trust in properties"

@@ -30,8 +30,8 @@ Typical usage:
     ```
 
 Based on the streaming extraction patterns from:
-    - examples/medlit/pipeline/pmc_streaming.py (plod branch)
-    - examples/medlit/pipeline/mentions.py (windowed entity extraction)
+    - medlit/medlit/pipeline/pmc_streaming.py (plod branch)
+    - medlit/medlit/pipeline/mentions.py (windowed entity extraction)
 """
 
 from abc import ABC, abstractmethod

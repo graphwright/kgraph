@@ -6,11 +6,9 @@ prompt and collects entities + relationships into a PerStoryBundle.
 Follows the medlit pass1_llm pattern: generate_json() → normalize → validate → store.
 """
 
-import json
 import re
 import time
-from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from ..bundle_models import (
     EvidenceEntityRow,

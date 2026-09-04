@@ -14,10 +14,9 @@ Key differences vs medlit dedup:
 """
 
 import json
-import re
 import uuid
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from ..bundle_models import ExtractedEntityRow, PerStoryBundle, RelationshipRow
 

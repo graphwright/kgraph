@@ -41,3 +41,21 @@ See `./rin.sh --list` for available paper sets.
 
 After ingestion completes, the new bundle is in `bundle/`. Redeploy with
 `BUNDLE_FORCE_RELOAD=1 docker compose --profile api up -d` (or full redeploy above).
+
+## Diagnosing a suspicious entity or relationship
+
+When the graph shows a link that looks wrong, work outward from the source text:
+
+1. **Check the extraction layer.** Use the `get_paper_source` and `get_mentions` MCP tools to
+   pull the paper text and the mentions extracted from it, and confirm each mention matches
+   what the passage actually says. If the mentions are wrong, the problem is in Pass 1.
+2. **If the mentions look clean, suspect a false-positive merge.** A bogus link that appears
+   only *after* Pass 2 deduplication is usually an over-eager entity merge rather than an
+   extraction error.
+3. **Merge-bug signature.** In `merged/id_map.json`, look for multiple source IDs mapping to
+   the same canonical ID. That is what a merge looks like; check whether the merged entities
+   were genuinely the same thing.
+
+Note that mention positional metadata is currently broken (see "Known Defects" in `TODO.md`),
+so `get_mentions` cannot yet point at a character offset within the source — you have to
+locate the quoted span by text search.

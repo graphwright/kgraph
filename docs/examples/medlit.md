@@ -32,8 +32,15 @@ Entity types, predicates, and prompt instructions are defined in **`domain_spec.
 
 - LLM provider (Anthropic, OpenAI, Ollama) and model via env or config.
 - Input/output dirs, synonym cache path, authority API keys (e.g. UMLS) as needed.
-- See `examples/medlit` README and scripts for CLI flags and env vars.
+- See the scripts under `medlit/medlit/scripts/` for CLI flags and env vars.
 
 ## Tests
 
-Tests live under `examples/medlit/tests/` (e.g. authority_lookup, test_extract, test_build_bundle, two_pass_ingestion). Run from repo root: `uv run pytest examples/medlit/tests/`.
+Tests live under `medlit/tests/` and `medlit/domain_service/tests/`. Run them from the `medlit`
+directory so uv uses that package's own environment:
+
+```bash
+cd medlit && uv run pytest
+```
+
+Or run the full package check (linters plus tests) with `medlit/lint.sh`.

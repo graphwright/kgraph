@@ -7,7 +7,7 @@ from kgschema.relationship import BaseRelationship
 from kgschema.storage import EntityStorageInterface
 
 from .documents import SherlockStory
-from .domain_spec import ALL_PREDICATES, ENTITY_CLASSES, NORMALIZED_TO_BUNDLE, PREDICATES, get_valid_predicates
+from .domain_spec import ALL_PREDICATES, get_valid_predicates
 from .entities import (
     CharacterEntity,
     EventEntity,
@@ -75,9 +75,7 @@ class SherlockDomainSchema(DomainSchema):
                             reverse_constraints[pred].add(obj_type)
 
             self._predicate_constraints = {
-                pred: PredicateConstraint(subject_types=constraints[pred], object_types=reverse_constraints[pred])
-                for pred in ALL_PREDICATES
-                if constraints[pred] and reverse_constraints[pred]
+                pred: PredicateConstraint(subject_types=constraints[pred], object_types=reverse_constraints[pred]) for pred in ALL_PREDICATES if constraints[pred] and reverse_constraints[pred]
             }
         return self._predicate_constraints
 
